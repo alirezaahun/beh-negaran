@@ -7,13 +7,6 @@
 body {
   overflow-x: hidden;
 }
-
-/* Mobile Screen */
-@media only screen and (min-width: 200px) and (max-width: 991px) {
-  .vertical-line {
-    display: none;
-  }
-}
 /* Variables */
 :root {
   --clr-primary: rgb(206, 202, 200);
@@ -25,7 +18,8 @@ body {
 /* Navbar */
 .navbar-brand {
   width: 100px;
-  height: 50px;
+  height: 60px;
+  filter: drop-shadow(0 1px 1px black);
 }
 .navbar-btns {
   display: flex;
@@ -36,8 +30,7 @@ body {
 .costume-nav {
   background-color: #fff;
   position: relative;
-  box-shadow: 0 1px 5px rgb(206, 202, 200),
-  0 2px 5px rgb(58, 62, 61);
+  box-shadow: 0 1px 5px rgb(206, 202, 200), 0 2px 5px rgb(58, 62, 61);
 }
 .costume-nav li a {
   position: relative;
@@ -80,6 +73,18 @@ body {
   height: 0.1rem;
   background-color: rgba(0, 0, 0, 0.473);
   transform: rotate(90deg);
+  margin-top: 1rem;
+}
+
+/* Horizontal Line */
+.horizontal-line {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 50%;
+  height: 0.1rem;
+  border-radius: 3rem;
+  background-color: rgba(0, 0, 0, 0.473);
   margin-top: 1rem;
 }
 
@@ -285,13 +290,68 @@ body {
   }
 }
 
-
 /* Banner Section */
 .banner-section {
-    background-color: var(--clr-primary);
+  background-color: var(--clr-primary);
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
 .banner {
-    background-color: var(--clr-secondary);
-background-image: linear-gradient(315deg, var(--clr-secondary) 0%, var(--clr-accent) 74%);
-height: 50vh;
+  background-color: var(--clr-secondary);
+  background-image: linear-gradient(
+    315deg,
+    var(--clr-secondary) 0%,
+    var(--clr-accent) 50%
+  );
+  height: 50vh;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
+
+/* Service Section */
+.quick-service-box h3 {
+  text-align: center;
+  color: var(--clr-dark);
+}
+.quick-service-box {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 0.3rem;
+  width: 70%;
+  margin: auto;
+  margin-top: -5rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.quick-service-box form {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Mobile Screen */
+@media only screen and (min-width: 200px) and (max-width: 991px) {
+    .vertical-line {
+      display: none;
+    }
+    .quick-service-box {
+        width: 100%;
+        border-radius: 5rem;
+    }
+    .quick-form{
+      display: flex;
+      flex-direction: column;
+    }
+    .quick-form label,
+    .quick-form input,
+    .quick-form select {
+       width: 100%;
+       margin-top: 0.7rem;
+    }
+    .quick-form a {
+        margin-top: 0.7rem;
+    }
+    
+  }

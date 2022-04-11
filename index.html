@@ -33,7 +33,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg costume-nav">
         <div class="container-fluid">
-          <img src="./assets/img/logo.png" class="navbar-brand bg-dark"></img>
+          <img src="./assets/img/logo.png" class="navbar-brand"></img>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <div id="menu_button">
               <input type="checkbox" id="menu_checkbox">
@@ -98,8 +98,23 @@
 
           </div>
 
-          <div class="row">
+          <div class="row quick-service-box">
+            <div class="col-md-12">
+            <h3>خدمات سفارش آنلاین</h3>
+            <div class="horizontal-line"></div>
+            <form class="form-control quick-form">
+              
+            <label for="service-date"> تاریخ: <input type="date" name="service-date" required></label> 
+            <label for="service-time"> ساعت: <input type="time" name="service-time" required></label>
+            <label for="service-city"> شهر: <select name="service-city" id="city-select">
+                <option value="">تهران</option>
+                <option value="">کرج</option>
+                <option value="">قزوین</option>
+              </select></label>
+             <a class="primary-btn" href="#">جستجو</a>
             
+            </form>
+          </div>
           </div>
 
         </div>
