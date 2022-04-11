@@ -33,7 +33,12 @@
         <div class="container-fluid">
           <img src="./assets/img/logo.png" class="navbar-brand bg-dark"></img>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <div id="menu_button">
+              <input type="checkbox" id="menu_checkbox">
+              <label for="menu_checkbox" id="menu_label">
+                <div id="menu_text_bar"></div>
+              </label>
+            </div>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -75,11 +80,11 @@
               </li>
               
             </ul>
-
+            <div class="navbar-btns">
             <a href="#" class="primary-btn">پیگیری خدمات</a>
 
             <a href="#" class="btn effect04" data-sm-link-text="ثبت نام" target="_blank"><span>ورود</span></a>
-            
+          </div>
           </div>
         </div>
       </nav>
