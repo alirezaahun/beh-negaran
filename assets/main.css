@@ -330,6 +330,60 @@ body {
   justify-content: space-around;
   align-items: center;
 }
+.quick-form input,
+.quick-form select {
+    padding: 0.4rem;
+    border: 1px solid rgba(58, 62, 61, 0.548);
+    border-radius: 0.3rem;
+}
+
+/* Card Section */
+.cards-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    text-align: center;
+}
+.cards {
+    perspective: 150rem;
+    position: relative;
+    height: 20rem;
+    max-width: 400px;
+    box-shadow: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .card-side {
+    height: 20rem;
+    border-radius: 0.3rem;
+    transition: all 0.8s ease;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding:2rem;
+    color: white;
+  }
+  
+  .card-side.back {
+    transform: rotateY(-180deg);
+    background-color: var(--clr-accent);
+    color: var(--clr-dark);
+  }
+  
+  .card-side.front {
+    background-color: var(--clr-secondary);
+  }
+  
+  .cards:hover .card-side.front {
+    transform: rotateY(180deg);
+  }
+  
+  .cards:hover .card-side.back {
+    transform: rotateY(0deg);
+  }
 
 /* Mobile Screen */
 @media only screen and (min-width: 200px) and (max-width: 991px) {
