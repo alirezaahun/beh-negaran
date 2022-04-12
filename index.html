@@ -18,6 +18,7 @@
       href="node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="assets/main.css" />
+    <script src="assets/main.js" defer></script>
     <script
       src="node_modules/bootstrap/dist/js/bootstrap.min.js"
       defer
@@ -30,10 +31,13 @@
   </head>
   <body>
 
+    <!-- Scroll Bar -->
+    <div id="scroll-progress"></div>
+
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg costume-nav">
         <div class="container-fluid">
-          <img src="./assets/img/logo.png" class="navbar-brand"></img>
+          <img src="./assets/img/logo3.png" class="navbar-brand"></img>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <div id="menu_button">
               <input type="checkbox" id="menu_checkbox">
@@ -93,9 +97,14 @@
 
       <!-- Banner Section -->
       <main class="banner-section">
-        <div class="container">
+        <div class="container-fluid px-0">
           <div class="banner">
-
+           <div class="row">
+             <div class="glass-effect mt-5">
+            <h1>به نگاران تجارت آزما</h1>
+            <h4>رشد مجازی، فروش واقعی</h4>
+          </div>
+           </div>
           </div>
 
           <div class="row quick-service-box">
@@ -118,6 +127,7 @@
           </div>
 
           <!-- Card Section -->
+          <div class="container">
           <div class="row cards-box">
             <div class="col-md-4 col-sm-12">
               <div class="cards">
@@ -151,6 +161,7 @@
             </div>
 
           </div>
+        </div>
 
         </div>
       </main>
