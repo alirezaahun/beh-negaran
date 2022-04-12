@@ -1,4 +1,4 @@
-// ScrolBar Top
+// ScrolBar Top ----------------------------------------
 const scrollProgress = document.getElementById('scroll-progress');
 const height =
   document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -9,7 +9,7 @@ window.addEventListener('scroll', () => {
   scrollProgress.style.width = `${(scrollTop / height) * 100}%`;
 });
 
-// Numbers
+// Numbers -------------------------------------
 const items = [...document.querySelectorAll('.number')];
 
 const updateCount = (el) => {
