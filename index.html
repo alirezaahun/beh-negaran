@@ -11,11 +11,14 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous">
+
     <link
       rel="stylesheet"
       href="node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="assets/main.css" />
+    <script src="assets/main.js" defer></script>
     <script
       src="node_modules/bootstrap/dist/js/bootstrap.min.js"
       defer
@@ -27,36 +30,140 @@
     <title>Beh Negaran Advertise Company</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <!-- Scroll Bar -->
+    <div id="scroll-progress"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg costume-nav">
         <div class="container-fluid">
-          <img src="./assets/img/logo.png" class="navbar-brand"></img>
+          <img src="./assets/img/logo3.png" class="navbar-brand"></img>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <div id="menu_button">
+              <input type="checkbox" id="menu_checkbox">
+              <label for="menu_checkbox" id="menu_label">
+                <div id="menu_text_bar"></div>
+              </label>
+            </div>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
+                  خدمات
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                <span class="vertical-line"></span>
+                <ul class="dropdown-menu text-end" aria-labelledby="navbarDropdown">
+                  
+                  <li><a class="dropdown-item" href="#">سفارش انلاین</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li><a class="dropdown-item" href="#">پروژه ها</a></li>
+                </ul>
+              </li>
+              <span class="vertical-line"></span>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">سفارش آنلاین</a>
+              </li>
+              <span class="vertical-line"></span>
+              <li class="nav-item">
+                <a class="nav-link" href="#">پروژه ها</a>
+              </li>
+              <span class="vertical-line"></span>
+              <li class="nav-item">
+                <a class="nav-link" href="#">همکاری با ما</a>
+              </li>
+              <span class="vertical-line"></span>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  بیشتر
+                </a>
+                <ul class="dropdown-menu text-end" aria-labelledby="navbarDropdown">
+                  
+                  <li><a class="dropdown-item" href="#">لینک ۱</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">لینک ۱</a></li>
                 </ul>
               </li>
               
             </ul>
-            
+            <div class="navbar-btns">
+            <a href="#" class="primary-btn">پیگیری خدمات</a>
+
+            <a href="#" class="btn effect04" data-sm-link-text="ثبت نام" target="_blank"><span>ورود</span></a>
+          </div>
           </div>
         </div>
       </nav>
+
+      <!-- Banner Section -->
+      <main class="banner-section">
+        <div class="container-fluid px-0">
+          <div class="banner">
+           <div class="row">
+             <div class="glass-effect mt-5">
+            <h1>به نگاران تجارت آزما</h1>
+            <h4>رشد مجازی، فروش واقعی</h4>
+          </div>
+           </div>
+          </div>
+
+          <div class="row quick-service-box">
+            <div class="col-md-12">
+            <h3>خدمات سفارش آنلاین</h3>
+            <div class="horizontal-line"></div>
+            <form class="form-control quick-form">
+              
+            <label for="service-date"> تاریخ: <input type="date" name="service-date" required></label> 
+            <label for="service-time"> ساعت: <input type="time" name="service-time" required></label>
+            <label for="service-city"> شهر: <select name="service-city" id="city-select">
+                <option value="">تهران</option>
+                <option value="">کرج</option>
+                <option value="">قزوین</option>
+              </select></label>
+             <a class="primary-btn" href="#">جستجو</a>
+            
+            </form>
+          </div>
+          </div>
+
+          <!-- Card Section -->
+          <div class="container">
+          <div class="row cards-box">
+            <div class="col-md-4 col-sm-12">
+              <div class="cards">
+                <div class="card-side front">
+                  <div>پادکست</div>
+                </div>
+                <div class="card-side back">
+                  <div>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد.</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+              <div class="cards">
+                <div class="card-side front">
+                  <div>مشاوره</div>
+                </div>
+                <div class="card-side back">
+                  <div>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد.</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+              <div class="cards">
+                <div class="card-side front">
+                  <div>کمپین تبلیغاتی</div>
+                </div>
+                <div class="card-side back">
+                  <div>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد.</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        </div>
+      </main>
   </body>
 </html>
