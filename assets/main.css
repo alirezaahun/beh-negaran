@@ -70,6 +70,7 @@ body {
   height: 100%;
   bottom: 0;
   left: 0;
+  border-radius: 0.3rem;
   background-color: var(--clr-secondary);
   z-index: -1;
   transform: scale(0);
@@ -319,13 +320,6 @@ body {
   background-repeat: no-repeat;
   height: 68vh;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-}
-.glass-effect {
-  backdrop-filter: blur(10px);
-  width: 25%;
-  border-radius: 10%;
-  text-align: right;
-  margin: auto;
 }
 
 /* Service Section */
