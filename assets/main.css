@@ -466,6 +466,13 @@ article p {
   border-bottom-color: rgb(58, 62, 61);
 }
 
+/* Brands Logo --------------------------------------------------------- */
+.brands-logo img{
+    width: 5rem;
+    height: 5rem;
+}
+
+
 /* Scroll Bar ----------------------------------------------------------- */
 /* width */
 ::-webkit-scrollbar {
