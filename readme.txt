@@ -5,3 +5,22 @@ log : log all the changes
 log --oneline:   show all the changes in one line
 ;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+site : gitignore io       --create data for git ignore
