@@ -553,7 +553,8 @@ article p {
   height: 100px;
 }
 .footer-social-icons {
-  margin-top: 0.5rem;
+  display: flex;
+  justify-content: end;
 }
 .footer-social-icons .bxl-instagram,
 .footer-social-icons .bxl-whatsapp,
