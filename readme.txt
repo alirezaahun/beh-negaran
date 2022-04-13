@@ -4,8 +4,12 @@ amend(git commit --amend):   return to before comit to add another file if you f
 log :                        log all the changes
 log --oneline:               show all the changes in one line
 branch switch :              switch to orher branch
+branch create & switch:      git switch -c (Name of branch)        
+change branch name:          branch -m (New Name)
+delete branch :              branch -d (Name of branch)
 
 
+  
 
 
 
