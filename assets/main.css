@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Vazir";
+  font-family: 'Iranian Sans';
 }
 body {
   overflow-x: hidden;
@@ -10,6 +10,9 @@ body {
 }
 h1,h2,h3,h4,h5,h6,p {
   user-select: none;
+}
+h1,h2,h3,h4,h5,h6 {
+font-family: "Vazir";
 }
 /* Variables ----------------------------------------------------------------- */
 :root {
@@ -19,7 +22,7 @@ h1,h2,h3,h4,h5,h6,p {
   --clr-dark: rgb(58, 62, 61);
 }
 /* Scroll Bar ---------------------------------------------------------------------- */
-#scroll-progress {
+/* #scroll-progress {
   position: fixed;
   top: 0;
   width: 0%;
@@ -31,7 +34,7 @@ h1,h2,h3,h4,h5,h6,p {
   );
   z-index: 10000;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-}
+} */
 
 /* Navbar ------------------------------------------------------------------------ */
 .navbar-brand {
@@ -44,6 +47,7 @@ h1,h2,h3,h4,h5,h6,p {
   align-items: center;
   justify-content: center;
   width: 300px;
+  margin: auto;
 }
 .costume-nav {
   background-color: #fff;
@@ -128,13 +132,20 @@ h1,h2,h3,h4,h5,h6,p {
   text-decoration: none;
   text-transform: uppercase;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn i {
+  font-size: 1.1rem;
+  transform: translateY(6px);
 }
 .btn:hover {
   text-decoration: none;
 }
 .effect04 {
-  color: var(--clr-primary);
-  background-color: var(--clr-secondary);
+  color: var(--clr-dark);
+  background-color: var(--clr-primary);
   position: relative;
   transition-duration: 0.4s;
   overflow: hidden;
@@ -150,7 +161,7 @@ h1,h2,h3,h4,h5,h6,p {
   background-color: var(--clr-accent);
 }
 .effect04 span {
-  color: var(--clr-primary);
+  color: var(--clr-dark);
 }
 .effect04:hover span {
   -webkit-transform: translateY(-400%) scale(-0.1, 20);
@@ -176,10 +187,9 @@ h1,h2,h3,h4,h5,h6,p {
 /* Main Button --------------------------------------------------- */
 
 .primary-btn {
-  background-color: var(--clr-secondary);
-  color: var(--clr-primary);
+  background-color: var(--clr-primary);
+  color: var(--clr-dark);
   margin-left: 1rem;
-  letter-spacing: 0.1em;
   cursor: pointer;
   font-size: 14px;
   font-weight: 600;
@@ -190,11 +200,13 @@ h1,h2,h3,h4,h5,h6,p {
   text-decoration: none;
   text-transform: uppercase;
   transition: all ease 0.4s;
+  box-shadow: 0 0 3px rgb(58, 62, 61, 0.5);
 }
 .primary-btn:hover {
-  color: var(--clr-dark);
-  background-color: var(--clr-accent);
+  color: var(--clr-primary);
+  background-color: var(--clr-dark);
   transition: all ease 0.4s;
+  box-shadow: 0 0 5px black inset;
 }
 
 /* Hamburger menu --------------------------------------------------- */
@@ -331,7 +343,7 @@ h1,h2,h3,h4,h5,h6,p {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 68vh;
+  height: 58vh;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
@@ -345,27 +357,78 @@ h1,h2,h3,h4,h5,h6,p {
   justify-content: center;
   padding: 2rem;
   background-color: #fff;
-  border-radius: 0.3rem;
+  border-radius: 1.3rem;
   width: 70%;
   margin: auto;
-  margin-top: -5rem;
+  margin-top: -7rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .quick-service-box form {
-  margin-top: 1.5rem;
+  /* margin-top: 1.5rem; */
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 .quick-form:focus-within {
   border-color: var(--clr-accent);
+  animation-name: padding-anim;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
 }
-
+@keyframes padding-anim {
+  to {
+    padding: 1rem;
+  }
+}
 .quick-form input,
 .quick-form select {
   padding: 0.4rem;
   border: 1px solid rgba(58, 62, 61, 0.548);
   border-radius: 0.3rem;
+}
+.quick-service-icons ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1rem;
+  border:  1px solid rgba(0, 0, 0, 0.267);
+  border-radius: 3rem 3rem 0 0;
+  margin-top: 1rem;
+  list-style: none;
+}
+.quick-service-icons a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+   text-decoration: none;
+   color: var(--clr-dark);
+   border-bottom: 3px solid transparent;
+   font-weight: 900;
+   padding-bottom: 5px;
+   border-radius: 0 0 3px 3px;
+}
+.quick-service-icons li {
+  border-right: 1px solid black;
+  width: 100%;
+  height: 100%;
+}
+.quick-service-icons li:hover {
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.164);
+}
+.quick-service-icons li:nth-child(1){
+  border: none;
+}
+.quick-service-icons  i {
+  font-size: 2.5rem;
+}
+.quick-service-icons a:hover {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-color: var(--clr-secondary);
+  background-image: linear-gradient(315deg, rgb(233, 195, 30) 0%, rgb(0, 93, 131) 74%);
+  border-bottom-color: var(--clr-secondary);
+  transition: ease 0.5s;
 }
 
 /* Card Section -------------------------------------------------------- */
@@ -449,7 +512,7 @@ article {
 }
 
 article span {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 700;
   line-height: 1.25;
 }
@@ -474,6 +537,9 @@ article p {
     width: 5rem;
     height: 5rem;
 }
+.company-brands {
+   margin-top: 7rem;
+}
 
 /* Footer --------------------------------------------------------------------*/
 .footer {
@@ -483,10 +549,23 @@ article p {
   margin-top: 3rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px -3px 6px, rgba(0, 0, 0, 0.23) 0px -3px 6px;
 }
+.footer p {
+  font-size: 0.8rem;
+  margin-top: -2rem;
+}
+footer p span {
+  color: var(--clr-accent);
+}
 .footer-logo {
   width: 220px;
   height: 100px;
   filter: drop-shadow(0 1px 1px var(--clr-primary));
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+.footer-links {
+  margin-top: 6.5rem;
 }
 .footer-links ul,
 .footer-contact ul {
@@ -553,8 +632,7 @@ article p {
   height: 100px;
 }
 .footer-social-icons {
-  display: flex;
-  justify-content: end;
+  margin-top: 0.6rem;
 }
 .footer-social-icons .bxl-instagram,
 .footer-social-icons .bxl-whatsapp,
@@ -579,11 +657,11 @@ article p {
 /* Scroll Bar ----------------------------------------------------------- */
 /* width */
 ::-webkit-scrollbar {
-  width: 0;
+  width: 5px;
 }
 /* button */
 ::-webkit-scrollbar-button {
-  background: var(--clr-primary);
+  background: var(--clr-accent);
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
@@ -617,7 +695,7 @@ article p {
   }
   .quick-service-box {
     width: 100%;
-    border-radius: 5rem;
+    border-radius: 1.3rem;
   }
   .quick-form {
     display: flex;
@@ -645,5 +723,9 @@ article p {
   .costumer-number,
   .project-number {
     margin-top: 1rem;
+  }
+  .footer p {
+    font-size: 0.7rem;
+    text-align: center;
   }
 }

@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- IRAN Sans Font -------------------------------------------------->
+    <link href="http://fonts.cdnfonts.com/css/iranian-sans" rel="stylesheet">
     <!-- Vazir Font --------------------------------------->
     <link
       rel="stylesheet"
@@ -25,6 +27,8 @@
     <link rel="stylesheet" href="assets/main.css" />
     <!-- Main JS ------------------------------------------------->
     <script src="assets/main.js" defer></script>
+    <!-- Persian Date --------------------------------------------------------->
+    <link rel="stylesheet" href="node_modules/persian-datepicker/dist/css/persian-datepicker.min.css">
     <!-- Bootstrap JS ----------------------------------------------------->
     <script
       src="node_modules/bootstrap/dist/js/bootstrap.min.js"
@@ -35,12 +39,14 @@
       src="node_modules/@popperjs/core/dist/umd/popper.min.js"
       defer
     ></script>
+    <!-- ir-city-select.js ------------------------------------------------------->
+    <script src="https://github.com/KayvanMazaheri/ir-city-select/releases/download/v0.2.0/ir-city-select.min.js"></script>
     <title>شرکت تبلیغاتی به نگاران تجارت آزما</title>
   </head>
   <body>
 
     <!-- Scroll Bar ------------------------------------------------------>
-    <div id="scroll-progress"></div>
+    <!-- <div id="scroll-progress"></div> -->
 
     <!-- Navbar -------------------------------------------------------------->
     <nav class="navbar navbar-expand-lg costume-nav sticky-top">
@@ -95,9 +101,10 @@
               
             </ul>
             <div class="navbar-btns">
-            <a href="#" class="primary-btn">پیگیری خدمات</a>
+            <a href="#" class="primary-btn"> پیگیری سفارش </a>
 
-            <a href="#" class="btn effect04" data-sm-link-text="ثبت نام" target="_blank"><span>ورود</span></a>
+            <a href="#" class="btn effect04" data-sm-link-text="ثبت نام" target="_blank">
+              <span><i class='bx bx-log-in-circle'></i>ورود</span></a>
           </div>
           </div>
         </div>
@@ -113,21 +120,42 @@
           <div class="row quick-service-box">
             <div class="col-md-12">
             <h3>خدمات سفارش آنلاین</h3>
-            <div class="horizontal-line"></div>
+            <!-- <div class="horizontal-line"></div> -->
+            <div class="quick-service-icons">
+              <ul>
+            <li> <a href="#"><i class='bx bx-video-recording'></i>فیلم برداری</a> </li>
+            <li> <a href="#"><i class='bx bx-camera'></i></i>عکاسی</a> </li>
+            <li> <a href="#"><i class='bx bx-camera-home'></i>تیزر</a> </li>
+            <li> <a href="#"><i class='bx bx-podcast'></i>پادکست</a> </li>
+            <li> <a href="#"><i class='bx bx-user-pin'></i>کمپین</a> </li>
+            </ul>
+            </div>
             <form class="form-control quick-form">
-              
-            <label for="service-date"> تاریخ: <input type="date" name="service-date" required></label> 
-            <label for="service-time"> ساعت: <input type="time" name="service-time" required></label>
-            <label for="service-city"> شهر: <select name="service-city" id="city-select">
-                <option value="">تهران</option>
-                <option value="">کرج</option>
-                <option value="">قزوین</option>
+            
+            <label for="persianDatapicker"> تاریخ: <input name="persianDatapicker" id="persianDatapicker" type="text"></label> 
+            <!-- <label for="service-time"> تعداد ساعت: <select name="service-time" id="service-time">
+              <option value="۱">۱</option>
+              <option value="۲">۲</option>
+              <option value="۳">۳</option>
+              <option value="۴">۴</option>
+              <option value="۵">۵</option>
+              <option value="۶">۶</option>
+              <option value="۷">۷</option>
+              <option value="۸">۸</option>
+              <option value="۹">۹</option>
+              <option value="۱۰">۱۰</option>
+            </select></label> -->
+            <label for="service-city"> شهر: <select name="service-city" id="service-city">
+                <option value="تهران">تهران</option>
+                <option value="کرج">کرج</option>
+                <option value="قزوین">قزوین</option>
               </select></label>
-             <a class="primary-btn" href="#">جستجو</a>
+             <a class="primary-btn" href="#">سفارش</a>
             
             </form>
           </div>
           </div>
+          
 
           <!-- Card Section --------------------------------------------------------------->
           <div class="container">
@@ -173,7 +201,6 @@
               <div class="horizontal-line2"></div>
               <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>
               <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>
-              <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
             </div>
             <div class="col-md-8 col-sm-12">
               <div class="h_iframe-aparat_embed_frame">
@@ -193,7 +220,7 @@
           </div>
 
           <!-- Numbers Section ----------------------------------------------->
-          <div class="row mt-5 mb-5">
+          <div class="row mt-5">
             <div class="col-md-4 col-sm-12">
               <article class="project-number">
                 <span class="number" data-value="500">۰</span>
@@ -217,8 +244,8 @@
           </div>
 
         <!-- Company Brands -------------------------------------------------->
-          <div class="row mt-5 text-center">
-           <h3>شرکت هایی که همکاری کردیم</h3>
+          <div class="row text-center company-brands">
+           <h3>همکاری های شرکت</h3>
            <div class="horizontal-line"></div>
           </div>
 
@@ -231,7 +258,7 @@
              <img src="assets/img/brand8.svg" alt="brand5">
            </div>
 
-           <div class="col-md-12 brands-logo d-flex justify-content-evenly mt-3">
+           <div class="col-md-12 brands-logo d-flex justify-content-evenly mt-5">
             <img src="assets/img/brand4.svg" alt="brand6">
             <img src="assets/img/brand5.svg" alt="brand7">
             <img src="assets/img/brand6.svg" alt="brand8">
@@ -247,9 +274,6 @@
       <!-- Footer --------------------------------------------------------->
       <footer class="footer">
         <div class="container-fluid">
-          <div class="row d-flex justify-content-end">
-            <img class="footer-logo" src="assets/img/logo4.svg" alt="logo">
-          </div>
 
           <div class="row">
             <div class="col-md-8 col-sm-12 footer-links">
@@ -283,6 +307,7 @@
             </div>
 
             <div class="col-md-4 col-sm-12 footer-contact">
+              <img class="footer-logo" src="assets/img/logo4.svg" alt="logo">
               <ul>
                 <li>
                   <i class='bx bx-phone-call'></i>
@@ -297,27 +322,30 @@
                 <li>
                   <img class="e-namad" src="assets/img/enamad.png" alt="">
                 </li>
-      
+                <li>
+                  <div class="footer-social-icons">
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-whatsapp'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                    <a href="#"><i class='bx bxl-youtube'></i></a>
+                  </div>
+                </li>
+                
               </ul>
 
             </div>
 
-            <div class="row mt-3 d-flex align-content-center">
-              <div class="col-md-6 col-sm-12">
-                <p>کلیه حقوق متعلق به تیم طراحی وب سایت به نگاران تجارت آزما</p>
-              </div>
-
-              <div class="col-md-6 col-sm-12 footer-social-icons footer-contact">
-                <a href="#"><i class='bx bxl-instagram'></i></a>
-                <a href="#"><i class='bx bxl-whatsapp'></i></a>
-                <a href="#"><i class='bx bxl-linkedin'></i></a>
-                <a href="#"><i class='bx bxl-youtube'></i></a>
-              </div>
+            <div class="row mt-3">
+                <p>کلیه حقوق متعلق به تیم طراحی وب سایت <span>به نگاران تجارت آزما</span></p>
             </div>
 
           </div>
 
         </div>
       </footer>
+      
+      <script src="node_modules/jquery/dist/jquery.min.js"></script>
+      <script src="node_modules/persian-date/dist/persian-date.min.js"></script>
+      <script src="node_modules/persian-datepicker/dist/js/persian-datepicker.min.js"></script>
   </body>
 </html>

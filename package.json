@@ -1,5 +1,10 @@
 {
   "dependencies": {
-    "bootstrap": "^5.1.3"
+    "bootstrap": "^5.1.3",
+    "jquery": "^3.6.0",
+    "persian-datepicker": "^1.2.0"
+  },
+  "devDependencies": {
+    "persian-date": "^1.1.0"
   }
 }
