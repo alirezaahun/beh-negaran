@@ -10,6 +10,7 @@ delete branch :              branch -d (Name of branch)
 merge:                       merge Name(add a name that we want to merge to a branch that we are already in it now)
                                        
 test 1
+test 2
   
 
 
