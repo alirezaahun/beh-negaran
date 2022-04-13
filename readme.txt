@@ -7,8 +7,9 @@ branch switch :              switch to orher branch
 branch create & switch:      git switch -c (Name of branch)        
 change branch name:          branch -m (New Name)
 delete branch :              branch -d (Name of branch)
-
-
+merge:                       merge Name(add a name that we want to merge to a branch that we are already in it now)
+                                       
+test 1
   
 
 
