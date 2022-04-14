@@ -30,6 +30,9 @@ clear:                          delete all stash
  remote add <name> <url>:       define a Destination for send project to this url   
  remote -v:                     return url of Destination
  remote push <name> <branch>:   push the changes to specific branch
+ 
+ test
+ 
     
   
 
