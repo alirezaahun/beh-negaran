@@ -25,6 +25,10 @@
     />
     <!-- Main CSS ----------------------------------------------------------->
     <link rel="stylesheet" href="assets/main.css" />
+    <!-- Animate Css ---------------------------------------------->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- Main JS ------------------------------------------------->
     <script src="assets/main.js" defer></script>
     <!-- Persian Date --------------------------------------------------------->
@@ -38,9 +42,13 @@
     <script
       src="node_modules/@popperjs/core/dist/umd/popper.min.js"
       defer
-    ></script>
-    <!-- ir-city-select.js ------------------------------------------------------->
-    <script src="https://github.com/KayvanMazaheri/ir-city-select/releases/download/v0.2.0/ir-city-select.min.js"></script>
+    ></script> 
+    <!-- Owl Carousel  -------------------------------------------->
+    <link rel="stylesheet" href="assets/owl.carousel.min.css">
+    <script src="assets/owl.carousel.min.js" defer></script>
+    <script src="assets/owl-custom-main.js" defer></script>
+
+
     <title>شرکت تبلیغاتی به نگاران تجارت آزما</title>
   </head>
   <body>
@@ -49,7 +57,7 @@
     <!-- <div id="scroll-progress"></div> -->
 
     <!-- Navbar -------------------------------------------------------------->
-    <nav class="navbar navbar-expand-lg costume-nav sticky-top">
+    <nav class="navbar navbar-expand-lg costume-nav">
         <div class="container-fluid">
           <img src="./assets/img/logo4.svg" class="navbar-brand"></img>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -125,7 +133,7 @@
               <ul>
             <li> <a href="#"><i class='bx bx-video-recording'></i>فیلم برداری</a> </li>
             <li> <a href="#"><i class='bx bx-camera'></i></i>عکاسی</a> </li>
-            <li> <a href="#"><i class='bx bx-camera-home'></i>تیزر</a> </li>
+            <li> <a href="#"><i class='bx bx-code-block'></i>طراحی سایت</a> </li>
             <li> <a href="#"><i class='bx bx-podcast'></i>پادکست</a> </li>
             <li> <a href="#"><i class='bx bx-user-pin'></i>کمپین</a> </li>
             </ul>
@@ -158,51 +166,29 @@
           
 
           <!-- Card Section --------------------------------------------------------------->
-          <div class="container">
-          <div class="row cards-box">
-            <div class="col-md-4 col-sm-12">
-              <div class="cards">
-                <div class="card-side front">
-                  <div>پادکست</div>
-                </div>
-                <div class="card-side back">
-                  <div>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</div>
-                </div>
+          <div class="container-fluid mt-5">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="owl-carousel owl-theme .owl-dots .owl-dot text-center">
+                <div class="carousel-banner"> <img class="img-fluid" src="assets/img/banner3.jpg" alt="banner1"> </div>
+                <div class="carousel-banner"> <img class="img-fluid" src="assets/img/banner2.jpg" alt="banner2"> </div>
+                <div class="carousel-banner"> <img class="img-fluid" src="assets/img/banner3.jpg" alt="banner3"> </div>
+                <div class="carousel-banner"> <img class="img-fluid" src="assets/img/banner2.jpg" alt="banner4"> </div>
+                
               </div>
             </div>
-            <div class="col-md-4 col-sm-12">
-              <div class="cards">
-                <div class="card-side front">
-                  <div>مشاوره</div>
-                </div>
-                <div class="card-side back">
-                  <div>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-12">
-              <div class="cards">
-                <div class="card-side front">
-                  <div>کمپین تبلیغاتی</div>
-                </div>
-                <div class="card-side back">
-                  <div>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</div>
-                </div>
-              </div>
-            </div>
-
           </div>
         </div>
 <!-- About Company ------------------------------------------------------------->
         <div class="container mt-5">
           <div class="row about-section">
-            <div class="col-md-4 col-sm-12">
+            <div class="col-lg-7 col-md-12 col-sm-12">
               <h3>درباره شرکت</h3>
-              <div class="horizontal-line2"></div>
+              <hr class="w-25">
               <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>
               <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>
             </div>
-            <div class="col-md-8 col-sm-12">
+            <div class="col-lg-5 col-md-12 col-sm-12">
               <div class="h_iframe-aparat_embed_frame">
                 <span style="display: block;padding-top: 57%"></span>
                 <iframe src="https://www.aparat.com/video/video/embed/videohash/Eq28t/vt/frame" allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
@@ -210,10 +196,10 @@
             </div>
           </div>
 
-          <div class="row mt-5 text-center">
+          <div class="row mt-5 why-order-online-section">
             <div class="col-md-12 col-sm-12">
              <h3>چرا سفارش آنلاین ؟</h3>
-             <div class="horizontal-line mb-3"></div>
+             <hr class="w-25">
              <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>
              <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>
             </div>
@@ -246,25 +232,35 @@
         <!-- Company Brands -------------------------------------------------->
           <div class="row text-center company-brands">
            <h3>همکاری های شرکت</h3>
-           <div class="horizontal-line"></div>
+           <hr class="w-25 m-auto">
           </div>
-
+<!-- Brand Sazmani ----------->
           <div class="row mt-5">
-           <div class="col-md-12 brands-logo d-flex justify-content-around">
-             <img src="assets/img/brand1.svg" alt="brand1">
-             <img src="assets/img/brand2.svg" alt="brand2">
-             <img src="assets/img/brand3.svg" alt="brand3">
-             <img src="assets/img/brand7.svg" alt="brand4">
-             <img src="assets/img/brand8.svg" alt="brand5">
-           </div>
-
-           <div class="col-md-12 brands-logo d-flex justify-content-evenly mt-5">
-            <img src="assets/img/brand4.svg" alt="brand6">
-            <img src="assets/img/brand5.svg" alt="brand7">
-            <img src="assets/img/brand6.svg" alt="brand8">
-            <img src="assets/img/brand9.svg" alt="brand9">
-             <img src="assets/img/brand10.svg" alt="brand10">
+            <div class="col-md-12">
+              <div class="owl-carousel owl-theme .owl-dots .owl-dot text-center owl">
+                <div class="carousel-banner"> <img src="assets/img/brand-1.png" alt="banner1"> </div>
+                <div class="carousel-banner"> <img src="assets/img/brand-2.png" alt="banner2"> </div>
+                <div class="carousel-banner"> <img src="assets/img/brand-3.png" alt="banner3"> </div>
+                <div class="carousel-banner"> <img src="assets/img/brand-4.png" alt="banner4"> </div>
+                <div class="carousel-banner"> <img src="assets/img/brand-5.png" alt="banner5"> </div>
+                <div class="carousel-banner"> <img src="assets/img/brand-6.png" alt="banner6"> </div>
+                <div class="carousel-banner"> <img src="assets/img/brand-7.png" alt="banner7"> </div>
+              </div>
+            </div>
           </div>
+<!-- Brand sherkati ---------------->
+          <div class="row mt-5">
+            <div class="col-md-12">
+              <div class="owl-carousel owl-theme .owl-dots .owl-dot text-center owl">
+                <div class="carousel-banner"> <img src="assets/img/brand-1.png" alt="banner1"> </div>
+                <div class="carousel-banner"> <img src="assets/img/brand-2.png" alt="banner2"> </div>
+                <div class="carousel-banner"> <img src="assets/img/brand-3.png" alt="banner3"> </div>
+                <div class="carousel-banner"> <img src="assets/img/brand-4.png" alt="banner4"> </div>
+                <div class="carousel-banner"> <img src="assets/img/brand-5.png" alt="banner5"> </div>
+                <div class="carousel-banner"> <img src="assets/img/brand-6.png" alt="banner6"> </div>
+                <div class="carousel-banner"> <img src="assets/img/brand-7.png" alt="banner7"> </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -307,7 +303,7 @@
             </div>
 
             <div class="col-md-4 col-sm-12 footer-contact">
-              <img class="footer-logo" src="assets/img/logo4.svg" alt="logo">
+              <img class="footer-logo" src="assets/img/logo white.svg" alt="logo">
               <ul>
                 <li>
                   <i class='bx bx-phone-call'></i>
@@ -336,14 +332,15 @@
             </div>
 
             <div class="row mt-3">
+              <a referrerpolicy="origin" target="_blank" href="https://trustseal.enamad.ir/?id=245447&amp;Code=eewDUE10jaZKLKtliHr3"><img referrerpolicy="origin" src="https://Trustseal.eNamad.ir/logo.aspx?id=245447&amp;Code=eewDUE10jaZKLKtliHr3" alt="" style="cursor:pointer" id="eewDUE10jaZKLKtliHr3"></a>
                 <p>کلیه حقوق متعلق به تیم طراحی وب سایت <span>به نگاران تجارت آزما</span></p>
+                <img referrerpolicy='origin' id = 'nbqejzpefukzoeukesgtapfu' style = 'cursor:pointer' onclick = 'window.open("https://logo.samandehi.ir/Verify.aspx?id=276805&p=uiwkjyoegvkamcsiobpddshw", "Popup","toolbar=no, scrollbars=no, location=no, statusbar=no, menubar=no, resizable=0, width=450, height=630, top=30")' alt = 'logo-samandehi' src = 'https://logo.samandehi.ir/logo.aspx?id=276805&p=odrfyndtwlbqaqgwlymaujyn' />
             </div>
 
           </div>
 
         </div>
       </footer>
-      
       <script src="node_modules/jquery/dist/jquery.min.js"></script>
       <script src="node_modules/persian-date/dist/persian-date.min.js"></script>
       <script src="node_modules/persian-datepicker/dist/js/persian-datepicker.min.js"></script>
