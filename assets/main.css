@@ -327,11 +327,10 @@ h1,h2,h3,h4,h5,h6,p {
   align-items: center;
 }
 .banner {
-  background-image: url("./img/banner2.jpg");
+  background-image: url("./img/orginal-banner-2.png");
   background-size: cover;
-  background-position: center;
   background-repeat: no-repeat;
-  height: 68vh;
+  height: 40vh;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
@@ -576,6 +575,24 @@ article p {
   color: #FF0000;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Scroll Bar ----------------------------------------------------------- */
 /* width */
 ::-webkit-scrollbar {
@@ -646,4 +663,9 @@ article p {
   .project-number {
     margin-top: 1rem;
   }
+}
+
+.testt{
+  background-image: url('./img/a.svg');
+ 
 }
