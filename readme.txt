@@ -1,5 +1,6 @@
 add :                           add file before comit
 comit -m :                      add caption and file
+commit commit -am 'massage':    add and commit A
 amend(git commit --amend):      return to before comit to add another file if you forgrt add one file
 log :                           log all the changes
 log --oneline:                  show all the changes in one line
@@ -32,7 +33,7 @@ clear:                          delete all stash
  remote push <name> <branch>:   push the changes to specific branch
  
  test
- 
+ alireza
     
   
 
