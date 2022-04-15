@@ -34,22 +34,11 @@ clear:                          delete all stash
  branch -r:                     show remote branch
  fetch <remote Name>:           give changes and save to localhost
  fetch <remote><branch Name>:   give changes and save to localhost from specific branch
- test
- alirezaa
- 
- this is teste from gut huba
+
+
+
     
   
-
-
-
-
-
-
-
-
-
-
 
 
 
