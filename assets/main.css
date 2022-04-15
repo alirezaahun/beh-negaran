@@ -875,4 +875,9 @@ footer p span {
   .footer-contact {
     font-size: 0.9rem;
   }
+  .owl-prev,
+  .owl-next {
+    display: none;
+  }
+  
 }

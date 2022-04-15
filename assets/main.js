@@ -141,6 +141,5 @@ const updateCount = (el) => {
 };
 
 items.forEach((item) => {
-  updateCount(item);
-});
-
+    updateCount(item);
+  });
