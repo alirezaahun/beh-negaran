@@ -144,4 +144,3 @@ items.forEach((item) => {
   updateCount(item);
 });
 
-

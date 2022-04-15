@@ -45,7 +45,7 @@ font-family: "Vazir";
   box-shadow: rgba(0, 0, 0, 0.16) 0px -3px 6px, rgba(0, 0, 0, 0.23) 0px -3px 6px;
   background-color: var(--clr-primary);
   display: none;
-  overflow-x: auto;
+  overflow-x: hidden;
   z-index: 50000;
 }
 
@@ -690,7 +690,7 @@ footer p span {
   margin-left: 1rem;
 }
 .footer-social-icons {
-  margin-top: 0.6rem;
+  margin-top: 1rem;
 }
 .footer-social-icons .bxl-instagram,
 .footer-social-icons .bxl-whatsapp,
@@ -717,6 +717,9 @@ footer p span {
   color: var(--clr-primary);
   margin: 0 1.5rem;
   border-radius: 1.3rem;
+}
+.carousel-shadow {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .carousel-banner img {
   border-radius: 1.3rem;
@@ -764,11 +767,11 @@ footer p span {
 }
 
 .owl-prev {
-  right: -25px;
+  right: -20px;
 }
 
 .owl-next {
-  left: -25px;
+  left: -20px;
 }
 
 /* Scroll Bar ----------------------------------------------------------- */
@@ -858,7 +861,7 @@ footer p span {
     text-align: center;
   }
   .quick-service-icons a {
-    font-size: 0.5rem;
+    font-size: 0.4rem;
   }
   .quick-service-icons i {
     font-size: 1.3rem;
@@ -868,5 +871,8 @@ footer p span {
   }
   .footer {
     margin-bottom: 3rem;
+  }
+  .footer-contact {
+    font-size: 0.9rem;
   }
 }

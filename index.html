@@ -52,26 +52,8 @@
     <title>شرکت تبلیغاتی به نگاران تجارت آزما</title>
   </head>
   <body>
-
     <!-- Scroll Bar ------------------------------------------------------>
     <!-- <div id="scroll-progress"></div> -->
-
-    <!-- Mobile Bottom Navbar --------------------------------------------->
-    <nav class="nav">
-      <a href="#" class="nav__link nav__link--active">
-        <i class='bx bx-home nav__icon'></i>
-        <span class="nav__text">خانه</span>
-      </a>
-      <a href="#" class="nav__link">
-        <i class='bx bx-shopping-bag nav__icon'></i>
-        <span class="nav__text">سفارش های من</span>
-      </a>
-      <a href="#" class="nav__link">
-        <i class='bx bx-user nav__icon'></i>
-        <span class="nav__text">حساب کاربری</span>
-      </a>
-      
-    </nav>
 
     <!-- Navbar -------------------------------------------------------------->
     <nav class="navbar navbar-expand-lg costume-nav">
@@ -135,6 +117,24 @@
         </div>
       </nav>
 
+      <!-- Mobile Bottom Navbar --------------------------------------------->
+    <nav class="nav">
+      <a href="#" class="nav__link nav__link--active">
+        <i class='bx bx-home nav__icon'></i>
+        <span class="nav__text">خانه</span>
+      </a>
+      <a href="#" class="nav__link">
+        <i class='bx bx-shopping-bag nav__icon'></i>
+        <span class="nav__text">سفارش های من</span>
+      </a>
+      <a href="#" class="nav__link">
+        <i class='bx bx-user nav__icon'></i>
+        <span class="nav__text">حساب کاربری</span>
+      </a>
+      
+    </nav>
+
+
       <!-- Banner Section ---------------------------------------------------------------->
       <main class="main-section">
         <div class="container-fluid px-0">
@@ -180,6 +180,7 @@
             </form>
           </div>
           </div>
+
           
 
           <!-- Card Section --------------------------------------------------------------->
@@ -187,10 +188,10 @@
           <div class="row">
             <div class="col-md-12">
               <div class="owl-carousel owl-theme .owl-dots .owl-dot text-center">
-                <div class="carousel-banner"> <a href="#"> <img class="img-fluid" src="assets/img/content-banner.png" alt="banner1"> </a> </div>
-                <div class="carousel-banner"> <a href="#"> <img class="img-fluid" src="assets/img/website-team-banner.png" alt="banner2"> </a> </div>
-                <div class="carousel-banner"> <a href="#"> <img class="img-fluid" src="assets/img/consulting-banner.png" alt="banner3"> </a> </div>
-                <div class="carousel-banner"> <a href="#"> <img class="img-fluid" src="assets/img/podcast-banner.png" alt="banner4"> </a> </div>
+                <div class="carousel-banner carousel-shadow"> <a href="#"> <img class="img-fluid" src="assets/img/content-banner.png" alt="banner1"> </a> </div>
+                <div class="carousel-banner carousel-shadow"> <a href="#"> <img class="img-fluid" src="assets/img/website-team-banner.png" alt="banner2"> </a> </div>
+                <div class="carousel-banner carousel-shadow"> <a href="#"> <img class="img-fluid" src="assets/img/consulting-banner.png" alt="banner3"> </a> </div>
+                <div class="carousel-banner carousel-shadow"> <a href="#"> <img class="img-fluid" src="assets/img/podcast-banner.png" alt="banner4"> </a> </div>
                 
               </div>
             </div>
@@ -223,7 +224,7 @@
           </div>
 
           <!-- Numbers Section ----------------------------------------------->
-          <div class="row mt-5">
+          <div class="row mt-5" id="numbers">
             <div class="col-md-4 col-sm-12">
               <article class="project-number">
                 <span class="number" data-value="500">۰</span>
@@ -330,7 +331,7 @@
 
                 <li>
                   <i class='bx bxs-location-plus'></i>
-                  <span>دفتر شرکت : کرج، میدان توحید</span>
+                  <span>دفتر شرکت : کرج، میدان توحید، ساختمان سنیک</span>
                 </li>
                 <li>
                   <img class="e-namad" src="assets/img/enamad-logo.png" alt="e-namad">
@@ -362,5 +363,6 @@
       <script src="node_modules/jquery/dist/jquery.min.js"></script>
       <script src="node_modules/persian-date/dist/persian-date.min.js"></script>
       <script src="node_modules/persian-datepicker/dist/js/persian-datepicker.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/3.0.0/jquery.waypoints.min.js" integrity="sha512-f/gxy4xAjuGEIf/ujexcNI906CTS+kfw40QCyG/rEMKELvCIFaTOY+dfdn7M/eNsiMreG3SStjgFr9q8Me9Baw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </body>
 </html>
