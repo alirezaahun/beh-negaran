@@ -711,6 +711,8 @@ footer p span {
   color: #FF0000;
 }
 
+
+
 /* Owl Carousel ------------------------------------------------*/
 .carousel-banner {
   color: var(--clr-primary);
@@ -859,6 +861,9 @@ footer p span {
     font-size: 0.6rem;
     text-align: center;
   }
+  .footer-links {
+    margin-top: 3rem;
+  }
   .quick-service-icons a {
     font-size: 0.4rem;
   }
@@ -877,6 +882,35 @@ footer p span {
   .owl-prev,
   .owl-next {
     display: none;
+  }
+
+  /* Footer Collapse ---------------------------------------------*/
+  .collapsible-trigger {
+    cursor: pointer;
+  }
+  
+  .collapse-active, .collapsible-trigger:hover {
+    color: var(--clr-accent);
+  }
+  
+  .collapsible-trigger:after {
+    font-family: "Font Awesome 5 Free"; 
+    content: '\f103';
+    color: var(--clr-accent);
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .collapse-active:after {
+    content: "\f102";
+    color: var(--clr-secondary);
+  }
+  
+  .content-collapse {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
   }
   
 }

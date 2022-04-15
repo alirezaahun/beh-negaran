@@ -143,3 +143,19 @@ const updateCount = (el) => {
 items.forEach((item) => {
     updateCount(item);
   });
+
+
+  var coll = document.getElementsByClassName("collapsible-trigger");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("collapse-active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
