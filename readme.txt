@@ -32,6 +32,8 @@ clear:                          delete all stash
  remote -v:                     return url of Destination
  remote push <name> <branch>:   push the changes to specific branch
  branch -r:                     show remote branch
+ fetch <remote Name>:           give changes and save to localhost
+ fetch <remote><branc hName>:   give changes and save to localhost from specific branch
  test
  alirezaa
     
