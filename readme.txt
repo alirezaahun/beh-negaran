@@ -36,6 +36,8 @@ clear:                          delete all stash
  fetch <remote><branc hName>:   give changes and save to localhost from specific branch
  test
  alirezaa
+ 
+ this is teste from gut hub
     
   
 
