@@ -970,4 +970,11 @@ footer p span {
 }
 /* Tablet Screen -----------------------------------------------*/
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+  .content-collapse {
+    max-height: 100%;
+    overflow: visible;
+  }
+  .collapsible-trigger:after {
+    content: "";
+  }
 }

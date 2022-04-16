@@ -142,11 +142,15 @@ const updateCount = (el) => {
   // console.log(increaseCount);
 };
 // Trigger Numbers Function -----------------------------------------------
+let once = true;
 function allInView() {
-  if (isScrolledIntoView($("#numbers"))) {
-    items.forEach((item) => {
-      updateCount(item);
-    });
+  if (once) {
+    if (isScrolledIntoView($("#numbers"))) {
+      items.forEach((item) => {
+        updateCount(item);
+      });
+      once = false;
+    }
   }
 }
 
@@ -167,17 +171,15 @@ for (i = 0; i < coll.length; i++) {
 }
 
 // Change Service Box Display On Scroll ---------------------------------------
-$(document).ready(function(){
-  $(window).scroll(function(){
-      if($(window).scrollTop() > 600){
-          $(".quick-service-box").css({"visibility":"hidden"}); 
-          $(".service-icons-mobile").css({"display":"block"});  
-          $(".service-icons-mobile").css({"backgroundColor":"#f6f6f6"});
-      }
-      else{
-          $(".quick-service-box").css({"visibility":"visible"});
-          $(".service-icons-mobile").css({"display":"none"});
-      }
-
-  })
-})
+$(document).ready(function () {
+  $(window).scroll(function () {
+    if ($(window).scrollTop() > 600) {
+      $(".quick-service-box").css({ visibility: "hidden" });
+      $(".service-icons-mobile").css({ display: "block" });
+      $(".service-icons-mobile").css({ backgroundColor: "#f6f6f6" });
+    } else {
+      $(".quick-service-box").css({ visibility: "visible" });
+      $(".service-icons-mobile").css({ display: "none" });
+    }
+  });
+});
