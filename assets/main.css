@@ -2,7 +2,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Iranian Sans";
+  font-family: 'Iranian Sans';
+   font-weight: normal;
+   font-style: normal;
 }
 body {
   overflow-x: hidden;
@@ -176,8 +178,8 @@ h6 {
 .btn {
   letter-spacing: 0.1em;
   cursor: pointer;
-  font-size: 14px;
-  font-weight: 600;
+  /* font-size: 14px;
+  font-weight: 600; */
   line-height: 35px;
   max-width: 130px;
   position: relative;
@@ -244,8 +246,7 @@ h6 {
   background: transparent;
   margin-left: 1rem;
   cursor: pointer;
-  font-size: 14px;
-  font-weight: 600;
+  /* font-size: 14px; */
   line-height: 29px;
   padding: 0.7em 1rem;
   border-radius: 0.5rem;
@@ -529,7 +530,7 @@ h6 {
   font-size: 1.5rem;
 }
 .service-icons-mobile a:hover {
-  color: var(--clr-secondary);
+  color: var(--clr-accent);
 }
 .service-icons-mobile li {
   width: 100%;
