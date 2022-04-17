@@ -188,7 +188,6 @@ h6 {
   align-items: center;
   justify-content: center;
   border-radius: 0.5rem;
-  box-shadow: 0 0 3px rgb(58, 62, 61, 0.5);
 }
 .btn i {
   font-size: 1.1rem;
@@ -199,7 +198,7 @@ h6 {
 }
 .effect04 {
   color: var(--clr-dark);
-  background-color: var(--clr-primary);
+  background-color: transparent;
   position: relative;
   transition-duration: 0.4s;
   overflow: hidden;
@@ -212,7 +211,7 @@ h6 {
 .effect04:hover {
   transition: none;
   color: var(--clr-accent);
-  background-color: var(--clr-accent);
+  /* background-color: var(--clr-accent); */
 }
 .effect04 span {
   color: var(--clr-dark);
@@ -220,7 +219,7 @@ h6 {
 .effect04:hover span {
   -webkit-transform: translateY(-400%) scale(-0.1, 20);
   transform: translateY(-400%) scale(-0.1, 20);
-  color: var(--clr-accent);
+  color: #fff;
 }
 .effect04::before {
   content: attr(data-sm-link-text);
@@ -241,8 +240,8 @@ h6 {
 /* Main Button --------------------------------------------------- */
 
 .primary-btn {
-  background-color: var(--clr-primary);
   color: var(--clr-dark);
+  background: transparent;
   margin-left: 1rem;
   cursor: pointer;
   font-size: 14px;
@@ -250,17 +249,33 @@ h6 {
   line-height: 29px;
   padding: 0.7em 1rem;
   border-radius: 0.5rem;
-  position: relative;
+  transition: all 0.4s ease;
   text-decoration: none;
-  text-transform: uppercase;
-  transition: all ease 0.4s;
-  box-shadow: 0 0 3px rgb(58, 62, 61, 0.5);
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+.primary-btn:after {
+  position: absolute;
+  content: " ";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease;
+  -webkit-transform: scale(0.1);
+  transform: scale(0.1);
+  border-radius: 0.5rem;
 }
 .primary-btn:hover {
   color: var(--clr-primary);
+  z-index: 2;
+}
+.primary-btn:hover:after {
   background-color: var(--clr-dark);
-  transition: all ease 0.4s;
-  box-shadow: 0 0 5px black inset;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  z-index: -1;
 }
 
 /* Hamburger menu --------------------------------------------------- */
@@ -426,12 +441,12 @@ h6 {
 .quick-form:focus-within {
   border-color: var(--clr-accent);
   animation-name: padding-anim;
-  animation-duration: 500ms;
+  animation-duration: 400ms;
   animation-fill-mode: forwards;
 }
 @keyframes padding-anim {
   to {
-    padding: 1rem;
+    padding: 0.5rem;
   }
 }
 .quick-form input,
@@ -458,7 +473,8 @@ h6 {
   text-decoration: none;
   color: var(--clr-dark);
   border-bottom: 3px solid transparent;
-  font-weight: 900;
+  font-weight: 600;
+  font-size: 0.9rem;
   padding-bottom: 5px;
   border-radius: 0 0 3px 3px;
 }
@@ -481,17 +497,11 @@ h6 {
   border: none;
 }
 .quick-service-icons i {
-  font-size: 2.5rem;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
 }
 .quick-service-icons a:hover {
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-color: var(--clr-secondary);
-  background-image: linear-gradient(
-    315deg,
-    rgb(233, 195, 30) 0%,
-    rgb(0, 93, 131) 74%
-  );
+  color: var(--clr-secondary);
   border-bottom-color: var(--clr-accent);
   transition: ease 0.5s;
 }
@@ -505,8 +515,7 @@ h6 {
   align-items: center;
   padding: 0.7rem;
   list-style: none;
-  background-color: #fff;
-  /* border-radius: 1.3rem; */
+  background-color: var(--clr-secondary);
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   margin: 0 ;
 }
@@ -516,7 +525,7 @@ h6 {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  color: var(--clr-dark);
+  color: var(--clr-primary);
   font-size: 1.5rem;
 }
 .service-icons-mobile a:hover {
@@ -609,15 +618,16 @@ article {
 }
 
 article span {
-  font-size: 3rem;
-  font-weight: 700;
-  line-height: 1.25;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.50;
+  font-family: 'Vazir';
 }
 
 article p {
   margin: 0;
-  text-transform: capitalize;
-  font-size: 1.5rem;
+  font-weight: 400;
+  font-size: 1rem;
 }
 .hour-number {
   border-bottom-color: rgb(0, 93, 131);
@@ -637,7 +647,6 @@ article p {
 .company-brands {
   margin-top: 7rem;
 }
-
 /* Footer --------------------------------------------------------------------*/
 .footer {
   background-color: var(--clr-dark);
@@ -822,14 +831,15 @@ footer p span {
 /* Scroll Bar ----------------------------------------------------------- */
 /* width */
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 10px;
 }
 /* button */
 ::-webkit-scrollbar-button {
-  background: var(--clr-accent);
+  background: transparent;
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
   background: var(--clr-secondary);
 }
 /* Handle on hover */
@@ -858,6 +868,25 @@ footer p span {
   .vertical-line {
     display: none;
   }
+  .quick-service-icons li {
+    border-right: none;
+  }
+  .quick-service-icons li:hover {
+    background: none;
+  }
+  .quick-service-icons ul {
+    padding-bottom: 0;
+  }
+  .quick-service-icons i {
+    margin-bottom: 0.5rem;
+  }
+  .quick-service-icons a {
+    font-size: 1rem;
+    border: none;
+  }
+  .quick-service-icons a:hover {
+    color: var(--clr-secondary);
+  }
   .quick-service-box {
     width: 100%;
     border-radius: 1.3rem;
@@ -866,11 +895,8 @@ footer p span {
   .service-icons-mobile {
     position: fixed;
     top: 0;
-    z-index: 50000;
-  }
-  .service-icons-mobile-bg {
-    z-index: 40000;
-    background-position: top;
+    right: 0;
+    z-index: 11000;
   }
   .quick-form {
     display: flex;
@@ -976,5 +1002,25 @@ footer p span {
   }
   .collapsible-trigger:after {
     content: "";
+  }
+  .quick-service-box {
+    width: 100%;
+    margin-top: -14rem;
+  }
+  .quick-service-icons ul {
+    padding-bottom: 0.5rem;
+  }
+  .quick-service-icons a {
+    font-size: 0.9rem;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .service-icons-mobile {
+    position: fixed;
+    top: -1000px;
+  }
+  .quick-service-box {
+    width: 100%;
+    margin-top: -14rem;
   }
 }
