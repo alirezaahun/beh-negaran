@@ -173,13 +173,28 @@ for (i = 0; i < coll.length; i++) {
 // Change Service Box Display On Scroll ---------------------------------------
 $(document).ready(function () {
   $(window).scroll(function () {
-    if ($(window).scrollTop() > 850) {
-      // $(".quick-service-box").css({ visibility: "hidden" });
-      $(".service-icons-mobile").css({ display: "block" });
-    } else {
-      // $(".quick-service-box").css({ visibility: "visible" });
-      $(".service-icons-mobile").css({ display: "none" });
+    if(toggleBtn == false){
+      if ($(window).scrollTop() > 1100) {
+        $(".service-icons-mobile").css({ display: "block" });
+      } else {
+        $(".service-icons-mobile").css({ display: "none" });
+      }
+    }else{
+      if ($(window).scrollTop() > 850) {
+        $(".service-icons-mobile").css({ display: "block" });
+      } else {
+        $(".service-icons-mobile").css({ display: "none" });
+      }
     }
+
   });
 });
+
+let toggleBtn = false;
+let togglerBtn = document.getElementById("navbarTogglerBtn");
+togglerBtn.addEventListener('click', togglerTrigger)
+
+function togglerTrigger() {
+  this.toggleBtn=!this.toggleBtn;
+}
 
