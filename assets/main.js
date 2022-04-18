@@ -173,14 +173,33 @@ for (i = 0; i < coll.length; i++) {
 // Change Service Box Display On Scroll ---------------------------------------
 $(document).ready(function () {
   $(window).scroll(function () {
-    if ($(window).scrollTop() > 850) {
-      $(".quick-service-box").css({ visibility: "hidden" });
-      $(".service-icons-mobile").css({ display: "block" });
-      $(".service-icons-mobile").css({ backgroundColor: "#f6f6f6" });
-    } else {
-      $(".quick-service-box").css({ visibility: "visible" });
-      $(".service-icons-mobile").css({ display: "none" });
+    if(alireza==false){
+      if ($(window).scrollTop() > 1200) {
+        $(".quick-service-box").css({ visibility: "hidden" });
+        $(".service-icons-mobile").css({ display: "block" });
+        $(".service-icons-mobile").css({ backgroundColor: "#f6f6f6" });
+      } else {
+        $(".quick-service-box").css({ visibility: "visible" });
+        $(".service-icons-mobile").css({ display: "none" });
+      }
+    }else{
+      if ($(window).scrollTop() > 850) {
+        $(".quick-service-box").css({ visibility: "hidden" });
+        $(".service-icons-mobile").css({ display: "block" });
+        $(".service-icons-mobile").css({ backgroundColor: "#f6f6f6" });
+      } else {
+        $(".quick-service-box").css({ visibility: "visible" });
+        $(".service-icons-mobile").css({ display: "none" });
+      }
     }
+    
   });
 });
 
+let alireza=false
+let x = document.getElementById("myBtn");
+x.addEventListener('click',aaa)
+
+function aaa() {
+  this.alireza=!this.alireza
+}
