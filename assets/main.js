@@ -106,18 +106,18 @@ $(document).ready(function () {
 
 // Trigger Function On Scroll ----------------------------------------
 
-  $(allInView);
-  $(window).scroll(allInView);
-  
-  function isScrolledIntoView(elem) {
-    var docViewTop = $(window).scrollTop();
-    var docViewBottom = docViewTop + $(window).height();
-  
-    var elemTop = $(elem).offset().top;
-    var elemBottom = elemTop + $(elem).height();
-  
-    return elemBottom <= docViewBottom && elemTop >= docViewTop;
-  }
+$(allInView);
+$(window).scroll(allInView);
+
+function isScrolledIntoView(elem) {
+  var docViewTop = $(window).scrollTop();
+  var docViewBottom = docViewTop + $(window).height();
+
+  var elemTop = $(elem).offset().top;
+  var elemBottom = elemTop + $(elem).height();
+
+  return elemBottom <= docViewBottom && elemTop >= docViewTop;
+}
 
 // Numbers Count Update -------------------------------------
 const items = [...document.querySelectorAll(".number")];
@@ -142,13 +142,16 @@ const updateCount = (el) => {
   // console.log(increaseCount);
 };
 // Trigger Numbers Function -----------------------------------------------
+let once = true;
 function allInView() {
-  if (isScrolledIntoView($("#numbers"))) {
-    items.forEach((item) => {
-      updateCount(item);
-    });
+  if (once) {
+    if (isScrolledIntoView($("#numbers"))) {
+      items.forEach((item) => {
+        updateCount(item);
+      });
+      once = false;
+    }
   }
-
 }
 
 // Footer Items Collapse On Mobile ------------------------------
@@ -166,3 +169,18 @@ for (i = 0; i < coll.length; i++) {
     }
   });
 }
+
+// Change Service Box Display On Scroll ---------------------------------------
+$(document).ready(function () {
+  $(window).scroll(function () {
+    if ($(window).scrollTop() > 850) {
+      $(".quick-service-box").css({ visibility: "hidden" });
+      $(".service-icons-mobile").css({ display: "block" });
+      $(".service-icons-mobile").css({ backgroundColor: "#f6f6f6" });
+    } else {
+      $(".quick-service-box").css({ visibility: "visible" });
+      $(".service-icons-mobile").css({ display: "none" });
+    }
+  });
+});
+
