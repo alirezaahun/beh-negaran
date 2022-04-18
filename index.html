@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- IRAN Sans Font -------------------------------------------------->
-    <link href="http://fonts.cdnfonts.com/css/iranian-sans" rel="stylesheet">
+    <!-- <link href="http://fonts.cdnfonts.com/css/iranian-sans" rel="stylesheet"> -->
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/iranian-sans" type="text/css"/>
     <!-- Vazir Font --------------------------------------->
     <link
       rel="stylesheet"
@@ -14,6 +15,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- Fav Icon ------------------------------------------------------->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <!-- Font Awesome --------------------------------------------------->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <!-- Box Icons -------------------------------------------------------->
     <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
     <!-- Bootstrap RTL ----------------------------------------------------->
@@ -52,14 +58,12 @@
     <title>شرکت تبلیغاتی به نگاران تجارت آزما</title>
   </head>
   <body>
-    <!-- Scroll Bar ------------------------------------------------------>
-    <!-- <div id="scroll-progress"></div> -->
-
+    
     <!-- Navbar -------------------------------------------------------------->
     <nav class="navbar navbar-expand-lg costume-nav">
         <div class="container-fluid">
           <img src="./assets/img/logo4.svg" class="navbar-brand"></img>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler p-0 me-3" id="navbarTogglerBtn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <div id="menu_button">
               <input type="checkbox" id="menu_checkbox">
               <label for="menu_checkbox" id="menu_label">
@@ -76,9 +80,25 @@
                 <span class="vertical-line"></span>
                 <ul class="dropdown-menu text-end" aria-labelledby="navbarDropdown">
                   
-                  <li><a class="dropdown-item" href="#">سفارش انلاین</a></li>
+                  <li><a class="dropdown-item" href="#">ویدئو</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">پروژه ها</a></li>
+                  <li><a class="dropdown-item" href="#">عکس</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">سایت</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">طراحی</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">پادکست</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">مشاوره تبلیغاتی</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">شبکه های اجتماعی</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">کمپین تبلیغاتی</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">دیجیتال مارکتینگ</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">جلوه های بحری</a></li>
                 </ul>
               </li>
               <span class="vertical-line"></span>
@@ -87,11 +107,11 @@
               </li>
               <span class="vertical-line"></span>
               <li class="nav-item">
-                <a class="nav-link" href="#">پروژه ها</a>
+                <a class="nav-link" href="#">نمونه ها</a>
               </li>
               <span class="vertical-line"></span>
               <li class="nav-item">
-                <a class="nav-link" href="#">همکاری با ما</a>
+                <a class="nav-link" href="#">درباره ما</a>
               </li>
               <span class="vertical-line"></span>
               <li class="nav-item dropdown">
@@ -100,16 +120,22 @@
                 </a>
                 <ul class="dropdown-menu text-end" aria-labelledby="navbarDropdown">
                   
-                  <li><a class="dropdown-item" href="#">لینک ۱</a></li>
+                  <li><a class="dropdown-item" href="#">راه های ارتباطی</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">لینک ۱</a></li>
+                  <li><a class="dropdown-item" href="#">پادکست به نگاران</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">باشگاه مشتریان</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">فرصت های شغلی</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">همکاری با ما</a></li>
                 </ul>
               </li>
               
             </ul>
             <div class="navbar-btns">
-            <a href="#" class="primary-btn"> پیگیری سفارش </a>
-
+            <a href="#" class="primary-btn"><i class='bx bx-cart'></i>پیگیری سفارشات</a>
+            |
             <a href="#" class="btn effect04" data-sm-link-text="ثبت نام" target="_blank">
               <span><i class='bx bx-log-in-circle'></i>ورود</span></a>
           </div>
@@ -125,7 +151,7 @@
       </a>
       <a href="#" class="nav__link">
         <i class='bx bx-shopping-bag nav__icon'></i>
-        <span class="nav__text">سفارش های من</span>
+        <span class="nav__text">سفارش ها</span>
       </a>
       <a href="#" class="nav__link">
         <i class='bx bx-user nav__icon'></i>
@@ -137,54 +163,62 @@
 
       <!-- Banner Section ---------------------------------------------------------------->
       <main class="main-section">
+
         <div class="container-fluid px-0">
           <div class="banner">
            
           </div>
 
-          <div class="row quick-service-box">
-            <div class="col-md-12">
+          <div class="row quick-service-box p-4">
+            <div class="col-md-12 p-0">
             <h3>خدمات سفارش آنلاین</h3>
             <!-- <div class="horizontal-line"></div> -->
             <div class="quick-service-icons">
               <ul>
-            <li> <a href="#"><i class='bx bx-video-recording'></i>فیلم برداری</a> </li>
-            <li> <a href="#"><i class='bx bx-camera'></i></i>عکاسی</a> </li>
-            <li> <a href="#"><i class='bx bx-code-block'></i>طراحی سایت</a> </li>
-            <li> <a href="#"><i class='bx bx-podcast'></i>پادکست</a> </li>
-            <li> <a href="#"><i class='bx bx-user-pin'></i>کمپین</a> </li>
+            <li> <a href="#"><i class="fas fa-video"></i>ویدئو</a> </li>
+            <li> <a href="#"><i class="fas fa-camera"></i>عکس</a> </li>
+            <li> <a href="#"><i class="fas fa-laptop-code"></i>سایت</a> </li>
+            <li> <a href="#"><i class="fas fa-palette"></i>طراحی</a> </li>
+            <li> <a href="#"><i class="fas fa-microphone"></i>پادکست</a> </li>
             </ul>
             </div>
             <form class="form-control quick-form">
             
             <label for="persianDatapicker"> تاریخ: <input name="persianDatapicker" id="persianDatapicker" type="text"></label> 
-            <!-- <label for="service-time"> تعداد ساعت: <select name="service-time" id="service-time">
-              <option value="۱">۱</option>
-              <option value="۲">۲</option>
-              <option value="۳">۳</option>
-              <option value="۴">۴</option>
-              <option value="۵">۵</option>
-              <option value="۶">۶</option>
-              <option value="۷">۷</option>
-              <option value="۸">۸</option>
-              <option value="۹">۹</option>
-              <option value="۱۰">۱۰</option>
-            </select></label> -->
+            
             <label for="service-city"> شهر: <select name="service-city" id="service-city">
                 <option value="تهران">تهران</option>
                 <option value="کرج">کرج</option>
                 <option value="قزوین">قزوین</option>
               </select></label>
-             <a class="primary-btn" href="#">سفارش</a>
+             <a class="secondary-btn" href="#">سفارش</a>
             
             </form>
           </div>
           </div>
 
+          <!-- Icons On Mobile Scroll --------------------------------->
+          
+          <div class="container">
+            <div class="row">
+              
+                <div class="service-icons-mobile d-sm-block d-md-none">
+                  <ul>
+                <li> <a href="#"><i class="fas fa-video"></i> </a> </li>
+                <li> <a href="#"><i class="fas fa-camera"></i></a> </li>
+                <li> <a href="#"><i class="fas fa-laptop-code"></i> </a> </li>
+                <li> <a href="#"><i class="fas fa-palette"></i></a> </li>
+                <li> <a href="#"><i class="fas fa-microphone"></i></a> </li>
+                </ul>
+                </div>
+              
+            </div>
+          </div>
+
           
 
-          <!-- Card Section --------------------------------------------------------------->
-          <div class="container-fluid mt-5">
+          <!-- banners Section --------------------------------------------------------------->
+          <div class="container-fluid mt-5 pt-5">
           <div class="row">
             <div class="col-md-12">
               <div class="owl-carousel owl-theme .owl-dots .owl-dot text-center">
@@ -201,10 +235,11 @@
         <div class="container mt-5">
           <div class="row about-section">
             <div class="col-lg-7 col-md-12 col-sm-12">
-              <h3>درباره شرکت</h3>
+              <h3>داستان به نگاران</h3>
               <hr class="w-25">
-              <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>
-              <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>
+              <p>شروع ایده شکل گیری شرکت از هفت سال پیش ابتدا با عکاسی در زمینه تبلیغاتی و صنعتی آغاز شد و در ادامه فیلمبرداری و ساخت آنونس تبلیغاتی هم به این پکیج فری لنسری اضافه شد.</p>
+              <p>بعد ها از چهار سال پیش تیم تولید محتوا تخصصی راه اندازی شد که زمینه ساز تاسیس شرکت در شهریور سال ۱۴۰۰ بود.</p>
+              <p>هم اکنون شرکت به‌نگاران تجارت آزما با مجوز رسمی از وزارت فرهنگ و ارشاد اسلامی با موضوع تبلیغات دیجیتال فعالیت میکند و خدمات متفاوتی در این زمینه ارائه میدهد.</p>
             </div>
             <div class="col-lg-5 col-md-12 col-sm-12">
               <div class="h_iframe-aparat_embed_frame">
@@ -214,35 +249,43 @@
             </div>
           </div>
 
-          <div class="row mt-5 why-order-online-section">
+          <div class="row why-order-online-section">
             <div class="col-md-12 col-sm-12">
-             <h3>چرا سفارش آنلاین ؟</h3>
+             <h3>هدف به‌ نگاران</h3>
              <hr class="w-25">
-             <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>
-             <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>
+             <p>اصلی ترین هدف شرکت به‌نگاران ارائه راهکارهای تبلیغاتی و مارکتینگ در جهت رشد و ارتقای کسب و کارها در سطوح مختلف میباشد. </p>
+             <p>ما با شعار رشد مجازی-فروش واقعی پا به این عرصه گذاشتیم و تلاش میکنیم همراه خوبی برای تمامی کسب و کارها باشیم.</p>
+            </div>
+          </div>
+
+          <div class="row  why-order-online-section">
+            <div class="col-md-12 col-sm-12">
+             <h3>سامانه به نگاران</h3>
+             <hr class="w-25">
+             <p>اولین سایت جامع خدمات تولید محتوای رسانه ای میباشد که میتوان در آن به صورت آنلاین ثبت سفارش انجام داد و در جریان ریز اتفاقات پروژه قرار گرفت و همچ</p>
             </div>
           </div>
 
           <!-- Numbers Section ----------------------------------------------->
           <div class="row mt-5" id="numbers">
             <div class="col-md-4 col-sm-12">
-              <article class="project-number">
-                <span class="number" data-value="500">۰</span>
-                <p>پروژه های موفق</p>
+              <article class="service-number">
+                <span class="number" data-value="50">۰</span>
+                <p>خدمات</p>
               </article>
             </div>
 
             <div class="col-md-4 col-sm-12">
-              <article class="hour-number">
-                <span class="number" data-value="17140">۰</span>
-                <p>ساعت های کار</p>
+              <article class="done-projects-number">
+                <span class="number" data-value="300">۰</span>
+                <p>پروژه های انجام شده</p>
               </article>
             </div>
 
             <div class="col-md-4 col-sm-12">
-              <article class="costumer-number">
-                <span class="number" data-value="1500">۰</span>
-                <p>مشتریان راضی</p>
+              <article class="current-projects-number">
+                <span class="number" data-value="13">۰</span>
+                <p>پروژه های در حال انجام</p>
               </article>
             </div>
           </div>
@@ -256,27 +299,34 @@
           <div class="row mt-5">
             <div class="col-md-12">
               <div class="owl-carousel owl-theme .owl-dots .owl-dot text-center owl">
-                <div class="carousel-banner"> <img src="assets/img/brand-1.png" alt="banner1"> </div>
-                <div class="carousel-banner"> <img src="assets/img/brand-2.png" alt="banner2"> </div>
-                <div class="carousel-banner"> <img src="assets/img/brand-3.png" alt="banner3"> </div>
-                <div class="carousel-banner"> <img src="assets/img/sandicate.svg" alt="banner4"> </div>
-                <div class="carousel-banner"> <img src="assets/img/brand-5.png" alt="banner5"> </div>
-                <div class="carousel-banner"> <img src="assets/img/brand-6.png" alt="banner6"> </div>
-                <div class="carousel-banner"> <img src="assets/img/brand-7.png" alt="banner7"> </div>
+                <div class="carousel-banner"> <img src="assets/img/brands-logo/sandicate.svg" alt="banner1"> </div>
+                <div class="carousel-banner"> <img src="assets/img/brands-logo/noavari shokoofaee.svg" alt="banner2"> </div>
+                <div class="carousel-banner"> <img src="assets/img/brands-logo/setad.svg" alt="banner3"> </div>
+                <div class="carousel-banner"> <img src="assets/img/brands-logo/kargorooh.svg" alt="banner4"> </div>
+                <div class="carousel-banner"> <img src="assets/img/brands-logo/anjoman.svg" alt="banner5"> </div>
+                <div class="carousel-banner"> <img src="assets/img/brands-logo/tavanmand sazan.svg" alt="banner6"> </div>
+                <div class="carousel-banner"> <img src="assets/img/brands-logo/park pardis.svg" alt="banner7"> </div>
+                <div class="carousel-banner"> <img src="assets/img/brands-logo/bargh vc.svg" alt="banner8"> </div>
+                <div class="carousel-banner"> <img src="assets/img/brands-logo/pooshakk.svg" alt="banner9"> </div>
+                <div class="carousel-banner"> <img src="assets/img/brands-logo/tehran uni.svg" alt="banner10"> </div>
               </div>
             </div>
           </div>
+          <hr>
 <!-- Brand sherkati ---------------->
           <div class="row mt-5">
             <div class="col-md-12">
               <div class="owl-carousel owl-theme .owl-dots .owl-dot text-center owl">
-                <div class="carousel-banner"> <img src="assets/img/brand-1.png" alt="banner1"> </div>
-                <div class="carousel-banner"> <img src="assets/img/brand-2.png" alt="banner2"> </div>
-                <div class="carousel-banner"> <img src="assets/img/brand-3.png" alt="banner3"> </div>
-                <div class="carousel-banner"> <img src="assets/img/setad.svg" alt="banner4"> </div>
-                <div class="carousel-banner"> <img src="assets/img/brand-5.png" alt="banner5"> </div>
-                <div class="carousel-banner"> <img src="assets/img/brand-6.png" alt="banner6"> </div>
-                <div class="carousel-banner"> <img src="assets/img/brand-7.png" alt="banner7"> </div>
+                <div class="carousel-banner"> <img src="assets/img/brands-logo/abhar cable.svg" alt="banner1"> </div>
+                <div class="carousel-banner"> <img src="assets/img/brands-logo/ucmas alborz.svg" alt="banner2"> </div>
+                <div class="carousel-banner"> <img src="assets/img/brands-logo/energic.svg" alt="banner3"> </div>
+                <div class="carousel-banner"> <img src="assets/img/brands-logo/epil.svg" alt="banner4"> </div>
+                <div class="carousel-banner"> <img src="assets/img/brands-logo/mavad fannavar mehr.svg" alt="banner5"> </div>
+                <div class="carousel-banner"> <img src="assets/img/brands-logo/farahani.svg" alt="banner6"> </div>
+                <div class="carousel-banner"> <img src="assets/img/brands-logo/taheri knife.svg" alt="banner7"> </div>
+                <div class="carousel-banner"> <img src="assets/img/brands-logo/imath alborz.svg" alt="banner7"> </div>
+                <div class="carousel-banner"> <img src="assets/img/brands-logo/mehr velayat.svg" alt="banner7"> </div>
+                <div class="carousel-banner"> <img src="assets/img/brands-logo/baghdasht restaurant.svg" alt="banner7"> </div>
               </div>
             </div>
           </div>
@@ -290,39 +340,45 @@
         <div class="container-fluid">
 
           <div class="row">
-            <div class="col-md-8 col-sm-12 footer-links">
+            <div class="col-lg-8 col-md-12 col-sm-12 footer-links">
               <div class="row">
               <div class="col-md-4">
-                <ul><span>به نگاران</span>
+                <ul><span class="collapsible-trigger">به نگاران</span>
+                  <div class="content-collapse">
                   <div class="footer-line"><span></span></div>
                   <li><a href="#"><i class='bx bx-chevron-left'></i>درباره ما</a></li>
                   <li><a href="#"><i class='bx bx-chevron-left'></i>تماس با ما</a></li>
                   <li><a href="#"><i class='bx bx-chevron-left'></i>وبلاگ</a></li>
                   <li><a href="#"><i class='bx bx-chevron-left'></i>پادکست</a></li>
+                </div>
                 </ul>
               </div>
               <div class="col-md-4">
-                <ul><span>راهنما</span>
+                <ul><span class="collapsible-trigger">راهنما</span>
+                  <div class="content-collapse">
                   <div class="footer-line"><span></span></div>
                   <li><a href="#"><i class='bx bx-chevron-left'></i>راهنمای سفارش</a></li>
                   <li><a href="#"><i class='bx bx-chevron-left'></i>قوانین و مقررات</a></li>
                   <li><a href="#"><i class='bx bx-chevron-left'></i>پرسش و پاسخ</a></li>
+                </div>
                 </ul>
               </div>
               <div class="col-md-4">
-                <ul><span>اطلاعات تکمیلی</span>
+                <ul><span class="collapsible-trigger">اطلاعات تکمیلی</span>
+                  <div class="content-collapse">
                   <div class="footer-line"><span></span></div>
                   <li><a href="#"><i class='bx bx-chevron-left'></i>باشگاه مشتریان</a></li>
                   <li><a href="#"><i class='bx bx-chevron-left'></i>همکاری با ما</a></li>
                   <li><a href="#"><i class='bx bx-chevron-left'></i>فرصت های شغلی</a></li>
+                </div>
                 </ul>
               </div>
             </div>
             </div>
 
-            <div class="col-md-4 col-sm-12 footer-contact">
+            <div class="col-lg-4 col-md-12 col-sm-12 footer-contact">
               <img class="footer-logo" src="assets/img/logo white.svg" alt="logo">
-              <ul>
+              <ul class="">
                 <li>
                   <i class='bx bx-phone-call'></i>
                 <span>تلفن پشتیبانی :</span>
@@ -360,9 +416,10 @@
 
         </div>
       </footer>
+
       <script src="node_modules/jquery/dist/jquery.min.js"></script>
       <script src="node_modules/persian-date/dist/persian-date.min.js"></script>
       <script src="node_modules/persian-datepicker/dist/js/persian-datepicker.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/3.0.0/jquery.waypoints.min.js" integrity="sha512-f/gxy4xAjuGEIf/ujexcNI906CTS+kfw40QCyG/rEMKELvCIFaTOY+dfdn7M/eNsiMreG3SStjgFr9q8Me9Baw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      
   </body>
 </html>
