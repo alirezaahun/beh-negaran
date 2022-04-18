@@ -2,9 +2,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Iranian Sans';
-   font-weight: 500;
-   font-style: normal;
+  font-family: "Iranian Sans";
+  font-weight: 500;
+  font-style: normal;
 }
 body {
   overflow-x: hidden;
@@ -100,7 +100,7 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 300px;
+  width: 330px;
   margin: auto;
 }
 .costume-nav {
@@ -143,6 +143,9 @@ h6 {
 .costume-nav li a:focus:before {
   transform: scale(1);
 }
+.dropdown-menu {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
 
 /* Navbar Vertical Line --------------------------------------------------- */
 .vertical-line {
@@ -178,9 +181,8 @@ h6 {
 .btn {
   letter-spacing: 0.1em;
   cursor: pointer;
-  /* font-size: 14px;
-  font-weight: 600; */
-  line-height: 35px;
+  font-weight: 600;
+  line-height: 41px;
   max-width: 130px;
   position: relative;
   text-decoration: none;
@@ -277,6 +279,32 @@ h6 {
   -webkit-transform: scale(1);
   transform: scale(1);
   z-index: -1;
+}
+.primary-btn i {
+  font-size: 1.3rem;
+  transform: translateY(5px);
+}
+/* Secondary Button ------------------------------------------------*/
+.secondary-btn {
+  color: var(--clr-dark);
+  background: var(--clr-primary);
+  margin-left: 1rem;
+  cursor: pointer;
+  line-height: 15px;
+  padding: 0.7em 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 2px, rgba(0, 0, 0, 0.23) 0px 0px 3px;
+  font-weight: 600;
+}
+.secondary-btn:hover {
+  box-shadow: rgba(255, 255, 255, 0.23) 0px 0px 3px inset,
+    rgba(255, 255, 255, 0.16) 0px 0px 3px inset;
+    transition: all 0.3s ease;
+    color: var(--clr-primary);
+    background-color: var(--clr-dark);
 }
 
 /* Hamburger menu --------------------------------------------------- */
@@ -409,7 +437,7 @@ h6 {
   align-items: center;
 }
 .banner {
-  background-image: url("./img/orginal-banner.png");
+  background-image: url("./img/orginal-banner6.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -483,6 +511,7 @@ h6 {
   border-right: 1px solid black;
   width: 100%;
   height: 100%;
+  padding-top: 0.5rem;
 }
 .quick-service-icons li:hover {
   /* text-shadow: 0 1px 1px rgba(0, 0, 0, 0.164); */
@@ -518,7 +547,7 @@ h6 {
   list-style: none;
   background-color: var(--clr-secondary);
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  margin: 0 ;
+  margin: 0;
 }
 .service-icons-mobile a {
   display: flex;
@@ -536,7 +565,6 @@ h6 {
   width: 100%;
   height: 100%;
 }
-
 
 /* Card Section -------------------------------------------------------- */
 .cards-box {
@@ -611,8 +639,13 @@ h6 {
 }
 
 /* Numbers ------------------------------------------------------------ */
+#numbers {
+  background-color: var(--clr-secondary);
+  color: var(--clr-primary);
+  padding-bottom: 2rem;
+}
 article {
-  background: var(--clr-primary);
+  background: var(--clr-secondary);
   padding: 1rem 2rem;
   border-bottom: 4px solid transparent;
   text-align: center;
@@ -621,8 +654,9 @@ article {
 article span {
   font-size: 2rem;
   font-weight: 500;
-  line-height: 1.50;
-  font-family: 'Vazir';
+  line-height: 1.5;
+  font-family: "Vazir";
+  color: var(--clr-accent);
 }
 
 article p {
@@ -630,13 +664,13 @@ article p {
   font-weight: 400;
   font-size: 1rem;
 }
-.hour-number {
-  border-bottom-color: rgb(0, 93, 131);
+.service-number {
+  border-bottom-color: #f6f6f6;
 }
-.costumer-number {
+.done-projects-number {
   border-bottom-color: rgb(233, 195, 30);
 }
-.project-number {
+.current-projects-number {
   border-bottom-color: rgb(58, 62, 61);
 }
 
@@ -869,6 +903,10 @@ footer p span {
   .vertical-line {
     display: none;
   }
+  .banner {
+    background-image: url("./img/orginal-banner7.png");
+    background-size: cover;
+  }
   .quick-service-icons li {
     border-right: none;
   }
@@ -877,12 +915,12 @@ footer p span {
   }
   .quick-service-icons ul {
     padding-bottom: 0;
+    /* border: none; */
   }
   .quick-service-icons i {
     margin-bottom: 0.5rem;
   }
   .quick-service-icons a {
-    font-size: 1rem;
     border: none;
   }
   .quick-service-icons a:hover {
@@ -891,7 +929,7 @@ footer p span {
   .quick-service-box {
     width: 100%;
     border-radius: 1.3rem;
-    margin-top: -16rem;
+    margin-top: -5rem;
   }
   .service-icons-mobile {
     position: fixed;
@@ -927,6 +965,9 @@ footer p span {
   .why-order-online-section p {
     text-align: center;
   }
+  .why-order-online-section {
+    margin-top: 1rem;
+  }
   hr {
     margin: 1rem auto;
   }
@@ -946,7 +987,7 @@ footer p span {
     margin-top: 3rem;
   }
   .quick-service-icons a {
-    font-size: 0.4rem;
+    font-size: 0.7rem;
   }
   .quick-service-icons i {
     font-size: 1.3rem;
@@ -1006,13 +1047,18 @@ footer p span {
   }
   .quick-service-box {
     width: 100%;
-    margin-top: -14rem;
+    margin-top: -5rem;
   }
   .quick-service-icons ul {
     padding-bottom: 0.5rem;
   }
   .quick-service-icons a {
-    font-size: 0.9rem;
+    font-size: 1rem;
+  }
+  .service-number p,
+  .done-projects-number p,
+  .current-projects-number p {
+    font-size: 0.8rem;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
@@ -1022,6 +1068,19 @@ footer p span {
   }
   .quick-service-box {
     width: 100%;
-    margin-top: -14rem;
+    margin-top: -5rem;
+  }
+  .quick-service-icons a {
+    font-size: 0.9rem;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1028px) {
+  .costume-nav {
+    font-size: 0.8rem;
+  }
+}
+@media only screen and (min-width: 1029px) and (max-width: 1049px) {
+  .costume-nav {
+    font-size: 0.9rem;
   }
 }
