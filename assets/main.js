@@ -66,15 +66,15 @@ $(document).ready(function () {
       enabled: false,
       step: 1,
       hour: {
-        enabled: true,
+        enabled: false,
         step: null,
       },
       minute: {
-        enabled: true,
+        enabled: false,
         step: null,
       },
       second: {
-        enabled: true,
+        enabled: false,
         step: null,
       },
       meridian: {
