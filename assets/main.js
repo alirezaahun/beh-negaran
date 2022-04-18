@@ -174,11 +174,10 @@ for (i = 0; i < coll.length; i++) {
 $(document).ready(function () {
   $(window).scroll(function () {
     if ($(window).scrollTop() > 850) {
-      $(".quick-service-box").css({ visibility: "hidden" });
+      // $(".quick-service-box").css({ visibility: "hidden" });
       $(".service-icons-mobile").css({ display: "block" });
-      $(".service-icons-mobile").css({ backgroundColor: "#f6f6f6" });
     } else {
-      $(".quick-service-box").css({ visibility: "visible" });
+      // $(".quick-service-box").css({ visibility: "visible" });
       $(".service-icons-mobile").css({ display: "none" });
     }
   });
