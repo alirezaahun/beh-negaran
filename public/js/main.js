@@ -3337,16 +3337,19 @@ var dtp1Instance = new mds.MdsPersianDateTimePicker(document.getElementById('dtp
 //     });
 //     const date = dateObject.getState().view;
 //   });
-// ScrollBar Top ----------------------------------------
-// const scrollProgress = document.getElementById("scroll-progress");
-// const height =
-//   document.documentElement.scrollHeight - document.documentElement.clientHeight;
-// window.addEventListener("scroll", () => {
-//   const scrollTop =
-//     document.body.scrollTop || document.documentElement.scrollTop;
-//   scrollProgress.style.width = `${(scrollTop / height) * 100}%`;
-// });
-// Numbers -------------------------------------
+// Trigger Function On Scroll ----------------------------------------
+
+$(allInView);
+$(window).scroll(allInView);
+
+function isScrolledIntoView(elem) {
+  var docViewTop = $(window).scrollTop();
+  var docViewBottom = docViewTop + $(window).height();
+  var elemTop = $(elem).offset().top;
+  var elemBottom = elemTop + $(elem).height();
+  return elemBottom <= docViewBottom && elemTop >= docViewTop;
+} // Numbers Count Update -------------------------------------
+
 
 var items = _toConsumableArray(document.querySelectorAll(".number"));
 
@@ -3366,11 +3369,72 @@ var updateCount = function updateCount(el) {
 
     el.textContent = "".concat(initialValue.toLocaleString("ar-EG"), "+");
   }, 1); // console.log(increaseCount);
-};
+}; // Trigger Numbers Function -----------------------------------------------
 
-items.forEach(function (item) {
-  updateCount(item);
+
+var once = true;
+
+function allInView() {
+  if (once) {
+    if (isScrolledIntoView($("#numbers"))) {
+      items.forEach(function (item) {
+        updateCount(item);
+      });
+      once = false;
+    }
+  }
+} // Footer Items Collapse On Mobile ------------------------------
+
+
+var coll = document.getElementsByClassName("collapsible-trigger");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function () {
+    this.classList.toggle("collapse-active");
+    var content = this.nextElementSibling;
+
+    if (content.style.maxHeight) {
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+} // Change Service Box Display On Scroll ---------------------------------------
+
+
+$(document).ready(function () {
+  $(window).scroll(function () {
+    if (toggleBtn == false) {
+      if ($(window).scrollTop() > 1100) {
+        $(".service-icons-mobile").css({
+          display: "block"
+        });
+      } else {
+        $(".service-icons-mobile").css({
+          display: "none"
+        });
+      }
+    } else {
+      if ($(window).scrollTop() > 850) {
+        $(".service-icons-mobile").css({
+          display: "block"
+        });
+      } else {
+        $(".service-icons-mobile").css({
+          display: "none"
+        });
+      }
+    }
+  });
 });
+var toggleBtn = false;
+var togglerBtn = document.getElementById("navbarTogglerBtn");
+togglerBtn.addEventListener('click', togglerTrigger);
+
+function togglerTrigger() {
+  this.toggleBtn = !this.toggleBtn;
+}
 
 /***/ }),
 
