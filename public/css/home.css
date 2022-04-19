@@ -588,30 +588,45 @@ h6 {
 
 .quick-form:focus-within {
   border-color: var(--clr-accent);
-  -webkit-animation-name: padding-anim;
-          animation-name: padding-anim;
-  -webkit-animation-duration: 400ms;
-          animation-duration: 400ms;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
 }
 
-@-webkit-keyframes padding-anim {
-  to {
-    padding: 0.5rem;
-  }
+input[type=text]::-moz-placeholder {
+  text-align: center;
 }
 
-@keyframes padding-anim {
-  to {
-    padding: 0.5rem;
-  }
+input[type=text]:-ms-input-placeholder {
+  text-align: center;
 }
-.quick-form input,
-.quick-form select {
+
+input[type=text]::placeholder {
+  text-align: center;
+}
+
+.date-input input,
+.city-select select {
   padding: 0.4rem;
   border: 1px solid rgba(58, 62, 61, 0.548);
-  border-radius: 0.3rem;
+  border-radius: 0.3rem 0 0 0.3rem !important;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  outline: none;
+  border: none;
+}
+
+.input-group-text {
+  border-radius: 0 0.3rem 0.3rem 0 !important;
+  background-color: var(--clr-primary);
+  color: var(--clr-dark);
+}
+
+.input-group {
+  width: 25%;
+}
+
+.input-group-text .fa-map-marker-alt {
+  line-height: unset;
 }
 
 .quick-service-icons ul {
@@ -717,6 +732,7 @@ h6 {
 /* Company Video --------------------------------------------- */
 .h_iframe-aparat_embed_frame {
   position: relative;
+  margin-top: 4rem;
 }
 
 .h_iframe-aparat_embed_frame .ratio {
@@ -1088,15 +1104,18 @@ footer p span {
     flex-direction: column;
   }
 
-  .quick-form label,
-.quick-form input,
-.quick-form select {
-    width: 100%;
-    margin-top: 0.7rem;
+  .quick-form a {
+    margin-top: 1rem;
   }
 
-  .quick-form a {
-    margin-top: 0.7rem;
+  .date-input {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .city-select {
+    width: 100%;
+    margin: 1rem;
   }
 
   .main-banners {
@@ -1109,6 +1128,10 @@ footer p span {
 
   .about-section p {
     text-align: center;
+  }
+
+  .h_iframe-aparat_embed_frame {
+    margin: 1rem;
   }
 
   .why-order-online-section h3 {

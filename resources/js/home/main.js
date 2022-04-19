@@ -88,10 +88,17 @@ for (i = 0; i < coll.length; i++) {
 }
 
 // Change Service Box Display On Scroll ---------------------------------------
+let toggleBtn = false;
+let togglerBtn = document.getElementById("navbarTogglerBtn");
+togglerBtn.addEventListener('click', togglerTrigger)
+
+function togglerTrigger() {
+  this.toggleBtn=!this.toggleBtn;
+}
 $(document).ready(function () {
   $(window).scroll(function () {
     if(toggleBtn == false){
-      if ($(window).scrollTop() > 1100) {
+      if ($(window).scrollTop() > 780) {
         $(".service-icons-mobile").css({ display: "block" });
       } else {
         $(".service-icons-mobile").css({ display: "none" });
@@ -107,11 +114,4 @@ $(document).ready(function () {
   });
 });
 
-let toggleBtn = false;
-let togglerBtn = document.getElementById("navbarTogglerBtn");
-togglerBtn.addEventListener('click', togglerTrigger)
-
-function togglerTrigger() {
-  this.toggleBtn=!this.toggleBtn;
-}
 
