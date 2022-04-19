@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- IRAN Sans Font -------------------------------------------------->
-    <link href="http://fonts.cdnfonts.com/css/iranian-sans" rel="stylesheet">
+    <!-- <link href="http://fonts.cdnfonts.com/css/iranian-sans" rel="stylesheet"> -->
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/iranian-sans" type="text/css"/>
     <!-- Vazir Font --------------------------------------->
     <link
       rel="stylesheet"
@@ -14,6 +15,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- Fav Icon ------------------------------------------------------->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <!-- Font Awesome --------------------------------------------------->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <!-- Box Icons -------------------------------------------------------->
     <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
     <!-- Bootstrap RTL ----------------------------------------------------->
@@ -34,8 +40,7 @@
     <title>شرکت تبلیغاتی به نگاران تجارت آزما</title>
   </head>
   <body>
-    <!-- Scroll Bar ------------------------------------------------------>
-    <!-- <div id="scroll-progress"></div> -->
+    
 
     <!-- Navbar -------------------------------------------------------------->
     @include('home.sections.header')
