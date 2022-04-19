@@ -41,14 +41,18 @@
           </div>
           <form class="form-control quick-form">
 
-          <label for="persianDatapicker"> تاریخ: <input name="persianDatapicker" id="dtp1" type="text"></label>
+          <!-- <label for="persianDatapicker"> تاریخ: <input data-name="dtp1-text" name="persianDatapicker" id="dtp1" type="text"></label> -->
+          <div class="input-group mb-3">
+            <span class="input-group-text cursor-pointer" id="dtp1"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+            <input type="text" class="form-control" placeholder="انتخاب تاریخ" data-name="dtp1-text">
+          </div>
           
           <label for="service-city"> شهر: <select name="service-city" id="service-city">
               <option value="تهران">تهران</option>
               <option value="کرج">کرج</option>
               <option value="قزوین">قزوین</option>
             </select></label>
-           <a class="primary-btn" href="#">سفارش</a>
+           <a class="secondary-btn" href="#">سفارش</a>
 
           </form>
         </div>
