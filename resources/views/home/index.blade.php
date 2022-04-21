@@ -1,5 +1,19 @@
 @extends('home.layouts.master')
 
+@section('js')
+
+
+<script>
+    console.log('INDEX');
+  const dtp1Instance = new mds.MdsPersianDateTimePicker(document.getElementById('dtp1'), {
+    targetTextSelector: '[data-name="dtp1-text"]',
+    targetDateSelector: '[data-name="dtp1-date"]',
+    persianNumber: true,
+  });
+</script>
+
+@endsection
+
 @section('content')
 
 <!-- Mobile Bottom Navbar --------------------------------------------->

@@ -8,19 +8,6 @@ require('md.bootstrappersiandatetimepicker/dist/mds.bs.datetimepicker');
 require('./owl-carousel-min');
 require('./owl-custom-main');
 
-// Persian Date ------------------------------------------------
-
-
-const dtp1Instance = new mds.MdsPersianDateTimePicker(document.getElementById('dtp1'), {
-    targetTextSelector: '[data-name="dtp1-text"]',
-    targetDateSelector: '[data-name="dtp1-date"]',
-    persianNumber: true,
-  });
-
-
-
-
-
 // Trigger Function On Scroll ----------------------------------------
 
 $(allInView);
