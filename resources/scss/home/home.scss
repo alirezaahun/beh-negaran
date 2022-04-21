@@ -468,7 +468,7 @@ h6 {
   align-items: center;
 }
 .banner {
-  // background-image: url("");
+  background-image: url("../../../public/images/main-banner.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -489,7 +489,7 @@ h6 {
   border-radius: 1.3rem;
   width: 70%;
   margin: auto;
-  margin-top: -7rem;
+  margin-top: -5rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .quick-service-box form {
@@ -519,6 +519,7 @@ input[type="text"]::placeholder {
   border-radius: 0 0.3rem 0.3rem 0 !important;
   background-color: var(--clr-primary);
   color: var(--clr-dark);
+  cursor: pointer;
 }
 .input-group {
   width: 25% ;
@@ -901,8 +902,9 @@ footer p span {
     display: none;
   }
   .banner {
-    // background-image: url("./img/orginal-banner7.png");
+    background-image: url("../../../public/images/main-banner-mobile.png");
     background-size: cover;
+    background-position: left;
   }
   .quick-service-icons li {
     border-right: none;
