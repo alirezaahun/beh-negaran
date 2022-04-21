@@ -55,3 +55,4 @@ Route::prefix('admin-panel/managment')->name('admin.')->group(function(){
 
 
 Route::get('/', [HomeController::class , 'index']);
+Route::get('/about-us', [HomeController::class , 'about']);

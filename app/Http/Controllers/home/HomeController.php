@@ -22,4 +22,10 @@ class HomeController extends Controller
         return view('home.index' , compact('main' , 'sliders' , 'logos'));
 
     }
+
+    public function about(){
+
+        return view('home.about-us');
+
+    }
 }
