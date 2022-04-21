@@ -10,11 +10,11 @@
   </a>
   <a href="#" class="nav__link">
     <i class='bx bx-shopping-bag nav__icon'></i>
-    <span class="nav__text">سفارش های من</span>
+    <span class="nav__text">سفارش ها</span>
   </a>
   <a href="#" class="nav__link">
     <i class='bx bx-user nav__icon'></i>
-    <span class="nav__text">حساب کاربری</span>
+    <span class="nav__text">حساب من</span>
   </a>
 
 </nav>
