@@ -16,10 +16,11 @@ class HomeController extends Controller
 
         $main = Banner::where('type' , 'main')->where('is_active' , 1)->first();
         $sliders = Banner::where('type' , 'slider')->where('is_active' , 1)->orderBy('priority')->get();
-        $logos = Banner::where('type' , 'logo')->where('is_active' , 1)->orderBy('priority')->get();
+        $logos = Banner::where('type' , 'logo-sazmani')->where('is_active' , 1)->orderBy('priority')->get();
+        $second_logos = Banner::where('type' , 'logo-sherkati')->where('is_active' , 1)->orderBy('priority')->get();
         // $products = Product::where('is_active' , 1)->get();
         // return (sliderResource::collection($sliders))->additional(['topBanners' => [topBannerResource::collection($TopBanners)] , 'bottomBanners' => [bottomBannerResource::collection($BottomBanners)]]);
-        return view('home.index' , compact('main' , 'sliders' , 'logos'));
+        return view('home.index' , compact('main' , 'sliders' , 'logos','second_logos'));
 
     }
 

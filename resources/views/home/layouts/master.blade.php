@@ -38,11 +38,12 @@
     <title>شرکت تبلیغاتی به نگاران تجارت آزما</title>
   </head>
   <body>
-    
+
 
     <!-- Navbar -------------------------------------------------------------->
     @include('home.sections.header')
 
+    @include('home.sections.mobileNavbar')
     @yield('content')
 
       <!-- Footer --------------------------------------------------------->

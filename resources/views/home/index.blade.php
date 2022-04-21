@@ -14,24 +14,8 @@
 
 @endsection
 
-@section('content')
 
-<!-- Mobile Bottom Navbar --------------------------------------------->
-<nav class="nav">
-  <a href="#" class="nav__link nav__link--active">
-    <i class='bx bx-home nav__icon'></i>
-    <span class="nav__text">خانه</span>
-  </a>
-  <a href="#" class="nav__link">
-    <i class='bx bx-shopping-bag nav__icon'></i>
-    <span class="nav__text">سفارش ها</span>
-  </a>
-  <a href="#" class="nav__link">
-    <i class='bx bx-user nav__icon'></i>
-    <span class="nav__text">حساب من</span>
-  </a>
-  
-</nav>
+@section('content')
 
 
 <!-- Banner Section ---------------------------------------------------------------->
@@ -69,7 +53,7 @@
               <option value="قزوین">قزوین</option>
             </select>
           </div>
-          
+
           <a class="secondary-btn" href="#">سفارش</a>
 
         </form>
@@ -110,6 +94,8 @@
         </div>
       </div>
     </div>
+
+
     <!-- About Company ------------------------------------------------------------->
     <div class="container mt-2">
       <div class="row about-section">
@@ -188,17 +174,20 @@
           </div>
         </div>
       </div>
-    </div>
+
+      <div class="row mt-5">
+        <div class="col-md-12">
+          <div class="owl-carousel owl-theme .owl-dots .owl-dot text-center owl">
+            @foreach ($second_logos as $logo)
+
+            <div class="carousel-banner"> <img src="{{asset(env('BANNER_IMAGE_UPLOAD_PATH').$logo->image)}}" alt="banner1"> </div>
+
+            @endforeach
+          </div>
+        </div>
+      </div>
 
   </div>
 </main>
-
-@endsection
-
-@section('js')
-
-<script>
-  console.log('test');
-</script>
 
 @endsection
