@@ -33,7 +33,7 @@
 @section('js')
 
 <script>
-  console.log('test');
+  console.log('alireza');
 </script>
 
 @endsection
