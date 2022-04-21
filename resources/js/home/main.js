@@ -8,13 +8,6 @@ require('md.bootstrappersiandatetimepicker/dist/mds.bs.datetimepicker');
 require('./owl-carousel-min');
 require('./owl-custom-main');
 
-// Persian Date ------------------------------------------------
-
-
-
-
-
-
 // Trigger Function On Scroll ----------------------------------------
 
 $(allInView);

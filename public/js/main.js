@@ -3229,8 +3229,7 @@ __webpack_require__(/*! md.bootstrappersiandatetimepicker/dist/mds.bs.datetimepi
 
 __webpack_require__(/*! ./owl-carousel-min */ "./resources/js/home/owl-carousel-min.js");
 
-__webpack_require__(/*! ./owl-custom-main */ "./resources/js/home/owl-custom-main.js"); // Persian Date ------------------------------------------------
-// Trigger Function On Scroll ----------------------------------------
+__webpack_require__(/*! ./owl-custom-main */ "./resources/js/home/owl-custom-main.js"); // Trigger Function On Scroll ----------------------------------------
 
 
 $(allInView);
