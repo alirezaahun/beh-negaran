@@ -16,7 +16,7 @@
     <i class='bx bx-user nav__icon'></i>
     <span class="nav__text">حساب کاربری</span>
   </a>
-
+  
 </nav>
 
 
