@@ -1,5 +1,19 @@
 @extends('home.layouts.master')
 
+@section('js')
+
+
+<script>
+    console.log('INDEX');
+  const dtp1Instance = new mds.MdsPersianDateTimePicker(document.getElementById('dtp1'), {
+    targetTextSelector: '[data-name="dtp1-text"]',
+    targetDateSelector: '[data-name="dtp1-date"]',
+    persianNumber: true,
+  });
+</script>
+
+@endsection
+
 @section('content')
 
 <!-- Mobile Bottom Navbar --------------------------------------------->
@@ -16,7 +30,7 @@
     <i class='bx bx-user nav__icon'></i>
     <span class="nav__text">حساب من</span>
   </a>
-  
+
 </nav>
 
 
@@ -55,7 +69,7 @@
               <option value="قزوین">قزوین</option>
             </select>
           </div>
-          
+
           <a class="secondary-btn" href="#">سفارش</a>
 
         </form>
@@ -178,13 +192,5 @@
 
   </div>
 </main>
-
-@endsection
-
-@section('js')
-
-<script>
-  console.log('test');
-</script>
 
 @endsection

@@ -3230,13 +3230,8 @@ __webpack_require__(/*! md.bootstrappersiandatetimepicker/dist/mds.bs.datetimepi
 __webpack_require__(/*! ./owl-carousel-min */ "./resources/js/home/owl-carousel-min.js");
 
 __webpack_require__(/*! ./owl-custom-main */ "./resources/js/home/owl-custom-main.js"); // Persian Date ------------------------------------------------
+// Trigger Function On Scroll ----------------------------------------
 
-
-var dtp1Instance = new mds.MdsPersianDateTimePicker(document.getElementById('dtp1'), {
-  targetTextSelector: '[data-name="dtp1-text"]',
-  targetDateSelector: '[data-name="dtp1-date"]',
-  persianNumber: true
-}); // Trigger Function On Scroll ----------------------------------------
 
 $(allInView);
 $(window).scroll(allInView);

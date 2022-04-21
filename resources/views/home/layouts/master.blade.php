@@ -32,7 +32,6 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- Main JS ------------------------------------------------->
-    <script type="text/javascript" src="{{ asset('js/main.js') }}" defer></script>
     <!-- Persian Date --------------------------------------------------------->
     <link rel="stylesheet" href="{{asset('css/home.css')}}">
     <!-- Owl Carousel  -------------------------------------------->
@@ -40,20 +39,20 @@
     <title>شرکت تبلیغاتی به نگاران تجارت آزما</title>
   </head>
   <body>
-    
+
 
     <!-- Navbar -------------------------------------------------------------->
     @include('home.sections.header')
 
     @yield('content')
 
+    @include('home.sections.footer')
+
       <!-- Footer --------------------------------------------------------->
-      @include('home.sections.footer')
-      {{-- <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
-      <script type="text/javascript" src="node_modules/persian-date/dist/persian-date.min.js"></script>
-      <script type="text/javascript" src="node_modules/persian-datepicker/dist/js/persian-datepicker.min.js"></script> --}}
-      {{-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/3.0.0/jquery.waypoints.min.js" integrity="sha512-f/gxy4xAjuGEIf/ujexcNI906CTS+kfw40QCyG/rEMKELvCIFaTOY+dfdn7M/eNsiMreG3SStjgFr9q8Me9Baw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> --}}
+
+      <script src="{{asset('js/main.js')}}"></script>
       @yield('js')
+
     </body>
 </html>
 

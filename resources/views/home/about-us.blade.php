@@ -16,7 +16,7 @@
     <i class='bx bx-user nav__icon'></i>
     <span class="nav__text">حساب من</span>
   </a>
-  
+
 </nav>
 
 <!-- Banner Section ---------------------------------------------------------------->
@@ -32,8 +32,5 @@
 
 @section('js')
 
-<script>
-  console.log('test');
-</script>
 
 @endsection
