@@ -94,6 +94,8 @@
         </div>
       </div>
     </div>
+
+
     <!-- About Company ------------------------------------------------------------->
     <div class="container mt-2">
       <div class="row about-section">
@@ -172,7 +174,18 @@
           </div>
         </div>
       </div>
-    </div>
+
+      <div class="row mt-5">
+        <div class="col-md-12">
+          <div class="owl-carousel owl-theme .owl-dots .owl-dot text-center owl">
+            @foreach ($second_logos as $logo)
+
+            <div class="carousel-banner"> <img src="{{asset(env('BANNER_IMAGE_UPLOAD_PATH').$logo->image)}}" alt="banner1"> </div>
+
+            @endforeach
+          </div>
+        </div>
+      </div>
 
   </div>
 </main>
