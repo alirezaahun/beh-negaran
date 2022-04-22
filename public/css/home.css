@@ -81,7 +81,8 @@ body {
 }
 
 p {
-  word-spacing: 0.2rem;
+  word-spacing: 0.4rem;
+  line-height: 1.6rem;
 }
 
 h1,
@@ -1016,7 +1017,7 @@ footer p span {
   left: -20px;
 }
 
-.service-page {
+.service-beh-negaran {
   margin-top: 5rem;
 }
 
@@ -1024,23 +1025,77 @@ footer p span {
   background-image: url(/images/digital-marketing.png?8f73360376c8a5a9ff3a909379cc193e);
   background-size: contain;
   background-repeat: no-repeat;
+  filter: drop-shadow(0 0 1px black);
 }
 
-.service-page p {
+.service-beh-negaran p {
   text-align: justify;
 }
 
-.service-page h3 {
+.service-beh-negaran h2 {
   color: var(--clr-secondary);
   font-size: 2rem;
 }
 
-.service-page hr {
+.service-beh-negaran hr,
+#video-service hr {
   background-color: var(--clr-accent);
   padding: 3px;
   opacity: 1;
   border-radius: 0.3rem;
   margin-bottom: 2rem;
+}
+
+#video-service hr {
+  background-color: var(--clr-secondary);
+}
+
+#video-service p {
+  text-align: justify;
+}
+
+#video-service .video-icon-pic {
+  background-image: url(/images/video-camera.png?327806fa1bae635990acf866e484fbe8);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-position: 0 80px;
+  transition: filter 0.5s;
+}
+
+#video-service .video-icon-pic:hover {
+  filter: grayscale(100%);
+}
+
+.video-service-description {
+  background-color: #fff;
+  border-radius: 1.3rem;
+  padding: 0.5rem 2rem;
+  margin-top: 2.5rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px, rgba(0, 0, 0, 0.16) 0px 3px 6px inset, rgba(0, 0, 0, 0.23) 0px 3px 6px inset;
+}
+
+.video-service-description i {
+  font-size: 5rem;
+  color: var(--clr-secondary);
+  text-align: center;
+  margin: 0.5rem auto;
+  display: block;
+}
+
+.video-service-description h5 {
+  text-align: center;
+  color: var(--clr-secondary);
+  margin: 1rem auto;
+}
+
+.video-service-description p {
+  margin: 1rem 0.5rem;
+  text-align: justify;
+}
+
+.video-service-description ul li p {
+  word-spacing: normal;
 }
 
 /* Scroll Bar ----------------------------------------------------------- */
