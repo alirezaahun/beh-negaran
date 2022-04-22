@@ -54,6 +54,9 @@ body {
   overflow-x: hidden;
   background-color: var(--clr-primary);
 }
+p {
+  word-spacing: 0.2rem;
+}
 h1,
 h2,
 h3,
@@ -859,6 +862,31 @@ footer p span {
 
 .owl-next {
   left: -20px;
+}
+
+// Service Page -------------------------------------------------------
+.service-page {
+  margin-top: 5rem;
+}
+.digital-marketing-pic {
+  background-image: url("../../../public/images/digital-marketing.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  // background-position: top;
+}
+.service-page p {
+  text-align: justify;
+}
+.service-page h3 {
+  color: var(--clr-secondary);
+  font-size: 2rem;
+}
+.service-page hr {
+  background-color: var(--clr-accent);
+  padding: 3px;
+  opacity: 1;
+  border-radius: 0.3rem;
+  margin-bottom: 2rem;
 }
 
 /* Scroll Bar ----------------------------------------------------------- */
