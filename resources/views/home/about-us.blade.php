@@ -8,6 +8,8 @@
     <div class="banner">
     </div>
 
+    <img src="{{asset('images/samandehi-logo.png')}}">
+
     </div>
 </main>
 

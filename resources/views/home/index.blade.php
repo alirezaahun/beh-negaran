@@ -161,7 +161,7 @@
         <h3>همکاری های شرکت</h3>
         <hr class="w-25 m-auto">
       </div>
-      <hr>
+
       <!-- Brand Sazmani ----------->
       <div class="row mt-5">
         <div class="col-md-12">
@@ -174,6 +174,8 @@
           </div>
         </div>
       </div>
+
+      <hr>
 
       <div class="row mt-5">
         <div class="col-md-12">
