@@ -44,7 +44,7 @@
       </div>
 
 
-      <div class="row justify-content-statr align-c text-left my-5">
+      <div class="row justify-content-start align-c text-left my-5">
         <div class="col-12 col-lg-6 my-3">
           <div class="row align-items-start ">
             <div class="col-4">

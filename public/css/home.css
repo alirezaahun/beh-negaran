@@ -81,7 +81,6 @@ body {
 }
 
 p {
-  word-spacing: 0.4rem;
   line-height: 1.6rem;
 }
 
@@ -1026,14 +1025,16 @@ footer p span {
 }
 
 .digital-marketing-pic {
-  background-image: url(/images/digital-marketing.png?8f73360376c8a5a9ff3a909379cc193e);
-  background-size: contain;
-  background-repeat: no-repeat;
-  filter: drop-shadow(0 0 1px black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.service-beh-negaran p {
-  text-align: justify;
+.digital-marketing-pic img {
+  filter: drop-shadow(0 0 1px black);
+  width: 25rem;
+  height: 13rem;
+  margin: auto;
 }
 
 .service-beh-negaran h2 {
@@ -1054,37 +1055,38 @@ footer p span {
   background-color: var(--clr-secondary);
 }
 
-#video-service p {
-  text-align: justify;
+.video-icon-pic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#video-service .video-icon-pic {
-  background-image: url(/images/video-camera.png?327806fa1bae635990acf866e484fbe8);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left center;
-  background-position: 0 80px;
-  transition: filter 0.5s;
-}
-
-#video-service .video-icon-pic:hover {
-  filter: grayscale(100%);
+#video-service .video-icon-pic img {
+  width: 12rem;
+  height: 10rem;
+  filter: drop-shadow(0 0 1px black);
+  margin: auto;
 }
 
 .video-service-description {
-  background-color: #fff;
+  background-color: var(--clr-primary);
   border-radius: 1.3rem;
   padding: 0.5rem 2rem;
   margin-top: 2.5rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px, rgba(0, 0, 0, 0.16) 0px 3px 6px inset, rgba(0, 0, 0, 0.23) 0px 3px 6px inset;
 }
 
-.video-service-description i {
-  font-size: 5rem;
-  color: var(--clr-secondary);
-  text-align: center;
-  margin: 0.5rem auto;
-  display: block;
+.video-service-description img {
+  width: 5rem;
+  height: 5rem;
+  margin: auto;
+  display: flex;
+  align-self: center;
+  filter: drop-shadow(0 0 1px black);
+}
+
+.video-service-description ul {
+  list-style: none;
 }
 
 .video-service-description h5 {
@@ -1100,11 +1102,16 @@ footer p span {
 
 .video-service-description ul li p {
   word-spacing: normal;
+  font-weight: 600;
 }
 
-.custom-height {
-  height: 130px;
-  background-color: #ff0000;
+.video-service-description li::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f0d9";
+  color: var(--clr-dark);
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
 }
 
 /* Scroll Bar ----------------------------------------------------------- */
