@@ -106,6 +106,10 @@ h6 {
   font-family: "Vazir";
 }
 
+.mt-6 {
+  margin-top: 100px;
+}
+
 /* Variables ----------------------------------------------------------------- */
 :root {
   --clr-primary: #f6f6f6;
