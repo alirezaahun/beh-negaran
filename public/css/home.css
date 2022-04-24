@@ -1179,6 +1179,10 @@ footer p span {
   text-transform: uppercase;
 }
 
+.custom-boxshodow {
+  box-shadow: 1px 6px 18px 5px rgba(0, 0, 0, 0.64);
+}
+
 /* Scroll Bar ----------------------------------------------------------- */
 /* width */
 ::-webkit-scrollbar {

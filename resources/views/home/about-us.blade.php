@@ -33,7 +33,7 @@
 
                 <div class="row text-center justify-content-center my-5">
                     <div class="col-8">
-                        <h3>اعضای تیم کادرو</h3>
+                        <h3>ویژگی های ما</h3>
                         <hr class="w-25  mx-auto mb-5">
                         <p class=" text-center">
                             ما بهترین های ایران رو دور خودمون جمع کرده ایم، این شامل
@@ -54,7 +54,7 @@
 
 
 
-                <div class="box d-flex row">
+                <div class="box d-flex row custom-boxshodow">
                     <div class="card col-12 col-md-6 my-4">
                         <div class="imgBx">
                             <img src="https://app.kadro.co/uploads/admin_user/avatar/1/large_avatar_1.webp" alt="images">
@@ -197,6 +197,21 @@
 
 
 
+                <div class="row text-center justify-content-center my-5">
+                    <div class="col-8">
+                        <h3>ویژگی های ما</h3>
+                        <hr class="w-25  mx-auto mb-5">
+                        <p class=" text-center">
+
+
+                            زندگی این روزها به قدری سریع جریان داره که یک روز چشمامونو باز می کنیم می بینیم سالها گذشته و از
+                            خاطرات ریز و درشت مون هاله ای بیش نمونده! ما برای این اینجا هستیم که خاطرات شما،
+                            مهمترین لحظات و شادی هاتون رو به راحت ترین روش ثبت و ضبط کنیم تا هر وقت اراده کردید،
+                            راحت برگردید به گذشته و خاطره ها رو مرور کنید.
+
+                        </p>
+                    </div>
+                </div>
 
 
 
