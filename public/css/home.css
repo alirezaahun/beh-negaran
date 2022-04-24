@@ -1138,7 +1138,7 @@ footer p span {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: var(--clr-primary);
+  background: transparent;
 }
 
 /* The track NOT covered by the handle.
