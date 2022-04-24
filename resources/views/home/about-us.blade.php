@@ -57,17 +57,88 @@
                 <div class="box d-flex row custom-boxshodow">
                     <div class="card col-12 col-md-6 my-4">
                         <div class="imgBx">
-                            <img src="https://app.kadro.co/uploads/admin_user/avatar/1/large_avatar_1.webp" alt="images">
+                            <img src="https://app.kadro.co/uploads/admin_user/avatar/1/large_avatar_1.webp" alt="images" >
+                            <span class="d-flex  flex-column  justify-content-between  mb-2 custom-fontSize align-items-end ">
+                                <a href="" class="mx-2 h3"><i class="fab fa-instagram"></i></a>
+                                <a href="" class="mx-2 h3"><i class="fab fa-whatsapp"></i></a>
+                                <a href="" class="mx-2 h3"><i class="fab fa-telegram"></i></a>
+                                <a href="" class="mx-2 h3"><i class="fab fa-github"></i></a>
+                            </span>
                         </div>
+                        <div class="test">
+
                         <div class="details  d-flex flex-column  justify-content-between ">
                             <span>
-                                <h2>Alireza abadi<br></h2>
+                                <h5 class="mt-3">Alireza abadi</h5>
                             </span>
-                            <span class="d-flex  justify-content-around  mb-3 "> <i class="fab fa-whatsapp"
-                                    aria-hidden="true"></i>
-                                <i class="fab fa-facebook" aria-hidden="true"></i>
-                                <i class="fab fa-telegram" aria-hidden="true"></i>
-                                <i class="fab fa-instagram" aria-hidden="true"></i></span>
+                             <span class="s">sowftware enginer</span>
+                            {{-- <span class="d-flex  justify-content-around  mb-2 custom-fontSize ">
+                                <a href="" class="mx-2 h3"><i class="fab fa-instagram"></i></a>
+                                <a href="" class="mx-2 h3"><i class="fab fa-whatsapp"></i></a>
+                                <a href="" class="mx-2 h3"><i class="fab fa-telegram"></i></a>
+                                <a href="" class="mx-2 h3"><i class="fab fa-github"></i></a>
+                            </span> --}}
+
+                        </div>
+                    </div>
+
+                    </div>
+
+                    <div class="card col-12 col-md-6 my-4">
+                        <div class="imgBx">
+                            <img src="https://app.kadro.co/uploads/admin_user/avatar/4/large_avatar_4.webp" alt="images">
+                        </div>
+                        <div class="details d-flex flex-column  justify-content-between ">
+                            <span>
+                                <h5>Alireza abadi</h5>
+                               
+                            </span>
+                             <span class="s">sowftware enginer</span>
+                            <span class="d-flex  justify-content-around  mb-2 custom-fontSize ">
+                                <a href="" class="mx-2 h3"><i class="fab fa-instagram"></i></a>
+                                <a href="" class="mx-2 h3"><i class="fab fa-whatsapp"></i></a>
+                                <a href="" class="mx-2 h3"><i class="fab fa-telegram"></i></a>
+                                <a href="" class="mx-2 h3"><i class="fab fa-github"></i></a>
+                            </span>
+
+                        </div>
+                    </div>
+
+                    <div class="card col-12 col-md-6 my-4">
+                        <div class="imgBx">
+                            <img src="https://app.kadro.co/uploads/admin_user/avatar/26/large_avatar_26.webp" alt="images">
+                        </div>
+                        <div class="details d-flex flex-column  justify-content-between ">
+                            <span>
+                                <h5>Alireza abadi</h5>
+                               
+                            </span>
+                             <span class="s">sowftware enginer</span>
+                            <span class="d-flex  justify-content-around  mb-2 custom-fontSize ">
+                                <a href="" class="mx-2 h3"><i class="fab fa-instagram"></i></a>
+                                <a href="" class="mx-2 h3"><i class="fab fa-whatsapp"></i></a>
+                                <a href="" class="mx-2 h3"><i class="fab fa-telegram"></i></a>
+                                <a href="" class="mx-2 h3"><i class="fab fa-github"></i></a>
+                            </span>
+
+                        </div>
+                    </div>
+                    <div class="card col-12 col-md-6 my-4">
+                        <div class="imgBx">
+                            <img src="https://app.kadro.co/uploads/admin_user/avatar/26/large_avatar_26.webp" alt="images">
+                        </div>
+                        <div class="details d-flex flex-column  justify-content-between ">
+                            <span>
+                                <h5>Alireza abadi</h5>
+                               
+                            </span>
+                             <span class="s">sowftware enginer</span>
+                            <span class="d-flex  justify-content-around  mb-2 custom-fontSize ">
+                                <a href="" class="mx-2 h3"><i class="fab fa-instagram"></i></a>
+                                <a href="" class="mx-2 h3"><i class="fab fa-whatsapp"></i></a>
+                                <a href="" class="mx-2 h3"><i class="fab fa-telegram"></i></a>
+                                <a href="" class="mx-2 h3"><i class="fab fa-github"></i></a>
+                            </span>
 
                         </div>
                     </div>
@@ -78,13 +149,16 @@
                         </div>
                         <div class="details d-flex flex-column  justify-content-between ">
                             <span>
-                                <h2>Alireza abadi<br></h2>
+                                <h5>Alireza abadi</h5>
+                               
                             </span>
-                            <span class="d-flex  justify-content-around  mb-3 "> <i class="fab fa-whatsapp"
-                                    aria-hidden="true"></i>
-                                <i class="fab fa-facebook" aria-hidden="true"></i>
-                                <i class="fab fa-telegram" aria-hidden="true"></i>
-                                <i class="fab fa-instagram" aria-hidden="true"></i></span>
+                             <span class="s">sowftware enginer</span>
+                            <span class="d-flex  justify-content-around  mb-2 custom-fontSize ">
+                                <a href="" class="mx-2 h3"><i class="fab fa-instagram"></i></a>
+                                <a href="" class="mx-2 h3"><i class="fab fa-whatsapp"></i></a>
+                                <a href="" class="mx-2 h3"><i class="fab fa-telegram"></i></a>
+                                <a href="" class="mx-2 h3"><i class="fab fa-github"></i></a>
+                            </span>
 
                         </div>
                     </div>
@@ -95,46 +169,16 @@
                         </div>
                         <div class="details d-flex flex-column  justify-content-between ">
                             <span>
-                                <h2>Alireza abadi<br></h2>
+                                <h5>Alireza abadi</h5>
+                               
                             </span>
-                            <span class="d-flex  justify-content-around  mb-3 "> <i class="fab fa-whatsapp"
-                                    aria-hidden="true"></i>
-                                <i class="fab fa-facebook" aria-hidden="true"></i>
-                                <i class="fab fa-telegram" aria-hidden="true"></i>
-                                <i class="fab fa-instagram" aria-hidden="true"></i></span>
-
-                        </div>
-                    </div>
-                    <div class="card col-12 col-md-6 my-4">
-                        <div class="imgBx">
-                            <img src="https://app.kadro.co/uploads/admin_user/avatar/26/large_avatar_26.webp" alt="images">
-                        </div>
-                        <div class="details d-flex flex-column  justify-content-between ">
-                            <span>
-                                <h2>Alireza abadi<br></h2>
+                             <span class="s">sowftware enginer</span>
+                            <span class="d-flex  justify-content-around  mb-2 custom-fontSize ">
+                                <a href="" class="mx-2 h3"><i class="fab fa-instagram"></i></a>
+                                <a href="" class="mx-2 h3"><i class="fab fa-whatsapp"></i></a>
+                                <a href="" class="mx-2 h3"><i class="fab fa-telegram"></i></a>
+                                <a href="" class="mx-2 h3"><i class="fab fa-github"></i></a>
                             </span>
-                            <span class="d-flex  justify-content-around  mb-3 "> <i class="fab fa-whatsapp"
-                                    aria-hidden="true"></i>
-                                <i class="fab fa-facebook" aria-hidden="true"></i>
-                                <i class="fab fa-telegram" aria-hidden="true"></i>
-                                <i class="fab fa-instagram" aria-hidden="true"></i></span>
-
-                        </div>
-                    </div>
-
-                    <div class="card col-12 col-md-6 my-4">
-                        <div class="imgBx">
-                            <img src="https://app.kadro.co/uploads/admin_user/avatar/4/large_avatar_4.webp" alt="images">
-                        </div>
-                        <div class="details d-flex flex-column  justify-content-between ">
-                            <span>
-                                <h2>Alireza abadi<br></h2>
-                            </span>
-                            <span class="d-flex  justify-content-around  mb-3 "> <i class="fab fa-whatsapp"
-                                    aria-hidden="true"></i>
-                                <i class="fab fa-facebook" aria-hidden="true"></i>
-                                <i class="fab fa-telegram" aria-hidden="true"></i>
-                                <i class="fab fa-instagram" aria-hidden="true"></i></span>
 
                         </div>
                     </div>
@@ -145,13 +189,16 @@
                         </div>
                         <div class="details d-flex flex-column  justify-content-between ">
                             <span>
-                                <h2>Alireza abadi<br></h2>
+                                <h5>Alireza abadi</h5>
+                               
                             </span>
-                            <span class="d-flex  justify-content-around  mb-3 "> <i class="fab fa-whatsapp"
-                                    aria-hidden="true"></i>
-                                <i class="fab fa-facebook" aria-hidden="true"></i>
-                                <i class="fab fa-telegram" aria-hidden="true"></i>
-                                <i class="fab fa-instagram" aria-hidden="true"></i></span>
+                             <span class="s">sowftware enginer</span>
+                            <span class="d-flex  justify-content-around  mb-2 custom-fontSize ">
+                                <a href="" class="mx-2 h3"><i class="fab fa-instagram"></i></a>
+                                <a href="" class="mx-2 h3"><i class="fab fa-whatsapp"></i></a>
+                                <a href="" class="mx-2 h3"><i class="fab fa-telegram"></i></a>
+                                <a href="" class="mx-2 h3"><i class="fab fa-github"></i></a>
+                            </span>
 
                         </div>
                     </div>
@@ -162,30 +209,17 @@
                         </div>
                         <div class="details d-flex flex-column  justify-content-between ">
                             <span>
-                                <h2>Alireza abadi<br></h2>
+                                <h5>Alireza abadi</h5>
+                               
                             </span>
-                            <span class="d-flex  justify-content-around  mb-3 "> <i class="fab fa-whatsapp"
-                                    aria-hidden="true"></i>
-                                <i class="fab fa-facebook" aria-hidden="true"></i>
-                                <i class="fab fa-telegram" aria-hidden="true"></i>
-                                <i class="fab fa-instagram" aria-hidden="true"></i></span>
-
-                        </div>
-                    </div>
-
-                    <div class="card col-12 col-md-6 my-4">
-                        <div class="imgBx">
-                            <img src="https://app.kadro.co/uploads/admin_user/avatar/26/large_avatar_26.webp" alt="images">
-                        </div>
-                        <div class="details d-flex flex-column  justify-content-between ">
-                            <span>
-                                <h2>Alireza abadi<br></h2>
+                             <span class="s">sowftware enginer</span>
+                            <span class="d-flex  justify-content-around  mb-2 custom-fontSize ">
+                                <a href="" class="mx-2 h3"><i class="fab fa-instagram"></i></a>
+                            <a href="" class="mx-2 h3"><i class="fab fa-whatsapp"></i></a>
+                            <a href="" class="mx-2 h3"><i class="fab fa-telegram"></i></a>
+                            <a href="" class="mx-2 h3"><i class="fab fa-github"></i></a>
+                              
                             </span>
-                            <span class="d-flex  justify-content-around  mb-3 "> <i class="fab fa-whatsapp"
-                                    aria-hidden="true"></i>
-                                <i class="fab fa-facebook" aria-hidden="true"></i>
-                                <i class="fab fa-telegram" aria-hidden="true"></i>
-                                <i class="fab fa-instagram" aria-hidden="true"></i></span>
 
                         </div>
                     </div>
@@ -233,9 +267,9 @@
 
                 <div class="row align-items-center mt-6 ">
                     <div class="comb-4l-12  col-md-6 col-lg-5  d-flex flex-column ">
-                        <h2 class="text-center">
+                        <h4 class="text-center">
                             کنارتان هستیم!
-                        </h2 class="custom-height  ">
+                        </h4 class="custom-height  ">
                         <p class="text-center"> ما در شبکه های اجتماعی هم کنارتان هستیم! </p>
                         <p class="text-center">
                             <a href="" class="mx-2 h3"><i class="fab fa-instagram"></i></a>
