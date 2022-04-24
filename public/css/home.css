@@ -1037,7 +1037,9 @@ footer p span {
 }
 
 .service-beh-negaran hr,
-#video-service hr {
+#video-service hr,
+#photo-service hr,
+#website-service hr {
   background-color: var(--clr-accent);
   padding: 3px;
   opacity: 1;
@@ -1045,21 +1047,23 @@ footer p span {
   margin-bottom: 2rem;
 }
 
-#video-service hr {
+#video-service hr,
+#photo-service hr,
+#website-service hr {
   background-color: var(--clr-secondary);
 }
 
-#video-service .video-icon-pic img {
+.icon-pic img {
   filter: drop-shadow(0 0 1px black);
 }
 
-.video-icon-pic {
+.icon-pic {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.video-service-description {
+.service-description {
   background-color: #fff;
   border-radius: 1.3rem;
   padding: 0.5rem 2rem;
@@ -1067,34 +1071,35 @@ footer p span {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px, rgba(0, 0, 0, 0.16) 0px 3px 6px inset, rgba(0, 0, 0, 0.23) 0px 3px 6px inset;
 }
 
-.video-service-description img {
+.service-description img {
   width: 5rem;
   height: 5rem;
   display: flex;
   margin: 1rem auto;
+  filter: drop-shadow(0 0 1px black);
 }
 
-.video-service-description h5 {
+.service-description h5 {
   text-align: center;
   color: var(--clr-secondary);
   margin: 1rem auto;
 }
 
-.video-service-description p {
+.service-description p {
   margin: 1rem 0.5rem;
   text-align: justify;
 }
 
-.video-service-description ul li p {
+.service-description ul li p {
   word-spacing: normal;
   font-weight: 600;
 }
 
-.video-service-description ul {
+.service-description ul {
   list-style: none;
 }
 
-.video-service-description ul li::before {
+.service-description ul li::before {
   font-family: "Font Awesome 5 Free";
   content: "\f0d9";
   color: var(--clr-dark);
