@@ -1112,7 +1112,7 @@ footer p span {
   position: relative;
   width: 300px;
   height: 370px;
-  background: --clr-primary;
+  background: var(--clr-primary);
   margin: 0 auto;
   border-radius: 4px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
@@ -1167,7 +1167,7 @@ footer p span {
   transition: 1.5s;
 }
 
-.card .imgBx img:hover {
+.card .imgBxx img:hover {
   position: absolute;
   top: 0px;
   right: 0;
