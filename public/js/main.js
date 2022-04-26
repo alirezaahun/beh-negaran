@@ -20504,6 +20504,10 @@ return jQuery;
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
+<<<<<<< HEAD
+=======
+throw new Error("Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nSassError: expected \";\".\n    ╷\n957 │     margin: 0 auto;\r\n    │           ^\n    ╵\n  resources\\scss\\home\\home.scss 957:11  root stylesheet\n    at processResult (C:\\xampp\\htdocs\\php-web\\beh-negaran\\node_modules\\webpack\\lib\\NormalModule.js:753:19)\n    at C:\\xampp\\htdocs\\php-web\\beh-negaran\\node_modules\\webpack\\lib\\NormalModule.js:855:5\n    at C:\\xampp\\htdocs\\php-web\\beh-negaran\\node_modules\\loader-runner\\lib\\LoaderRunner.js:399:11\n    at C:\\xampp\\htdocs\\php-web\\beh-negaran\\node_modules\\loader-runner\\lib\\LoaderRunner.js:251:18\n    at context.callback (C:\\xampp\\htdocs\\php-web\\beh-negaran\\node_modules\\loader-runner\\lib\\LoaderRunner.js:124:13)\n    at C:\\xampp\\htdocs\\php-web\\beh-negaran\\node_modules\\sass-loader\\dist\\index.js:54:7\n    at Function.call$2 (C:\\xampp\\htdocs\\php-web\\beh-negaran\\node_modules\\sass\\sass.dart.js:99012:16)\n    at render_closure1.call$2 (C:\\xampp\\htdocs\\php-web\\beh-negaran\\node_modules\\sass\\sass.dart.js:84527:12)\n    at _RootZone.runBinary$3$3 (C:\\xampp\\htdocs\\php-web\\beh-negaran\\node_modules\\sass\\sass.dart.js:29558:18)\n    at _FutureListener.handleError$1 (C:\\xampp\\htdocs\\php-web\\beh-negaran\\node_modules\\sass\\sass.dart.js:28080:21)");
+>>>>>>> a1c881647428dc40240c3e29a6fbb98fb53cd02a
 
 /***/ })
 
