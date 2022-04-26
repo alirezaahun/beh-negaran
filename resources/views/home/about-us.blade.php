@@ -54,7 +54,7 @@
 
 
 
-                <div class="box d-flex row custom-boxshodow custom-border">
+                <div class="box d-flex row custom-boxshodow overflow-hidden custom-border">
                     <div class="card col-12 col-md-6 my-4">
                         <div class="imgBx">
                             <img src="https://app.kadro.co/uploads/admin_user/avatar/1/large_avatar_1.webp" alt="images">
@@ -69,7 +69,7 @@
                         <div class="test">
                             <div class="details  d-flex flex-column  justify-content-between ">
                                 <span>
-                                    <h5 class="mt-3">Alireza abadi</h5>
+                                    <h5 class="mt-3">علیرضا ابادی</h5>
                                 </span>
                                 <span class="s">sowftware enginer</span>
                             </div>
@@ -90,7 +90,7 @@
                         <div class="test">
                             <div class="details  d-flex flex-column  justify-content-between ">
                                 <span>
-                                    <h5 class="mt-3">Alireza abadi</h5>
+                                    <h5 class="mt-3">علیرضا ابادی</h5>
                                 </span>
                                 <span class="s">sowftware enginer</span>
                             </div>
@@ -111,7 +111,7 @@
                         <div class="test">
                             <div class="details  d-flex flex-column  justify-content-between ">
                                 <span>
-                                    <h5 class="mt-3">Alireza abadi</h5>
+                                    <h5 class="mt-3">علیرضا ابادی</h5>
                                 </span>
                                 <span class="s">sowftware enginer</span>
                             </div>
@@ -132,7 +132,7 @@
                         <div class="test">
                             <div class="details  d-flex flex-column  justify-content-between ">
                                 <span>
-                                    <h5 class="mt-3">Alireza abadi</h5>
+                                    <h5 class="mt-3">علیرضا ابادی</h5>
                                 </span>
                                 <span class="s">sowftware enginer</span>
                             </div>
@@ -153,7 +153,7 @@
                         <div class="test">
                             <div class="details  d-flex flex-column  justify-content-between ">
                                 <span>
-                                    <h5 class="mt-3">Alireza abadi</h5>
+                                    <h5 class="mt-3">علیرضا ابادی</h5>
                                 </span>
                                 <span class="s">sowftware enginer</span>
                             </div>
@@ -174,7 +174,7 @@
                         <div class="test">
                             <div class="details  d-flex flex-column  justify-content-between ">
                                 <span>
-                                    <h5 class="mt-3">Alireza abadi</h5>
+                                    <h5 class="mt-3">علیرضا ابادی</h5>
                                 </span>
                                 <span class="s">sowftware enginer</span>
                             </div>
@@ -195,7 +195,7 @@
                         <div class="test">
                             <div class="details  d-flex flex-column  justify-content-between ">
                                 <span>
-                                    <h5 class="mt-3">Alireza abadi</h5>
+                                    <h5 class="mt-3">علیرضا ابادی</h5>
                                 </span>
                                 <span class="s">sowftware enginer</span>
                             </div>
@@ -216,7 +216,7 @@
                         <div class="test">
                             <div class="details  d-flex flex-column  justify-content-between ">
                                 <span>
-                                    <h5 class="mt-3">Alireza abadi</h5>
+                                    <h5 class="mt-3">علیرضا ابادی</h5>
                                 </span>
                                 <span class="s">sowftware enginer</span>
                             </div>
