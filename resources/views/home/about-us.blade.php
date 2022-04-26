@@ -54,11 +54,12 @@
 
 
 
-                <div class="box d-flex row custom-boxshodow">
+                <div class="box d-flex row custom-boxshodow custom-border">
                     <div class="card col-12 col-md-6 my-4">
                         <div class="imgBx">
-                            <img src="https://app.kadro.co/uploads/admin_user/avatar/1/large_avatar_1.webp" alt="images" >
-                            <span class="d-flex  flex-column  justify-content-between  mb-2 custom-fontSize align-items-end ">
+                            <img src="https://app.kadro.co/uploads/admin_user/avatar/1/large_avatar_1.webp" alt="images">
+                            <span
+                                class="d-flex  flex-column  justify-content-around  mb-2 custom-fontSize align-items-end  custom-height">
                                 <a href="" class="mx-2 h3"><i class="fab fa-instagram"></i></a>
                                 <a href="" class="mx-2 h3"><i class="fab fa-whatsapp"></i></a>
                                 <a href="" class="mx-2 h3"><i class="fab fa-telegram"></i></a>
@@ -66,165 +67,162 @@
                             </span>
                         </div>
                         <div class="test">
-
-                        <div class="details  d-flex flex-column  justify-content-between ">
-                            <span>
-                                <h5 class="mt-3">Alireza abadi</h5>
-                            </span>
-                             <span class="s">sowftware enginer</span>
-                            {{-- <span class="d-flex  justify-content-around  mb-2 custom-fontSize ">
-                                <a href="" class="mx-2 h3"><i class="fab fa-instagram"></i></a>
-                                <a href="" class="mx-2 h3"><i class="fab fa-whatsapp"></i></a>
-                                <a href="" class="mx-2 h3"><i class="fab fa-telegram"></i></a>
-                                <a href="" class="mx-2 h3"><i class="fab fa-github"></i></a>
-                            </span> --}}
-
+                            <div class="details  d-flex flex-column  justify-content-between ">
+                                <span>
+                                    <h5 class="mt-3">Alireza abadi</h5>
+                                </span>
+                                <span class="s">sowftware enginer</span>
+                            </div>
                         </div>
                     </div>
-
-                    </div>
-
+                    {{-- ----------------------------------------------------------------------------- --}}
                     <div class="card col-12 col-md-6 my-4">
                         <div class="imgBx">
                             <img src="https://app.kadro.co/uploads/admin_user/avatar/4/large_avatar_4.webp" alt="images">
-                        </div>
-                        <div class="details d-flex flex-column  justify-content-between ">
-                            <span>
-                                <h5>Alireza abadi</h5>
-                               
-                            </span>
-                             <span class="s">sowftware enginer</span>
-                            <span class="d-flex  justify-content-around  mb-2 custom-fontSize ">
+                            <span
+                                class="d-flex  flex-column  justify-content-around  mb-2 custom-fontSize align-items-end  custom-height">
                                 <a href="" class="mx-2 h3"><i class="fab fa-instagram"></i></a>
                                 <a href="" class="mx-2 h3"><i class="fab fa-whatsapp"></i></a>
                                 <a href="" class="mx-2 h3"><i class="fab fa-telegram"></i></a>
                                 <a href="" class="mx-2 h3"><i class="fab fa-github"></i></a>
                             </span>
-
+                        </div>
+                        <div class="test">
+                            <div class="details  d-flex flex-column  justify-content-between ">
+                                <span>
+                                    <h5 class="mt-3">Alireza abadi</h5>
+                                </span>
+                                <span class="s">sowftware enginer</span>
+                            </div>
                         </div>
                     </div>
-
+                    {{-- ----------------------------------------------------------------------------- --}}
                     <div class="card col-12 col-md-6 my-4">
                         <div class="imgBx">
                             <img src="https://app.kadro.co/uploads/admin_user/avatar/26/large_avatar_26.webp" alt="images">
-                        </div>
-                        <div class="details d-flex flex-column  justify-content-between ">
-                            <span>
-                                <h5>Alireza abadi</h5>
-                               
-                            </span>
-                             <span class="s">sowftware enginer</span>
-                            <span class="d-flex  justify-content-around  mb-2 custom-fontSize ">
+                            <span
+                                class="d-flex  flex-column  justify-content-around  mb-2 custom-fontSize align-items-end  custom-height">
                                 <a href="" class="mx-2 h3"><i class="fab fa-instagram"></i></a>
                                 <a href="" class="mx-2 h3"><i class="fab fa-whatsapp"></i></a>
                                 <a href="" class="mx-2 h3"><i class="fab fa-telegram"></i></a>
                                 <a href="" class="mx-2 h3"><i class="fab fa-github"></i></a>
                             </span>
-
+                        </div>
+                        <div class="test">
+                            <div class="details  d-flex flex-column  justify-content-between ">
+                                <span>
+                                    <h5 class="mt-3">Alireza abadi</h5>
+                                </span>
+                                <span class="s">sowftware enginer</span>
+                            </div>
                         </div>
                     </div>
+                    {{-- ----------------------------------------------------------------------------- --}}
                     <div class="card col-12 col-md-6 my-4">
                         <div class="imgBx">
-                            <img src="https://app.kadro.co/uploads/admin_user/avatar/26/large_avatar_26.webp" alt="images">
-                        </div>
-                        <div class="details d-flex flex-column  justify-content-between ">
-                            <span>
-                                <h5>Alireza abadi</h5>
-                               
-                            </span>
-                             <span class="s">sowftware enginer</span>
-                            <span class="d-flex  justify-content-around  mb-2 custom-fontSize ">
+                            <img src="https://app.kadro.co/uploads/admin_user/avatar/43/large_avatar_43.webp" alt="images">
+                            <span
+                                class="d-flex  flex-column  justify-content-around  mb-2 custom-fontSize align-items-end  custom-height">
                                 <a href="" class="mx-2 h3"><i class="fab fa-instagram"></i></a>
                                 <a href="" class="mx-2 h3"><i class="fab fa-whatsapp"></i></a>
                                 <a href="" class="mx-2 h3"><i class="fab fa-telegram"></i></a>
                                 <a href="" class="mx-2 h3"><i class="fab fa-github"></i></a>
                             </span>
-
+                        </div>
+                        <div class="test">
+                            <div class="details  d-flex flex-column  justify-content-between ">
+                                <span>
+                                    <h5 class="mt-3">Alireza abadi</h5>
+                                </span>
+                                <span class="s">sowftware enginer</span>
+                            </div>
                         </div>
                     </div>
-
+                    {{-- ----------------------------------------------------------------------------- --}}
                     <div class="card col-12 col-md-6 my-4">
                         <div class="imgBx">
-                            <img src="https://app.kadro.co/uploads/admin_user/avatar/4/large_avatar_4.webp" alt="images">
-                        </div>
-                        <div class="details d-flex flex-column  justify-content-between ">
-                            <span>
-                                <h5>Alireza abadi</h5>
-                               
-                            </span>
-                             <span class="s">sowftware enginer</span>
-                            <span class="d-flex  justify-content-around  mb-2 custom-fontSize ">
+                            <img src="https://app.kadro.co/uploads/admin_user/avatar/40/large_avatar_40.webp" alt="images">
+                            <span
+                                class="d-flex  flex-column  justify-content-around  mb-2 custom-fontSize align-items-end  custom-height">
                                 <a href="" class="mx-2 h3"><i class="fab fa-instagram"></i></a>
                                 <a href="" class="mx-2 h3"><i class="fab fa-whatsapp"></i></a>
                                 <a href="" class="mx-2 h3"><i class="fab fa-telegram"></i></a>
                                 <a href="" class="mx-2 h3"><i class="fab fa-github"></i></a>
                             </span>
-
+                        </div>
+                        <div class="test">
+                            <div class="details  d-flex flex-column  justify-content-between ">
+                                <span>
+                                    <h5 class="mt-3">Alireza abadi</h5>
+                                </span>
+                                <span class="s">sowftware enginer</span>
+                            </div>
                         </div>
                     </div>
-
+                    {{-- ----------------------------------------------------------------------------- --}}
                     <div class="card col-12 col-md-6 my-4">
                         <div class="imgBx">
-                            <img src="https://app.kadro.co/uploads/admin_user/avatar/26/large_avatar_26.webp" alt="images">
-                        </div>
-                        <div class="details d-flex flex-column  justify-content-between ">
-                            <span>
-                                <h5>Alireza abadi</h5>
-                               
+                            <img src="https://app.kadro.co/uploads/admin_user/avatar/35/large_avatar_35.webp" alt="images">
+                            <span
+                                class="d-flex  flex-column  justify-content-around  mb-2 custom-fontSize align-items-end  custom-height">
+                                <a href="" class="mx-2 h3"><i class="fab fa-instagram a"></i></a>
+                                <a href="" class="mx-2 h3"><i class="fab fa-whatsapp b"></i></a>
+                                <a href="" class="mx-2 h3"><i class="fab fa-telegram c"></i></a>
+                                <a href="" class="mx-2 h3"><i class="fab fa-github d"></i></a>
                             </span>
-                             <span class="s">sowftware enginer</span>
-                            <span class="d-flex  justify-content-around  mb-2 custom-fontSize ">
+                        </div>
+                        <div class="test">
+                            <div class="details  d-flex flex-column  justify-content-between ">
+                                <span>
+                                    <h5 class="mt-3">Alireza abadi</h5>
+                                </span>
+                                <span class="s">sowftware enginer</span>
+                            </div>
+                        </div>
+                    </div>
+                    {{-- ----------------------------------------------------------------------------- --}}
+                    <div class="card col-12 col-md-6 my-4">
+                        <div class="imgBx">
+                            <img src="https://app.kadro.co/uploads/admin_user/avatar/57/large_avatar_57.webp" alt="images">
+                            <span
+                                class="d-flex  flex-column  justify-content-around  mb-2 custom-fontSize align-items-end  custom-height">
                                 <a href="" class="mx-2 h3"><i class="fab fa-instagram"></i></a>
                                 <a href="" class="mx-2 h3"><i class="fab fa-whatsapp"></i></a>
                                 <a href="" class="mx-2 h3"><i class="fab fa-telegram"></i></a>
                                 <a href="" class="mx-2 h3"><i class="fab fa-github"></i></a>
                             </span>
-
+                        </div>
+                        <div class="test">
+                            <div class="details  d-flex flex-column  justify-content-between ">
+                                <span>
+                                    <h5 class="mt-3">Alireza abadi</h5>
+                                </span>
+                                <span class="s">sowftware enginer</span>
+                            </div>
                         </div>
                     </div>
-
+                    {{-- ----------------------------------------------------------------------------- --}}
                     <div class="card col-12 col-md-6 my-4">
                         <div class="imgBx">
-                            <img src="https://app.kadro.co/uploads/admin_user/avatar/26/large_avatar_26.webp" alt="images">
-                        </div>
-                        <div class="details d-flex flex-column  justify-content-between ">
-                            <span>
-                                <h5>Alireza abadi</h5>
-                               
-                            </span>
-                             <span class="s">sowftware enginer</span>
-                            <span class="d-flex  justify-content-around  mb-2 custom-fontSize ">
+                            <img src="https://app.kadro.co/uploads/admin_user/avatar/1/large_avatar_1.webp" alt="images">
+                            <span
+                                class="d-flex  flex-column  justify-content-around  mb-2 custom-fontSize align-items-end  custom-height">
                                 <a href="" class="mx-2 h3"><i class="fab fa-instagram"></i></a>
                                 <a href="" class="mx-2 h3"><i class="fab fa-whatsapp"></i></a>
                                 <a href="" class="mx-2 h3"><i class="fab fa-telegram"></i></a>
                                 <a href="" class="mx-2 h3"><i class="fab fa-github"></i></a>
                             </span>
-
+                        </div>
+                        <div class="test">
+                            <div class="details  d-flex flex-column  justify-content-between ">
+                                <span>
+                                    <h5 class="mt-3">Alireza abadi</h5>
+                                </span>
+                                <span class="s">sowftware enginer</span>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="card col-12 col-md-6 my-4">
-                        <div class="imgBx">
-                            <img src="https://app.kadro.co/uploads/admin_user/avatar/26/large_avatar_26.webp" alt="images">
-                        </div>
-                        <div class="details d-flex flex-column  justify-content-between ">
-                            <span>
-                                <h5>Alireza abadi</h5>
-                               
-                            </span>
-                             <span class="s">sowftware enginer</span>
-                            <span class="d-flex  justify-content-around  mb-2 custom-fontSize ">
-                                <a href="" class="mx-2 h3"><i class="fab fa-instagram"></i></a>
-                            <a href="" class="mx-2 h3"><i class="fab fa-whatsapp"></i></a>
-                            <a href="" class="mx-2 h3"><i class="fab fa-telegram"></i></a>
-                            <a href="" class="mx-2 h3"><i class="fab fa-github"></i></a>
-                              
-                            </span>
-
-                        </div>
-                    </div>
-
-
+                    {{-- ----------------------------------------------------------------------------- --}}
                 </div>
 
 
