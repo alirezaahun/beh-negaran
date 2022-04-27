@@ -1025,16 +1025,10 @@ footer p span {
 }
 
 .digital-marketing-pic {
+  filter: drop-shadow(0 0 1px black);
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.digital-marketing-pic img {
-  filter: drop-shadow(0 0 1px black);
-  width: 25rem;
-  height: 13rem;
-  margin: auto;
 }
 
 .service-beh-negaran h2 {
@@ -1043,7 +1037,9 @@ footer p span {
 }
 
 .service-beh-negaran hr,
-#video-service hr {
+#video-service hr,
+#photo-service hr,
+#website-service hr {
   background-color: var(--clr-accent);
   padding: 3px;
   opacity: 1;
@@ -1051,63 +1047,59 @@ footer p span {
   margin-bottom: 2rem;
 }
 
-#video-service hr {
+#video-service hr,
+#photo-service hr,
+#website-service hr {
   background-color: var(--clr-secondary);
 }
 
-.video-icon-pic {
+.icon-pic img {
+  filter: drop-shadow(0 0 1px black);
+}
+
+.icon-pic {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#video-service .video-icon-pic img {
-  width: 12rem;
-  height: 10rem;
-  filter: drop-shadow(0 0 1px black);
-  margin: auto;
-}
-
-.video-service-description {
-  background-color: var(--clr-primary);
+.service-description {
+  background-color: #fff;
   border-radius: 1.3rem;
   padding: 0.5rem 2rem;
   margin-top: 2.5rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px, rgba(0, 0, 0, 0.16) 0px 3px 6px inset, rgba(0, 0, 0, 0.23) 0px 3px 6px inset;
 }
 
-.video-service-description img {
+.service-description img {
   width: 5rem;
   height: 5rem;
-  margin: auto;
   display: flex;
-  align-self: center;
+  margin: 1rem auto;
   filter: drop-shadow(0 0 1px black);
 }
 
-.video-service-description ul {
-  list-style: none;
-}
-
-.video-service-description h5 {
+.service-description h5 {
   text-align: center;
   color: var(--clr-secondary);
   margin: 1rem auto;
 }
 
-.video-service-description p {
+.service-description p {
   margin: 1rem 0.5rem;
   text-align: justify;
 }
 
-.video-service-description ul li p {
+.service-description ul li p {
   word-spacing: normal;
   font-weight: 600;
 }
 
-<<<<<<< HEAD
-=======
-.video-service-description li::before {
+.service-description ul {
+  list-style: none;
+}
+
+.service-description ul li::before {
   font-family: "Font Awesome 5 Free";
   content: "\f0d9";
   color: var(--clr-dark);
@@ -1116,7 +1108,128 @@ footer p span {
   margin-left: 5px;
 }
 
->>>>>>> ebf70258b86e7172d01933cbd8cbb30d6c5a45bb
+.card {
+  position: relative;
+  width: 300px;
+  height: 370px;
+  background: var(--clr-primary);
+  margin: 0 auto;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 1.3rem;
+}
+
+.card:before,
+.card:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  background: #fff;
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.card:hover:before {
+  transform: rotate(20deg);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover:after {
+  transform: rotate(10deg);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card .imgBx {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  bottom: 8px;
+  right: 10px;
+  background: var(--clr-primary);
+  transition: 0.5s;
+  z-index: 1;
+  border-radius: 1.3rem;
+}
+
+.card:hover .imgBx {
+  bottom: 100px;
+}
+
+.card .imgBx img {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+  transition: 1.5s;
+  border-radius: 0.3rem;
+}
+
+.card:hover .imgBx img {
+  position: absolute;
+  top: 0px;
+  right: 0;
+  width: 80%;
+  height: 100%;
+  transition: 1s;
+  border-radius: 1.3rem;
+}
+
+.card .details {
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  height: 80px;
+  text-align: center;
+}
+
+.card .details h2 {
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  font-size: 20px;
+  color: #3a3737;
+  text-transform: uppercase;
+}
+
+.custom-boxshodow {
+  box-shadow: 2px 2px 8px 3px rgba(0, 0, 0, 0.24);
+}
+
+.custom-height {
+  height: 80%;
+}
+
+.custom-border {
+  border-radius: 1.3rem;
+}
+
+.card .imgBx span .fa-instagram {
+  color: var(--clr-secondary);
+}
+
+.card .imgBx span .fa-whatsapp {
+  color: var(--clr-accent);
+}
+
+.card .imgBx span .fa-telegram {
+  color: var(--clr-dark);
+}
+
+.card .imgBx span .fa-github {
+  color: black;
+}
+
+.card .imgBx span i:hover {
+  font-size: 30px;
+}
+
 /* Scroll Bar ----------------------------------------------------------- */
 /* width */
 ::-webkit-scrollbar {
@@ -1141,7 +1254,7 @@ footer p span {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: var(--clr-primary);
+  background: transparent;
 }
 
 /* The track NOT covered by the handle.
