@@ -55,7 +55,6 @@ body {
     background-color: var(--clr-primary);
 }
 p {
-    word-spacing: 0.4rem;
     line-height: 1.6rem;
 }
 h1,
@@ -76,8 +75,9 @@ h6 {
     font-family: "Vazir";
 }
 
-
-.mt-6{margin-top: 100px;}
+.mt-6 {
+    margin-top: 100px;
+}
 /* Variables ----------------------------------------------------------------- */
 :root {
     --clr-primary: #f6f6f6;
@@ -874,13 +874,18 @@ footer p span {
     margin-top: 5rem;
 }
 .digital-marketing-pic {
-    background-image: url("../../../public/images/digital-marketing.png");
-    background-size: contain;
-    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.digital-marketing-pic img {
     filter: drop-shadow(0 0 1px black);
+    width: 25rem;
+    height: 13rem;
+    margin: auto;
 }
 .service-beh-negaran p {
-    text-align: justify;
+    // text-align: justify;
 }
 .service-beh-negaran h2 {
     color: var(--clr-secondary);
@@ -898,49 +903,67 @@ footer p span {
     background-color: var(--clr-secondary);
 }
 #video-service p {
-    text-align: justify;
+    // text-align: justify;
 }
-#video-service .video-icon-pic {
-    background-image: url("../../../public/images/video-camera.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: left center;
-    background-position: 0 80px;
-    transition: filter 0.5s;
+.video-icon-pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-#video-service .video-icon-pic:hover {
-  filter: grayscale(100%);
+#video-service .video-icon-pic img {
+    width: 12rem;
+    height: 10rem;
+    filter: drop-shadow(0 0 1px black);
+    margin: auto;
 }
 .video-service-description {
-  background-color: #fff;
-  border-radius: 1.3rem;
-  padding: 0.5rem 2rem;
-  margin-top: 2.5rem;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px,
-  rgba(0, 0, 0, 0.16) 0px 3px 6px inset, rgba(0, 0, 0, 0.23) 0px 3px 6px inset;
+    background-color: var(--clr-primary);
+    border-radius: 1.3rem;
+    padding: 0.5rem 2rem;
+    margin-top: 2.5rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px,
+        rgba(0, 0, 0, 0.16) 0px 3px 6px inset,
+        rgba(0, 0, 0, 0.23) 0px 3px 6px inset;
 }
-.video-service-description i {
-  font-size: 5rem;
-  color: var(--clr-secondary);
-  text-align: center;
-  margin: 0.5rem auto;
-  display: block;
+.video-service-description img {
+    width: 5rem;
+    height: 5rem;
+    margin: auto;
+    display: flex;
+    align-self: center;
+    filter: drop-shadow(0 0 1px black);
+}
+.video-service-description ul {
+    list-style: none;
 }
 .video-service-description h5 {
-  text-align: center;
-  color: var(--clr-secondary);
-  margin: 1rem auto;
+    text-align: center;
+    color: var(--clr-secondary);
+    margin: 1rem auto;
 }
 .video-service-description p {
-  margin: 1rem 0.5rem;
-  text-align: justify;
+    margin: 1rem 0.5rem;
+    text-align: justify;
 }
 .video-service-description ul li p {
-  word-spacing: normal;
+    word-spacing: normal;
+    font-weight: 600;
 }
+.video-service-description li::before {
+  font-family: "Font Awesome 5 Free";
+        content: "\f0d9";
+        color: var(--clr-dark);
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+}
+<<<<<<< HEAD
 
 
 
+=======
+// about us page style.....................................................
+>>>>>>> ebf70258b86e7172d01933cbd8cbb30d6c5a45bb
 
 /* Scroll Bar ----------------------------------------------------------- */
 /* width */
