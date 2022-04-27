@@ -54,7 +54,7 @@
 
 
 
-                <div class="box d-flex row custom-boxshodow overflow-hidden custom-border">
+                <div class="box d-flex row custom-boxshodow custom-border">
                     <div class="card col-12 col-md-6 my-4">
                         <div class="imgBx">
                             <img src="https://app.kadro.co/uploads/admin_user/avatar/1/large_avatar_1.webp" alt="images">
@@ -69,9 +69,9 @@
                         <div class="test">
                             <div class="details  d-flex flex-column  justify-content-between ">
                                 <span>
-                                    <h5 class="mt-3">علیرضا ابادی</h5>
+                                    <h5 class="mt-3">سهراب ناصحی</h5>
                                 </span>
-                                <span class="s">sowftware enginer</span>
+                                <span class="s">توسعه دهنده وب</span>
                             </div>
                         </div>
                     </div>
@@ -90,9 +90,9 @@
                         <div class="test">
                             <div class="details  d-flex flex-column  justify-content-between ">
                                 <span>
-                                    <h5 class="mt-3">علیرضا ابادی</h5>
+                                    <h5 class="mt-3">سهراب ناصحی</h5>
                                 </span>
-                                <span class="s">sowftware enginer</span>
+                                <span class="s">توسعه دهنده وب</span>
                             </div>
                         </div>
                     </div>
@@ -111,9 +111,9 @@
                         <div class="test">
                             <div class="details  d-flex flex-column  justify-content-between ">
                                 <span>
-                                    <h5 class="mt-3">علیرضا ابادی</h5>
+                                    <h5 class="mt-3">سهراب ناصحی</h5>
                                 </span>
-                                <span class="s">sowftware enginer</span>
+                                <span class="s">توسعه دهنده وب</span>
                             </div>
                         </div>
                     </div>
@@ -132,9 +132,9 @@
                         <div class="test">
                             <div class="details  d-flex flex-column  justify-content-between ">
                                 <span>
-                                    <h5 class="mt-3">علیرضا ابادی</h5>
+                                    <h5 class="mt-3">سهراب ناصحی</h5>
                                 </span>
-                                <span class="s">sowftware enginer</span>
+                                <span class="s">توسعه دهنده وب</span>
                             </div>
                         </div>
                     </div>
@@ -153,9 +153,9 @@
                         <div class="test">
                             <div class="details  d-flex flex-column  justify-content-between ">
                                 <span>
-                                    <h5 class="mt-3">علیرضا ابادی</h5>
+                                    <h5 class="mt-3">سهراب ناصحی</h5>
                                 </span>
-                                <span class="s">sowftware enginer</span>
+                                <span class="s">توسعه دهنده وب</span>
                             </div>
                         </div>
                     </div>
@@ -174,9 +174,9 @@
                         <div class="test">
                             <div class="details  d-flex flex-column  justify-content-between ">
                                 <span>
-                                    <h5 class="mt-3">علیرضا ابادی</h5>
+                                    <h5 class="mt-3">سهراب ناصحی</h5>
                                 </span>
-                                <span class="s">sowftware enginer</span>
+                                <span class="s">توسعه دهنده وب</span>
                             </div>
                         </div>
                     </div>
@@ -195,9 +195,9 @@
                         <div class="test">
                             <div class="details  d-flex flex-column  justify-content-between ">
                                 <span>
-                                    <h5 class="mt-3">علیرضا ابادی</h5>
+                                    <h5 class="mt-3">سهراب ناصحی</h5>
                                 </span>
-                                <span class="s">sowftware enginer</span>
+                                <span class="s">توسعه دهنده وب</span>
                             </div>
                         </div>
                     </div>
@@ -216,9 +216,9 @@
                         <div class="test">
                             <div class="details  d-flex flex-column  justify-content-between ">
                                 <span>
-                                    <h5 class="mt-3">علیرضا ابادی</h5>
+                                    <h5 class="mt-3">سهراب ناصحی</h5>
                                 </span>
-                                <span class="s">sowftware enginer</span>
+                                <span class="s">توسعه دهنده وب</span>
                             </div>
                         </div>
                     </div>
@@ -291,42 +291,9 @@
 
 
 
-      <pre>
-
-
-      </pre>
-
-      <div class="row align-items-center mt-6 ">
-        <div class="comb-4l-12  col-md-6 col-lg-5  d-flex flex-column " >
-          <h2 class="text-center">
-            کنارتان هستیم!
-          </h2 class="custom-height  " style="height: 130px;">
-          <p class="text-center"> ما در شبکه های اجتماعی هم کنارتان هستیم! </p>
-          <p class="text-center">
-                  <a href="" class="mx-2 h3"><i class="fab fa-instagram"></i></a>
-                  <a href="" class="mx-2 h3"><i class="fab fa-whatsapp"></i></a>
-                  <a href="" class="mx-2 h3"><i class="fab fa-telegram" ></i></a>
-                  <a href="" class="mx-2 h3"><i class="fab fa-github" ></i></a>
-                  <a href="" class="mx-2 h3"><i class="fab fa-facebook" ></i></a>
-
-
-                </p>
-        </div>
-        <div class="col-12 col-md-6 ml-md-auto mt-4 mt-md-0">
-          <img alt="image" class="img-fluid" src="https://app.kadro.co/img/aboutus.jpg">
-        </div>
-      </div>
-
-    </div>
-
-
-  </div>
-</main>
-
 
     </main>
 @endsection
 
 @section('js')
-
 @endsection

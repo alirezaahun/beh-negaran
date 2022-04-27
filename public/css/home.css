@@ -1159,25 +1159,27 @@ footer p span {
   bottom: 100px;
 }
 
-.card .imgBx img {
-  position: absolute;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: fill;
-     object-fit: fill;
-  transition: 1.5s;
-  border-radius: 0.3rem;
-}
-
 .card:hover .imgBx img {
   position: absolute;
   top: 0px;
   right: 0;
   width: 80%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   transition: 1s;
   border-radius: 1.3rem;
+}
+
+.card .imgBx img {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 1.5s;
+  border-radius: 0.3rem;
 }
 
 .card .details {
@@ -1227,7 +1229,7 @@ footer p span {
 }
 
 .card .imgBx span i:hover {
-  font-size: 30px;
+  color: black;
 }
 
 /* Scroll Bar ----------------------------------------------------------- */
@@ -1259,7 +1261,7 @@ footer p span {
 
 /* The track NOT covered by the handle.
 ::-webkit-scrollbar-track-piece {
-  background: #000;
+  background: #000; 
 }
 /* Corner */
 ::-webkit-scrollbar-corner {

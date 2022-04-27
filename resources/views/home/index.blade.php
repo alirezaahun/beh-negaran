@@ -161,31 +161,21 @@
         <h3>همکاری های شرکت</h3>
         <hr class="w-25 m-auto">
       </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> b5005a65be40959b667a6409e82e44f1b4b46646
       <!-- Brand Sazmani ----------->
       <div class="row mt-5">
         <div class="col-md-12">
           <div class="owl-carousel owl-theme .owl-dots .owl-dot text-center owl">
             @foreach ($logos as $logo)
-            
+
             <div class="carousel-banner"> <img src="{{asset(env('BANNER_IMAGE_UPLOAD_PATH').$logo->image)}}" alt="banner1"> </div>
 
             @endforeach
           </div>
         </div>
       </div>
-<<<<<<< HEAD
 
       <hr>
 
-=======
-      
-      <hr>
-      
->>>>>>> b5005a65be40959b667a6409e82e44f1b4b46646
       <div class="row mt-5">
         <div class="col-md-12">
           <div class="owl-carousel owl-theme .owl-dots .owl-dot text-center owl">

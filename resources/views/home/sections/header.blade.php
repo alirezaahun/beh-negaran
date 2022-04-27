@@ -17,7 +17,7 @@
             </a>
             <span class="vertical-line"></span>
             <ul class="dropdown-menu text-end" aria-labelledby="navbarDropdown">
-                  
+
                   <li><a class="dropdown-item" href="#">ویدئو</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#">عکس</a></li>
@@ -49,8 +49,8 @@
               </li>
               <span class="vertical-line"></span>
               <li class="nav-item">
-                <a class="nav-link" href="#">درباره ما</a>
-                
+                <a class="nav-link" href="{{route('home.about')}}">درباره ما</a>
+
               </li>
               <span class="vertical-line"></span>
               <li class="nav-item dropdown">
@@ -58,7 +58,7 @@
                   بیشتر
                 </a>
                 <ul class="dropdown-menu text-end" aria-labelledby="navbarDropdown">
-                  
+
                   <li><a class="dropdown-item" href="#">راه های ارتباطی</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#">پادکست به نگاران</a></li>
@@ -70,7 +70,7 @@
                   <li><a class="dropdown-item" href="#">همکاری با ما</a></li>
                 </ul>
               </li>
-              
+
             </ul>
             <div class="navbar-btns">
             <a href="#" class="primary-btn"><i class='bx bx-cart'></i>پیگیری سفارشات</a>
