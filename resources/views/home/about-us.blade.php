@@ -69,9 +69,9 @@
                         <div class="test">
                             <div class="details  d-flex flex-column  justify-content-between ">
                                 <span>
-                                    <h5 class="mt-3">Alireza abadi</h5>
+                                    <h5 class="mt-3">سهراب ناصحی</h5>
                                 </span>
-                                <span class="s">sowftware enginer</span>
+                                <span class="s">توسعه دهنده وب</span>
                             </div>
                         </div>
                     </div>
@@ -90,9 +90,9 @@
                         <div class="test">
                             <div class="details  d-flex flex-column  justify-content-between ">
                                 <span>
-                                    <h5 class="mt-3">Alireza abadi</h5>
+                                    <h5 class="mt-3">سهراب ناصحی</h5>
                                 </span>
-                                <span class="s">sowftware enginer</span>
+                                <span class="s">توسعه دهنده وب</span>
                             </div>
                         </div>
                     </div>
@@ -111,9 +111,9 @@
                         <div class="test">
                             <div class="details  d-flex flex-column  justify-content-between ">
                                 <span>
-                                    <h5 class="mt-3">Alireza abadi</h5>
+                                    <h5 class="mt-3">سهراب ناصحی</h5>
                                 </span>
-                                <span class="s">sowftware enginer</span>
+                                <span class="s">توسعه دهنده وب</span>
                             </div>
                         </div>
                     </div>
@@ -132,9 +132,9 @@
                         <div class="test">
                             <div class="details  d-flex flex-column  justify-content-between ">
                                 <span>
-                                    <h5 class="mt-3">Alireza abadi</h5>
+                                    <h5 class="mt-3">سهراب ناصحی</h5>
                                 </span>
-                                <span class="s">sowftware enginer</span>
+                                <span class="s">توسعه دهنده وب</span>
                             </div>
                         </div>
                     </div>
@@ -153,9 +153,9 @@
                         <div class="test">
                             <div class="details  d-flex flex-column  justify-content-between ">
                                 <span>
-                                    <h5 class="mt-3">Alireza abadi</h5>
+                                    <h5 class="mt-3">سهراب ناصحی</h5>
                                 </span>
-                                <span class="s">sowftware enginer</span>
+                                <span class="s">توسعه دهنده وب</span>
                             </div>
                         </div>
                     </div>
@@ -174,9 +174,9 @@
                         <div class="test">
                             <div class="details  d-flex flex-column  justify-content-between ">
                                 <span>
-                                    <h5 class="mt-3">Alireza abadi</h5>
+                                    <h5 class="mt-3">سهراب ناصحی</h5>
                                 </span>
-                                <span class="s">sowftware enginer</span>
+                                <span class="s">توسعه دهنده وب</span>
                             </div>
                         </div>
                     </div>
@@ -195,9 +195,9 @@
                         <div class="test">
                             <div class="details  d-flex flex-column  justify-content-between ">
                                 <span>
-                                    <h5 class="mt-3">Alireza abadi</h5>
+                                    <h5 class="mt-3">سهراب ناصحی</h5>
                                 </span>
-                                <span class="s">sowftware enginer</span>
+                                <span class="s">توسعه دهنده وب</span>
                             </div>
                         </div>
                     </div>
@@ -216,9 +216,9 @@
                         <div class="test">
                             <div class="details  d-flex flex-column  justify-content-between ">
                                 <span>
-                                    <h5 class="mt-3">Alireza abadi</h5>
+                                    <h5 class="mt-3">سهراب ناصحی</h5>
                                 </span>
-                                <span class="s">sowftware enginer</span>
+                                <span class="s">توسعه دهنده وب</span>
                             </div>
                         </div>
                     </div>
