@@ -49,7 +49,7 @@
               </li>
               <span class="vertical-line"></span>
               <li class="nav-item">
-                <a class="nav-link" href="../about-us.blade.php">درباره ما</a>
+                <a class="nav-link" href="#">درباره ما</a>
                 
               </li>
               <span class="vertical-line"></span>
