@@ -883,6 +883,20 @@ footer p span {
     color: var(--clr-secondary);
     font-size: 2rem;
 }
+.service-beh-negaran p,
+#video-service p,
+#photo-service p,
+#website-service p,
+#design-service p,
+#podcast-service p,
+#advertise-consultation-service p,
+#social-media-service p,
+#advertise-campaign-service p,
+#digital-marketing-service p,
+#visual-effects-service p {
+    text-align: justify;
+}
+
 .service-beh-negaran hr,
 #video-service hr,
 #photo-service hr,
@@ -921,13 +935,12 @@ footer p span {
     align-items: center;
 }
 .service-description {
-    background-color: #fff;
+    background-color: var(--clr-primary);
     border-radius: 1.3rem;
     padding: 0.5rem 2rem;
     margin-top: 2.5rem;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px,
-        rgba(0, 0, 0, 0.16) 0px 3px 6px inset,
-        rgba(0, 0, 0, 0.23) 0px 3px 6px inset;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 2px, rgba(0, 0, 0, 0.23) 0px 0px 3px;
+
 }
 .service-description img {
     width: 5rem;
