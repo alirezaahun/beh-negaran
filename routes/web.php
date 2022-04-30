@@ -57,3 +57,4 @@ Route::prefix('admin-panel/managment')->name('admin.')->group(function(){
 Route::get('/', [HomeController::class , 'index']);
 Route::get('/about-us', [HomeController::class , 'about'])->name('home.about');
 Route::get('/services', [HomeController::class , 'services'])->name('home.services');
+Route::get('/projects', [HomeController::class , 'projects'])->name('home.projects');

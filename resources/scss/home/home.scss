@@ -671,12 +671,18 @@ article p {
 }
 .service-number {
     border-bottom-color: #f6f6f6;
+    border-bottom-left-radius: 0.2rem;
+    border-bottom-right-radius: 0.2rem;
 }
 .done-projects-number {
     border-bottom-color: rgb(233, 195, 30);
+    border-bottom-left-radius: 0.2rem;
+    border-bottom-right-radius: 0.2rem;
 }
 .current-projects-number {
     border-bottom-color: rgb(58, 62, 61);
+    border-bottom-left-radius: 0.2rem;
+    border-bottom-right-radius: 0.2rem;
 }
 
 /* Brands Logo --------------------------------------------------------- */
@@ -1106,6 +1112,8 @@ footer p span {
 
 //     transition: 1s;
 // }
+
+
 
 /* Scroll Bar ----------------------------------------------------------- */
 /* width */
