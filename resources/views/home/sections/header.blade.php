@@ -18,11 +18,11 @@
             <span class="vertical-line"></span>
             <ul class="dropdown-menu text-end" aria-labelledby="navbarDropdown">
                   
-                  <li><a class="dropdown-item" href="#">ویدئو</a></li>
+                  <li><a class="dropdown-item" href="{{route('home.services')}}/#video-service">ویدئو</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">عکس</a></li>
+                  <li><a class="dropdown-item" href="{{route('home.services')}}/#photo-service">عکس</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">سایت</a></li>
+                  <li><a class="dropdown-item" href="{{route('home.services')}}/#website-service">سایت</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#">طراحی</a></li>
                   <li><hr class="dropdown-divider"></li>
@@ -36,7 +36,7 @@
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#">دیجیتال مارکتینگ</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">جلوه های بحری</a></li>
+                  <li><a class="dropdown-item" href="#">جلوه های بصری</a></li>
                 </ul>
               </li>
               <span class="vertical-line"></span>
@@ -49,7 +49,7 @@
               </li>
               <span class="vertical-line"></span>
               <li class="nav-item">
-                <a class="nav-link" href="../about-us.blade.php">درباره ما</a>
+                <a class="nav-link" href="{{route('home.about')}}">درباره ما</a>
                 
               </li>
               <span class="vertical-line"></span>

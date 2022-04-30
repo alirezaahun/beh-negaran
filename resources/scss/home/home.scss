@@ -883,10 +883,31 @@ footer p span {
     color: var(--clr-secondary);
     font-size: 2rem;
 }
+.service-beh-negaran p,
+#video-service p,
+#photo-service p,
+#website-service p,
+#design-service p,
+#podcast-service p,
+#advertise-consultation-service p,
+#social-media-service p,
+#advertise-campaign-service p,
+#digital-marketing-service p,
+#visual-effects-service p {
+    text-align: justify;
+}
+
 .service-beh-negaran hr,
 #video-service hr,
 #photo-service hr,
-#website-service hr {
+#website-service hr,
+#design-service hr,
+#podcast-service hr,
+#advertise-consultation-service hr,
+#social-media-service hr,
+#advertise-campaign-service hr,
+#digital-marketing-service hr,
+#visual-effects-service hr {
     background-color: var(--clr-accent);
     padding: 3px;
     opacity: 1;
@@ -895,7 +916,14 @@ footer p span {
 }
 #video-service hr,
 #photo-service hr,
-#website-service hr {
+#website-service hr,
+#design-service hr,
+#podcast-service hr,
+#advertise-consultation-service hr,
+#social-media-service hr,
+#advertise-campaign-service hr,
+#digital-marketing-service hr,
+#visual-effects-service hr {
     background-color: var(--clr-secondary);
 }
 .icon-pic img {
@@ -907,13 +935,12 @@ footer p span {
     align-items: center;
 }
 .service-description {
-    background-color: #fff;
+    background-color: var(--clr-primary);
     border-radius: 1.3rem;
     padding: 0.5rem 2rem;
     margin-top: 2.5rem;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px,
-        rgba(0, 0, 0, 0.16) 0px 3px 6px inset,
-        rgba(0, 0, 0, 0.23) 0px 3px 6px inset;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 2px, rgba(0, 0, 0, 0.23) 0px 0px 3px;
+
 }
 .service-description img {
     width: 5rem;
@@ -957,6 +984,7 @@ footer p span {
     border-radius: 4px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     border-radius: 1.3rem;
+    overflow: hidden;
 }
 .card:before,
 .card:after {
@@ -1065,17 +1093,38 @@ footer p span {
 .card .imgBx span i:hover {
     font-size: 30px;
 }
-// .card .imgBx img:hover {
-//     position: absolute;
-//     top: 0px;
-//     // left: 0;
-//     right: 0;
-//     width: 80%;
-//     height: 100%;
-//     object-fit: cover;
 
-//     transition: 1s;
-// }
+.aboutUs-h2-color{
+    color: var(--clr-secondary);
+}
+.card-h2-color2{
+    color: var(--clr-accent);
+}
+
+
+
+.aboutUs-custom-hr{
+        background-color: var(--clr-accent);
+        padding: 3px;
+        opacity: 1;
+        border-radius: 0.3rem;
+        margin-bottom: 2rem;
+    
+}
+
+.aboutUs-custom-hr2{
+    background-color: var(--clr-secondary);
+    padding: 3px;
+    opacity: 1;
+    border-radius: 0.3rem;
+    margin-bottom: 2rem;
+
+}
+
+
+
+
+
 
 /* Scroll Bar ----------------------------------------------------------- */
 /* width */

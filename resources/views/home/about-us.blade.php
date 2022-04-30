@@ -4,18 +4,17 @@
     <!-- Banner Section ---------------------------------------------------------------->
     <main class="main-section">
         <div class="container-fluid px-0">
-            <div class="banner">
-            </div>
+       
 
 
             <div class="page-content container  my-5">
 
                 <div class="row justify-content-right">
                     <div class="col col-md-8 text-right">
-                        <h3>
+                        <h2 class="aboutUs-h2-color">
                             چرا هستیم؟
-                        </h3>
-                        <hr class="w-25">
+                        </h2>
+                        <hr class="w-25 aboutUs-custom-hr">
 
                         <p>
                             زندگی این روزها به قدری سریع جریان داره که یک روز چشمامونو باز می کنیم می بینیم سالها گذشته و از
@@ -34,7 +33,7 @@
                 <div class="row text-center justify-content-center my-5">
                     <div class="col-8">
                         <h3>ویژگی های ما</h3>
-                        <hr class="w-25  mx-auto mb-5">
+                        <hr class="w-25  mx-auto mb-5 aboutUs-custom-hr2">
                         <p class=" text-center">
                             ما بهترین های ایران رو دور خودمون جمع کرده ایم، این شامل
                             ۹۹۱۸
@@ -54,7 +53,7 @@
 
 
 
-                <div class="box d-flex row custom-boxshodow overflow-hidden custom-border">
+                <div class="box d-flex row custom-boxshodow custom-border">
                     <div class="card col-12 col-md-6 my-4">
                         <div class="imgBx">
                             <img src="https://app.kadro.co/uploads/admin_user/avatar/1/large_avatar_1.webp" alt="images">
@@ -69,9 +68,9 @@
                         <div class="test">
                             <div class="details  d-flex flex-column  justify-content-between ">
                                 <span>
-                                    <h5 class="mt-3">علیرضا ابادی</h5>
+                                    <h5 class="mt-3">سهراب ناصحی</h5>
                                 </span>
-                                <span class="s">sowftware enginer</span>
+                                <span class="s">توسعه دهنده وب</span>
                             </div>
                         </div>
                     </div>
@@ -90,9 +89,9 @@
                         <div class="test">
                             <div class="details  d-flex flex-column  justify-content-between ">
                                 <span>
-                                    <h5 class="mt-3">علیرضا ابادی</h5>
+                                    <h5 class="mt-3">سهراب ناصحی</h5>
                                 </span>
-                                <span class="s">sowftware enginer</span>
+                                <span class="s">توسعه دهنده وب</span>
                             </div>
                         </div>
                     </div>
@@ -111,9 +110,9 @@
                         <div class="test">
                             <div class="details  d-flex flex-column  justify-content-between ">
                                 <span>
-                                    <h5 class="mt-3">علیرضا ابادی</h5>
+                                    <h5 class="mt-3">سهراب ناصحی</h5>
                                 </span>
-                                <span class="s">sowftware enginer</span>
+                                <span class="s">توسعه دهنده وب</span>
                             </div>
                         </div>
                     </div>
@@ -132,9 +131,9 @@
                         <div class="test">
                             <div class="details  d-flex flex-column  justify-content-between ">
                                 <span>
-                                    <h5 class="mt-3">علیرضا ابادی</h5>
+                                    <h5 class="mt-3">سهراب ناصحی</h5>
                                 </span>
-                                <span class="s">sowftware enginer</span>
+                                <span class="s">توسعه دهنده وب</span>
                             </div>
                         </div>
                     </div>
@@ -153,9 +152,9 @@
                         <div class="test">
                             <div class="details  d-flex flex-column  justify-content-between ">
                                 <span>
-                                    <h5 class="mt-3">علیرضا ابادی</h5>
+                                    <h5 class="mt-3">سهراب ناصحی</h5>
                                 </span>
-                                <span class="s">sowftware enginer</span>
+                                <span class="s">توسعه دهنده وب</span>
                             </div>
                         </div>
                     </div>
@@ -174,9 +173,9 @@
                         <div class="test">
                             <div class="details  d-flex flex-column  justify-content-between ">
                                 <span>
-                                    <h5 class="mt-3">علیرضا ابادی</h5>
+                                    <h5 class="mt-3">سهراب ناصحی</h5>
                                 </span>
-                                <span class="s">sowftware enginer</span>
+                                <span class="s">توسعه دهنده وب</span>
                             </div>
                         </div>
                     </div>
@@ -195,9 +194,9 @@
                         <div class="test">
                             <div class="details  d-flex flex-column  justify-content-between ">
                                 <span>
-                                    <h5 class="mt-3">علیرضا ابادی</h5>
+                                    <h5 class="mt-3">سهراب ناصحی</h5>
                                 </span>
-                                <span class="s">sowftware enginer</span>
+                                <span class="s">توسعه دهنده وب</span>
                             </div>
                         </div>
                     </div>
@@ -216,9 +215,9 @@
                         <div class="test">
                             <div class="details  d-flex flex-column  justify-content-between ">
                                 <span>
-                                    <h5 class="mt-3">علیرضا ابادی</h5>
+                                    <h5 class="mt-3">سهراب ناصحی</h5>
                                 </span>
-                                <span class="s">sowftware enginer</span>
+                                <span class="s">توسعه دهنده وب</span>
                             </div>
                         </div>
                     </div>
@@ -229,11 +228,11 @@
 
 
 
-                <div class="row text-center justify-content-center my-5">
+                <div class="row   my-5">
                     <div class="col-8">
-                        <h3>ویژگی های ما</h3>
-                        <hr class="w-25  mx-auto mb-5">
-                        <p class=" text-center">
+                        <h3 >ویژگی های ما</h3>
+                        <hr class="w-25 mb-5 aboutUs-custom-hr2">
+                        <p class="">
 
 
                             زندگی این روزها به قدری سریع جریان داره که یک روز چشمامونو باز می کنیم می بینیم سالها گذشته و از

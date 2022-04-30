@@ -3306,7 +3306,7 @@ function togglerTrigger() {
 
 $(document).ready(function () {
   $(window).scroll(function () {
-    if (toggleBtn == false) {
+    if (toggleBtn === false) {
       if ($(window).scrollTop() > 780) {
         $(".service-icons-mobile").css({
           display: "block"
