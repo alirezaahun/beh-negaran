@@ -264,7 +264,7 @@
 
                 <div class="row align-items-center mt-6 ">
                     <div class="comb-4l-12  col-md-6 col-lg-5  d-flex flex-column ">
-                        <h4 class="text-center card-h2-color">
+                        <h4 class="text-center aboutUs-h2-color">
                             کنارتان هستیم!
                         </h4 class="custom-height  ">
                         <p class="text-center"> ما در شبکه های اجتماعی هم کنارتان هستیم! </p>
