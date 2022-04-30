@@ -793,14 +793,20 @@ article p {
 
 .service-number {
   border-bottom-color: #f6f6f6;
+  border-bottom-left-radius: 0.2rem;
+  border-bottom-right-radius: 0.2rem;
 }
 
 .done-projects-number {
   border-bottom-color: #e9c31e;
+  border-bottom-left-radius: 0.2rem;
+  border-bottom-right-radius: 0.2rem;
 }
 
 .current-projects-number {
   border-bottom-color: #3a3e3d;
+  border-bottom-left-radius: 0.2rem;
+  border-bottom-right-radius: 0.2rem;
 }
 
 /* Brands Logo --------------------------------------------------------- */

@@ -35,4 +35,10 @@ class HomeController extends Controller
         return view('home.services');
 
     }
+
+    public function projects(){
+
+        return view('home.projects');
+
+    }
 }
