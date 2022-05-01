@@ -4,18 +4,17 @@
     <!-- Banner Section ---------------------------------------------------------------->
     <main class="main-section">
         <div class="container-fluid px-0">
-            <div class="banner">
-            </div>
+       
 
 
             <div class="page-content container  my-5">
 
                 <div class="row justify-content-right">
                     <div class="col col-md-8 text-right">
-                        <h3>
+                        <h2 class="aboutUs-h2-color">
                             چرا هستیم؟
-                        </h3>
-                        <hr class="w-25">
+                        </h2>
+                        <hr class="w-25 aboutUs-custom-hr">
 
                         <p>
                             زندگی این روزها به قدری سریع جریان داره که یک روز چشمامونو باز می کنیم می بینیم سالها گذشته و از
@@ -34,7 +33,7 @@
                 <div class="row text-center justify-content-center my-5">
                     <div class="col-8">
                         <h3>ویژگی های ما</h3>
-                        <hr class="w-25  mx-auto mb-5">
+                        <hr class="w-25  mx-auto mb-5 aboutUs-custom-hr2">
                         <p class=" text-center">
                             ما بهترین های ایران رو دور خودمون جمع کرده ایم، این شامل
                             ۹۹۱۸
@@ -229,11 +228,11 @@
 
 
 
-                <div class="row text-center justify-content-center my-5">
+                <div class="row   my-5">
                     <div class="col-8">
-                        <h3>ویژگی های ما</h3>
-                        <hr class="w-25  mx-auto mb-5">
-                        <p class=" text-center">
+                        <h3 >ویژگی های ما</h3>
+                        <hr class="w-25 mb-5 aboutUs-custom-hr2">
+                        <p class="">
 
 
                             زندگی این روزها به قدری سریع جریان داره که یک روز چشمامونو باز می کنیم می بینیم سالها گذشته و از
@@ -265,7 +264,7 @@
 
                 <div class="row align-items-center mt-6 ">
                     <div class="comb-4l-12  col-md-6 col-lg-5  d-flex flex-column ">
-                        <h4 class="text-center">
+                        <h4 class="text-center aboutUs-h2-color">
                             کنارتان هستیم!
                         </h4 class="custom-height  ">
                         <p class="text-center"> ما در شبکه های اجتماعی هم کنارتان هستیم! </p>

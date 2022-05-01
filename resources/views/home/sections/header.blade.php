@@ -36,7 +36,7 @@
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#">دیجیتال مارکتینگ</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">جلوه های بحری</a></li>
+                  <li><a class="dropdown-item" href="#">جلوه های بصری</a></li>
                 </ul>
               </li>
               <span class="vertical-line"></span>

@@ -69,7 +69,7 @@
         </div>
 
         <div class="row mt-3">
-          <p>کلیه حقوق متعلق به تیم طراحی وب سایت <span>به نگاران تجارت آزما</span></p>
+          <p>کلیه حقوق متعلق به شرکت    <span>به نگاران تجارت آزما</span></p>
           <!-- <a referrerpolicy="origin" target="_blank" href="https://trustseal.enamad.ir/?id=245447&amp;Code=eewDUE10jaZKLKtliHr3"><img referrerpolicy="origin" src="https://Trustseal.eNamad.ir/logo.aspx?id=245447&amp;Code=eewDUE10jaZKLKtliHr3" alt="" style="cursor:pointer" id="eewDUE10jaZKLKtliHr3"></a>
             <img referrerpolicy='origin' id = 'nbqejzpefukzoeukesgtapfu' style = 'cursor:pointer' onclick = 'window.open("https://logo.samandehi.ir/Verify.aspx?id=276805&p=uiwkjyoegvkamcsiobpddshw", "Popup","toolbar=no, scrollbars=no, location=no, statusbar=no, menubar=no, resizable=0, width=450, height=630, top=30")' alt = 'logo-samandehi' src = 'https://logo.samandehi.ir/logo.aspx?id=276805&p=odrfyndtwlbqaqgwlymaujyn' /> -->
         </div>
