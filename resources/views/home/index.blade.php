@@ -10,6 +10,55 @@
     targetDateSelector: '[data-name="dtp1-date"]',
     persianNumber: true,
   });
+
+//trigger numbers
+$(allInView);
+$(window).scroll(allInView);
+
+function isScrolledIntoView(elem) {
+  var docViewTop = $(window).scrollTop();
+  var docViewBottom = docViewTop + $(window).height();
+
+  var elemTop = $(elem).offset().top;
+  var elemBottom = elemTop + $(elem).height();
+
+  return elemBottom <= docViewBottom && elemTop >= docViewTop;
+}
+
+// Numbers Count Update -------------------------------------
+const items = [...document.querySelectorAll(".number")];
+
+const updateCount = (el) => {
+  const value = parseInt(el.dataset.value);
+  const increment = Math.ceil(value / 1000);
+  // const increment = 1;
+  let initialValue = 0;
+
+  const increaseCount = setInterval(() => {
+    initialValue += increment;
+
+    if (initialValue > value) {
+      el.textContent = `${value.toLocaleString("ar-EG")}+`;
+      clearInterval(increaseCount);
+      return;
+    }
+
+    el.textContent = `${initialValue.toLocaleString("ar-EG")}+`;
+  }, 1);
+  // console.log(increaseCount);
+};
+// Trigger Numbers Function -----------------------------------------------
+let once = true;
+function allInView() {
+  if (once) {
+    if (isScrolledIntoView($("#numbers"))) {
+      items.forEach((item) => {
+        updateCount(item);
+      });
+      once = false;
+    }
+  }
+}
 </script>
 
 @endsection
@@ -57,24 +106,6 @@
           <a class="secondary-btn" href="#">سفارش</a>
 
         </form>
-      </div>
-    </div>
-
-    <!-- Icons On Mobile Scroll --------------------------------->
-
-    <div class="container">
-      <div class="row">
-
-        <div class="service-icons-mobile d-sm-block d-md-none">
-          <ul>
-            <li> <a href="#"><i class="fas fa-video"></i> </a> </li>
-            <li> <a href="#"><i class="fas fa-camera"></i></a> </li>
-            <li> <a href="#"><i class="fas fa-laptop-code"></i> </a> </li>
-            <li> <a href="#"><i class="fas fa-palette"></i></a> </li>
-            <li> <a href="#"><i class="fas fa-microphone"></i></a> </li>
-          </ul>
-        </div>
-
       </div>
     </div>
 
@@ -166,16 +197,16 @@
         <div class="col-md-12">
           <div class="owl-carousel owl-theme .owl-dots .owl-dot text-center owl">
             @foreach ($logos as $logo)
-            
+
             <div class="carousel-banner"> <img src="{{asset(env('BANNER_IMAGE_UPLOAD_PATH').$logo->image)}}" alt="banner1"> </div>
 
             @endforeach
           </div>
         </div>
       </div>
-      
+
       <hr>
-      
+
       <div class="row mt-5">
         <div class="col-md-12">
           <div class="owl-carousel owl-theme .owl-dots .owl-dot text-center owl">

@@ -56,7 +56,7 @@
                 <div class="box d-flex row custom-boxshodow custom-border">
                     <div class="card col-12 col-md-6 my-4">
                         <div class="imgBx">
-                            <img src="https://app.kadro.co/uploads/admin_user/avatar/1/large_avatar_1.webp" alt="images">
+                            <img src="{{asset('logobanner.jpg')}}" alt="images">
                             <span
                                 class="d-flex  flex-column  justify-content-around  mb-2 custom-fontSize align-items-end  custom-height">
                                 <a href="" class="mx-2 h3"><i class="fab fa-instagram"></i></a>
@@ -77,7 +77,7 @@
                     {{-- ----------------------------------------------------------------------------- --}}
                     <div class="card col-12 col-md-6 my-4">
                         <div class="imgBx">
-                            <img src="https://app.kadro.co/uploads/admin_user/avatar/4/large_avatar_4.webp" alt="images">
+                            <img src="{{asset('logobanner.jpg')}}" alt="images">
                             <span
                                 class="d-flex  flex-column  justify-content-around  mb-2 custom-fontSize align-items-end  custom-height">
                                 <a href="" class="mx-2 h3"><i class="fab fa-instagram"></i></a>
@@ -98,7 +98,8 @@
                     {{-- ----------------------------------------------------------------------------- --}}
                     <div class="card col-12 col-md-6 my-4">
                         <div class="imgBx">
-                            <img src="https://app.kadro.co/uploads/admin_user/avatar/26/large_avatar_26.webp" alt="images">
+                            <img src="{{asset('logobanner.jpg')}}" alt="images">
+
                             <span
                                 class="d-flex  flex-column  justify-content-around  mb-2 custom-fontSize align-items-end  custom-height">
                                 <a href="" class="mx-2 h3"><i class="fab fa-instagram"></i></a>
@@ -119,7 +120,8 @@
                     {{-- ----------------------------------------------------------------------------- --}}
                     <div class="card col-12 col-md-6 my-4">
                         <div class="imgBx">
-                            <img src="https://app.kadro.co/uploads/admin_user/avatar/43/large_avatar_43.webp" alt="images">
+                            <img src="{{asset('logobanner.jpg')}}" alt="images">
+
                             <span
                                 class="d-flex  flex-column  justify-content-around  mb-2 custom-fontSize align-items-end  custom-height">
                                 <a href="" class="mx-2 h3"><i class="fab fa-instagram"></i></a>
@@ -140,7 +142,8 @@
                     {{-- ----------------------------------------------------------------------------- --}}
                     <div class="card col-12 col-md-6 my-4">
                         <div class="imgBx">
-                            <img src="https://app.kadro.co/uploads/admin_user/avatar/40/large_avatar_40.webp" alt="images">
+                            <img src="{{asset('logobanner.jpg')}}" alt="images">
+
                             <span
                                 class="d-flex  flex-column  justify-content-around  mb-2 custom-fontSize align-items-end  custom-height">
                                 <a href="" class="mx-2 h3"><i class="fab fa-instagram"></i></a>
@@ -161,7 +164,8 @@
                     {{-- ----------------------------------------------------------------------------- --}}
                     <div class="card col-12 col-md-6 my-4">
                         <div class="imgBx">
-                            <img src="https://app.kadro.co/uploads/admin_user/avatar/35/large_avatar_35.webp" alt="images">
+                            <img src="{{asset('logobanner.jpg')}}" alt="images">
+
                             <span
                                 class="d-flex  flex-column  justify-content-around  mb-2 custom-fontSize align-items-end  custom-height">
                                 <a href="" class="mx-2 h3"><i class="fab fa-instagram a"></i></a>
@@ -182,7 +186,8 @@
                     {{-- ----------------------------------------------------------------------------- --}}
                     <div class="card col-12 col-md-6 my-4">
                         <div class="imgBx">
-                            <img src="https://app.kadro.co/uploads/admin_user/avatar/57/large_avatar_57.webp" alt="images">
+                            <img src="{{asset('logobanner.jpg')}}" alt="images">
+
                             <span
                                 class="d-flex  flex-column  justify-content-around  mb-2 custom-fontSize align-items-end  custom-height">
                                 <a href="" class="mx-2 h3"><i class="fab fa-instagram"></i></a>
@@ -203,7 +208,8 @@
                     {{-- ----------------------------------------------------------------------------- --}}
                     <div class="card col-12 col-md-6 my-4">
                         <div class="imgBx">
-                            <img src="https://app.kadro.co/uploads/admin_user/avatar/1/large_avatar_1.webp" alt="images">
+                            <img src="{{asset('logobanner.jpg')}}" alt="images">
+
                             <span
                                 class="d-flex  flex-column  justify-content-around  mb-2 custom-fontSize align-items-end  custom-height">
                                 <a href="" class="mx-2 h3"><i class="fab fa-instagram"></i></a>
