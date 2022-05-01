@@ -2,12 +2,13 @@
 window.$ = window.jQuery = require('jquery');
 window.Popper = require('@popperjs/core');
 window.bootstrap = require('bootstrap');
+window.Shuffle = require('shufflejs').default;
 // require('persian-date');
 // require('persian-datepicker/dist/js/persian-datepicker');
 require('md.bootstrappersiandatetimepicker/dist/mds.bs.datetimepicker');
 require('./owl-carousel-min');
 require('./owl-custom-main');
-require('shufflejs/dist/shuffle.min.js');
+
 
 // Trigger Function On Scroll ----------------------------------------
 
@@ -228,7 +229,10 @@ class Demo {
     searchInput.addEventListener('keyup', this._handleSearchKeyup.bind(this));
   }
 
-  
+  /**
+   * Filter the shuffle instance by items with a title that matches the search input.
+   * @param {Event} evt Event object.
+   */
   _handleSearchKeyup(evt) {
     const searchText = evt.target.value.toLowerCase();
     this.shuffle.filter((element, shuffle) => {
