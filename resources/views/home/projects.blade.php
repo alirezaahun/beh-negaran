@@ -8,7 +8,7 @@
             <div class="projects-container mt-5">
                 <div class="projects-row project-page-title">
                     <div class="col-12@sm">
-                      <h3>نمونه کار های به نگاران</h3>
+                      <h3>نمونه کارهای به نگاران</h3>
                       <hr class="w-50">
                     </div>
                   </div>

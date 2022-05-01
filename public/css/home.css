@@ -1289,6 +1289,7 @@ footer p span {
 
 .project-page-title h3 {
   color: var(--clr-secondary);
+  font-size: 2rem;
 }
 
 .project-page-title hr {
