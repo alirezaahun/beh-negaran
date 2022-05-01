@@ -12,7 +12,43 @@
   });
 
 //trigger numbers
-  let once = true;
+$(allInView);
+$(window).scroll(allInView);
+
+function isScrolledIntoView(elem) {
+  var docViewTop = $(window).scrollTop();
+  var docViewBottom = docViewTop + $(window).height();
+
+  var elemTop = $(elem).offset().top;
+  var elemBottom = elemTop + $(elem).height();
+
+  return elemBottom <= docViewBottom && elemTop >= docViewTop;
+}
+
+// Numbers Count Update -------------------------------------
+const items = [...document.querySelectorAll(".number")];
+
+const updateCount = (el) => {
+  const value = parseInt(el.dataset.value);
+  const increment = Math.ceil(value / 1000);
+  // const increment = 1;
+  let initialValue = 0;
+
+  const increaseCount = setInterval(() => {
+    initialValue += increment;
+
+    if (initialValue > value) {
+      el.textContent = `${value.toLocaleString("ar-EG")}+`;
+      clearInterval(increaseCount);
+      return;
+    }
+
+    el.textContent = `${initialValue.toLocaleString("ar-EG")}+`;
+  }, 1);
+  // console.log(increaseCount);
+};
+// Trigger Numbers Function -----------------------------------------------
+let once = true;
 function allInView() {
   if (once) {
     if (isScrolledIntoView($("#numbers"))) {
@@ -70,24 +106,6 @@ function allInView() {
           <a class="secondary-btn" href="#">سفارش</a>
 
         </form>
-      </div>
-    </div>
-
-    <!-- Icons On Mobile Scroll --------------------------------->
-
-    <div class="container">
-      <div class="row">
-
-        <div class="service-icons-mobile d-sm-block d-md-none">
-          <ul>
-            <li> <a href="#"><i class="fas fa-video"></i> </a> </li>
-            <li> <a href="#"><i class="fas fa-camera"></i></a> </li>
-            <li> <a href="#"><i class="fas fa-laptop-code"></i> </a> </li>
-            <li> <a href="#"><i class="fas fa-palette"></i></a> </li>
-            <li> <a href="#"><i class="fas fa-microphone"></i></a> </li>
-          </ul>
-        </div>
-
       </div>
     </div>
 

@@ -2,51 +2,51 @@
 window.$ = window.jQuery = require('jquery');
 window.Popper = require('@popperjs/core');
 window.bootstrap = require('bootstrap');
+window.Shuffle = require('shufflejs').default;
 // require('persian-date');
 // require('persian-datepicker/dist/js/persian-datepicker');
 require('md.bootstrappersiandatetimepicker/dist/mds.bs.datetimepicker');
 require('./owl-carousel-min');
 require('./owl-custom-main');
-require('shufflejs/dist/shuffle.min.js')
 
 // Trigger Function On Scroll ----------------------------------------
 
-$(allInView);
-$(window).scroll(allInView);
+// $(allInView);
+// $(window).scroll(allInView);
 
-function isScrolledIntoView(elem) {
-  var docViewTop = $(window).scrollTop();
-  var docViewBottom = docViewTop + $(window).height();
+// function isScrolledIntoView(elem) {
+//   var docViewTop = $(window).scrollTop();
+//   var docViewBottom = docViewTop + $(window).height();
 
-  var elemTop = $(elem).offset().top;
-  var elemBottom = elemTop + $(elem).height();
+//   var elemTop = $(elem).offset().top;
+//   var elemBottom = elemTop + $(elem).height();
 
-  return elemBottom <= docViewBottom && elemTop >= docViewTop;
-}
+//   return elemBottom <= docViewBottom && elemTop >= docViewTop;
+// }
 
-// Numbers Count Update -------------------------------------
-const items = [...document.querySelectorAll(".number")];
+// // Numbers Count Update -------------------------------------
+// const items = [...document.querySelectorAll(".number")];
 
-const updateCount = (el) => {
-  const value = parseInt(el.dataset.value);
-  const increment = Math.ceil(value / 1000);
-  // const increment = 1;
-  let initialValue = 0;
+// const updateCount = (el) => {
+//   const value = parseInt(el.dataset.value);
+//   const increment = Math.ceil(value / 1000);
+//   // const increment = 1;
+//   let initialValue = 0;
 
-  const increaseCount = setInterval(() => {
-    initialValue += increment;
+//   const increaseCount = setInterval(() => {
+//     initialValue += increment;
 
-    if (initialValue > value) {
-      el.textContent = `${value.toLocaleString("ar-EG")}+`;
-      clearInterval(increaseCount);
-      return;
-    }
+//     if (initialValue > value) {
+//       el.textContent = `${value.toLocaleString("ar-EG")}+`;
+//       clearInterval(increaseCount);
+//       return;
+//     }
 
-    el.textContent = `${initialValue.toLocaleString("ar-EG")}+`;
-  }, 1);
-  // console.log(increaseCount);
-};
-// Trigger Numbers Function -----------------------------------------------
+//     el.textContent = `${initialValue.toLocaleString("ar-EG")}+`;
+//   }, 1);
+//   // console.log(increaseCount);
+// };
+// // Trigger Numbers Function -----------------------------------------------
 // let once = true;
 // function allInView() {
 //   if (once) {
@@ -103,4 +103,7 @@ $(document).ready(function () {
 
   console.log('hello alireza')
 });
+
+// Projects Grid (nemoone kar) ----------------------------------------------
+
 

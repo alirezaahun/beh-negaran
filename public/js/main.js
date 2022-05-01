@@ -3208,63 +3208,45 @@ function withinMaxClamp(min, value, max) {
   \***********************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
 window.$ = window.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 window.Popper = __webpack_require__(/*! @popperjs/core */ "./node_modules/@popperjs/core/lib/index.js");
-window.bootstrap = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js"); // require('persian-date');
+window.bootstrap = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js");
+window.Shuffle = (__webpack_require__(/*! shufflejs */ "./node_modules/shufflejs/dist/shuffle.esm.js")["default"]); // require('persian-date');
 // require('persian-datepicker/dist/js/persian-datepicker');
 
 __webpack_require__(/*! md.bootstrappersiandatetimepicker/dist/mds.bs.datetimepicker */ "./node_modules/md.bootstrappersiandatetimepicker/dist/mds.bs.datetimepicker.js");
 
 __webpack_require__(/*! ./owl-carousel-min */ "./resources/js/home/owl-carousel-min.js");
 
-__webpack_require__(/*! ./owl-custom-main */ "./resources/js/home/owl-custom-main.js");
-
-__webpack_require__(/*! shufflejs/dist/shuffle.min.js */ "./node_modules/shufflejs/dist/shuffle.min.js"); // Trigger Function On Scroll ----------------------------------------
-
-
-$(allInView);
-$(window).scroll(allInView);
-
-function isScrolledIntoView(elem) {
-  var docViewTop = $(window).scrollTop();
-  var docViewBottom = docViewTop + $(window).height();
-  var elemTop = $(elem).offset().top;
-  var elemBottom = elemTop + $(elem).height();
-  return elemBottom <= docViewBottom && elemTop >= docViewTop;
-} // Numbers Count Update -------------------------------------
-
-
-var items = _toConsumableArray(document.querySelectorAll(".number"));
-
-var updateCount = function updateCount(el) {
-  var value = parseInt(el.dataset.value);
-  var increment = Math.ceil(value / 1000); // const increment = 1;
-
-  var initialValue = 0;
-  var increaseCount = setInterval(function () {
-    initialValue += increment;
-
-    if (initialValue > value) {
-      el.textContent = "".concat(value.toLocaleString("ar-EG"), "+");
-      clearInterval(increaseCount);
-      return;
-    }
-
-    el.textContent = "".concat(initialValue.toLocaleString("ar-EG"), "+");
-  }, 1); // console.log(increaseCount);
-}; // Trigger Numbers Function -----------------------------------------------
+__webpack_require__(/*! ./owl-custom-main */ "./resources/js/home/owl-custom-main.js"); // Trigger Function On Scroll ----------------------------------------
+// $(allInView);
+// $(window).scroll(allInView);
+// function isScrolledIntoView(elem) {
+//   var docViewTop = $(window).scrollTop();
+//   var docViewBottom = docViewTop + $(window).height();
+//   var elemTop = $(elem).offset().top;
+//   var elemBottom = elemTop + $(elem).height();
+//   return elemBottom <= docViewBottom && elemTop >= docViewTop;
+// }
+// // Numbers Count Update -------------------------------------
+// const items = [...document.querySelectorAll(".number")];
+// const updateCount = (el) => {
+//   const value = parseInt(el.dataset.value);
+//   const increment = Math.ceil(value / 1000);
+//   // const increment = 1;
+//   let initialValue = 0;
+//   const increaseCount = setInterval(() => {
+//     initialValue += increment;
+//     if (initialValue > value) {
+//       el.textContent = `${value.toLocaleString("ar-EG")}+`;
+//       clearInterval(increaseCount);
+//       return;
+//     }
+//     el.textContent = `${initialValue.toLocaleString("ar-EG")}+`;
+//   }, 1);
+//   // console.log(increaseCount);
+// };
+// // Trigger Numbers Function -----------------------------------------------
 // let once = true;
 // function allInView() {
 //   if (once) {
@@ -3329,7 +3311,7 @@ $(document).ready(function () {
     }
   });
   console.log('hello alireza');
-});
+}); // Projects Grid (nemoone kar) ----------------------------------------------
 
 /***/ }),
 
@@ -20507,14 +20489,1957 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/shufflejs/dist/shuffle.min.js":
+/***/ "./node_modules/shufflejs/dist/shuffle.esm.js":
 /*!****************************************************!*\
-  !*** ./node_modules/shufflejs/dist/shuffle.min.js ***!
+  !*** ./node_modules/shufflejs/dist/shuffle.esm.js ***!
   \****************************************************/
-/***/ (function(module) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-!function(t,e){ true?module.exports=e():0}(this,(function(){"use strict";var t={exports:{}};function e(){}e.prototype={on:function(t,e,i){var s=this.e||(this.e={});return(s[t]||(s[t]=[])).push({fn:e,ctx:i}),this},once:function(t,e,i){var s=this;function n(){s.off(t,n),e.apply(i,arguments)}return n._=e,this.on(t,n,i)},emit:function(t){for(var e=[].slice.call(arguments,1),i=((this.e||(this.e={}))[t]||[]).slice(),s=0,n=i.length;s<n;s++)i[s].fn.apply(i[s].ctx,e);return this},off:function(t,e){var i=this.e||(this.e={}),s=i[t],n=[];if(s&&e)for(var o=0,r=s.length;o<r;o++)s[o].fn!==e&&s[o].fn._!==e&&n.push(s[o]);return n.length?i[t]=n:delete i[t],this}},t.exports=e,t.exports.TinyEmitter=e;var i=t.exports;function s(){}function n(t){return parseFloat(t)||0}class o{constructor(t,e){this.x=n(t),this.y=n(e)}static equals(t,e){return t.x===e.x&&t.y===e.y}}class r{constructor(t,e,i,s,n){this.id=n,this.left=t,this.top=e,this.width=i,this.height=s}static intersects(t,e){return t.left<e.left+e.width&&e.left<t.left+t.width&&t.top<e.top+e.height&&e.top<t.top+t.height}}var h={BASE:"shuffle",SHUFFLE_ITEM:"shuffle-item",VISIBLE:"shuffle-item--visible",HIDDEN:"shuffle-item--hidden"};let l=0;class a{constructor(t,e){l+=1,this.id=l,this.element=t,this.isRTL=e,this.isVisible=!0,this.isHidden=!1}show(){this.isVisible=!0,this.element.classList.remove(h.HIDDEN),this.element.classList.add(h.VISIBLE),this.element.removeAttribute("aria-hidden")}hide(){this.isVisible=!1,this.element.classList.remove(h.VISIBLE),this.element.classList.add(h.HIDDEN),this.element.setAttribute("aria-hidden",!0)}init(){this.addClasses([h.SHUFFLE_ITEM,h.VISIBLE]),this.applyCss(a.Css.INITIAL),this.applyCss(this.isRTL?a.Css.DIRECTION.rtl:a.Css.DIRECTION.ltr),this.scale=a.Scale.VISIBLE,this.point=new o}addClasses(t){t.forEach((t=>{this.element.classList.add(t)}))}removeClasses(t){t.forEach((t=>{this.element.classList.remove(t)}))}applyCss(t){Object.keys(t).forEach((e=>{this.element.style[e]=t[e]}))}dispose(){this.removeClasses([h.HIDDEN,h.VISIBLE,h.SHUFFLE_ITEM]),this.element.removeAttribute("style"),this.element=null}}a.Css={INITIAL:{position:"absolute",top:0,visibility:"visible",willChange:"transform"},DIRECTION:{ltr:{left:0},rtl:{right:0}},VISIBLE:{before:{opacity:1,visibility:"visible"},after:{transitionDelay:""}},HIDDEN:{before:{opacity:0},after:{visibility:"hidden",transitionDelay:""}}},a.Scale={VISIBLE:1,HIDDEN:.001};let d=null;var u=()=>{if(null!==d)return d;const t=document.body||document.documentElement,e=document.createElement("div");e.style.cssText="width:10px;padding:2px;box-sizing:border-box;",t.appendChild(e);const{width:i}=window.getComputedStyle(e,null);return d=10===Math.round(n(i)),t.removeChild(e),d};function m(t,e){let i=arguments.length>2&&void 0!==arguments[2]?arguments[2]:window.getComputedStyle(t,null),s=n(i[e]);return u()||"width"!==e?u()||"height"!==e||(s+=n(i.paddingTop)+n(i.paddingBottom)+n(i.borderTopWidth)+n(i.borderBottomWidth)):s+=n(i.paddingLeft)+n(i.paddingRight)+n(i.borderLeftWidth)+n(i.borderRightWidth),s}const c={reverse:!1,by:null,compare:null,randomize:!1,key:"element"};function p(t,e){const i={...c,...e},s=Array.from(t);let n=!1;return t.length?i.randomize?function(t){let e=t.length;for(;e;){e-=1;const i=Math.floor(Math.random()*(e+1)),s=t[i];t[i]=t[e],t[e]=s}return t}(t):("function"==typeof i.by?t.sort(((t,e)=>{if(n)return 0;const s=i.by(t[i.key]),o=i.by(e[i.key]);return void 0===s&&void 0===o?(n=!0,0):s<o||"sortFirst"===s||"sortLast"===o?-1:s>o||"sortLast"===s||"sortFirst"===o?1:0})):"function"==typeof i.compare&&t.sort(i.compare),n?s:(i.reverse&&t.reverse(),t)):[]}const f={},g="transitionend";let _=0;function y(t){return!!f[t]&&(f[t].element.removeEventListener(g,f[t].listener),f[t]=null,!0)}function I(t,e){const i=(_+=1,g+_),s=t=>{t.currentTarget===t.target&&(y(i),e(t))};return t.addEventListener(g,s),f[i]={element:t,listener:s},i}function E(t){return Math.max(...t)}function v(t,e,i,s){let n=t/e;return Math.abs(Math.round(n)-n)<s&&(n=Math.round(n)),Math.min(Math.ceil(n),i)}function b(t,e,i){if(1===e)return t;const s=[];for(let n=0;n<=i-e;n++)s.push(E(t.slice(n,n+e)));return s}function T(t,e){const i=(s=t,Math.min(...s));var s;for(let s=0,n=t.length;s<n;s++)if(t[s]>=i-e&&t[s]<=i+e)return s;return 0}function S(t,e){const i={};t.forEach((t=>{i[t.top]?i[t.top].push(t):i[t.top]=[t]}));let s=[];const n=[],h=[];return Object.keys(i).forEach((t=>{const o=i[t];n.push(o);const l=o[o.length-1],a=l.left+l.width,d=Math.round((e-a)/2);let u=o,m=!1;if(d>0){const t=[];m=o.every((e=>{const i=new r(e.left+d,e.top,e.width,e.height,e.id),n=!s.some((t=>r.intersects(i,t)));return t.push(i),n})),m&&(u=t)}if(!m){let t;if(o.some((e=>s.some((i=>{const s=r.intersects(e,i);return s&&(t=i),s}))))){const e=h.findIndex((e=>e.includes(t)));h.splice(e,1,n[e])}}s=s.concat(u),h.push(u)})),h.flat().sort(((t,e)=>t.id-e.id)).map((t=>new o(t.left,t.top)))}function C(t){return Array.from(new Set(t))}let L=0;class w extends i{constructor(t){let e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{};super(),this.options={...w.options,...e},this.lastSort={},this.group=w.ALL_ITEMS,this.lastFilter=w.ALL_ITEMS,this.isEnabled=!0,this.isDestroyed=!1,this.isInitialized=!1,this._transitions=[],this.isTransitioning=!1,this._queue=[];const i=this._getElementOption(t);if(!i)throw new TypeError("Shuffle needs to be initialized with an element.");this.element=i,this.id="shuffle_"+L,L+=1,this._init(),this.isInitialized=!0}_init(){if(this.items=this._getItems(),this.sortedItems=this.items,this.options.sizer=this._getElementOption(this.options.sizer),this.element.classList.add(w.Classes.BASE),this._initItems(this.items),"complete"!==document.readyState){const t=this.layout.bind(this);window.addEventListener("load",(function e(){window.removeEventListener("load",e),t()}))}const t=window.getComputedStyle(this.element,null),e=w.getSize(this.element).width;this._validateStyles(t),this._setColumns(e),this.filter(this.options.group,this.options.initialSort),this._rafId=null,"ResizeObserver"in window&&(this._resizeObserver=new ResizeObserver(this._handleResizeCallback.bind(this)),this._resizeObserver.observe(this.element)),this.element.offsetWidth,this.setItemTransitions(this.items),this.element.style.transition=`height ${this.options.speed}ms ${this.options.easing}`}_getElementOption(t){return"string"==typeof t?this.element.querySelector(t):t&&t.nodeType&&1===t.nodeType?t:t&&t.jquery?t[0]:null}_validateStyles(t){"static"===t.position&&(this.element.style.position="relative"),"hidden"!==t.overflow&&(this.element.style.overflow="hidden")}_filter(){let t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:this.lastFilter,e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:this.items;const i=this._getFilteredSets(t,e);return this._toggleFilterClasses(i),this.lastFilter=t,"string"==typeof t&&(this.group=t),i}_getFilteredSets(t,e){let i=[];const s=[];return t===w.ALL_ITEMS?i=e:e.forEach((e=>{this._doesPassFilter(t,e.element)?i.push(e):s.push(e)})),{visible:i,hidden:s}}_doesPassFilter(t,e){if("function"==typeof t)return t.call(e,e,this);const i=e.dataset[w.FILTER_ATTRIBUTE_KEY],s=this.options.delimiter?i.split(this.options.delimiter):JSON.parse(i);function n(t){return s.includes(t)}return Array.isArray(t)?this.options.filterMode===w.FilterMode.ANY?t.some(n):t.every(n):s.includes(t)}_toggleFilterClasses(t){let{visible:e,hidden:i}=t;e.forEach((t=>{t.show()})),i.forEach((t=>{t.hide()}))}_initItems(t){t.forEach((t=>{t.init()}))}_disposeItems(t){t.forEach((t=>{t.dispose()}))}_updateItemCount(){this.visibleItems=this._getFilteredItems().length}setItemTransitions(t){const{speed:e,easing:i}=this.options,s=this.options.useTransforms?["transform"]:["top","left"],n=Object.keys(a.Css.HIDDEN.before).map((t=>t.replace(/([A-Z])/g,((t,e)=>`-${e.toLowerCase()}`)))),o=s.concat(n).join();t.forEach((t=>{t.element.style.transitionDuration=e+"ms",t.element.style.transitionTimingFunction=i,t.element.style.transitionProperty=o}))}_getItems(){return Array.from(this.element.children).filter((t=>t.matches(this.options.itemSelector))).map((t=>new a(t,this.options.isRTL)))}_mergeNewItems(t){const e=Array.from(this.element.children);return p(this.items.concat(t),{by:t=>e.indexOf(t)})}_getFilteredItems(){return this.items.filter((t=>t.isVisible))}_getConcealedItems(){return this.items.filter((t=>!t.isVisible))}_getColumnSize(t,e){let i;return i="function"==typeof this.options.columnWidth?this.options.columnWidth(t):this.options.sizer?w.getSize(this.options.sizer).width:this.options.columnWidth?this.options.columnWidth:this.items.length>0?w.getSize(this.items[0].element,!0).width:t,0===i&&(i=t),i+e}_getGutterSize(t){let e;return e="function"==typeof this.options.gutterWidth?this.options.gutterWidth(t):this.options.sizer?m(this.options.sizer,"marginLeft"):this.options.gutterWidth,e}_setColumns(){let t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:w.getSize(this.element).width;const e=this._getGutterSize(t),i=this._getColumnSize(t,e);let s=(t+e)/i;Math.abs(Math.round(s)-s)<this.options.columnThreshold&&(s=Math.round(s)),this.cols=Math.max(Math.floor(s||0),1),this.containerWidth=t,this.colWidth=i}_setContainerSize(){this.element.style.height=this._getContainerSize()+"px"}_getContainerSize(){return E(this.positions)}_getStaggerAmount(t){return Math.min(t*this.options.staggerAmount,this.options.staggerAmountMax)}_dispatch(t){let e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{};this.isDestroyed||(e.shuffle=this,this.emit(t,e))}_resetCols(){let t=this.cols;for(this.positions=[];t;)t-=1,this.positions.push(0)}_layout(t){const e=this._getNextPositions(t);let i=0;t.forEach(((t,s)=>{function n(){t.applyCss(a.Css.VISIBLE.after)}if(o.equals(t.point,e[s])&&!t.isHidden)return t.applyCss(a.Css.VISIBLE.before),void n();t.point=e[s],t.scale=a.Scale.VISIBLE,t.isHidden=!1;const r=this.getStylesForTransition(t,a.Css.VISIBLE.before);r.transitionDelay=this._getStaggerAmount(i)+"ms",this._queue.push({item:t,styles:r,callback:n}),i+=1}))}_getNextPositions(t){if(this.options.isCentered){const e=t.map(((t,e)=>{const i=w.getSize(t.element,!0),s=this._getItemPosition(i);return new r(s.x,s.y,i.width,i.height,e)}));return this.getTransformedPositions(e,this.containerWidth)}return t.map((t=>this._getItemPosition(w.getSize(t.element,!0))))}_getItemPosition(t){return function(t){let{itemSize:e,positions:i,gridSize:s,total:n,threshold:r,buffer:h}=t;const l=v(e.width,s,n,r),a=b(i,l,n),d=T(a,h),u=new o(s*d,a[d]),m=a[d]+e.height;for(let t=0;t<l;t++)i[d+t]=m;return u}({itemSize:t,positions:this.positions,gridSize:this.colWidth,total:this.cols,threshold:this.options.columnThreshold,buffer:this.options.buffer})}getTransformedPositions(t,e){return S(t,e)}_shrink(){let t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:this._getConcealedItems(),e=0;t.forEach((t=>{function i(){t.applyCss(a.Css.HIDDEN.after)}if(t.isHidden)return t.applyCss(a.Css.HIDDEN.before),void i();t.scale=a.Scale.HIDDEN,t.isHidden=!0;const s=this.getStylesForTransition(t,a.Css.HIDDEN.before);s.transitionDelay=this._getStaggerAmount(e)+"ms",this._queue.push({item:t,styles:s,callback:i}),e+=1}))}_handleResizeCallback(t){if(this.isEnabled&&!this.isDestroyed)for(const e of t)Math.round(e.contentRect.width)!==Math.round(this.containerWidth)&&(cancelAnimationFrame(this._rafId),this._rafId=requestAnimationFrame(this.update.bind(this)))}getStylesForTransition(t,e){const i={...e};if(this.options.useTransforms){const e=this.options.isRTL?"-":"",s=this.options.roundTransforms?Math.round(t.point.x):t.point.x,n=this.options.roundTransforms?Math.round(t.point.y):t.point.y;i.transform=`translate(${e}${s}px, ${n}px) scale(${t.scale})`}else this.options.isRTL?i.right=t.point.x+"px":i.left=t.point.x+"px",i.top=t.point.y+"px";return i}_whenTransitionDone(t,e,i){const s=I(t,(t=>{e(),i(null,t)}));this._transitions.push(s)}_getTransitionFunction(t){return e=>{t.item.applyCss(t.styles),this._whenTransitionDone(t.item.element,t.callback,e)}}_processQueue(){this.isTransitioning&&this._cancelMovement();const t=this.options.speed>0,e=this._queue.length>0;e&&t&&this.isInitialized?this._startTransitions(this._queue):e?(this._styleImmediately(this._queue),this._dispatch(w.EventType.LAYOUT)):this._dispatch(w.EventType.LAYOUT),this._queue.length=0}_startTransitions(t){this.isTransitioning=!0;!function(t,e,i){i||("function"==typeof e?(i=e,e=null):i=s);var n=t&&t.length;if(!n)return i(null,[]);var o=!1,r=new Array(n);function h(t){return function(e,s){if(!o){if(e)return i(e,r),void(o=!0);r[t]=s,--n||i(null,r)}}}t.forEach(e?function(t,i){t.call(e,h(i))}:function(t,e){t(h(e))})}(t.map((t=>this._getTransitionFunction(t))),this._movementFinished.bind(this))}_cancelMovement(){this._transitions.forEach(y),this._transitions.length=0,this.isTransitioning=!1}_styleImmediately(t){if(t.length){const e=t.map((t=>t.item.element));w._skipTransitions(e,(()=>{t.forEach((t=>{t.item.applyCss(t.styles),t.callback()}))}))}}_movementFinished(){this._transitions.length=0,this.isTransitioning=!1,this._dispatch(w.EventType.LAYOUT)}filter(t,e){this.isEnabled&&((!t||t&&0===t.length)&&(t=w.ALL_ITEMS),this._filter(t),this._shrink(),this._updateItemCount(),this.sort(e))}sort(){let t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:this.lastSort;if(!this.isEnabled)return;this._resetCols();const e=p(this._getFilteredItems(),t);this.sortedItems=e,this._layout(e),this._processQueue(),this._setContainerSize(),this.lastSort=t}update(){let{recalculateSizes:t=!0,force:e=!1}=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};(this.isEnabled||e)&&(t&&this._setColumns(),this.sort())}layout(){this.update({recalculateSizes:!0})}add(t){const e=C(t).map((t=>new a(t,this.options.isRTL)));this._initItems(e),this._resetCols();const i=p(this._mergeNewItems(e),this.lastSort),s=this._filter(this.lastFilter,i),n=t=>e.includes(t),o=t=>{t.scale=a.Scale.HIDDEN,t.isHidden=!0,t.applyCss(a.Css.HIDDEN.before),t.applyCss(a.Css.HIDDEN.after)},r=this._getNextPositions(s.visible);s.visible.forEach(((t,e)=>{n(t)&&(t.point=r[e],o(t),t.applyCss(this.getStylesForTransition(t,{})))})),s.hidden.forEach((t=>{n(t)&&o(t)})),this.element.offsetWidth,this.setItemTransitions(e),this.items=this._mergeNewItems(e),this.filter(this.lastFilter)}disable(){this.isEnabled=!1}enable(){let t=!(arguments.length>0&&void 0!==arguments[0])||arguments[0];this.isEnabled=!0,t&&this.update()}remove(t){if(!t.length)return;const e=C(t),i=e.map((t=>this.getItemByElement(t))).filter((t=>!!t));this._toggleFilterClasses({visible:[],hidden:i}),this._shrink(i),this.sort(),this.items=this.items.filter((t=>!i.includes(t))),this._updateItemCount(),this.once(w.EventType.LAYOUT,(()=>{this._disposeItems(i),e.forEach((t=>{t.parentNode.removeChild(t)})),this._dispatch(w.EventType.REMOVED,{collection:e})}))}getItemByElement(t){return this.items.find((e=>e.element===t))}resetItems(){this._disposeItems(this.items),this.isInitialized=!1,this.items=this._getItems(),this._initItems(this.items),this.once(w.EventType.LAYOUT,(()=>{this.setItemTransitions(this.items),this.isInitialized=!0})),this.filter(this.lastFilter)}destroy(){this._cancelMovement(),this._resizeObserver&&(this._resizeObserver.unobserve(this.element),this._resizeObserver=null),this.element.classList.remove("shuffle"),this.element.removeAttribute("style"),this._disposeItems(this.items),this.items.length=0,this.sortedItems.length=0,this._transitions.length=0,this.options.sizer=null,this.element=null,this.isDestroyed=!0,this.isEnabled=!1}static getSize(t){let e=arguments.length>1&&void 0!==arguments[1]&&arguments[1];const i=window.getComputedStyle(t,null);let s=m(t,"width",i),n=m(t,"height",i);if(e){s+=m(t,"marginLeft",i)+m(t,"marginRight",i),n+=m(t,"marginTop",i)+m(t,"marginBottom",i)}return{width:s,height:n}}static _skipTransitions(t,e){const i=t.map((t=>{const{style:e}=t,i=e.transitionDuration,s=e.transitionDelay;return e.transitionDuration="0ms",e.transitionDelay="0ms",{duration:i,delay:s}}));e(),t[0].offsetWidth,t.forEach(((t,e)=>{t.style.transitionDuration=i[e].duration,t.style.transitionDelay=i[e].delay}))}}return w.ShuffleItem=a,w.ALL_ITEMS="all",w.FILTER_ATTRIBUTE_KEY="groups",w.EventType={LAYOUT:"shuffle:layout",REMOVED:"shuffle:removed"},w.Classes=h,w.FilterMode={ANY:"any",ALL:"all"},w.options={group:w.ALL_ITEMS,speed:250,easing:"cubic-bezier(0.4, 0.0, 0.2, 1)",itemSelector:"*",sizer:null,gutterWidth:0,columnWidth:0,delimiter:null,buffer:0,columnThreshold:.01,initialSort:null,staggerAmount:15,staggerAmountMax:150,useTransforms:!0,filterMode:w.FilterMode.ANY,isCentered:!1,isRTL:!1,roundTransforms:!0},w.Point=o,w.Rect=r,w.__sorter=p,w.__getColumnSpan=v,w.__getAvailablePositions=b,w.__getShortColumn=T,w.__getCenteredPositions=S,w}));
-//# sourceMappingURL=shuffle.min.js.map
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Shuffle)
+/* harmony export */ });
+var tinyEmitter = {exports: {}};
+
+function E () {
+  // Keep this empty so it's easier to inherit from
+  // (via https://github.com/lipsmack from https://github.com/scottcorgan/tiny-emitter/issues/3)
+}
+
+E.prototype = {
+  on: function (name, callback, ctx) {
+    var e = this.e || (this.e = {});
+
+    (e[name] || (e[name] = [])).push({
+      fn: callback,
+      ctx: ctx
+    });
+
+    return this;
+  },
+
+  once: function (name, callback, ctx) {
+    var self = this;
+    function listener () {
+      self.off(name, listener);
+      callback.apply(ctx, arguments);
+    }
+    listener._ = callback;
+    return this.on(name, listener, ctx);
+  },
+
+  emit: function (name) {
+    var data = [].slice.call(arguments, 1);
+    var evtArr = ((this.e || (this.e = {}))[name] || []).slice();
+    var i = 0;
+    var len = evtArr.length;
+
+    for (i; i < len; i++) {
+      evtArr[i].fn.apply(evtArr[i].ctx, data);
+    }
+
+    return this;
+  },
+
+  off: function (name, callback) {
+    var e = this.e || (this.e = {});
+    var evts = e[name];
+    var liveEvents = [];
+
+    if (evts && callback) {
+      for (var i = 0, len = evts.length; i < len; i++) {
+        if (evts[i].fn !== callback && evts[i].fn._ !== callback)
+          liveEvents.push(evts[i]);
+      }
+    }
+
+    // Remove event from queue to prevent memory leak
+    // Suggested by https://github.com/lazd
+    // Ref: https://github.com/scottcorgan/tiny-emitter/commit/c6ebfaa9bc973b33d110a84a307742b7cf94c953#commitcomment-5024910
+
+    (liveEvents.length)
+      ? e[name] = liveEvents
+      : delete e[name];
+
+    return this;
+  }
+};
+
+tinyEmitter.exports = E;
+tinyEmitter.exports.TinyEmitter = E;
+
+var TinyEmitter = tinyEmitter.exports;
+
+var arrayParallel = function parallel(fns, context, callback) {
+  if (!callback) {
+    if (typeof context === 'function') {
+      callback = context;
+      context = null;
+    } else {
+      callback = noop;
+    }
+  }
+
+  var pending = fns && fns.length;
+  if (!pending) return callback(null, []);
+
+  var finished = false;
+  var results = new Array(pending);
+
+  fns.forEach(context ? function (fn, i) {
+    fn.call(context, maybeDone(i));
+  } : function (fn, i) {
+    fn(maybeDone(i));
+  });
+
+  function maybeDone(i) {
+    return function (err, result) {
+      if (finished) return;
+
+      if (err) {
+        callback(err, results);
+        finished = true;
+        return
+      }
+
+      results[i] = result;
+
+      if (!--pending) callback(null, results);
+    }
+  }
+};
+
+function noop() {}
+
+/**
+ * Always returns a numeric value, given a value. Logic from jQuery's `isNumeric`.
+ * @param {*} value Possibly numeric value.
+ * @return {number} `value` or zero if `value` isn't numeric.
+ */
+function getNumber(value) {
+  return parseFloat(value) || 0;
+}
+
+class Point {
+  /**
+   * Represents a coordinate pair.
+   * @param {number} [x=0] X.
+   * @param {number} [y=0] Y.
+   */
+  constructor(x, y) {
+    this.x = getNumber(x);
+    this.y = getNumber(y);
+  }
+  /**
+   * Whether two points are equal.
+   * @param {Point} a Point A.
+   * @param {Point} b Point B.
+   * @return {boolean}
+   */
+
+
+  static equals(a, b) {
+    return a.x === b.x && a.y === b.y;
+  }
+
+}
+
+class Rect {
+  /**
+   * Class for representing rectangular regions.
+   * https://github.com/google/closure-library/blob/master/closure/goog/math/rect.js
+   * @param {number} x Left.
+   * @param {number} y Top.
+   * @param {number} w Width.
+   * @param {number} h Height.
+   * @param {number} id Identifier
+   * @constructor
+   */
+  constructor(x, y, w, h, id) {
+    this.id = id;
+    /** @type {number} */
+
+    this.left = x;
+    /** @type {number} */
+
+    this.top = y;
+    /** @type {number} */
+
+    this.width = w;
+    /** @type {number} */
+
+    this.height = h;
+  }
+  /**
+   * Returns whether two rectangles intersect.
+   * @param {Rect} a A Rectangle.
+   * @param {Rect} b A Rectangle.
+   * @return {boolean} Whether a and b intersect.
+   */
+
+
+  static intersects(a, b) {
+    return a.left < b.left + b.width && b.left < a.left + a.width && a.top < b.top + b.height && b.top < a.top + a.height;
+  }
+
+}
+
+var Classes = {
+  BASE: 'shuffle',
+  SHUFFLE_ITEM: 'shuffle-item',
+  VISIBLE: 'shuffle-item--visible',
+  HIDDEN: 'shuffle-item--hidden'
+};
+
+let id$1 = 0;
+
+class ShuffleItem {
+  constructor(element, isRTL) {
+    id$1 += 1;
+    this.id = id$1;
+    this.element = element;
+    /**
+     * Set correct direction of item
+     */
+
+    this.isRTL = isRTL;
+    /**
+     * Used to separate items for layout and shrink.
+     */
+
+    this.isVisible = true;
+    /**
+     * Used to determine if a transition will happen. By the time the _layout
+     * and _shrink methods get the ShuffleItem instances, the `isVisible` value
+     * has already been changed by the separation methods, so this property is
+     * needed to know if the item was visible/hidden before the shrink/layout.
+     */
+
+    this.isHidden = false;
+  }
+
+  show() {
+    this.isVisible = true;
+    this.element.classList.remove(Classes.HIDDEN);
+    this.element.classList.add(Classes.VISIBLE);
+    this.element.removeAttribute('aria-hidden');
+  }
+
+  hide() {
+    this.isVisible = false;
+    this.element.classList.remove(Classes.VISIBLE);
+    this.element.classList.add(Classes.HIDDEN);
+    this.element.setAttribute('aria-hidden', true);
+  }
+
+  init() {
+    this.addClasses([Classes.SHUFFLE_ITEM, Classes.VISIBLE]);
+    this.applyCss(ShuffleItem.Css.INITIAL);
+    this.applyCss(this.isRTL ? ShuffleItem.Css.DIRECTION.rtl : ShuffleItem.Css.DIRECTION.ltr);
+    this.scale = ShuffleItem.Scale.VISIBLE;
+    this.point = new Point();
+  }
+
+  addClasses(classes) {
+    classes.forEach(className => {
+      this.element.classList.add(className);
+    });
+  }
+
+  removeClasses(classes) {
+    classes.forEach(className => {
+      this.element.classList.remove(className);
+    });
+  }
+
+  applyCss(obj) {
+    Object.keys(obj).forEach(key => {
+      this.element.style[key] = obj[key];
+    });
+  }
+
+  dispose() {
+    this.removeClasses([Classes.HIDDEN, Classes.VISIBLE, Classes.SHUFFLE_ITEM]);
+    this.element.removeAttribute('style');
+    this.element = null;
+  }
+
+}
+
+ShuffleItem.Css = {
+  INITIAL: {
+    position: 'absolute',
+    top: 0,
+    visibility: 'visible',
+    willChange: 'transform'
+  },
+  DIRECTION: {
+    ltr: {
+      left: 0
+    },
+    rtl: {
+      right: 0
+    }
+  },
+  VISIBLE: {
+    before: {
+      opacity: 1,
+      visibility: 'visible'
+    },
+    after: {
+      transitionDelay: ''
+    }
+  },
+  HIDDEN: {
+    before: {
+      opacity: 0
+    },
+    after: {
+      visibility: 'hidden',
+      transitionDelay: ''
+    }
+  }
+};
+ShuffleItem.Scale = {
+  VISIBLE: 1,
+  HIDDEN: 0.001
+};
+
+let value = null;
+var testComputedSize = (() => {
+  if (value !== null) {
+    return value;
+  }
+
+  const element = document.body || document.documentElement;
+  const e = document.createElement('div');
+  e.style.cssText = 'width:10px;padding:2px;box-sizing:border-box;';
+  element.appendChild(e);
+  const {
+    width
+  } = window.getComputedStyle(e, null); // Fix for issue #314
+
+  value = Math.round(getNumber(width)) === 10;
+  element.removeChild(e);
+  return value;
+});
+
+/**
+ * Retrieve the computed style for an element, parsed as a float.
+ * @param {Element} element Element to get style for.
+ * @param {string} style Style property.
+ * @param {CSSStyleDeclaration} [styles] Optionally include clean styles to
+ *     use instead of asking for them again.
+ * @return {number} The parsed computed value or zero if that fails because IE
+ *     will return 'auto' when the element doesn't have margins instead of
+ *     the computed style.
+ */
+
+function getNumberStyle(element, style) {
+  let styles = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : window.getComputedStyle(element, null);
+  let value = getNumber(styles[style]); // Support IE<=11 and W3C spec.
+
+  if (!testComputedSize() && style === 'width') {
+    value += getNumber(styles.paddingLeft) + getNumber(styles.paddingRight) + getNumber(styles.borderLeftWidth) + getNumber(styles.borderRightWidth);
+  } else if (!testComputedSize() && style === 'height') {
+    value += getNumber(styles.paddingTop) + getNumber(styles.paddingBottom) + getNumber(styles.borderTopWidth) + getNumber(styles.borderBottomWidth);
+  }
+
+  return value;
+}
+
+/**
+ * Fisher-Yates shuffle.
+ * http://stackoverflow.com/a/962890/373422
+ * https://bost.ocks.org/mike/shuffle/
+ * @param {Array} array Array to shuffle.
+ * @return {Array} Randomly sorted array.
+ */
+function randomize(array) {
+  let n = array.length;
+
+  while (n) {
+    n -= 1;
+    const i = Math.floor(Math.random() * (n + 1));
+    const temp = array[i];
+    array[i] = array[n];
+    array[n] = temp;
+  }
+
+  return array;
+}
+
+const defaults = {
+  // Use array.reverse() to reverse the results
+  reverse: false,
+  // Sorting function
+  by: null,
+  // Custom sort function
+  compare: null,
+  // If true, this will skip the sorting and return a randomized order in the array
+  randomize: false,
+  // Determines which property of each item in the array is passed to the
+  // sorting method.
+  key: 'element'
+};
+/**
+ * You can return `undefined` from the `by` function to revert to DOM order.
+ * @param {Array<T>} arr Array to sort.
+ * @param {SortOptions} options Sorting options.
+ * @return {Array<T>}
+ */
+
+function sorter(arr, options) {
+  const opts = { ...defaults,
+    ...options
+  };
+  const original = Array.from(arr);
+  let revert = false;
+
+  if (!arr.length) {
+    return [];
+  }
+
+  if (opts.randomize) {
+    return randomize(arr);
+  } // Sort the elements by the opts.by function.
+  // If we don't have opts.by, default to DOM order
+
+
+  if (typeof opts.by === 'function') {
+    arr.sort((a, b) => {
+      // Exit early if we already know we want to revert
+      if (revert) {
+        return 0;
+      }
+
+      const valA = opts.by(a[opts.key]);
+      const valB = opts.by(b[opts.key]); // If both values are undefined, use the DOM order
+
+      if (valA === undefined && valB === undefined) {
+        revert = true;
+        return 0;
+      }
+
+      if (valA < valB || valA === 'sortFirst' || valB === 'sortLast') {
+        return -1;
+      }
+
+      if (valA > valB || valA === 'sortLast' || valB === 'sortFirst') {
+        return 1;
+      }
+
+      return 0;
+    });
+  } else if (typeof opts.compare === 'function') {
+    arr.sort(opts.compare);
+  } // Revert to the original array if necessary
+
+
+  if (revert) {
+    return original;
+  }
+
+  if (opts.reverse) {
+    arr.reverse();
+  }
+
+  return arr;
+}
+
+const transitions = {};
+const eventName = 'transitionend';
+let count = 0;
+
+function uniqueId() {
+  count += 1;
+  return eventName + count;
+}
+
+function cancelTransitionEnd(id) {
+  if (transitions[id]) {
+    transitions[id].element.removeEventListener(eventName, transitions[id].listener);
+    transitions[id] = null;
+    return true;
+  }
+
+  return false;
+}
+function onTransitionEnd(element, callback) {
+  const id = uniqueId();
+
+  const listener = evt => {
+    if (evt.currentTarget === evt.target) {
+      cancelTransitionEnd(id);
+      callback(evt);
+    }
+  };
+
+  element.addEventListener(eventName, listener);
+  transitions[id] = {
+    element,
+    listener
+  };
+  return id;
+}
+
+function arrayMax(array) {
+  return Math.max(...array);
+}
+
+function arrayMin(array) {
+  return Math.min(...array);
+}
+
+/**
+ * Determine the number of columns an items spans.
+ * @param {number} itemWidth Width of the item.
+ * @param {number} columnWidth Width of the column (includes gutter).
+ * @param {number} columns Total number of columns
+ * @param {number} threshold A buffer value for the size of the column to fit.
+ * @return {number}
+ */
+
+function getColumnSpan(itemWidth, columnWidth, columns, threshold) {
+  let columnSpan = itemWidth / columnWidth; // If the difference between the rounded column span number and the
+  // calculated column span number is really small, round the number to
+  // make it fit.
+
+  if (Math.abs(Math.round(columnSpan) - columnSpan) < threshold) {
+    // e.g. columnSpan = 4.0089945390298745
+    columnSpan = Math.round(columnSpan);
+  } // Ensure the column span is not more than the amount of columns in the whole layout.
+
+
+  return Math.min(Math.ceil(columnSpan), columns);
+}
+/**
+ * Retrieves the column set to use for placement.
+ * @param {number} columnSpan The number of columns this current item spans.
+ * @param {number} columns The total columns in the grid.
+ * @return {Array.<number>} An array of numbers represeting the column set.
+ */
+
+function getAvailablePositions(positions, columnSpan, columns) {
+  // The item spans only one column.
+  if (columnSpan === 1) {
+    return positions;
+  } // The item spans more than one column, figure out how many different
+  // places it could fit horizontally.
+  // The group count is the number of places within the positions this block
+  // could fit, ignoring the current positions of items.
+  // Imagine a 2 column brick as the second item in a 4 column grid with
+  // 10px height each. Find the places it would fit:
+  // [20, 10, 10, 0]
+  //  |   |   |
+  //  *   *   *
+  //
+  // Then take the places which fit and get the bigger of the two:
+  // max([20, 10]), max([10, 10]), max([10, 0]) = [20, 10, 10]
+  //
+  // Next, find the first smallest number (the short column).
+  // [20, 10, 10]
+  //      |
+  //      *
+  //
+  // And that's where it should be placed!
+  //
+  // Another example where the second column's item extends past the first:
+  // [10, 20, 10, 0] => [20, 20, 10] => 10
+
+
+  const available = []; // For how many possible positions for this item there are.
+
+  for (let i = 0; i <= columns - columnSpan; i++) {
+    // Find the bigger value for each place it could fit.
+    available.push(arrayMax(positions.slice(i, i + columnSpan)));
+  }
+
+  return available;
+}
+/**
+ * Find index of short column, the first from the left where this item will go.
+ *
+ * @param {Array.<number>} positions The array to search for the smallest number.
+ * @param {number} buffer Optional buffer which is very useful when the height
+ *     is a percentage of the width.
+ * @return {number} Index of the short column.
+ */
+
+function getShortColumn(positions, buffer) {
+  const minPosition = arrayMin(positions);
+
+  for (let i = 0, len = positions.length; i < len; i++) {
+    if (positions[i] >= minPosition - buffer && positions[i] <= minPosition + buffer) {
+      return i;
+    }
+  }
+
+  return 0;
+}
+/**
+ * Determine the location of the next item, based on its size.
+ * @param {Object} itemSize Object with width and height.
+ * @param {Array.<number>} positions Positions of the other current items.
+ * @param {number} gridSize The column width or row height.
+ * @param {number} total The total number of columns or rows.
+ * @param {number} threshold Buffer value for the column to fit.
+ * @param {number} buffer Vertical buffer for the height of items.
+ * @return {Point}
+ */
+
+function getItemPosition(_ref) {
+  let {
+    itemSize,
+    positions,
+    gridSize,
+    total,
+    threshold,
+    buffer
+  } = _ref;
+  const span = getColumnSpan(itemSize.width, gridSize, total, threshold);
+  const setY = getAvailablePositions(positions, span, total);
+  const shortColumnIndex = getShortColumn(setY, buffer); // Position the item
+
+  const point = new Point(gridSize * shortColumnIndex, setY[shortColumnIndex]); // Update the columns array with the new values for each column.
+  // e.g. before the update the columns could be [250, 0, 0, 0] for an item
+  // which spans 2 columns. After it would be [250, itemHeight, itemHeight, 0].
+
+  const setHeight = setY[shortColumnIndex] + itemSize.height;
+
+  for (let i = 0; i < span; i++) {
+    positions[shortColumnIndex + i] = setHeight;
+  }
+
+  return point;
+}
+/**
+ * This method attempts to center items. This method could potentially be slow
+ * with a large number of items because it must place items, then check every
+ * previous item to ensure there is no overlap.
+ * @param {Array.<Rect>} itemRects Item data objects.
+ * @param {number} containerWidth Width of the containing element.
+ * @return {Array.<Point>}
+ */
+
+function getCenteredPositions(itemRects, containerWidth) {
+  const rowMap = {}; // Populate rows by their offset because items could jump between rows like:
+  // a   c
+  //  bbb
+
+  itemRects.forEach(itemRect => {
+    if (rowMap[itemRect.top]) {
+      // Push the point to the last row array.
+      rowMap[itemRect.top].push(itemRect);
+    } else {
+      // Start of a new row.
+      rowMap[itemRect.top] = [itemRect];
+    }
+  }); // For each row, find the end of the last item, then calculate
+  // the remaining space by dividing it by 2. Then add that
+  // offset to the x position of each point.
+
+  let rects = [];
+  const rows = [];
+  const centeredRows = [];
+  Object.keys(rowMap).forEach(key => {
+    const itemRects = rowMap[key];
+    rows.push(itemRects);
+    const lastItem = itemRects[itemRects.length - 1];
+    const end = lastItem.left + lastItem.width;
+    const offset = Math.round((containerWidth - end) / 2);
+    let finalRects = itemRects;
+    let canMove = false;
+
+    if (offset > 0) {
+      const newRects = [];
+      canMove = itemRects.every(r => {
+        const newRect = new Rect(r.left + offset, r.top, r.width, r.height, r.id); // Check all current rects to make sure none overlap.
+
+        const noOverlap = !rects.some(r => Rect.intersects(newRect, r));
+        newRects.push(newRect);
+        return noOverlap;
+      }); // If none of the rectangles overlapped, the whole group can be centered.
+
+      if (canMove) {
+        finalRects = newRects;
+      }
+    } // If the items are not going to be offset, ensure that the original
+    // placement for this row will not overlap previous rows (row-spanning
+    // elements could be in the way).
+
+
+    if (!canMove) {
+      let intersectingRect;
+      const hasOverlap = itemRects.some(itemRect => rects.some(r => {
+        const intersects = Rect.intersects(itemRect, r);
+
+        if (intersects) {
+          intersectingRect = r;
+        }
+
+        return intersects;
+      })); // If there is any overlap, replace the overlapping row with the original.
+
+      if (hasOverlap) {
+        const rowIndex = centeredRows.findIndex(items => items.includes(intersectingRect));
+        centeredRows.splice(rowIndex, 1, rows[rowIndex]);
+      }
+    }
+
+    rects = rects.concat(finalRects);
+    centeredRows.push(finalRects);
+  }); // Reduce array of arrays to a single array of points.
+  // https://stackoverflow.com/a/10865042/373422
+  // Then reset sort back to how the items were passed to this method.
+  // Remove the wrapper object with index, map to a Point.
+
+  return centeredRows.flat().sort((a, b) => a.id - b.id).map(itemRect => new Point(itemRect.left, itemRect.top));
+}
+
+/**
+ * Hyphenates a javascript style string to a css one. For example:
+ * MozBoxSizing -> -moz-box-sizing.
+ * @param {string} str The string to hyphenate.
+ * @return {string} The hyphenated string.
+ */
+function hyphenate(str) {
+  return str.replace(/([A-Z])/g, (str, m1) => `-${m1.toLowerCase()}`);
+}
+
+function arrayUnique(x) {
+  return Array.from(new Set(x));
+} // Used for unique instance variables
+
+
+let id = 0;
+
+class Shuffle extends TinyEmitter {
+  /**
+   * Categorize, sort, and filter a responsive grid of items.
+   *
+   * @param {Element} element An element which is the parent container for the grid items.
+   * @param {Object} [options=Shuffle.options] Options object.
+   * @constructor
+   */
+  constructor(element) {
+    let options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+    super();
+    this.options = { ...Shuffle.options,
+      ...options
+    };
+    this.lastSort = {};
+    this.group = Shuffle.ALL_ITEMS;
+    this.lastFilter = Shuffle.ALL_ITEMS;
+    this.isEnabled = true;
+    this.isDestroyed = false;
+    this.isInitialized = false;
+    this._transitions = [];
+    this.isTransitioning = false;
+    this._queue = [];
+
+    const el = this._getElementOption(element);
+
+    if (!el) {
+      throw new TypeError('Shuffle needs to be initialized with an element.');
+    }
+
+    this.element = el;
+    this.id = 'shuffle_' + id;
+    id += 1;
+
+    this._init();
+
+    this.isInitialized = true;
+  }
+
+  _init() {
+    this.items = this._getItems();
+    this.sortedItems = this.items;
+    this.options.sizer = this._getElementOption(this.options.sizer); // Add class and invalidate styles
+
+    this.element.classList.add(Shuffle.Classes.BASE); // Set initial css for each item
+
+    this._initItems(this.items); // If the page has not already emitted the `load` event, call layout on load.
+    // This avoids layout issues caused by images and fonts loading after the
+    // instance has been initialized.
+
+
+    if (document.readyState !== 'complete') {
+      const layout = this.layout.bind(this);
+      window.addEventListener('load', function onLoad() {
+        window.removeEventListener('load', onLoad);
+        layout();
+      });
+    } // Get container css all in one request. Causes reflow
+
+
+    const containerCss = window.getComputedStyle(this.element, null);
+    const containerWidth = Shuffle.getSize(this.element).width; // Add styles to the container if it doesn't have them.
+
+    this._validateStyles(containerCss); // We already got the container's width above, no need to cause another
+    // reflow getting it again... Calculate the number of columns there will be
+
+
+    this._setColumns(containerWidth); // Kick off!
+
+
+    this.filter(this.options.group, this.options.initialSort); // Bind resize events
+
+    this._rafId = null; // This is true for all supported browsers, but just to be safe, avoid throwing
+    // an error if ResizeObserver is not present. You can manually add a window resize
+    // event and call `update()` if ResizeObserver is missing, or use Shuffle v5.
+
+    if ('ResizeObserver' in window) {
+      this._resizeObserver = new ResizeObserver(this._handleResizeCallback.bind(this));
+
+      this._resizeObserver.observe(this.element);
+    } // The shuffle items haven't had transitions set on them yet so the user
+    // doesn't see the first layout. Set them now that the first layout is done.
+    // First, however, a synchronous layout must be caused for the previous
+    // styles to be applied without transitions.
+
+
+    this.element.offsetWidth; // eslint-disable-line no-unused-expressions
+
+    this.setItemTransitions(this.items);
+    this.element.style.transition = `height ${this.options.speed}ms ${this.options.easing}`;
+  }
+  /**
+   * Retrieve an element from an option.
+   * @param {string|jQuery|Element} option The option to check.
+   * @return {?Element} The plain element or null.
+   * @private
+   */
+
+
+  _getElementOption(option) {
+    // If column width is a string, treat is as a selector and search for the
+    // sizer element within the outermost container
+    if (typeof option === 'string') {
+      return this.element.querySelector(option);
+    } // Check for an element
+
+
+    if (option && option.nodeType && option.nodeType === 1) {
+      return option;
+    } // Check for jQuery object
+
+
+    if (option && option.jquery) {
+      return option[0];
+    }
+
+    return null;
+  }
+  /**
+   * Ensures the shuffle container has the css styles it needs applied to it.
+   * @param {Object} styles Key value pairs for position and overflow.
+   * @private
+   */
+
+
+  _validateStyles(styles) {
+    // Position cannot be static.
+    if (styles.position === 'static') {
+      this.element.style.position = 'relative';
+    } // Overflow has to be hidden.
+
+
+    if (styles.overflow !== 'hidden') {
+      this.element.style.overflow = 'hidden';
+    }
+  }
+  /**
+   * Filter the elements by a category.
+   * @param {string|string[]|function(Element):boolean} [category] Category to
+   *     filter by. If it's given, the last category will be used to filter the items.
+   * @param {Array} [collection] Optionally filter a collection. Defaults to
+   *     all the items.
+   * @return {{visible: ShuffleItem[], hidden: ShuffleItem[]}}
+   * @private
+   */
+
+
+  _filter() {
+    let category = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this.lastFilter;
+    let collection = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.items;
+
+    const set = this._getFilteredSets(category, collection); // Individually add/remove hidden/visible classes
+
+
+    this._toggleFilterClasses(set); // Save the last filter in case elements are appended.
+
+
+    this.lastFilter = category; // This is saved mainly because providing a filter function (like searching)
+    // will overwrite the `lastFilter` property every time its called.
+
+    if (typeof category === 'string') {
+      this.group = category;
+    }
+
+    return set;
+  }
+  /**
+   * Returns an object containing the visible and hidden elements.
+   * @param {string|string[]|function(Element):boolean} category Category or function to filter by.
+   * @param {ShuffleItem[]} items A collection of items to filter.
+   * @return {{visible: ShuffleItem[], hidden: ShuffleItem[]}}
+   * @private
+   */
+
+
+  _getFilteredSets(category, items) {
+    let visible = [];
+    const hidden = []; // category === 'all', add visible class to everything
+
+    if (category === Shuffle.ALL_ITEMS) {
+      visible = items; // Loop through each item and use provided function to determine
+      // whether to hide it or not.
+    } else {
+      items.forEach(item => {
+        if (this._doesPassFilter(category, item.element)) {
+          visible.push(item);
+        } else {
+          hidden.push(item);
+        }
+      });
+    }
+
+    return {
+      visible,
+      hidden
+    };
+  }
+  /**
+   * Test an item to see if it passes a category.
+   * @param {string|string[]|function():boolean} category Category or function to filter by.
+   * @param {Element} element An element to test.
+   * @return {boolean} Whether it passes the category/filter.
+   * @private
+   */
+
+
+  _doesPassFilter(category, element) {
+    if (typeof category === 'function') {
+      return category.call(element, element, this);
+    } // Check each element's data-groups attribute against the given category.
+
+
+    const attr = element.dataset[Shuffle.FILTER_ATTRIBUTE_KEY];
+    const keys = this.options.delimiter ? attr.split(this.options.delimiter) : JSON.parse(attr);
+
+    function testCategory(category) {
+      return keys.includes(category);
+    }
+
+    if (Array.isArray(category)) {
+      if (this.options.filterMode === Shuffle.FilterMode.ANY) {
+        return category.some(testCategory);
+      }
+
+      return category.every(testCategory);
+    }
+
+    return keys.includes(category);
+  }
+  /**
+   * Toggles the visible and hidden class names.
+   * @param {{visible, hidden}} Object with visible and hidden arrays.
+   * @private
+   */
+
+
+  _toggleFilterClasses(_ref) {
+    let {
+      visible,
+      hidden
+    } = _ref;
+    visible.forEach(item => {
+      item.show();
+    });
+    hidden.forEach(item => {
+      item.hide();
+    });
+  }
+  /**
+   * Set the initial css for each item
+   * @param {ShuffleItem[]} items Set to initialize.
+   * @private
+   */
+
+
+  _initItems(items) {
+    items.forEach(item => {
+      item.init();
+    });
+  }
+  /**
+   * Remove element reference and styles.
+   * @param {ShuffleItem[]} items Set to dispose.
+   * @private
+   */
+
+
+  _disposeItems(items) {
+    items.forEach(item => {
+      item.dispose();
+    });
+  }
+  /**
+   * Updates the visible item count.
+   * @private
+   */
+
+
+  _updateItemCount() {
+    this.visibleItems = this._getFilteredItems().length;
+  }
+  /**
+   * Sets css transform transition on a group of elements. This is not executed
+   * at the same time as `item.init` so that transitions don't occur upon
+   * initialization of a new Shuffle instance.
+   * @param {ShuffleItem[]} items Shuffle items to set transitions on.
+   * @protected
+   */
+
+
+  setItemTransitions(items) {
+    const {
+      speed,
+      easing
+    } = this.options;
+    const positionProps = this.options.useTransforms ? ['transform'] : ['top', 'left']; // Allow users to transtion other properties if they exist in the `before`
+    // css mapping of the shuffle item.
+
+    const cssProps = Object.keys(ShuffleItem.Css.HIDDEN.before).map(k => hyphenate(k));
+    const properties = positionProps.concat(cssProps).join();
+    items.forEach(item => {
+      item.element.style.transitionDuration = speed + 'ms';
+      item.element.style.transitionTimingFunction = easing;
+      item.element.style.transitionProperty = properties;
+    });
+  }
+
+  _getItems() {
+    return Array.from(this.element.children).filter(el => el.matches(this.options.itemSelector)).map(el => new ShuffleItem(el, this.options.isRTL));
+  }
+  /**
+   * Combine the current items array with a new one and sort it by DOM order.
+   * @param {ShuffleItem[]} items Items to track.
+   * @return {ShuffleItem[]}
+   */
+
+
+  _mergeNewItems(items) {
+    const children = Array.from(this.element.children);
+    return sorter(this.items.concat(items), {
+      by(element) {
+        return children.indexOf(element);
+      }
+
+    });
+  }
+
+  _getFilteredItems() {
+    return this.items.filter(item => item.isVisible);
+  }
+
+  _getConcealedItems() {
+    return this.items.filter(item => !item.isVisible);
+  }
+  /**
+   * Returns the column size, based on column width and sizer options.
+   * @param {number} containerWidth Size of the parent container.
+   * @param {number} gutterSize Size of the gutters.
+   * @return {number}
+   * @private
+   */
+
+
+  _getColumnSize(containerWidth, gutterSize) {
+    let size; // If the columnWidth property is a function, then the grid is fluid
+
+    if (typeof this.options.columnWidth === 'function') {
+      size = this.options.columnWidth(containerWidth); // columnWidth option isn't a function, are they using a sizing element?
+    } else if (this.options.sizer) {
+      size = Shuffle.getSize(this.options.sizer).width; // if not, how about the explicitly set option?
+    } else if (this.options.columnWidth) {
+      size = this.options.columnWidth; // or use the size of the first item
+    } else if (this.items.length > 0) {
+      size = Shuffle.getSize(this.items[0].element, true).width; // if there's no items, use size of container
+    } else {
+      size = containerWidth;
+    } // Don't let them set a column width of zero.
+
+
+    if (size === 0) {
+      size = containerWidth;
+    }
+
+    return size + gutterSize;
+  }
+  /**
+   * Returns the gutter size, based on gutter width and sizer options.
+   * @param {number} containerWidth Size of the parent container.
+   * @return {number}
+   * @private
+   */
+
+
+  _getGutterSize(containerWidth) {
+    let size;
+
+    if (typeof this.options.gutterWidth === 'function') {
+      size = this.options.gutterWidth(containerWidth);
+    } else if (this.options.sizer) {
+      size = getNumberStyle(this.options.sizer, 'marginLeft');
+    } else {
+      size = this.options.gutterWidth;
+    }
+
+    return size;
+  }
+  /**
+   * Calculate the number of columns to be used. Gets css if using sizer element.
+   * @param {number} [containerWidth] Optionally specify a container width if
+   *    it's already available.
+   */
+
+
+  _setColumns() {
+    let containerWidth = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : Shuffle.getSize(this.element).width;
+
+    const gutter = this._getGutterSize(containerWidth);
+
+    const columnWidth = this._getColumnSize(containerWidth, gutter);
+
+    let calculatedColumns = (containerWidth + gutter) / columnWidth; // Widths given from getStyles are not precise enough...
+
+    if (Math.abs(Math.round(calculatedColumns) - calculatedColumns) < this.options.columnThreshold) {
+      // e.g. calculatedColumns = 11.998876
+      calculatedColumns = Math.round(calculatedColumns);
+    }
+
+    this.cols = Math.max(Math.floor(calculatedColumns || 0), 1);
+    this.containerWidth = containerWidth;
+    this.colWidth = columnWidth;
+  }
+  /**
+   * Adjust the height of the grid
+   */
+
+
+  _setContainerSize() {
+    this.element.style.height = this._getContainerSize() + 'px';
+  }
+  /**
+   * Based on the column heights, it returns the biggest one.
+   * @return {number}
+   * @private
+   */
+
+
+  _getContainerSize() {
+    return arrayMax(this.positions);
+  }
+  /**
+   * Get the clamped stagger amount.
+   * @param {number} index Index of the item to be staggered.
+   * @return {number}
+   */
+
+
+  _getStaggerAmount(index) {
+    return Math.min(index * this.options.staggerAmount, this.options.staggerAmountMax);
+  }
+  /**
+   * Emit an event from this instance.
+   * @param {string} name Event name.
+   * @param {Object} [data={}] Optional object data.
+   */
+
+
+  _dispatch(name) {
+    let data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+    if (this.isDestroyed) {
+      return;
+    }
+
+    data.shuffle = this;
+    this.emit(name, data);
+  }
+  /**
+   * Zeros out the y columns array, which is used to determine item placement.
+   * @private
+   */
+
+
+  _resetCols() {
+    let i = this.cols;
+    this.positions = [];
+
+    while (i) {
+      i -= 1;
+      this.positions.push(0);
+    }
+  }
+  /**
+   * Loops through each item that should be shown and calculates the x, y position.
+   * @param {ShuffleItem[]} items Array of items that will be shown/layed
+   *     out in order in their array.
+   */
+
+
+  _layout(items) {
+    const itemPositions = this._getNextPositions(items);
+
+    let count = 0;
+    items.forEach((item, i) => {
+      function callback() {
+        item.applyCss(ShuffleItem.Css.VISIBLE.after);
+      } // If the item will not change its position, do not add it to the render
+      // queue. Transitions don't fire when setting a property to the same value.
+
+
+      if (Point.equals(item.point, itemPositions[i]) && !item.isHidden) {
+        item.applyCss(ShuffleItem.Css.VISIBLE.before);
+        callback();
+        return;
+      }
+
+      item.point = itemPositions[i];
+      item.scale = ShuffleItem.Scale.VISIBLE;
+      item.isHidden = false; // Clone the object so that the `before` object isn't modified when the
+      // transition delay is added.
+
+      const styles = this.getStylesForTransition(item, ShuffleItem.Css.VISIBLE.before);
+      styles.transitionDelay = this._getStaggerAmount(count) + 'ms';
+
+      this._queue.push({
+        item,
+        styles,
+        callback
+      });
+
+      count += 1;
+    });
+  }
+  /**
+   * Return an array of Point instances representing the future positions of
+   * each item.
+   * @param {ShuffleItem[]} items Array of sorted shuffle items.
+   * @return {Point[]}
+   * @private
+   */
+
+
+  _getNextPositions(items) {
+    // If position data is going to be changed, add the item's size to the
+    // transformer to allow for calculations.
+    if (this.options.isCentered) {
+      const itemsData = items.map((item, i) => {
+        const itemSize = Shuffle.getSize(item.element, true);
+
+        const point = this._getItemPosition(itemSize);
+
+        return new Rect(point.x, point.y, itemSize.width, itemSize.height, i);
+      });
+      return this.getTransformedPositions(itemsData, this.containerWidth);
+    } // If no transforms are going to happen, simply return an array of the
+    // future points of each item.
+
+
+    return items.map(item => this._getItemPosition(Shuffle.getSize(item.element, true)));
+  }
+  /**
+   * Determine the location of the next item, based on its size.
+   * @param {{width: number, height: number}} itemSize Object with width and height.
+   * @return {Point}
+   * @private
+   */
+
+
+  _getItemPosition(itemSize) {
+    return getItemPosition({
+      itemSize,
+      positions: this.positions,
+      gridSize: this.colWidth,
+      total: this.cols,
+      threshold: this.options.columnThreshold,
+      buffer: this.options.buffer
+    });
+  }
+  /**
+   * Mutate positions before they're applied.
+   * @param {Rect[]} itemRects Item data objects.
+   * @param {number} containerWidth Width of the containing element.
+   * @return {Point[]}
+   * @protected
+   */
+
+
+  getTransformedPositions(itemRects, containerWidth) {
+    return getCenteredPositions(itemRects, containerWidth);
+  }
+  /**
+   * Hides the elements that don't match our filter.
+   * @param {ShuffleItem[]} collection Collection to shrink.
+   * @private
+   */
+
+
+  _shrink() {
+    let collection = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this._getConcealedItems();
+    let count = 0;
+    collection.forEach(item => {
+      function callback() {
+        item.applyCss(ShuffleItem.Css.HIDDEN.after);
+      } // Continuing would add a transitionend event listener to the element, but
+      // that listener would not execute because the transform and opacity would
+      // stay the same.
+      // The callback is executed here because it is not guaranteed to be called
+      // after the transitionend event because the transitionend could be
+      // canceled if another animation starts.
+
+
+      if (item.isHidden) {
+        item.applyCss(ShuffleItem.Css.HIDDEN.before);
+        callback();
+        return;
+      }
+
+      item.scale = ShuffleItem.Scale.HIDDEN;
+      item.isHidden = true;
+      const styles = this.getStylesForTransition(item, ShuffleItem.Css.HIDDEN.before);
+      styles.transitionDelay = this._getStaggerAmount(count) + 'ms';
+
+      this._queue.push({
+        item,
+        styles,
+        callback
+      });
+
+      count += 1;
+    });
+  }
+  /**
+   * Resize handler.
+   * @param {ResizeObserverEntry[]} entries
+   */
+
+
+  _handleResizeCallback(entries) {
+    // If shuffle is disabled, destroyed, don't do anything.
+    // You can still manually force a shuffle update with shuffle.update({ force: true }).
+    if (!this.isEnabled || this.isDestroyed) {
+      return;
+    } // The reason ESLint disables this is because for..of generates a lot of extra
+    // code using Babel, but Shuffle no longer supports browsers that old, so
+    // nothing to worry about.
+    // eslint-disable-next-line no-restricted-syntax
+
+
+    for (const entry of entries) {
+      if (Math.round(entry.contentRect.width) !== Math.round(this.containerWidth)) {
+        // If there was already an animation waiting, cancel it.
+        cancelAnimationFrame(this._rafId); // Offload updating the DOM until the browser is ready.
+
+        this._rafId = requestAnimationFrame(this.update.bind(this));
+      }
+    }
+  }
+  /**
+   * Returns styles which will be applied to the an item for a transition.
+   * @param {ShuffleItem} item Item to get styles for. Should have updated
+   *   scale and point properties.
+   * @param {Object} styleObject Extra styles that will be used in the transition.
+   * @return {!Object} Transforms for transitions, left/top for animate.
+   * @protected
+   */
+
+
+  getStylesForTransition(item, styleObject) {
+    // Clone the object to avoid mutating the original.
+    const styles = { ...styleObject
+    };
+
+    if (this.options.useTransforms) {
+      const sign = this.options.isRTL ? '-' : '';
+      const x = this.options.roundTransforms ? Math.round(item.point.x) : item.point.x;
+      const y = this.options.roundTransforms ? Math.round(item.point.y) : item.point.y;
+      styles.transform = `translate(${sign}${x}px, ${y}px) scale(${item.scale})`;
+    } else {
+      if (this.options.isRTL) {
+        styles.right = item.point.x + 'px';
+      } else {
+        styles.left = item.point.x + 'px';
+      }
+
+      styles.top = item.point.y + 'px';
+    }
+
+    return styles;
+  }
+  /**
+   * Listen for the transition end on an element and execute the itemCallback
+   * when it finishes.
+   * @param {Element} element Element to listen on.
+   * @param {function} itemCallback Callback for the item.
+   * @param {function} done Callback to notify `parallel` that this one is done.
+   */
+
+
+  _whenTransitionDone(element, itemCallback, done) {
+    const id = onTransitionEnd(element, evt => {
+      itemCallback();
+      done(null, evt);
+    });
+
+    this._transitions.push(id);
+  }
+  /**
+   * Return a function which will set CSS styles and call the `done` function
+   * when (if) the transition finishes.
+   * @param {Object} opts Transition object.
+   * @return {function} A function to be called with a `done` function.
+   */
+
+
+  _getTransitionFunction(opts) {
+    return done => {
+      opts.item.applyCss(opts.styles);
+
+      this._whenTransitionDone(opts.item.element, opts.callback, done);
+    };
+  }
+  /**
+   * Execute the styles gathered in the style queue. This applies styles to elements,
+   * triggering transitions.
+   * @private
+   */
+
+
+  _processQueue() {
+    if (this.isTransitioning) {
+      this._cancelMovement();
+    }
+
+    const hasSpeed = this.options.speed > 0;
+    const hasQueue = this._queue.length > 0;
+
+    if (hasQueue && hasSpeed && this.isInitialized) {
+      this._startTransitions(this._queue);
+    } else if (hasQueue) {
+      this._styleImmediately(this._queue);
+
+      this._dispatch(Shuffle.EventType.LAYOUT); // A call to layout happened, but none of the newly visible items will
+      // change position or the transition duration is zero, which will not trigger
+      // the transitionend event.
+
+    } else {
+      this._dispatch(Shuffle.EventType.LAYOUT);
+    } // Remove everything in the style queue
+
+
+    this._queue.length = 0;
+  }
+  /**
+   * Wait for each transition to finish, the emit the layout event.
+   * @param {Object[]} transitions Array of transition objects.
+   */
+
+
+  _startTransitions(transitions) {
+    // Set flag that shuffle is currently in motion.
+    this.isTransitioning = true; // Create an array of functions to be called.
+
+    const callbacks = transitions.map(obj => this._getTransitionFunction(obj));
+    arrayParallel(callbacks, this._movementFinished.bind(this));
+  }
+
+  _cancelMovement() {
+    // Remove the transition end event for each listener.
+    this._transitions.forEach(cancelTransitionEnd); // Reset the array.
+
+
+    this._transitions.length = 0; // Show it's no longer active.
+
+    this.isTransitioning = false;
+  }
+  /**
+   * Apply styles without a transition.
+   * @param {Object[]} objects Array of transition objects.
+   * @private
+   */
+
+
+  _styleImmediately(objects) {
+    if (objects.length) {
+      const elements = objects.map(obj => obj.item.element);
+
+      Shuffle._skipTransitions(elements, () => {
+        objects.forEach(obj => {
+          obj.item.applyCss(obj.styles);
+          obj.callback();
+        });
+      });
+    }
+  }
+
+  _movementFinished() {
+    this._transitions.length = 0;
+    this.isTransitioning = false;
+
+    this._dispatch(Shuffle.EventType.LAYOUT);
+  }
+  /**
+   * The magic. This is what makes the plugin 'shuffle'
+   * @param {string|string[]|function(Element):boolean} [category] Category to filter by.
+   *     Can be a function, string, or array of strings.
+   * @param {SortOptions} [sortOptions] A sort object which can sort the visible set
+   */
+
+
+  filter(category, sortOptions) {
+    if (!this.isEnabled) {
+      return;
+    }
+
+    if (!category || category && category.length === 0) {
+      category = Shuffle.ALL_ITEMS; // eslint-disable-line no-param-reassign
+    }
+
+    this._filter(category); // Shrink each hidden item
+
+
+    this._shrink(); // How many visible elements?
+
+
+    this._updateItemCount(); // Update transforms on visible elements so they will animate to their new positions.
+
+
+    this.sort(sortOptions);
+  }
+  /**
+   * Gets the visible elements, sorts them, and passes them to layout.
+   * @param {SortOptions} [sortOptions] The options object to pass to `sorter`.
+   */
+
+
+  sort() {
+    let sortOptions = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : this.lastSort;
+
+    if (!this.isEnabled) {
+      return;
+    }
+
+    this._resetCols();
+
+    const items = sorter(this._getFilteredItems(), sortOptions);
+    this.sortedItems = items;
+
+    this._layout(items); // `_layout` always happens after `_shrink`, so it's safe to process the style
+    // queue here with styles from the shrink method.
+
+
+    this._processQueue(); // Adjust the height of the container.
+
+
+    this._setContainerSize();
+
+    this.lastSort = sortOptions;
+  }
+  /**
+   * Reposition everything.
+   * @param {object} options options object
+   * @param {boolean} [options.recalculateSizes=true] Whether to calculate column, gutter, and container widths again.
+   * @param {boolean} [options.force=false] By default, `update` does nothing if the instance is disabled. Setting this
+   *    to true forces the update to happen regardless.
+   */
+
+
+  update() {
+    let {
+      recalculateSizes = true,
+      force = false
+    } = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+    if (this.isEnabled || force) {
+      if (recalculateSizes) {
+        this._setColumns();
+      } // Layout items
+
+
+      this.sort();
+    }
+  }
+  /**
+   * Use this instead of `update()` if you don't need the columns and gutters updated
+   * Maybe an image inside `shuffle` loaded (and now has a height), which means calculations
+   * could be off.
+   */
+
+
+  layout() {
+    this.update({
+      recalculateSizes: true
+    });
+  }
+  /**
+   * New items have been appended to shuffle. Mix them in with the current
+   * filter or sort status.
+   * @param {Element[]} newItems Collection of new items.
+   */
+
+
+  add(newItems) {
+    const items = arrayUnique(newItems).map(el => new ShuffleItem(el, this.options.isRTL)); // Add classes and set initial positions.
+
+    this._initItems(items); // Determine which items will go with the current filter.
+
+
+    this._resetCols();
+
+    const allItems = this._mergeNewItems(items);
+
+    const sortedItems = sorter(allItems, this.lastSort);
+
+    const allSortedItemsSet = this._filter(this.lastFilter, sortedItems);
+
+    const isNewItem = item => items.includes(item);
+
+    const applyHiddenState = item => {
+      item.scale = ShuffleItem.Scale.HIDDEN;
+      item.isHidden = true;
+      item.applyCss(ShuffleItem.Css.HIDDEN.before);
+      item.applyCss(ShuffleItem.Css.HIDDEN.after);
+    }; // Layout all items again so that new items get positions.
+    // Synchonously apply positions.
+
+
+    const itemPositions = this._getNextPositions(allSortedItemsSet.visible);
+
+    allSortedItemsSet.visible.forEach((item, i) => {
+      if (isNewItem(item)) {
+        item.point = itemPositions[i];
+        applyHiddenState(item);
+        item.applyCss(this.getStylesForTransition(item, {}));
+      }
+    });
+    allSortedItemsSet.hidden.forEach(item => {
+      if (isNewItem(item)) {
+        applyHiddenState(item);
+      }
+    }); // Cause layout so that the styles above are applied.
+
+    this.element.offsetWidth; // eslint-disable-line no-unused-expressions
+    // Add transition to each item.
+
+    this.setItemTransitions(items); // Update the list of items.
+
+    this.items = this._mergeNewItems(items); // Update layout/visibility of new and old items.
+
+    this.filter(this.lastFilter);
+  }
+  /**
+   * Disables shuffle from updating dimensions and layout on resize
+   */
+
+
+  disable() {
+    this.isEnabled = false;
+  }
+  /**
+   * Enables shuffle again
+   * @param {boolean} [isUpdateLayout=true] if undefined, shuffle will update columns and gutters
+   */
+
+
+  enable() {
+    let isUpdateLayout = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
+    this.isEnabled = true;
+
+    if (isUpdateLayout) {
+      this.update();
+    }
+  }
+  /**
+   * Remove 1 or more shuffle items.
+   * @param {Element[]} elements An array containing one or more
+   *     elements in shuffle
+   * @return {Shuffle} The shuffle instance.
+   */
+
+
+  remove(elements) {
+    if (!elements.length) {
+      return;
+    }
+
+    const collection = arrayUnique(elements);
+    const oldItems = collection.map(element => this.getItemByElement(element)).filter(item => !!item);
+
+    const handleLayout = () => {
+      this._disposeItems(oldItems); // Remove the collection in the callback
+
+
+      collection.forEach(element => {
+        element.parentNode.removeChild(element);
+      });
+
+      this._dispatch(Shuffle.EventType.REMOVED, {
+        collection
+      });
+    }; // Hide collection first.
+
+
+    this._toggleFilterClasses({
+      visible: [],
+      hidden: oldItems
+    });
+
+    this._shrink(oldItems);
+
+    this.sort(); // Update the list of items here because `remove` could be called again
+    // with an item that is in the process of being removed.
+
+    this.items = this.items.filter(item => !oldItems.includes(item));
+
+    this._updateItemCount();
+
+    this.once(Shuffle.EventType.LAYOUT, handleLayout);
+  }
+  /**
+   * Retrieve a shuffle item by its element.
+   * @param {Element} element Element to look for.
+   * @return {?ShuffleItem} A shuffle item or undefined if it's not found.
+   */
+
+
+  getItemByElement(element) {
+    return this.items.find(item => item.element === element);
+  }
+  /**
+   * Dump the elements currently stored and reinitialize all child elements which
+   * match the `itemSelector`.
+   */
+
+
+  resetItems() {
+    // Remove refs to current items.
+    this._disposeItems(this.items);
+
+    this.isInitialized = false; // Find new items in the DOM.
+
+    this.items = this._getItems(); // Set initial styles on the new items.
+
+    this._initItems(this.items);
+
+    this.once(Shuffle.EventType.LAYOUT, () => {
+      // Add transition to each item.
+      this.setItemTransitions(this.items);
+      this.isInitialized = true;
+    }); // Lay out all items.
+
+    this.filter(this.lastFilter);
+  }
+  /**
+   * Destroys shuffle, removes events, styles, and classes
+   */
+
+
+  destroy() {
+    this._cancelMovement();
+
+    if (this._resizeObserver) {
+      this._resizeObserver.unobserve(this.element);
+
+      this._resizeObserver = null;
+    } // Reset container styles
+
+
+    this.element.classList.remove('shuffle');
+    this.element.removeAttribute('style'); // Reset individual item styles
+
+    this._disposeItems(this.items);
+
+    this.items.length = 0;
+    this.sortedItems.length = 0;
+    this._transitions.length = 0; // Null DOM references
+
+    this.options.sizer = null;
+    this.element = null; // Set a flag so if a debounced resize has been triggered,
+    // it can first check if it is actually isDestroyed and not doing anything
+
+    this.isDestroyed = true;
+    this.isEnabled = false;
+  }
+  /**
+   * Returns the outer width of an element, optionally including its margins.
+   *
+   * There are a few different methods for getting the width of an element, none of
+   * which work perfectly for all Shuffle's use cases.
+   *
+   * 1. getBoundingClientRect() `left` and `right` properties.
+   *   - Accounts for transform scaled elements, making it useless for Shuffle
+   *   elements which have shrunk.
+   * 2. The `offsetWidth` property.
+   *   - This value stays the same regardless of the elements transform property,
+   *   however, it does not return subpixel values.
+   * 3. getComputedStyle()
+   *   - This works great Chrome, Firefox, Safari, but IE<=11 does not include
+   *   padding and border when box-sizing: border-box is set, requiring a feature
+   *   test and extra work to add the padding back for IE and other browsers which
+   *   follow the W3C spec here.
+   *
+   * @param {Element} element The element.
+   * @param {boolean} [includeMargins=false] Whether to include margins.
+   * @return {{width: number, height: number}} The width and height.
+   */
+
+
+  static getSize(element) {
+    let includeMargins = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+    // Store the styles so that they can be used by others without asking for it again.
+    const styles = window.getComputedStyle(element, null);
+    let width = getNumberStyle(element, 'width', styles);
+    let height = getNumberStyle(element, 'height', styles);
+
+    if (includeMargins) {
+      const marginLeft = getNumberStyle(element, 'marginLeft', styles);
+      const marginRight = getNumberStyle(element, 'marginRight', styles);
+      const marginTop = getNumberStyle(element, 'marginTop', styles);
+      const marginBottom = getNumberStyle(element, 'marginBottom', styles);
+      width += marginLeft + marginRight;
+      height += marginTop + marginBottom;
+    }
+
+    return {
+      width,
+      height
+    };
+  }
+  /**
+   * Change a property or execute a function which will not have a transition
+   * @param {Element[]} elements DOM elements that won't be transitioned.
+   * @param {function} callback A function which will be called while transition
+   *     is set to 0ms.
+   * @private
+   */
+
+
+  static _skipTransitions(elements, callback) {
+    const zero = '0ms'; // Save current duration and delay.
+
+    const data = elements.map(element => {
+      const {
+        style
+      } = element;
+      const duration = style.transitionDuration;
+      const delay = style.transitionDelay; // Set the duration to zero so it happens immediately
+
+      style.transitionDuration = zero;
+      style.transitionDelay = zero;
+      return {
+        duration,
+        delay
+      };
+    });
+    callback(); // Cause forced synchronous layout.
+
+    elements[0].offsetWidth; // eslint-disable-line no-unused-expressions
+    // Put the duration back
+
+    elements.forEach((element, i) => {
+      element.style.transitionDuration = data[i].duration;
+      element.style.transitionDelay = data[i].delay;
+    });
+  }
+
+}
+
+Shuffle.ShuffleItem = ShuffleItem;
+Shuffle.ALL_ITEMS = 'all';
+Shuffle.FILTER_ATTRIBUTE_KEY = 'groups';
+/** @enum {string} */
+
+Shuffle.EventType = {
+  LAYOUT: 'shuffle:layout',
+  REMOVED: 'shuffle:removed'
+};
+/** @enum {string} */
+
+Shuffle.Classes = Classes;
+/** @enum {string} */
+
+Shuffle.FilterMode = {
+  ANY: 'any',
+  ALL: 'all'
+}; // Overrideable options
+
+Shuffle.options = {
+  // Initial filter group.
+  group: Shuffle.ALL_ITEMS,
+  // Transition/animation speed (milliseconds).
+  speed: 250,
+  // CSS easing function to use.
+  easing: 'cubic-bezier(0.4, 0.0, 0.2, 1)',
+  // e.g. '.picture-item'.
+  itemSelector: '*',
+  // Element or selector string. Use an element to determine the size of columns
+  // and gutters.
+  sizer: null,
+  // A static number or function that tells the plugin how wide the gutters
+  // between columns are (in pixels).
+  gutterWidth: 0,
+  // A static number or function that returns a number which tells the plugin
+  // how wide the columns are (in pixels).
+  columnWidth: 0,
+  // If your group is not json, and is comma delimited, you could set delimiter
+  // to ','.
+  delimiter: null,
+  // Useful for percentage based heights when they might not always be exactly
+  // the same (in pixels).
+  buffer: 0,
+  // Reading the width of elements isn't precise enough and can cause columns to
+  // jump between values.
+  columnThreshold: 0.01,
+  // Shuffle can be isInitialized with a sort object. It is the same object
+  // given to the sort method.
+  initialSort: null,
+  // Transition delay offset for each item in milliseconds.
+  staggerAmount: 15,
+  // Maximum stagger delay in milliseconds.
+  staggerAmountMax: 150,
+  // Whether to use transforms or absolute positioning.
+  useTransforms: true,
+  // Affects using an array with filter. e.g. `filter(['one', 'two'])`. With "any",
+  // the element passes the test if any of its groups are in the array. With "all",
+  // the element only passes if all groups are in the array.
+  // Note, this has no effect if you supply a custom filter function.
+  filterMode: Shuffle.FilterMode.ANY,
+  // Attempt to center grid items in each row.
+  isCentered: false,
+  // Attempt to align grid items to right.
+  isRTL: false,
+  // Whether to round pixel values used in translate(x, y). This usually avoids
+  // blurriness.
+  roundTransforms: true
+};
+Shuffle.Point = Point;
+Shuffle.Rect = Rect; // Expose for testing. Hack at your own risk.
+
+Shuffle.__sorter = sorter;
+Shuffle.__getColumnSpan = getColumnSpan;
+Shuffle.__getAvailablePositions = getAvailablePositions;
+Shuffle.__getShortColumn = getShortColumn;
+Shuffle.__getCenteredPositions = getCenteredPositions;
+
+
+//# sourceMappingURL=shuffle.esm.js.map
 
 
 /***/ })
