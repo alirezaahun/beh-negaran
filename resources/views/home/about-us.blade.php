@@ -56,7 +56,7 @@
                 <div class="box d-flex row custom-boxshodow custom-border">
                     <div class="card col-12 col-md-6 my-4">
                         <div class="imgBx">
-                            <img src="https://app.kadro.co/uploads/admin_user/avatar/1/large_avatar_1.webp" alt="images">
+                            <img src="{{asset('logobanner.jpg')}}" alt="images">
                             <span
                                 class="d-flex  flex-column  justify-content-around  mb-2 custom-fontSize align-items-end  custom-height">
                                 <a href="" class="mx-2 h3"><i class="fab fa-instagram"></i></a>

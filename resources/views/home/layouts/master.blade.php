@@ -44,6 +44,7 @@
     @include('home.sections.header')
 
     @include('home.sections.mobileNavbar')
+    @include('home.sections.iconsOnMobile')
     @yield('content')
 
       <!-- Footer --------------------------------------------------------->
