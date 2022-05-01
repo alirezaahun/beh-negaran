@@ -2,6 +2,7 @@
 window.$ = window.jQuery = require('jquery');
 window.Popper = require('@popperjs/core');
 window.bootstrap = require('bootstrap');
+window.Shuffle = require('shufflejs').default;
 // require('persian-date');
 // require('persian-datepicker/dist/js/persian-datepicker');
 require('md.bootstrappersiandatetimepicker/dist/mds.bs.datetimepicker');
