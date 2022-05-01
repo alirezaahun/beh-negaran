@@ -77,7 +77,7 @@
                     {{-- ----------------------------------------------------------------------------- --}}
                     <div class="card col-12 col-md-6 my-4">
                         <div class="imgBx">
-                            <img src="https://app.kadro.co/uploads/admin_user/avatar/4/large_avatar_4.webp" alt="images">
+                            <img src="{{asset('logobanner.jpg')}}" alt="images">
                             <span
                                 class="d-flex  flex-column  justify-content-around  mb-2 custom-fontSize align-items-end  custom-height">
                                 <a href="" class="mx-2 h3"><i class="fab fa-instagram"></i></a>
@@ -98,7 +98,8 @@
                     {{-- ----------------------------------------------------------------------------- --}}
                     <div class="card col-12 col-md-6 my-4">
                         <div class="imgBx">
-                            <img src="https://app.kadro.co/uploads/admin_user/avatar/26/large_avatar_26.webp" alt="images">
+                            <img src="{{asset('logobanner.jpg')}}" alt="images">
+
                             <span
                                 class="d-flex  flex-column  justify-content-around  mb-2 custom-fontSize align-items-end  custom-height">
                                 <a href="" class="mx-2 h3"><i class="fab fa-instagram"></i></a>
@@ -119,7 +120,8 @@
                     {{-- ----------------------------------------------------------------------------- --}}
                     <div class="card col-12 col-md-6 my-4">
                         <div class="imgBx">
-                            <img src="https://app.kadro.co/uploads/admin_user/avatar/43/large_avatar_43.webp" alt="images">
+                            <img src="{{asset('logobanner.jpg')}}" alt="images">
+
                             <span
                                 class="d-flex  flex-column  justify-content-around  mb-2 custom-fontSize align-items-end  custom-height">
                                 <a href="" class="mx-2 h3"><i class="fab fa-instagram"></i></a>
@@ -140,7 +142,8 @@
                     {{-- ----------------------------------------------------------------------------- --}}
                     <div class="card col-12 col-md-6 my-4">
                         <div class="imgBx">
-                            <img src="https://app.kadro.co/uploads/admin_user/avatar/40/large_avatar_40.webp" alt="images">
+                            <img src="{{asset('logobanner.jpg')}}" alt="images">
+
                             <span
                                 class="d-flex  flex-column  justify-content-around  mb-2 custom-fontSize align-items-end  custom-height">
                                 <a href="" class="mx-2 h3"><i class="fab fa-instagram"></i></a>
@@ -161,7 +164,8 @@
                     {{-- ----------------------------------------------------------------------------- --}}
                     <div class="card col-12 col-md-6 my-4">
                         <div class="imgBx">
-                            <img src="https://app.kadro.co/uploads/admin_user/avatar/35/large_avatar_35.webp" alt="images">
+                            <img src="{{asset('logobanner.jpg')}}" alt="images">
+
                             <span
                                 class="d-flex  flex-column  justify-content-around  mb-2 custom-fontSize align-items-end  custom-height">
                                 <a href="" class="mx-2 h3"><i class="fab fa-instagram a"></i></a>
@@ -182,7 +186,8 @@
                     {{-- ----------------------------------------------------------------------------- --}}
                     <div class="card col-12 col-md-6 my-4">
                         <div class="imgBx">
-                            <img src="https://app.kadro.co/uploads/admin_user/avatar/57/large_avatar_57.webp" alt="images">
+                            <img src="{{asset('logobanner.jpg')}}" alt="images">
+
                             <span
                                 class="d-flex  flex-column  justify-content-around  mb-2 custom-fontSize align-items-end  custom-height">
                                 <a href="" class="mx-2 h3"><i class="fab fa-instagram"></i></a>
@@ -203,7 +208,8 @@
                     {{-- ----------------------------------------------------------------------------- --}}
                     <div class="card col-12 col-md-6 my-4">
                         <div class="imgBx">
-                            <img src="https://app.kadro.co/uploads/admin_user/avatar/1/large_avatar_1.webp" alt="images">
+                            <img src="{{asset('logobanner.jpg')}}" alt="images">
+
                             <span
                                 class="d-flex  flex-column  justify-content-around  mb-2 custom-fontSize align-items-end  custom-height">
                                 <a href="" class="mx-2 h3"><i class="fab fa-instagram"></i></a>
@@ -228,21 +234,6 @@
 
 
 
-                <div class="row   my-5">
-                    <div class="col-8">
-                        <h3 >ویژگی های ما</h3>
-                        <hr class="w-25 mb-5 aboutUs-custom-hr2">
-                        <p class="">
-
-
-                            زندگی این روزها به قدری سریع جریان داره که یک روز چشمامونو باز می کنیم می بینیم سالها گذشته و از
-                            خاطرات ریز و درشت مون هاله ای بیش نمونده! ما برای این اینجا هستیم که خاطرات شما،
-                            مهمترین لحظات و شادی هاتون رو به راحت ترین روش ثبت و ضبط کنیم تا هر وقت اراده کردید،
-                            راحت برگردید به گذشته و خاطره ها رو مرور کنید.
-
-                        </p>
-                    </div>
-                </div>
 
 
 
@@ -274,8 +265,6 @@
                             <a href="" class="mx-2 h3"><i class="fab fa-telegram"></i></a>
                             <a href="" class="mx-2 h3"><i class="fab fa-github"></i></a>
                             <a href="" class="mx-2 h3"><i class="fab fa-facebook"></i></a>
-
-
                         </p>
                     </div>
                     <div class="col-12 col-md-6 ml-md-auto mt-4 mt-md-0">

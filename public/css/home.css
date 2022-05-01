@@ -1235,10 +1235,6 @@ footer p span {
   text-transform: uppercase;
 }
 
-.custom-boxshodow {
-  box-shadow: 2px 2px 8px 3px rgba(0, 0, 0, 0.24);
-}
-
 .custom-height {
   height: 80%;
 }
