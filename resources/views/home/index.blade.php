@@ -10,6 +10,19 @@
     targetDateSelector: '[data-name="dtp1-date"]',
     persianNumber: true,
   });
+
+//trigger numbers
+  let once = true;
+function allInView() {
+  if (once) {
+    if (isScrolledIntoView($("#numbers"))) {
+      items.forEach((item) => {
+        updateCount(item);
+      });
+      once = false;
+    }
+  }
+}
 </script>
 
 @endsection

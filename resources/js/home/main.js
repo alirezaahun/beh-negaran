@@ -7,6 +7,7 @@ window.bootstrap = require('bootstrap');
 require('md.bootstrappersiandatetimepicker/dist/mds.bs.datetimepicker');
 require('./owl-carousel-min');
 require('./owl-custom-main');
+require('shufflejs/dist/shuffle.min.js')
 
 // Trigger Function On Scroll ----------------------------------------
 
@@ -46,17 +47,17 @@ const updateCount = (el) => {
   // console.log(increaseCount);
 };
 // Trigger Numbers Function -----------------------------------------------
-let once = true;
-function allInView() {
-  if (once) {
-    if (isScrolledIntoView($("#numbers"))) {
-      items.forEach((item) => {
-        updateCount(item);
-      });
-      once = false;
-    }
-  }
-}
+// let once = true;
+// function allInView() {
+//   if (once) {
+//     if (isScrolledIntoView($("#numbers"))) {
+//       items.forEach((item) => {
+//         updateCount(item);
+//       });
+//       once = false;
+//     }
+//   }
+// }
 
 // Footer Items Collapse On Mobile ------------------------------
 var coll = document.getElementsByClassName("collapsible-trigger");
