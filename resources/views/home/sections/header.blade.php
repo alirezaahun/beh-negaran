@@ -18,11 +18,11 @@
             <span class="vertical-line"></span>
             <ul class="dropdown-menu text-end" aria-labelledby="navbarDropdown">
 
-                  <li><a class="dropdown-item" href="#">ویدئو</a></li>
+                  <li><a class="dropdown-item" href="{{route('home.services')}}/#video-service">ویدئو</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">عکس</a></li>
+                  <li><a class="dropdown-item" href="{{route('home.services')}}/#photo-service">عکس</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">سایت</a></li>
+                  <li><a class="dropdown-item" href="{{route('home.services')}}/#website-service">سایت</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#">طراحی</a></li>
                   <li><hr class="dropdown-divider"></li>
