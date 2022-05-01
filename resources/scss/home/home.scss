@@ -1115,6 +1115,7 @@ footer p span {
     margin-bottom: 2rem;
 }
 // Projects Page Style ----------------------------------------------------
+
 .project-page-title h3 {
     color: var(--clr-secondary);
     font-size: 2rem;
@@ -1189,6 +1190,10 @@ footer p span {
     justify-content: space-between;
     width: 100%;
     padding: 1em;
+}
+.picture-item__details a {
+    text-decoration: none;
+    color: var(--clr-secondary);
 }
 .picture-item__description {
     width: 100%;

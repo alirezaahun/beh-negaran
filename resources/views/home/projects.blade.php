@@ -8,11 +8,11 @@
             <div class="projects-container mt-5">
                 <div class="projects-row project-page-title">
                     <div class="col-12@sm">
-                      <h3>نمونه کارهای به نگاران</h3>
-                      <hr class="w-50">
+                        <h3>نمونه کارهای به نگاران</h3>
+                        <hr class="w-50">
                     </div>
-                  </div>
-                
+                </div>
+
                 <div class="projects-row">
                     <div class="col-12@sm filters-group-wrap">
                         <div class="filters-group">
@@ -24,7 +24,7 @@
                                 <button class="projects-btn" data-group="city">طراحی</button>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
@@ -36,15 +36,15 @@
                         <div class="picture-item__inner">
                             <div class="aspect aspect--16x9">
                                 <div class="aspect__inner">
-                                    <img src="https://images.unsplash.com/photo-1493585552824-131927c85da2?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=6ef0f8984525fc4500d43ffa53fe8190"
-                                        srcset="https://images.unsplash.com/photo-1493585552824-131927c85da2?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=6ef0f8984525fc4500d43ffa53fe8190 1x, https://images.unsplash.com/photo-1493585552824-131927c85da2?ixlib=rb-0.3.5&auto=format&q=55&fm=jpg&dpr=2&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=6ef0f8984525fc4500d43ffa53fe8190 2x"
-                                        alt="A deep blue lake sits in the middle of vast hills covered with evergreen trees" />
+                                    <img src="{{asset('images/banner3.jpg')}}"
+                                        srcset="{{asset('images/banner3.jpg')}} 2x"
+                                        alt="project-1" />
                                 </div>
                             </div>
                             <div class="picture-item__details">
                                 <figcaption class="picture-item__title"><a href="https://unsplash.com/photos/zshyCr6HGw0"
-                                        target="_blank" rel="noopener">Lake Walchen</a></figcaption>
-                                <p class="picture-item__tags hidden@xs">nature</p>
+                                        target="_blank" rel="noopener">پروژه</a></figcaption>
+                                <p class="picture-item__tags hidden@xs">عنوان</p>
                             </div>
                         </div>
                     </figure>
@@ -52,13 +52,13 @@
                         data-date-created="2016-07-01" data-title="Golden Gate Bridge">
                         <div class="picture-item__inner">
 
-                            <img src="https://images.unsplash.com/photo-1467348733814-f93fc480bec6?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=584&h=329&fit=crop&s=2590c736835ec6555e952e19bb37f06e"
-                                srcset="https://images.unsplash.com/photo-1467348733814-f93fc480bec6?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=584&h=329&fit=crop&s=2590c736835ec6555e952e19bb37f06e 1x, https://images.unsplash.com/photo-1467348733814-f93fc480bec6?ixlib=rb-0.3.5&auto=format&q=55&fm=jpg&dpr=2&crop=entropy&cs=tinysrgb&w=584&h=329&fit=crop&s=2590c736835ec6555e952e19bb37f06e 2x"
-                                alt="Looking down over one of the pillars of the Golden Gate Bridge to the roadside and water below" />
+                            <img src="{{asset('images/banner3.jpg')}}"
+                                        srcset="{{asset('images/banner3.jpg')}} 2x"
+                                        alt="project-1" />
                             <div class="picture-item__details">
                                 <figcaption class="picture-item__title"><a href="https://unsplash.com/photos/RRNbMiPmTZY"
-                                        target="_blank" rel="noopener">Golden Gate Bridge</a></figcaption>
-                                <p class="picture-item__tags hidden@xs">city</p>
+                                        target="_blank" rel="noopener">پروژه</a></figcaption>
+                                <p class="picture-item__tags hidden@xs">عنوان</p>
                             </div>
                         </div>
                     </figure>
@@ -67,15 +67,15 @@
                         <div class="picture-item__inner">
                             <div class="aspect aspect--16x9">
                                 <div class="aspect__inner">
-                                    <img src="https://images.unsplash.com/photo-1471005197911-88e9d4a7834d?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=bd8b952c4c983d4bde5e2018c90c9124"
-                                        srcset="https://images.unsplash.com/photo-1471005197911-88e9d4a7834d?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=bd8b952c4c983d4bde5e2018c90c9124 1x, https://images.unsplash.com/photo-1471005197911-88e9d4a7834d?ixlib=rb-0.3.5&auto=format&q=55&fm=jpg&dpr=2&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=bd8b952c4c983d4bde5e2018c90c9124 2x"
-                                        alt="A close, profile view of a crocodile looking directly into the camera" />
+                                    <img src="{{asset('images/banner3.jpg')}}"
+                                        srcset="{{asset('images/banner3.jpg')}} 2x"
+                                        alt="project-1" />
                                 </div>
                             </div>
                             <div class="picture-item__details">
                                 <figcaption class="picture-item__title"><a href="https://unsplash.com/photos/YOX8ZMTo7hk"
-                                        target="_blank" rel="noopener">Crocodile</a></figcaption>
-                                <p class="picture-item__tags hidden@xs">animal</p>
+                                        target="_blank" rel="noopener">پروژه</a></figcaption>
+                                <p class="picture-item__tags hidden@xs">عنوان</p>
                             </div>
                         </div>
                     </figure>
@@ -84,18 +84,18 @@
                         <div class="picture-item__inner">
                             <div class="aspect aspect--16x9">
                                 <div class="aspect__inner">
-                                    <img src="https://images.unsplash.com/photo-1457364559154-aa2644600ebb?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=3d0e3e8d72fc5667fd9fbe354e80957b"
-                                        srcset="https://images.unsplash.com/photo-1457364559154-aa2644600ebb?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=3d0e3e8d72fc5667fd9fbe354e80957b 1x, https://images.unsplash.com/photo-1457364559154-aa2644600ebb?ixlib=rb-0.3.5&auto=format&q=55&fm=jpg&dpr=2&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=3d0e3e8d72fc5667fd9fbe354e80957b 2x"
-                                        alt="SpaceX launches a Falcon 9 rocket from Cape Canaveral Air Force Station" />
+                                    <img src="{{asset('images/banner3.jpg')}}"
+                                        srcset="{{asset('images/banner3.jpg')}} 2x"
+                                        alt="project-1" />
                                 </div>
                             </div>
                             <div class="picture-item__details">
                                 <figcaption class="picture-item__title"><a href="https://unsplash.com/photos/GDdRP7U5ct0"
-                                        target="_blank" rel="noopener">SpaceX</a></figcaption>
-                                <p class="picture-item__tags hidden@xs">space</p>
+                                        target="_blank" rel="noopener">پروژه</a></figcaption>
+                                <p class="picture-item__tags hidden@xs">عنوان</p>
                             </div>
-                            <p class="picture-item__description">SpaceX launches a Falcon 9 rocket from Cape Canaveral Air
-                                Force Station</p>
+                            <p class="picture-item__description">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و
+                                با استفاده از طراحان گرافیک است.</p>
                         </div>
                     </figure>
                     <figure class="col-3@xs col-4@sm col-3@md picture-item" data-groups='["city"]'
@@ -103,15 +103,15 @@
                         <div class="picture-item__inner">
                             <div class="aspect aspect--16x9">
                                 <div class="aspect__inner">
-                                    <img src="https://images.unsplash.com/photo-1465447142348-e9952c393450?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=7d97e22d36a9a73beb639a936e6774e9"
-                                        srcset="https://images.unsplash.com/photo-1465447142348-e9952c393450?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=7d97e22d36a9a73beb639a936e6774e9 1x, https://images.unsplash.com/photo-1465447142348-e9952c393450?ixlib=rb-0.3.5&auto=format&q=55&fm=jpg&dpr=2&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=7d97e22d36a9a73beb639a936e6774e9 2x"
-                                        alt="A multi-level highway stack interchange in Puxi, Shanghai" />
+                                    <img src="{{asset('images/banner3.jpg')}}"
+                                        srcset="{{asset('images/banner3.jpg')}} 2x"
+                                        alt="project-1" />
                                 </div>
                             </div>
                             <div class="picture-item__details">
                                 <figcaption class="picture-item__title"><a href="https://unsplash.com/photos/7nrsVjvALnA"
-                                        target="_blank" rel="noopener">Crossroads</a></figcaption>
-                                <p class="picture-item__tags hidden@xs">city</p>
+                                        target="_blank" rel="noopener">پروژه</a></figcaption>
+                                <p class="picture-item__tags hidden@xs">عنوان</p>
                             </div>
                         </div>
                     </figure>
@@ -119,13 +119,13 @@
                         data-groups='["space","nature"]' data-date-created="2016-06-29" data-title="Milky Way">
                         <div class="picture-item__inner">
 
-                            <img src="https://images.unsplash.com/photo-1467173572719-f14b9fb86e5f?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=584&h=329&fit=crop&s=e641d6b3c4c2c967e80e998d02a4d03b"
-                                srcset="https://images.unsplash.com/photo-1467173572719-f14b9fb86e5f?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=584&h=329&fit=crop&s=e641d6b3c4c2c967e80e998d02a4d03b 1x, https://images.unsplash.com/photo-1467173572719-f14b9fb86e5f?ixlib=rb-0.3.5&auto=format&q=55&fm=jpg&dpr=2&crop=entropy&cs=tinysrgb&w=584&h=329&fit=crop&s=e641d6b3c4c2c967e80e998d02a4d03b 2x"
-                                alt="Dimly lit mountains give way to a starry night showing the Milky Way" />
+                            <img src="{{asset('images/banner3.jpg')}}"
+                                        srcset="{{asset('images/banner3.jpg')}} 2x"
+                                        alt="project-1" />
                             <div class="picture-item__details">
                                 <figcaption class="picture-item__title"><a href="https://unsplash.com/photos/_4Ib-a8g9aA"
-                                        target="_blank" rel="noopener">Milky Way</a></figcaption>
-                                <p class="picture-item__tags hidden@xs">space, nature</p>
+                                        target="_blank" rel="noopener">پروژه</a></figcaption>
+                                <p class="picture-item__tags hidden@xs">عنوان</p>
                             </div>
                         </div>
                     </figure>
@@ -134,17 +134,18 @@
                         <div class="picture-item__inner">
                             <div class="aspect aspect--16x9">
                                 <div class="aspect__inner">
-                                    <img src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=584&h=329&fit=crop&s=f4856588634def31d5885dc396fe9a2e"
-                                        srcset="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=584&h=329&fit=crop&s=f4856588634def31d5885dc396fe9a2e 1x, https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?ixlib=rb-0.3.5&auto=format&q=55&fm=jpg&dpr=2&crop=entropy&cs=tinysrgb&w=584&h=329&fit=crop&s=f4856588634def31d5885dc396fe9a2e 2x"
-                                        alt="NASA Satellite view of Earth" />
+                                    <img src="{{asset('images/banner3.jpg')}}"
+                                        srcset="{{asset('images/banner3.jpg')}} 2x"
+                                        alt="project-1" />
                                 </div>
                             </div>
                             <div class="picture-item__details">
                                 <figcaption class="picture-item__title"><a href="https://unsplash.com/photos/yZygONrUBe8"
-                                        target="_blank" rel="noopener">Earth</a></figcaption>
-                                <p class="picture-item__tags hidden@xs">space</p>
+                                        target="_blank" rel="noopener">پروژه</a></figcaption>
+                                <p class="picture-item__tags hidden@xs">عنوان</p>
                             </div>
-                            <p class="picture-item__description">NASA Satellite view of Earth</p>
+                            <p class="picture-item__description">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و
+                                با استفاده از طراحان گرافیک است.</p>
                         </div>
                     </figure>
                     <figure class="col-3@xs col-4@sm col-3@md picture-item picture-item--h2" data-groups='["animal"]'
@@ -152,17 +153,18 @@
                         <div class="picture-item__inner">
                             <div class="aspect aspect--16x9">
                                 <div class="aspect__inner">
-                                    <img src="https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=bc4e1180b6b8789d38c614edc8d0dd01"
-                                        srcset="https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=bc4e1180b6b8789d38c614edc8d0dd01 1x, https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?ixlib=rb-0.3.5&auto=format&q=55&fm=jpg&dpr=2&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=bc4e1180b6b8789d38c614edc8d0dd01 2x"
-                                        alt="A close up of a turtle underwater" />
+                                    <img src="{{asset('images/banner3.jpg')}}"
+                                        srcset="{{asset('images/banner3.jpg')}} 2x"
+                                        alt="project-1" />
                                 </div>
                             </div>
                             <div class="picture-item__details">
                                 <figcaption class="picture-item__title"><a href="https://unsplash.com/photos/L-2p8fapOA8"
-                                        target="_blank" rel="noopener">Turtle</a></figcaption>
-                                <p class="picture-item__tags hidden@xs">animal</p>
+                                        target="_blank" rel="noopener">پروژه</a></figcaption>
+                                <p class="picture-item__tags hidden@xs">عنوان</p>
                             </div>
-                            <p class="picture-item__description">A close up of a turtle underwater</p>
+                            <p class="picture-item__description">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و
+                                با استفاده از طراحان گرافیک است.</p>
                         </div>
                     </figure>
                     <figure class="col-3@xs col-4@sm col-3@md picture-item" data-groups='["nature"]'
@@ -170,15 +172,15 @@
                         <div class="picture-item__inner">
                             <div class="aspect aspect--16x9">
                                 <div class="aspect__inner">
-                                    <img src="https://images.unsplash.com/uploads/1413142095961484763cf/d141726c?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=6141097da144d759176d77b4024c064b"
-                                        srcset="https://images.unsplash.com/uploads/1413142095961484763cf/d141726c?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=6141097da144d759176d77b4024c064b 1x, https://images.unsplash.com/uploads/1413142095961484763cf/d141726c?ixlib=rb-0.3.5&auto=format&q=55&fm=jpg&dpr=2&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=6141097da144d759176d77b4024c064b 2x"
-                                        alt="Many trees stand alonside a hill which overlooks a pedestrian path, next to the ocean at Stanley Park in Vancouver, Canada" />
+                                    <img src="{{asset('images/banner3.jpg')}}"
+                                        srcset="{{asset('images/banner3.jpg')}} 2x"
+                                        alt="project-1" />
                                 </div>
                             </div>
                             <div class="picture-item__details">
                                 <figcaption class="picture-item__title"><a href="https://unsplash.com/photos/b-yEdfrvQ50"
-                                        target="_blank" rel="noopener">Stanley Park</a></figcaption>
-                                <p class="picture-item__tags hidden@xs">nature</p>
+                                        target="_blank" rel="noopener">پروژه</a></figcaption>
+                                <p class="picture-item__tags hidden@xs">عنوان</p>
                             </div>
                         </div>
                     </figure>
@@ -187,15 +189,15 @@
                         <div class="picture-item__inner">
                             <div class="aspect aspect--16x9">
                                 <div class="aspect__inner">
-                                    <img src="https://images.unsplash.com/photo-1484244233201-29892afe6a2c?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=98423596f72d9f0913a4d44f0580a34c"
-                                        srcset="https://images.unsplash.com/photo-1484244233201-29892afe6a2c?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=98423596f72d9f0913a4d44f0580a34c 1x, https://images.unsplash.com/photo-1484244233201-29892afe6a2c?ixlib=rb-0.3.5&auto=format&q=55&fm=jpg&dpr=2&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=98423596f72d9f0913a4d44f0580a34c 2x"
-                                        alt="An intrigued cat sits in grass next to a flag planted in front of it with an astronaut space kitty sticker on beige fabric." />
+                                    <img src="{{asset('images/banner3.jpg')}}"
+                                        srcset="{{asset('images/banner3.jpg')}} 2x"
+                                        alt="project-1" />
                                 </div>
                             </div>
                             <div class="picture-item__details">
                                 <figcaption class="picture-item__title"><a href="https://unsplash.com/photos/FqkBXo2Nkq0"
-                                        target="_blank" rel="noopener">Astronaut Cat</a></figcaption>
-                                <p class="picture-item__tags hidden@xs">animal</p>
+                                        target="_blank" rel="noopener">پروژه</a></figcaption>
+                                <p class="picture-item__tags hidden@xs">عنوان</p>
                             </div>
                         </div>
                     </figure>
@@ -203,13 +205,13 @@
                         data-date-created="2017-01-19" data-title="San Francisco">
                         <div class="picture-item__inner">
 
-                            <img src="https://images.unsplash.com/photo-1484851050019-ca9daf7736fb?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=584&h=329&fit=crop&s=05325a7cc678f7f765cbbdcf7159ab89"
-                                srcset="https://images.unsplash.com/photo-1484851050019-ca9daf7736fb?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=584&h=329&fit=crop&s=05325a7cc678f7f765cbbdcf7159ab89 1x, https://images.unsplash.com/photo-1484851050019-ca9daf7736fb?ixlib=rb-0.3.5&auto=format&q=55&fm=jpg&dpr=2&crop=entropy&cs=tinysrgb&w=584&h=329&fit=crop&s=05325a7cc678f7f765cbbdcf7159ab89 2x"
-                                alt="Pier 14 at night, looking towards downtown San Francisco's brightly lit buildings" />
+                            <img src="{{asset('images/banner3.jpg')}}"
+                                        srcset="{{asset('images/banner3.jpg')}} 2x"
+                                        alt="project-1" />
                             <div class="picture-item__details">
                                 <figcaption class="picture-item__title"><a href="https://unsplash.com/photos/h3jarbNzlOg"
-                                        target="_blank" rel="noopener">San Francisco</a></figcaption>
-                                <p class="picture-item__tags hidden@xs">city</p>
+                                        target="_blank" rel="noopener">پروژه</a></figcaption>
+                                <p class="picture-item__tags hidden@xs">عنوان</p>
                             </div>
                         </div>
                     </figure>
@@ -218,15 +220,15 @@
                         <div class="picture-item__inner">
                             <div class="aspect aspect--16x9">
                                 <div class="aspect__inner">
-                                    <img src="https://images.unsplash.com/photo-1445346366695-5bf62de05412?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=1822bfd69c4021973a3d926e9294b70f"
-                                        srcset="https://images.unsplash.com/photo-1445346366695-5bf62de05412?ixlib=rb-0.3.5&auto=format&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=1822bfd69c4021973a3d926e9294b70f 1x, https://images.unsplash.com/photo-1445346366695-5bf62de05412?ixlib=rb-0.3.5&auto=format&q=55&fm=jpg&dpr=2&crop=entropy&cs=tinysrgb&w=284&h=160&fit=crop&s=1822bfd69c4021973a3d926e9294b70f 2x"
-                                        alt="Looking down on central park and the surrounding builds from the Rockefellar Center" />
+                                    <img src="{{asset('images/banner3.jpg')}}"
+                                        srcset="{{asset('images/banner3.jpg')}} 2x"
+                                        alt="project-1" />
                                 </div>
                             </div>
                             <div class="picture-item__details">
                                 <figcaption class="picture-item__title"><a href="https://unsplash.com/photos/utwYoEu9SU8"
-                                        target="_blank" rel="noopener">Central Park</a></figcaption>
-                                <p class="picture-item__tags hidden@xs">nature, city</p>
+                                        target="_blank" rel="noopener">پروژه</a></figcaption>
+                                <p class="picture-item__tags hidden@xs">عنوان</p>
                             </div>
                         </div>
                     </figure>
@@ -407,7 +409,7 @@
             delimiter: null, // If your group is not json, and is comma delimited, you could set delimiter to ','.
             easing: 'cubic-bezier(0.4, 0.0, 0.2, 1)', // CSS easing function to use.
             filterMode: Shuffle.FilterMode
-            .ANY, // When using an array with filter(), the element passes the test if any of its groups are in the array. With "all", the element only passes if all groups are in the array.
+                .ANY, // When using an array with filter(), the element passes the test if any of its groups are in the array. With "all", the element only passes if all groups are in the array.
             group: Shuffle.ALL_ITEMS, // Initial filter group.
             gutterWidth: 0, // A static number or function that tells the plugin how wide the gutters between columns are (in pixels).
             initialSort: null, // Shuffle can be initialized with a sort object. It is the same object given to the sort method.
