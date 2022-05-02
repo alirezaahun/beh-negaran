@@ -73,11 +73,22 @@
 
             </ul>
             <div class="navbar-btns">
-            <a href="#" class="primary-btn"><i class='bx bx-cart'></i>پیگیری سفارشات</a>
+            <a href="#" class="primary-btn"><i class='bx bx-cart-alt'></i>پیگیری سفارشات</a>
             |
-            <a href="#" class="btn effect04" data-sm-link-text="ثبت نام" target="_blank">
+            <a id="logBtn" href="" class="btn effect04" data-sm-link-text="ثبت نام">
               <span><i class='bx bx-log-in-circle'></i>ورود</span></a>
           </div>
       </div>
     </div>
   </nav>
+
+   {{-- Login/Signup Form -------------------------------------------------------}}
+   <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      
+    </div>
+  
+  </div>
