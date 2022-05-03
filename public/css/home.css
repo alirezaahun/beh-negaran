@@ -151,8 +151,14 @@ h6 {
   color: var(--clr-dark);
 }
 
-.nav__link--active {
-  color: var(--clr-secondary);
+.---active,
+.nav__link:active {
+  color: var(--clr-secondary) !important;
+}
+
+.nav__link span {
+  font-weight: 900;
+  font-family: "Vazir";
 }
 
 .nav__icon {
@@ -1164,7 +1170,7 @@ footer p span {
   height: 100%;
   border-radius: 4px;
   background: #fff;
-  transition: 0.5s;
+  transition: all linear 0.3s;
   z-index: -1;
 }
 
@@ -1185,7 +1191,7 @@ footer p span {
   bottom: 8px;
   right: 10px;
   background: var(--clr-primary);
-  transition: 0.5s;
+  transition: all linear 0.3s;
   z-index: 1;
   border-radius: 1.3rem;
 }
@@ -1213,7 +1219,7 @@ footer p span {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  transition: 1.5s;
+  transition: 1s;
   border-radius: 0.3rem;
 }
 

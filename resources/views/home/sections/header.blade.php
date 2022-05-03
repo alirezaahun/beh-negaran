@@ -45,7 +45,7 @@
               </li>
               <span class="vertical-line"></span>
               <li class="nav-item">
-                <a class="nav-link" href="#">نمونه ها</a>
+                <a class="nav-link" href="{{route('home.projects')}}">نمونه ها</a>
               </li>
               <span class="vertical-line"></span>
               <li class="nav-item">
