@@ -1,6 +1,6 @@
 <!-- Mobile Bottom Navbar --------------------------------------------->
-<nav class="nav">
-    <a href="#" class="nav__link nav__link--active">
+<nav id="navContainer" class="nav">
+    <a href="{{route('home.index')}}" class="nav__link ---active">
       <i class='bx bx-home nav__icon'></i>
       <span class="nav__text">خانه</span>
     </a>
