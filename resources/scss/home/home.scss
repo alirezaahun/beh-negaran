@@ -1549,7 +1549,7 @@ footer p span {
   /* Modal Content/Box */
   .modal-content {
     background-color: var(--clr-primary);
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 5% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
@@ -1570,6 +1570,146 @@ footer p span {
     cursor: pointer;
   }
 //   Modal Inner Form----------------
+.form {
+    background: var(--clr-dark);
+    padding: 40px;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 1.3rem;
+    box-shadow: 0 4px 10px 4px rgba(19, 35, 47, .3);
+}
+.tab-group {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px 0;
+}
+.tab-group:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.tab-group li a {
+    display: block;
+    text-decoration: none;
+    padding: 15px;
+    background: rgba(160, 179, 176, .25);
+    color: #a0b3b0;
+    font-size: 0.8rem;
+    float: left;
+    width: 50%;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+// .tab-group li a:hover {
+//     background: var(--clr-secondary);
+//     color: #fff;
+// }
+.tab-group .active a {
+    background: var(--clr-primary);
+    color: var(--clr-dark);
+    font-weight: 600;
+}
+.tab-content > div:last-child {
+    display: none;
+}
+.form h3 {
+    text-align: center;
+    color: #fff;
+    font-weight: 300;
+    margin: 0 0 40px;
+}
+.form label {
+    position: absolute;
+    transform: translateY(6px);
+    right: 13px;
+    color: rgba(255, 255, 255, .5);
+    transition: all 0.25s ease;
+    -webkit-backface-visibility: hidden;
+    pointer-events: none;
+    font-size: 0.8rem;
+}
+.form label .req {
+    margin: 2px;
+    color: var(--clr-accent);
+}
+.form label.active {
+    transform: translateY(50px);
+    left: 2px;
+    font-size: 14px;
+}
+.form label.active .req {
+    opacity: 0;
+}
+.form label.highlight {
+    color: #fff;
+}
+.form input, .form textarea {
+    border-radius: 0.5rem !important;
+    font-size: 0.8rem;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 15px 10px;
+    background: none;
+    background-image: none;
+    border: 1px solid #a0b3b0;
+    color: #fff;
+    border-radius: 0;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.form input:focus, .form textarea:focus {
+    outline: 0;
+    border-color: var(--clr-accent);
+}
+.form textarea {
+    border: 2px solid #a0b3b0;
+    resize: vertical;
+}
+.field-wrap {
+    position: relative;
+    margin-bottom: 40px;
+}
+.top-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.top-row > div {
+    float: left;
+    width: 48%;
+    margin-right: 4%;
+}
+.top-row > div:last-child {
+    margin: 0;
+}
+.button {
+    border: 0;
+    outline: none;
+    border-radius: 1rem;
+    padding: 15px 0;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    background: var(--clr-secondary);
+    color: #fff;
+    transition: all 0.5s ease;
+    -webkit-appearance: none;
+}
+.button:hover, .button:focus {
+    background: var(--clr-accent);
+    color: var(--clr-dark);
+}
+.button-block {
+    display: block;
+    width: 100%;
+}
+.forgot {
+    margin-top: -20px;
+    text-align: right;
+}
+
 
 
 /* Scroll Bar ----------------------------------------------------------- */
