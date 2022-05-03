@@ -11,53 +11,6 @@ require('./owl-custom-main');
 
 // Trigger Function On Scroll ----------------------------------------
 
-// $(allInView);
-// $(window).scroll(allInView);
-
-// function isScrolledIntoView(elem) {
-//   var docViewTop = $(window).scrollTop();
-//   var docViewBottom = docViewTop + $(window).height();
-
-//   var elemTop = $(elem).offset().top;
-//   var elemBottom = elemTop + $(elem).height();
-
-//   return elemBottom <= docViewBottom && elemTop >= docViewTop;
-// }
-
-// // Numbers Count Update -------------------------------------
-// const items = [...document.querySelectorAll(".number")];
-
-// const updateCount = (el) => {
-//   const value = parseInt(el.dataset.value);
-//   const increment = Math.ceil(value / 1000);
-//   // const increment = 1;
-//   let initialValue = 0;
-
-//   const increaseCount = setInterval(() => {
-//     initialValue += increment;
-
-//     if (initialValue > value) {
-//       el.textContent = `${value.toLocaleString("ar-EG")}+`;
-//       clearInterval(increaseCount);
-//       return;
-//     }
-
-//     el.textContent = `${initialValue.toLocaleString("ar-EG")}+`;
-//   }, 1);
-//   // console.log(increaseCount);
-// };
-// // Trigger Numbers Function -----------------------------------------------
-// let once = true;
-// function allInView() {
-//   if (once) {
-//     if (isScrolledIntoView($("#numbers"))) {
-//       items.forEach((item) => {
-//         updateCount(item);
-//       });
-//       once = false;
-//     }
-//   }
-// }
 
 // Footer Items Collapse On Mobile ------------------------------
 var coll = document.getElementsByClassName("collapsible-trigger");
