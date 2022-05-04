@@ -42,4 +42,10 @@ class HomeController extends Controller
         return view('home.projects');
 
     }
+
+    public function login(){
+
+        return view('home.login');
+
+    }
 }

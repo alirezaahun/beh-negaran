@@ -75,101 +75,11 @@
             <div class="navbar-btns">
             <a href="#" class="primary-btn"><i class='bx bx-cart-alt'></i>پیگیری سفارشات</a>
             |
-            <a id="logBtn" href="" class="btn effect04" data-sm-link-text="ثبت نام">
+            <a id="logBtn" href="{{route('home.login')}}" class="btn effect04" data-sm-link-text="ثبت نام">
               <span><i class='bx bx-log-in-circle'></i>ورود</span></a>
           </div>
       </div>
     </div>
   </nav>
 
-   {{-- Login/Signup Form -------------------------------------------------------}}
-   <div id="myModal" class="modal">
-
-    <!-- Modal content -->
-    <div class="modal-content">
-      <span class="close"><i class='bx bx-x-circle'></i></span>
-      <div class="container">
-        <div class="form">
-      
-          <ul class="tab-group">
-            <li class="tab active sign-up-border"><a href="#signup">ثبت نام</a></li>
-            <li class="tab log-in-border"><a href="#login">ورود</a></li>
-          </ul>
-          
-          <div class="tab-content">
-            <div id="signup">   
-              <h3>رایگان ثبت نام کنید</h3>
-              
-              <form action="/" method="post">
-              
-              <div class="top-row">
-                <div class="field-wrap">
-                  <label>
-                    نام<span class="req">*</span>
-                  </label>
-                  <input type="text" required autocomplete="off" />
-                </div>
-            
-                <div class="field-wrap">
-                  <label>
-                    نام خانوادگی<span class="req">*</span>
-                  </label>
-                  <input type="text"required autocomplete="off"/>
-                </div>
-              </div>
-    
-              <div class="field-wrap">
-                <label>
-                  E-mail آدرس <span class="req">*</span>
-                </label>
-                <input type="email"required autocomplete="off"/>
-              </div>
-              
-              <div class="field-wrap">
-                <label>
-                  پسورد<span class="req">*</span>
-                </label>
-                <input type="password"required autocomplete="off"/>
-              </div>
-              
-              <button type="submit" class="button button-block"/>ثبت نام</button>
-              
-              </form>
-    
-            </div>
-            
-            <div id="login">   
-              <h3>خوش آمدید!</h3>
-              
-              <form action="/" method="post">
-              
-                <div class="field-wrap">
-                <label>
-                  E-mail آدرس<span class="req">*</span>
-                </label>
-                <input type="email"required autocomplete="off"/>
-              </div>
-              
-              <div class="field-wrap">
-                <label>
-                  پسورد<span class="req">*</span>
-                </label>
-                <input type="password"required autocomplete="off"/>
-              </div>
-              
-              <p class="forgot"><a href="#">پسورد را فراموش کرده ای؟</a></p>
-              
-              <button class="button button-block"/>ورود</button>
-              
-              </form>
-    
-            </div>
-            
-          </div><!-- tab-content -->
-          
-    </div> <!-- /form -->
-      </div>
-      
-    </div>
-  
-  </div>
+   

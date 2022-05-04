@@ -58,3 +58,4 @@ Route::get('/', [HomeController::class , 'index'])->name('home.index');
 Route::get('/about-us', [HomeController::class , 'about'])->name('home.about');
 Route::get('/services', [HomeController::class , 'services'])->name('home.services');
 Route::get('/projects', [HomeController::class , 'projects'])->name('home.projects');
+Route::get('/login', [HomeController::class , 'login'])->name('home.login');
