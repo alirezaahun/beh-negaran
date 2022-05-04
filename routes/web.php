@@ -10,10 +10,7 @@ use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\Admin\TagsController;
 use App\Http\Controllers\authController;
 use App\Http\Controllers\home\HomeController;
-use Ghasedak\Laravel\GhasedakFacade;
 use App\Models\Product;
-use App\Models\User;
-use App\Notifications\OtpSms;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -62,15 +59,4 @@ Route::get('/', [HomeController::class , 'index'])->name('home.index');
 Route::get('/about-us', [HomeController::class , 'about'])->name('home.about');
 Route::get('/services', [HomeController::class , 'services'])->name('home.services');
 Route::get('/projects', [HomeController::class , 'projects'])->name('home.projects');
-
-//auth
-
 Route::any('/login', [authController::class , 'login'])->name('home.login');
-
-
-Route::get('/ota', function(){
-
-    $user = User::find(1);
-    $user->notify(new OtpSms(13422));
-
-});

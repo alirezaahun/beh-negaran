@@ -6,6 +6,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "anetwork/validation": "^2.2",
         "cviebrock/eloquent-sluggable": "^8.0",
         "fruitcake/laravel-cors": "^2.0",
         "ghasedak/laravel": "^1.0",
@@ -14,6 +15,7 @@
         "laravel/framework": "^8.75",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
+        "mokhosh/validation": "^2.6",
         "uxweb/sweet-alert": "^2.0"
     },
     "require-dev": {

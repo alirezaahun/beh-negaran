@@ -75,60 +75,11 @@
             <div class="navbar-btns">
             <a href="#" class="primary-btn"><i class='bx bx-cart-alt'></i>پیگیری سفارشات</a>
             |
-            <a id="logBtn" href="" class="btn effect04" data-sm-link-text="ثبت نام">
+            <a id="logBtn" href="{{route('home.login')}}" class="btn effect04" data-sm-link-text="ثبت نام">
               <span><i class='bx bx-log-in-circle'></i>ورود</span></a>
           </div>
       </div>
     </div>
   </nav>
 
-   {{-- Login/Signup Form -------------------------------------------------------}}
-   <div id="myModal" class="modal">
-    <!-- Modal content -->
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <div class="container">
-        <div class="form">
-
-          </ul>
-
-            <div id="login">
-              <h3>خوش آمدید!</h3>
-
-              <form id="loginForm">
-
-                <div class="field-wrap">
-                <label>
-                </label>
-                <input id="phoneInput" placeholder="شماره همراه خود را وارد کنید" type="text"required autocomplete="off"/>
-              </div>
-
-              <button type="submit" class="button button-block"/>ورود</button>
-
-              </form>
-
-            </div>
-
-          </div><!-- tab-content -->
-
-    </div> <!-- /form -->
-      </div>
-
-    </div>
-
-  </div>
-
-  @section('js')
-
-  <script>
-
-    $('#loginForm').submit(function(event){
-
-        console.log('#phoneInput').val();
-        event.preventDefault();
-
-    });
-
-  </script>
-
-  @endsection
+   
