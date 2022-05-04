@@ -87,13 +87,13 @@
 
     <!-- Modal content -->
     <div class="modal-content">
-      <span class="close">&times;</span>
+      <span class="close"><i class='bx bx-x-circle'></i></span>
       <div class="container">
         <div class="form">
       
           <ul class="tab-group">
-            <li class="tab active"><a href="#signup">ثبت نام</a></li>
-            <li class="tab"><a href="#login">ورود</a></li>
+            <li class="tab active sign-up-border"><a href="#signup">ثبت نام</a></li>
+            <li class="tab log-in-border"><a href="#login">ورود</a></li>
           </ul>
           
           <div class="tab-content">

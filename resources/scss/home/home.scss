@@ -52,6 +52,7 @@
 }
 body {
     overflow-x: hidden;
+    scroll-behavior: smooth;
     background-color: var(--clr-primary);
 }
 p {
@@ -237,6 +238,10 @@ h6 {
     align-items: center;
     justify-content: center;
     border-radius: 0.5rem;
+}
+.btn:focus {
+    box-shadow: none;
+    outline: none;
 }
 .btn i {
     font-size: 1.1rem;
@@ -809,15 +814,19 @@ footer p span {
 }
 .bxl-instagram:hover {
     color: #ea5a47;
+    border-color: var(--clr-accent);
 }
 .bxl-whatsapp:hover {
     color: #26d367;
+    border-color: var(--clr-accent);
 }
 .bxl-linkedin:hover {
     color: #0a66c2;
+    border-color: var(--clr-accent);
 }
 .bxl-youtube:hover {
     color: #ff0000;
+    border-color: var(--clr-accent);
 }
 
 /* Owl Carousel ------------------------------------------------*/
@@ -1536,7 +1545,7 @@ footer p span {
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 99999; /* Sit on top */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -1545,14 +1554,13 @@ footer p span {
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   }
-  
   /* Modal Content/Box */
   .modal-content {
     background-color: var(--clr-primary);
     margin: 5% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 60%; /* Could be more or less, depending on screen size */
   }
   
   /* The Close Button */
@@ -1571,12 +1579,12 @@ footer p span {
   }
 //   Modal Inner Form----------------
 .form {
-    background: var(--clr-dark);
+    background: var(--clr-primary);
     padding: 40px;
     max-width: 600px;
     margin: 0 auto;
     border-radius: 1.3rem;
-    box-shadow: 0 4px 10px 4px rgba(19, 35, 47, .3);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 2px, rgba(0, 0, 0, 0.23) 0px 0px 3px;
 }
 .tab-group {
     list-style: none;
@@ -1600,34 +1608,37 @@ footer p span {
     text-align: center;
     cursor: pointer;
     transition: 0.5s ease;
+    border-radius: 0 0.5rem 0.5rem 0;
 }
-// .tab-group li a:hover {
-//     background: var(--clr-secondary);
-//     color: #fff;
-// }
+.sign-up-border a {
+    border-radius: 0.5rem 0 0 0.5rem !important;
+}
+
 .tab-group .active a {
-    background: var(--clr-primary);
-    color: var(--clr-dark);
-    font-weight: 600;
+    background: var(--clr-dark);
+    color: var(--clr-primary);
+    font-weight: 400;
 }
 .tab-content > div:last-child {
     display: none;
 }
 .form h3 {
     text-align: center;
-    color: #fff;
-    font-weight: 300;
+    color: var(--clr-dark);
+    font-weight: 600;
     margin: 0 0 40px;
+    font-size: 1.2rem;
 }
 .form label {
     position: absolute;
     transform: translateY(6px);
     right: 13px;
-    color: rgba(255, 255, 255, .5);
+    color: rgba(0, 0, 0, 0.534);
     transition: all 0.25s ease;
     -webkit-backface-visibility: hidden;
     pointer-events: none;
     font-size: 0.8rem;
+    transition: all 0.3s;
 }
 .form label .req {
     margin: 2px;
@@ -1642,24 +1653,26 @@ footer p span {
     opacity: 0;
 }
 .form label.highlight {
-    color: #fff;
+    color: var(--clr-dark);
 }
 .form input, .form textarea {
-    border-radius: 0.5rem !important;
+    border-radius: 0.5rem ;
     font-size: 0.8rem;
     display: block;
     width: 100%;
     height: 100%;
     padding: 15px 10px;
-    background: none;
+    background: rgba(160, 179, 176, .25);
     background-image: none;
-    border: 1px solid #a0b3b0;
-    color: #fff;
-    border-radius: 0;
+    // border: 1px solid #a0b3b0;
+    border: none;
+    color: var(--clr-dark);
+    border-radius: 0.3rem;
     transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 .form input:focus, .form textarea:focus {
     outline: 0;
+    border: 1px solid transparent;
     border-color: var(--clr-accent);
 }
 .form textarea {
@@ -1686,7 +1699,7 @@ footer p span {
 .button {
     border: 0;
     outline: none;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     padding: 15px 0;
     font-size: 1rem;
     font-weight: 600;
@@ -1705,9 +1718,11 @@ footer p span {
     display: block;
     width: 100%;
 }
-.forgot {
+.forgot a {
     margin-top: -20px;
     text-align: right;
+    text-decoration: none;
+    color: var(--clr-secondary);
 }
 
 
