@@ -84,92 +84,51 @@
 
    {{-- Login/Signup Form -------------------------------------------------------}}
    <div id="myModal" class="modal">
-
     <!-- Modal content -->
     <div class="modal-content">
       <span class="close">&times;</span>
       <div class="container">
         <div class="form">
-      
-          <ul class="tab-group">
-            <li class="tab active"><a href="#signup">ثبت نام</a></li>
-            <li class="tab"><a href="#login">ورود</a></li>
+
           </ul>
-          
-          <div class="tab-content">
-            <div id="signup">   
-              <h3>رایگان ثبت نام کنید</h3>
-              
-              <form action="/" method="post">
-              
-              <div class="top-row">
-                <div class="field-wrap">
-                  <label>
-                    نام<span class="req">*</span>
-                  </label>
-                  <input type="text" required autocomplete="off" />
-                </div>
-            
-                <div class="field-wrap">
-                  <label>
-                    نام خانوادگی<span class="req">*</span>
-                  </label>
-                  <input type="text"required autocomplete="off"/>
-                </div>
-              </div>
-    
-              <div class="field-wrap">
-                <label>
-                  E-mail آدرس <span class="req">*</span>
-                </label>
-                <input type="email"required autocomplete="off"/>
-              </div>
-              
-              <div class="field-wrap">
-                <label>
-                  پسورد<span class="req">*</span>
-                </label>
-                <input type="password"required autocomplete="off"/>
-              </div>
-              
-              <button type="submit" class="button button-block"/>ثبت نام</button>
-              
-              </form>
-    
-            </div>
-            
-            <div id="login">   
+
+            <div id="login">
               <h3>خوش آمدید!</h3>
-              
-              <form action="/" method="post">
-              
+
+              <form id="loginForm">
+
                 <div class="field-wrap">
                 <label>
-                  E-mail آدرس<span class="req">*</span>
                 </label>
-                <input type="email"required autocomplete="off"/>
+                <input id="phoneInput" placeholder="شماره همراه خود را وارد کنید" type="text"required autocomplete="off"/>
               </div>
-              
-              <div class="field-wrap">
-                <label>
-                  پسورد<span class="req">*</span>
-                </label>
-                <input type="password"required autocomplete="off"/>
-              </div>
-              
-              <p class="forgot"><a href="#">پسورد را فراموش کرده ای؟</a></p>
-              
-              <button class="button button-block"/>ورود</button>
-              
+
+              <button type="submit" class="button button-block"/>ورود</button>
+
               </form>
-    
+
             </div>
-            
+
           </div><!-- tab-content -->
-          
+
     </div> <!-- /form -->
       </div>
-      
+
     </div>
-  
+
   </div>
+
+  @section('js')
+
+  <script>
+
+    $('#loginForm').submit(function(event){
+
+        console.log('#phoneInput').val();
+        event.preventDefault();
+
+    });
+
+  </script>
+
+  @endsection
