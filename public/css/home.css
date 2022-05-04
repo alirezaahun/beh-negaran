@@ -1791,6 +1791,13 @@ footer p span {
   text-align: center;
 }
 
+#loginForm input:focus-within {
+  background-color: #fff;
+  border: 1px solid var(--clr-accent);
+  outline: none;
+  box-shadow: none;
+}
+
 /* Scroll Bar ----------------------------------------------------------- */
 /* width */
 ::-webkit-scrollbar {
