@@ -2,18 +2,24 @@
 
 @section('content')
     <main class="login-section">
-        <div class="container d-flex justify-content-center align-content-center">
+        <div class="container form-container">
 
-            <form id="loginForm" class="me-auto">
+            <form id="loginForm">
+                <a href=""><img src="{{ asset('images/logo-white.svg') }}" alt="logo"></a>
+
+                <h4>ورود | ثبت‌نام</h4>
 
                 <div class="field-wrap">
-                    <label>
+                    <label class="text-secondary">
+                        سلام! <br>
+
+                        لطفا شماره موبایل خود را وارد کنید
                     </label>
-                    <input id="phoneInput" placeholder="شماره همراه خود را وارد کنید" type="text" required
-                        autocomplete="off" />
+                    <input id="phoneInput" placeholder="مثال : ۰۹۱۲۱۱۱۲۲۳۳" type="text" required autocomplete="off" />
                 </div>
 
-                <button type="submit" class="button button-block" />ورود</button>
+                <button type="submit" class="secondary-btn" />ورود</button>
+
 
             </form>
 
