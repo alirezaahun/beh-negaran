@@ -1260,20 +1260,8 @@ footer p span {
   border-radius: 1.3rem;
 }
 
-.card .imgBx span .fa-instagram {
-  color: var(--clr-secondary);
-}
-
-.card .imgBx span .fa-whatsapp {
-  color: var(--clr-accent);
-}
-
-.card .imgBx span .fa-telegram {
+.card .imgBx span .fa-instagram, .card .imgBx span .fa-whatsapp {
   color: var(--clr-dark);
-}
-
-.card .imgBx span .fa-github {
-  color: black;
 }
 
 .card .imgBx span i:hover {
