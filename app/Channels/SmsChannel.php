@@ -10,10 +10,11 @@ class SmsChannel{
     public function send($notifiable , Notification $notification){
         // dd($notifiable , $notification->code);
 
+        return 'done!';
         $receptor = $notifiable->cellphone;
         $type = 1;
         $template = "test";
-        $param1 = '123456';
+        $param1 = $notification->code;
 
         $response = GhasedakFacade::Verify($receptor, $type, $template, $param1);
 

@@ -2,32 +2,43 @@
 
 @section('content')
     <main class="login-section">
-        <div class="container form-container">
+        <div class="container d-flex justify-content-center align-content-center">
 
-            <form id="loginForm">
-                <a href=""><img src="{{ asset('images/logo-white.svg') }}" alt="logo"></a>
-
-                <h4>ورود | ثبت‌نام</h4>
+            <form id="loginForm" class="me-auto">
 
                 <div class="field-wrap">
-                    <label class="text-secondary">
-                        سلام! <br>
-
-                        لطفا شماره موبایل خود را وارد کنید
+                    <label>
                     </label>
-<<<<<<< HEAD
-                    <input id="phoneInput" placeholder="شماره همراه خود را وارد کنید" type="text"
-                        autocomplete="off" />
+                    <input id="phoneInput" placeholder="شماره همراه خود را وارد کنید" type="text"/>
                 </div>
+
+                <div id="errorPhone" class="input-error-validation">
+
+                    <p style="color: red" id="errorText"></p>
+
+                </div>
+
 
                 <button class="button button-block">ورود</button>
-=======
-                    <input id="phoneInput" placeholder="مثال : ۰۹۱۲۱۱۱۲۲۳۳" type="text" required autocomplete="off" />
+
+            </form>
+
+            <form id="OTPinput" class="me-auto">
+
+                <div class="field-wrap">
+                    <label>
+                    </label>
+                    <input id="codeInput" placeholder="شماره همراه خود را وارد کنید" type="text"/>
                 </div>
 
-                <button type="submit" class="secondary-btn" />ورود</button>
+                <div id="errorCode" class="input-error-validation">
 
->>>>>>> 1418f797b6110d70d577e5aa12eaab07a9732788
+                    <p style="color: red" id="errorOtpText"></p>
+
+                </div>
+
+
+                <button class="button button-block">ورود</button>
 
             </form>
 
@@ -39,18 +50,65 @@
 
 <script>
 
+    let logintoken;
+
+    $('#OTPinput').hide();
+
   $('#loginForm').submit(function(event){
 
       console.log($('#phoneInput').val());
       event.preventDefault();
 
-      $.post("{{url('/login')}}" , {'_token' : "{{csrf_token()}}",'cellphone' : $('#phoneInput').val()} , function(responce , status){
-            console.log(responce , status);
-      }).fail(function(responce){
+      $.post("{{url('/login')}}" ,
+       {
 
-        console.log(responce.responseJSON.errors.cellphone[0]);
+        '_token' : "{{csrf_token()}}",
+       'cellphone' : $('#phoneInput').val()
 
-      });
+        } , function(response , status){
+            console.log(response , status);
+            logintoken = response.login_token;
+            $('#loginForm').fadeOut();
+            $('#OTPinput').fadeIn();
+
+      }).fail(function(response){
+
+        console.log(response.responseJSON.errors.cellphone[0]);
+        $('#errorPhone').fadeIn();
+        $('#errorText').html(response.responseJSON.errors.cellphone[0]);
+
+      })
+
+  });
+
+
+  $('#OTPinput').submit(function(event){
+
+console.log($('#codeInput').val());
+event.preventDefault();
+
+  $.post("{{url('/checkOtp')}}" ,
+       {
+
+        '_token' : "{{csrf_token()}}",
+        'otp' : $('#codeInput').val(),
+        'login_token' : logintoken
+
+        } , function(response , status){
+            console.log(response , status);
+            logintoken = response.login_token;
+
+            $(location).attr('href',"{{route('home.index')}}");
+            // $('#loginForm').fadeOut();
+            // $('#OTPinput').fadeIn();
+
+      }).fail(function(response){
+
+        console.log(response.responseJSON.errors);
+        $('#errorCode').fadeIn();
+        $('#errorOtpText').html(response.responseJSON.errors.otp[0]);
+
+      })
 
   });
 

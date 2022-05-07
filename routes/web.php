@@ -60,3 +60,4 @@ Route::get('/about-us', [HomeController::class , 'about'])->name('home.about');
 Route::get('/services', [HomeController::class , 'services'])->name('home.services');
 Route::get('/projects', [HomeController::class , 'projects'])->name('home.projects');
 Route::any('/login', [authController::class , 'login'])->name('home.login');
+Route::post('/checkOtp', [authController::class , 'check']);
