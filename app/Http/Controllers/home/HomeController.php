@@ -23,6 +23,7 @@ class HomeController extends Controller
         return view('home.index' , compact('main' , 'sliders' , 'logos','second_logos'));
 
     }
+    
 
     public function about(){
 
@@ -39,6 +40,12 @@ class HomeController extends Controller
     public function projects(){
 
         return view('home.projects');
+
+    }
+
+    public function login(){
+
+        return view('home.login');
 
     }
 }

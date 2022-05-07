@@ -45,7 +45,7 @@
               </li>
               <span class="vertical-line"></span>
               <li class="nav-item">
-                <a class="nav-link" href="#">نمونه ها</a>
+                <a class="nav-link" href="{{route('home.projects')}}">نمونه ها</a>
               </li>
               <span class="vertical-line"></span>
               <li class="nav-item">
@@ -73,11 +73,13 @@
 
             </ul>
             <div class="navbar-btns">
-            <a href="#" class="primary-btn"><i class='bx bx-cart'></i>پیگیری سفارشات</a>
+            <a href="#" class="primary-btn"><i class='bx bx-cart-alt'></i>پیگیری سفارشات</a>
             |
-            <a href="#" class="btn effect04" data-sm-link-text="ثبت نام" target="_blank">
+            <a id="logBtn" href="{{route('home.login')}}" class="btn effect04" data-sm-link-text="ثبت نام">
               <span><i class='bx bx-log-in-circle'></i>ورود</span></a>
           </div>
       </div>
     </div>
   </nav>
+
+   
