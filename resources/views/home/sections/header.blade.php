@@ -34,9 +34,7 @@
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#">کمپین تبلیغاتی</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">دیجیتال مارکتینگ</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">جلوه های بصری</a></li>
+                  <li><a class="dropdown-item" href="#">برندینگ و مارکتینگ</a></li>
                 </ul>
               </li>
               <span class="vertical-line"></span>

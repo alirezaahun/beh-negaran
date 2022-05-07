@@ -58,11 +58,10 @@
                         <div class="imgBx">
                             <img src="{{asset('logobanner.jpg')}}" alt="images">
                             <span
-                                class="d-flex  flex-column  justify-content-around  mb-2 custom-fontSize align-items-end  custom-height">
+                                class="d-flex  flex-column  align-items-end">
                                 <a href="" class="mx-2 h3"><i class="fab fa-instagram"></i></a>
                                 <a href="" class="mx-2 h3"><i class="fab fa-whatsapp"></i></a>
-                                <a href="" class="mx-2 h3"><i class="fab fa-telegram"></i></a>
-                                <a href="" class="mx-2 h3"><i class="fab fa-github"></i></a>
+                              
                             </span>
                         </div>
                         <div class="test">
@@ -79,33 +78,10 @@
                         <div class="imgBx">
                             <img src="{{asset('logobanner.jpg')}}" alt="images">
                             <span
-                                class="d-flex  flex-column  justify-content-around  mb-2 custom-fontSize align-items-end  custom-height">
+                                class="d-flex  flex-column  align-items-end">
                                 <a href="" class="mx-2 h3"><i class="fab fa-instagram"></i></a>
                                 <a href="" class="mx-2 h3"><i class="fab fa-whatsapp"></i></a>
-                                <a href="" class="mx-2 h3"><i class="fab fa-telegram"></i></a>
-                                <a href="" class="mx-2 h3"><i class="fab fa-github"></i></a>
-                            </span>
-                        </div>
-                        <div class="test">
-                            <div class="details  d-flex flex-column  justify-content-between ">
-                                <span>
-                                    <h5 class="mt-3">سهراب ناصحی</h5>
-                                </span>
-                                <span class="s">توسعه دهنده وب</span>
-                            </div>
-                        </div>
-                    </div>
-                    {{-- ----------------------------------------------------------------------------- --}}
-                    <div class="card col-12 col-md-6 my-4">
-                        <div class="imgBx">
-                            <img src="{{asset('logobanner.jpg')}}" alt="images">
-
-                            <span
-                                class="d-flex  flex-column  justify-content-around  mb-2 custom-fontSize align-items-end  custom-height">
-                                <a href="" class="mx-2 h3"><i class="fab fa-instagram"></i></a>
-                                <a href="" class="mx-2 h3"><i class="fab fa-whatsapp"></i></a>
-                                <a href="" class="mx-2 h3"><i class="fab fa-telegram"></i></a>
-                                <a href="" class="mx-2 h3"><i class="fab fa-github"></i></a>
+                              
                             </span>
                         </div>
                         <div class="test">
@@ -123,11 +99,10 @@
                             <img src="{{asset('logobanner.jpg')}}" alt="images">
 
                             <span
-                                class="d-flex  flex-column  justify-content-around  mb-2 custom-fontSize align-items-end  custom-height">
+                                class="d-flex  flex-column  align-items-end">
                                 <a href="" class="mx-2 h3"><i class="fab fa-instagram"></i></a>
                                 <a href="" class="mx-2 h3"><i class="fab fa-whatsapp"></i></a>
-                                <a href="" class="mx-2 h3"><i class="fab fa-telegram"></i></a>
-                                <a href="" class="mx-2 h3"><i class="fab fa-github"></i></a>
+                              
                             </span>
                         </div>
                         <div class="test">
@@ -145,11 +120,10 @@
                             <img src="{{asset('logobanner.jpg')}}" alt="images">
 
                             <span
-                                class="d-flex  flex-column  justify-content-around  mb-2 custom-fontSize align-items-end  custom-height">
+                                class="d-flex  flex-column  align-items-end">
                                 <a href="" class="mx-2 h3"><i class="fab fa-instagram"></i></a>
                                 <a href="" class="mx-2 h3"><i class="fab fa-whatsapp"></i></a>
-                                <a href="" class="mx-2 h3"><i class="fab fa-telegram"></i></a>
-                                <a href="" class="mx-2 h3"><i class="fab fa-github"></i></a>
+                              
                             </span>
                         </div>
                         <div class="test">
@@ -167,11 +141,31 @@
                             <img src="{{asset('logobanner.jpg')}}" alt="images">
 
                             <span
-                                class="d-flex  flex-column  justify-content-around  mb-2 custom-fontSize align-items-end  custom-height">
+                                class="d-flex  flex-column  align-items-end">
+                                <a href="" class="mx-2 h3"><i class="fab fa-instagram"></i></a>
+                                <a href="" class="mx-2 h3"><i class="fab fa-whatsapp"></i></a>
+                              
+                            </span>
+                        </div>
+                        <div class="test">
+                            <div class="details  d-flex flex-column  justify-content-between ">
+                                <span>
+                                    <h5 class="mt-3">سهراب ناصحی</h5>
+                                </span>
+                                <span class="s">توسعه دهنده وب</span>
+                            </div>
+                        </div>
+                    </div>
+                    {{-- ----------------------------------------------------------------------------- --}}
+                    <div class="card col-12 col-md-6 my-4">
+                        <div class="imgBx">
+                            <img src="{{asset('logobanner.jpg')}}" alt="images">
+
+                            <span
+                                class="d-flex  flex-column  align-items-end">
                                 <a href="" class="mx-2 h3"><i class="fab fa-instagram a"></i></a>
                                 <a href="" class="mx-2 h3"><i class="fab fa-whatsapp b"></i></a>
-                                <a href="" class="mx-2 h3"><i class="fab fa-telegram c"></i></a>
-                                <a href="" class="mx-2 h3"><i class="fab fa-github d"></i></a>
+                
                             </span>
                         </div>
                         <div class="test">
@@ -189,11 +183,10 @@
                             <img src="{{asset('logobanner.jpg')}}" alt="images">
 
                             <span
-                                class="d-flex  flex-column  justify-content-around  mb-2 custom-fontSize align-items-end  custom-height">
+                                class="d-flex  flex-column  align-items-end">
                                 <a href="" class="mx-2 h3"><i class="fab fa-instagram"></i></a>
                                 <a href="" class="mx-2 h3"><i class="fab fa-whatsapp"></i></a>
-                                <a href="" class="mx-2 h3"><i class="fab fa-telegram"></i></a>
-                                <a href="" class="mx-2 h3"><i class="fab fa-github"></i></a>
+                              
                             </span>
                         </div>
                         <div class="test">
@@ -211,11 +204,10 @@
                             <img src="{{asset('logobanner.jpg')}}" alt="images">
 
                             <span
-                                class="d-flex  flex-column  justify-content-around  mb-2 custom-fontSize align-items-end  custom-height">
+                                class="d-flex  flex-column  align-items-end">
                                 <a href="" class="mx-2 h3"><i class="fab fa-instagram"></i></a>
                                 <a href="" class="mx-2 h3"><i class="fab fa-whatsapp"></i></a>
-                                <a href="" class="mx-2 h3"><i class="fab fa-telegram"></i></a>
-                                <a href="" class="mx-2 h3"><i class="fab fa-github"></i></a>
+                              
                             </span>
                         </div>
                         <div class="test">
@@ -262,8 +254,7 @@
                         <p class="text-center">
                             <a href="" class="mx-2 h3"><i class="fab fa-instagram"></i></a>
                             <a href="" class="mx-2 h3"><i class="fab fa-whatsapp"></i></a>
-                            <a href="" class="mx-2 h3"><i class="fab fa-telegram"></i></a>
-                            <a href="" class="mx-2 h3"><i class="fab fa-github"></i></a>
+                          
                             <a href="" class="mx-2 h3"><i class="fab fa-facebook"></i></a>
                         </p>
                     </div>
