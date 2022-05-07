@@ -124,11 +124,10 @@ h6 {
 .---active,
 .nav__link:active {
     color: var(--clr-secondary) !important;
-    
 }
 .nav__link span {
-    font-weight: 900 ;
-    font-family: 'Vazir';
+    font-weight: 900;
+    font-family: "Vazir";
 }
 .nav__icon {
     font-size: 1.5rem;
@@ -915,8 +914,7 @@ footer p span {
 #advertise-consultation-service p,
 #social-media-service p,
 #advertise-campaign-service p,
-#digital-marketing-service p,
-#visual-effects-service p {
+#digital-marketing-service p {
     text-align: justify;
 }
 
@@ -929,8 +927,7 @@ footer p span {
 #advertise-consultation-service hr,
 #social-media-service hr,
 #advertise-campaign-service hr,
-#digital-marketing-service hr,
-#visual-effects-service hr {
+#digital-marketing-service hr {
     background-color: var(--clr-accent);
     padding: 3px;
     opacity: 1;
@@ -945,8 +942,7 @@ footer p span {
 #advertise-consultation-service hr,
 #social-media-service hr,
 #advertise-campaign-service hr,
-#digital-marketing-service hr,
-#visual-effects-service hr {
+#digital-marketing-service hr {
     background-color: var(--clr-secondary);
 }
 .icon-pic img {
@@ -960,9 +956,15 @@ footer p span {
 .service-description {
     background-color: var(--clr-primary);
     border-radius: 1.3rem;
-    padding: 0.5rem 2rem;
+    padding: 0.2rem 0;
     margin-top: 2.5rem;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 2px, rgba(0, 0, 0, 0.23) 0px 0px 3px;
+    height: 90%;
+    transition: transform 0.3s ease-out;
+}
+.service-description:hover {
+    transform: translateY(-8px);
+    transition: transform 0.3s ease-out;
 }
 .service-description img {
     width: 5rem;
@@ -975,14 +977,31 @@ footer p span {
     text-align: center;
     color: var(--clr-secondary);
     margin: 1rem auto;
+    // display: inline-block;
+    position: relative;
 }
-.service-description p {
-    margin: 1rem 0.5rem;
-    text-align: justify;
+.service-description h5::after {
+    content: "";
+    position: absolute;
+    border-radius: 3px;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: -10px;
+    left: 0;
+    background-color: var(--clr-accent);
+    transform-origin: center;
+    transition: transform 0.3s ease-out;
+}
+.service-description:hover h5::after {
+    transform: scaleX(1);
+    transform-origin: left right;
 }
 .service-description ul li p {
     word-spacing: normal;
-    font-weight: 600;
+    // font-weight: 600;
+    // text-align: start !important;
+    font-size: 1rem;
 }
 .service-description ul {
     list-style: none;
@@ -1092,7 +1111,8 @@ footer p span {
     border-radius: 1.3rem;
 }
 
-.card .imgBx span .fa-instagram,.card .imgBx span .fa-whatsapp {
+.card .imgBx span .fa-instagram,
+.card .imgBx span .fa-whatsapp {
     color: var(--clr-dark);
 }
 .card .imgBx span i:hover {
@@ -1151,7 +1171,6 @@ footer p span {
 .picture-item img {
     display: block;
     width: 100%;
-    
 }
 .btn-group {
     display: flex;
@@ -1547,7 +1566,6 @@ footer p span {
     outline: none;
     box-shadow: none;
 }
-
 
 /* Scroll Bar ----------------------------------------------------------- */
 /* width */
