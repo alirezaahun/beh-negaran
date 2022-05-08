@@ -61,3 +61,5 @@ Route::get('/services', [HomeController::class , 'services'])->name('home.servic
 Route::get('/projects', [HomeController::class , 'projects'])->name('home.projects');
 Route::any('/login', [authController::class , 'login'])->name('home.login');
 Route::post('/checkOtp', [authController::class , 'check']);
+Route::get('/logout', [HomeController::class , 'logout'])->name('logout');
+
