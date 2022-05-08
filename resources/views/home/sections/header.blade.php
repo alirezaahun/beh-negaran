@@ -77,7 +77,7 @@
 
               @if (auth()->check())
 
-                <span><i class='bx bx-log-in-circle'></i>{{auth()->user()->cellphone}}</span></a>
+                <a href="#" class="me-auto"><span>{{auth()->user()->cellphone}}</span></a>
 
                 @else
 
