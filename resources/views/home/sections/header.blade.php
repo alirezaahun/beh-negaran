@@ -71,14 +71,14 @@
 
             </ul>
             <div class="navbar-btns">
-            <a href="#" class="primary-btn"><i class='bx bx-cart-alt'></i>پیگیری سفارشات</a>
+
+            <a href="{{route('logout')}}" class="primary-btn"><i class='bx bx-cart-alt'></i>پیگیری سفارشات</a>
             |
 
 
               @if (auth()->check())
 
-                <span>  {{auth()->user()->cellphone}}</span></a>
-                
+                <span>{{auth()->user()->cellphone}}</span></a>
 
                 @else
 
