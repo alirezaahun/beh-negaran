@@ -19,7 +19,7 @@
                 </div>
 
 
-                <button class="button button-block">ورود</button>
+                <button class="secondary-btn">ورود</button>
 
             </form>
 
@@ -38,7 +38,7 @@
                 </div>
 
 
-                <button class="button button-block">ورود</button>
+                <button class="secondary-btn">ورود</button>
 
             </form>
 
