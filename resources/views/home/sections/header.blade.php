@@ -73,11 +73,25 @@
             <div class="navbar-btns">
             <a href="#" class="primary-btn"><i class='bx bx-cart-alt'></i>پیگیری سفارشات</a>
             |
-            <a id="logBtn" href="{{route('home.login')}}" class="btn effect04" data-sm-link-text="ثبت نام">
-              <span><i class='bx bx-log-in-circle'></i>ورود</span></a>
+
+
+              @if (auth()->check())
+
+                <span><i class='bx bx-log-in-circle'></i>{{auth()->user()->cellphone}}</span></a>
+
+                @else
+
+                <a id="logBtn" href="{{route('home.login')}}" class="btn effect04" data-sm-link-text="ثبت نام">
+                    <span><i class='bx bx-log-in-circle'></i>ورود</span></a>
+
+              @endif
+
+
+
+
           </div>
       </div>
     </div>
   </nav>
 
-   
+
