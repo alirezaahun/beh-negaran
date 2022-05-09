@@ -59,6 +59,8 @@ Route::get('/', [HomeController::class , 'index'])->name('home.index');
 Route::get('/about-us', [HomeController::class , 'about'])->name('home.about');
 Route::get('/services', [HomeController::class , 'services'])->name('home.services');
 Route::get('/projects', [HomeController::class , 'projects'])->name('home.projects');
+Route::get('/pricing', [HomeController::class , 'pricing'])->name('home.pricing');
+
 Route::any('/login', [authController::class , 'login'])->name('home.login');
 Route::post('/checkOtp', [authController::class , 'check']);
 Route::get('/logout', [HomeController::class , 'logout'])->name('logout');
