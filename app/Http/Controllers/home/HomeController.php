@@ -33,6 +33,8 @@ class HomeController extends Controller
 
     }
 
+    
+
     public function services(){
 
         return view('home.services');
@@ -42,6 +44,11 @@ class HomeController extends Controller
     public function projects(){
 
         return view('home.projects');
+
+    }
+    public function pricing(){
+
+        return view('home.pricing');
 
     }
 
