@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg costume-nav">
     <div class="container-fluid">
-      <img src="{{ asset('images/logo4.svg') }}" class="navbar-brand"></img>
+      <a href="{{route('home.index')}}"><img src="{{ asset('images/logo4.svg') }}" class="navbar-brand"></img></a>
       <button class="navbar-toggler p-0 me-3" id="navbarTogglerBtn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <div id="menu_button">
           <input type="checkbox" id="menu_checkbox">
@@ -24,17 +24,17 @@
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="{{route('home.services')}}/#website-service">سایت</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">طراحی</a></li>
+                  <li><a class="dropdown-item" href="{{route('home.services')}}/#design-service">طراحی</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">پادکست</a></li>
+                  <li><a class="dropdown-item" href="{{route('home.services')}}/#podcast-service">پادکست</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">مشاوره تبلیغاتی</a></li>
+                  <li><a class="dropdown-item" href="{{route('home.services')}}/#advertise-consultation-service">مشاوره تبلیغاتی</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">شبکه های اجتماعی</a></li>
+                  <li><a class="dropdown-item" href="{{route('home.services')}}/#social-media-service">شبکه های اجتماعی</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">کمپین تبلیغاتی</a></li>
+                  <li><a class="dropdown-item" href="{{route('home.services')}}/#advertise-campaign-service">کمپین تبلیغاتی</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">برندینگ و مارکتینگ</a></li>
+                  <li><a class="dropdown-item" href="{{route('home.services')}}/#digital-marketing-service">برندینگ و مارکتینگ</a></li>
                 </ul>
               </li>
               <span class="vertical-line"></span>
@@ -78,7 +78,7 @@
 
               @if (auth()->check())
 
-                <span>{{auth()->user()->cellphone}}</span></a>
+                <a class="profile-link" href="#"><span>{{auth()->user()->cellphone}}</span></a>
 
                 @else
 

@@ -191,7 +191,14 @@ h6 {
 .dropdown-menu {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
-
+.profile-link {
+    text-decoration: none;
+    color: var(--clr-dark);
+    margin: 0 auto;
+}
+.profile-link:hover {
+    color: var(--clr-secondary);
+}
 /* Navbar Vertical Line --------------------------------------------------- */
 .vertical-line {
     width: 1rem;
@@ -1014,7 +1021,9 @@ footer p span {
     float: right;
     margin-left: 5px;
 }
-
+.no-p-left {
+    padding-left: 0;
+}
 // about us page style.....................................................
 .card {
     position: relative;
@@ -1671,23 +1680,29 @@ body {
     justify-content: center;
     align-items: center;
 }
-#loginForm {
+#loginForm,
+#OTPinput {
     padding: 3rem;
     border-radius: 0.7rem;
     background-color: var(--clr-primary);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 2px, rgba(0, 0, 0, 0.23) 0px 0px 3px;
 }
 #loginForm input,
+#OTPinput input,
 #loginForm button,
-#loginForm img {
+#OTPinput button,
+#loginForm img,
+#OTPinput img {
     display: block;
     margin: 1.5rem auto;
     width: 100%;
 }
-#loginForm img {
+#loginForm img,
+#OTPinput img {
     filter: drop-shadow(0 0 1px black);
 }
-#loginForm input {
+#loginForm input,
+#OTPinput input {
     background-color: #95a5a67c;
     border: 1px solid transparent;
     border-radius: 0.5rem;
@@ -1697,11 +1712,50 @@ body {
     color: var(--clr-dark);
     text-align: center;
 }
-#loginForm input:focus-within {
+#loginForm input:focus-within,
+#OTPinput input:focus-within {
     border-color: var(--clr-accent);
     background-color: #fff;
     outline: none;
     box-shadow: none;
+}
+.secondary-btn.spinning {
+    // padding-right: 10px;
+}
+.secondary-btn.spinning:after {
+    content: "";
+    position: absolute;
+    right: 30%;
+    top: 50%;
+    width: 0;
+    height: 0;
+    box-shadow: 0px 0px 0 1px var(--clr-accent);
+    border-radius: 50%;
+    animation: rotate360 0.5s infinite linear, exist 0.1s forwards ease;
+}
+.secondary-btn.spinning:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    right: 30%;
+    top: 50%;
+    position: absolute;
+    border: 2px solid var(--clr-accent);
+    border-right: 3px solid var(--clr-secondary);
+    animation: rotate360 0.5s infinite linear, exist 0.1s forwards ease;
+}
+@keyframes rotate360 {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes exist {
+    100% {
+        width: 15px;
+        height: 15px;
+        margin: -8px 5px 0 0;
+    }
 }
 
 /* Scroll Bar ----------------------------------------------------------- */
@@ -1882,6 +1936,22 @@ body {
         overflow: hidden;
         transition: max-height 0.2s ease-out;
     }
+    #video-service hr,
+    #photo-service hr,
+    #website-service hr,
+    #design-service hr,
+    #podcast-service hr,
+    #advertise-consultation-service hr,
+    #social-media-service hr,
+    #advertise-campaign-service hr,
+    #digital-marketing-service hr {
+        width: 100% !important;
+    }
+    .icon-pic img,
+    .digital-marketing-pic img {
+        margin: 2.5rem auto 1rem auto;
+    }
+     
 }
 /* Tablet Screen -----------------------------------------------*/
 @media only screen and (min-width: 768px) and (max-width: 991px) {
