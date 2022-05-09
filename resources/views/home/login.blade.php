@@ -5,11 +5,16 @@
         <div class="container d-flex justify-content-center align-content-center">
 
             <form id="loginForm" class="me-auto">
+                <h5>ورود | ثبت‌نام</h5>
+
+                <p class="text-secondary">سلام!
+                    <br>
+                    لطفا شماره موبایل یا ایمیل خود را وارد کنید
+                </p>
 
                 <div class="field-wrap">
-                    <label>
-                    </label>
-                    <input id="phoneInput" placeholder="شماره همراه خود را وارد کنید" type="text"/>
+                    
+                    <input id="phoneInput" placeholder="شماره همراه خود را وارد کنید" type="text" />
                 </div>
 
                 <div id="errorPhone" class="input-error-validation">
@@ -28,7 +33,7 @@
                 <div class="field-wrap">
                     <label>
                     </label>
-                    <input id="codeInput" placeholder="شماره همراه خود را وارد کنید" type="text"/>
+                    <input id="codeInput" placeholder="شماره همراه خود را وارد کنید" type="text" />
                 </div>
 
                 <div id="errorCode" class="input-error-validation">
@@ -47,72 +52,65 @@
 @endsection
 
 @section('js')
+    <script>
+        let logintoken;
 
-<script>
+        $('#OTPinput').hide();
 
-    let logintoken;
+        $('#loginForm').submit(function(event) {
 
-    $('#OTPinput').hide();
+            console.log($('#phoneInput').val());
+            event.preventDefault();
 
-  $('#loginForm').submit(function(event){
+            $.post("{{ url('/login') }}", {
 
-      console.log($('#phoneInput').val());
-      event.preventDefault();
+                '_token': "{{ csrf_token() }}",
+                'cellphone': $('#phoneInput').val()
 
-      $.post("{{url('/login')}}" ,
-       {
+            }, function(response, status) {
+                console.log(response, status);
+                logintoken = response.login_token;
+                $('#loginForm').fadeOut();
+                $('#OTPinput').fadeIn();
 
-        '_token' : "{{csrf_token()}}",
-       'cellphone' : $('#phoneInput').val()
+            }).fail(function(response) {
 
-        } , function(response , status){
-            console.log(response , status);
-            logintoken = response.login_token;
-            $('#loginForm').fadeOut();
-            $('#OTPinput').fadeIn();
+                console.log(response.responseJSON.errors.cellphone[0]);
+                $('#errorPhone').fadeIn();
+                $('#errorText').html(response.responseJSON.errors.cellphone[0]);
 
-      }).fail(function(response){
+            })
 
-        console.log(response.responseJSON.errors.cellphone[0]);
-        $('#errorPhone').fadeIn();
-        $('#errorText').html(response.responseJSON.errors.cellphone[0]);
-
-      })
-
-  });
+        });
 
 
-  $('#OTPinput').submit(function(event){
+        $('#OTPinput').submit(function(event) {
 
-console.log($('#codeInput').val());
-event.preventDefault();
+            console.log($('#codeInput').val());
+            event.preventDefault();
 
-  $.post("{{url('/checkOtp')}}" ,
-       {
+            $.post("{{ url('/checkOtp') }}", {
 
-        '_token' : "{{csrf_token()}}",
-        'otp' : $('#codeInput').val(),
-        'login_token' : logintoken
+                '_token': "{{ csrf_token() }}",
+                'otp': $('#codeInput').val(),
+                'login_token': logintoken
 
-        } , function(response , status){
-            console.log(response , status);
-            logintoken = response.login_token;
+            }, function(response, status) {
+                console.log(response, status);
+                logintoken = response.login_token;
 
-            $(location).attr('href',"{{route('home.index')}}");
-            // $('#loginForm').fadeOut();
-            // $('#OTPinput').fadeIn();
+                $(location).attr('href', "{{ route('home.index') }}");
+                // $('#loginForm').fadeOut();
+                // $('#OTPinput').fadeIn();
 
-      }).fail(function(response){
+            }).fail(function(response) {
 
-        console.log(response.responseJSON.errors);
-        $('#errorCode').fadeIn();
-        $('#errorOtpText').html(response.responseJSON.errors.otp[0]);
+                console.log(response.responseJSON.errors);
+                $('#errorCode').fadeIn();
+                $('#errorOtpText').html(response.responseJSON.errors.otp[0]);
 
-      })
+            })
 
-  });
-
-</script>
-
+        });
+    </script>
 @endsection
-

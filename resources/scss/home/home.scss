@@ -1552,7 +1552,7 @@ footer p span {
 }
 #loginForm input {
     background-color: #95a5a67c;
-    border: none;
+    border: 1px solid transparent;
     border-radius: 0.5rem;
     padding: 0.7rem;
     font-size: 1rem;
@@ -1561,8 +1561,8 @@ footer p span {
     text-align: center;
 }
 #loginForm input:focus-within {
+    border-color: var(--clr-accent);
     background-color: #fff;
-    border: 1px solid var(--clr-accent);
     outline: none;
     box-shadow: none;
 }
