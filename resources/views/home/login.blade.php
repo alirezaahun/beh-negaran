@@ -27,7 +27,7 @@
                 </div>
 
 
-                <button class="secondary-btn loading-btn">ورود</button>
+                <button class="secondary-btn loading-btn">ادامه</button>
 
             </form>
 
@@ -53,7 +53,7 @@
                 </div>
 
 
-                <button class="secondary-btn loading-btn">ورود</button>
+                <button class="secondary-btn">ورود</button>
 
             </form>
 
@@ -128,13 +128,13 @@
     var twoToneButton = document.querySelector('.loading-btn');
     
     twoToneButton.addEventListener("click", function() {
-        twoToneButton.innerHTML = "ورود";
+        twoToneButton.innerHTML = "ادامه";
         twoToneButton.classList.add('spinning');
         
       setTimeout( 
             function  (){  
                 twoToneButton.classList.remove('spinning');
-                twoToneButton.innerHTML = "ورود";
+                twoToneButton.innerHTML = "ادامه";
                 
             }, 3000);
     }, false);
