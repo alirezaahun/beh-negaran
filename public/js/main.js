@@ -3284,132 +3284,7 @@ for (var i = 0; i < links.length; i++) {
     current[0].className = current[0].className.replace(" ---active", "");
     this.className += " ---active";
   });
-} // ********************************************
-
-
-;
-
-(function ($) {
-  "use strict"; //* Form js
-
-  function verificationForm() {
-    //jQuery time
-    var current_fs, next_fs, previous_fs; //fieldsets
-
-    var left, opacity, scale; //fieldset properties which we will animate
-
-    var animating; //flag to prevent quick multi-click glitches
-
-    $(".next").click(function () {
-      if (animating) return false;
-      animating = true;
-      current_fs = $(this).parent();
-      next_fs = $(this).parent().next(); //activate next step on progressbar using the index of next_fs
-
-      $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active"); //show the next fieldset
-
-      next_fs.show(); //hide the current fieldset with style
-
-      current_fs.animate({
-        opacity: 0
-      }, {
-        step: function step(now, mx) {
-          //as the opacity of current_fs reduces to 0 - stored in "now"
-          //1. scale current_fs down to 80%
-          scale = 1 - (1 - now) * 0.2; //2. bring next_fs from the right(50%)
-
-          left = now * 50 + "%"; //3. increase opacity of next_fs to 1 as it moves in
-
-          opacity = 1 - now;
-          current_fs.css({
-            'transform': 'scale(' + scale + ')',
-            'position': 'absolute'
-          });
-          next_fs.css({
-            'left': left,
-            'opacity': opacity
-          });
-        },
-        duration: 800,
-        complete: function complete() {
-          current_fs.hide();
-          animating = false;
-        },
-        //this comes from the custom easing plugin
-        easing: 'easeInOutBack'
-      });
-    });
-    $(".previous").click(function () {
-      if (animating) return false;
-      animating = true;
-      current_fs = $(this).parent();
-      previous_fs = $(this).parent().prev(); //de-activate current step on progressbar
-
-      $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active"); //show the previous fieldset
-
-      previous_fs.show(); //hide the current fieldset with style
-
-      current_fs.animate({
-        opacity: 0
-      }, {
-        step: function step(now, mx) {
-          //as the opacity of current_fs reduces to 0 - stored in "now"
-          //1. scale previous_fs from 80% to 100%
-          scale = 0.8 + (1 - now) * 0.2; //2. take current_fs to the right(50%) - from 0%
-
-          left = (1 - now) * 50 + "%"; //3. increase opacity of previous_fs to 1 as it moves in
-
-          opacity = 1 - now;
-          current_fs.css({
-            'left': left
-          });
-          previous_fs.css({
-            'transform': 'scale(' + scale + ')',
-            'opacity': opacity
-          });
-        },
-        duration: 800,
-        complete: function complete() {
-          current_fs.hide();
-          animating = false;
-        },
-        //this comes from the custom easing plugin
-        easing: 'easeInOutBack'
-      });
-    });
-    $(".submit").click(function () {
-      return false;
-    });
-  }
-
-  ; //* Add Phone no select
-
-  function phoneNoselect() {
-    if ($('#msform').length) {
-      $("#phone").intlTelInput();
-      $("#phone").intlTelInput("setNumber", "+880");
-    }
-
-    ;
-  }
-
-  ; //* Select js
-
-  function nice_Select() {
-    if ($('.product_select').length) {
-      $('select').niceSelect();
-    }
-
-    ;
-  }
-
-  ;
-  /*Function Calls*/
-
-  verificationForm();
-  phoneNoselect();
-  nice_Select();
-})(jQuery);
+}
 
 /***/ }),
 
@@ -20578,9 +20453,12 @@ return jQuery;
 /*!***************************************!*\
   !*** ./resources/scss/home/home.scss ***!
   \***************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-throw new Error("Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nSassError: expected \"{\".\n     ╷\n1181 │ @import url(https://fonts.googleapis.com/css?family=Montserrat);\r\n     │                                                                ^\n     ╵\n  resources\\scss\\home\\home.scss 1181:64  root stylesheet\n    at processResult (C:\\xampp\\htdocs\\php-web\\beh-negaran\\node_modules\\webpack\\lib\\NormalModule.js:753:19)\n    at C:\\xampp\\htdocs\\php-web\\beh-negaran\\node_modules\\webpack\\lib\\NormalModule.js:855:5\n    at C:\\xampp\\htdocs\\php-web\\beh-negaran\\node_modules\\loader-runner\\lib\\LoaderRunner.js:399:11\n    at C:\\xampp\\htdocs\\php-web\\beh-negaran\\node_modules\\loader-runner\\lib\\LoaderRunner.js:251:18\n    at context.callback (C:\\xampp\\htdocs\\php-web\\beh-negaran\\node_modules\\loader-runner\\lib\\LoaderRunner.js:124:13)\n    at C:\\xampp\\htdocs\\php-web\\beh-negaran\\node_modules\\sass-loader\\dist\\index.js:54:7\n    at Function.call$2 (C:\\xampp\\htdocs\\php-web\\beh-negaran\\node_modules\\sass\\sass.dart.js:99012:16)\n    at render_closure1.call$2 (C:\\xampp\\htdocs\\php-web\\beh-negaran\\node_modules\\sass\\sass.dart.js:84527:12)\n    at _RootZone.runBinary$3$3 (C:\\xampp\\htdocs\\php-web\\beh-negaran\\node_modules\\sass\\sass.dart.js:29558:18)\n    at _FutureListener.handleError$1 (C:\\xampp\\htdocs\\php-web\\beh-negaran\\node_modules\\sass\\sass.dart.js:28080:21)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
 
 /***/ }),
 
@@ -22565,7 +22443,42 @@ Shuffle.__getCenteredPositions = getCenteredPositions;
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/chunk loaded */
+/******/ 	(() => {
+/******/ 		var deferred = [];
+/******/ 		__webpack_require__.O = (result, chunkIds, fn, priority) => {
+/******/ 			if(chunkIds) {
+/******/ 				priority = priority || 0;
+/******/ 				for(var i = deferred.length; i > 0 && deferred[i - 1][2] > priority; i--) deferred[i] = deferred[i - 1];
+/******/ 				deferred[i] = [chunkIds, fn, priority];
+/******/ 				return;
+/******/ 			}
+/******/ 			var notFulfilled = Infinity;
+/******/ 			for (var i = 0; i < deferred.length; i++) {
+/******/ 				var [chunkIds, fn, priority] = deferred[i];
+/******/ 				var fulfilled = true;
+/******/ 				for (var j = 0; j < chunkIds.length; j++) {
+/******/ 					if ((priority & 1 === 0 || notFulfilled >= priority) && Object.keys(__webpack_require__.O).every((key) => (__webpack_require__.O[key](chunkIds[j])))) {
+/******/ 						chunkIds.splice(j--, 1);
+/******/ 					} else {
+/******/ 						fulfilled = false;
+/******/ 						if(priority < notFulfilled) notFulfilled = priority;
+/******/ 					}
+/******/ 				}
+/******/ 				if(fulfilled) {
+/******/ 					deferred.splice(i--, 1)
+/******/ 					var r = fn();
+/******/ 					if (r !== undefined) result = r;
+/******/ 				}
+/******/ 			}
+/******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -22594,13 +22507,68 @@ Shuffle.__getCenteredPositions = getCenteredPositions;
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		// no baseURI
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"/js/main": 0,
+/******/ 			"css/home": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
+/******/ 		
+/******/ 		// install a JSONP callback for chunk loading
+/******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
+/******/ 			var [chunkIds, moreModules, runtime] = data;
+/******/ 			// add "moreModules" to the modules object,
+/******/ 			// then flag all "chunkIds" as loaded and fire callback
+/******/ 			var moduleId, chunkId, i = 0;
+/******/ 			if(chunkIds.some((id) => (installedChunks[id] !== 0))) {
+/******/ 				for(moduleId in moreModules) {
+/******/ 					if(__webpack_require__.o(moreModules, moduleId)) {
+/******/ 						__webpack_require__.m[moduleId] = moreModules[moduleId];
+/******/ 					}
+/******/ 				}
+/******/ 				if(runtime) var result = runtime(__webpack_require__);
+/******/ 			}
+/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
+/******/ 			for(;i < chunkIds.length; i++) {
+/******/ 				chunkId = chunkIds[i];
+/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
+/******/ 					installedChunks[chunkId][0]();
+/******/ 				}
+/******/ 				installedChunks[chunkId] = 0;
+/******/ 			}
+/******/ 			return __webpack_require__.O(result);
+/******/ 		}
+/******/ 		
+/******/ 		var chunkLoadingGlobal = self["webpackChunkecommerce"] = self["webpackChunkecommerce"] || [];
+/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
+/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
+/******/ 	})();
+/******/ 	
 /************************************************************************/
 /******/ 	
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
-/******/ 	__webpack_require__("./resources/js/home/main.js");
-/******/ 	// This entry module doesn't tell about it's top-level declarations so it can't be inlined
-/******/ 	var __webpack_exports__ = __webpack_require__("./resources/scss/home/home.scss");
+/******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
+/******/ 	__webpack_require__.O(undefined, ["css/home"], () => (__webpack_require__("./resources/js/home/main.js")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/home"], () => (__webpack_require__("./resources/scss/home/home.scss")))
+/******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
 ;

@@ -1199,7 +1199,7 @@ footer p span {
   height: 370px;
   background: var(--clr-primary);
   margin: 0 auto;
-  border-radius: 1.3rem;
+  border-radius: 4px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   border-radius: 1.3rem;
   overflow: hidden;
@@ -1213,7 +1213,7 @@ footer p span {
   left: 0;
   width: 100%;
   height: 100%;
-  border-radius: 1.3rem;
+  border-radius: 4px;
   background: #fff;
   transition: all linear 0.3s;
   z-index: -1;
@@ -1265,34 +1265,25 @@ footer p span {
   -o-object-fit: cover;
      object-fit: cover;
   transition: 1s;
-  border-radius: 1rem;
+  border-radius: 0.3rem;
 }
 
 .card .details {
   position: absolute;
   left: 10px;
-  right: 55px;
+  right: 10px;
   bottom: 10px;
   height: 80px;
+  text-align: center;
 }
 
-.card i {
-  font-size: 2.5rem;
-  color: var(--clr-dark);
-  border-bottom: 3px solid var(--clr-dark);
-  margin-top: 1rem;
-}
-
-.card i:hover {
-  color: var(--clr-secondary);
-  border-color: var(--clr-accent);
-}
-
-.card .details h5 {
+.card .details h2 {
   margin: 0;
   padding: 0;
-  font-size: 1.5rem;
-  color: var(--clr-secondary);
+  font-weight: 600;
+  font-size: 20px;
+  color: #3a3737;
+  text-transform: uppercase;
 }
 
 .custom-height {
@@ -1336,26 +1327,6 @@ footer p span {
   margin-bottom: 2rem;
 }
 
-<<<<<<< HEAD
-.page-content p {
-  text-align: justify;
-}
-
-.about-us-social-icons {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.about-us-social-icons i {
-  font-size: 2.5rem;
-  color: var(--clr-dark);
-  border-bottom: 3px solid var(--clr-dark);
-}
-
-.about-us-banner {
-  border-radius: 1.3rem;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 2px, rgba(0, 0, 0, 0.23) 0px 0px 3px;
-=======
 body {
   font-family: montserrat, arial, verdana;
 }
@@ -1472,7 +1443,6 @@ body {
 #multistepsform #progressbar li.active:before, #multistepsform #progressbar li.active:after {
   background: #ff9a76;
   color: white;
->>>>>>> a5ff784e8f4a364c89e2c2357ff355e07c9f4b66
 }
 
 .project-page-title h3 {
@@ -2259,10 +2229,6 @@ body {
   .icon-pic img,
 .digital-marketing-pic img {
     margin: 2.5rem auto 1rem auto;
-  }
-
-  .aboutUs-custom-hr2 {
-    width: 100% !important;
   }
 }
 /* Tablet Screen -----------------------------------------------*/
