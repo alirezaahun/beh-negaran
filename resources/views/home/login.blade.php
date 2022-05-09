@@ -5,16 +5,19 @@
         <div class="container d-flex justify-content-center align-content-center">
 
             <form id="loginForm" class="me-auto">
+
+                     <img src="{{ asset('images/logo-white.svg') }}" alt="logo">
+
                 <h5>ورود | ثبت‌نام</h5>
 
                 <p class="text-secondary">سلام!
                     <br>
-                    لطفا شماره موبایل یا ایمیل خود را وارد کنید
+                    لطفا شماره موبایل خود را وارد کنید
                 </p>
 
                 <div class="field-wrap">
                     
-                    <input id="phoneInput" placeholder="شماره همراه خود را وارد کنید" type="text" />
+                    <input id="phoneInput" placeholder="۰۹۱۲۱۱۱۲۲۳۳" type="text" />
                 </div>
 
                 <div id="errorPhone" class="input-error-validation">
@@ -24,16 +27,23 @@
                 </div>
 
 
-                <button class="secondary-btn">ورود</button>
+                <button class="secondary-btn loading-btn">ورود</button>
 
             </form>
 
             <form id="OTPinput" class="me-auto">
+                <img src="{{ asset('images/logo-white.svg') }}" alt="logo">
+
+                <h5>ورود | ثبت‌نام</h5>
+
+                <p class="text-secondary">سلام!
+                    <br>
+                    لطفا کد ارسال شده را وارد کنید 
+                </p>
 
                 <div class="field-wrap">
-                    <label>
-                    </label>
-                    <input id="codeInput" placeholder="شماره همراه خود را وارد کنید" type="text" />
+                    
+                    <input id="codeInput" placeholder="----" type="text" />
                 </div>
 
                 <div id="errorCode" class="input-error-validation">
@@ -43,7 +53,7 @@
                 </div>
 
 
-                <button class="secondary-btn">ورود</button>
+                <button class="secondary-btn loading-btn">ورود</button>
 
             </form>
 
@@ -112,5 +122,23 @@
             })
 
         });
+
+        $(function(){
+    
+    var twoToneButton = document.querySelector('.loading-btn');
+    
+    twoToneButton.addEventListener("click", function() {
+        twoToneButton.innerHTML = "ورود";
+        twoToneButton.classList.add('spinning');
+        
+      setTimeout( 
+            function  (){  
+                twoToneButton.classList.remove('spinning');
+                twoToneButton.innerHTML = "ورود";
+                
+            }, 3000);
+    }, false);
+    
+});
     </script>
 @endsection

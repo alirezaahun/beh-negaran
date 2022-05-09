@@ -33,7 +33,7 @@
 
                 {{-- Video Service ------------------------------------------------- --}}
                 <div class="row mt-5" id="video-service">
-                    <div class="row">
+                    
                         <div class="col-md-10 col-sm-12">
                             <h3>ویدئو</h3>
                             <hr class="w-25">
@@ -51,9 +51,9 @@
                             <img class="img-fluid" src="{{ asset('images/video-camera.png') }}">
 
                         </div>
-                    </div>
+                    
 
-                    <div class="row mt-5 mb-4">
+                    <div class="row mt-5 mb-4 no-p-left">
                         <h4 class="text-center">انواع خدمات ویدئویی به‌نگاران</h4>
 
 
@@ -134,7 +134,7 @@
 
                 {{-- Photo Service ------------------------------------------------- --}}
                 <div class="row mt-5" id="photo-service">
-                    <div class="row">
+                    
                         <div class="col-md-10 col-sm-12">
                             <h3>عکس</h3>
                             <hr class="w-25">
@@ -151,9 +151,9 @@
                             <img class="img-fluid" src="{{ asset('images/photo-camera.png') }}">
 
                         </div>
-                    </div>
+                    
 
-                    <div class="row mt-5 mb-4">
+                    <div class="row mt-5 mb-4 no-p-left">
                         <h4 class="text-center">انواع خدمات عکاسی به‌نگاران</h4>
 
 
@@ -227,7 +227,7 @@
 
                 {{-- Website Service ------------------------------------------------- --}}
                 <div class="row mt-5" id="website-service">
-                    <div class="row">
+                    
                         <div class="col-md-10 col-sm-12">
                             <h3>خدمات وب‌سایت</h3>
                             <hr class="w-25">
@@ -244,9 +244,9 @@
                             <img class="img-fluid" src="{{ asset('images/graphic-design.png') }}">
 
                         </div>
-                    </div>
+                   
 
-                    <div class="row mt-5 mb-4">
+                    <div class="row mt-5 mb-4 no-p-left">
                         <h4 class="text-center">انواع خدمات وب‌سایت</h4>
 
 
@@ -308,7 +308,7 @@
 
                 {{-- Design Service ------------------------------------------------- --}}
                 <div class="row mt-5" id="design-service">
-                    <div class="row">
+                    
                         <div class="col-md-10 col-sm-12">
                             <h3>طراحی</h3>
                             <hr class="w-25">
@@ -327,9 +327,9 @@
                             <img class="img-fluid" src="{{ asset('images/art.png') }}">
 
                         </div>
-                    </div>
+                   
 
-                    <div class="row mt-5 mb-4">
+                    <div class="row mt-5 mb-4 no-p-left">
                         <h4 class="text-center">انواع طراحی های گرافیکی
                         </h4>
 
@@ -430,7 +430,7 @@
 
                 {{-- Podcast Service ------------------------------------------------- --}}
                 <div class="row mt-5" id="podcast-service">
-                    <div class="row">
+                   
                         <div class="col-md-10 col-sm-12">
                             <h3>پادکست</h3>
                             <hr class="w-25">
@@ -450,14 +450,14 @@
                             <img class="img-fluid" src="{{ asset('images/microphone.png') }}">
 
                         </div>
-                    </div>
+                   
 
                     
                 </div>
 
                 {{-- Advertise Consultation Service ------------------------------------------------- --}}
                 <div class="row mt-5" id="advertise-consultation-service">
-                    <div class="row">
+                    
                         <div class="col-md-10 col-sm-12">
                             <h3>مشاوره تبلیغاتی</h3>
                             <hr class="w-25">
@@ -473,14 +473,14 @@
                             <img class="img-fluid" src="{{ asset('images/video-ad.png') }}">
 
                         </div>
-                    </div>
+                    
 
                     
                 </div>
 
                 {{-- Social Media Service ------------------------------------------------- --}}
                 <div class="row mt-5" id="social-media-service">
-                    <div class="row">
+                   
                         <div class="col-md-10 col-sm-12">
                             <h3>تولید و مدیریت شبکه های اجتماعی</h3>
                             <hr class="w-25">
@@ -496,9 +496,9 @@
                             <img class="img-fluid" src="{{ asset('images/social-media.png') }}">
 
                         </div>
-                    </div>
+                   
 
-                    <div class="row mt-5 mb-4">
+                    <div class="row mt-5 mb-4 no-p-left">
                         <h4 class="text-center">انواع خدمات شبکه های اجتماعی</h4>
 
 
@@ -560,7 +560,7 @@
 
                 {{-- Advertise Campaign Service ------------------------------------------------- --}}
                 <div class="row mt-5" id="advertise-campaign-service">
-                    <div class="row">
+                    
                         <div class="col-md-10 col-sm-12">
                             <h3>کمپین تبلیغاتی</h3>
                             <hr class="w-25">
@@ -577,9 +577,9 @@
                             <img class="img-fluid" src="{{ asset('images/campaign.png') }}">
 
                         </div>
-                    </div>
+                   
 
-                    <div class="row mt-5 mb-4">
+                    <div class="row mt-5 mb-4 no-p-left">
                         <h4 class="text-center">انواع کمپین تبلیغاتی</h4>
 
 
@@ -667,7 +667,7 @@
 
                 {{-- Digital Marketing Service ------------------------------------------------- --}}
                 <div class="row mt-5" id="digital-marketing-service">
-                    <div class="row">
+                    
                         <div class="col-md-10 col-sm-12">
                             <h3>برندینگ و مارکتینگ</h3>
                             <hr class="w-25">
@@ -684,7 +684,7 @@
                             <img class="img-fluid" src="{{ asset('images/digital-marketing.png') }}">
 
                         </div>
-                    </div>
+                   
 
                     
                 </div>
