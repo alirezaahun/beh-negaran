@@ -1336,7 +1336,6 @@ footer p span {
   margin-bottom: 2rem;
 }
 
-<<<<<<< HEAD
 .page-content p {
   text-align: justify;
 }
@@ -1355,7 +1354,8 @@ footer p span {
 .about-us-banner {
   border-radius: 1.3rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 2px, rgba(0, 0, 0, 0.23) 0px 0px 3px;
-=======
+}
+
 body {
   font-family: montserrat, arial, verdana;
 }
@@ -1472,7 +1472,6 @@ body {
 #multistepsform #progressbar li.active:before, #multistepsform #progressbar li.active:after {
   background: #ff9a76;
   color: white;
->>>>>>> a5ff784e8f4a364c89e2c2357ff355e07c9f4b66
 }
 
 .project-page-title h3 {
