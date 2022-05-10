@@ -51,6 +51,11 @@ class HomeController extends Controller
         return view('home.pricing');
 
     }
+    public function profile(){
+
+        return view('home.profile');
+
+    }
 
     public function logout(){
 
