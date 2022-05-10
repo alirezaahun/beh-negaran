@@ -1355,56 +1355,48 @@ footer p span {
 .about-us-banner {
   border-radius: 1.3rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 2px, rgba(0, 0, 0, 0.23) 0px 0px 3px;
-  /* Ensure images take up the same space when they load */
-  /* https://vestride.github.io/Shuffle/images */
-  /* Scroll Bar ----------------------------------------------------------- */
-  /* width */
-  /* button */
-  /* Handle */
-  /* Handle on hover */
-  /* Track */
-  /* The track NOT covered by the handle.
-  ::-webkit-scrollbar-track-piece {
-    background: #000; 
-  }
-  /* Corner */
-  /* Resizer */
-  /* Mobile Screen --------------------------------------------------- */
-  /* Tablet Screen -----------------------------------------------*/
 }
-.about-us-banner .project-page-title h3 {
+
+.project-page-title h3 {
   color: var(--clr-secondary);
   font-size: 2rem;
 }
-.about-us-banner .project-page-title hr {
+
+.project-page-title hr {
   background-color: var(--clr-accent);
   padding: 3px;
   opacity: 1;
   border-radius: 0.3rem;
   margin-bottom: 2rem;
 }
-.about-us-banner .my-shuffle-container {
+
+.my-shuffle-container {
   position: relative;
   overflow: hidden;
 }
-.about-us-banner .my-sizer-element {
+
+.my-sizer-element {
   position: absolute;
   opacity: 0;
   visibility: hidden;
 }
-.about-us-banner .picture-item {
+
+.picture-item {
   height: 220px;
   margin-top: 24px;
 }
-.about-us-banner .picture-item img {
+
+.picture-item img {
   display: block;
   width: 100%;
 }
-.about-us-banner .btn-group {
+
+.btn-group {
   display: flex;
   justify-content: space-between;
 }
-.about-us-banner .projects-btn {
+
+.projects-btn {
   color: var(--clr-dark);
   background: var(--clr-primary);
   margin-left: 1rem;
@@ -1418,24 +1410,27 @@ footer p span {
   font-weight: 600;
   border: none;
 }
-.about-us-banner .projects-btn:hover {
+
+.projects-btn:hover {
   transition: all 0.3s ease;
   color: var(--clr-primary);
   background-color: var(--clr-dark);
 }
+
 @supports ((-o-object-fit: cover) or (object-fit: cover)) {
-  .about-us-banner .picture-item img {
+  .picture-item img {
     max-width: none;
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
   }
 }
-.about-us-banner .picture-item--h2 {
+.picture-item--h2 {
   height: 464px;
   /* 2x the height + 1 gutter */
 }
-.about-us-banner .picture-item__inner {
+
+.picture-item__inner {
   position: relative;
   height: 100%;
   overflow: hidden;
@@ -1443,33 +1438,39 @@ footer p span {
   border-radius: 1.3rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 2px, rgba(0, 0, 0, 0.23) 0px 0px 3px;
 }
-.about-us-banner .picture-item__details {
+
+.picture-item__details {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
   width: 100%;
   padding: 1em;
 }
-.about-us-banner .picture-item__details a {
+
+.picture-item__details a {
   text-decoration: none;
   color: var(--clr-secondary);
 }
-.about-us-banner .picture-item__description {
+
+.picture-item__description {
   width: 100%;
   padding: 0 2em 1em 1em;
   margin: 0;
 }
-.about-us-banner .picture-item__title {
+
+.picture-item__title {
   flex-shrink: 0;
   margin-right: 4px;
 }
-.about-us-banner .picture-item__tags {
+
+.picture-item__tags {
   flex-shrink: 1;
   text-align: right;
   margin: 0;
 }
+
 @media screen and (min-width: 768px) {
-  .about-us-banner .picture-item--overlay .picture-item__details {
+  .picture-item--overlay .picture-item__details {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -1479,307 +1480,366 @@ footer p span {
     color: #fff;
     overflow: hidden;
   }
-  .about-us-banner .picture-item--overlay .picture-item__description {
+
+  .picture-item--overlay .picture-item__description {
     display: none;
   }
-  .about-us-banner .picture-item--overlay a {
+
+  .picture-item--overlay a {
     color: white;
     text-shadow: 0 0 1px black;
   }
 }
 @media screen and (max-width: 767px) {
-  .about-us-banner .picture-item {
+  .picture-item {
     height: auto;
     margin-top: 20px;
   }
-  .about-us-banner .picture-item__details,
-.about-us-banner .picture-item__description {
+
+  .picture-item__details,
+.picture-item__description {
     font-size: 0.875em;
     padding: 0.625em;
   }
-  .about-us-banner .picture-item__description {
+
+  .picture-item__description {
     padding-right: 0.875em;
     padding-bottom: 1.25em;
   }
-  .about-us-banner .picture-item--h2 {
+
+  .picture-item--h2 {
     height: auto;
   }
 }
-.about-us-banner .filter-label {
+.filter-label {
   display: block;
   padding: 0;
   margin-top: 0;
   margin-bottom: 1rem;
   color: #95a5a6;
 }
-.about-us-banner .filters-group {
+
+.filters-group {
   padding: 0;
   margin: 0 0 4px;
   border: 0;
 }
+
 @media screen and (min-width: 768px) {
-  .about-us-banner .filters-group-wrap {
+  .filters-group-wrap {
     display: flex;
     justify-content: space-between;
   }
 }
-.about-us-banner .btn-group:after,
-.about-us-banner .btn-group:before {
+.btn-group:after,
+.btn-group:before {
   content: " ";
   display: table;
 }
-.about-us-banner .btn-group:after {
+
+.btn-group:after {
   clear: both;
 }
-.about-us-banner .projects-btn.active,
-.about-us-banner .projects-btn:active {
+
+.projects-btn.active,
+.projects-btn:active {
   background-color: var(--clr-secondary);
   color: var(--clr-primary);
 }
-.about-us-banner .projects-container:after,
-.about-us-banner .projects-container:before {
+
+.projects-container:after,
+.projects-container:before {
   content: " ";
   display: table;
 }
-.about-us-banner .projects-container:after {
+
+.projects-container:after {
   clear: both;
 }
-.about-us-banner .projects-row {
+
+.projects-row {
   margin-left: auto;
   margin-right: auto;
 }
-.about-us-banner .projects-row:after,
-.about-us-banner .projects-row:before {
+
+.projects-row:after,
+.projects-row:before {
   content: " ";
   display: table;
 }
-.about-us-banner .projects-row:after {
+
+.projects-row:after {
   clear: both;
 }
-.about-us-banner .projects-row .projects-row {
+
+.projects-row .projects-row {
   margin-left: -8px;
   margin-right: -8px;
 }
-.about-us-banner .aspect {
+
+/* Ensure images take up the same space when they load */
+/* https://vestride.github.io/Shuffle/images */
+.aspect {
   position: relative;
   width: 100%;
   height: 0;
   padding-bottom: 100%;
   overflow: hidden;
 }
-.about-us-banner .aspect__inner {
+
+.aspect__inner {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
 }
-.about-us-banner .aspect--16x9 {
+
+.aspect--16x9 {
   padding-bottom: 56.25%;
 }
-.about-us-banner .col-1\@xs,
-.about-us-banner .col-2\@xs,
-.about-us-banner .col-3\@xs,
-.about-us-banner .col-4\@xs,
-.about-us-banner .col-5\@xs,
-.about-us-banner .col-6\@xs,
-.about-us-banner .col-1\@sm,
-.about-us-banner .col-2\@sm,
-.about-us-banner .col-3\@sm,
-.about-us-banner .col-4\@sm,
-.about-us-banner .col-5\@sm,
-.about-us-banner .col-6\@sm,
-.about-us-banner .col-7\@sm,
-.about-us-banner .col-8\@sm,
-.about-us-banner .col-9\@sm,
-.about-us-banner .col-10\@sm,
-.about-us-banner .col-11\@sm,
-.about-us-banner .col-12\@sm,
-.about-us-banner .col-1\@md,
-.about-us-banner .col-2\@md,
-.about-us-banner .col-3\@md,
-.about-us-banner .col-4\@md,
-.about-us-banner .col-5\@md,
-.about-us-banner .col-6\@md,
-.about-us-banner .col-7\@md,
-.about-us-banner .col-8\@md,
-.about-us-banner .col-9\@md,
-.about-us-banner .col-10\@md,
-.about-us-banner .col-11\@md,
-.about-us-banner .col-12\@md {
+
+.col-1\@xs,
+.col-2\@xs,
+.col-3\@xs,
+.col-4\@xs,
+.col-5\@xs,
+.col-6\@xs,
+.col-1\@sm,
+.col-2\@sm,
+.col-3\@sm,
+.col-4\@sm,
+.col-5\@sm,
+.col-6\@sm,
+.col-7\@sm,
+.col-8\@sm,
+.col-9\@sm,
+.col-10\@sm,
+.col-11\@sm,
+.col-12\@sm,
+.col-1\@md,
+.col-2\@md,
+.col-3\@md,
+.col-4\@md,
+.col-5\@md,
+.col-6\@md,
+.col-7\@md,
+.col-8\@md,
+.col-9\@md,
+.col-10\@md,
+.col-11\@md,
+.col-12\@md {
   position: relative;
   box-sizing: border-box;
   min-height: 1px;
   padding-left: 8px;
   padding-right: 8px;
 }
-.about-us-banner .col-1\@xs,
-.about-us-banner .col-2\@xs,
-.about-us-banner .col-3\@xs,
-.about-us-banner .col-4\@xs,
-.about-us-banner .col-5\@xs,
-.about-us-banner .col-6\@xs {
+
+.col-1\@xs,
+.col-2\@xs,
+.col-3\@xs,
+.col-4\@xs,
+.col-5\@xs,
+.col-6\@xs {
   float: left;
 }
-.about-us-banner .col-1\@xs {
+
+.col-1\@xs {
   width: 16.66667%;
 }
-.about-us-banner .col-2\@xs {
+
+.col-2\@xs {
   width: 33.33333%;
 }
-.about-us-banner .col-3\@xs {
+
+.col-3\@xs {
   width: 50%;
 }
-.about-us-banner .col-4\@xs {
+
+.col-4\@xs {
   width: 66.66667%;
 }
-.about-us-banner .col-5\@xs {
+
+.col-5\@xs {
   width: 83.33333%;
 }
-.about-us-banner .col-6\@xs {
+
+.col-6\@xs {
   width: 100%;
 }
+
 @media screen and (min-width: 768px) {
-  .about-us-banner .col-1\@sm,
-.about-us-banner .col-2\@sm,
-.about-us-banner .col-3\@sm,
-.about-us-banner .col-4\@sm,
-.about-us-banner .col-5\@sm,
-.about-us-banner .col-6\@sm,
-.about-us-banner .col-7\@sm,
-.about-us-banner .col-8\@sm,
-.about-us-banner .col-9\@sm,
-.about-us-banner .col-10\@sm,
-.about-us-banner .col-11\@sm,
-.about-us-banner .col-12\@sm {
+  .col-1\@sm,
+.col-2\@sm,
+.col-3\@sm,
+.col-4\@sm,
+.col-5\@sm,
+.col-6\@sm,
+.col-7\@sm,
+.col-8\@sm,
+.col-9\@sm,
+.col-10\@sm,
+.col-11\@sm,
+.col-12\@sm {
     float: left;
   }
-  .about-us-banner .col-1\@sm {
+
+  .col-1\@sm {
     width: 8.33333%;
   }
-  .about-us-banner .col-2\@sm {
+
+  .col-2\@sm {
     width: 16.66667%;
   }
-  .about-us-banner .col-3\@sm {
+
+  .col-3\@sm {
     width: 25%;
   }
-  .about-us-banner .col-4\@sm {
+
+  .col-4\@sm {
     width: 33.33333%;
   }
-  .about-us-banner .col-5\@sm {
+
+  .col-5\@sm {
     width: 41.66667%;
   }
-  .about-us-banner .col-6\@sm {
+
+  .col-6\@sm {
     width: 50%;
   }
-  .about-us-banner .col-7\@sm {
+
+  .col-7\@sm {
     width: 58.33333%;
   }
-  .about-us-banner .col-8\@sm {
+
+  .col-8\@sm {
     width: 66.66667%;
   }
-  .about-us-banner .col-9\@sm {
+
+  .col-9\@sm {
     width: 75%;
   }
-  .about-us-banner .col-10\@sm {
+
+  .col-10\@sm {
     width: 83.33333%;
   }
-  .about-us-banner .col-11\@sm {
+
+  .col-11\@sm {
     width: 91.66667%;
   }
-  .about-us-banner .col-12\@sm {
+
+  .col-12\@sm {
     width: 100%;
   }
-  .about-us-banner .projects-row {
+
+  .projects-row {
     max-width: 1200px;
   }
 }
 @media screen and (min-width: 1024px) {
-  .about-us-banner .col-1\@md,
-.about-us-banner .col-2\@md,
-.about-us-banner .col-3\@md,
-.about-us-banner .col-4\@md,
-.about-us-banner .col-5\@md,
-.about-us-banner .col-6\@md,
-.about-us-banner .col-7\@md,
-.about-us-banner .col-8\@md,
-.about-us-banner .col-9\@md,
-.about-us-banner .col-10\@md,
-.about-us-banner .col-11\@md,
-.about-us-banner .col-12\@md {
+  .col-1\@md,
+.col-2\@md,
+.col-3\@md,
+.col-4\@md,
+.col-5\@md,
+.col-6\@md,
+.col-7\@md,
+.col-8\@md,
+.col-9\@md,
+.col-10\@md,
+.col-11\@md,
+.col-12\@md {
     float: left;
   }
-  .about-us-banner .col-1\@md {
+
+  .col-1\@md {
     width: 8.33333%;
   }
-  .about-us-banner .col-2\@md {
+
+  .col-2\@md {
     width: 16.66667%;
   }
-  .about-us-banner .col-3\@md {
+
+  .col-3\@md {
     width: 25%;
   }
-  .about-us-banner .col-4\@md {
+
+  .col-4\@md {
     width: 33.33333%;
   }
-  .about-us-banner .col-5\@md {
+
+  .col-5\@md {
     width: 41.66667%;
   }
-  .about-us-banner .col-6\@md {
+
+  .col-6\@md {
     width: 50%;
   }
-  .about-us-banner .col-7\@md {
+
+  .col-7\@md {
     width: 58.33333%;
   }
-  .about-us-banner .col-8\@md {
+
+  .col-8\@md {
     width: 66.66667%;
   }
-  .about-us-banner .col-9\@md {
+
+  .col-9\@md {
     width: 75%;
   }
-  .about-us-banner .col-10\@md {
+
+  .col-10\@md {
     width: 83.33333%;
   }
-  .about-us-banner .col-11\@md {
+
+  .col-11\@md {
     width: 91.66667%;
   }
-  .about-us-banner .col-12\@md {
+
+  .col-12\@md {
     width: 100%;
   }
 }
-.about-us-banner .login-section {
+.login-section {
   height: 84vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.about-us-banner .form-container {
+
+.form-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.about-us-banner #loginForm,
-.about-us-banner #OTPinput {
+
+#loginForm,
+#OTPinput {
   padding: 3rem;
   border-radius: 0.7rem;
   background-color: var(--clr-primary);
   box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 2px, rgba(0, 0, 0, 0.23) 0px 0px 3px;
 }
-.about-us-banner #loginForm input,
-.about-us-banner #OTPinput input,
-.about-us-banner #loginForm button,
-.about-us-banner #OTPinput button,
-.about-us-banner #loginForm img,
-.about-us-banner #OTPinput img {
+
+#loginForm input,
+#OTPinput input,
+#loginForm button,
+#OTPinput button,
+#loginForm img,
+#OTPinput img {
   display: block;
   margin: 1.5rem auto;
   width: 100%;
 }
-.about-us-banner #loginForm img,
-.about-us-banner #OTPinput img {
+
+#loginForm img,
+#OTPinput img {
   filter: drop-shadow(0 0 1px black);
 }
-.about-us-banner #loginForm input,
-.about-us-banner #OTPinput input {
+
+#loginForm input,
+#OTPinput input {
   background-color: #95a5a67c;
   border: 1px solid transparent;
   border-radius: 0.5rem;
@@ -1789,14 +1849,16 @@ footer p span {
   color: var(--clr-dark);
   text-align: center;
 }
-.about-us-banner #loginForm input:focus-within,
-.about-us-banner #OTPinput input:focus-within {
+
+#loginForm input:focus-within,
+#OTPinput input:focus-within {
   border-color: var(--clr-accent);
   background-color: #fff;
   outline: none;
   box-shadow: none;
 }
-.about-us-banner .secondary-btn.spinning:after {
+
+.secondary-btn.spinning:after {
   content: "";
   position: absolute;
   right: 30%;
@@ -1808,7 +1870,8 @@ footer p span {
   -webkit-animation: rotate360 0.5s infinite linear, exist 0.1s forwards ease;
           animation: rotate360 0.5s infinite linear, exist 0.1s forwards ease;
 }
-.about-us-banner .secondary-btn.spinning:before {
+
+.secondary-btn.spinning:before {
   content: "";
   width: 0px;
   height: 0px;
@@ -1821,11 +1884,13 @@ footer p span {
   -webkit-animation: rotate360 0.5s infinite linear, exist 0.1s forwards ease;
           animation: rotate360 0.5s infinite linear, exist 0.1s forwards ease;
 }
+
 @-webkit-keyframes rotate360 {
   100% {
     transform: rotate(360deg);
   }
 }
+
 @keyframes rotate360 {
   100% {
     transform: rotate(360deg);
@@ -1845,151 +1910,203 @@ footer p span {
     margin: -8px 5px 0 0;
   }
 }
-.about-us-banner ::-webkit-scrollbar {
+/* Scroll Bar ----------------------------------------------------------- */
+/* width */
+::-webkit-scrollbar {
   width: 10px;
 }
-.about-us-banner ::-webkit-scrollbar-button {
+
+/* button */
+::-webkit-scrollbar-button {
   background: transparent;
 }
-.about-us-banner ::-webkit-scrollbar-thumb {
+
+/* Handle */
+::-webkit-scrollbar-thumb {
   border-radius: 0.5rem;
   background: var(--clr-secondary);
 }
-.about-us-banner ::-webkit-scrollbar-thumb:hover {
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
   background: var(--clr-dark);
 }
-.about-us-banner ::-webkit-scrollbar-track {
+
+/* Track */
+::-webkit-scrollbar-track {
   background: transparent;
 }
-.about-us-banner ::-webkit-scrollbar-corner {
+
+/* The track NOT covered by the handle.
+::-webkit-scrollbar-track-piece {
+  background: #000; 
+}
+/* Corner */
+::-webkit-scrollbar-corner {
   background: var(--clr-dark);
 }
-.about-us-banner ::-webkit-resizer {
+
+/* Resizer */
+::-webkit-resizer {
   background: var(--clr-dark);
 }
+
+/* Mobile Screen --------------------------------------------------- */
 @media only screen and (min-width: 200px) and (max-width: 991px) {
-  .about-us-banner {
-    /* Footer Collapse ---------------------------------------------*/
-  }
-  .about-us-banner .vertical-line {
+  .vertical-line {
     display: none;
   }
-  .about-us-banner .banner {
+
+  .banner {
     background-image: url(/images/main-banner-mobile.png?bad7cded9982cd167a8b045b15bc1e3d);
     background-size: cover;
     background-position: left;
   }
-  .about-us-banner .quick-service-icons li {
+
+  .quick-service-icons li {
     border-right: none;
   }
-  .about-us-banner .quick-service-icons li:hover {
+
+  .quick-service-icons li:hover {
     background: none;
   }
-  .about-us-banner .quick-service-icons ul {
+
+  .quick-service-icons ul {
     padding-bottom: 0;
     /* border: none; */
   }
-  .about-us-banner .quick-service-icons i {
+
+  .quick-service-icons i {
     margin-bottom: 0.5rem;
   }
-  .about-us-banner .quick-service-icons a {
+
+  .quick-service-icons a {
     border: none;
   }
-  .about-us-banner .quick-service-icons a:hover {
+
+  .quick-service-icons a:hover {
     color: var(--clr-secondary);
   }
-  .about-us-banner .quick-service-box {
+
+  .quick-service-box {
     width: 100%;
     border-radius: 1.3rem;
     margin-top: -5rem;
   }
-  .about-us-banner .service-icons-mobile {
+
+  .service-icons-mobile {
     position: fixed;
     top: 0;
     right: 0;
     z-index: 11000;
   }
-  .about-us-banner .quick-form {
+
+  .quick-form {
     display: flex;
     flex-direction: column;
   }
-  .about-us-banner .quick-form a {
+
+  .quick-form a {
     margin-top: 1rem;
   }
-  .about-us-banner .date-input {
+
+  .date-input {
     width: 100%;
     margin-top: 1rem;
   }
-  .about-us-banner .city-select {
+
+  .city-select {
     width: 100%;
     margin: 1rem;
   }
-  .about-us-banner .main-banners {
+
+  .main-banners {
     margin-top: 4rem;
   }
-  .about-us-banner .about-section h3 {
+
+  .about-section h3 {
     text-align: center;
   }
-  .about-us-banner .about-section p {
+
+  .about-section p {
     text-align: center;
   }
-  .about-us-banner .h_iframe-aparat_embed_frame {
+
+  .h_iframe-aparat_embed_frame {
     margin: 1rem;
   }
-  .about-us-banner .why-order-online-section h3 {
+
+  .why-order-online-section h3 {
     text-align: center;
   }
-  .about-us-banner .why-order-online-section p {
+
+  .why-order-online-section p {
     text-align: center;
   }
-  .about-us-banner .why-order-online-section {
+
+  .why-order-online-section {
     margin-top: 1rem;
   }
-  .about-us-banner hr {
+
+  hr {
     margin: 1rem auto;
   }
-  .about-us-banner .horizontal-line2 {
+
+  .horizontal-line2 {
     margin: 1rem auto;
   }
-  .about-us-banner .hour-number,
-.about-us-banner .costumer-number,
-.about-us-banner .project-number {
+
+  .hour-number,
+.costumer-number,
+.project-number {
     margin-top: 1rem;
   }
-  .about-us-banner .footer p {
+
+  .footer p {
     font-size: 0.6rem;
     text-align: center;
   }
-  .about-us-banner .footer-links {
+
+  .footer-links {
     margin-top: 3rem;
   }
-  .about-us-banner .quick-service-icons a {
+
+  .quick-service-icons a {
     font-size: 0.7rem;
   }
-  .about-us-banner .quick-service-icons i {
+
+  .quick-service-icons i {
     font-size: 1.3rem;
   }
-  .about-us-banner .nav {
+
+  .nav {
     display: flex;
   }
-  .about-us-banner .footer {
+
+  .footer {
     margin-bottom: 3rem;
   }
-  .about-us-banner .footer-contact {
+
+  .footer-contact {
     font-size: 0.9rem;
   }
-  .about-us-banner .owl-prev,
-.about-us-banner .owl-next {
+
+  .owl-prev,
+.owl-next {
     display: none;
   }
-  .about-us-banner .collapsible-trigger {
+
+  /* Footer Collapse ---------------------------------------------*/
+  .collapsible-trigger {
     cursor: pointer;
   }
-  .about-us-banner .collapse-active,
-.about-us-banner .collapsible-trigger:hover {
+
+  .collapse-active,
+.collapsible-trigger:hover {
     color: var(--clr-primary);
   }
-  .about-us-banner .collapsible-trigger:after {
+
+  .collapsible-trigger:after {
     font-family: "Font Awesome 5 Free";
     content: "\f103";
     color: var(--clr-accent);
@@ -1997,75 +2114,87 @@ footer p span {
     float: right;
     margin-left: 5px;
   }
-  .about-us-banner .collapse-active:after {
+
+  .collapse-active:after {
     content: "\f102";
     color: var(--clr-secondary);
   }
-  .about-us-banner .content-collapse {
+
+  .content-collapse {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
   }
-  .about-us-banner #video-service hr,
-.about-us-banner #photo-service hr,
-.about-us-banner #website-service hr,
-.about-us-banner #design-service hr,
-.about-us-banner #podcast-service hr,
-.about-us-banner #advertise-consultation-service hr,
-.about-us-banner #social-media-service hr,
-.about-us-banner #advertise-campaign-service hr,
-.about-us-banner #digital-marketing-service hr {
+
+  #video-service hr,
+#photo-service hr,
+#website-service hr,
+#design-service hr,
+#podcast-service hr,
+#advertise-consultation-service hr,
+#social-media-service hr,
+#advertise-campaign-service hr,
+#digital-marketing-service hr {
     width: 100% !important;
   }
-  .about-us-banner .icon-pic img,
-.about-us-banner .digital-marketing-pic img {
+
+  .icon-pic img,
+.digital-marketing-pic img {
     margin: 2.5rem auto 1rem auto;
   }
 }
+/* Tablet Screen -----------------------------------------------*/
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .about-us-banner .content-collapse {
+  .content-collapse {
     max-height: 100%;
     overflow: visible;
   }
-  .about-us-banner .collapsible-trigger:after {
+
+  .collapsible-trigger:after {
     content: "";
   }
-  .about-us-banner .quick-service-box {
+
+  .quick-service-box {
     width: 100%;
     margin-top: -5rem;
   }
-  .about-us-banner .quick-service-icons ul {
+
+  .quick-service-icons ul {
     padding-bottom: 0.5rem;
   }
-  .about-us-banner .quick-service-icons a {
+
+  .quick-service-icons a {
     font-size: 1rem;
   }
-  .about-us-banner .service-number p,
-.about-us-banner .done-projects-number p,
-.about-us-banner .current-projects-number p {
+
+  .service-number p,
+.done-projects-number p,
+.current-projects-number p {
     font-size: 0.8rem;
   }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-  .about-us-banner .service-icons-mobile {
+  .service-icons-mobile {
     position: fixed;
     top: -1000px;
   }
-  .about-us-banner .quick-service-box {
+
+  .quick-service-box {
     width: 100%;
     margin-top: -5rem;
   }
-  .about-us-banner .quick-service-icons a {
+
+  .quick-service-icons a {
     font-size: 0.9rem;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1028px) {
-  .about-us-banner .costume-nav {
+  .costume-nav {
     font-size: 0.8rem;
   }
 }
 @media only screen and (min-width: 1029px) and (max-width: 1049px) {
-  .about-us-banner .costume-nav {
+  .costume-nav {
     font-size: 0.9rem;
   }
 }
