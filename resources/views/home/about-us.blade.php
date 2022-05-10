@@ -176,9 +176,9 @@
                         </h4 class="custom-height">
                         <p class="text-center"> به‌نگاران همراه همیشگی شما در فضای اینترنتی </p>
                         <div class="about-us-social-icons">
-                            <a href="#"><i class='bx bxl-instagram'></i></a>
-                            <a href="#"><i class='bx bxl-whatsapp'></i></a>
-                            <a href="#"><i class='bx bxl-linkedin'></i></a>
+                            <a href="https://www.instagram.com/beh_negaran/?hl=en-gb"><i class='bx bxl-instagram'></i></a>
+                            <a href="https://wa.me/+989195275731"><i class='bx bxl-whatsapp'></i></a>
+                            <a href="https://www.linkedin.com/company/beh-negaran/"><i class='bx bxl-linkedin'></i></a>
                             <a href="#"><i class='bx bxl-youtube'></i></a>
                         </div>
                     </div>

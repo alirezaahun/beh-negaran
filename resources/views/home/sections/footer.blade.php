@@ -40,7 +40,7 @@
 
             <div class="col-lg-4 col-md-12 col-sm-12 footer-contact">
               <img class="footer-logo" src="{{asset('images/logo-white.svg')}}" alt="logo">
-              <ul class="">
+              <ul>
                 <li>
                   <i class='bx bx-phone-call'></i>
                 <span>تلفن پشتیبانی :</span>
@@ -57,9 +57,9 @@
             </li>
             <li>
               <div class="footer-social-icons">
-                <a href="#"><i class='bx bxl-instagram'></i></a>
-                <a href="#"><i class='bx bxl-whatsapp'></i></a>
-                <a href="#"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://www.instagram.com/beh_negaran/?hl=en-gb"><i class='bx bxl-instagram'></i></a>
+                <a href="https://wa.me/+989195275731"><i class='bx bxl-whatsapp'></i></a>
+                <a href="https://www.linkedin.com/company/beh-negaran/"><i class='bx bxl-linkedin'></i></a>
                 <a href="#"><i class='bx bxl-youtube'></i></a>
               </div>
             </li>
