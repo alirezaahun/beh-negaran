@@ -1916,24 +1916,25 @@ footer p span {
 }
 
 .nav__cont {
-  position: fixed;
+  position: absolute;
   width: 3rem;
-  top: 4.1rem;
+  top: 0;
   right: 0;
-  min-height: 100vh;
+  height: 36rem;
   z-index: 1;
   background-color: #fff;
   overflow: hidden;
   transition: width 0.3s ease;
   cursor: pointer;
-  box-shadow: 4px 7px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 0 0 0 0.7rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 2px inset, rgba(0, 0, 0, 0.23) 0px 0px 3px inset;
   color: var(--clr-dark) !important;
 }
 
 .nav__cont i {
-  font-size: 25px;
+  font-size: 1.8rem;
   margin-left: 1rem;
-  margin-right: -1rem;
+  margin-right: -0.8rem;
 }
 
 .nav__cont:hover {
