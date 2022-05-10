@@ -43,8 +43,8 @@
 
 
 
-                <button type="button" class="next action-button">Continue</button>
-                <button type="button" class="action-button previous_button disabled " disabled>Back</button>
+                <button type="button" class="next action-button">ادامه</button>
+                <button type="button" class="action-button previous_button disabled " disabled>بازگشت</button>
 
             </fieldset>
 
@@ -60,13 +60,12 @@
                     </select>
                 </div>
               
-                <button type="button" class="next action-button">Continue</button>
-                <button type="button" class="action-button previous previous_button">Back</button>
+                <button type="button" class="next action-button">ادامه</button>
+                <button type="button" class="action-button previous previous_button">بازگشت</button>
 
             </fieldset>
             <fieldset>
-                <h3>Create Security Questions</h3>
-                <h6>Please update your account with security questions</h6>
+             
           
                 <div class="form-group">
                     <select class="product_select">
@@ -80,9 +79,9 @@
                 <div class="form-group fg_3">
                     <input type="text" class="form-control" placeholder="Anwser ">
                 </div>
-                <a href="#" class="action-button">Finish</a>
+                <a href="#" class="action-button">پایان</a>
 
-                <button type="button" class="action-button previous previous_button">Back</button>
+                <button type="button" class="action-button previous previous_button">بازگشت</button>
 
             </fieldset>
         </form>
