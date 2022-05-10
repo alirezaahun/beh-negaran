@@ -1910,6 +1910,104 @@ footer p span {
     margin: -8px 5px 0 0;
   }
 }
+.user-profile-panel {
+  min-height: 100vh;
+  position: relative;
+}
+
+.nav__cont {
+  position: fixed;
+  width: 3rem;
+  top: 4.1rem;
+  right: 0;
+  min-height: 100vh;
+  z-index: 1;
+  background-color: #fff;
+  overflow: hidden;
+  transition: width 0.3s ease;
+  cursor: pointer;
+  box-shadow: 4px 7px 10px rgba(0, 0, 0, 0.4);
+  color: var(--clr-dark) !important;
+}
+
+.nav__cont i {
+  font-size: 25px;
+  margin-left: 1rem;
+  margin-right: -1rem;
+}
+
+.nav__cont:hover {
+  width: 18rem;
+}
+
+@media screen and (min-width: 600px) {
+  .nav__cont {
+    width: 4rem;
+  }
+}
+.nav__ {
+  list-style-type: none;
+  color: var(--clr-dark);
+}
+
+.nav__:first-child {
+  padding-top: 2rem;
+}
+
+.nav___items {
+  padding-bottom: 2rem;
+}
+
+.nav___items a {
+  position: relative;
+  display: block;
+  top: -25px;
+  right: 15px;
+  padding-left: 15px;
+  padding-right: 25px;
+  transition: all 0.3s ease;
+  margin-left: 10px;
+  margin-right: 25px;
+  text-decoration: none;
+  color: var(--clr-dark);
+  font-weight: 600;
+  font-size: 1rem;
+  z-index: 1000;
+  font-family: "Vazir";
+  line-height: 2rem;
+}
+
+.nav___items a:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 2px;
+  background: radial-gradient(circle at 94.02% 88.03%, var(--clr-accent), transparent 100%);
+  opacity: 0;
+  transition: all 0.5s ease;
+  z-index: -10;
+}
+
+.nav___items:hover a:after {
+  opacity: 1;
+}
+
+.nav___items i {
+  color: var(--clr-dark);
+  position: relative;
+  cursor: pointer;
+}
+
+.costume-container {
+  padding-left: 5rem;
+  width: 100%;
+  overflow-x: hidden;
+  color: var(--clr-dark);
+}
+
 /* Scroll Bar ----------------------------------------------------------- */
 /* width */
 ::-webkit-scrollbar {
