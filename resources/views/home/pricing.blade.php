@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- Main Section ---------------------------------------------------------------->
-    <main class="main-section">
+    {{-- <main class="main-section"> --}}
       <section class="multi_step_form mt-5">
         <form id="msform">
             <!-- Tittle -->
@@ -18,7 +18,22 @@
             </ul>
             <!-- fieldsets -->
             <fieldset>
-                <h3>از ما چه میخواهید</h3>
+
+                <ul class="nav nav-tabs d-block" >
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Active</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Linkkkkkkkkkkkkkk</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                  </ul>
+                {{-- <h3>از ما چه میخواهید</h3>
                 <hr class="w-50">
 
 
@@ -39,7 +54,7 @@
                 <div class="custom-padding text-left ml-2">
 
                     <button type="button " class="btn bg-success"> <i class="fa-duotone fa-plus"></i> </button>
-                </div>
+                </div> --}}
 
 
 
@@ -49,7 +64,7 @@
             </fieldset>
 
             <fieldset>
-                <h3>test</h3>
+                {{-- <h3>test</h3>
                 <h6>test</h6>
                 <div class="form-group">
                     <select class="product_select">
@@ -58,7 +73,7 @@
                         <option>پادکست</option>
                         <option>طراحی سایت</option>
                     </select>
-                </div>
+                </div> --}}
               
                 <button type="button" class="next action-button">ادامه</button>
                 <button type="button" class="action-button previous previous_button">بازگشت</button>
@@ -67,7 +82,7 @@
             <fieldset>
              
           
-                <div class="form-group">
+                {{-- <div class="form-group">
                     <select class="product_select">
                         <option data-display="فیلم برداری">فیلم برداری</option>
                         <option>عکاسی</option>
@@ -78,7 +93,7 @@
             
                 <div class="form-group fg_3">
                     <input type="text" class="form-control" placeholder="Anwser ">
-                </div>
+                </div> --}}
                 <a href="#" class="action-button">پایان</a>
 
                 <button type="button" class="action-button previous previous_button">بازگشت</button>
@@ -86,7 +101,7 @@
             </fieldset>
         </form>
     </section>
-    </main>
+    {{-- </main> --}}
 @endsection
 
 
