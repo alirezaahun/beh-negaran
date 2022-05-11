@@ -7,7 +7,7 @@
                 <ul class="nav__">
                     <li class="nav___items ">
                         <i class='bx bxs-user-pin'></i>
-                        <a class="text-nowrap" href="">پروفایل</a>
+                        <a class="text-nowrap" href="#user-profile">پروفایل</a>
                     </li>
 
                     <li class="nav___items ">
@@ -40,7 +40,7 @@
             <div class="container-fluid pt-5 pb-2 costume-container">
                 <div id="dynamic-content" class="row">
 
-                    <div id="user-profile" class="row">
+                    <div id="user-profile" class="row tab_content">
                         <div class="col-md-6 col-sm-12">
                             <ul>
                                 <li><span class="text-secondary">نام</span>
@@ -78,7 +78,8 @@
                                 </li>
 
                                 <li><span class="text-secondary">آدرس</span>
-                                    <h6 class="text-truncate" style="max-width: 19rem;">کرج،میدان سپاه به سمت سه راه گوهردشت،خ گلستان</h6>
+                                    <h6 class="text-truncate" style="max-width: 19rem;">کرج،میدان سپاه به سمت سه راه
+                                        گوهردشت،خ گلستان</h6>
                                     <i class="fas fa-edit"></i>
                                     <hr>
                                 </li>
@@ -99,12 +100,26 @@
 
 @section('js')
     <script>
-        (function($) {
-            "use strict";
-            $(document).ready(function() {
-                const dynamicContainer = $('#dynamic-content');
+        $(document).ready(function() {
 
+            //When page loads...
+            $(".tab_content").hide(); //Hide all content
+            $("ul.nav__ li:first").addClass("active").show(); //Activate first tab
+            $(".tab_content:first").show(); //Show first tab content
+
+            //On Click Event
+            $("ul.nav__ li").click(function() {
+
+                $("ul.nav__ li").removeClass("active"); //Remove any "active" class
+                $(this).addClass("active"); //Add "active" class to selected tab
+                $(".tab_content").hide(); //Hide all tab content
+
+                var activeTab = $(this).find("a").attr(
+                "href"); //Find the href attribute value to identify the active tab + content
+                $(activeTab).fadeIn(); //Fade in the active ID content
+                return false;
             });
-        }(jQuery));
+
+        });
     </script>
 @endsection
