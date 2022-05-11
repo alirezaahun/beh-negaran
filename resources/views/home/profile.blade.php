@@ -12,7 +12,7 @@
 
                     <li class="nav___items ">
                         <i class='bx bxs-shopping-bag-alt'></i>
-                        <a class="text-nowrap" href="">سفارش ها</a>
+                        <a class="text-nowrap" href="#order">سفارش ها</a>
                     </li>
 
                     <li class="nav___items ">
@@ -58,7 +58,7 @@
                                 <li><span class="text-secondary">شماره موبایل</span>
                                     <h6>۰۹۳۷۸۲۱۹۳۹۳</h6>
                                     <i class="fas fa-edit"></i>
-                                    <hr>
+                                    
                                 </li>
                             </ul>
                         </div>
@@ -81,10 +81,58 @@
                                     <h6 class="text-truncate" style="max-width: 19rem;">کرج،میدان سپاه به سمت سه راه
                                         گوهردشت،خ گلستان</h6>
                                     <i class="fas fa-edit"></i>
-                                    <hr>
+                                  
                                 </li>
                             </ul>
                         </div>
+                    </div>
+
+
+                    <div id="order" class="row tab_content">
+
+                        <div class="col-md-12">
+                            <ul>
+                                <li><span class="text-secondary">مکان</span>
+                                    <h6>کرج، جهانشهر</h6>
+                                </li>
+                                <li><span class="text-secondary">زمان</span>
+                                    <h6> پنج شنبه ۲۰ شهریور ساعت ۱۲:۰۰ </h6>
+                                </li>
+                                <li><span class="text-secondary">خدمات</span>
+                                    <h6>ویدیو - دوربین ثابت ، ۲ ساعت</h6>
+                                </li>
+                                <li><span class="text-secondary">مبلغ</span>
+                                    <h6>۳٫۰۰۰٫۰۰۰ تومان</h6>
+                                </li>
+                                <li class="d-flex align-self-end order-details">
+                                  <a href="#">جزئیات</a>
+                              </li>
+                            </ul>
+                            <hr>
+                        </div>
+
+                        <div class="col-md-12">
+                            <ul>
+                                <li><span class="text-secondary">مکان</span>
+                                    <h6>تهران، شهرک غرب</h6>
+                                </li>
+                                <li><span class="text-secondary">زمان</span>
+                                    <h6>شنبه ۱۰ مهر ساعت ۱۸:۰۰</h6>
+                                </li>
+                                <li><span class="text-secondary">خدمات</span>
+                                    <h6>عکس - عکاسی هوایی ، ۱ ساعت</h6>
+                                </li>
+                                <li><span class="text-secondary">مبلغ</span>
+                                    <h6>۱۰٫۰۰۰٫۰۰۰ تومان</h6>
+                                </li>
+                                <li class="d-flex align-self-end order-details">
+                                  <a href="#">جزئیات</a>
+                                </li>
+                            </ul>
+                            <hr>
+                        </div>
+
+
                     </div>
 
                 </div>
@@ -115,7 +163,7 @@
                 $(".tab_content").hide(); //Hide all tab content
 
                 var activeTab = $(this).find("a").attr(
-                "href"); //Find the href attribute value to identify the active tab + content
+                    "href"); //Find the href attribute value to identify the active tab + content
                 $(activeTab).fadeIn(); //Fade in the active ID content
                 return false;
             });
