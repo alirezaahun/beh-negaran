@@ -1169,18 +1169,6 @@ footer p span {
 
 //pricing page
 
-
-
-
-
-
-
-
-
-
-
-
-
     /*font Variables*/
     /*Color Variables*/
      .multi_step_form {
@@ -1203,12 +1191,10 @@ footer p span {
          padding-bottom: 55px;
     }
      .multi_step_form #msform .tittle h2 {
-         font: 500 24px/35px 'Roboto', sans-serif;
          color: #3f4553;
          padding-bottom: 5px;
     }
      .multi_step_form #msform .tittle p {
-         font: 400 16px/28px 'Roboto', sans-serif;
          color: #5f6771;
     }
      .multi_step_form #msform fieldset {
@@ -1223,11 +1209,9 @@ footer p span {
          display: none;
     }
      .multi_step_form #msform fieldset h3 {
-         font: 500 18px/35px 'Roboto', sans-serif;
          color: #3f4553;
     }
      .multi_step_form #msform fieldset h6 {
-         font: 400 15px/28px 'Roboto', sans-serif;
          color: #5f6771;
          padding-bottom: 30px;
     }
@@ -1278,7 +1262,6 @@ footer p span {
          border: 1px solid #d8e1e7;
          padding: 0 20px;
          height: auto;
-         font: 400 15px/48px 'Roboto', sans-serif;
          color: #5f6771;
          box-shadow: none;
          outline: none;
@@ -1379,7 +1362,6 @@ footer p span {
          text-align: center;
     }
      .multi_step_form #msform fieldset .passport h4 {
-         font: 500 15px/23px 'Roboto', sans-serif;
          color: #5f6771;
          padding: 0;
     }
@@ -1394,7 +1376,6 @@ footer p span {
          width: 168px;
          border-radius: 5px;
          cursor: pointer;
-         font: 700 14px/40px 'Roboto', sans-serif;
          border: 1px solid #99a2a8;
          text-align: center;
          transition: all 300ms linear 0s;
@@ -1418,7 +1399,6 @@ footer p span {
          padding-bottom: 60px;
     }
      .multi_step_form #msform fieldset .file_added li {
-         font: 400 15px/28px 'Roboto', sans-serif;
          color: #5f6771;
     }
      .multi_step_form #msform fieldset .file_added li a {
@@ -1446,7 +1426,6 @@ footer p span {
          width: calc(100%/3);
          float: left;
          position: relative;
-         font: 500 13px/1 'Roboto', sans-serif;
     }
      .multi_step_form #msform #progressbar li:nth-child(2):before {
          content: "\f3c5";
@@ -1516,92 +1495,10 @@ footer p span {
     // .disabled{
     //     color: #99a2a8 !important;
     // }
-    
-
-
     .custom-padding{
         padding-bottom: 70px;
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Projects Page Style ----------------------------------------------------
 
 .project-page-title h3 {
@@ -2158,12 +2055,49 @@ footer p span {
     position: relative;
     cursor: pointer;
 }
-
 .costume-container {
-    padding-left: 5rem;
+    padding-right: 5rem;
     width: 100%;
     overflow-x: hidden;
     color: var(--clr-dark);
+    margin: 0;
+}
+#dynamic-content {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 2px, rgba(0, 0, 0, 0.23) 0px 0px 3px;
+    margin: 0 4rem;
+    border-radius: 1.3rem;
+    height: 80vh;
+    padding: 2rem;
+}
+#user-profile .col-md-6,
+#user-profile .col-sm-6 {
+    position: relative;
+}
+#user-profile ul {
+    list-style: none;
+}
+#user-profile li {
+    height: 10rem;
+}
+#user-profile h6 {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+#user-profile h6,
+#user-profile span {
+    margin-right: 1rem;
+}
+#user-profile span {
+    display: block;
+}
+#user-profile h6 {
+    display: inline-block;
+}
+#user-profile i {
+    position: absolute;
+    font-size: 1.3rem;
+    left: 3.5rem;
+    display: inline-block;
 }
 /* Scroll Bar ----------------------------------------------------------- */
 /* width */
