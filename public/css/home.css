@@ -2527,7 +2527,7 @@ select:focus {
   position: relative;
 }
 
-#user-profile ul {
+#dynamic-content ul {
   list-style: none;
 }
 
@@ -2535,8 +2535,8 @@ select:focus {
   height: 10rem;
 }
 
-#user-profile h6 {
-  font-size: 1.2rem;
+#dynamic-content h6 {
+  font-size: 1.1rem;
   margin-top: 1rem;
 }
 
@@ -2545,7 +2545,8 @@ select:focus {
   margin-right: 1rem;
 }
 
-#user-profile span {
+#user-profile span,
+#order span {
   display: block;
 }
 
@@ -2558,6 +2559,27 @@ select:focus {
   font-size: 1.3rem;
   left: 3.5rem;
   display: inline-block;
+}
+
+#order ul {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+#order a {
+  text-decoration: none;
+  color: var(--clr-secondary);
+  font-weight: 600;
+}
+
+.order-details:after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f107";
+  color: var(--clr-dark);
+  font-weight: bold;
+  margin-right: 5px;
+  cursor: pointer;
 }
 
 /* Scroll Bar ----------------------------------------------------------- */
