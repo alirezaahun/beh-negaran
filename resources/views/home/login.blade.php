@@ -6,7 +6,7 @@
 
             <form id="loginForm" class="me-auto">
 
-                     <img src="{{ asset('images/logo-white.svg') }}" alt="logo">
+                <img src="{{ asset('images/logo-white.svg') }}" alt="logo">
 
                 <h5>ورود | ثبت‌نام</h5>
 
@@ -16,7 +16,7 @@
                 </p>
 
                 <div class="field-wrap">
-                    
+
                     <input id="phoneInput" placeholder="۰۹۱۲۱۱۱۲۲۳۳" type="text" />
                 </div>
 
@@ -38,11 +38,11 @@
 
                 <p class="text-secondary">سلام!
                     <br>
-                    لطفا کد ارسال شده را وارد کنید 
+                    لطفا کد ارسال شده را وارد کنید
                 </p>
 
                 <div class="field-wrap">
-                    
+
                     <input id="codeInput" placeholder="----" type="text" />
                 </div>
 
@@ -55,6 +55,13 @@
 
                 <button class="secondary-btn">ورود</button>
 
+                <div>
+
+                    <button id="resendOtpButton" class="secondary-btn">ارسال مجدد</button>
+                    <span id="resendTimer"></span>
+
+                </div>
+
             </form>
 
         </div>
@@ -66,6 +73,7 @@
         let logintoken;
 
         $('#OTPinput').hide();
+        $('#resendOtpButton').hide();
 
         $('#loginForm').submit(function(event) {
 
@@ -82,6 +90,35 @@
                 logintoken = response.login_token;
                 $('#loginForm').fadeOut();
                 $('#OTPinput').fadeIn();
+                timer();
+
+            }).fail(function(response) {
+
+                console.log(response.responseJSON.errors.cellphone[0]);
+                $('#errorPhone').fadeIn();
+                $('#errorText').html(response.responseJSON.errors.cellphone[0]);
+
+            })
+
+        });
+
+        $('#resendOtpButton').click(function(event) {
+
+            console.log($('#phoneInput').val());
+            event.preventDefault();
+
+            $.post("{{ url('/resend') }}", {
+
+                '_token': "{{ csrf_token() }}",
+                'login_token': logintoken
+
+            }, function(response, status) {
+                console.log(response, status);
+                logintoken = response.login_token;
+                $('#resendOtpButton').fadeOut();
+                timer();
+                $('#resendTimer').fadeIn();
+
 
             }).fail(function(response) {
 
@@ -123,22 +160,43 @@
 
         });
 
-        $(function(){
-    
-    var twoToneButton = document.querySelector('.loading-btn');
-    
-    twoToneButton.addEventListener("click", function() {
-        twoToneButton.innerHTML = "ادامه";
-        twoToneButton.classList.add('spinning');
-        
-      setTimeout( 
-            function  (){  
-                twoToneButton.classList.remove('spinning');
+        function timer() {
+            let time = "1:59";
+            let interval = setInterval(function() {
+                let countdown = time.split(':');
+                let minutes = parseInt(countdown[0], 10);
+                let seconds = parseInt(countdown[1], 10);
+                --seconds;
+                minutes = (seconds < 0) ? --minutes : minutes;
+                if (minutes < 0) {
+                    clearInterval(interval);
+                    $('#resendTimer').hide();
+                    $('#resendOtpButton').fadeIn();
+                };
+                seconds = (seconds < 0) ? 59 : seconds;
+                seconds = (seconds < 10) ? '0' + seconds : seconds;
+                //minutes = (minutes < 10) ?  minutes : minutes;
+                $('#resendTimer').html(minutes + ':' + seconds);
+                time = minutes + ':' + seconds;
+            }, 1000);
+        }
+
+        $(function() {
+
+            var twoToneButton = document.querySelector('.loading-btn');
+
+            twoToneButton.addEventListener("click", function() {
                 twoToneButton.innerHTML = "ادامه";
-                
-            }, 3000);
-    }, false);
-    
-});
+                twoToneButton.classList.add('spinning');
+
+                setTimeout(
+                    function() {
+                        twoToneButton.classList.remove('spinning');
+                        twoToneButton.innerHTML = "ادامه";
+
+                    }, 3000);
+            }, false);
+
+        });
     </script>
 @endsection

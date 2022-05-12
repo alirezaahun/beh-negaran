@@ -37,7 +37,7 @@
                 </ul>
             </nav>
 
-            <div class="container-fluid pt-5 pb-2 costume-container">
+            <div class="container-fluid costume-container">
                 <div id="dynamic-content" class="row">
 
                     <div id="user-profile" class="row tab_content">
@@ -58,7 +58,7 @@
                                 <li><span class="text-secondary">شماره موبایل</span>
                                     <h6>۰۹۳۷۸۲۱۹۳۹۳</h6>
                                     <i class="fas fa-edit"></i>
-                                    
+
                                 </li>
                             </ul>
                         </div>
@@ -78,10 +78,10 @@
                                 </li>
 
                                 <li><span class="text-secondary">آدرس</span>
-                                    <h6 class="text-truncate" style="max-width: 19rem;">کرج،میدان سپاه به سمت سه راه
+                                    <h6>کرج،میدان سپاه به سمت سه راه
                                         گوهردشت،خ گلستان</h6>
                                     <i class="fas fa-edit"></i>
-                                  
+
                                 </li>
                             </ul>
                         </div>
@@ -104,33 +104,40 @@
                                 <li><span class="text-secondary">مبلغ</span>
                                     <h6>۳٫۰۰۰٫۰۰۰ تومان</h6>
                                 </li>
-                                <li class="d-flex align-self-end order-details">
-                                  <a href="#">جزئیات</a>
-                              </li>
+
                             </ul>
+                            <span class="order-details">جزئیات</span>
+
+                            <div class="order-collapse">
+                              <h6 class="text-center">فاکتور</h6>
+                              <ul>
+                                <li>
+                                  <span class="text-secondary">هزینه پکیج</span>
+                                  <h6>۲٬۰۰۰٬۰۰۰ تومان
+                                  </h6>
+                                </li>
+                                <li>
+                                  <span class="text-secondary">ایاب ذهاب</span>
+                                  <h6>۲۰۰٫۰۰۰ تومان
+                                  </h6>
+                                </li>
+                                <li>
+                                  <span class="text-secondary">خدمات جانبی</span>
+                                  <h6>۸۰۰٬۰۰۰ تومان
+                                  </h6>
+                                </li>
+                                <hr class="w-50">
+                                <li>
+                                  <span class="text-secondary">پرداخت شده</span>
+                                  <h6>۳٫۰۰۰٫۰۰۰ تومان
+                                  </h6>
+                                </li>
+                              </ul>
+                            </div>
                             <hr>
                         </div>
 
-                        <div class="col-md-12">
-                            <ul>
-                                <li><span class="text-secondary">مکان</span>
-                                    <h6>تهران، شهرک غرب</h6>
-                                </li>
-                                <li><span class="text-secondary">زمان</span>
-                                    <h6>شنبه ۱۰ مهر ساعت ۱۸:۰۰</h6>
-                                </li>
-                                <li><span class="text-secondary">خدمات</span>
-                                    <h6>عکس - عکاسی هوایی ، ۱ ساعت</h6>
-                                </li>
-                                <li><span class="text-secondary">مبلغ</span>
-                                    <h6>۱۰٫۰۰۰٫۰۰۰ تومان</h6>
-                                </li>
-                                <li class="d-flex align-self-end order-details">
-                                  <a href="#">جزئیات</a>
-                                </li>
-                            </ul>
-                            <hr>
-                        </div>
+                        
 
 
                     </div>
@@ -169,5 +176,20 @@
             });
 
         });
+
+        var coll = document.getElementsByClassName("order-details");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("order-collapse-active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
     </script>
 @endsection

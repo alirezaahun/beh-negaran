@@ -10,10 +10,11 @@ use Illuminate\Support\Facades\Hash;
 
 class authController extends Controller
 {
-    public function login(Request $request){
+    public function login(Request $request)
+    {
 
 
-        if($request->method() == 'GET'){
+        if ($request->method() == 'GET') {
             return view('home.login');
         }
 
@@ -25,14 +26,14 @@ class authController extends Controller
 
 
 
-        $user = User::where('cellphone' , $request->cellphone)->first();
+        $user = User::where('cellphone', $request->cellphone)->first();
 
-        try{
+        try {
 
-            $otpCode = mt_rand(1000 , 9999);
+            $otpCode = mt_rand(1000, 9999);
             $login_token = Hash::make('asd#!@#1daksd;ak*&ASDAs');
 
-            if($user){
+            if ($user) {
 
                 $user->update([
 
@@ -40,8 +41,7 @@ class authController extends Controller
                     'login_token' => $login_token
 
                 ]);
-
-            }else{
+            } else {
 
                 $user = User::Create([
 
@@ -50,23 +50,19 @@ class authController extends Controller
                     'login_token' => $login_token
 
                 ]);
-
             }
 
             $user->notify(new OtpSms($otpCode));
 
-            return response(['login_token' => $login_token] , 200);
+            return response(['login_token' => $login_token], 200);
+        } catch (Exception $e) {
 
-        }catch(Exception $e){
-
-            return response(['error' => $e->getMessage()] , 422);
-
+            return response(['error' => $e->getMessage()], 422);
         }
-
-
     }
 
-    public function check(Request $request){
+    public function check(Request $request)
+    {
 
         $request->validate([
 
@@ -75,29 +71,55 @@ class authController extends Controller
 
         ]);
 
-        try{
+        try {
 
-            $user = User::where('login_token' , $request->login_token)->firstOrFail();
+            $user = User::where('login_token', $request->login_token)->firstOrFail();
 
-            if($user->otp == $request->otp){
-                auth()->login($user , $remember = true);
+            if ($user->otp == $request->otp) {
+                auth()->login($user, $remember = true);
 
-                return response(['login' => 'شما وارد شدید'] , 200);
+                return response(['login' => 'شما وارد شدید'], 200);
+            } else {
 
-            }else{
-
-                return response(['errors' => ['otp' => ['کد وارد شده مطابقت ندارد']]] , 422);
-
+                return response(['errors' => ['otp' => ['کد وارد شده مطابقت ندارد']]], 422);
             }
+        } catch (Exception $e) {
 
-        }catch(Exception $e){
-
-            return response(['error' => $e->getMessage()] , 422);
-
+            return response(['error' => $e->getMessage()], 422);
         }
-
-
-
     }
 
+    public function resend(Request $request)
+    {
+
+        $request->validate([
+
+            'login_token' => 'required'
+
+        ]);
+
+
+
+        $user = User::where('login_token', $request->login_token)->first();
+
+        try {
+
+            $otpCode = mt_rand(1000, 9999);
+            $login_token = Hash::make('asd#!@#1daksd;ak*&ASDAs');
+
+            $user->update([
+
+                'otp' => $otpCode,
+                'login_token' => $login_token
+
+            ]);
+
+            $user->notify(new OtpSms($otpCode));
+
+            return response(['login_token' => $login_token], 200);
+        } catch (Exception $e) {
+
+            return response(['error' => $e->getMessage()], 422);
+        }
+    }
 }

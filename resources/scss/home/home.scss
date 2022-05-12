@@ -41,12 +41,14 @@
 @import "~persian-datepicker/dist/css/persian-datepicker.min.css";
 @import "./files/owl.carousel.min.css";
 @import "~md.bootstrappersiandatetimepicker/dist/mds.bs.datetimepicker.style.css";
+@import url("https://v1.fontapi.ir/css/Samim");
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Iranian Sans";
+    // font-family: "Iranian Sans";
+    font-family: "Samim", sans-serif;
     font-weight: 500;
     font-style: normal;
 }
@@ -1748,11 +1750,328 @@ select:focus {
   
   .parent ._cards ._card h2 {
   color: var(--clr-accent);
+  font-size: 1.5rem;
   }
   
 
+.multi_step_form #msform fieldset .form-control,
+.multi_step_form #msform fieldset .product_select {
+    display: inline;
+    border-radius: 3px;
+    border: 1px solid #d8e1e7;
+    padding: 0 20px;
+    height: auto;
+    color: #5f6771;
+    box-shadow: none;
+    outline: none;
+    width: 30%;
+}
+.multi_step_form #msform fieldset .form-control.placeholder,
+.multi_step_form #msform fieldset .product_select.placeholder {
+    color: #5f6771;
+}
+.multi_step_form #msform fieldset .form-control:-moz-placeholder,
+.multi_step_form #msform fieldset .product_select:-moz-placeholder {
+    color: #5f6771;
+}
+.multi_step_form #msform fieldset .form-control::-moz-placeholder,
+.multi_step_form #msform fieldset .product_select::-moz-placeholder {
+    color: #5f6771;
+}
+.multi_step_form #msform fieldset .form-control::-webkit-input-placeholder,
+.multi_step_form #msform fieldset .product_select::-webkit-input-placeholder {
+    color: #5f6771;
+}
+.multi_step_form #msform fieldset .form-control:hover,
+.multi_step_form #msform fieldset .product_select:hover,
+.multi_step_form #msform fieldset .form-control:focus,
+.multi_step_form #msform fieldset .product_select:focus {
+    border-color: #5cb85c;
+}
+.multi_step_form #msform fieldset .form-control:focus.placeholder,
+.multi_step_form #msform fieldset .product_select:focus.placeholder {
+    color: transparent;
+}
+.multi_step_form #msform fieldset .form-control:focus:-moz-placeholder,
+.multi_step_form #msform fieldset .product_select:focus:-moz-placeholder {
+    color: transparent;
+}
+.multi_step_form #msform fieldset .form-control:focus::-moz-placeholder,
+.multi_step_form #msform fieldset .product_select:focus::-moz-placeholder {
+    color: transparent;
+}
+.multi_step_form
+    #msform
+    fieldset
+    .form-control:focus::-webkit-input-placeholder,
+.multi_step_form
+    #msform
+    fieldset
+    .product_select:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+.multi_step_form #msform fieldset .product_select:after {
+    display: none;
+}
+.multi_step_form #msform fieldset .product_select:before {
+    content: "\f35f";
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font: normal normal normal 24px/48px Ionicons;
+    color: #5f6771;
+}
+.multi_step_form #msform fieldset .product_select .list {
+    width: 100%;
+}
+.multi_step_form #msform fieldset .done_text {
+    padding-top: 40px;
+}
+.multi_step_form #msform fieldset .done_text .don_icon {
+    height: 36px;
+    width: 36px;
+    line-height: 36px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    background: #5cb85c;
+    display: inline-block;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+}
+.multi_step_form #msform fieldset .done_text h6 {
+    line-height: 23px;
+}
+.multi_step_form #msform fieldset .code_group {
+    margin-bottom: 60px;
+}
+.multi_step_form #msform fieldset .code_group .form-control {
+    border: 0;
+    border-bottom: 1px solid #a1a7ac;
+    border-radius: 0;
+    display: inline-block;
+    width: 30px;
+    font-size: 30px;
+    color: #5f6771;
+    padding: 0;
+    margin-right: 7px;
+    text-align: center;
+    line-height: 1;
+}
+.multi_step_form #msform fieldset .passport {
+    margin-top: -10px;
+    padding-bottom: 30px;
+    position: relative;
+}
+.multi_step_form #msform fieldset .passport .don_icon {
+    height: 36px;
+    width: 36px;
+    line-height: 36px;
+    font-size: 22px;
+    position: absolute;
+    top: 4px;
+    right: 0;
+    background: #5cb85c;
+    display: inline-block;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+}
+.multi_step_form #msform fieldset .passport h4 {
+    color: #5f6771;
+    padding: 0;
+}
+.multi_step_form #msform fieldset .input-group {
+    padding-bottom: 40px;
+}
+.multi_step_form #msform fieldset .input-group .custom-file {
+    width: 100%;
+    height: auto;
+}
+.multi_step_form #msform fieldset .input-group .custom-file .custom-file-label {
+    width: 168px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #99a2a8;
+    text-align: center;
+    transition: all 300ms linear 0s;
+    color: #5f6771;
+}
+.multi_step_form
+    #msform
+    fieldset
+    .input-group
+    .custom-file
+    .custom-file-label
+    i {
+    font-size: 20px;
+    padding-right: 10px;
+}
+.multi_step_form
+    #msform
+    fieldset
+    .input-group
+    .custom-file
+    .custom-file-label:hover,
+.multi_step_form
+    #msform
+    fieldset
+    .input-group
+    .custom-file
+    .custom-file-label:focus {
+    background: #5cb85c;
+    border-color: #5cb85c;
+    color: #fff;
+}
+.multi_step_form #msform fieldset .input-group .custom-file input {
+    display: none;
+}
+.multi_step_form #msform fieldset .file_added {
+    text-align: left;
+    padding-left: 190px;
+    padding-bottom: 60px;
+}
+.multi_step_form #msform fieldset .file_added li {
+    color: #5f6771;
+}
+.multi_step_form #msform fieldset .file_added li a {
+    color: #5cb85c;
+    font-weight: 500;
+    display: inline-block;
+    position: relative;
+    padding-left: 15px;
+}
+.multi_step_form #msform fieldset .file_added li a i {
+    font-size: 22px;
+    padding-right: 8px;
+    position: absolute;
+    left: 0;
+    transform: rotate(20deg);
+}
+.multi_step_form #msform #progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+.multi_step_form #msform #progressbar li {
+    list-style-type: none;
+    color: #99a2a8;
+    font-size: 9px;
+    width: calc(100% / 3);
+    float: left;
+    position: relative;
+}
+.multi_step_form #msform #progressbar li:nth-child(2):before {
+    content: "\f3c5";
+}
+.multi_step_form #msform #progressbar li:nth-child(3):before {
+    content: "\f457";
+}
+.multi_step_form #msform #progressbar li:before {
+    content: "\f1fa";
+    font: normal normal normal 30px/50px Ionicons;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    display: block;
+    background: #eaf0f4;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+}
+.multi_step_form #msform #progressbar li:after {
+    content: "";
+    width: 100%;
+    height: 10px;
+    background: #eaf0f4;
+    position: absolute;
+    left: -50%;
+    top: 21px;
+    z-index: -1;
+}
+.multi_step_form #msform #progressbar li:last-child:after {
+    width: 150%;
+}
+.multi_step_form #msform #progressbar li.active {
+    color: rgb(58, 62, 61);
+    font-size: 20px;
+}
+.multi_step_form #msform #progressbar li.active:before,
+.multi_step_form #msform #progressbar li.active:after {
+    background: rgb(0, 93, 131);
+    color: white;
+}
+.multi_step_form #msform .action-button {
+    background: rgb(233, 195, 30);
+    color: white;
+    border: 0 none;
+    border-radius: 5px;
+    cursor: pointer;
+    min-width: 130px;
+    font: 700 14px/40px "Roboto", sans-serif;
+    border: 1px solid rgb(233, 195, 30);
+    margin: 0 5px;
+    text-transform: uppercase;
+    display: inline-block;
+}
+.multi_step_form #msform .action-button:hover,
+.multi_step_form #msform .action-button:focus {
+    background: rgb(0, 93, 131);
+    border-color: rgb(0, 93, 131);
+}
+.multi_step_form #msform .previous_button {
+    background: transparent;
+    color: #99a2a8;
+    border-color: #99a2a8;
+}
+.multi_step_form #msform .previous_button:hover,
+.multi_step_form #msform .previous_button:focus {
+    background: rgb(0, 93, 131);
+    border-color: rgb(0, 93, 131);
+    color: #fff;
+}
+// .disabled{
+//     color: #99a2a8 !important;
+// }
+.custom-padding {
+    padding-bottom: 70px;
+}
 
+// princing page (fildest 1 setction 1)
+.test {
+    background: var(--clr-primary);
+    color: var(--clr-dark);
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.01em;
+    line-height: 1.6em;
+    margin: 0;
+    padding: 100px;
+}
 
+.made-with {
+    background: #fd264f;
+    color: #fff;
+    display: block;
+    font-size: 12px;
+    line-height: 1em;
+    margin: 0;
+    padding: 5px 110px;
+    position: fixed;
+    top: 20px;
+    right: -100px;
+    text-align: center;
+    text-decoration: none;
+    transform: rotate(45deg);
+}
+.documentation {
+    color: #fd264f;
+}
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+}
 
 
 
@@ -2188,9 +2507,7 @@ select:focus {
     outline: none;
     box-shadow: none;
 }
-.secondary-btn.spinning {
-    // padding-right: 10px;
-}
+
 .secondary-btn.spinning:after {
     content: "";
     position: absolute;
@@ -2320,12 +2637,13 @@ select:focus {
     overflow-x: hidden;
     color: var(--clr-dark);
     margin: 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 #dynamic-content {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 2px, rgba(0, 0, 0, 0.23) 0px 0px 3px;
     margin: 0 4rem;
     border-radius: 1.3rem;
-    height: 80vh;
     padding: 2rem;
 }
 #user-profile .col-md-6,
@@ -2336,11 +2654,15 @@ select:focus {
     list-style: none;
 }
 #user-profile li {
-    height: 10rem;
+    height: 7rem;
 }
 #user-profile h6 {
     font-size: 1.2rem;
     margin-top: 1rem;
+    max-width: 18rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 #user-profile h6,
 #user-profile span {
@@ -2357,6 +2679,62 @@ select:focus {
     font-size: 1.3rem;
     left: 3.5rem;
     display: inline-block;
+}
+#order ul {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.order-details {
+    color: var(--clr-secondary);
+    font-weight: 600;
+    text-align: end;
+    cursor: pointer;
+}
+.order-details:after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f107";
+    color: var(--clr-dark);
+    font-weight: bold;
+    // float: right;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.order-collapse {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+.order-collapse ul {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column !important;
+    text-align: center;
+}
+.order-collapse hr {
+    background-color: var(--clr-secondary);
+    opacity: 0.8;
+    padding: 1px;
+    margin: 0.3rem auto;
+    overflow: visible;
+}
+.order-collapse hr:before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f067";
+    color: var(--clr-secondary);
+    float: left;
+    font-weight: bold;
+    margin-right: 5px;
+}
+.order-collapse-active:after {
+    content: "\f106";
+    color: var(--clr-accent);
+}
+.order-collapse h6:nth-child(1) {
+    border-bottom: 2px solid var(--clr-accent);
+    width: 3rem;
+    margin: 0 auto 0.3rem auto;
+    padding-bottom: 0.3rem;
 }
 /* Scroll Bar ----------------------------------------------------------- */
 /* width */
@@ -2550,6 +2928,32 @@ select:focus {
     .icon-pic img,
     .digital-marketing-pic img {
         margin: 2.5rem auto 1rem auto;
+    }
+    // Profile Page Mobile
+    .costume-container {
+        padding-right: 1rem;
+    }
+    .nav__cont {
+        width: 4rem;
+    }
+    #dynamic-content {
+        margin: 0 3.7rem 0 0;
+        padding: 1rem 0;
+        display: flex;
+        justify-content: center;
+    }
+    #dynamic-content ul {
+        padding: 0;
+        flex-direction: column;
+    }
+    #user-profile h6 {
+        max-width: 8rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .costume-container {
+        padding-top: 1rem;
     }
 }
 /* Tablet Screen -----------------------------------------------*/
