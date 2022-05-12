@@ -41,12 +41,14 @@
 @import "~persian-datepicker/dist/css/persian-datepicker.min.css";
 @import "./files/owl.carousel.min.css";
 @import "~md.bootstrappersiandatetimepicker/dist/mds.bs.datetimepicker.style.css";
+@import url('https://v1.fontapi.ir/css/Samim');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Iranian Sans";
+    // font-family: "Iranian Sans";
+    font-family: 'Samim', sans-serif;
     font-weight: 500;
     font-style: normal;
 }
