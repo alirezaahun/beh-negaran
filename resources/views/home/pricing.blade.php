@@ -20,31 +20,75 @@
             <fieldset>
 
 
-   <div class="test">
+   
                 <div class="tabs">
                     <div class="tab-2">
                       <label for="tab2-1">طراحی سایت</label>
                       <input id="tab2-1" name="tabs-two" type="radio" checked="checked">
-                      <div>
-                        <p>لورم ایپسوم یا طرح‌نما (به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید، تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد. معمولا طراحان گرافیک برای صفحه‌آرایی، نخست از متن‌های آزمایشی و بی‌معنی استفاده می‌کنند تا صرفا به مشتری یا صاحب کار خود نشان دهند که صفحه طراحی یا صفحه بندی شده بعد از اینکه متن در آن قرار گیرد چگونه به نظر می‌رسد و قلم‌ها و اندازه‌بندی‌ها چگونه در نظر گرفته شده‌است. از آنجایی که طراحان عموما نویسنده متن نیستند و وظیفه رعایت حق تکثیر متون را ندارند و در همان حال کار آنها به نوعی وابسته به متن می‌باشد آنها با استفاده از محتویات ساختگی، صفحه گرافیکی خود را صفحه‌آرایی می‌کنند تا مرحله طراحی و صفحه‌بندی را به پایان برند.</p>
+                      <div class="parent">
+                        <h4> پکیچ مورد نظر خود را انتخاب کنید</h4>
+                        <div class="_cards">
+                          <div class="_card">
+                            <h2 class="_card-title">طلایی</h2>
+                            <img src="https://images.unsplash.com/photo-1591485423007-765bde4139ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80" alt="">
+                            <p class="_card-desc">ویژگی ها و قیمت های ی پکیچ</p>
+                          </div>
+                          <div class="_card">
+                            <h2 class="_card-title">نقره ای</h2>
+                            <img src="https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" alt="">
+                            <p class="_card-desc">ویژگی ها و قیمت های ی پکیچ</p>
+                          </div>
+                          <div class="_card">
+                            <h2 class="_card-title">برنزی</h2>
+                            <img src="https://images.unsplash.com/photo-1534251369789-5067c8b8602a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" alt="">
+                            <p class="_card-desc">ویژگی ها و قیمت های ی پکیچ </p>
+                          </div>
+                        </div>
                       </div>
                     </div>
                     <div class="tab-2">
                       <label for="tab2-2">پادکست</label>
                       <input id="tab2-2" name="tabs-two" type="radio">
                       <div>
-                        <h4>Tab Two</h4>
-                        <p>لورم ایپسوم یا طرح‌نما (به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید، تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد. معمولا طراحان گرافیک برای صفحه‌آرایی، نخست از متن‌های آزمایشی و بی‌معنی استفاده می‌کنند تا صرفا به مشتری یا صاحب کار خود نشان دهند که صفحه طراحی یا صفحه بندی شده بعد از اینکه متن در آن قرار گیرد چگونه به نظر می‌رسد و قلم‌ها و اندازه‌بندی‌ها چگونه در نظر گرفته شده‌است. از آنجایی که طراحان عموما نویسنده متن نیستند و وظیفه رعایت حق تکثیر متون را ندارند و در همان حال کار آنها به نوعی وابسته به متن می‌باشد آنها با استفاده از محتویات ساختگی، صفحه گرافیکی خود را صفحه‌آرایی می‌کنند تا مرحله طراحی و صفحه‌بندی را به پایان برند.</p>
-
+                        <div class="_card">
+                            <h2 class="_card-title">برنزی</h2>
+                            <img src="https://images.unsplash.com/photo-1534251369789-5067c8b8602a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" alt="">
+                            <p class="_card-desc">ویژگی ها و قیمت های ی پکیچ </p>
+                          </div>
                       </div>
                     </div>
                     <div class="tab-2">
                       <label for="tab2-3">عکاسی</label>
                       <input id="tab2-3" name="tabs-two" type="radio">
-                      <div>
-                        <h4>Tab Two</h4>
-                        <p>لورم ایپسوم یا طرح‌نما (به انگلیسی: Lorem ipsum) به متنی آزمایشی و بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح گرافیک از این متن به عنوان عنصری از ترکیب بندی برای پر کردن صفحه و ارایه اولیه شکل ظاهری و کلی طرح سفارش گرفته شده استفاده می نماید، تا از نظر گرافیکی نشانگر چگونگی نوع و اندازه فونت و ظاهر متن باشد. معمولا طراحان گرافیک برای صفحه‌آرایی، نخست از متن‌های آزمایشی و بی‌معنی استفاده می‌کنند تا صرفا به مشتری یا صاحب کار خود نشان دهند که صفحه طراحی یا صفحه بندی شده بعد از اینکه متن در آن قرار گیرد چگونه به نظر می‌رسد و قلم‌ها و اندازه‌بندی‌ها چگونه در نظر گرفته شده‌است. از آنجایی که طراحان عموما نویسنده متن نیستند و وظیفه رعایت حق تکثیر متون را ندارند و در همان حال کار آنها به نوعی وابسته به متن می‌باشد آنها با استفاده از محتویات ساختگی، صفحه گرافیکی خود را صفحه‌آرایی می‌کنند تا مرحله طراحی و صفحه‌بندی را به پایان برند.</p>
-
+                      <div class="parent">
+                        <h4> پکیچ مورد نظر خود را انتخاب کنید</h4>
+                        <div class="_cards">
+                          <div class="_card">
+                            <h2 class="_card-title">عکاسی زوج</h2>
+                            <img src="https://images.unsplash.com/photo-1591485423007-765bde4139ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80" alt="">
+                            <p class="_card-desc">ویژگی ها و قیمت های ی پکیچ</p>
+                          </div>
+                          <div class="_card">
+                            <h2 class="_card-title">عکاسی کودک</h2>
+                            <img src="https://images.unsplash.com/photo-1591485423007-765bde4139ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80" alt="">
+                            <p class="_card-desc">ویژگی ها و قیمت های ی پکیچ</p>
+                          </div>
+                          <div class="_card">
+                            <h2 class="_card-title">عکاسی فضای باز</h2>
+                            <img src="https://images.unsplash.com/photo-1591485423007-765bde4139ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80" alt="">
+                            <p class="_card-desc">ویژگی ها و قیمت های ی پکیچ</p>
+                          </div>
+                          <div class="_card">
+                            <h2 class="_card-title"> عکاسی مراسمات</h2>
+                            <img src="https://images.unsplash.com/photo-1534188753412-3e26d0d618d6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" alt="">
+                            <p class="_card-desc">ویژگی ها و قیمت های ی پکیچ</p>
+                          </div>
+                          <div class="_card">
+                            <h2 class="_card-title">عکاسی سفارشی</h2>
+                            <img src="https://images.unsplash.com/photo-1534251369789-5067c8b8602a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" alt="">
+                            <p class="_card-desc">ویژگی ها و قیمت های ی پکیچ </p>
+                          </div>
+                        </div>
                       </div>
                     </div>
                     <div class="tab-2">
