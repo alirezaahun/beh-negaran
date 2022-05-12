@@ -37,7 +37,7 @@
                 </ul>
             </nav>
 
-            <div class="container-fluid pt-5 pb-2 costume-container">
+            <div class="container-fluid costume-container">
                 <div id="dynamic-content" class="row">
 
                     <div id="user-profile" class="row tab_content">
@@ -78,7 +78,7 @@
                                 </li>
 
                                 <li><span class="text-secondary">آدرس</span>
-                                    <h6 class="text-truncate" style="max-width: 19rem;">کرج،میدان سپاه به سمت سه راه
+                                    <h6>کرج،میدان سپاه به سمت سه راه
                                         گوهردشت،خ گلستان</h6>
                                     <i class="fas fa-edit"></i>
 

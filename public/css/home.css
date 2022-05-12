@@ -1451,7 +1451,8 @@ footer p span {
   padding: 0 10px;
 }
 
-.multi_step_form #msform fieldset .fg_2, .multi_step_form #msform fieldset .fg_3 {
+.multi_step_form #msform fieldset .fg_2,
+.multi_step_form #msform fieldset .fg_3 {
   display: block;
   overflow: hidden;
 }
@@ -1460,7 +1461,8 @@ footer p span {
   padding-bottom: 70px;
 }
 
-.multi_step_form #msform fieldset .form-control, .multi_step_form #msform fieldset .product_select {
+.multi_step_form #msform fieldset .form-control,
+.multi_step_form #msform fieldset .product_select {
   display: inline;
   border-radius: 3px;
   border: 1px solid #d8e1e7;
@@ -1472,39 +1474,50 @@ footer p span {
   width: 30%;
 }
 
-.multi_step_form #msform fieldset .form-control.placeholder, .multi_step_form #msform fieldset .product_select.placeholder {
+.multi_step_form #msform fieldset .form-control.placeholder,
+.multi_step_form #msform fieldset .product_select.placeholder {
   color: #5f6771;
 }
 
-.multi_step_form #msform fieldset .form-control:-moz-placeholder, .multi_step_form #msform fieldset .product_select:-moz-placeholder {
+.multi_step_form #msform fieldset .form-control:-moz-placeholder,
+.multi_step_form #msform fieldset .product_select:-moz-placeholder {
   color: #5f6771;
 }
 
-.multi_step_form #msform fieldset .form-control::-moz-placeholder, .multi_step_form #msform fieldset .product_select::-moz-placeholder {
+.multi_step_form #msform fieldset .form-control::-moz-placeholder,
+.multi_step_form #msform fieldset .product_select::-moz-placeholder {
   color: #5f6771;
 }
 
-.multi_step_form #msform fieldset .form-control::-webkit-input-placeholder, .multi_step_form #msform fieldset .product_select::-webkit-input-placeholder {
+.multi_step_form #msform fieldset .form-control::-webkit-input-placeholder,
+.multi_step_form #msform fieldset .product_select::-webkit-input-placeholder {
   color: #5f6771;
 }
 
-.multi_step_form #msform fieldset .form-control:hover, .multi_step_form #msform fieldset .product_select:hover, .multi_step_form #msform fieldset .form-control:focus, .multi_step_form #msform fieldset .product_select:focus {
+.multi_step_form #msform fieldset .form-control:hover,
+.multi_step_form #msform fieldset .product_select:hover,
+.multi_step_form #msform fieldset .form-control:focus,
+.multi_step_form #msform fieldset .product_select:focus {
   border-color: #5cb85c;
 }
 
-.multi_step_form #msform fieldset .form-control:focus.placeholder, .multi_step_form #msform fieldset .product_select:focus.placeholder {
+.multi_step_form #msform fieldset .form-control:focus.placeholder,
+.multi_step_form #msform fieldset .product_select:focus.placeholder {
   color: transparent;
 }
 
-.multi_step_form #msform fieldset .form-control:focus:-moz-placeholder, .multi_step_form #msform fieldset .product_select:focus:-moz-placeholder {
+.multi_step_form #msform fieldset .form-control:focus:-moz-placeholder,
+.multi_step_form #msform fieldset .product_select:focus:-moz-placeholder {
   color: transparent;
 }
 
-.multi_step_form #msform fieldset .form-control:focus::-moz-placeholder, .multi_step_form #msform fieldset .product_select:focus::-moz-placeholder {
+.multi_step_form #msform fieldset .form-control:focus::-moz-placeholder,
+.multi_step_form #msform fieldset .product_select:focus::-moz-placeholder {
   color: transparent;
 }
 
-.multi_step_form #msform fieldset .form-control:focus::-webkit-input-placeholder, .multi_step_form #msform fieldset .product_select:focus::-webkit-input-placeholder {
+.multi_step_form #msform fieldset .form-control:focus::-webkit-input-placeholder,
+.multi_step_form #msform fieldset .product_select:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
@@ -1614,7 +1627,8 @@ footer p span {
   padding-right: 10px;
 }
 
-.multi_step_form #msform fieldset .input-group .custom-file .custom-file-label:hover, .multi_step_form #msform fieldset .input-group .custom-file .custom-file-label:focus {
+.multi_step_form #msform fieldset .input-group .custom-file .custom-file-label:hover,
+.multi_step_form #msform fieldset .input-group .custom-file .custom-file-label:focus {
   background: #5cb85c;
   border-color: #5cb85c;
   color: #fff;
@@ -1704,7 +1718,8 @@ footer p span {
   font-size: 20px;
 }
 
-.multi_step_form #msform #progressbar li.active:before, .multi_step_form #msform #progressbar li.active:after {
+.multi_step_form #msform #progressbar li.active:before,
+.multi_step_form #msform #progressbar li.active:after {
   background: #005d83;
   color: white;
 }
@@ -1723,7 +1738,8 @@ footer p span {
   display: inline-block;
 }
 
-.multi_step_form #msform .action-button:hover, .multi_step_form #msform .action-button:focus {
+.multi_step_form #msform .action-button:hover,
+.multi_step_form #msform .action-button:focus {
   background: #005d83;
   border-color: #005d83;
 }
@@ -1734,7 +1750,8 @@ footer p span {
   border-color: #99a2a8;
 }
 
-.multi_step_form #msform .previous_button:hover, .multi_step_form #msform .previous_button:focus {
+.multi_step_form #msform .previous_button:hover,
+.multi_step_form #msform .previous_button:focus {
   background: #005d83;
   border-color: #005d83;
   color: #fff;
@@ -1816,7 +1833,8 @@ select:focus {
   transition: all 0.3s ease-in-out;
 }
 
-.tabs [class^=tab] [type=radio]:hover, .tabs [class^=tab] [type=radio]:focus,
+.tabs [class^=tab] [type=radio]:hover,
+.tabs [class^=tab] [type=radio]:focus,
 .tabs [class*=" tab"] [type=radio]:hover,
 .tabs [class*=" tab"] [type=radio]:focus {
   border-bottom: 1px solid var(--clr-accent);
@@ -2513,6 +2531,8 @@ select:focus {
   overflow-x: hidden;
   color: var(--clr-dark);
   margin: 0;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 #dynamic-content {
@@ -2538,6 +2558,10 @@ select:focus {
 #dynamic-content h6 {
   font-size: 1.1rem;
   margin-top: 1rem;
+  max-width: 18rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 #user-profile h6,
@@ -2856,6 +2880,37 @@ select:focus {
   .icon-pic img,
 .digital-marketing-pic img {
     margin: 2.5rem auto 1rem auto;
+  }
+
+  .costume-container {
+    padding-right: 1rem;
+  }
+
+  .nav__cont {
+    width: 4rem;
+  }
+
+  #dynamic-content {
+    margin: 0 3.7rem 0 0;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  #dynamic-content ul {
+    padding: 0;
+    flex-direction: column;
+  }
+
+  #user-profile h6 {
+    max-width: 8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .costume-container {
+    padding-top: 1rem;
   }
 }
 /* Tablet Screen -----------------------------------------------*/
