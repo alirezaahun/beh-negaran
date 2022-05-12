@@ -2519,7 +2519,6 @@ select:focus {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 2px, rgba(0, 0, 0, 0.23) 0px 0px 3px;
   margin: 0 4rem;
   border-radius: 1.3rem;
-  height: 80vh;
   padding: 2rem;
 }
 
@@ -2533,7 +2532,7 @@ select:focus {
 }
 
 #user-profile li {
-  height: 10rem;
+  height: 7rem;
 }
 
 #dynamic-content h6 {
@@ -2568,10 +2567,11 @@ select:focus {
   flex-direction: row;
 }
 
-#order a {
-  text-decoration: none;
+.order-details {
   color: var(--clr-secondary);
   font-weight: 600;
+  text-align: end;
+  cursor: pointer;
 }
 
 .order-details:after {
@@ -2581,6 +2581,48 @@ select:focus {
   font-weight: bold;
   margin-right: 5px;
   cursor: pointer;
+}
+
+.order-collapse {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.order-collapse ul {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column !important;
+  text-align: center;
+}
+
+.order-collapse hr {
+  background-color: var(--clr-secondary);
+  opacity: 0.8;
+  padding: 1px;
+  margin: 0.3rem auto;
+  overflow: visible;
+}
+
+.order-collapse hr:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f067";
+  color: var(--clr-secondary);
+  float: left;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.order-collapse-active:after {
+  content: "\f106";
+  color: var(--clr-accent);
+}
+
+.order-collapse h6:nth-child(1) {
+  border-bottom: 2px solid var(--clr-accent);
+  width: 3rem;
+  margin: 0 auto 0.3rem auto;
+  padding-bottom: 0.3rem;
 }
 
 /* Scroll Bar ----------------------------------------------------------- */
