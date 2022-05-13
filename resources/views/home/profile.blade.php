@@ -45,20 +45,72 @@
                             <ul>
                                 <li><span class="text-secondary">نام</span>
                                     <h6>سهراب</h6>
-                                    <i class="fas fa-edit"></i>
+                                    <i id="modalBtn" class="fas fa-edit"></i>
+                                    <!-- The Modal -->
+                                    <div id="myModal" class="modal">
+                                        <!-- Modal content -->
+                                        <div class="modal-content">
+                                            <span class="close">&times;</span>
+                                            <div class="modal-body">
+                                                <p class="text-secondary">لطفا اطلاعات شناسایی خود را وارد کنید. نام شما باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
+                                                <form action="">
+                                                    <div class="form-group">
+                                                      <label for="firstName">نام</label>
+                                                      <input type="text" class="form-control" id="firstName" placeholder="نام شما">
+                                                    </div>
+                                                    
+                                                    <button type="submit" class="secondary-btn">ذخیره</button>
+                                                  </form>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <hr>
                                 </li>
 
                                 <li><span class="text-secondary">نام خانوادگی</span>
                                     <h6>ناصحی ارجمند</h6>
-                                    <i class="fas fa-edit"></i>
+                                    <i id="modalBtn1" class="fas fa-edit"></i>
+                                    <!-- The Modal -->
+                                    <div id="myModal1" class="modal">
+                                        <!-- Modal content -->
+                                        <div class="modal-content">
+                                            <span class="close">&times;</span>
+                                            <div class="modal-body">
+                                                <p class="text-secondary">لطفا اطلاعات شناسایی خود را وارد کنید. نام خانوادگی شما باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
+                                                <form action="">
+                                                    <div class="form-group">
+                                                      <label for="lastName">نام خانوادگی</label>
+                                                      <input type="text" class="form-control" id="lastName" placeholder="نام خانوادگی شما">
+                                                    </div>
+                                                    <button type="submit" class="secondary-btn">ذخیره</button>
+                                                  </form>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <hr>
                                 </li>
 
                                 <li><span class="text-secondary">شماره موبایل</span>
                                     <h6>۰۹۳۷۸۲۱۹۳۹۳</h6>
-                                    <i class="fas fa-edit"></i>
-
+                                    <i id="modalBtn2" class="fas fa-edit"></i>
+                                    <!-- The Modal -->
+                                    <div id="myModal2" class="modal">
+                                        <!-- Modal content -->
+                                        <div class="modal-content">
+                                            <span class="close">&times;</span>
+                                            <div class="modal-body">
+                                                <p class="text-secondary">برای ثبت این شماره باید آن را تایید کنید.</p>
+                                                <form action="">
+                                                    <div class="form-group">
+                                                      <label for="mobileNumber">شماره موبایل</label>
+                                                      <input type="text" class="form-control" id="mobileNumber" placeholder="۰۹۱۲۱۱۱۲۲۳۳">
+                                                    </div>
+                                                    
+                                                    <button type="submit" class="secondary-btn">ذخیره</button>
+                                                  </form>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
@@ -67,21 +119,70 @@
                             <ul>
                                 <li><span class="text-secondary">کد ملی</span>
                                     <h6>۰۰۱۷۵۴۰۲۹۱</h6>
-                                    <i class="fas fa-edit"></i>
+                                    <i id="modalBtn3" class="fas fa-edit"></i>
+                                    <!-- The Modal -->
+                                    <div id="myModal3" class="modal">
+                                        <!-- Modal content -->
+                                        <div class="modal-content">
+                                            <span class="close">&times;</span>
+                                            <div class="modal-body">
+                                                <p class="text-secondary">لطفا اطلاعات شناسایی خود را وارد کنید. کد ملی شما باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
+                                                <form action="">
+                                                    <div class="form-group">
+                                                      <label for="nationalNumber">کد ملی</label>
+                                                      <input type="text" class="form-control" id="nationalNumber" placeholder="۰۰۱۲۳۴۵۶۷۸">
+                                                    </div>
+                                                    <button type="submit" class="secondary-btn">ذخیره</button>
+                                                  </form>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <hr>
                                 </li>
 
                                 <li><span class="text-secondary">ایمیل</span>
                                     <h6>sohrabnasehi.sn@gmail.com</h6>
-                                    <i class="fas fa-edit"></i>
+                                    <i id="modalBtn4" class="fas fa-edit"></i>
+                                    <!-- The Modal -->
+                                    <div id="myModal4" class="modal">
+                                        <!-- Modal content -->
+                                        <div class="modal-content">
+                                            <span class="close">&times;</span>
+                                            <div class="modal-body">
+                                                <form action="">
+                                                    <div class="form-group">
+                                                      <label for="userEmail">ایمیل</label>
+                                                      <input type="email" class="form-control" id="userEmail" placeholder="example@info.com">
+                                                    </div>
+                                                    <button type="submit" class="secondary-btn">ذخیره</button>
+                                                  </form>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <hr>
                                 </li>
 
                                 <li><span class="text-secondary">آدرس</span>
                                     <h6>کرج،میدان سپاه به سمت سه راه
                                         گوهردشت،خ گلستان</h6>
-                                    <i class="fas fa-edit"></i>
-
+                                    <i id="modalBtn5" class="fas fa-edit"></i>
+                                    <!-- The Modal -->
+                                    <div id="myModal5" class="modal">
+                                        <!-- Modal content -->
+                                        <div class="modal-content">
+                                            <span class="close">&times;</span>
+                                            <div class="modal-body">
+                                                <p class="text-secondary">لطفا اطلاعات شناسایی خود را وارد کنید. آدرس شما باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
+                                                <form action="">
+                                                    <div class="form-group">
+                                                      <label for="userAddress">آدرس</label>
+                                                      <input type="text" class="form-control" id="userAddress" placeholder="تهران، خیابان ۹ شرقی...">
+                                                    </div>
+                                                    <button type="submit" class="secondary-btn">ذخیره</button>
+                                                  </form>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
@@ -109,35 +210,35 @@
                             <span class="order-details">جزئیات</span>
 
                             <div class="order-collapse">
-                              <h6 class="text-center">فاکتور</h6>
-                              <ul>
-                                <li>
-                                  <span class="text-secondary">هزینه پکیج</span>
-                                  <h6>۲٬۰۰۰٬۰۰۰ تومان
-                                  </h6>
-                                </li>
-                                <li>
-                                  <span class="text-secondary">ایاب ذهاب</span>
-                                  <h6>۲۰۰٫۰۰۰ تومان
-                                  </h6>
-                                </li>
-                                <li>
-                                  <span class="text-secondary">خدمات جانبی</span>
-                                  <h6>۸۰۰٬۰۰۰ تومان
-                                  </h6>
-                                </li>
-                                <hr class="w-50">
-                                <li>
-                                  <span class="text-secondary">پرداخت شده</span>
-                                  <h6>۳٫۰۰۰٫۰۰۰ تومان
-                                  </h6>
-                                </li>
-                              </ul>
+                                <h6 class="text-center">فاکتور</h6>
+                                <ul>
+                                    <li>
+                                        <span class="text-secondary">هزینه پکیج</span>
+                                        <h6>۲٬۰۰۰٬۰۰۰ تومان
+                                        </h6>
+                                    </li>
+                                    <li>
+                                        <span class="text-secondary">ایاب ذهاب</span>
+                                        <h6>۲۰۰٫۰۰۰ تومان
+                                        </h6>
+                                    </li>
+                                    <li>
+                                        <span class="text-secondary">خدمات جانبی</span>
+                                        <h6>۸۰۰٬۰۰۰ تومان
+                                        </h6>
+                                    </li>
+                                    <hr class="w-50">
+                                    <li>
+                                        <span class="text-secondary">پرداخت شده</span>
+                                        <h6>۳٫۰۰۰٫۰۰۰ تومان
+                                        </h6>
+                                    </li>
+                                </ul>
                             </div>
                             <hr>
                         </div>
 
-                        
+
 
 
                     </div>
@@ -188,6 +289,39 @@
                     content.style.maxHeight = null;
                 } else {
                     content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+
+        var datamap = new Map([
+            [document.getElementById("modalBtn"), document.getElementById("myModal")],
+            [document.getElementById("modalBtn1"), document.getElementById("myModal1")],
+            [document.getElementById("modalBtn2"), document.getElementById("myModal2")],
+            [document.getElementById("modalBtn3"), document.getElementById("myModal3")],
+            [document.getElementById("modalBtn4"), document.getElementById("myModal4")],
+            [document.getElementById("modalBtn5"), document.getElementById("myModal5")],
+        ]);
+
+        datamap.forEach((value, key) => {
+            doModal(key, value);
+        });
+
+        function doModal(anchor, popupbox) {
+
+            // Get the <span> element that closes the modal
+            var span = popupbox.getElementsByClassName("close")[0];
+
+            anchor.addEventListener("click", function(event) {
+                popupbox.style.display = "block";
+            });
+
+            span.addEventListener("click", function(event) {
+                popupbox.style.display = "none";
+            });
+
+            window.addEventListener("click", function(event) {
+                if (event.target == popupbox) {
+                    popupbox.style.display = "none";
                 }
             });
         }
