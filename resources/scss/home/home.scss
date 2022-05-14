@@ -2683,6 +2683,9 @@ select:focus {
 .modal-body form button {
     margin: 1rem auto;
 }
+.modal-body form button {
+    width: 100%;
+}
 .modal-body input {
     background-color: #95a5a67c;
     border: 1px solid transparent;
