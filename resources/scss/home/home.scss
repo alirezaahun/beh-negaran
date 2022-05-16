@@ -937,9 +937,9 @@ footer p span {
 #social-media-service hr,
 #advertise-campaign-service hr,
 #digital-marketing-service hr {
-    background-color: var(--clr-accent);
-    padding: 3px;
-    opacity: 1;
+    background-color: var(--clr-secondary);
+    padding: 1px;
+    opacity: 0.9;
     border-radius: 0.3rem;
     margin-bottom: 2rem;
 }
@@ -952,7 +952,7 @@ footer p span {
 #social-media-service hr,
 #advertise-campaign-service hr,
 #digital-marketing-service hr {
-    background-color: var(--clr-secondary);
+    // background-color: var(--clr-secondary);
 }
 .icon-pic img {
     filter: drop-shadow(0 0 1px black);
