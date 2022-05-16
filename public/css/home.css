@@ -1359,8 +1359,10 @@ footer p span {
 
 #heading {
   text-transform: uppercase;
-  color: #673ab7;
+  color: var(--clr-secondary);
   font-weight: normal;
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
 
 #msform {
@@ -1370,7 +1372,6 @@ footer p span {
 }
 
 #msform fieldset {
-  background: white;
   border: 0 none;
   border-radius: 0.5rem;
   box-sizing: border-box;
@@ -1413,38 +1414,50 @@ footer p span {
 
 #msform .action-button {
   width: 100px;
-  background: #673ab7;
-  font-weight: bold;
-  color: white;
-  border: 0 none;
-  border-radius: 0px;
+  color: var(--clr-dark);
+  background: var(--clr-primary);
   cursor: pointer;
-  padding: 10px 5px;
   margin: 250px 0px 10px 5px;
   float: right;
+  border: none;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 2px, rgba(0, 0, 0, 0.23) 0px 0px 3px;
+  line-height: 15px;
+  padding: 0.7em 1rem;
 }
 
 #msform .action-button:hover,
 #msform .action-button:focus {
-  background-color: #311b92;
+  box-shadow: rgba(255, 255, 255, 0.23) 0px 0px 3px inset, rgba(255, 255, 255, 0.16) 0px 0px 3px inset;
+  transition: all 0.3s ease;
+  color: var(--clr-primary);
+  background-color: var(--clr-dark);
 }
 
 #msform .action-button-previous {
   width: 100px;
-  background: #616161;
-  font-weight: bold;
-  color: white;
-  border: 0 none;
-  border-radius: 0px;
   cursor: pointer;
-  padding: 10px 5px;
   margin: 250px 0px 10px 5px;
   float: right;
+  border: none;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 2px, rgba(0, 0, 0, 0.23) 0px 0px 3px;
+  line-height: 15px;
+  padding: 0.7em 1rem;
 }
 
 #msform .action-button-previous:hover,
 #msform .action-button-previous:focus {
-  background-color: #000000;
+  box-shadow: rgba(255, 255, 255, 0.23) 0px 0px 3px inset, rgba(255, 255, 255, 0.16) 0px 0px 3px inset;
+  transition: all 0.3s ease;
+  color: var(--clr-primary);
+  background-color: var(--clr-dark);
 }
 
 ._card_ {
@@ -1483,6 +1496,9 @@ footer p span {
   margin-bottom: 30px;
   overflow: hidden;
   color: lightgrey;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  padding: 10px;
 }
 
 #progressbar li {
@@ -1660,6 +1676,10 @@ fieldset .container {
   display: flex;
   min-height: 300px;
   border-radius: 8px 8px 0 0;
+}
+
+.test {
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
 }
 
 .tabby-tab {

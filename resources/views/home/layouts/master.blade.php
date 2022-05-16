@@ -30,6 +30,13 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
+        {{-- cdn for data picker --}}
+        <link rel="stylesheet" href="css/persian.datepicker.css"/>
+        <script src="js/jquery.js"></script>
+        <script src="js/persian.date.js"></script>
+        <script src="js/persian.datepicker.js"></script>
+      
+
 
 
 
