@@ -212,19 +212,20 @@
                             <div class="order-collapse">
                                 <ul class="responsive-table">
                                     <li class="table-header">
-                                      <div class="col col-1">شماره سفارش</div>
-                                      <div class="col col-2">مشخصات مشتری</div>
+                                      <div class="col col-1">هزینه پکیج</div>
+                                      <div class="col col-2">ایاب و ذهاب</div>
                                       <div class="col col-3">مبلغ کل</div>
                                       <div class="col col-4">وضعیت سفارش</div>
                                     </li>
                                     <li class="table-row">
-                                      <div class="col col-1" data-label="شماره سفارش">۴۲۲۳۵</div>
-                                      <div class="col col-2" data-label="مشخصات مشتری">سهراب ناصحی</div>
+                                      <div class="col col-1" data-label="هزینه پکیج">۲٬۵۰۰٬۰۰۰ تومان</div>
+                                      <div class="col col-2" data-label="ایاب و ذهاب">۵۰۰٬۰۰۰ تومان</div>
                                       <div class="col col-3" data-label="مبلغ کل">۳٬۰۰۰٬۰۰۰ تومان</div>
                                       <div class="col col-4" data-label="وضعیت سفارش">در حال انجام</div>
                                     </li>
-                                    
+
                                   </ul>
+                                  <button id="recipt-print" class="secondary-btn">چاپ فاکتور</button>
                             </div>
                             <hr>
                         </div>

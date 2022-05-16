@@ -2653,7 +2653,7 @@ fieldset .container {
 }
 
 .responsive-table .col-2 {
-  flex-basis: 30%;
+  flex-basis: 25%;
 }
 
 .responsive-table .col-3 {
@@ -2661,7 +2661,13 @@ fieldset .container {
 }
 
 .responsive-table .col-4 {
-  flex-basis: 20%;
+  flex-basis: 25%;
+}
+
+#recipt-print {
+  display: flex;
+  justify-self: end;
+  margin: 1rem auto;
 }
 
 @media all and (max-width: 767px) {
