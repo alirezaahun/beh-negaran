@@ -495,6 +495,11 @@ h6 {
     justify-content: center;
     align-items: center;
 }
+.main-section hr {
+    padding: 1px;
+    opacity: 0.9;
+    background-color: var(--clr-secondary);
+}
 .banner {
     background-image: url("../../../public/images/main-banner.png");
     background-size: cover;
@@ -943,17 +948,6 @@ footer p span {
     border-radius: 0.3rem;
     margin-bottom: 2rem;
 }
-#video-service hr,
-#photo-service hr,
-#website-service hr,
-#design-service hr,
-#podcast-service hr,
-#advertise-consultation-service hr,
-#social-media-service hr,
-#advertise-campaign-service hr,
-#digital-marketing-service hr {
-    // background-color: var(--clr-secondary);
-}
 .icon-pic img {
     filter: drop-shadow(0 0 1px black);
 }
@@ -1137,16 +1131,16 @@ footer p span {
     color: var(--clr-accent);
 }
 .aboutUs-custom-hr {
-    background-color: var(--clr-accent);
-    padding: 3px;
-    opacity: 1;
+    background-color: var(--clr-secondary);
+    padding: 1px;
+    opacity: 0.9;
     border-radius: 0.3rem;
     margin-bottom: 2rem;
 }
 .aboutUs-custom-hr2 {
     background-color: var(--clr-secondary);
-    padding: 3px;
-    opacity: 1;
+    padding: 1px;
+    opacity: 0.9;
     border-radius: 0.3rem;
     margin-bottom: 2rem;
 }
@@ -1600,9 +1594,9 @@ fieldset .container {
     font-size: 2rem;
 }
 .project-page-title hr {
-    background-color: var(--clr-accent);
-    padding: 3px;
-    opacity: 1;
+    background-color: var(--clr-secondary);
+    padding: 1px;
+    opacity: 0.9;
     border-radius: 0.3rem;
     margin-bottom: 2rem;
 }
@@ -2332,7 +2326,7 @@ fieldset .container {
 }
 .order-collapse hr {
     background-color: var(--clr-secondary);
-    opacity: 0.8;
+    opacity: 0.9;
     padding: 1px;
     margin: 0.3rem auto;
     overflow: visible;

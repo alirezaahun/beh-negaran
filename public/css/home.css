@@ -585,6 +585,12 @@ h6 {
   align-items: center;
 }
 
+.main-section hr {
+  padding: 1px;
+  opacity: 0.9;
+  background-color: var(--clr-secondary);
+}
+
 .banner {
   background-image: url(/images/main-banner.png?886b0066a308488a9677c2ea3f454ecd);
   background-size: cover;
@@ -1309,17 +1315,17 @@ footer p span {
 }
 
 .aboutUs-custom-hr {
-  background-color: var(--clr-accent);
-  padding: 3px;
-  opacity: 1;
+  background-color: var(--clr-secondary);
+  padding: 1px;
+  opacity: 0.9;
   border-radius: 0.3rem;
   margin-bottom: 2rem;
 }
 
 .aboutUs-custom-hr2 {
   background-color: var(--clr-secondary);
-  padding: 3px;
-  opacity: 1;
+  padding: 1px;
+  opacity: 0.9;
   border-radius: 0.3rem;
   margin-bottom: 2rem;
 }
@@ -1753,9 +1759,9 @@ fieldset .container {
 }
 
 .project-page-title hr {
-  background-color: var(--clr-accent);
-  padding: 3px;
-  opacity: 1;
+  background-color: var(--clr-secondary);
+  padding: 1px;
+  opacity: 0.9;
   border-radius: 0.3rem;
   margin-bottom: 2rem;
 }
@@ -2597,7 +2603,7 @@ fieldset .container {
 
 .order-collapse hr {
   background-color: var(--clr-secondary);
-  opacity: 0.8;
+  opacity: 0.9;
   padding: 1px;
   margin: 0.3rem auto;
   overflow: visible;
