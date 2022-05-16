@@ -214,14 +214,16 @@
                                     <li class="table-header">
                                       <div class="col col-1">هزینه پکیج</div>
                                       <div class="col col-2">ایاب و ذهاب</div>
-                                      <div class="col col-3">مبلغ کل</div>
-                                      <div class="col col-4">وضعیت سفارش</div>
+                                      <div class="col col-3">خدمت اضافه</div>
+                                      <div class="col col-4">مبلغ کل</div>
+                                      <div class="col col-5">وضعیت سفارش</div>
                                     </li>
                                     <li class="table-row">
                                       <div class="col col-1" data-label="هزینه پکیج">۲٬۵۰۰٬۰۰۰ تومان</div>
-                                      <div class="col col-2" data-label="ایاب و ذهاب">۵۰۰٬۰۰۰ تومان</div>
-                                      <div class="col col-3" data-label="مبلغ کل">۳٬۰۰۰٬۰۰۰ تومان</div>
-                                      <div class="col col-4" data-label="وضعیت سفارش">در حال انجام</div>
+                                      <div class="col col-2" data-label="ایاب و ذهاب">۲۰۰٬۰۰۰ تومان</div>
+                                      <div class="col col-3" data-label="خدمت اضافه">۳۰۰٬۰۰۰ تومان</div>
+                                      <div class="col col-4" data-label="مبلغ کل">۳٬۰۰۰٬۰۰۰ تومان</div>
+                                      <div class="col col-5" data-label="وضعیت سفارش">در حال انجام</div>
                                     </li>
 
                                   </ul>
