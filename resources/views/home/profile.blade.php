@@ -21,8 +21,8 @@
                     </li>
 
                     <li class="nav___items ">
-                        <i class='bx bxs-message-alt-edit'></i>
-                        <a class="text-nowrap" href="">اطلاعات حساب کاربری</a>
+                        <i class='bx bx-recycle'></i>
+                        <a class="text-nowrap" href="">پیگیری سفارشات</a>
                     </li>
 
                     <li class="nav___items ">
@@ -210,30 +210,24 @@
                             <span class="order-details">جزئیات</span>
 
                             <div class="order-collapse">
-                                <h6 class="text-center">فاکتور</h6>
-                                <ul>
-                                    <li>
-                                        <span class="text-secondary">هزینه پکیج</span>
-                                        <h6>۲٬۰۰۰٬۰۰۰ تومان
-                                        </h6>
+                                <ul class="responsive-table">
+                                    <li class="table-header">
+                                      <div class="col col-1">هزینه پکیج</div>
+                                      <div class="col col-2">ایاب و ذهاب</div>
+                                      <div class="col col-3">خدمت اضافه</div>
+                                      <div class="col col-4">مبلغ کل</div>
+                                      <div class="col col-5">وضعیت سفارش</div>
                                     </li>
-                                    <li>
-                                        <span class="text-secondary">ایاب ذهاب</span>
-                                        <h6>۲۰۰٫۰۰۰ تومان
-                                        </h6>
+                                    <li class="table-row">
+                                      <div class="col col-1" data-label="هزینه پکیج">۲٬۵۰۰٬۰۰۰ تومان</div>
+                                      <div class="col col-2" data-label="ایاب و ذهاب">۲۰۰٬۰۰۰ تومان</div>
+                                      <div class="col col-3" data-label="خدمت اضافه">۳۰۰٬۰۰۰ تومان</div>
+                                      <div class="col col-4" data-label="مبلغ کل">۳٬۰۰۰٬۰۰۰ تومان</div>
+                                      <div class="col col-5" data-label="وضعیت سفارش">در حال انجام</div>
                                     </li>
-                                    <li>
-                                        <span class="text-secondary">خدمات جانبی</span>
-                                        <h6>۸۰۰٬۰۰۰ تومان
-                                        </h6>
-                                    </li>
-                                    <hr class="w-50">
-                                    <li>
-                                        <span class="text-secondary">پرداخت شده</span>
-                                        <h6>۳٫۰۰۰٫۰۰۰ تومان
-                                        </h6>
-                                    </li>
-                                </ul>
+
+                                  </ul>
+                                  <button id="recipt-print" class="secondary-btn">چاپ فاکتور</button>
                             </div>
                             <hr>
                         </div>
