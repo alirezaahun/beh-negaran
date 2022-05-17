@@ -60,6 +60,52 @@ class HomeController extends Controller
 
     }
 
+    public function editname(Request $request , $id){
+
+        $user = User::find($id);
+
+        if($request->has('name')){
+
+            $request->validate([
+
+                'name' => 'required'
+
+            ]);
+
+            $user->update([
+
+                'name' => $request->name
+
+            ]);
+
+            return redirect()->route('home.profile');
+
+
+
+        }
+
+        if($request->has('email')){
+
+            $request->validate([
+
+                'email' => 'required'
+
+            ]);
+
+            $user->update([
+
+                'email' => $request->email
+
+            ]);
+
+            return redirect()->route('home.profile');
+
+
+
+        }
+
+    }
+
     public function logout(){
 
         auth()->logout();

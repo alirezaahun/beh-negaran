@@ -161,7 +161,7 @@
         });
 
         function timer() {
-            let time = "1:59";
+            let time = "0:59";
             let interval = setInterval(function() {
                 let countdown = time.split(':');
                 let minutes = parseInt(countdown[0], 10);
