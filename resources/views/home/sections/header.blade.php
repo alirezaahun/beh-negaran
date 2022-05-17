@@ -78,7 +78,7 @@
 
               @if (auth()->check())
 
-                <a class="profile-link" href="#"><span>{{auth()->user()->cellphone}}</span></a>
+                <a class="profile-link" href="{{route('home.profile')}}"><span>{{auth()->user()->cellphone}}</span></a>
 
                 @else
 

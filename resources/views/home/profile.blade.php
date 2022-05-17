@@ -44,7 +44,7 @@
                         <div class="col-md-6 col-sm-12">
                             <ul>
                                 <li><span class="text-secondary">نام</span>
-                                    <h6>سهراب</h6>
+                                    <h6>{{$user->name}}</h6>
                                     <i id="modalBtn" class="fas fa-edit"></i>
                                     <!-- The Modal -->
                                     <div id="myModal" class="modal">
@@ -58,7 +58,7 @@
                                                       <label for="firstName">نام</label>
                                                       <input type="text" class="form-control" id="firstName" placeholder="نام شما">
                                                     </div>
-                                                    
+
                                                     <button type="submit" class="secondary-btn">ذخیره</button>
                                                   </form>
                                             </div>
@@ -91,7 +91,7 @@
                                 </li>
 
                                 <li><span class="text-secondary">شماره موبایل</span>
-                                    <h6>۰۹۳۷۸۲۱۹۳۹۳</h6>
+                                    <h6>{{$user->cellphone}}</h6>
                                     <i id="modalBtn2" class="fas fa-edit"></i>
                                     <!-- The Modal -->
                                     <div id="myModal2" class="modal">
@@ -105,7 +105,7 @@
                                                       <label for="mobileNumber">شماره موبایل</label>
                                                       <input type="text" class="form-control" id="mobileNumber" placeholder="۰۹۱۲۱۱۱۲۲۳۳">
                                                     </div>
-                                                    
+
                                                     <button type="submit" class="secondary-btn">ذخیره</button>
                                                   </form>
                                             </div>
@@ -141,7 +141,7 @@
                                 </li>
 
                                 <li><span class="text-secondary">ایمیل</span>
-                                    <h6>sohrabnasehi.sn@gmail.com</h6>
+                                    <h6>{{$user->email}}</h6>
                                     <i id="modalBtn4" class="fas fa-edit"></i>
                                     <!-- The Modal -->
                                     <div id="myModal4" class="modal">
