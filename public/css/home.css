@@ -1748,6 +1748,54 @@ fieldset .container {
   overflow: visible;
 }
 
+/* CSS */
+.button {
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  font-weight: 600;
+  line-height: 41px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  background-color: var(--clr-secondary);
+  color: var(--clr-primary);
+}
+
+.button:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.button:hover {
+  text-decoration: none;
+}
+
+.pricing-box-Shadow {
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+}
+
+.custom-boder-pricing {
+  border: 1px solid var(--clr-accent);
+}
+
+.form-select {
+  width: 50%;
+}
+
+.custom-margin-pricing {
+  margin: 140px 0 40px 0;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
 /* BREAKPOINTS ----- */
 @media screen and (max-width: 767px) {
   .tabs {
@@ -1760,7 +1808,9 @@ fieldset .container {
   }
 
   .tabby-tab label {
-    height: 60px;
+    height: 45px;
+    font-size: 13px;
+    padding: 8px;
   }
 
   .tabby-content {
