@@ -8,6 +8,7 @@ use App\Http\Resources\V1\sliderResource;
 use App\Http\Resources\V1\topBannerResource;
 use App\Models\Banner;
 use App\Models\Product;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -33,7 +34,7 @@ class HomeController extends Controller
 
     }
 
-    
+
 
     public function services(){
 
@@ -53,7 +54,9 @@ class HomeController extends Controller
     }
     public function profile(){
 
-        return view('home.profile');
+
+        $user = User::where('id' , auth()->id())->first();
+        return view('home.profile' , compact('user'));
 
     }
 
