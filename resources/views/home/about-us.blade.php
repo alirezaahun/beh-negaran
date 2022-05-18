@@ -8,7 +8,7 @@
             <div class="page-content container mt-5">
 
                 <div class="row">
-                    <div class="col col-md-8">
+                    <div class="col col-md-7">
                         <h2 class="aboutUs-h2-color">
                             چرا هستیم؟
                         </h2>
@@ -20,6 +20,10 @@
                             سفارش بده و به جای ارتباط گرفتن و صرف زمان زیاد برای هماهنگی با چندین نفر از طریق همین سایت
                             تمامی خدمات رو پیگیری کنه تا به سرانجام برسه اصلی‌ترین دلیل به وجود اومدن ماست.</p>
                         <p>به‌نگاران با قدرت کنار شماست تا به تمامی نیاز شما برای تولید محتوا و تبلیغات پاسخ بده.</p>
+                    </div>
+
+                    <div class="col-md-5 col-sm-12 digital-marketing-pic">
+                        <img class="img-fluid" src="{{ asset('images/aboutus-cover.png') }}">
                     </div>
                 </div>
 

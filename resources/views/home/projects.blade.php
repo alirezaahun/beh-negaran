@@ -18,10 +18,11 @@
                         <div class="filters-group">
                             <p class="filter-label">فیلتر</p>
                             <div class="btn-group filter-options">
-                                <button class="projects-btn" data-group="space">فیلم</button>
-                                <button class="projects-btn" data-group="nature">عکس</button>
-                                <button class="projects-btn" data-group="animal">سایت</button>
-                                <button class="projects-btn" data-group="city">طراحی</button>
+                                <button class="projects-btn" data-group="video">ویدئو</button>
+                                <button class="projects-btn" data-group="photo">عکس</button>
+                                <button class="projects-btn" data-group="website">سایت</button>
+                                <button class="projects-btn" data-group="design">طراحی</button>
+                                <button class="projects-btn" data-group="campaign">کمپین</button>
                             </div>
                         </div>
 
@@ -29,209 +30,274 @@
                 </div>
             </div>
 
-            <div class="projects-container">
-                <div id="grid" class="projects-row my-shuffle-container">
-                    <figure class="col-3@xs col-4@sm col-3@md picture-item" data-groups='["nature"]'
-                        data-date-created="2017-04-30" data-title="Lake Walchen">
+            <div class="container my-shuffle-container">
+                <div id="grid" class="row">
+                    {{-- <figure class="col-3@xs col-4@sm col-3@md picture-item" data-groups='["photo"]'>
                         <div class="picture-item__inner">
                             <div class="aspect aspect--16x9">
                                 <div class="aspect__inner">
-                                    <img src="{{asset('images/banner3.jpg')}}"
-                                        srcset="{{asset('images/banner3.jpg')}} 2x"
-                                        alt="project-1" />
+                                    <div class="h_iframe-aparat_embed_frame aparat-video">
+                                        <span style="display: block;padding-top: 57%"></span>
+                                        <iframe src="https://www.aparat.com/video/video/embed/videohash/efu1W/vt/frame"
+                                            allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
+                                        </iframe>
+                                    </div>
                                 </div>
                             </div>
                             <div class="picture-item__details">
-                                <figcaption class="picture-item__title"><a href="https://unsplash.com/photos/zshyCr6HGw0"
-                                        target="_blank" rel="noopener">پروژه</a></figcaption>
+                                <figcaption class="picture-item__title"><a href="#" target="_blank" rel="noopener">پروژه</a>
+                                </figcaption>
                                 <p class="picture-item__tags hidden@xs">عنوان</p>
                             </div>
                         </div>
                     </figure>
-                    <figure class="col-3@xs col-8@sm col-6@md picture-item picture-item--overlay" data-groups='["city"]'
-                        data-date-created="2016-07-01" data-title="Golden Gate Bridge">
+                    <figure class="col-3@xs col-8@sm col-6@md picture-item picture-item--overlay" data-groups='["design"]'>
                         <div class="picture-item__inner">
 
-                            <img src="{{asset('images/banner3.jpg')}}"
-                                        srcset="{{asset('images/banner3.jpg')}} 2x"
-                                        alt="project-1" />
+                            <img src="{{ asset('images/banner3.jpg') }}" srcset="{{ asset('images/banner3.jpg') }} 2x"
+                                alt="project-1" />
                             <div class="picture-item__details">
-                                <figcaption class="picture-item__title"><a href="https://unsplash.com/photos/RRNbMiPmTZY"
-                                        target="_blank" rel="noopener">پروژه</a></figcaption>
+                                <figcaption class="picture-item__title"><a href="#" target="_blank" rel="noopener">پروژه</a>
+                                </figcaption>
                                 <p class="picture-item__tags hidden@xs">عنوان</p>
                             </div>
                         </div>
                     </figure>
-                    <figure class="col-3@xs col-4@sm col-3@md picture-item" data-groups='["animal"]'
-                        data-date-created="2016-08-12" data-title="Crocodile">
+                    <figure class="col-3@xs col-4@sm col-3@md picture-item" data-groups='["website"]'>
                         <div class="picture-item__inner">
                             <div class="aspect aspect--16x9">
                                 <div class="aspect__inner">
-                                    <img src="{{asset('images/banner3.jpg')}}"
-                                        srcset="{{asset('images/banner3.jpg')}} 2x"
-                                        alt="project-1" />
+                                    <div class="h_iframe-aparat_embed_frame aparat-video">
+                                        <span style="display: block;padding-top: 57%"></span>
+                                        <iframe src="https://www.aparat.com/video/video/embed/videohash/efu1W/vt/frame"
+                                            allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
+                                        </iframe>
+                                    </div>
                                 </div>
                             </div>
                             <div class="picture-item__details">
-                                <figcaption class="picture-item__title"><a href="https://unsplash.com/photos/YOX8ZMTo7hk"
-                                        target="_blank" rel="noopener">پروژه</a></figcaption>
+                                <figcaption class="picture-item__title"><a href="#" target="_blank" rel="noopener">پروژه</a>
+                                </figcaption>
                                 <p class="picture-item__tags hidden@xs">عنوان</p>
                             </div>
                         </div>
                     </figure>
-                    <figure class="col-3@xs col-4@sm col-3@md picture-item picture-item--h2" data-groups='["space"]'
-                        data-date-created="2016-03-07" data-title="SpaceX">
-                        <div class="picture-item__inner">
-                            <div class="aspect aspect--16x9">
-                                <div class="aspect__inner">
-                                    <img src="{{asset('images/banner3.jpg')}}"
-                                        srcset="{{asset('images/banner3.jpg')}} 2x"
-                                        alt="project-1" />
-                                </div>
-                            </div>
-                            <div class="picture-item__details">
-                                <figcaption class="picture-item__title"><a href="https://unsplash.com/photos/GDdRP7U5ct0"
-                                        target="_blank" rel="noopener">پروژه</a></figcaption>
-                                <p class="picture-item__tags hidden@xs">عنوان</p>
-                            </div>
-                            <p class="picture-item__description">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و
-                                با استفاده از طراحان گرافیک است.</p>
-                        </div>
-                    </figure>
-                    <figure class="col-3@xs col-4@sm col-3@md picture-item" data-groups='["city"]'
-                        data-date-created="2016-06-09" data-title="Crossroads">
-                        <div class="picture-item__inner">
-                            <div class="aspect aspect--16x9">
-                                <div class="aspect__inner">
-                                    <img src="{{asset('images/banner3.jpg')}}"
-                                        srcset="{{asset('images/banner3.jpg')}} 2x"
-                                        alt="project-1" />
-                                </div>
-                            </div>
-                            <div class="picture-item__details">
-                                <figcaption class="picture-item__title"><a href="https://unsplash.com/photos/7nrsVjvALnA"
-                                        target="_blank" rel="noopener">پروژه</a></figcaption>
-                                <p class="picture-item__tags hidden@xs">عنوان</p>
-                            </div>
-                        </div>
-                    </figure>
-                    <figure class="col-6@xs col-8@sm col-6@md picture-item picture-item--overlay"
-                        data-groups='["space","nature"]' data-date-created="2016-06-29" data-title="Milky Way">
+                    <figure class="col-3@xs col-8@sm col-6@md picture-item picture-item--overlay" data-groups='["design"]'>
                         <div class="picture-item__inner">
 
-                            <img src="{{asset('images/banner3.jpg')}}"
-                                        srcset="{{asset('images/banner3.jpg')}} 2x"
-                                        alt="project-1" />
+                            <img src="{{ asset('images/banner3.jpg') }}" srcset="{{ asset('images/banner3.jpg') }} 2x"
+                                alt="project-1" />
                             <div class="picture-item__details">
-                                <figcaption class="picture-item__title"><a href="https://unsplash.com/photos/_4Ib-a8g9aA"
-                                        target="_blank" rel="noopener">پروژه</a></figcaption>
+                                <figcaption class="picture-item__title"><a href="#" target="_blank" rel="noopener">پروژه</a>
+                                </figcaption>
                                 <p class="picture-item__tags hidden@xs">عنوان</p>
                             </div>
                         </div>
                     </figure>
-                    <figure class="col-6@xs col-8@sm col-6@md picture-item picture-item--h2" data-groups='["space"]'
-                        data-date-created="2015-11-06" data-title="Earth">
+                    <figure class="col-3@xs col-4@sm col-3@md picture-item" data-groups='["design"]'>
                         <div class="picture-item__inner">
                             <div class="aspect aspect--16x9">
                                 <div class="aspect__inner">
-                                    <img src="{{asset('images/banner3.jpg')}}"
-                                        srcset="{{asset('images/banner3.jpg')}} 2x"
-                                        alt="project-1" />
+                                    <div class="h_iframe-aparat_embed_frame aparat-video">
+                                        <span style="display: block;padding-top: 57%"></span>
+                                        <iframe src="https://www.aparat.com/video/video/embed/videohash/efu1W/vt/frame"
+                                            allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
+                                        </iframe>
+                                    </div>
                                 </div>
                             </div>
                             <div class="picture-item__details">
-                                <figcaption class="picture-item__title"><a href="https://unsplash.com/photos/yZygONrUBe8"
-                                        target="_blank" rel="noopener">پروژه</a></figcaption>
+                                <figcaption class="picture-item__title"><a href="#" target="_blank" rel="noopener">پروژه</a>
+                                </figcaption>
                                 <p class="picture-item__tags hidden@xs">عنوان</p>
                             </div>
-                            <p class="picture-item__description">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و
-                                با استفاده از طراحان گرافیک است.</p>
                         </div>
                     </figure>
-                    <figure class="col-3@xs col-4@sm col-3@md picture-item picture-item--h2" data-groups='["animal"]'
-                        data-date-created="2015-07-23" data-title="Turtle">
+                    <figure class="col-3@xs col-4@sm col-3@md picture-item" data-groups='["video"]'>
                         <div class="picture-item__inner">
                             <div class="aspect aspect--16x9">
                                 <div class="aspect__inner">
-                                    <img src="{{asset('images/banner3.jpg')}}"
-                                        srcset="{{asset('images/banner3.jpg')}} 2x"
-                                        alt="project-1" />
+                                    <div class="h_iframe-aparat_embed_frame aparat-video">
+                                        <span style="display: block;padding-top: 57%"></span>
+                                        <iframe src="https://www.aparat.com/video/video/embed/videohash/efu1W/vt/frame"
+                                            allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
+                                        </iframe>
+                                    </div>
                                 </div>
                             </div>
                             <div class="picture-item__details">
-                                <figcaption class="picture-item__title"><a href="https://unsplash.com/photos/L-2p8fapOA8"
-                                        target="_blank" rel="noopener">پروژه</a></figcaption>
-                                <p class="picture-item__tags hidden@xs">عنوان</p>
-                            </div>
-                            <p class="picture-item__description">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و
-                                با استفاده از طراحان گرافیک است.</p>
-                        </div>
-                    </figure>
-                    <figure class="col-3@xs col-4@sm col-3@md picture-item" data-groups='["nature"]'
-                        data-date-created="2014-10-12" data-title="Stanley Park">
-                        <div class="picture-item__inner">
-                            <div class="aspect aspect--16x9">
-                                <div class="aspect__inner">
-                                    <img src="{{asset('images/banner3.jpg')}}"
-                                        srcset="{{asset('images/banner3.jpg')}} 2x"
-                                        alt="project-1" />
-                                </div>
-                            </div>
-                            <div class="picture-item__details">
-                                <figcaption class="picture-item__title"><a href="https://unsplash.com/photos/b-yEdfrvQ50"
-                                        target="_blank" rel="noopener">پروژه</a></figcaption>
+                                <figcaption class="picture-item__title"><a href="#" target="_blank" rel="noopener">پروژه</a>
+                                </figcaption>
                                 <p class="picture-item__tags hidden@xs">عنوان</p>
                             </div>
                         </div>
                     </figure>
-                    <figure class="col-3@xs col-4@sm col-3@md picture-item" data-groups='["animal"]'
-                        data-date-created="2017-01-12" data-title="Astronaut Cat">
-                        <div class="picture-item__inner">
-                            <div class="aspect aspect--16x9">
-                                <div class="aspect__inner">
-                                    <img src="{{asset('images/banner3.jpg')}}"
-                                        srcset="{{asset('images/banner3.jpg')}} 2x"
-                                        alt="project-1" />
-                                </div>
-                            </div>
-                            <div class="picture-item__details">
-                                <figcaption class="picture-item__title"><a href="https://unsplash.com/photos/FqkBXo2Nkq0"
-                                        target="_blank" rel="noopener">پروژه</a></figcaption>
-                                <p class="picture-item__tags hidden@xs">عنوان</p>
-                            </div>
-                        </div>
-                    </figure>
-                    <figure class="col-3@xs col-8@sm col-6@md picture-item picture-item--overlay" data-groups='["city"]'
-                        data-date-created="2017-01-19" data-title="San Francisco">
+                    <figure class="col-3@xs col-8@sm col-6@md picture-item picture-item--overlay" data-groups='["design"]'>
                         <div class="picture-item__inner">
 
-                            <img src="{{asset('images/banner3.jpg')}}"
-                                        srcset="{{asset('images/banner3.jpg')}} 2x"
-                                        alt="project-1" />
+                            <img src="{{ asset('images/banner3.jpg') }}" srcset="{{ asset('images/banner3.jpg') }} 2x"
+                                alt="project-1" />
                             <div class="picture-item__details">
-                                <figcaption class="picture-item__title"><a href="https://unsplash.com/photos/h3jarbNzlOg"
-                                        target="_blank" rel="noopener">پروژه</a></figcaption>
+                                <figcaption class="picture-item__title"><a href="#" target="_blank" rel="noopener">پروژه</a>
+                                </figcaption>
                                 <p class="picture-item__tags hidden@xs">عنوان</p>
                             </div>
                         </div>
                     </figure>
-                    <figure class="col-3@xs col-4@sm col-3@md picture-item" data-groups='["nature","city"]'
-                        data-date-created="2015-10-20" data-title="Central Park">
+                    <figure class="col-3@xs col-4@sm col-3@md picture-item" data-groups='["video"]'>
                         <div class="picture-item__inner">
                             <div class="aspect aspect--16x9">
                                 <div class="aspect__inner">
-                                    <img src="{{asset('images/banner3.jpg')}}"
-                                        srcset="{{asset('images/banner3.jpg')}} 2x"
-                                        alt="project-1" />
+                                    <div class="h_iframe-aparat_embed_frame aparat-video">
+                                        <span style="display: block;padding-top: 57%"></span>
+                                        <iframe src="https://www.aparat.com/video/video/embed/videohash/efu1W/vt/frame"
+                                            allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
+                                        </iframe>
+                                    </div>
                                 </div>
                             </div>
                             <div class="picture-item__details">
-                                <figcaption class="picture-item__title"><a href="https://unsplash.com/photos/utwYoEu9SU8"
-                                        target="_blank" rel="noopener">پروژه</a></figcaption>
+                                <figcaption class="picture-item__title"><a href="#" target="_blank" rel="noopener">پروژه</a>
+                                </figcaption>
                                 <p class="picture-item__tags hidden@xs">عنوان</p>
                             </div>
                         </div>
                     </figure>
+                    <figure class="col-3@xs col-4@sm col-3@md picture-item" data-groups='["video"]'>
+                        <div class="picture-item__inner">
+                            <div class="aspect aspect--16x9">
+                                <div class="aspect__inner">
+                                    <div class="h_iframe-aparat_embed_frame aparat-video">
+                                        <span style="display: block;padding-top: 57%"></span>
+                                        <iframe src="https://www.aparat.com/video/video/embed/videohash/efu1W/vt/frame"
+                                            allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
+                                        </iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="picture-item__details">
+                                <figcaption class="picture-item__title"><a href="#" target="_blank" rel="noopener">پروژه</a>
+                                </figcaption>
+                                <p class="picture-item__tags hidden@xs">عنوان</p>
+                            </div>
+                        </div>
+                    </figure>
+                    <figure class="col-3@xs col-4@sm col-3@md picture-item" data-groups='["video"]'>
+                        <div class="picture-item__inner">
+                            <div class="aspect aspect--16x9">
+                                <div class="aspect__inner">
+                                    <div class="h_iframe-aparat_embed_frame aparat-video">
+                                        <span style="display: block;padding-top: 57%"></span>
+                                        <iframe src="https://www.aparat.com/video/video/embed/videohash/efu1W/vt/frame"
+                                            allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
+                                        </iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="picture-item__details">
+                                <figcaption class="picture-item__title"><a href="#" target="_blank" rel="noopener">پروژه</a>
+                                </figcaption>
+                                <p class="picture-item__tags hidden@xs">عنوان</p>
+                            </div>
+                        </div>
+                    </figure>
+                    <figure class="col-3@xs col-8@sm col-6@md picture-item picture-item--overlay" data-groups='["design"]'>
+                        <div class="picture-item__inner">
+
+                            <div class="h_iframe-aparat_embed_frame aparat-video">
+                                <span style="display: block;padding-top: 57%"></span>
+                                <iframe src="https://www.aparat.com/video/video/embed/videohash/efu1W/vt/frame"
+                                    allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
+                                </iframe>
+                            </div>
+                            <div class="picture-item__details">
+                                <figcaption class="picture-item__title"><a href="#" target="_blank" rel="noopener">پروژه</a>
+                                </figcaption>
+                                <p class="picture-item__tags hidden@xs">عنوان</p>
+                            </div>
+                        </div>
+                    </figure>
+                    <figure class="col-3@xs col-4@sm col-3@md picture-item" data-groups='["video"]'>
+                        <div class="picture-item__inner">
+                            <div class="aspect aspect--16x9">
+                                <div class="aspect__inner">
+                                    <div class="h_iframe-aparat_embed_frame aparat-video">
+                                        <span style="display: block;padding-top: 57%"></span>
+                                        <iframe src="https://www.aparat.com/video/video/embed/videohash/efu1W/vt/frame"
+                                            allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
+                                        </iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="picture-item__details">
+                                <figcaption class="picture-item__title"><a href="#" target="_blank"
+                                        rel="noopener">پروژه</a>
+                                </figcaption>
+                                <p class="picture-item__tags hidden@xs">عنوان</p>
+                            </div>
+                        </div>
+                    </figure> --}}
+                  
+                    <div class="col-md-12 picture-item" data-groups='["video"]'>
+                        <div class="ribbon"><span>ویدئو</span></div>
+                        <div class="row p-4">
+                            
+                            <div class="h_iframe-aparat_embed_frame aparat-video col-md-8">
+                                <span style="display: block;padding-top: 57%"></span>
+                                <iframe src="https://www.aparat.com/video/video/embed/videohash/efu1W/vt/frame"
+                                allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
+                            </iframe>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="gallery-container">
+                                <div class="thumbnails"></div>
+                                <div class="scrollbar">
+                                  <div class="thumb"></div>
+                                </div>
+                                <div class="slides">
+                                  <div class="d-flex justify-content-around"><img class="img-fluid" src="{{ asset('images/aboutus-cover.png') }}"></div>
+                                  <div class="d-flex justify-content-around"><img class="img-fluid" src="{{ asset('images/services-caver.png') }}"></div>
+                                  <div class="d-flex justify-content-around"><img class="img-fluid" src="{{ asset('images/aboutus-cover.png') }}"></div>
+                                  
+                                </div>
+                              </div>
+                        </div>
+     
+                    </div>
+
+
+                    </div>
+
+                    <div class="col-md-12 picture-item" data-groups='["video"]'>
+                        <div class="ribbon"><span>ویدئو</span></div>
+                        <div class="row p-4">
+                            
+                            <div class="h_iframe-aparat_embed_frame aparat-video col-md-8">
+                                <span style="display: block;padding-top: 57%"></span>
+                                <iframe src="https://www.aparat.com/video/video/embed/videohash/efu1W/vt/frame"
+                                allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
+                            </iframe>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="gallery-container">
+                                <div class="thumbnails"></div>
+                                <div class="scrollbar">
+                                  <div class="thumb"></div>
+                                </div>
+                                <div class="slides">
+                                  <div class="d-flex justify-content-around"><img class="img-fluid" src="{{ asset('images/video-camera.png') }}"></div>
+                                  <div class="d-flex justify-content-around"><img class="img-fluid" src="{{ asset('images/campaign.png') }}"></div>
+                                  <div class="d-flex justify-content-around"><img class="img-fluid" src="{{ asset('images/art.png') }}"></div>
+                                  
+                                </div>
+                              </div>
+                        </div>
+     
+                    </div>
+
+
+                    </div>
+                
                     <div class="col-1@sm col-1@xs my-sizer-element"></div>
                 </div>
 
@@ -247,6 +313,41 @@
 
 @section('js')
     <script>
+        // ImageSlides------------------------------------
+
+const slideGallery = document.querySelector('.slides');
+const slides = slideGallery.querySelectorAll('div');
+const scrollbarThumb = document.querySelector('.thumb');
+const slideCount = slides.length;
+const slideHeight = 720;
+const marginTop = 16;
+
+const scrollThumb = () => {
+  const index = Math.floor(slideGallery.scrollTop / slideHeight);
+  scrollbarThumb.style.height = `${((index + 1) / slideCount) * slideHeight}px`;
+};
+
+const scrollToElement = el => {
+  const index = parseInt(el.dataset.id, 10);
+  slideGallery.scrollTo(0, index * slideHeight + marginTop);
+};
+
+document.querySelector('.thumbnails').innerHTML += [...slides]
+  .map(
+    (slide, i) => `<img src="${slide.querySelector('img').src}" data-id="${i}">`
+  )
+  .join('');
+
+document.querySelectorAll('.thumbnails img').forEach(el => {
+  el.addEventListener('click', () => scrollToElement(el));
+});
+
+slideGallery.addEventListener('scroll', e => scrollThumb());
+
+scrollThumb();
+
+// Shuffle JS -------------------------------------
+
         var Shuffle = window.Shuffle;
 
         class Demo {
@@ -425,5 +526,8 @@
             throttleTime: 300, // How often shuffle can be called on resize (in milliseconds).
             useTransforms: true, // Whether to use transforms or absolute positioning.
         };
+
+    
+       
     </script>
 @endsection

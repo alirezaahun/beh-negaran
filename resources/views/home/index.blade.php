@@ -103,7 +103,7 @@ function allInView() {
             </select>
           </div>
 
-          <a class="secondary-btn" href="#">سفارش</a>
+          <button class="secondary-btn" type="submit">سفارش</button>
 
         </form>
       </div>
@@ -139,7 +139,7 @@ function allInView() {
           <p>هم اکنون شرکت به‌نگاران تجارت آزما با مجوز رسمی از وزارت فرهنگ و ارشاد اسلامی با موضوع تبلیغات دیجیتال فعالیت میکند و خدمات متفاوتی در این زمینه ارائه میدهد.</p>
         </div>
         <div class="col-lg-5 col-md-12 col-sm-12">
-          <div class="h_iframe-aparat_embed_frame">
+          <div class="h_iframe-aparat_embed_frame mt_7">
             <span style="display: block;padding-top: 57%"></span>
             <iframe src="https://www.aparat.com/video/video/embed/videohash/oQGfH/vt/frame" allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
             </iframe>
