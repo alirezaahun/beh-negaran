@@ -9,7 +9,7 @@
         <div class="row justify-content-center">
             <div class="col-11 col-sm-10 col-md-10 col-lg-12 col-xl-11 col-xl-5 text-center p-0 mt-3 mb-2">
                 <div class="_card_  px-0 pt-4 pb-0 mt-3 mb-3">
-                    <form id="msform">
+                    <form id="msform" method="GET">
                         <!-- progressbar -->
                         <ul id="progressbar">
                             <li class="active" id="account"><strong>خدمات</strong></li>
@@ -34,22 +34,22 @@
                                                             <div class="col-12 col-md-5 col-lg-6    ">
                                                                 <select class="form-select my-5 mx-auto w-100 w-lg-50"
                                                                     id='Photography-select'>
-                                                                    <option selected>انتخاب پکیچ ها</option>
-                                                                    <option value="1"> برنزی</option>
-                                                                    <option value="2">نقره ای</option>
-                                                                    <option value="3">طلایی</option>
+                                                                    <option selected> انتخاب پکیچ ها</option>
+                                                                    <option value="1">  برنزی قیمت </option>
+                                                                    <option value="2">نقره ای  </option>
+                                                                    <option value="3">طلایی </option>
                                                                 </select>
                                                                 <button
                                                                     class="button d-none d-md-block custom-margin-pricing"
-                                                                    role="button "> افزودن به سبد خرید</button>
+                                                                    role="button" id="PhotographyBtn"> افزودن به سبد خرید</button>
                                                             </div>
                                                             <div class="col-12 col-md-7 col-lg-6 ">
                                                                 <h4 class="text-center pt-5"> توضیحات خدمت انتخاب شده</h4>
                                                                 <hr class="aaa w-75 mx-auto">
-                                                                <p class="mx-auto p-2 text-justify d-block" id="bronze"> ویژگی های برنزی</p>
-                                                                <p class="mx-auto p-2 text-justify d-none" id="silver">ویژگی های نقره ای</p>
+                                                                <p class="mx-auto p-2 text-justify d-block" id="bronze">  ویژگی های برنزی با قیمت ۱۰</p>
+                                                                <p class="mx-auto p-2 text-justify d-none" id="silver">ویژگی های نقره ای  با قیمت ۱۰۰</p>
                                                                 <p class="mx-auto p-2 text-justify d-none" id="gold">
-                                                                    ویژگی های طلاایی
+                                                                    ویژگی های طلاایی  با قیمت ۱۰۰۰
                                                                 </p>
                                                             </div>
                                                         </div>
@@ -139,17 +139,18 @@
                                         </div>
                                         <div class="tabby-tab">
                                             <input type="radio" id="tab-4" name="tabby-tabs">
-                                            <label for="tab-4">پادکست</label>
+                                            <label for="tab-4">خدمات دیگر</label>
                                             <div class="tabby-content">
                                                 <div class="col-12 d-flex d-flex justify-content-center  mt-5">
                                                     <div class="col-12 col-md-8">
                                                         <div class="row  d-flex justify-content-center pricing-box-Shadow">
                                                             <div class="col-12 col-md-5 col-lg-6    ">
                                                                 <select class="form-select my-5 mx-auto w-100 w-lg-50">
-                                                                    <option selected>انتخاب پکیچ ها</option>
-                                                                    <option value="1">نقره ای</option>
-                                                                    <option value="2">طلایی</option>
-                                                                    <option value="3">برنزی</option>
+                                                                    <option selected>  انتخاب خدمات </option>
+                                                                    <option value="1">  مشاوره کسب و کار</option>
+                                                                    <option value="2">شبکه های اجتماعی</option>
+                                                                    <option value="3">تبلیغات</option>
+                                                                    <option value="3">پادکست</option>
                                                                 </select>
                                                                 <button
                                                                     class="button d-none d-md-block custom-margin-pricing"
@@ -410,17 +411,22 @@
         }
 
      // ****************(Select beetween option  part 1   )***********************
+     let total=0
         let Photography = document.getElementById('Photography-select')
+        let PhotographyBtn =document.getElementById('PhotographyBtn')
+        PhotographyBtn.addEventListener('click', PhotographyBtnFunc)
         Photography.addEventListener('click', PhotographySelector)
         let gold = document.getElementById('gold')
         let bronze = document.getElementById('bronze')
         let silver = document.getElementById('silver')
+
         function PhotographySelector() {
             if (Photography.value == 1) {
                 bronze.classList.add('d-block');
                 bronze.classList.remove('d-none');
                 silver.classList.add('d-none');
                 gold.classList.add('d-none');
+                
             } else if (Photography.value == 2) {
                 silver.classList.add('d-block');
                 silver.classList.remove('d-none');
@@ -432,6 +438,33 @@
                 bronze.classList.add('d-none');
                 silver.classList.add('d-none');
             }
+          
         }
+
+
+        function PhotographyBtnFunc(){
+            if (Photography.value == 1) {
+                total= total+10
+                console.log(total)
+                alert(`    پکیج برنزی با قیمت ۱۰ به سبد خرید شما اضافه شد و مجموع سبد خرید شما ${total} میباشد `)
+                
+            } else if (Photography.value == 2) {
+                total= total+100
+                console.log(total)
+                alert(`    پکیج برنزی با قیمت ۱۰۰ به سبد خرید شما اضافه شد و مجموع سبد خرید شما ${total} میباشد `)
+
+            } else if (Photography.value == 3) {
+                total= total+1000
+                console.log(total)
+                alert(`    پکیج برنزی با قیمت ۱۰۰۰ به سبد خرید شما اضافه شد و مجموع سبد خرید شما ${total} میباشد `)
+
+            }
+
+        }
+
+        const inputElement = document.getElementById('msform')
+inputElement.onclick = (e) => {
+	e.preventDefault()
+}
     </script>
 @endsection
