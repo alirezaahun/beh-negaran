@@ -1031,7 +1031,7 @@ footer p span {
 .no-p-left {
     padding-left: 0;
 }
-// about us page style.....................................................
+//****************** (about us page style)*****************
 .card {
     position: relative;
     width: 300px;
@@ -1173,10 +1173,7 @@ footer p span {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 2px, rgba(0, 0, 0, 0.23) 0px 0px 3px;
 }
 
-//pricing page **********************************************************
-
-
-
+//**********************(pricing page) **********************
 #heading {
     text-transform: uppercase;
     color: var(--clr-secondary);
@@ -1184,7 +1181,6 @@ footer p span {
     margin-top: 50px;
     margin-bottom: 20px;
 }
-
 #msform {
     text-align: center;
     position: relative;
@@ -1201,26 +1197,17 @@ footer p span {
     padding-bottom: 20px;
     position: relative;
 }
-
-
-.form-card {
-    text-align: left;
-}
-
+// .form-card {
+//     text-align: left;
+// }
 #msform fieldset:not(:first-of-type) {
     display: none;
 }
-
-
-
-
-
 #msform .action-button {
     width: 100px;
     color: var(--clr-dark);
     background: var(--clr-primary);
     // font-weight: bold;
-   
     // border: 0 none;
     // border-radius: 0px;
     cursor: pointer;
@@ -1236,19 +1223,15 @@ footer p span {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 2px, rgba(0, 0, 0, 0.23) 0px 0px 3px;
     line-height: 15px;
     padding: 0.7em 1rem;
-
-
-
-
 }
 
 #msform .action-button:hover,
 #msform .action-button:focus {
     box-shadow: rgba(255, 255, 255, 0.23) 0px 0px 3px inset,
     rgba(255, 255, 255, 0.16) 0px 0px 3px inset;
-transition: all 0.3s ease;
-color: var(--clr-primary);
-background-color: var(--clr-dark);
+    transition: all 0.3s ease;
+    color: var(--clr-primary);
+    background-color: var(--clr-dark);
 }
 
 #msform .action-button-previous {
@@ -1262,69 +1245,44 @@ background-color: var(--clr-dark);
     // padding: 10px 5px;
     margin: 250px 0px 10px 5px;
     float: right;
-   // Secondary style
-   border: none;
-   font-weight: 600;
-   text-decoration: none;
-   transition: all 0.3s ease;
-   border-radius: 0.5rem;
-   box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 2px, rgba(0, 0, 0, 0.23) 0px 0px 3px;
-   line-height: 15px;
-   padding: 0.7em 1rem;
+    // Secondary style
+    border: none;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 2px, rgba(0, 0, 0, 0.23) 0px 0px 3px;
+    line-height: 15px;
+    padding: 0.7em 1rem;
 }
 
 #msform .action-button-previous:hover,
 #msform .action-button-previous:focus {
     box-shadow: rgba(255, 255, 255, 0.23) 0px 0px 3px inset,
-    rgba(255, 255, 255, 0.16) 0px 0px 3px inset;
-transition: all 0.3s ease;
-color: var(--clr-primary);
-background-color: var(--clr-dark);
+        rgba(255, 255, 255, 0.16) 0px 0px 3px inset;
+    transition: all 0.3s ease;
+    color: var(--clr-primary);
+    background-color: var(--clr-dark);
 }
+// ******this******
+// ._card_ {
+//     z-index: 0;
+//     border: none;
+//     position: relative;
+// }
 
-._card_ {
-    z-index: 0;
-    border: none;
-    position: relative;
-}
 
-.fs-title {
-    font-size: 25px;
-    color: #673ab7;
-    margin-bottom: 15px;
-    font-weight: normal;
-    text-align: left;
-}
 
-.purple-text {
-    color: #673ab7;
-    font-weight: normal;
-}
 
-.steps {
-    font-size: 25px;
-    color: gray;
-    margin-bottom: 10px;
-    font-weight: normal;
-    text-align: right;
-}
-
-.fieldlabels {
-    color: gray;
-    text-align: left;
-}
 
 #progressbar {
     margin-bottom: 30px;
     overflow: hidden;
     color: lightgrey;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
-
     border-radius: 0.5rem;
     padding: 10px;
 }
-
-
 
 #progressbar li {
     list-style-type: none;
@@ -1388,34 +1346,16 @@ background-color: var(--clr-dark);
     height: 20px;
 }
 
-.progress-bar {
-    background-color: #673ab7;
-}
-
 .fit-image {
     width: 100%;
     object-fit: cover;
 }
 
-
+//**************
 // princing page (fildest 1 setction 1)
 
-.parent {
-    display: flex;
-    justify-content: right;
-    align-items: flex-start;
-    flex-direction: column;
-}
 
-._cards {
-    width: 100%;
-    display: flex;
-    // display: none;
 
-    flex-wrap: wrap;
-    justify-content: space-around;
-    border-radius: 0.5rem;
-}
 
 ._card {
     margin: 40px;
@@ -1441,80 +1381,18 @@ background-color: var(--clr-dark);
     transition: 20s ease;
 }
 
-._card-title {
-    display: block;
-    text-align: center;
-    color: #fff;
-    background-color: var(--clr-secondary);
-    padding: 2%;
-    border-top-right-radius: 0.5rem;
-    border-top-left-radius: 0.5rem;
-    font-size: 100px;
-}
 
-._card img {
-    width: 100%;
-    height: 98%;
-    object-fit: cover;
-    display: block;
-    position: relative;
-    visibility: hidden;
-}
 
-._card-desc {
-    display: block;
-    font-size: 1.2rem;
-    position: absolute;
-    height: 0;
-    top: 0;
-    opacity: 0;
-    padding: 18px 8%;
-    background-color: var(--clr-primary);
-    overflow-y: scroll;
-    transition: 0.8s ease;
-}
-
-._card:hover ._card-desc {
-    opacity: 1;
-    height: 100%;
-}
-
-.parent ._cards ._card h2 {
-    color: var(--clr-accent);
-    font-size: 1.5rem;
-}
-
-.custom-padding {
-    padding-bottom: 70px;
-}
 
 // ************************************************************************************************************************//
-// ._container {
-//     max-width: 960px;
-//     height: 100%;
-//     margin: 0 auto;
-//     padding: 20px;
-//   }
-fieldset .container {
-    height: auto;
-    min-height: 700px;
-    overflow: auto;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
-    border-radius: 0.5rem;
-    margin-bottom: 40px;
-}
-
 /* MAKE IT CUTE ----- */
 .tabs {
     position: relative;
     display: flex;
     min-height: 300px;
     border-radius: 8px 8px 0 0;
-    
 }
-.test{
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
-}
+
 .tabby-tab {
     flex: 1;
 }
@@ -1545,13 +1423,10 @@ fieldset .container {
     right: 0;
     /* clear the tab labels */
     top: 40px;
-
     padding: 20px;
     border-radius: 0 0 8px 8px;
     background: var(--clr-primary);
-
     transition: opacity 0.8s ease, transform 0.8s ease;
-
     /* show/hide */
     opacity: 0;
     transform: scale(0.1);
@@ -1572,7 +1447,6 @@ fieldset .container {
     opacity: 1;
     border-radius: 0.3rem;
 }
-
 .tabby-tab [type="radio"] {
     display: none;
 }
@@ -1584,20 +1458,16 @@ fieldset .container {
 
 [type="radio"]:checked ~ label ~ .tabby-content {
     z-index: 1;
-
     /* show/hide */
     opacity: 1;
     transform: scale(1);
     overflow: visible;
 }
 
-
-
 // ************ pricing Btn************
 
-
 /* CSS */
-.button{
+.button {
     letter-spacing: 0.1em;
     cursor: pointer;
     font-weight: 600;
@@ -1622,43 +1492,40 @@ fieldset .container {
     text-decoration: none;
 }
 
-.pricing-box-Shadow{
+.pricing-box-Shadow {
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
     border-radius: 0.5rem;
 }
 
-.custom-boder-pricing{
-border: 1px solid var(--clr-accent);
-
+.custom-boder-pricing {
+    border: 1px solid var(--clr-accent);
 }
 
-.form-select{
+.form-select {
     width: 50%;
 }
 
-
-.custom-margin-pricing{
+.custom-margin-pricing {
     margin: 140px 0 40px 0;
 }
 
-.text-justify{text-align:justify}
+.text-justify {
+    text-align: justify;
+}
 
-
-.title-style{
-    font-family: Georgia, 'Times New Roman', Times, serif;
+.title-style {
+    font-family: Georgia, "Times New Roman", Times, serif;
     font-weight: 700;
     font-size: 20px;
     color: hsl(52, 0%, 98%);
-    }
-    .title-quote{
-    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.title-quote {
+    font-family: Georgia, "Times New Roman", Times, serif;
     font-weight: 400;
     color: hsl(52, 0%, 98%);
-    }
+}
 
-
-
-.float-right{
+.float-right {
     float: right;
 }
 // ***********************end pricing page ******************************
@@ -1714,22 +1581,24 @@ border: 1px solid var(--clr-accent);
 .picture-item {
     background-color: var(--clr-dark);
     border-radius: 1.3rem;
-    box-shadow: rgba(255, 255, 255, 0.10) 0px 0px 6px inset,
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 0px 6px inset,
         rgba(255, 255, 255, 0.15) 0px 0px 6px inset,
-        rgba(255, 255, 255, 0.20) 0px 0px 6px inset,
+        rgba(255, 255, 255, 0.2) 0px 0px 6px inset,
         rgba(255, 255, 255, 0.25) 0px 0px 6px inset;
     margin: 1rem auto;
     position: relative;
 }
 .ribbon {
     position: absolute;
-    right: -5px; top: -5px;
+    right: -5px;
+    top: -5px;
     z-index: 1;
     overflow: hidden;
-    width: 75px; height: 75px;
+    width: 75px;
+    height: 75px;
     text-align: right;
-  }
-  .ribbon span {
+}
+.ribbon span {
     font-size: 17px;
     /* font-weight: bold; */
     color: var(--clr-dark);
@@ -1740,31 +1609,35 @@ border: 1px solid var(--clr-accent);
     -webkit-transform: rotate(45deg);
     width: 100px;
     display: block;
-    background: #79A70A;
+    background: #79a70a;
     background: linear-gradient(#e9c31e 0%, #e9c31e 100%);
     box-shadow: 0 3px 10px -5px black;
     position: absolute;
     top: 14px;
     right: -23px;
-  }
-  .ribbon span::before {
+}
+.ribbon span::before {
     content: "";
-    position: absolute; left: 0px; top: 100%;
+    position: absolute;
+    left: 0px;
+    top: 100%;
     z-index: -1;
     border-left: 3px solid #cecac8;
     border-right: 3px solid transparent;
     border-bottom: 3px solid transparent;
     border-top: 3px solid #cecac8;
-  }
-  .ribbon span::after {
+}
+.ribbon span::after {
     content: "";
-    position: absolute; right: 0px; top: 100%;
+    position: absolute;
+    right: 0px;
+    top: 100%;
     z-index: -1;
     border-left: 3px solid transparent;
     border-right: 3px solid #cecac8;
     border-bottom: 3px solid transparent;
     border-top: 3px solid #cecac8;
-  }
+}
 .aparat-video {
     background-color: transparent;
     margin: 0;
@@ -2171,7 +2044,7 @@ border: 1px solid var(--clr-accent);
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
-    animation-duration: 0.4s
+    animation-duration: 0.4s;
 }
 .modal-body form input,
 .modal-body form button {
@@ -2200,23 +2073,23 @@ border: 1px solid var(--clr-accent);
 @-webkit-keyframes animatetop {
     from {
         top: -300px;
-        opacity: 0
+        opacity: 0;
     }
 
     to {
         top: 0;
-        opacity: 1
+        opacity: 1;
     }
 }
 @keyframes animatetop {
     from {
         top: -300px;
-        opacity: 0
+        opacity: 0;
     }
 
     to {
         top: 0;
-        opacity: 1
+        opacity: 1;
     }
 }
 /* The Close Button */
@@ -2342,32 +2215,25 @@ border: 1px solid var(--clr-accent);
 .responsive-table .table-header {
     background-color: var(--clr-dark);
     color: #f6f6f6;
-    
 }
 .responsive-table .table-row {
     background-color: #fff;
     box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
-    
 }
 .responsive-table .col-1 {
     flex-basis: 20%;
-   
 }
 .responsive-table .col-2 {
     flex-basis: 20%;
-    
 }
 .responsive-table .col-3 {
     flex-basis: 20%;
-    
 }
 .responsive-table .col-4 {
     flex-basis: 20%;
-   
 }
 .responsive-table .col-5 {
     flex-basis: 20%;
-   
 }
 #recipt-print {
     display: flex;
@@ -2377,27 +2243,26 @@ border: 1px solid var(--clr-accent);
 @media all and (max-width: 767px) {
     .responsive-table .table-header {
         display: none;
-   }
+    }
     .responsive-table li {
         display: block;
-   }
+    }
     .responsive-table .col {
         flex-basis: 100%;
-   }
+    }
     .responsive-table .col {
         display: flex;
         padding: 10px 0;
         justify-content: right;
         min-width: 12rem;
-   }
+    }
     .responsive-table .col:before {
         color: #6c7a89;
         padding-right: 10px;
         content: attr(data-label);
         flex-basis: 50%;
         text-align: right;
-   }
-   
+    }
 }
 
 /* Scroll Bar ----------------------------------------------------------- */
@@ -2689,31 +2554,16 @@ border: 1px solid var(--clr-accent);
     }
 }
 
-
-
-.map-responsive{
-    overflow:hidden;
-    padding-bottom:56.25%;
-    position:relative;
-    height:0;
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
 }
-.map-responsive iframe{
-    left:0;
-    top:0;
-    height:100%;
-    width:100%;
-    position:absolute;
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
