@@ -321,36 +321,77 @@
     <script>
         // ImageSlides------------------------------------
 
-        const slideGallery = document.querySelector('.slides');
-        const slides = slideGallery.querySelectorAll('div');
-        const scrollbarThumb = document.querySelector('.thumb');
-        const slideCount = slides.length;
-        const slideHeight = 720;
-        const marginTop = 16;
+        var els = document.getElementsByClassName("gallery-container");
+        var slideGallery;
+        var slides;
+        var scrollbarThumb;
+        var slideCount;
+        var slideHeight;
+        var marginTop;
+        for (var i = 0; i < els.length; i++) {
 
-        const scrollThumb = () => {
-            const index = Math.floor(slideGallery.scrollTop / slideHeight);
-            scrollbarThumb.style.height = `${((index + 1) / slideCount) * slideHeight}px`;
-        };
+        console.log(els[i].children[0].childNodes);
+         slideGallery = els[i].childNodes[5];
+         slides = slideGallery.querySelectorAll('div');
+         scrollbarThumb = els[i].children[1].firstElementChild;
+         slideCount = slides.length;
+         slideHeight = 720;
+         marginTop = 16;
+            const scrollThumb = () => {
+                const index = Math.floor(slideGallery.scrollTop / slideHeight);
+                scrollbarThumb.style.height = `${((index + 1) / slideCount) * slideHeight}px`;
+            };
 
-        const scrollToElement = el => {
-            const index = parseInt(el.dataset.id, 10);
-            slideGallery.scrollTo(0, index * slideHeight + marginTop);
-        };
+            const scrollToElement = el => {
+                const index = parseInt(el.dataset.id, 10);
+                slideGallery.scrollTo(0, index * slideHeight + marginTop);
+            };
 
-        document.querySelector('.thumbnails').innerHTML += [...slides]
-            .map(
-                (slide, i) => `<img src="${slide.querySelector('img').src}" data-id="${i}">`
-            )
-            .join('');
+            els[i].children[0].innerHTML += [...slides]
+                .map(
+                    (slide, j) => `<img src="${slide.querySelector('img').src}" data-id="${j}">`
+                )
+                .join('');
 
-        document.querySelectorAll('.thumbnails img').forEach(el => {
-            el.addEventListener('click', () => scrollToElement(el));
-        });
+                els[i].children[0].childNodes.forEach(el => {
+                el.addEventListener('click', () => scrollToElement(el));
+            });
 
-        slideGallery.addEventListener('scroll', e => scrollThumb());
+            slideGallery.addEventListener('scroll', e => scrollThumb());
 
-        scrollThumb();
+            scrollThumb();
+
+        }
+        // const slideGallery = els[i];
+        // const slides = slideGallery.querySelectorAll('div');
+        // const scrollbarThumb = document.querySelector('.thumb');
+        // const slideCount = slides.length;
+        // const slideHeight = 720;
+        // const marginTop = 16;
+
+        // const scrollThumb = () => {
+        //   const index = Math.floor(slideGallery.scrollTop / slideHeight);
+        //   scrollbarThumb.style.height = `${((index + 1) / slideCount) * slideHeight}px`;
+        // };
+
+        // const scrollToElement = el => {
+        //   const index = parseInt(el.dataset.id, 10);
+        //   slideGallery.scrollTo(0, index * slideHeight + marginTop);
+        // };
+
+        // document.querySelector('.thumbnails').innerHTML += [...slides]
+        //   .map(
+        //     (slide, i) => `<img src="${slide.querySelector('img').src}" data-id="${i}">`
+        //   )
+        //   .join('');
+
+        // document.querySelectorAll('.thumbnails img').forEach(el => {
+        //   el.addEventListener('click', () => scrollToElement(el));
+        // });
+
+        // slideGallery.addEventListener('scroll', e => scrollThumb());
+
+        // scrollThumb();
 
         // Shuffle JS -------------------------------------
 
