@@ -1175,6 +1175,8 @@ footer p span {
 
 //pricing page **********************************************************
 
+
+
 #heading {
     text-transform: uppercase;
     color: var(--clr-secondary);
@@ -1200,6 +1202,7 @@ footer p span {
     position: relative;
 }
 
+
 .form-card {
     text-align: left;
 }
@@ -1208,37 +1211,16 @@ footer p span {
     display: none;
 }
 
-#msform input,
-#msform textarea {
-    padding: 8px 15px 8px 15px;
-    border: 1px solid #ccc;
-    border-radius: 0px;
-    margin-bottom: 25px;
-    margin-top: 2px;
-    width: 100%;
-    box-sizing: border-box;
-    font-family: montserrat;
-    color: #2c3e50;
-    background-color: #eceff1;
-    font-size: 16px;
-    letter-spacing: 1px;
-}
 
-#msform input:focus,
-#msform textarea:focus {
-    -moz-box-shadow: none !important;
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important;
-    border: 1px solid #673ab7;
-    outline-width: 0;
-}
+
+
 
 #msform .action-button {
     width: 100px;
     color: var(--clr-dark);
     background: var(--clr-primary);
     // font-weight: bold;
-
+   
     // border: 0 none;
     // border-radius: 0px;
     cursor: pointer;
@@ -1254,15 +1236,19 @@ footer p span {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 2px, rgba(0, 0, 0, 0.23) 0px 0px 3px;
     line-height: 15px;
     padding: 0.7em 1rem;
+
+
+
+
 }
 
 #msform .action-button:hover,
 #msform .action-button:focus {
     box-shadow: rgba(255, 255, 255, 0.23) 0px 0px 3px inset,
-        rgba(255, 255, 255, 0.16) 0px 0px 3px inset;
-    transition: all 0.3s ease;
-    color: var(--clr-primary);
-    background-color: var(--clr-dark);
+    rgba(255, 255, 255, 0.16) 0px 0px 3px inset;
+transition: all 0.3s ease;
+color: var(--clr-primary);
+background-color: var(--clr-dark);
 }
 
 #msform .action-button-previous {
@@ -1276,24 +1262,24 @@ footer p span {
     // padding: 10px 5px;
     margin: 250px 0px 10px 5px;
     float: right;
-    // Secondary style
-    border: none;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    border-radius: 0.5rem;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 2px, rgba(0, 0, 0, 0.23) 0px 0px 3px;
-    line-height: 15px;
-    padding: 0.7em 1rem;
+   // Secondary style
+   border: none;
+   font-weight: 600;
+   text-decoration: none;
+   transition: all 0.3s ease;
+   border-radius: 0.5rem;
+   box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 2px, rgba(0, 0, 0, 0.23) 0px 0px 3px;
+   line-height: 15px;
+   padding: 0.7em 1rem;
 }
 
 #msform .action-button-previous:hover,
 #msform .action-button-previous:focus {
     box-shadow: rgba(255, 255, 255, 0.23) 0px 0px 3px inset,
-        rgba(255, 255, 255, 0.16) 0px 0px 3px inset;
-    transition: all 0.3s ease;
-    color: var(--clr-primary);
-    background-color: var(--clr-dark);
+    rgba(255, 255, 255, 0.16) 0px 0px 3px inset;
+transition: all 0.3s ease;
+color: var(--clr-primary);
+background-color: var(--clr-dark);
 }
 
 ._card_ {
@@ -1338,6 +1324,8 @@ footer p span {
     padding: 10px;
 }
 
+
+
 #progressbar li {
     list-style-type: none;
     font-size: 15px;
@@ -1349,17 +1337,17 @@ footer p span {
 
 #progressbar #account:before {
     font-family: FontAwesome;
-    content: "\f13e";
+    content: "\f666";
 }
 
 #progressbar #personal:before {
     font-family: FontAwesome;
-    content: "\f007";
+    content: "\f3c5";
 }
 
 #progressbar #payment:before {
     font-family: FontAwesome;
-    content: "\f030";
+    content: "\f3d1";
 }
 
 #progressbar #confirm:before {
@@ -1408,6 +1396,7 @@ footer p span {
     width: 100%;
     object-fit: cover;
 }
+
 
 // princing page (fildest 1 setction 1)
 
@@ -1521,8 +1510,9 @@ fieldset .container {
     display: flex;
     min-height: 300px;
     border-radius: 8px 8px 0 0;
+    
 }
-.test {
+.test{
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
 }
 .tabby-tab {
@@ -1601,6 +1591,77 @@ fieldset .container {
     overflow: visible;
 }
 
+
+
+// ************ pricing Btn************
+
+
+/* CSS */
+.button{
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    font-weight: 600;
+    line-height: 41px;
+    // max-width: 130px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    background-color: var(--clr-secondary);
+    color: var(--clr-primary);
+}
+.button:focus {
+    box-shadow: none;
+    outline: none;
+}
+.button:hover {
+    text-decoration: none;
+}
+
+.pricing-box-Shadow{
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+}
+
+.custom-boder-pricing{
+border: 1px solid var(--clr-accent);
+
+}
+
+.form-select{
+    width: 50%;
+}
+
+
+.custom-margin-pricing{
+    margin: 140px 0 40px 0;
+}
+
+.text-justify{text-align:justify}
+
+
+.title-style{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: hsl(52, 0%, 98%);
+    }
+    .title-quote{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400;
+    color: hsl(52, 0%, 98%);
+    }
+
+
+
+.float-right{
+    float: right;
+}
+// ***********************end pricing page ******************************
 /* BREAKPOINTS ----- */
 @media screen and (max-width: 767px) {
     .tabs {
@@ -1613,7 +1674,9 @@ fieldset .container {
         min-height: 580px;
     }
     .tabby-tab label {
-        height: 60px;
+        height: 45px;
+        font-size: 13px;
+        padding: 8px;
     }
     .tabby-content {
         top: 60px;
@@ -2108,7 +2171,7 @@ fieldset .container {
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
-    animation-duration: 0.4s;
+    animation-duration: 0.4s
 }
 .modal-body form input,
 .modal-body form button {
@@ -2137,23 +2200,23 @@ fieldset .container {
 @-webkit-keyframes animatetop {
     from {
         top: -300px;
-        opacity: 0;
+        opacity: 0
     }
 
     to {
         top: 0;
-        opacity: 1;
+        opacity: 1
     }
 }
 @keyframes animatetop {
     from {
         top: -300px;
-        opacity: 0;
+        opacity: 0
     }
 
     to {
         top: 0;
-        opacity: 1;
+        opacity: 1
     }
 }
 /* The Close Button */
@@ -2279,25 +2342,32 @@ fieldset .container {
 .responsive-table .table-header {
     background-color: var(--clr-dark);
     color: #f6f6f6;
+    
 }
 .responsive-table .table-row {
     background-color: #fff;
     box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+    
 }
 .responsive-table .col-1 {
     flex-basis: 20%;
+   
 }
 .responsive-table .col-2 {
     flex-basis: 20%;
+    
 }
 .responsive-table .col-3 {
     flex-basis: 20%;
+    
 }
 .responsive-table .col-4 {
     flex-basis: 20%;
+   
 }
 .responsive-table .col-5 {
     flex-basis: 20%;
+   
 }
 #recipt-print {
     display: flex;
@@ -2307,26 +2377,27 @@ fieldset .container {
 @media all and (max-width: 767px) {
     .responsive-table .table-header {
         display: none;
-    }
+   }
     .responsive-table li {
         display: block;
-    }
+   }
     .responsive-table .col {
         flex-basis: 100%;
-    }
+   }
     .responsive-table .col {
         display: flex;
         padding: 10px 0;
         justify-content: right;
         min-width: 12rem;
-    }
+   }
     .responsive-table .col:before {
         color: #6c7a89;
         padding-right: 10px;
         content: attr(data-label);
         flex-basis: 50%;
         text-align: right;
-    }
+   }
+   
 }
 
 /* Scroll Bar ----------------------------------------------------------- */
@@ -2618,16 +2689,31 @@ fieldset .container {
     }
 }
 
-.map-responsive {
-    overflow: hidden;
-    padding-bottom: 56.25%;
-    position: relative;
-    height: 0;
+
+
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
 }
-.map-responsive iframe {
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    position: absolute;
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

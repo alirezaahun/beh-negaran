@@ -8,6 +8,7 @@ use App\Http\Resources\V1\sliderResource;
 use App\Http\Resources\V1\topBannerResource;
 use App\Models\Banner;
 use App\Models\Product;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -33,7 +34,7 @@ class HomeController extends Controller
 
     }
 
-    
+
 
     public function services(){
 
@@ -53,7 +54,55 @@ class HomeController extends Controller
     }
     public function profile(){
 
-        return view('home.profile');
+
+        $user = User::where('id' , auth()->id())->first();
+        return view('home.profile' , compact('user'));
+
+    }
+
+    public function editname(Request $request , $id){
+
+        $user = User::find($id);
+
+        if($request->has('name')){
+
+            $request->validate([
+
+                'name' => 'required'
+
+            ]);
+
+            $user->update([
+
+                'name' => $request->name
+
+            ]);
+
+            return redirect()->route('home.profile');
+
+
+
+        }
+
+        if($request->has('email')){
+
+            $request->validate([
+
+                'email' => 'required'
+
+            ]);
+
+            $user->update([
+
+                'email' => $request->email
+
+            ]);
+
+            return redirect()->route('home.profile');
+
+
+
+        }
 
     }
 

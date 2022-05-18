@@ -44,7 +44,7 @@
                         <div class="col-md-6 col-sm-12">
                             <ul>
                                 <li><span class="text-secondary">نام</span>
-                                    <h6>سهراب</h6>
+                                    <h6>{{ $user->name }}</h6>
                                     <i id="modalBtn" class="fas fa-edit"></i>
                                     <!-- The Modal -->
                                     <div id="myModal" class="modal">
@@ -52,15 +52,20 @@
                                         <div class="modal-content">
                                             <span class="close">&times;</span>
                                             <div class="modal-body">
-                                                <p class="text-secondary">لطفا اطلاعات شناسایی خود را وارد کنید. نام شما باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
-                                                <form action="">
+                                                <p class="text-secondary">لطفا اطلاعات شناسایی خود را وارد کنید. نام شما
+                                                    باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
+                                                <form action="{{ route('home.editprofile', ['id' => $user->id]) }}" ,
+                                                    method="POST">
+                                                    @csrf
+                                                    @method('put')
                                                     <div class="form-group">
-                                                      <label for="firstName">نام</label>
-                                                      <input type="text" class="form-control" id="firstName" placeholder="نام شما">
+                                                        <label for="firstName">نام</label>
+                                                        <input type="text" name="name" class="form-control" id="firstName"
+                                                            placeholder="نام شما">
                                                     </div>
-                                                    
+
                                                     <button type="submit" class="secondary-btn">ذخیره</button>
-                                                  </form>
+                                                </form>
                                             </div>
                                         </div>
                                     </div>
@@ -76,14 +81,16 @@
                                         <div class="modal-content">
                                             <span class="close">&times;</span>
                                             <div class="modal-body">
-                                                <p class="text-secondary">لطفا اطلاعات شناسایی خود را وارد کنید. نام خانوادگی شما باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
+                                                <p class="text-secondary">لطفا اطلاعات شناسایی خود را وارد کنید. نام
+                                                    خانوادگی شما باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
                                                 <form action="">
                                                     <div class="form-group">
-                                                      <label for="lastName">نام خانوادگی</label>
-                                                      <input type="text" class="form-control" id="lastName" placeholder="نام خانوادگی شما">
+                                                        <label for="lastName">نام خانوادگی</label>
+                                                        <input type="text" class="form-control" id="lastName"
+                                                            placeholder="نام خانوادگی شما">
                                                     </div>
                                                     <button type="submit" class="secondary-btn">ذخیره</button>
-                                                  </form>
+                                                </form>
                                             </div>
                                         </div>
                                     </div>
@@ -91,7 +98,7 @@
                                 </li>
 
                                 <li><span class="text-secondary">شماره موبایل</span>
-                                    <h6>۰۹۳۷۸۲۱۹۳۹۳</h6>
+                                    <h6>{{ $user->cellphone }}</h6>
                                     <i id="modalBtn2" class="fas fa-edit"></i>
                                     <!-- The Modal -->
                                     <div id="myModal2" class="modal">
@@ -100,14 +107,24 @@
                                             <span class="close">&times;</span>
                                             <div class="modal-body">
                                                 <p class="text-secondary">برای ثبت این شماره باید آن را تایید کنید.</p>
-                                                <form action="">
+                                                <form id="loginForm" action="">
                                                     <div class="form-group">
-                                                      <label for="mobileNumber">شماره موبایل</label>
-                                                      <input type="text" class="form-control" id="mobileNumber" placeholder="۰۹۱۲۱۱۱۲۲۳۳">
+                                                        <label for="mobileNumber">شماره موبایل</label>
+                                                        <input type="text" class="form-control" id="phoneInput"
+                                                            placeholder="۰۹۱۲۱۱۱۲۲۳۳">
                                                     </div>
-                                                    
+
                                                     <button type="submit" class="secondary-btn">ذخیره</button>
-                                                  </form>
+                                                </form>
+                                                <form id="OTPinput" action="">
+                                                    <div class="form-group">
+                                                        <label for="mobileNumber">شماره موبایل</label>
+                                                        <input type="text" class="form-control" id="codeInput"
+                                                            placeholder="کد">
+                                                    </div>
+
+                                                    <button type="submit" class="secondary-btn">ذخیره</button>
+                                                </form>
                                             </div>
                                         </div>
                                     </div>
@@ -126,14 +143,16 @@
                                         <div class="modal-content">
                                             <span class="close">&times;</span>
                                             <div class="modal-body">
-                                                <p class="text-secondary">لطفا اطلاعات شناسایی خود را وارد کنید. کد ملی شما باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
+                                                <p class="text-secondary">لطفا اطلاعات شناسایی خود را وارد کنید. کد ملی شما
+                                                    باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
                                                 <form action="">
                                                     <div class="form-group">
-                                                      <label for="nationalNumber">کد ملی</label>
-                                                      <input type="text" class="form-control" id="nationalNumber" placeholder="۰۰۱۲۳۴۵۶۷۸">
+                                                        <label for="nationalNumber">کد ملی</label>
+                                                        <input type="text" class="form-control" id="nationalNumber"
+                                                            placeholder="۰۰۱۲۳۴۵۶۷۸">
                                                     </div>
                                                     <button type="submit" class="secondary-btn">ذخیره</button>
-                                                  </form>
+                                                </form>
                                             </div>
                                         </div>
                                     </div>
@@ -141,7 +160,7 @@
                                 </li>
 
                                 <li><span class="text-secondary">ایمیل</span>
-                                    <h6>sohrabnasehi.sn@gmail.com</h6>
+                                    <h6>{{ $user->email }}</h6>
                                     <i id="modalBtn4" class="fas fa-edit"></i>
                                     <!-- The Modal -->
                                     <div id="myModal4" class="modal">
@@ -149,13 +168,17 @@
                                         <div class="modal-content">
                                             <span class="close">&times;</span>
                                             <div class="modal-body">
-                                                <form action="">
+                                                <form action="{{ route('home.editprofile', ['id' => $user->id]) }}" ,
+                                                    method="POST">
+                                                    @csrf
+                                                    @method('put')
                                                     <div class="form-group">
-                                                      <label for="userEmail">ایمیل</label>
-                                                      <input type="email" class="form-control" id="userEmail" placeholder="example@info.com">
+                                                        <label for="userEmail">ایمیل</label>
+                                                        <input type="email" name="email" class="form-control"
+                                                            id="userEmail" placeholder="example@info.com">
                                                     </div>
                                                     <button type="submit" class="secondary-btn">ذخیره</button>
-                                                  </form>
+                                                </form>
                                             </div>
                                         </div>
                                     </div>
@@ -172,14 +195,16 @@
                                         <div class="modal-content">
                                             <span class="close">&times;</span>
                                             <div class="modal-body">
-                                                <p class="text-secondary">لطفا اطلاعات شناسایی خود را وارد کنید. آدرس شما باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
+                                                <p class="text-secondary">لطفا اطلاعات شناسایی خود را وارد کنید. آدرس شما
+                                                    باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
                                                 <form action="">
                                                     <div class="form-group">
-                                                      <label for="userAddress">آدرس</label>
-                                                      <input type="text" class="form-control" id="userAddress" placeholder="تهران، خیابان ۹ شرقی...">
+                                                        <label for="userAddress">آدرس</label>
+                                                        <input type="text" class="form-control" id="userAddress"
+                                                            placeholder="تهران، خیابان ۹ شرقی...">
                                                     </div>
                                                     <button type="submit" class="secondary-btn">ذخیره</button>
-                                                  </form>
+                                                </form>
                                             </div>
                                         </div>
                                     </div>
@@ -212,22 +237,22 @@
                             <div class="order-collapse">
                                 <ul class="responsive-table">
                                     <li class="table-header">
-                                      <div class="col col-1">هزینه پکیج</div>
-                                      <div class="col col-2">ایاب و ذهاب</div>
-                                      <div class="col col-3">خدمت اضافه</div>
-                                      <div class="col col-4">مبلغ کل</div>
-                                      <div class="col col-5">وضعیت سفارش</div>
+                                        <div class="col col-1">هزینه پکیج</div>
+                                        <div class="col col-2">ایاب و ذهاب</div>
+                                        <div class="col col-3">خدمت اضافه</div>
+                                        <div class="col col-4">مبلغ کل</div>
+                                        <div class="col col-5">وضعیت سفارش</div>
                                     </li>
                                     <li class="table-row">
-                                      <div class="col col-1" data-label="هزینه پکیج">۲٬۵۰۰٬۰۰۰ تومان</div>
-                                      <div class="col col-2" data-label="ایاب و ذهاب">۲۰۰٬۰۰۰ تومان</div>
-                                      <div class="col col-3" data-label="خدمت اضافه">۳۰۰٬۰۰۰ تومان</div>
-                                      <div class="col col-4" data-label="مبلغ کل">۳٬۰۰۰٬۰۰۰ تومان</div>
-                                      <div class="col col-5" data-label="وضعیت سفارش">در حال انجام</div>
+                                        <div class="col col-1" data-label="هزینه پکیج">۲٬۵۰۰٬۰۰۰ تومان</div>
+                                        <div class="col col-2" data-label="ایاب و ذهاب">۲۰۰٬۰۰۰ تومان</div>
+                                        <div class="col col-3" data-label="خدمت اضافه">۳۰۰٬۰۰۰ تومان</div>
+                                        <div class="col col-4" data-label="مبلغ کل">۳٬۰۰۰٬۰۰۰ تومان</div>
+                                        <div class="col col-5" data-label="وضعیت سفارش">در حال انجام</div>
                                     </li>
 
-                                  </ul>
-                                  <button id="recipt-print" class="secondary-btn">چاپ فاکتور</button>
+                                </ul>
+                                <button id="recipt-print" class="secondary-btn">چاپ فاکتور</button>
                             </div>
                             <hr>
                         </div>
@@ -319,5 +344,65 @@
                 }
             });
         }
+
+        let logintoken;
+
+        $('#OTPinput').hide();
+
+        $('#loginForm').submit(function(event) {
+
+            console.log($('#phoneInput').val());
+            event.preventDefault();
+
+            $.post("{{ route('home.editPhoneNumber') }}", {
+
+                '_token': "{{ csrf_token() }}",
+                'login_token': "{{$user->login_token}}"
+
+            }, function(response, status) {
+                console.log(response, status);
+                logintoken = response.login_token;
+                $('#loginForm').fadeOut();
+                $('#OTPinput').fadeIn();
+
+            }).fail(function(response) {
+
+                console.log(response.responseJSON);
+                $('#errorPhone').fadeIn();
+                $('#errorText').html(response.responseJSON);
+
+            })
+
+        });
+
+        $('#OTPinput').submit(function(event) {
+
+            console.log($('#codeInput').val());
+            event.preventDefault();
+
+            $.post("{{ url('/checkeditNumber') }}", {
+
+                '_token': "{{ csrf_token() }}",
+                'otp': $('#codeInput').val(),
+                'login_token': logintoken,
+                'cellphone': $('#phoneInput').val()
+
+            }, function(response, status) {
+                console.log(response, status);
+                logintoken = response.login_token;
+
+                $(location).attr('href', "{{ route('home.profile') }}");
+                // $('#loginForm').fadeOut();
+                // $('#OTPinput').fadeIn();
+
+            }).fail(function(response) {
+
+                console.log(response.responseJSON.errors);
+                $('#errorCode').fadeIn();
+                $('#errorOtpText').html(response.responseJSON.errors.otp[0]);
+
+            })
+
+        });
     </script>
 @endsection

@@ -35,6 +35,9 @@
         <script src="js/jquery.js"></script>
         <script src="js/persian.date.js"></script>
         <script src="js/persian.datepicker.js"></script>
+
+        <script type="text/javascript" src="js/bootstrap-multiselect.js"></script>
+<link rel="stylesheet" href="css/bootstrap-multiselect.css" type="text/css"/>
       
 
 

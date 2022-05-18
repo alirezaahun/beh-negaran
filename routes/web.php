@@ -60,10 +60,15 @@ Route::get('/about-us', [HomeController::class , 'about'])->name('home.about');
 Route::get('/services', [HomeController::class , 'services'])->name('home.services');
 Route::get('/projects', [HomeController::class , 'projects'])->name('home.projects');
 Route::get('/profile', [HomeController::class , 'profile'])->name('home.profile');
+
+Route::put('{id}/profile/', [HomeController::class , 'editname'])->name('home.editprofile');
+
 Route::get('/pricing', [HomeController::class , 'pricing'])->name('home.pricing');
 
 Route::any('/login', [authController::class , 'login'])->name('home.login');
+Route::any('/editPhoneNumber', [authController::class , 'editPhoneNumber'])->name('home.editPhoneNumber');
 Route::post('/checkOtp', [authController::class , 'check']);
+Route::post('/checkeditNumber', [authController::class , 'checkeditNumber']);
 Route::post('/resend', [authController::class , 'resend']);
 Route::get('/logout', [HomeController::class , 'logout'])->name('logout');
 
