@@ -237,67 +237,73 @@
                             </div>
                         </div>
                     </figure> --}}
-                  
-                    <div class="col-md-12 picture-item" data-groups='["video"]'>
-                        <div class="ribbon"><span>ویدئو</span></div>
-                        <div class="row p-4">
-                            
-                            <div class="h_iframe-aparat_embed_frame aparat-video col-md-8">
-                                <span style="display: block;padding-top: 57%"></span>
-                                <iframe src="https://www.aparat.com/video/video/embed/videohash/efu1W/vt/frame"
-                                allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
-                            </iframe>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="gallery-container">
-                                <div class="thumbnails"></div>
-                                <div class="scrollbar">
-                                  <div class="thumb"></div>
-                                </div>
-                                <div class="slides">
-                                  <div class="d-flex justify-content-around"><img class="img-fluid" src="{{ asset('images/aboutus-cover.png') }}"></div>
-                                  <div class="d-flex justify-content-around"><img class="img-fluid" src="{{ asset('images/services-caver.png') }}"></div>
-                                  <div class="d-flex justify-content-around"><img class="img-fluid" src="{{ asset('images/aboutus-cover.png') }}"></div>
-                                  
-                                </div>
-                              </div>
-                        </div>
-     
-                    </div>
-
-
-                    </div>
 
                     <div class="col-md-12 picture-item" data-groups='["video"]'>
                         <div class="ribbon"><span>ویدئو</span></div>
                         <div class="row p-4">
-                            
+
                             <div class="h_iframe-aparat_embed_frame aparat-video col-md-8">
                                 <span style="display: block;padding-top: 57%"></span>
                                 <iframe src="https://www.aparat.com/video/video/embed/videohash/efu1W/vt/frame"
-                                allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
-                            </iframe>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="gallery-container">
-                                <div class="thumbnails"></div>
-                                <div class="scrollbar">
-                                  <div class="thumb"></div>
+                                    allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
+                                </iframe>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="gallery-container">
+                                    <div class="thumbnails"></div>
+                                    <div class="scrollbar">
+                                        <div class="thumb"></div>
+                                    </div>
+                                    <div class="slides">
+                                        <div class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/aboutus-cover.png') }}"></div>
+                                        <div class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/services-caver.png') }}"></div>
+                                        <div class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/aboutus-cover.png') }}"></div>
+
+                                    </div>
                                 </div>
-                                <div class="slides">
-                                  <div class="d-flex justify-content-around"><img class="img-fluid" src="{{ asset('images/video-camera.png') }}"></div>
-                                  <div class="d-flex justify-content-around"><img class="img-fluid" src="{{ asset('images/campaign.png') }}"></div>
-                                  <div class="d-flex justify-content-around"><img class="img-fluid" src="{{ asset('images/art.png') }}"></div>
-                                  
-                                </div>
-                              </div>
+                            </div>
+
                         </div>
-     
-                    </div>
 
 
                     </div>
-                
+
+                    <div class="col-md-12 picture-item" data-groups='["video"]'>
+                        <div class="ribbon"><span>ویدئو</span></div>
+                        <div class="row p-4">
+
+                            <div class="h_iframe-aparat_embed_frame aparat-video col-md-8">
+                                <span style="display: block;padding-top: 57%"></span>
+                                <iframe src="https://www.aparat.com/video/video/embed/videohash/efu1W/vt/frame"
+                                    allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
+                                </iframe>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="gallery-container">
+                                    <div class="thumbnails"></div>
+                                    <div class="scrollbar">
+                                        <div class="thumb"></div>
+                                    </div>
+                                    <div class="slides">
+                                        <div class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/video-camera.png') }}"></div>
+                                        <div class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/campaign.png') }}"></div>
+                                        <div class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/art.png') }}"></div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
                     <div class="col-1@sm col-1@xs my-sizer-element"></div>
                 </div>
 
@@ -315,38 +321,79 @@
     <script>
         // ImageSlides------------------------------------
 
-const slideGallery = document.querySelector('.slides');
-const slides = slideGallery.querySelectorAll('div');
-const scrollbarThumb = document.querySelector('.thumb');
-const slideCount = slides.length;
-const slideHeight = 720;
-const marginTop = 16;
+        var els = document.getElementsByClassName("gallery-container");
+        var slideGallery;
+        var slides;
+        var scrollbarThumb;
+        var slideCount;
+        var slideHeight;
+        var marginTop;
+        for (var i = 0; i < els.length; i++) {
 
-const scrollThumb = () => {
-  const index = Math.floor(slideGallery.scrollTop / slideHeight);
-  scrollbarThumb.style.height = `${((index + 1) / slideCount) * slideHeight}px`;
-};
+        console.log(els[i].children[0].childNodes);
+         slideGallery = els[i].childNodes[5];
+         slides = slideGallery.querySelectorAll('div');
+         scrollbarThumb = els[i].children[1].firstElementChild;
+         slideCount = slides.length;
+         slideHeight = 720;
+         marginTop = 16;
+            const scrollThumb = () => {
+                const index = Math.floor(slideGallery.scrollTop / slideHeight);
+                scrollbarThumb.style.height = `${((index + 1) / slideCount) * slideHeight}px`;
+            };
 
-const scrollToElement = el => {
-  const index = parseInt(el.dataset.id, 10);
-  slideGallery.scrollTo(0, index * slideHeight + marginTop);
-};
+            const scrollToElement = el => {
+                const index = parseInt(el.dataset.id, 10);
+                slideGallery.scrollTo(0, index * slideHeight + marginTop);
+            };
 
-document.querySelector('.thumbnails').innerHTML += [...slides]
-  .map(
-    (slide, i) => `<img src="${slide.querySelector('img').src}" data-id="${i}">`
-  )
-  .join('');
+            els[i].children[0].innerHTML += [...slides]
+                .map(
+                    (slide, j) => `<img src="${slide.querySelector('img').src}" data-id="${j}">`
+                )
+                .join('');
 
-document.querySelectorAll('.thumbnails img').forEach(el => {
-  el.addEventListener('click', () => scrollToElement(el));
-});
+                els[i].children[0].childNodes.forEach(el => {
+                el.addEventListener('click', () => scrollToElement(el));
+            });
 
-slideGallery.addEventListener('scroll', e => scrollThumb());
+            slideGallery.addEventListener('scroll', e => scrollThumb());
 
-scrollThumb();
+            scrollThumb();
 
-// Shuffle JS -------------------------------------
+        }
+        // const slideGallery = els[i];
+        // const slides = slideGallery.querySelectorAll('div');
+        // const scrollbarThumb = document.querySelector('.thumb');
+        // const slideCount = slides.length;
+        // const slideHeight = 720;
+        // const marginTop = 16;
+
+        // const scrollThumb = () => {
+        //   const index = Math.floor(slideGallery.scrollTop / slideHeight);
+        //   scrollbarThumb.style.height = `${((index + 1) / slideCount) * slideHeight}px`;
+        // };
+
+        // const scrollToElement = el => {
+        //   const index = parseInt(el.dataset.id, 10);
+        //   slideGallery.scrollTo(0, index * slideHeight + marginTop);
+        // };
+
+        // document.querySelector('.thumbnails').innerHTML += [...slides]
+        //   .map(
+        //     (slide, i) => `<img src="${slide.querySelector('img').src}" data-id="${i}">`
+        //   )
+        //   .join('');
+
+        // document.querySelectorAll('.thumbnails img').forEach(el => {
+        //   el.addEventListener('click', () => scrollToElement(el));
+        // });
+
+        // slideGallery.addEventListener('scroll', e => scrollThumb());
+
+        // scrollThumb();
+
+        // Shuffle JS -------------------------------------
 
         var Shuffle = window.Shuffle;
 
@@ -526,8 +573,5 @@ scrollThumb();
             throttleTime: 300, // How often shuffle can be called on resize (in milliseconds).
             useTransforms: true, // Whether to use transforms or absolute positioning.
         };
-
-    
-       
     </script>
 @endsection
