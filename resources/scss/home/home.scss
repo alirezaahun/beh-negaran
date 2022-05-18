@@ -844,16 +844,14 @@ footer p span {
     color: #ff0000;
     border-color: var(--clr-accent);
 }
-.icon-icons8-aparat-48 .path1:before {
-    content: "\e900";
-    color: #263238;
-}
-.icon-icons8-aparat-48 .path2:before {
-    content: "\e901";
-    color: #e91e63;
-    margin-left: -1em;
-}
 
+.footer-aparat-icon  {
+    
+}
+.icon-icons8-aparat:before {
+    content: "\e900";
+    color: #f6f6f6;
+  }
 /* Owl Carousel ------------------------------------------------*/
 .carousel-banner {
     color: var(--clr-primary);
