@@ -255,11 +255,11 @@
                                         <div class="thumb"></div>
                                     </div>
                                     <div class="slides">
-                                        <div class="d-flex justify-content-around"><img class="img-fluid"
+                                        <div id="0" class="d-flex justify-content-around"><img class="img-fluid"
                                                 src="{{ asset('images/aboutus-cover.png') }}"></div>
-                                        <div class="d-flex justify-content-around"><img class="img-fluid"
+                                        <div id="1" class="d-flex justify-content-around"><img class="img-fluid"
                                                 src="{{ asset('images/services-caver.png') }}"></div>
-                                        <div class="d-flex justify-content-around"><img class="img-fluid"
+                                        <div id="2" class="d-flex justify-content-around"><img class="img-fluid"
                                                 src="{{ asset('images/aboutus-cover.png') }}"></div>
 
                                     </div>
@@ -288,11 +288,11 @@
                                         <div class="thumb"></div>
                                     </div>
                                     <div class="slides">
-                                        <div class="d-flex justify-content-around"><img class="img-fluid"
+                                        <div id="3" class="d-flex justify-content-around"><img class="img-fluid"
                                                 src="{{ asset('images/video-camera.png') }}"></div>
-                                        <div class="d-flex justify-content-around"><img class="img-fluid"
+                                        <div id="4" class="d-flex justify-content-around"><img class="img-fluid"
                                                 src="{{ asset('images/campaign.png') }}"></div>
-                                        <div class="d-flex justify-content-around"><img class="img-fluid"
+                                        <div id="5" class="d-flex justify-content-around"><img class="img-fluid"
                                                 src="{{ asset('images/art.png') }}"></div>
 
                                     </div>
@@ -324,6 +324,7 @@
         var els = document.getElementsByClassName("gallery-container");
         var slideGallery;
         var slides;
+        var count = 0;
         var scrollbarThumb;
         var slideCount;
         var slideHeight;
@@ -331,7 +332,7 @@
         var marginTop;
         for (var i = 0; i < els.length; i++) {
 
-        console.log(els[i].childNodes[5].children);
+        // console.log(els[i].childNodes[5].children);
          slideGallery = els[i].childNodes[5];
          slides = slideGallery.querySelectorAll('div');
          scrollbarThumb = els[i].children[1].firstElementChild;
@@ -341,11 +342,18 @@
 
             els[i].children[0].innerHTML += [...slides]
                 .map(
-                    (slide, i) => `<img src="${slide.querySelector('img').src}" data-id="${i}">`
+                    (slide, i) => `<img src="${slide.querySelector('img').src}" onClick="slider(${count})" id="img${count++}" data-id="${i}">`
                 )
                 .join('');
 
+
                 sliderHolder.push(slideGallery);
+
+        }
+
+        function slider(count){
+
+            document.getElementById(count).scrollIntoView({behavior: "smooth", block: "start"});
 
         }
 
@@ -361,9 +369,11 @@
                 sliderHolder[x].scrollTo(0, index * slideHeight + marginTop);
             };
 
-            document.querySelectorAll('.thumbnails img').forEach(el => {
-                el.addEventListener('click', () => scrollToElement(el));
-            });
+            // document.querySelectorAll('.thumbnails img').forEach(el => {
+            //     el.addEventListener('click', () => scrollToElement(el));
+            // });
+
+            document.getElementById('divElem').scrollTop += 10
 
             slideGallery.addEventListener('scroll', e => scrollThumb());
 
@@ -372,7 +382,7 @@
         }
 
 
-        console.log(sliderHolder);
+        console.log(sliderHolder[0].children);
         // const slideGallery = els[i];
         // const slides = slideGallery.querySelectorAll('div');
         // const scrollbarThumb = document.querySelector('.thumb');
