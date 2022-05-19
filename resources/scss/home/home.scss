@@ -1640,16 +1640,10 @@ footer p span {
     background-color: transparent;
     margin: 0;
     padding: 0;
-    box-shadow: rgba(255, 255, 255, 0.1) 0px 0px 6px inset,
-        rgba(255, 255, 255, 0.15) 0px 0px 6px inset,
-        rgba(255, 255, 255, 0.2) 0px 0px 6px inset,
-        rgba(255, 255, 255, 0.25) 0px 0px 6px inset;
 }
 .aparat-video iframe {
     border-radius: 0 1.3rem 1.3rem 0;
     object-fit: contain;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px inset,
-        rgba(0, 0, 0, 0.23) 0px 3px 6px inset;
 }
 .project-group {
     background-color: var(--clr-dark);

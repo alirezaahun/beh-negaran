@@ -100,6 +100,39 @@
 
                     </div>
 
+                    <div class="col-md-12 picture-item" data-groups='["video"]'>
+                        <div class="ribbon"><span>ویدئو</span></div>
+                        <div class="row p-4">
+
+                            <div class="h_iframe-aparat_embed_frame aparat-video col-md-8">
+                                <span style="display: block;padding-top: 57%"></span>
+                                <iframe src="https://www.aparat.com/video/video/embed/videohash/efu1W/vt/frame"
+                                    allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
+                                </iframe>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="gallery-container">
+                                    <div class="thumbnails"></div>
+                                    <div class="scrollbar">
+                                        <div class="thumb"></div>
+                                    </div>
+                                    <div class="slides">
+                                        <div class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/aboutus-cover.png') }}"></div>
+                                        <div class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/services-caver.png') }}"></div>
+                                        <div class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/aboutus-cover.png') }}"></div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
                     <div class="col-1@sm col-1@xs my-sizer-element"></div>
                 </div>
 
