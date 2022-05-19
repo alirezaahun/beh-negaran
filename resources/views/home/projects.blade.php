@@ -32,7 +32,211 @@
 
             <div class="container my-shuffle-container">
                 <div id="grid" class="row">
-                    
+                    {{-- <figure class="col-3@xs col-4@sm col-3@md picture-item" data-groups='["photo"]'>
+                        <div class="picture-item__inner">
+                            <div class="aspect aspect--16x9">
+                                <div class="aspect__inner">
+                                    <div class="h_iframe-aparat_embed_frame aparat-video">
+                                        <span style="display: block;padding-top: 57%"></span>
+                                        <iframe src="https://www.aparat.com/video/video/embed/videohash/efu1W/vt/frame"
+                                            allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
+                                        </iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="picture-item__details">
+                                <figcaption class="picture-item__title"><a href="#" target="_blank" rel="noopener">پروژه</a>
+                                </figcaption>
+                                <p class="picture-item__tags hidden@xs">عنوان</p>
+                            </div>
+                        </div>
+                    </figure>
+                    <figure class="col-3@xs col-8@sm col-6@md picture-item picture-item--overlay" data-groups='["design"]'>
+                        <div class="picture-item__inner">
+
+                            <img src="{{ asset('images/banner3.jpg') }}" srcset="{{ asset('images/banner3.jpg') }} 2x"
+                                alt="project-1" />
+                            <div class="picture-item__details">
+                                <figcaption class="picture-item__title"><a href="#" target="_blank" rel="noopener">پروژه</a>
+                                </figcaption>
+                                <p class="picture-item__tags hidden@xs">عنوان</p>
+                            </div>
+                        </div>
+                    </figure>
+                    <figure class="col-3@xs col-4@sm col-3@md picture-item" data-groups='["website"]'>
+                        <div class="picture-item__inner">
+                            <div class="aspect aspect--16x9">
+                                <div class="aspect__inner">
+                                    <div class="h_iframe-aparat_embed_frame aparat-video">
+                                        <span style="display: block;padding-top: 57%"></span>
+                                        <iframe src="https://www.aparat.com/video/video/embed/videohash/efu1W/vt/frame"
+                                            allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
+                                        </iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="picture-item__details">
+                                <figcaption class="picture-item__title"><a href="#" target="_blank" rel="noopener">پروژه</a>
+                                </figcaption>
+                                <p class="picture-item__tags hidden@xs">عنوان</p>
+                            </div>
+                        </div>
+                    </figure>
+                    <figure class="col-3@xs col-8@sm col-6@md picture-item picture-item--overlay" data-groups='["design"]'>
+                        <div class="picture-item__inner">
+
+                            <img src="{{ asset('images/banner3.jpg') }}" srcset="{{ asset('images/banner3.jpg') }} 2x"
+                                alt="project-1" />
+                            <div class="picture-item__details">
+                                <figcaption class="picture-item__title"><a href="#" target="_blank" rel="noopener">پروژه</a>
+                                </figcaption>
+                                <p class="picture-item__tags hidden@xs">عنوان</p>
+                            </div>
+                        </div>
+                    </figure>
+                    <figure class="col-3@xs col-4@sm col-3@md picture-item" data-groups='["design"]'>
+                        <div class="picture-item__inner">
+                            <div class="aspect aspect--16x9">
+                                <div class="aspect__inner">
+                                    <div class="h_iframe-aparat_embed_frame aparat-video">
+                                        <span style="display: block;padding-top: 57%"></span>
+                                        <iframe src="https://www.aparat.com/video/video/embed/videohash/efu1W/vt/frame"
+                                            allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
+                                        </iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="picture-item__details">
+                                <figcaption class="picture-item__title"><a href="#" target="_blank" rel="noopener">پروژه</a>
+                                </figcaption>
+                                <p class="picture-item__tags hidden@xs">عنوان</p>
+                            </div>
+                        </div>
+                    </figure>
+                    <figure class="col-3@xs col-4@sm col-3@md picture-item" data-groups='["video"]'>
+                        <div class="picture-item__inner">
+                            <div class="aspect aspect--16x9">
+                                <div class="aspect__inner">
+                                    <div class="h_iframe-aparat_embed_frame aparat-video">
+                                        <span style="display: block;padding-top: 57%"></span>
+                                        <iframe src="https://www.aparat.com/video/video/embed/videohash/efu1W/vt/frame"
+                                            allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
+                                        </iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="picture-item__details">
+                                <figcaption class="picture-item__title"><a href="#" target="_blank" rel="noopener">پروژه</a>
+                                </figcaption>
+                                <p class="picture-item__tags hidden@xs">عنوان</p>
+                            </div>
+                        </div>
+                    </figure>
+                    <figure class="col-3@xs col-8@sm col-6@md picture-item picture-item--overlay" data-groups='["design"]'>
+                        <div class="picture-item__inner">
+
+                            <img src="{{ asset('images/banner3.jpg') }}" srcset="{{ asset('images/banner3.jpg') }} 2x"
+                                alt="project-1" />
+                            <div class="picture-item__details">
+                                <figcaption class="picture-item__title"><a href="#" target="_blank" rel="noopener">پروژه</a>
+                                </figcaption>
+                                <p class="picture-item__tags hidden@xs">عنوان</p>
+                            </div>
+                        </div>
+                    </figure>
+                    <figure class="col-3@xs col-4@sm col-3@md picture-item" data-groups='["video"]'>
+                        <div class="picture-item__inner">
+                            <div class="aspect aspect--16x9">
+                                <div class="aspect__inner">
+                                    <div class="h_iframe-aparat_embed_frame aparat-video">
+                                        <span style="display: block;padding-top: 57%"></span>
+                                        <iframe src="https://www.aparat.com/video/video/embed/videohash/efu1W/vt/frame"
+                                            allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
+                                        </iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="picture-item__details">
+                                <figcaption class="picture-item__title"><a href="#" target="_blank" rel="noopener">پروژه</a>
+                                </figcaption>
+                                <p class="picture-item__tags hidden@xs">عنوان</p>
+                            </div>
+                        </div>
+                    </figure>
+                    <figure class="col-3@xs col-4@sm col-3@md picture-item" data-groups='["video"]'>
+                        <div class="picture-item__inner">
+                            <div class="aspect aspect--16x9">
+                                <div class="aspect__inner">
+                                    <div class="h_iframe-aparat_embed_frame aparat-video">
+                                        <span style="display: block;padding-top: 57%"></span>
+                                        <iframe src="https://www.aparat.com/video/video/embed/videohash/efu1W/vt/frame"
+                                            allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
+                                        </iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="picture-item__details">
+                                <figcaption class="picture-item__title"><a href="#" target="_blank" rel="noopener">پروژه</a>
+                                </figcaption>
+                                <p class="picture-item__tags hidden@xs">عنوان</p>
+                            </div>
+                        </div>
+                    </figure>
+                    <figure class="col-3@xs col-4@sm col-3@md picture-item" data-groups='["video"]'>
+                        <div class="picture-item__inner">
+                            <div class="aspect aspect--16x9">
+                                <div class="aspect__inner">
+                                    <div class="h_iframe-aparat_embed_frame aparat-video">
+                                        <span style="display: block;padding-top: 57%"></span>
+                                        <iframe src="https://www.aparat.com/video/video/embed/videohash/efu1W/vt/frame"
+                                            allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
+                                        </iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="picture-item__details">
+                                <figcaption class="picture-item__title"><a href="#" target="_blank" rel="noopener">پروژه</a>
+                                </figcaption>
+                                <p class="picture-item__tags hidden@xs">عنوان</p>
+                            </div>
+                        </div>
+                    </figure>
+                    <figure class="col-3@xs col-8@sm col-6@md picture-item picture-item--overlay" data-groups='["design"]'>
+                        <div class="picture-item__inner">
+
+                            <div class="h_iframe-aparat_embed_frame aparat-video">
+                                <span style="display: block;padding-top: 57%"></span>
+                                <iframe src="https://www.aparat.com/video/video/embed/videohash/efu1W/vt/frame"
+                                    allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
+                                </iframe>
+                            </div>
+                            <div class="picture-item__details">
+                                <figcaption class="picture-item__title"><a href="#" target="_blank" rel="noopener">پروژه</a>
+                                </figcaption>
+                                <p class="picture-item__tags hidden@xs">عنوان</p>
+                            </div>
+                        </div>
+                    </figure>
+                    <figure class="col-3@xs col-4@sm col-3@md picture-item" data-groups='["video"]'>
+                        <div class="picture-item__inner">
+                            <div class="aspect aspect--16x9">
+                                <div class="aspect__inner">
+                                    <div class="h_iframe-aparat_embed_frame aparat-video">
+                                        <span style="display: block;padding-top: 57%"></span>
+                                        <iframe src="https://www.aparat.com/video/video/embed/videohash/efu1W/vt/frame"
+                                            allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
+                                        </iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="picture-item__details">
+                                <figcaption class="picture-item__title"><a href="#" target="_blank"
+                                        rel="noopener">پروژه</a>
+                                </figcaption>
+                                <p class="picture-item__tags hidden@xs">عنوان</p>
+                            </div>
+                        </div>
+                    </figure> --}}
 
                     <div class="col-md-12 picture-item" data-groups='["video"]'>
                         <div class="ribbon"><span>ویدئو</span></div>
@@ -100,39 +304,6 @@
 
                     </div>
 
-                    <div class="col-md-12 picture-item" data-groups='["video"]'>
-                        <div class="ribbon"><span>ویدئو</span></div>
-                        <div class="row p-4">
-
-                            <div class="h_iframe-aparat_embed_frame aparat-video col-md-8">
-                                <span style="display: block;padding-top: 57%"></span>
-                                <iframe src="https://www.aparat.com/video/video/embed/videohash/efu1W/vt/frame"
-                                    allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
-                                </iframe>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="gallery-container">
-                                    <div class="thumbnails"></div>
-                                    <div class="scrollbar">
-                                        <div class="thumb"></div>
-                                    </div>
-                                    <div class="slides">
-                                        <div class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/aboutus-cover.png') }}"></div>
-                                        <div class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/services-caver.png') }}"></div>
-                                        <div class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/aboutus-cover.png') }}"></div>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                    </div>
-
                     <div class="col-1@sm col-1@xs my-sizer-element"></div>
                 </div>
 
@@ -156,44 +327,52 @@
         var scrollbarThumb;
         var slideCount;
         var slideHeight;
+        var sliderHolder = [];
         var marginTop;
-        var count;
         for (var i = 0; i < els.length; i++) {
 
-        console.log(els[i].children[0].children);
+        console.log(els[i].childNodes[5].children);
          slideGallery = els[i].childNodes[5];
          slides = slideGallery.querySelectorAll('div');
          scrollbarThumb = els[i].children[1].firstElementChild;
          slideCount = slides.length;
          slideHeight = 720;
          marginTop = 16;
+
+            els[i].children[0].innerHTML += [...slides]
+                .map(
+                    (slide, i) => `<img src="${slide.querySelector('img').src}" data-id="${i}">`
+                )
+                .join('');
+
+                sliderHolder.push(slideGallery);
+
+        }
+
+        for (let x = 0; x < sliderHolder.length; x++) {
+
             const scrollThumb = () => {
-                const index = Math.floor(slideGallery.scrollTop / slideHeight);
+                const index = Math.floor(sliderHolder[x].scrollTop / slideHeight);
                 scrollbarThumb.style.height = `${((index + 1) / slideCount) * slideHeight}px`;
             };
 
             const scrollToElement = el => {
                 const index = parseInt(el.dataset.id, 10);
-                slideGallery.scrollTo(0, index * slideHeight + marginTop);
+                sliderHolder[x].scrollTo(0, index * slideHeight + marginTop);
             };
 
-            els[i].children[0].innerHTML += [...slides]
-                .map(
-                    (slide, j) => `<img src="${slide.querySelector('img').src}" data-id="${j}">`
-                )
-                .join('');
-
-                els[i].children[0].childNodes.forEach(el => {
+            document.querySelectorAll('.thumbnails img').forEach(el => {
                 el.addEventListener('click', () => scrollToElement(el));
-                // console.log(el);
             });
-
 
             slideGallery.addEventListener('scroll', e => scrollThumb());
 
             scrollThumb();
 
         }
+
+
+        console.log(sliderHolder);
         // const slideGallery = els[i];
         // const slides = slideGallery.querySelectorAll('div');
         // const scrollbarThumb = document.querySelector('.thumb');
