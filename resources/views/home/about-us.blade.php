@@ -12,7 +12,7 @@
                         <h2 class="aboutUs-h2-color">
                             چرا هستیم؟
                         </h2>
-                        <hr class=" aboutUs-custom-hr">
+                        <div class="footer-line"><span></span></div>
 
                         <p class="mb-4">به‌نگاران اولین سامانه یکپارچه تولید محتوای دیجیتال در کشوره که تقریبا تمام
                             خدمات تولید محتوا و تبلیغات رو پوشش میده.</p>
