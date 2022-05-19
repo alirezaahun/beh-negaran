@@ -9,25 +9,17 @@
         <div class="row justify-content-center">
             <div class="col-11 col-sm-10 col-md-10 col-lg-12 col-xl-11 col-xl-5 text-center p-0 mt-3 mb-2">
                 <div class="_card_  px-0 pt-4 pb-0 mt-3 mb-3">
-
-
-                    <form id="msform">
+                    <form id="msform" method="GET">
                         <!-- progressbar -->
                         <ul id="progressbar">
                             <li class="active" id="account"><strong>خدمات</strong></li>
                             <li id="personal"><strong>زمان و مکان</strong></li>
                             <li id="payment"><strong>پرداخت</strong></li>
                         </ul>
-                      
                         <!-- fieldsets -->
-
                         <fieldset>
                             <h2 id="heading">انتخاب خدمات</h2>
-
                             </select>
-
-
-
                             <div class="form-card">
                                 <div class="row">
                                     <div class="tabs">
@@ -36,85 +28,41 @@
                                             <label for="tab-1">طراحی سایت</label>
                                             <div class="tabby-content">
                                                 <hr class="aaa">
-
-
                                                 <div class="col-12 d-flex d-flex justify-content-center  mt-5">
                                                     <div class="col-12 col-md-10 col-lg-8">
                                                         <div class="row  d-flex justify-content-center pricing-box-Shadow">
                                                             <div class="col-12 col-md-5 col-lg-6    ">
-
                                                                 <select class="form-select my-5 mx-auto w-100 w-lg-50"
                                                                     id='Photography-select'>
-                                                                    <option selected>انتخاب پکیچ ها</option>
-                                                                    <option value="1"> برنزی</option>
-                                                                    <option value="2">نقره ای</option>
-                                                                    <option value="3">طلایی</option>
+                                                                    <option selected> انتخاب پکیچ ها</option>
+                                                                    <option value="1">  برنزی قیمت </option>
+                                                                    <option value="2">نقره ای  </option>
+                                                                    <option value="3">طلایی </option>
                                                                 </select>
-
-
                                                                 <button
                                                                     class="button d-none d-md-block custom-margin-pricing"
-                                                                    role="button "> افزودن به سبد خرید</button>
+                                                                    role="button" id="PhotographyBtn"> افزودن به سبد خرید</button>
                                                             </div>
-
-
-
                                                             <div class="col-12 col-md-7 col-lg-6 ">
                                                                 <h4 class="text-center pt-5"> توضیحات خدمت انتخاب شده</h4>
                                                                 <hr class="aaa w-75 mx-auto">
-                                                                <p class="mx-auto p-2 text-justify d-block" id="bronze"> ویژگی های برنزی</p>
-                                                                <p class="mx-auto p-2 text-justify d-none" id="silver">ویژگی های نقره ای</p>
+                                                                <p class="mx-auto p-2 text-justify d-block" id="bronze">  ویژگی های برنزی با قیمت ۱۰</p>
+                                                                <p class="mx-auto p-2 text-justify d-none" id="silver">ویژگی های نقره ای  با قیمت ۱۰۰</p>
                                                                 <p class="mx-auto p-2 text-justify d-none" id="gold">
-                                                                    ویژگی های طلاایی
+                                                                    ویژگی های طلاایی  با قیمت ۱۰۰۰
                                                                 </p>
-
                                                             </div>
                                                         </div>
                                                         {{-- <div class="col-9"></div> --}}
                                                         <button class="button d-block d-md-none my-5" role="button">افزودن
                                                             به سبد خرید</button>
                                                     </div>
-
-
                                                 </div>
-
-
-
-
-                                                {{-- <div class="parent">
-                                                    <hr class="aaa">
-                                                    <h4 class="mx-auto"> پکیچ مورد نظر خود را انتخاب کنید</h4>
-
-
-                                                    <div class="_cards">
-                                                        <div class="_card">
-                                                            <h2 class="_card-title">طلایی</h2>
-                                                            <img src="https://images.unsplash.com/photo-1591485423007-765bde4139ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"
-                                                                alt="">
-                                                            <p class="_card-desc">ویژگی ها و قیمت های ی پکیچ</p>
-                                                        </div>
-                                                        <div class="_card">
-                                                            <h2 class="_card-title">نقره ای</h2>
-                                                            <img src="https://images.unsplash.com/photo-1591485423007-765bde4139ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"
-                                                                alt="">
-                                                            <p class="_card-desc">ویژگی ها و قیمت های ی پکیچ</p>
-                                                        </div>
-                                                        <div class="_card">
-                                                            <h2 class="_card-title">برنزی</h2>
-                                                            <img src="https://images.unsplash.com/photo-1591485423007-765bde4139ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"
-                                                                alt="">
-                                                            <p class="_card-desc">ویژگی ها و قیمت های ی پکیچ </p>
-                                                        </div>
-                                                    </div>
-                                                </div> --}}
                                             </div>
                                         </div>
-
                                         <div class="tabby-tab">
                                             <input type="radio" id="tab-2" name="tabby-tabs" value="عکاسی">
                                             <label for="tab-2">عکاسی</label>
-
-
                                             <div class="tabby-content">
                                                 <div class="col-12 d-flex d-flex justify-content-center  mt-5">
                                                     <div class="col-12 col-md-8">
@@ -127,15 +75,10 @@
                                                                     <option value="2">طلایی</option>
                                                                     <option value="3">برنزی</option>
                                                                 </select>
-
-
                                                                 <button
                                                                     class="button d-none d-md-block custom-margin-pricing"
                                                                     role="button "> افزودن به سبد خرید</button>
                                                             </div>
-
-
-
                                                             <div class="col-12 col-md-7 col-lg-6 ">
                                                                 <h4 class="text-center pt-5"> توضیحات خدمت انتخاب شده</h4>
                                                                 <p class="mx-auto p-2 text-justify">لورم ایپسوم متن ساختگی
@@ -151,16 +94,11 @@
                                                                     با استفاده از طراحان گرافیک است.</p>
                                                             </div>
                                                         </div>
-                                                       
-                                                        <button class="button d-block d-md-none my-3" role="button">افزودن
-                                                            به سبد خرید</button>
+                                                        <button class="button d-block d-md-none my-3" role="button">افزودن به سبد خرید</button>
                                                     </div>
-
-
                                                 </div>
                                             </div>
                                         </div>
-
                                         <div class="tabby-tab">
                                             <input type="radio" id="tab-3" name="tabby-tabs">
                                             <label for="tab-3">فیلم برداری</label>
@@ -169,22 +107,16 @@
                                                     <div class="col-12 col-md-8">
                                                         <div class="row  d-flex justify-content-center pricing-box-Shadow">
                                                             <div class="col-12 col-md-5 col-lg-6    ">
-
                                                                 <select class="form-select my-5 mx-auto w-100 w-lg-50">
                                                                     <option selected>انتخاب پکیچ ها</option>
                                                                     <option value="1">نقره ای</option>
                                                                     <option value="2">طلایی</option>
                                                                     <option value="3">برنزی</option>
                                                                 </select>
-
-
                                                                 <button
                                                                     class="button d-none d-md-block custom-margin-pricing"
                                                                     role="button "> افزودن به سبد خرید</button>
                                                             </div>
-
-
-
                                                             <div class="col-12 col-md-7 col-lg-6 ">
                                                                 <h4 class="text-center pt-5"> توضیحات خدمت انتخاب شده</h4>
                                                                 <p class="mx-auto p-2 text-justify">لورم ایپسوم متن ساختگی
@@ -200,40 +132,30 @@
                                                                     با استفاده از طراحان گرافیک است.</p>
                                                             </div>
                                                         </div>
-                                                      
-                                                        <button class="button d-block d-md-none my-3" role="button">افزودن
-                                                            به سبد خرید</button>
+                                                        <button class="button d-block d-md-none my-3" role="button">افزودن  به سبد خرید</button>
                                                     </div>
-
-
                                                 </div>
                                             </div>
                                         </div>
-
                                         <div class="tabby-tab">
                                             <input type="radio" id="tab-4" name="tabby-tabs">
-                                            <label for="tab-4">پادکست</label>
+                                            <label for="tab-4">خدمات دیگر</label>
                                             <div class="tabby-content">
                                                 <div class="col-12 d-flex d-flex justify-content-center  mt-5">
                                                     <div class="col-12 col-md-8">
                                                         <div class="row  d-flex justify-content-center pricing-box-Shadow">
                                                             <div class="col-12 col-md-5 col-lg-6    ">
-
                                                                 <select class="form-select my-5 mx-auto w-100 w-lg-50">
-                                                                    <option selected>انتخاب پکیچ ها</option>
-                                                                    <option value="1">نقره ای</option>
-                                                                    <option value="2">طلایی</option>
-                                                                    <option value="3">برنزی</option>
+                                                                    <option selected>  انتخاب خدمات </option>
+                                                                    <option value="1">  مشاوره کسب و کار</option>
+                                                                    <option value="2">شبکه های اجتماعی</option>
+                                                                    <option value="3">تبلیغات</option>
+                                                                    <option value="3">پادکست</option>
                                                                 </select>
-
-
                                                                 <button
                                                                     class="button d-none d-md-block custom-margin-pricing"
                                                                     role="button "> افزودن به سبد خرید</button>
                                                             </div>
-
-
-
                                                             <div class="col-12 col-md-7 col-lg-6 ">
                                                                 <h4 class="text-center pt-5"> توضیحات خدمت انتخاب شده</h4>
                                                                 <p class="mx-auto p-2 text-justify">لورم ایپسوم متن ساختگی
@@ -249,40 +171,29 @@
                                                                     با استفاده از طراحان گرافیک است.</p>
                                                             </div>
                                                         </div>
-                                                        {{-- <div class="col-9"></div> --}}
                                                         <button class="button d-block d-md-none my-3" role="button">افزودن
                                                             به سبد خرید</button>
                                                     </div>
-
-
                                                 </div>
-
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
-
                             <input type="button" name="next" class="next action-button " value="بعدی" />
                         </fieldset>
                         <fieldset>
                             <h2 id="heading"> آدرس و تاریخ</h2>
                             <hr class="aaa">
-
-                            
                             <div class="form-card">
                                 <div class="row">
                                     <div class="col-md-6 col-12 ">
-                                   
                                         <div class="well">
-                                            <div class="row">
-                                             
+                                            <div class="row">                                           
                                               <div class="col-sm-6">
                                                 <div class="form-group" dir="ltr">
                                                     <label class='float-right mt-4 mb-2'  for="state">:استان</label>
-                                                    <div  class="form-contorol">
-                                     
+                                                    <div  class="form-contorol">                                     
                                                      <select id="Ostan" runat="server" onchange="Func(this.value)" class="form-control" name="state">
                                                          <option  class="form-group" value="" ></option>
                                                          <option class="form-group" value=",آذرشهر ,اسکو ,اهر ,بستان‌آباد ,بناب ,تبریز ,جلفا ,چاراویماق ,سراب ,شبستر ,عجب‌شیر ,کلیبر ,مراغه ,مرند ,ملکان ,میانه ,ورزقان ,هریس ,هشترود"> آذربایجان شرقی</option>
@@ -316,28 +227,18 @@
                                                          <option class="form-group" value="  ,ابوموسی ,بستک ,بندر عباس ,بندر لنگه ,جاسک ,حاجی‌آباد ,شهرستان خمیر ,رودان  ,قشم ,گاوبندی ,میناب"> هرمزگان</option>
                                                          <option class="form-group" value="  ,اسدآباد ,بهار ,تویسرکان ,رزن ,کبودرآهنگ ,ملایر ,نهاوند ,همدان"> همدان</option>
                                                          <option class="form-group" value="  ,ابرکوه ,اردکان ,بافق ,تفت ,خاتم ,صدوق ,طبس ,مهریز ,مِیبُد ,یزد"> یزد</option>
-                                                     </select>
-                                                
+                                                     </select>                                               
                                                  </div>
                                                  </div>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                           
                                               </div>
                                               <div class="col-sm-6">
                                                 <div class="form-group">
                                                     <label class='float-right mt-4 mb-2'  for="city" >شهرستان :</label>
-                                                    
                                                     <select id="Shahrestan" name='city' class="form-control col-3">
                                                     </select>
                                                 </div>
                                               </div>
                                             </div>
-                                         
                                             <div class="row">
                                                 <div class="col-sm-6">
                                                   <div class="form-group">
@@ -366,14 +267,12 @@
                                                  <input type="email" class="form-control">
                                               </div>
                                             </div>
-
                                             <div class="col-sm-3">
                                               <div class="form-group">
                                                   <label class='float-right mt-4 mb-2'  for="line1">پلاک:</label>
                                                   <input type="email" class="form-control">
                                                </div>
                                             </div>
-
                                             <div class="col-sm-12">
                                                 <div class="form-group">
                                                     <label class='float-right mt-4 mb-2'  for="exampleFormControlTextarea4">آدرس کامل: </label>
@@ -381,7 +280,6 @@
                                                   </div>
                                             </div>
                                           </div>
-
                                     </div>
                                     <div class="col-md-6 col-12 ">
                                         <div class="map-responsive">
@@ -391,8 +289,6 @@
                                                 referrerpolicy="no-referrer-when-downgrade"></iframe>
                                         </div>
                                     </div>
-
-
                                 </div>
                             </div>
                             <input type="button" name="next" class="next action-button" value="Next" /> <input type="button"
@@ -400,208 +296,15 @@
                         </fieldset>
                         <fieldset>
                             <div class="form-card">
-                                <div class="row">
-                                    <div class="col-7">
-                                        <h2 class="fs-title">Image Upload:</h2>
-                                    </div>
-                                    <div class="col-5">
-                                        <h2 class="steps">Step 3 - 4</h2>
-                                    </div>
-                                </div> <label class="fieldlabels">Upload Your Photo:</label> <input type="file"
-                                    name="pic" accept="image/*"> <label class="fieldlabels">Upload Signature
-                                    Photo:</label> <input type="file" name="pic" accept="image/*">
+                           
                             </div> <input type="button" name="next" class="next action-button" value="Submit" /> <input
                                 type="button" name="previous" class="previous action-button-previous" value="Previous" />
                         </fieldset>
-
                     </form>
                 </div>
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    {{-- <div class="container">
-        <div class="tabs">
-            <div class="tabby-tab">
-                <input type="radio" id="tab-1" name="tabby-tabs" checked>
-                <label for="tab-1">طراحی سایت</label>
-                <div class="tabby-content">
-
-                    <div class="parent">
-                        <hr class="aaa">
-                        <h4 class="mx-auto"> پکیچ مورد نظر خود را انتخاب کنید</h4>
-
-
-                        <div class="_cards">
-                            <div class="_card">
-                                <h2 class="_card-title">طلایی</h2>
-                                <img src="https://images.unsplash.com/photo-1591485423007-765bde4139ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"
-                                    alt="">
-                                <p class="_card-desc">ویژگی ها و قیمت های ی پکیچ</p>
-                            </div>
-                            <div class="_card">
-                                <h2 class="_card-title">نقره ای</h2>
-                                <img src="https://images.unsplash.com/photo-1591485423007-765bde4139ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"
-                                    alt="">
-                                <p class="_card-desc">ویژگی ها و قیمت های ی پکیچ</p>
-                            </div>
-                            <div class="_card">
-                                <h2 class="_card-title">برنزی</h2>
-                                <img src="https://images.unsplash.com/photo-1591485423007-765bde4139ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"
-                                    alt="">
-                                <p class="_card-desc">ویژگی ها و قیمت های ی پکیچ </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tabby-tab">
-                <input type="radio" id="tab-2" name="tabby-tabs">
-                <label for="tab-2">عکاسی</label>
-
-
-                <div class="tabby-content">
-                    <div class="parent">
-                        <hr class="aaa">
-                        <h4 class="mx-auto"> پکیچ مورد نظر خود را انتخاب کنید</h4>
-                        <div class="_cards">
-                            <div class="_card">
-                                <h2 class="_card-title">عکاسی زوج</h2>
-                                <img src="https://images.unsplash.com/photo-1591485423007-765bde4139ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"
-                                    alt="">
-                                <p class="_card-desc">ویژگی ها و قیمت های ی پکیچ</p>
-                            </div>
-                            <div class="_card">
-                                <h2 class="_card-title">عکاسی کودک</h2>
-                                <img src="https://images.unsplash.com/photo-1591485423007-765bde4139ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"
-                                    alt="">
-                                <p class="_card-desc">ویژگی ها و قیمت های ی پکیچ</p>
-                            </div>
-                            <div class="_card">
-                                <h2 class="_card-title">عکاسی فضای باز</h2>
-                                <img src="https://images.unsplash.com/photo-1591485423007-765bde4139ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"
-                                    alt="">
-                                <p class="_card-desc">ویژگی ها و قیمت های ی پکیچ</p>
-                            </div>
-                            <div class="_card">
-                                <h2 class="_card-title"> عکاسی مراسمات</h2>
-                                <img src="https://images.unsplash.com/photo-1591485423007-765bde4139ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"
-                                    alt="">
-                                <p class="_card-desc">ویژگی ها و قیمت های ی پکیچ</p>
-                            </div>
-                            <div class="_card">
-                                <h2 class="_card-title">عکاسی پرتره</h2>
-                                <img src="https://images.unsplash.com/photo-1591485423007-765bde4139ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"
-                                    alt="">
-                                <p class="_card-desc">ویژگی ها و قیمت های ی پکیچ </p>
-                            </div>
-                            <div class="_card">
-                                <h2 class="_card-title">عکاسی سفارشی</h2>
-                                <img src="https://images.unsplash.com/photo-1591485423007-765bde4139ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"
-                                    alt="">
-                                <p class="_card-desc">ویژگی ها و قیمت های ی پکیچ </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tabby-tab">
-                <input type="radio" id="tab-3" name="tabby-tabs">
-                <label for="tab-3">فیلم برداری</label>
-                <div class="tabby-content">
-                    <div class="parent">
-                        <hr class="aaa">
-                        <h4 class="mx-auto"> پکیچ مورد نظر خود را انتخاب کنید</h4>
-
-
-                        <div class="_cards">
-                            <div class="_card">
-                                <h2 class="_card-title">طلایی</h2>
-                                <img src="https://images.unsplash.com/photo-1591485423007-765bde4139ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"
-                                    alt="">
-                                <p class="_card-desc">ویژگی ها و قیمت های ی پکیچ</p>
-                            </div>
-                            <div class="_card">
-                                <h2 class="_card-title">نقره ای</h2>
-                                <img src="https://images.unsplash.com/photo-1591485423007-765bde4139ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"
-                                    alt="">
-                                <p class="_card-desc">ویژگی ها و قیمت های ی پکیچ</p>
-                            </div>
-                            <div class="_card">
-                                <h2 class="_card-title">برنزی</h2>
-                                <img src="https://images.unsplash.com/photo-1591485423007-765bde4139ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"
-                                    alt="">
-                                <p class="_card-desc">ویژگی ها و قیمت های ی پکیچ </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tabby-tab">
-                <input type="radio" id="tab-4" name="tabby-tabs">
-                <label for="tab-4">پادکست</label>
-                <div class="tabby-content">
-                    <div class="parent">
-                        <hr class="aaa">
-                        <h4 class="mx-auto"> پکیچ مورد نظر خود را انتخاب کنید</h4>
-
-
-                        <div class="_cards">
-                            <div class="_card">
-                                <h2 class="_card-title">کوتاه</h2>
-                                <img src="https://images.unsplash.com/photo-1591485423007-765bde4139ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"
-                                    alt="">
-                                <p class="_card-desc">ویژگی ها و قیمت های ی پکیچ</p>
-                            </div>
-                            <div class="_card">
-                                <h2 class="_card-title"> بلند</h2>
-                                <img src="https://images.unsplash.com/photo-1591485423007-765bde4139ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"
-                                    alt="">
-                                <p class="_card-desc">ویژگی ها و قیمت های ی پکیچ</p>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-    </div> --}}
-
-
-
-
-
-
-
-
-
-
-
     {{-- </main> --}}
 @endsection
 
@@ -613,22 +316,16 @@
 @section('js')
     <script>
         $(document).ready(function() {
-
             var current_fs, next_fs, previous_fs; //fieldsets
             var opacity;
             var current = 1;
             var steps = $("fieldset").length;
-
             setProgressBar(current);
-
             $(".next").click(function() {
-
                 current_fs = $(this).parent();
                 next_fs = $(this).parent().next();
-
                 //Add Class Active
                 $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
-
                 //show the next fieldset
                 next_fs.show();
                 //hide the current fieldset with style
@@ -638,7 +335,6 @@
                     step: function(now) {
                         // for making fielset appear animation
                         opacity = 1 - now;
-
                         current_fs.css({
                             'display': 'none',
                             'position': 'relative'
@@ -670,7 +366,6 @@
                     step: function(now) {
                         // for making fielset appear animation
                         opacity = 1 - now;
-
                         current_fs.css({
                             'display': 'none',
                             'position': 'relative'
@@ -701,7 +396,7 @@
 
 
 
-        // state and city
+        // ****************(state and city)***********************
         function Func(Shahrestanha) {
             var _Shahrestan = document.getElementById("Shahrestan");
             _Shahrestan.options.length = 0;
@@ -715,31 +410,23 @@
             }
         }
 
-        var elements = document.getElementById('tab-2');
-        elements.addEventListener("click", test)
-
-        function test() {
-            if (elements.checked) {
-                console.log('alirezaaaaaaaaaaaaaaaa')
-                // element.classList.add('class-1');
-                // element.classList.add('class-2', 'class-3');
-                // element.classList.remove('class-3');
-            } else {}
-        }
-
+     // ****************(Select beetween option  part 1   )***********************
+     let total=0
         let Photography = document.getElementById('Photography-select')
-        Photography.addEventListener('click', test)
+        let PhotographyBtn =document.getElementById('PhotographyBtn')
+        PhotographyBtn.addEventListener('click', PhotographyBtnFunc)
+        Photography.addEventListener('click', PhotographySelector)
         let gold = document.getElementById('gold')
         let bronze = document.getElementById('bronze')
         let silver = document.getElementById('silver')
 
-
-        function test() {
+        function PhotographySelector() {
             if (Photography.value == 1) {
                 bronze.classList.add('d-block');
                 bronze.classList.remove('d-none');
                 silver.classList.add('d-none');
                 gold.classList.add('d-none');
+                
             } else if (Photography.value == 2) {
                 silver.classList.add('d-block');
                 silver.classList.remove('d-none');
@@ -751,7 +438,33 @@
                 bronze.classList.add('d-none');
                 silver.classList.add('d-none');
             }
+          
+        }
+
+
+        function PhotographyBtnFunc(){
+            if (Photography.value == 1) {
+                total= total+10
+                console.log(total)
+                alert(`    پکیج برنزی با قیمت ۱۰ به سبد خرید شما اضافه شد و مجموع سبد خرید شما ${total} میباشد `)
+                
+            } else if (Photography.value == 2) {
+                total= total+100
+                console.log(total)
+                alert(`    پکیج برنزی با قیمت ۱۰۰ به سبد خرید شما اضافه شد و مجموع سبد خرید شما ${total} میباشد `)
+
+            } else if (Photography.value == 3) {
+                total= total+1000
+                console.log(total)
+                alert(`    پکیج برنزی با قیمت ۱۰۰۰ به سبد خرید شما اضافه شد و مجموع سبد خرید شما ${total} میباشد `)
+
+            }
 
         }
+
+        const inputElement = document.getElementById('msform')
+inputElement.onclick = (e) => {
+	e.preventDefault()
+}
     </script>
 @endsection
