@@ -328,9 +328,10 @@
         var slideCount;
         var slideHeight;
         var marginTop;
+        var count;
         for (var i = 0; i < els.length; i++) {
 
-        console.log(els[i].children[0].childNodes);
+        console.log(els[i].children[0].children);
          slideGallery = els[i].childNodes[5];
          slides = slideGallery.querySelectorAll('div');
          scrollbarThumb = els[i].children[1].firstElementChild;
@@ -355,7 +356,9 @@
 
                 els[i].children[0].childNodes.forEach(el => {
                 el.addEventListener('click', () => scrollToElement(el));
+                // console.log(el);
             });
+
 
             slideGallery.addEventListener('scroll', e => scrollThumb());
 
