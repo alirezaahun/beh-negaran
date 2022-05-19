@@ -211,6 +211,24 @@
                                 </li>
                             </ul>
                         </div>
+
+                        <div class="c-type-trigger d-flex justify-content-start align-items-center">
+                            <input type="checkbox" id="i">
+
+                            <label for="i" class="checkbox">
+                                <div class="checkbox__inner">
+                                    <div class="green__ball"></div>
+                                </div>
+                            </label>
+                            <div class="checkbox__text">
+                                <span>کاربر</span>
+                                <div class="checkbox__text--options">
+                                    <span class="off text-secondary">حقوقی</span>
+                                    <span class="on text-secondary">حقیقی</span>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
 
 
@@ -357,7 +375,7 @@
             $.post("{{ route('home.editPhoneNumber') }}", {
 
                 '_token': "{{ csrf_token() }}",
-                'login_token': "{{$user->login_token}}"
+                'login_token': "{{ $user->login_token }}"
 
             }, function(response, status) {
                 console.log(response, status);

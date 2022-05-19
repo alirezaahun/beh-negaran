@@ -183,7 +183,7 @@
                 .join('');
 
                 els[i].children[0].childNodes.forEach(el => {
-                el.addEventListener('click', () => scrollToElement(el));
+                el.addEventListener('click', () =>  scrollToElement(el));
             });
 
             slideGallery.addEventListener('scroll', e => scrollThumb());
