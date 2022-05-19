@@ -2375,6 +2375,10 @@ footer p span {
   display: none;
 }
 
+.c-type-trigger input[type=checkbox]:checked {
+  overflow: hidden;
+}
+
 .c-type-trigger input[type=checkbox]:checked + label.checkbox .checkbox__inner .green__ball {
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
@@ -2396,7 +2400,7 @@ footer p span {
 }
 
 .checkbox {
-  --size: 2.5rem;
+  --size: 2rem;
   display: block;
   width: var(--size);
   height: var(--size);
