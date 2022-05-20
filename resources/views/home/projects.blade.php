@@ -317,21 +317,39 @@
             els[i].children[0].innerHTML += [...slides]
                 .map(
                     (slide, i) =>
-                    `<img src="${slide.querySelector('img').src}" onClick="slider(${count})" id="img${count++}" data-id="${i}">`
+                    `<img src="${slide.querySelector('img').src}" onClick="slider(${count})" id="img${count}" data-id="${i}">`
                 )
                 .join('');
+                count++;
 
+            sliderHolder.push(slideGallery);
 
         }
+
 
         function slider(count) {
 
-            document.getElementById(count).scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
+
+                const scrollThumb = () => {
+                    const index = Math.floor(sliderHolder[count].scrollTop / slideHeight);
+                    scrollbarThumb.style.height = `${((index + 1) / slideCount) * slideHeight}px`;
+                };
+
+                const scrollToElement = el => {
+                    const index = parseInt(el.dataset.id, 10);
+                    sliderHolder[count].scrollTo(0, index * slideHeight + marginTop);
+                };
+
+                document.querySelectorAll('.thumbnails img').forEach(el => {
+                    el.addEventListener('click', () => scrollToElement(el));
+                });
+
+                sliderHolder[count].addEventListener('scroll', e => scrollThumb());
+
+                scrollThumb();
 
         }
+
 
         // for (let x = 0; x < sliderHolder.length; x++) {
 
