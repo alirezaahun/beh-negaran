@@ -32,7 +32,7 @@
 
             <div class="container my-shuffle-container">
                 <div id="grid" class="row">
-                    
+
                     <div class="col-md-12 picture-item" data-groups='["video"]'>
                         <div class="ribbon"><span>ویدئو</span></div>
                         <div class="row p-4">
@@ -51,11 +51,13 @@
                                     </div>
                                     <div class="slides">
                                         <div id="0" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/aboutus-cover.png') }}"></div>
+                                                src="{{ asset('images/0-min.jpg') }}"></div>
                                         <div id="1" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/services-caver.png') }}"></div>
+                                                src="{{ asset('images/00-min.jpg') }}"></div>
                                         <div id="2" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/aboutus-cover.png') }}"></div>
+                                                src="{{ asset('images/000-min.jpg') }}"></div>
+                                        <div id="3" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/0000-min.jpg') }}"></div>
 
                                     </div>
                                 </div>
@@ -72,7 +74,7 @@
 
                             <div class="h_iframe-aparat_embed_frame aparat-video col-md-8">
                                 <span style="display: block;padding-top: 57%"></span>
-                                <iframe src="https://www.aparat.com/video/video/embed/videohash/efu1W/vt/frame"
+                                <iframe src="https://www.aparat.com/video/video/embed/videohash/UYwPA/vt/frame"
                                     allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
                                 </iframe>
                             </div>
@@ -83,12 +85,189 @@
                                         <div class="thumb"></div>
                                     </div>
                                     <div class="slides">
-                                        <div id="3" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/video-camera.png') }}"></div>
                                         <div id="4" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/campaign.png') }}"></div>
+                                                src="{{ asset('images/1-min.jpg') }}"></div>
                                         <div id="5" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/art.png') }}"></div>
+                                                src="{{ asset('images/11-min.jpg') }}"></div>
+                                        <div id="6" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/111-min.jpg') }}"></div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="col-md-12 picture-item" data-groups='["video"]'>
+                        <div class="ribbon"><span>ویدئو</span></div>
+                        <div class="row p-4">
+
+                            <div class="h_iframe-aparat_embed_frame aparat-video col-md-8">
+                                <span style="display: block;padding-top: 57%"></span>
+                                <iframe src="https://www.aparat.com/video/video/embed/videohash/CQFLE/vt/frame"
+                                    allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
+                                </iframe>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="gallery-container">
+                                    <div class="thumbnails"></div>
+                                    <div class="scrollbar">
+                                        <div class="thumb"></div>
+                                    </div>
+                                    <div class="slides">
+                                        <div id="7" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/_DSC0542-min.jpg') }}"></div>
+                                        <div id="8" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/_DSC4751-min.jpg') }}"></div>
+                                        <div id="9" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/_DSC9896-min.jpg') }}"></div>
+                                        <div id="10" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/_DSC9906-min.jpg') }}"></div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="col-md-12 picture-item" data-groups='["video"]'>
+                        <div class="ribbon"><span>ویدئو</span></div>
+                        <div class="row p-4">
+
+                            <div class="h_iframe-aparat_embed_frame aparat-video col-md-8">
+                                <span style="display: block;padding-top: 57%"></span>
+                                <iframe src="https://www.aparat.com/video/video/embed/videohash/oQGfH/vt/frame"
+                                    allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
+                                </iframe>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="gallery-container">
+                                    <div class="thumbnails"></div>
+                                    <div class="scrollbar">
+                                        <div class="thumb"></div>
+                                    </div>
+                                    <div class="slides">
+                                        <div id="11" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/_DSC3268-min.jpg') }}"></div>
+                                        <div id="12" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/_DSC3310-min.jpg') }}"></div>
+                                        <div id="13" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/1111-min.jpg') }}"></div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="col-md-12 picture-item" data-groups='["video"]'>
+                        <div class="ribbon"><span>ویدئو</span></div>
+                        <div class="row p-4">
+
+                            <div class="h_iframe-aparat_embed_frame aparat-video col-md-8">
+                                <span style="display: block;padding-top: 57%"></span>
+                                <iframe src="https://www.aparat.com/video/video/embed/videohash/SBHAu/vt/frame"
+                                    allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
+                                </iframe>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="gallery-container">
+                                    <div class="thumbnails"></div>
+                                    <div class="scrollbar">
+                                        <div class="thumb"></div>
+                                    </div>
+                                    <div class="slides">
+                                        <div id="14" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/_DSC2410-min.jpg') }}"></div>
+                                        <div id="15" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/DSC_7127-min.jpg') }}"></div>
+                                        <div id="16" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/DSC_7247-min.jpg') }}"></div>
+                                        <div id="17" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/DSC_7251-min.jpg') }}"></div>
+                                        <div id="18" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/DSC_7257-min.jpg') }}"></div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="col-md-12 picture-item" data-groups='["photo"]'>
+                        <div class="ribbon"><span>عکس</span></div>
+                        <div class="row p-4">
+
+                            <div class="project-sample-img col-md-8">
+                                <img class="img-fluid" src="{{ asset('images/banner3.jpg') }}"
+                                    alt="project-picture">
+                            </div>
+                            <div class="col-md-4">
+                                <div class="gallery-container">
+                                    <div class="thumbnails"></div>
+                                    <div class="scrollbar">
+                                        <div class="thumb"></div>
+                                    </div>
+                                    <div class="slides">
+                                        <div id="19" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/_DSC2410-min.jpg') }}"></div>
+                                        <div id="20" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/DSC_7127-min.jpg') }}"></div>
+                                        <div id="21" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/DSC_7247-min.jpg') }}"></div>
+                                        <div id="22" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/DSC_7251-min.jpg') }}"></div>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="col-md-12 picture-item" data-groups='["photo"]'>
+                        <div class="ribbon"><span>عکس</span></div>
+                        <div class="row p-4">
+
+                            <div class="project-sample-img col-md-8">
+                                <img class="img-fluid" src="{{ asset('images/orginal-banner9.png') }}"
+                                    alt="project-picture2">
+                            </div>
+                            <div class="col-md-4">
+                                <div class="gallery-container">
+                                    <div class="thumbnails"></div>
+                                    <div class="scrollbar">
+                                        <div class="thumb"></div>
+                                    </div>
+                                    <div class="slides">
+                                        <div id="23" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/_DSC2410-min.jpg') }}"></div>
+                                        <div id="24" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/DSC_7127-min.jpg') }}"></div>
+                                        <div id="25" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/DSC_7247-min.jpg') }}"></div>
+                                        <div id="26" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/DSC_7251-min.jpg') }}"></div>
+
+
 
                                     </div>
                                 </div>
@@ -127,26 +306,30 @@
         var marginTop;
         for (var i = 0; i < els.length; i++) {
 
-        // console.log(els[i].childNodes[5].children);
-         slideGallery = els[i].childNodes[5];
-         slides = slideGallery.querySelectorAll('div');
-         scrollbarThumb = els[i].children[1].firstElementChild;
-         slideCount = slides.length;
-         slideHeight = 720;
-         marginTop = 16;
+            // console.log(els[i].childNodes[5].children);
+            slideGallery = els[i].childNodes[5];
+            slides = slideGallery.querySelectorAll('div');
+            scrollbarThumb = els[i].children[1].firstElementChild;
+            slideCount = slides.length;
+            slideHeight = 720;
+            marginTop = 16;
 
             els[i].children[0].innerHTML += [...slides]
                 .map(
-                    (slide, i) => `<img src="${slide.querySelector('img').src}" onClick="slider(${count})" id="img${count++}" data-id="${i}">`
+                    (slide, i) =>
+                    `<img src="${slide.querySelector('img').src}" onClick="slider(${count})" id="img${count++}" data-id="${i}">`
                 )
                 .join('');
 
 
         }
 
-        function slider(count){
+        function slider(count) {
 
-            document.getElementById(count).scrollIntoView({behavior: "smooth", block: "start"});
+            document.getElementById(count).scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
 
         }
 
@@ -383,7 +566,7 @@
             speed: 250, // Transition/animation speed (milliseconds).
             staggerAmount: 15, // Transition delay offset for each item in milliseconds.
             staggerAmountMax: 150, // Maximum stagger delay in milliseconds.
-            throttle: throttle, // By default, shuffle will throttle resize events. This can be changed or removed.
+            // throttle: throttle, // By default, shuffle will throttle resize events. This can be changed or removed.
             throttleTime: 300, // How often shuffle can be called on resize (in milliseconds).
             useTransforms: true, // Whether to use transforms or absolute positioning.
         };
