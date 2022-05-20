@@ -19,6 +19,7 @@
 
                     <input id="phoneInput" placeholder="۰۹۱۲۱۱۱۲۲۳۳" type="text" />
                 </div>
+                
 
                 <div id="errorPhone" class="input-error-validation">
 
