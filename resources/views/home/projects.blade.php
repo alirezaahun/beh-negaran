@@ -347,8 +347,6 @@
                 .join('');
 
 
-                sliderHolder.push(slideGallery);
-
         }
 
         function slider(count){
@@ -357,32 +355,32 @@
 
         }
 
-        for (let x = 0; x < sliderHolder.length; x++) {
+        // for (let x = 0; x < sliderHolder.length; x++) {
 
-            const scrollThumb = () => {
-                const index = Math.floor(sliderHolder[x].scrollTop / slideHeight);
-                scrollbarThumb.style.height = `${((index + 1) / slideCount) * slideHeight}px`;
-            };
+        //     const scrollThumb = () => {
+        //         const index = Math.floor(sliderHolder[x].scrollTop / slideHeight);
+        //         scrollbarThumb.style.height = `${((index + 1) / slideCount) * slideHeight}px`;
+        //     };
 
-            const scrollToElement = el => {
-                const index = parseInt(el.dataset.id, 10);
-                sliderHolder[x].scrollTo(0, index * slideHeight + marginTop);
-            };
+        //     const scrollToElement = el => {
+        //         const index = parseInt(el.dataset.id, 10);
+        //         sliderHolder[x].scrollTo(0, index * slideHeight + marginTop);
+        //     };
 
-            // document.querySelectorAll('.thumbnails img').forEach(el => {
-            //     el.addEventListener('click', () => scrollToElement(el));
-            // });
+        //     // document.querySelectorAll('.thumbnails img').forEach(el => {
+        //     //     el.addEventListener('click', () => scrollToElement(el));
+        //     // });
 
-            document.getElementById('divElem').scrollTop += 10
+        //     document.getElementById('divElem').scrollTop += 10
 
-            slideGallery.addEventListener('scroll', e => scrollThumb());
+        //     slideGallery.addEventListener('scroll', e => scrollThumb());
 
-            scrollThumb();
+        //     scrollThumb();
 
-        }
+        // }
 
 
-        console.log(sliderHolder[0].children);
+        // console.log(sliderHolder[0].children);
         // const slideGallery = els[i];
         // const slides = slideGallery.querySelectorAll('div');
         // const scrollbarThumb = document.querySelector('.thumb');
