@@ -344,7 +344,7 @@
                                                 src="{{ asset('images/_DSC4313-min.jpg') }}"></div>
                                         <div id="35" class="d-flex justify-content-around"><img class="img-fluid"
                                                 src="{{ asset('images/_DSC4820-min.jpg') }}"></div>
-                                       
+
 
                                     </div>
                                 </div>
@@ -376,8 +376,8 @@
                                                 src="{{ asset('images/PNH_8369-min.jpg') }}"></div>
                                         <div id="37" class="d-flex justify-content-around"><img class="img-fluid"
                                                 src="{{ asset('images/WhatsApp-Image-2020-02-05-at-1.jpg') }}"></div>
-                                        
-                                       
+
+
 
                                     </div>
                                 </div>
@@ -414,6 +414,7 @@
         var slideHeight;
         var sliderHolder = [];
         var marginTop;
+        var operator;
         for (var i = 0; i < els.length; i++) {
 
             // console.log(els[i].childNodes[5].children);
@@ -437,30 +438,33 @@
         }
 
 
+        operator = 0;
+
         function slider(count) {
 
+            operator = sliderHolder[count];
 
             const scrollThumb = () => {
-                const index = Math.floor(sliderHolder[count].scrollTop / slideHeight);
+                const index = Math.floor(operator.scrollTop / slideHeight);
                 scrollbarThumb.style.height = `${((index + 1) / slideCount) * slideHeight}px`;
             };
 
             const scrollToElement = el => {
                 const index = parseInt(el.dataset.id, 10);
-                sliderHolder[count].scrollTo(0, index * slideHeight + marginTop);
+                operator.scrollTo(0, index * slideHeight + marginTop);
             };
 
             document.querySelectorAll('.thumbnails img').forEach(el => {
                 el.addEventListener('click', () => scrollToElement(el));
             });
 
-            sliderHolder[count].addEventListener('scroll', e => scrollThumb());
+            operator.addEventListener('scroll', e => scrollThumb());
 
             scrollThumb();
 
         }
 
-       
+
 
         // for (let x = 0; x < sliderHolder.length; x++) {
 
