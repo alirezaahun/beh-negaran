@@ -3289,6 +3289,16 @@ for (var i = 0; i < links.length; i++) {
   });
 }
 
+(function ($) {
+  "use strict";
+
+  $(window).on("load", function () {
+    if ($(".pre-loader").length > 0) {
+      $(".pre-loader").fadeOut("slow");
+    }
+  });
+})(jQuery);
+
 /***/ }),
 
 /***/ "./resources/js/home/owl-carousel-min.js":

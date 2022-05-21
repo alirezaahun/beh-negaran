@@ -460,6 +460,7 @@
 
         }
 
+       
 
         // for (let x = 0; x < sliderHolder.length; x++) {
 
