@@ -1715,6 +1715,10 @@ footer p span {
   font-size: 2rem;
 }
 
+.project-page-title p {
+  text-align: justify;
+}
+
 .project-page-title hr {
   background-color: var(--clr-secondary);
   padding: 1px;
@@ -1818,6 +1822,7 @@ footer p span {
      object-fit: cover;
   width: 100%;
   height: 22rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .project-group {
@@ -1907,9 +1912,10 @@ footer p span {
 }
 
 .slides img {
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .slides::-webkit-scrollbar {
@@ -2768,8 +2774,19 @@ footer p span {
     margin: 0;
   }
 
-  .aparat-video iframe {
+  .aparat-video iframe,
+.project-sample-img img {
     border-radius: 1.3rem;
+  }
+
+  .project-sample-img img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: unset;
+  }
+
+  .slides {
+    margin-top: 1rem;
   }
 
   .my-shuffle-container {
