@@ -2697,7 +2697,7 @@ footer p span {
     position: absolute;
 }
 
-
+// Website Pre-Loader------------------------------------
 
 .pre-loader {
     background-image: linear-gradient(326deg, var(--clr-secondary) 0%, var(--clr-primary) 74%);
@@ -2706,6 +2706,7 @@ footer p span {
     width: 100%;
     left: 0;
     top: 0;
+    z-index: 9999999;
 }
 .sk-fading-circle {
     margin: 300px auto;
