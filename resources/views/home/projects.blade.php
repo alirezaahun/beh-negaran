@@ -6,10 +6,19 @@
         <div class="container">
 
             <div class="projects-container mt-5">
-                <div class="projects-row project-page-title">
-                    <div class="col-12@sm">
+                <div class="row project-page-title">
+                    <div class="col-md-7 col-sm-12">
                         <h3>نمونه کارهای به نگاران</h3>
-                        <hr class="w-50">
+                        <div class="footer-line"><span></span></div>
+                        <p class="mb-4">شما میتونید در این صفحه گزیده ای از پروژه های انجام شده توسط تیم به‌نگاران
+                            رو ببینید و با توجه به نیاز خود به خدمتی اون رو زیر نظر داشته باشید و درجه کیفیت پروژه رو نیز
+                            مورد بررسی قرار بدید .</p>
+                        <p>ما تمام تلاشمون رو میکنیم تا به مرور زمان این صفحه رو کامل تر کنیم تا کاربران بهتر با به‌نگاران
+                            آشنایی پیدا کنن.</p>
+                    </div>
+
+                    <div class="col-md-5 col-sm-12 digital-marketing-pic">
+                        <img class="img-fluid" src="{{ asset('images/projects.png') }}">
                     </div>
                 </div>
 
@@ -213,7 +222,7 @@
                         <div class="row p-4">
 
                             <div class="project-sample-img col-md-8">
-                                <img class="img-fluid" src="{{ asset('images/banner3.jpg') }}"
+                                <img class="img-fluid" src="{{ asset('images/23-min.jpg') }}"
                                     alt="project-picture">
                             </div>
                             <div class="col-md-4">
@@ -224,14 +233,13 @@
                                     </div>
                                     <div class="slides">
                                         <div id="19" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/_DSC2410-min.jpg') }}"></div>
+                                                src="{{ asset('images/24-min.jpg') }}"></div>
                                         <div id="20" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/DSC_7127-min.jpg') }}"></div>
+                                                src="{{ asset('images/22-min.jpg') }}"></div>
                                         <div id="21" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/DSC_7247-min.jpg') }}"></div>
+                                                src="{{ asset('images/21-min.jpg') }}"></div>
                                         <div id="22" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/DSC_7251-min.jpg') }}"></div>
-
+                                                src="{{ asset('images/20-min.jpg') }}"></div>
 
 
                                     </div>
@@ -248,7 +256,7 @@
                         <div class="row p-4">
 
                             <div class="project-sample-img col-md-8">
-                                <img class="img-fluid" src="{{ asset('images/orginal-banner9.png') }}"
+                                <img class="img-fluid" src="{{ asset('images/_DSC3594-SD-min.jpg') }}"
                                     alt="project-picture2">
                             </div>
                             <div class="col-md-4">
@@ -259,15 +267,152 @@
                                     </div>
                                     <div class="slides">
                                         <div id="23" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/_DSC2410-min.jpg') }}"></div>
+                                                src="{{ asset('images/13-min.jpg') }}"></div>
                                         <div id="24" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/DSC_7127-min.jpg') }}"></div>
+                                                src="{{ asset('images/14-min.jpg') }}"></div>
                                         <div id="25" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/DSC_7247-min.jpg') }}"></div>
+                                                src="{{ asset('images/15-min.jpg') }}"></div>
                                         <div id="26" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/DSC_7251-min.jpg') }}"></div>
+                                                src="{{ asset('images/17-min.jpg') }}"></div>
+                                        <div id="27" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/18-min.jpg') }}"></div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
 
 
+                    </div>
+
+                    <div class="col-md-12 picture-item" data-groups='["photo"]'>
+                        <div class="ribbon"><span>عکس</span></div>
+                        <div class="row p-4">
+
+                            <div class="project-sample-img col-md-8">
+                                <img class="img-fluid" src="{{ asset('images/_DSC3342-min.jpg') }}"
+                                    alt="project-picture2">
+                            </div>
+                            <div class="col-md-4">
+                                <div class="gallery-container">
+                                    <div class="thumbnails"></div>
+                                    <div class="scrollbar">
+                                        <div class="thumb"></div>
+                                    </div>
+                                    <div class="slides">
+                                        <div id="28" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/_DSC3731-min.jpg') }}"></div>
+                                        <div id="29" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/10-min.jpg') }}"></div>
+                                        <div id="30" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/12-min.jpg') }}"></div>
+                                        <div id="31" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/11111-min.jpg') }}"></div>
+                                        <div id="32" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/Untitled-2-min.jpg') }}"></div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="col-md-12 picture-item" data-groups='["campaign"]'>
+                        <div class="ribbon"><span>کمپین</span></div>
+                        <div class="row p-4">
+
+                            <div class="h_iframe-aparat_embed_frame aparat-video col-md-8">
+                                <span style="display: block;padding-top: 57%"></span>
+                                <iframe src="https://www.aparat.com/video/video/embed/videohash/eLa1K/vt/frame"
+                                    allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
+                                </iframe>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="gallery-container">
+                                    <div class="thumbnails"></div>
+                                    <div class="scrollbar">
+                                        <div class="thumb"></div>
+                                    </div>
+                                    <div class="slides">
+                                        <div id="33" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/_DSC4695-min.jpg') }}"></div>
+                                        <div id="34" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/_DSC4313-min.jpg') }}"></div>
+                                        <div id="35" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/_DSC4820-min.jpg') }}"></div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="col-md-12 picture-item" data-groups='["campaign"]'>
+                        <div class="ribbon"><span>کمپین</span></div>
+                        <div class="row p-4">
+
+                            <div class="h_iframe-aparat_embed_frame aparat-video col-md-8">
+                                <span style="display: block;padding-top: 57%"></span>
+                                <iframe src="https://www.aparat.com/video/video/embed/videohash/p96a3/vt/frame"
+                                    allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
+                                </iframe>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="gallery-container">
+                                    <div class="thumbnails"></div>
+                                    <div class="scrollbar">
+                                        <div class="thumb"></div>
+                                    </div>
+                                    <div class="slides">
+                                        <div id="36" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/PNH_8369-min.jpg') }}"></div>
+                                        <div id="37" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/WhatsApp-Image-2020-02-05-at-1.jpg') }}"></div>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="col-md-12 picture-item" data-groups='["website"]'>
+                        <div class="ribbon"><span>سایت</span></div>
+                        <div class="row p-4">
+
+                            <div class="project-sample-img col-md-8">
+                                <img class="img-fluid" src="{{ asset('images/Screenshot 2022-05-21 172901.png') }}"
+                                    alt="project-picture2">
+                            </div>
+                            <div class="col-md-4">
+                                <div class="gallery-container">
+                                    <div class="thumbnails"></div>
+                                    <div class="scrollbar">
+                                        <div class="thumb"></div>
+                                    </div>
+                                    <div class="slides">
+                                        <div id="38" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/Screenshot 2022-05-21 172310.png') }}"></div>
+                                        <div id="39" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/Screenshot 2022-05-21 172407.png') }}"></div>
+                                        <div id="40" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/Screenshot 2022-05-21 172451.png') }}"></div>
+                                        <div id="41" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/Screenshot 2022-05-21 172610.png') }}"></div>
+                                        <div id="42" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/Screenshot 2022-05-21 172720.png') }}"></div>
 
                                     </div>
                                 </div>
@@ -304,6 +449,7 @@
         var slideHeight;
         var sliderHolder = [];
         var marginTop;
+        var operator;
         for (var i = 0; i < els.length; i++) {
 
             // console.log(els[i].childNodes[5].children);
@@ -317,21 +463,44 @@
             els[i].children[0].innerHTML += [...slides]
                 .map(
                     (slide, i) =>
-                    `<img src="${slide.querySelector('img').src}" onClick="slider(${count})" id="img${count++}" data-id="${i}">`
+                    `<img src="${slide.querySelector('img').src}" onClick="slider(${count})" id="img${count}" data-id="${i}">`
                 )
                 .join('');
+            count++;
 
+            sliderHolder.push(slideGallery);
 
         }
+
+        console.log(sliderHolder);
+
+        operator = 0;
 
         function slider(count) {
 
-            document.getElementById(count).scrollIntoView({
-                behavior: "smooth",
-                block: "start"
+            operator = sliderHolder[count];
+
+            const scrollThumb = () => {
+                const index = Math.floor(operator.scrollTop / slideHeight);
+                scrollbarThumb.style.height = `${((index + 1) / slideCount) * slideHeight}px`;
+            };
+
+            const scrollToElement = el => {
+                const index = parseInt(el.dataset.id, 10);
+                operator.scrollTo(0, index * slideHeight + marginTop);
+            };
+
+            document.querySelectorAll('.thumbnails img').forEach(el => {
+                el.addEventListener('click', () => scrollToElement(el));
             });
 
+            operator.addEventListener('scroll', e => scrollThumb());
+
+            scrollThumb();
+
         }
+
+
 
         // for (let x = 0; x < sliderHolder.length; x++) {
 

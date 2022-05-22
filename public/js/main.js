@@ -3287,7 +3287,18 @@ for (var i = 0; i < links.length; i++) {
     current[0].className = current[0].className.replace(" ---active", "");
     this.className += " ---active";
   });
-}
+} // Website Pre-Loader------------------
+
+
+(function ($) {
+  "use strict";
+
+  $(window).on("load", function () {
+    if ($(".pre-loader").length > 0) {
+      $(".pre-loader").fadeOut("slow");
+    }
+  });
+})(jQuery);
 
 /***/ }),
 

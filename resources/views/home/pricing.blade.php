@@ -295,6 +295,14 @@
                                                                     یزد</option>
                                                             </select>
                                                         </div>
+
+
+
+
+                                                        <div class="input-group date-input">
+                                                            <span class="input-group-text" id="dtp1"><i class="fas fa-calendar-alt"></i></span>
+                                                            <input type="text" class="form-control text-center" placeholder="انتخاب تاریخ" data-name="dtp1-text">
+                                                          </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-6">
@@ -527,7 +535,11 @@
 
         }
 
-  
+        const dtp1Instance = new mds.MdsPersianDateTimePicker(document.getElementById('dtp1'), {
+        targetTextSelector: '[data-name="dtp1-text"]',
+        targetDateSelector: '[data-name="dtp1-date"]',
+        persianNumber: true,
+  });
      
     </script>
 @endsection
