@@ -33,7 +33,7 @@
                                                         <div class="row  d-flex justify-content-center pricing-box-Shadow">
                                                             <div class="col-12 col-md-5 col-lg-6    ">
                                                                 <select class="form-select my-5 mx-auto w-100 w-lg-50"
-                                                                    id='Photography-select'>
+                                                                    id='PhotographySelection'>
                                                                     <option selected> انتخاب پکیچ ها</option>
                                                                     <option value="1"> برنزی قیمت </option>
                                                                     <option value="2">نقره ای </option>
@@ -41,7 +41,7 @@
                                                                 </select>
                                                                 <button
                                                                     class="button d-none d-md-block custom-margin-pricing"
-                                                                    role="button" id="PhotographyBtn"> افزودن به سبد
+                                                                    role="button" id="CartBtnPhotography"> افزودن به سبد
                                                                     خرید</button>
                                                             </div>
                                                             <div class="col-12 col-md-7 col-lg-6 ">
@@ -295,6 +295,14 @@
                                                                     یزد</option>
                                                             </select>
                                                         </div>
+
+
+
+
+                                                        <div class="input-group date-input">
+                                                            <span class="input-group-text" id="dtp1"><i class="fas fa-calendar-alt"></i></span>
+                                                            <input type="text" class="form-control text-center" placeholder="انتخاب تاریخ" data-name="dtp1-text">
+                                                          </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-6">
@@ -478,28 +486,27 @@
         }
 
         // ****************(Select beetween option  part 1   )***********************
-        let total = 0
-        let Photography = document.getElementById('Photography-select')
-        let PhotographyBtn = document.getElementById('PhotographyBtn')
-        PhotographyBtn.addEventListener('click', PhotographyBtnFunc)
-        Photography.addEventListener('click', PhotographySelector)
+        let ShoppingCart = 0
+             // ****** site section  variable ********
+        let PhotographySelection = document.getElementById('PhotographySelection')
+        let CartBtnPhotography = document.getElementById('CartBtnPhotography')
         let gold = document.getElementById('gold')
         let bronze = document.getElementById('bronze')
         let silver = document.getElementById('silver')
-
-        function PhotographySelector() {
-            if (Photography.value == 1) {
+        CartBtnPhotography.addEventListener('click', CartBtnPhotographyFunc)
+        PhotographySelection.addEventListener('click', PhotographyFunc)
+        function PhotographyFunc() {
+            if (PhotographySelection.value == 1) {
                 bronze.classList.add('d-block');
                 bronze.classList.remove('d-none');
                 silver.classList.add('d-none');
                 gold.classList.add('d-none');
-
-            } else if (Photography.value == 2) {
+            } else if (PhotographySelection.value == 2) {
                 silver.classList.add('d-block');
                 silver.classList.remove('d-none');
                 bronze.classList.add('d-none');
                 gold.classList.add('d-none');
-            } else if (Photography.value == 3) {
+            } else if (PhotographySelection.value == 3) {
                 gold.classList.add('d-block');
                 gold.classList.remove('d-none');
                 bronze.classList.add('d-none');
@@ -507,34 +514,32 @@
             }
 
         }
-
-
-        function PhotographyBtnFunc(event) {
+        function CartBtnPhotographyFunc(event) {
             event.preventDefault();
-            if (Photography.value == 1) {
-                total = total + 10
-                console.log(total)
-                alert(`    پکیج برنزی با قیمت ۱۰ به سبد خرید شما اضافه شد و مجموع سبد خرید شما ${total} میباشد `)
+            if (PhotographySelection.value == 1) {
+                ShoppingCart = ShoppingCart + 10
+                console.log(ShoppingCart)
+                alert(`    پکیج برنزی با قیمت ۱۰ به سبد خرید شما اضافه شد و مجموع سبد خرید شما ${ShoppingCart} میباشد `)
 
-            } else if (Photography.value == 2) {
-                total = total + 100
-                console.log(total)
-                alert(`    پکیج برنزی با قیمت ۱۰۰ به سبد خرید شما اضافه شد و مجموع سبد خرید شما ${total} میباشد `)
+            } else if (PhotographySelection.value == 2) {
+                ShoppingCart = ShoppingCart + 100
+                console.log(ShoppingCart)
+                alert(`    پکیج برنزی با قیمت ۱۰۰ به سبد خرید شما اضافه شد و مجموع سبد خرید شما ${ShoppingCart} میباشد `)
 
-            } else if (Photography.value == 3) {
-                total = total + 1000
-                console.log(total)
-                alert(`    پکیج برنزی با قیمت ۱۰۰۰ به سبد خرید شما اضافه شد و مجموع سبد خرید شما ${total} میباشد `)
+            } else if (PhotographySelection.value == 3) {
+                ShoppingCart = ShoppingCart + 1000
+                console.log(ShoppingCart)
+                alert(`    پکیج برنزی با قیمت ۱۰۰۰ به سبد خرید شما اضافه شد و مجموع سبد خرید شما ${ShoppingCart} میباشد `)
 
             }
 
         }
 
-        // let msform = document.getElementById('msform')
-        // msform.addEventListener('click', test)
-        // function test(event){
-        //     event.preventDefault();
-        // }
+        const dtp1Instance = new mds.MdsPersianDateTimePicker(document.getElementById('dtp1'), {
+        targetTextSelector: '[data-name="dtp1-text"]',
+        targetDateSelector: '[data-name="dtp1-date"]',
+        persianNumber: true,
+  });
      
     </script>
 @endsection

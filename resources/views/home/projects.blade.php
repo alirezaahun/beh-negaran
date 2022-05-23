@@ -472,6 +472,7 @@
 
         }
 
+        console.log(sliderHolder);
 
         operator = 0;
 

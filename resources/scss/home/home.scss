@@ -1230,7 +1230,7 @@ footer p span {
     rgba(255, 255, 255, 0.16) 0px 0px 3px inset;
     transition: all 0.3s ease;
     color: var(--clr-primary);
-    background-color: var(--clr-dark);
+    background-color: var(--clr-accent);
 }
 
 #msform .action-button-previous {
@@ -1261,7 +1261,7 @@ footer p span {
         rgba(255, 255, 255, 0.16) 0px 0px 3px inset;
     transition: all 0.3s ease;
     color: var(--clr-primary);
-    background-color: var(--clr-dark);
+    background-color: var(--clr-accent);
 }
 // ******this******
 // ._card_ {
@@ -1410,7 +1410,7 @@ footer p span {
 }
 
 .tabby-tab label:hover {
-    background: var(--clr-secondary);
+    background: var(--clr-dark);
     color: var(--clr-primary);
 }
 
@@ -1441,7 +1441,7 @@ footer p span {
 /* MAKE IT WORK ----- */
 .aaa {
     width: 100%;
-    background-color: var(--clr-accent);
+    background-color: var(--clr-dark);
     padding: 1px;
     opacity: 1;
     border-radius: 0.3rem;
@@ -1453,6 +1453,7 @@ footer p span {
     background: var(--clr-secondary);
     color: var(--clr-primary);
     z-index: 2;
+    border: 0.5px solid var(--clr-accent);
 }
 
 [type="radio"]:checked ~ label ~ .tabby-content {
@@ -1482,6 +1483,7 @@ footer p span {
     border-radius: 0.5rem;
     background-color: var(--clr-secondary);
     color: var(--clr-primary);
+    border: 1px solid var(--clr-secondary) !important;
 }
 .button:focus {
     box-shadow: none;
