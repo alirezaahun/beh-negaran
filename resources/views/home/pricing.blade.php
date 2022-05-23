@@ -68,7 +68,7 @@
                                                                                     id="flexCheckDefault4" />
                                                                                 <label class="form-check-label float-right-checkbox"
                                                                                     for="flexCheckDefault4">
-                                                                                     {{$attribute->name}}: (ساعتی: 1000M) </label>
+                                                                                     {{$attribute->name}}: (ساعتی: {{$attribute->price}}) </label>
                                                                             </div>
 
                                                                             @endforeach
