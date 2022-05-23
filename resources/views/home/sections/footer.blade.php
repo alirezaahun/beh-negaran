@@ -56,13 +56,15 @@
                         <img class="e-namad" src="{{ asset('images/samandehi-logo.png') }}" alt="samandehi">
                     </li>
                     <li>
-                        <div class="footer-social-icons">
+                        <div class="footer-social-icons position-relative">
                             <a href="https://www.instagram.com/beh_negaran/?hl=en-gb"><i
                                     class='bx bxl-instagram'></i></a>
                             <a href="https://wa.me/+989195275731"><i class='bx bxl-whatsapp'></i></a>
                             <a href="https://www.linkedin.com/company/beh-negaran/"><i class='bx bxl-linkedin'></i></a>
                             <a href="#"><i class='bx bxl-youtube'></i></a>
-                            <a class="footer-aparat-icon" href=""><span class="icon-icons8-aparat"></span></a>
+                            <a class="footer-aparat-icon"
+                                href="https://www.aparat.com/beh_negaran.com/%D8%B4%D8%B1%DA%A9%D8%AA_%D8%A8%D9%87_%D9%86%DA%AF%D8%A7%D8%B1%D8%A7%D9%86_%D8%AA%D8%AC%D8%A7%D8%B1%D8%AA_%D8%A2%D8%B2%D9%85%D8%A7"><img
+                                    src="{{ asset('images/icons8-aparat-32.png') }}" alt=""></a>
                         </div>
                     </li>
 

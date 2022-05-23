@@ -18,7 +18,7 @@
                     </div>
 
                     <div class="col-md-5 col-sm-12 digital-marketing-pic">
-                        <img class="img-fluid" src="{{ asset('images/projects.png') }}">
+                        <img class="img-fluid" src="{{ asset('images/portfolio.png') }}">
                     </div>
                 </div>
 

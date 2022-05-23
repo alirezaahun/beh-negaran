@@ -102,6 +102,7 @@
       @yield('js')
     </body>
     <div class="pre-loader">
+      <img class="img-fluid loader-img" src="{{ asset('images/loading7.png') }}" alt="">
       <div class="sk-fading-circle">
         <div class="sk-circle1 sk-circle"></div>
         <div class="sk-circle2 sk-circle"></div>

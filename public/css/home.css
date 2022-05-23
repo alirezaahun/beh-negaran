@@ -597,7 +597,7 @@ h6 {
 }
 
 .banner {
-  background-image: url(/images/orginal-banner9.png?6d833123198754b24a6f71572d2cbfbc);
+  background-image: url(/images/orginal-banner9-3.png?28262bb86b183f92956ed158eb0f1287);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -619,7 +619,7 @@ h6 {
   border-radius: 1.3rem;
   width: 70%;
   margin: auto;
-  margin-top: -5rem;
+  margin-top: -7rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
@@ -1001,9 +1001,20 @@ footer p span {
   border-color: var(--clr-accent);
 }
 
-.icon-icons8-aparat:before {
-  content: "\e900";
-  color: #f6f6f6;
+.footer-aparat-icon {
+  position: relative;
+  top: -0.5rem;
+}
+
+.footer-aparat-icon::after {
+  content: "";
+  position: absolute;
+  margin-top: 0.1rem;
+  bottom: -6px;
+  right: 0;
+  width: 2rem;
+  height: 2px;
+  background-color: var(--clr-primary);
 }
 
 /* Owl Carousel ------------------------------------------------*/
@@ -1346,6 +1357,7 @@ footer p span {
 .about-us-social-icons {
   display: flex;
   justify-content: space-evenly;
+  position: relative;
 }
 
 .about-us-social-icons i {
@@ -1353,6 +1365,23 @@ footer p span {
   color: var(--clr-dark);
   border-bottom: 3px solid var(--clr-dark);
   border-radius: 0.2rem;
+}
+
+.aboutus-aparat-icon {
+  position: relative;
+  top: 0;
+}
+
+.aboutus-aparat-icon::after {
+  content: "";
+  position: absolute;
+  margin-top: 0.1rem;
+  bottom: 1px;
+  right: 0;
+  width: 2.5rem;
+  height: 3px;
+  border-radius: 0 0 0.2rem 0.2rem;
+  background-color: var(--clr-dark);
 }
 
 .about-us-banner {
@@ -2727,8 +2756,9 @@ footer p span {
   }
 
   .banner {
-    background-image: url(/images/orginal-banner9mobile.png?c2cf88598e515dc153a2d7bfa869b89f);
+    background-image: url(/images/orginal-banner9-4.png?300c4e5eeba6b9f06932f0f8cabc9ce9);
     background-size: cover;
+    background-position: top;
   }
 
   .quick-service-icons li {
@@ -3050,7 +3080,7 @@ footer p span {
 }
 
 .pre-loader {
-  background-image: linear-gradient(326deg, var(--clr-secondary) 0%, var(--clr-primary) 74%);
+  background-image: linear-gradient(326deg, #fff 0%, #fff 74%);
   position: fixed;
   height: 100%;
   width: 100%;
@@ -3059,8 +3089,13 @@ footer p span {
   z-index: 9999999;
 }
 
+.loader-img {
+  display: block;
+  margin: 100px auto;
+}
+
 .sk-fading-circle {
-  margin: 300px auto;
+  margin: 250px auto;
   width: 40px;
   height: 40px;
   position: relative;
@@ -3080,7 +3115,7 @@ footer p span {
   margin: 0 auto;
   width: 15%;
   height: 15%;
-  background-color: #fff;
+  background-color: var(--clr-secondary);
   border-radius: 100%;
   -webkit-animation: sk-circleFadeDelay 1.2s infinite ease-in-out both;
   animation: sk-circleFadeDelay 1.2s infinite ease-in-out both;
