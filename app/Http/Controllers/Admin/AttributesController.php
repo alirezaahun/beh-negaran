@@ -39,11 +39,15 @@ class AttributesController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required'
+            'name' => 'required',
+            'price' => 'required',
+            'priority' => 'required'
         ]);
 
         Attribute::create([
-            'name'=> $request->name
+            'name'=> $request->name,
+            'price' => $request->price,
+            'priority' => $request->priority
         ]);
 
         alert()->success('ویژگی با موفقیت ثبت شد', '');
@@ -82,10 +86,16 @@ class AttributesController extends Controller
     public function update(Request $request, Attribute $attribute)
     {
         $request->validate([
-            'name' => 'required'
+            'name' => 'required',
+            'price' => 'required',
+            'priority' => 'required'
         ]);
 
-        $attribute->update(['name' => $request->name]);
+        $attribute->update([
+            'name'=> $request->name,
+            'price' => $request->price,
+            'priority' => $request->priority
+        ]);
 
         alert()->success('ویژگی با موفقیت ویرایش شد', '');
         return redirect()->route('admin.attributes.index');

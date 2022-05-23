@@ -33,6 +33,15 @@
                     <th>
                         نام
                     </th>
+
+                    <th>
+                        قیمت
+                    </th>
+
+                    <th>
+                        اولویت
+                    </th>
+
                     <th>
                         عملیات
                     </th>
@@ -52,6 +61,12 @@
 
                     <th>
                         {{$attributes->name}}
+                    </th>
+                    <th>
+                        {{$attributes->price}}
+                    </th>
+                    <th>
+                        {{$attributes->priority}}
                     </th>
 
 
