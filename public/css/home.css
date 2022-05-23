@@ -2723,8 +2723,9 @@ footer p span {
   }
 
   .banner {
-    background-image: url(/images/orginal-banner9mobile.png?c2cf88598e515dc153a2d7bfa869b89f);
+    background-image: url(/images/orginal-banner9-4.png?300c4e5eeba6b9f06932f0f8cabc9ce9);
     background-size: cover;
+    background-position: top;
   }
 
   .quick-service-icons li {
