@@ -18,7 +18,7 @@
                     </div>
 
                     <div class="col-md-5 col-sm-12 digital-marketing-pic">
-                        <img class="img-fluid" src="{{ asset('images/projects.png') }}">
+                        <img class="img-fluid" src="{{ asset('images/portfolio.png') }}">
                     </div>
                 </div>
 
@@ -388,6 +388,41 @@
 
                     </div>
 
+                    <div class="col-md-12 picture-item" data-groups='["website"]'>
+                        <div class="ribbon"><span>سایت</span></div>
+                        <div class="row p-4">
+
+                            <div class="project-sample-img col-md-8">
+                                <img class="img-fluid" src="{{ asset('images/Screenshot 2022-05-21 172901.png') }}"
+                                    alt="project-picture2">
+                            </div>
+                            <div class="col-md-4">
+                                <div class="gallery-container">
+                                    <div class="thumbnails"></div>
+                                    <div class="scrollbar">
+                                        <div class="thumb"></div>
+                                    </div>
+                                    <div class="slides">
+                                        <div id="38" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/Screenshot 2022-05-21 172310.png') }}"></div>
+                                        <div id="39" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/Screenshot 2022-05-21 172407.png') }}"></div>
+                                        <div id="40" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/Screenshot 2022-05-21 172451.png') }}"></div>
+                                        <div id="41" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/Screenshot 2022-05-21 172610.png') }}"></div>
+                                        <div id="42" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/Screenshot 2022-05-21 172720.png') }}"></div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
                     <div class="col-1@sm col-1@xs my-sizer-element"></div>
                 </div>
 
@@ -437,6 +472,7 @@
 
         }
 
+        console.log(sliderHolder);
 
         operator = 0;
 

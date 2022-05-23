@@ -3287,7 +3287,8 @@ for (var i = 0; i < links.length; i++) {
     current[0].className = current[0].className.replace(" ---active", "");
     this.className += " ---active";
   });
-}
+} // Website Pre-Loader------------------
+
 
 (function ($) {
   "use strict";
