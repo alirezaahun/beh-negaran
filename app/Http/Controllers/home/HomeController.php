@@ -47,9 +47,9 @@ class HomeController extends Controller
         return view('home.projects');
 
     }
-    public function pricing(){
+    public function order(){
 
-        return view('home.pricing');
+        return view('home.order');
 
     }
     public function profile(){
