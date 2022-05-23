@@ -9,7 +9,7 @@
         <div class="row justify-content-center">
             <div class="col-11 col-sm-10 col-md-10 col-lg-12 col-xl-11 col-xl-5 text-center p-0 mt-3 mb-2">
                 <div class="_card_  px-0 pt-4 pb-0 mt-3 mb-3">
-                    <form id="msform" >
+                    <form id="msform">
                         <!-- progressbar -->
                         <ul id="progressbar">
                             <li class="active" id="account"><strong>خدمات</strong></li>
@@ -24,8 +24,8 @@
                                 <div class="row">
                                     <div class="tabs">
                                         <div class="tabby-tab">
-                                            <input type="radio" id="tab-1" name="tabby-tabs" checked>
-                                            <label for="tab-1">طراحی سایت</label>
+                                            <input type="radio" id="tab-1" name="tabby-tabs">
+                                            <label class="gg" for="tab-1">طراحی سایت</label>
                                             <div class="tabby-content">
                                                 <hr class="aaa">
                                                 <div class="col-12 d-flex d-flex justify-content-center  mt-5">
@@ -45,11 +45,13 @@
                                                                     خرید</button>
                                                             </div>
                                                             <div class="col-12 col-md-7 col-lg-6 ">
-                                                                <h4 class="text-center pt-5"> توضیحات خدمت انتخاب شده</h4>
+                                                                <h4 class="text-center pt-5"> توضیحات خدمت انتخاب شده
+                                                                </h4>
                                                                 <hr class="aaa w-75 mx-auto">
                                                                 <p class="mx-auto p-2 text-justify d-block" id="bronze">
                                                                     ویژگی های برنزی با قیمت ۱۰</p>
-                                                                <p class="mx-auto p-2 text-justify d-none" id="silver">ویژگی
+                                                                <p class="mx-auto p-2 text-justify d-none" id="silver">
+                                                                    ویژگی
                                                                     های نقره ای با قیمت ۱۰۰</p>
                                                                 <p class="mx-auto p-2 text-justify d-none" id="gold">
                                                                     ویژگی های طلاایی با قیمت ۱۰۰۰
@@ -65,7 +67,7 @@
                                         </div>
                                         <div class="tabby-tab">
                                             <input type="radio" id="tab-2" name="tabby-tabs" value="عکاسی">
-                                            <label for="tab-2">عکاسی</label>
+                                            <label class="gg" for="tab-2">عکاسی</label>
                                             <div class="tabby-content">
                                                 <div class="col-12 d-flex d-flex justify-content-center  mt-5">
                                                     <div class="col-12 col-md-8">
@@ -79,62 +81,232 @@
                                                                     <option value="3">برنزی</option>
                                                                 </select>
                                                                 <button
-                                                                    class="button d-none d-md-block custom-margin-pricing"
-                                                                                       > افزودن به سبد خرید</button>
+                                                                    class="button d-none d-md-block custom-margin-pricing">
+                                                                    افزودن به سبد خرید</button>
                                                             </div>
                                                             <div class="col-12 col-md-7 col-lg-6 ">
-                                                                <h4 class="text-center pt-5"> توضیحات خدمت انتخاب شده</h4>
-                                                                <p class="mx-auto p-2 text-justify">لورم ایپسوم متن ساختگی
+                                                                <h4 class="text-center pt-5"> توضیحات خدمت انتخاب شده
+                                                                </h4>
+                                                                <p class="mx-auto p-2 text-justify">لورم ایپسوم متن
+                                                                    ساختگی
                                                                     با تولید سادگی نامفهوم از صنعت چاپ و
-                                                                    با استفاده از طراحان گرافیک است.لورم ایپسوم متن ساختگی
+                                                                    با استفاده از طراحان گرافیک است.لورم ایپسوم متن
+                                                                    ساختگی
                                                                     با تولید سادگی نامفهوم از صنعت چاپ و
-                                                                    با استفاده از طراحان گرافیک است.لورم ایپسوم متن ساختگی
+                                                                    با استفاده از طراحان گرافیک است.لورم ایپسوم متن
+                                                                    ساختگی
                                                                     با تولید سادگی نامفهوم از صنعت چاپ و
-                                                                    با استفاده از طراحان گرافیک است.لورم ایپسوم متن ساختگی
+                                                                    با استفاده از طراحان گرافیک است.لورم ایپسوم متن
+                                                                    ساختگی
                                                                     با تولید سادگی نامفهوم از صنعت چاپ و
-                                                                    با استفاده از طراحان گرافیک است.لورم ایپسوم متن ساختگی
+                                                                    با استفاده از طراحان گرافیک است.لورم ایپسوم متن
+                                                                    ساختگی
                                                                     با تولید سادگی نامفهوم از صنعت چاپ و
                                                                     با استفاده از طراحان گرافیک است.</p>
                                                             </div>
                                                         </div>
-                                                        <button class="button d-block d-md-none my-3" >افزودن
+                                                        <button class="button d-block d-md-none my-3">افزودن
                                                             به سبد خرید</button>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="tabby-tab">
-                                            <input type="radio" id="tab-3" name="tabby-tabs">
-                                            <label for="tab-3">فیلم برداری</label>
+                                            <input type="radio" id="tab-3" name="tabby-tabs" checked>
+                                            <label class="gg" for="tab-3">فیلم برداری</label>
                                             <div class="tabby-content">
                                                 <div class="col-12 d-flex d-flex justify-content-center  mt-5">
-                                                    <div class="col-12 col-md-8">
+                                                    <div class="col-12 col-md-10">
                                                         <div class="row  d-flex justify-content-center pricing-box-Shadow">
-                                                            <div class="col-12 col-md-5 col-lg-6    ">
-                                                                <select class="form-select my-5 mx-auto w-100 w-lg-50">
+                                                            <div class="col-12    ">
+                                                                <select class="form-select my-5 mx-auto w-50 w-lg-25">
                                                                     <option selected>انتخاب پکیچ ها</option>
                                                                     <option value="1">نقره ای</option>
                                                                     <option value="2">طلایی</option>
                                                                     <option value="3">برنزی</option>
                                                                 </select>
+                                                                <div class="col-12">
+                                                                    <div class="row">
+                                                                        <h6 class="mx-auto d-md-none mt-3 ">حالت دوربین
+                                                                        </h6>
+                                                                        <hr class="aaa w-50 d-md-none mb-4">
+
+                                                                        <div class="col-10 col-md-6  col-lg-4 bg-secendory">
+                                                                            <div class=" d-md-flex flex-column d-none">
+                                                                                <h6 class="mx-auto ">حالت دوربین</h6>
+                                                                                <hr class="aaa w-50 mx-auto mt-0">
+                                                                            </div>
+
+                                                                            <div class="form-check m-2 ">
+                                                                                <input class="form-check-input float-right-checkbox"
+                                                                                    type="checkbox" value=""
+                                                                                    id="flexCheckDefault4" />
+                                                                                <label class="form-check-label float-right-checkbox"
+                                                                                    for="flexCheckDefault4">
+                                                                                    دوریبن ثابت: (ساعتی: 1000M) </label>
+                                                                            </div>
+                                                                            <!-- Checked checkbox -->
+                                                                            <div class="form-check m-2 ">
+                                                                                <input class="form-check-input float-right-checkbox"
+                                                                                    type="checkbox" value=""
+                                                                                    id="flexCheckChecked5" checked />
+                                                                                <label class="form-check-label float-right-checkbox"
+                                                                                    for="flexCheckChecked5">
+                                                                                    دوریبن حرکتی(ساعتی: 1000M)</label>
+                                                                            </div>
+                                                                            <div class="form-check m-2 ">
+                                                                                <input class="form-check-input float-right-checkbox"
+                                                                                    type="checkbox" value=""
+                                                                                    id="flexCheckChecked6" checked />
+                                                                                <label class="form-check-label float-right-checkbox"
+                                                                                    for="flexCheckChecked6">
+                                                                                    دوریبن کرین: (ساعتی: 1000M)</label>
+                                                                            </div>
+
+                                                                        </div>
+
+
+
+
+                                                                        <h6 class="mx-auto d-md-none mt-3">مدت زمان درخواستی
+                                                                        </h6>
+                                                                        <hr class="aaa w-50 d-md-none mb-4">
+
+                                                                        <div class="col-10 col-md-6  col-lg-4  ">
+
+
+                                                                            <div class="d-md-flex flex-column d-none ">
+                                                                                <h6 class="mx-auto "> مدت زمان درخواستی</h6>
+                                                                                <hr class="aaa w-50 mx-auto mt-0">
+                                                                            </div>
+
+
+
+                                                                            <div class="1 form-check m-1"> <label
+                                                                                    for="tentacles1" class="ccustom-margin">
+                                                                                    مدت زمان
+                                                                                    درخواستی
+                                                                                </label>
+                                                                                <input type="number" id="tentacles1"
+                                                                                    name="tentacles" min="1" max="10"
+                                                                                    value="1" class="text-center">
+                                                                                <span>ساعت</span>
+                                                                            </div>
+                                                                            <div class="2 form-check m-1"> <label
+                                                                                    for="tentacles2" class="ccustom-margin">
+                                                                                    مدت زمان
+                                                                                    درخواستی</label>
+                                                                                <input type="number" id="tentacles2"
+                                                                                    name="tentacles" min="1" max="10"
+                                                                                    value="1" class="text-center">
+                                                                                <span>ساعت</span>
+                                                                            </div>
+                                                                            <div class="3 form-check m-1"> <label
+                                                                                    for="tentacles3"
+                                                                                    class="ccustom-margin">مدت زمان
+                                                                                    درخواستی</label>
+                                                                                <input type="number" id="tentacles3"
+                                                                                    name="tentacles" min="1" max="10"
+                                                                                    value="1" class="text-center">
+                                                                                <span>ساعت</span>
+                                                                            </div>
+                                                                        </div>
+
+
+
+
+
+                                                                        <h6 class="mx-auto d-md-none mt-3">حالت دوریبن
+                                                                        </h6>
+                                                                        <hr class="aaa w-50 d-md-none mb-4">
+                                                                        <div class="col-10 col-md-6  col-lg-4  text-justify mt-lg-0 mt-3">
+                                                                            <div class=" d-md-flex flex-column d-none">
+                                                                                <h6 class="mx-auto ">حالت دوریبن</h6>
+                                                                                <hr class="aaa w-50 mx-auto mt-0">
+                                                                            </div>
+                                                                            <div
+                                                                                class=" m-2  form-check d-flex justify-content-md-around justify-content-md-start  custom-border mt-md-4 mt-lg-0">
+                                                                                <label for="tentacles3 "
+                                                                                    class="ccustom-margin"> تعداد دوربین
+                                                                                    : ثابت</label>
+                                                                                <input type="number" id="tentacles3"
+                                                                                    class=" text-center h-25 border-custom"
+                                                                                    name="tentacles t" min="1" max="10"
+                                                                                    value="1" class="text-center">
+                                                                            </div>
+                                                                            <div
+                                                                                class=" m-2  form-check d-flex justify-content-md-around justify-content-md-start ">
+                                                                                <label for="tentacles4 "
+                                                                                    class="ccustom-margin"> تعداد دوربین
+                                                                                    حرکتی</label>
+                                                                                <input type="number" id="tentacles4"
+                                                                                    class=" text-center h-25 border-custom"
+                                                                                    name="tentacles" min="1" max="10"
+                                                                                    value="1" class="text-center">
+                                                                            </div>
+                                                                            <div
+                                                                                class=" m-2  form-check d-flex justify-content-md-around justify-content-md-start ">
+                                                                                <label for="tentacles5 "
+                                                                                    class="ccustom-margin"> تعداد دوربین
+                                                                                    : کرین</label>
+                                                                                <input type="number" id="tentacles5"
+                                                                                    class=" text-center h-25 border-custom"
+                                                                                    name="tentacles" min="1" max="10"
+                                                                                    value="1" class="text-center">
+                                                                            </div>
+
+
+                                                                        </div>
+
+                           
+
+                                                                        <h6 class="mx-auto d-md-none mt-3">ویژگی ها
+                                                                        </h6>
+                                                                        <hr class="aaa w-50 d-md-none mb-4">
+                                                                        <div class="d-block">
+                                                                            
+                                                                            <div class=" d-md-flex flex-column d-none ">
+                                                                                <h6 class="mx-auto mt-3">ویژگی ها </h6>
+                                                                                <hr class="aaa w-25 mx-auto mt-0">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-10 col-md-6  col-lg-4 mt-2 text-justify mt-3 d-flex ">
+
+                                                                            <div class="form-check m-2 d-child-flex">
+                                                                                <input class="form-check-input float-right-checkbox" type="checkbox" value=""
+                                                                                    id="flexCheckDefault1" />
+                                                                                <label class="form-check-label float-right-checkbox" for="flexCheckDefault1">
+                                                                                    صدابرداری</label>
+                                                                            </div>
+                                    
+                                                                            <!-- Checked checkbox -->
+                                                                            <div class="form-check m-2 d-child-flex">
+                                                                                <input class="form-check-input float-right-checkbox" type="checkbox" value=""
+                                                                                    id="flexCheckChecked2" checked />
+                                                                                <label class="form-check-label float-right-checkbox" for="flexCheckChecked2">
+                                                                                    نورپردازی</label>
+                                                                            </div>
+                                                                            <div class="form-check m-2 d-child-flex">
+                                                                                <input class="form-check-input float-right-checkbox" type="checkbox" value=""
+                                                                                    id="flexCheckChecked3" checked />
+                                                                                <label class="form-check-label float-right-checkbox" for="flexCheckChecked3">
+                                                                                    تدوین</label>
+                                                                            </div>
+
+
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+
                                                                 <button
-                                                                    class="button d-none d-md-block custom-margin-pricing"
+                                                                    class="button d-none d-md-block custom-margin-pricing w-50 text-center mx-auto"
                                                                     role="button "> افزودن به سبد خرید</button>
                                                             </div>
-                                                            <div class="col-12 col-md-7 col-lg-6 ">
-                                                                <h4 class="text-center pt-5"> توضیحات خدمت انتخاب شده</h4>
-                                                                <p class="mx-auto p-2 text-justify">لورم ایپسوم متن ساختگی
-                                                                    با تولید سادگی نامفهوم از صنعت چاپ و
-                                                                    با استفاده از طراحان گرافیک است.لورم ایپسوم متن ساختگی
-                                                                    با تولید سادگی نامفهوم از صنعت چاپ و
-                                                                    با استفاده از طراحان گرافیک است.لورم ایپسوم متن ساختگی
-                                                                    با تولید سادگی نامفهوم از صنعت چاپ و
-                                                                    با استفاده از طراحان گرافیک است.لورم ایپسوم متن ساختگی
-                                                                    با تولید سادگی نامفهوم از صنعت چاپ و
-                                                                    با استفاده از طراحان گرافیک است.لورم ایپسوم متن ساختگی
-                                                                    با تولید سادگی نامفهوم از صنعت چاپ و
-                                                                    با استفاده از طراحان گرافیک است.</p>
-                                                            </div>
+
+
+
+
                                                         </div>
                                                         <button class="button d-block d-md-none my-3" role="button">افزودن
                                                             به سبد خرید</button>
@@ -144,7 +316,7 @@
                                         </div>
                                         <div class="tabby-tab">
                                             <input type="radio" id="tab-4" name="tabby-tabs">
-                                            <label for="tab-4">خدمات دیگر</label>
+                                            <label class="gg" for="tab-4">خدمات دیگر</label>
                                             <div class="tabby-content">
                                                 <div class="col-12 d-flex d-flex justify-content-center  mt-5">
                                                     <div class="col-12 col-md-8">
@@ -162,16 +334,22 @@
                                                                     role="button "> افزودن به سبد خرید</button>
                                                             </div>
                                                             <div class="col-12 col-md-7 col-lg-6 ">
-                                                                <h4 class="text-center pt-5"> توضیحات خدمت انتخاب شده</h4>
-                                                                <p class="mx-auto p-2 text-justify">لورم ایپسوم متن ساختگی
+                                                                <h4 class="text-center pt-5"> توضیحات خدمت انتخاب شده
+                                                                </h4>
+                                                                <p class="mx-auto p-2 text-justify">لورم ایپسوم متن
+                                                                    ساختگی
                                                                     با تولید سادگی نامفهوم از صنعت چاپ و
-                                                                    با استفاده از طراحان گرافیک است.لورم ایپسوم متن ساختگی
+                                                                    با استفاده از طراحان گرافیک است.لورم ایپسوم متن
+                                                                    ساختگی
                                                                     با تولید سادگی نامفهوم از صنعت چاپ و
-                                                                    با استفاده از طراحان گرافیک است.لورم ایپسوم متن ساختگی
+                                                                    با استفاده از طراحان گرافیک است.لورم ایپسوم متن
+                                                                    ساختگی
                                                                     با تولید سادگی نامفهوم از صنعت چاپ و
-                                                                    با استفاده از طراحان گرافیک است.لورم ایپسوم متن ساختگی
+                                                                    با استفاده از طراحان گرافیک است.لورم ایپسوم متن
+                                                                    ساختگی
                                                                     با تولید سادگی نامفهوم از صنعت چاپ و
-                                                                    با استفاده از طراحان گرافیک است.لورم ایپسوم متن ساختگی
+                                                                    با استفاده از طراحان گرافیک است.لورم ایپسوم متن
+                                                                    ساختگی
                                                                     با تولید سادگی نامفهوم از صنعت چاپ و
                                                                     با استفاده از طراحان گرافیک است.</p>
                                                             </div>
@@ -185,7 +363,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <input type="button" name="next" class="next action-button " value="بعدی" />
+                            <input type="button" name="next" class="next action-button custom-pricing-margin-btn " value="بعدی" />
                         </fieldset>
                         <fieldset>
                             <h2 id="heading"> آدرس و تاریخ</h2>
@@ -197,7 +375,7 @@
                                             <div class="row">
                                                 <div class="col-sm-6">
                                                     <div class="form-group" dir="ltr">
-                                                        <label class='float-right mt-4 mb-2' for="state">:استان</label>
+                                                        <label class='float-right mt-4 mb-2 gg' for="state">:استان</label>
                                                         <div class="form-contorol">
                                                             <select id="Ostan" runat="server" onchange="Func(this.value)"
                                                                 class="form-control" name="state">
@@ -245,7 +423,8 @@
                                                                     value="  ,ابهر ,ایجرود ,خدابنده ,خرمدره ,زنجان ,طارم ,ماه‌نشان">
                                                                     زنجان</option>
                                                                 <option class="form-group"
-                                                                    value="  ,دامغان ,سمنان ,شاهرود ,گرمسار ,مهدی‌شهر">سمنان
+                                                                    value="  ,دامغان ,سمنان ,شاهرود ,گرمسار ,مهدی‌شهر">
+                                                                    سمنان
                                                                 </option>
                                                                 <option class="form-group"
                                                                     value="  ,ایرانشهر ,چابهار ,خاش ,دلگان ,زابل ,زاهدان ,زهک ,سراوان ,سرباز ,کنارک ,نیک‌شهر">
@@ -254,7 +433,8 @@
                                                                     value="  ,آباده ,ارسنجان ,استهبان ,اقلید ,بوانات ,پاسارگاد ,جهرم ,خرم‌بید ,خنج ,داراب ,زرین‌دشت ,سپیدان ,شیراز ,فراشبند ,فسا ,فیروزآباد ,قیر و کارزین ,کازرون ,لارستان ,لامِرد ,مرودشت ,ممسنی ,مهر ,نی‌ریز">
                                                                     فارس</option>
                                                                 <option class="form-group"
-                                                                    value="  ,آبیک ,البرز ,بوئین‌زهرا ,تاکستان ,قزوین">قزوین
+                                                                    value="  ,آبیک ,البرز ,بوئین‌زهرا ,تاکستان ,قزوین">
+                                                                    قزوین
                                                                 </option>
                                                                 <option class="form-group" value="  ,قم">قم</option>
                                                                 <option class="form-group"
@@ -300,14 +480,17 @@
 
 
                                                         <div class="input-group date-input">
-                                                            <span class="input-group-text" id="dtp1"><i class="fas fa-calendar-alt"></i></span>
-                                                            <input type="text" class="form-control text-center" placeholder="انتخاب تاریخ" data-name="dtp1-text">
-                                                          </div>
+                                                            <span class="input-group-text" id="dtp1"><i
+                                                                    class="fas fa-calendar-alt"></i></span>
+                                                            <input type="text" class="form-control text-center"
+                                                                placeholder="انتخاب تاریخ" data-name="dtp1-text">
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
-                                                        <label class='float-right mt-4 mb-2' for="city">شهرستان :</label>
+                                                        <label class='float-right mt-4 mb-2 gg' for="city">شهرستان
+                                                            :</label>
                                                         <select id="Shahrestan" name='city' class="form-control col-3">
                                                         </select>
                                                     </div>
@@ -316,13 +499,13 @@
                                             <div class="row">
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
-                                                        <label class='float-right mt-4 mb-2' for="line1">خیابان:</label>
+                                                        <label class='float-right mt-4 mb-2 gg' for="line1">خیابان:</label>
                                                         <input type="email" class="form-control">
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
-                                                        <label class='float-right mt-4 mb-2' for="line1">بلوار:</label>
+                                                        <label class='float-right mt-4 mb-2 gg' for="line1">بلوار:</label>
                                                         <input type="email" class="form-control">
                                                     </div>
                                                 </div>
@@ -331,25 +514,25 @@
                                         <div class="row">
                                             <div class="col-sm-6">
                                                 <div class="form-group">
-                                                    <label class='float-right mt-4 mb-2' for="line1">کدپستی:</label>
+                                                    <label class='float-right mt-4 mb-2 gg' for="line1">کدپستی:</label>
                                                     <input type="email" class="form-control">
                                                 </div>
                                             </div>
                                             <div class="col-sm-3">
                                                 <div class="form-group">
-                                                    <label class='float-right mt-4 mb-2' for="line1">واحد:</label>
+                                                    <label class='float-right mt-4 mb-2 gg' for="line1">واحد:</label>
                                                     <input type="email" class="form-control">
                                                 </div>
                                             </div>
                                             <div class="col-sm-3">
                                                 <div class="form-group">
-                                                    <label class='float-right mt-4 mb-2' for="line1">پلاک:</label>
+                                                    <label class='float-right mt-4 mb-2 gg' for="line1">پلاک:</label>
                                                     <input type="email" class="form-control">
                                                 </div>
                                             </div>
                                             <div class="col-sm-12">
                                                 <div class="form-group">
-                                                    <label class='float-right mt-4 mb-2'
+                                                    <label class='float-right mt-4 mb-2 gg'
                                                         for="exampleFormControlTextarea4">آدرس کامل: </label>
                                                     <textarea class="form-control" id="exampleFormControlTextarea4" rows="3"></textarea>
                                                 </div>
@@ -487,7 +670,7 @@
 
         // ****************(Select beetween option  part 1   )***********************
         let ShoppingCart = 0
-             // ****** site section  variable ********
+        // ****** site section  variable ********
         let PhotographySelection = document.getElementById('PhotographySelection')
         let CartBtnPhotography = document.getElementById('CartBtnPhotography')
         let gold = document.getElementById('gold')
@@ -495,6 +678,7 @@
         let silver = document.getElementById('silver')
         CartBtnPhotography.addEventListener('click', CartBtnPhotographyFunc)
         PhotographySelection.addEventListener('click', PhotographyFunc)
+
         function PhotographyFunc() {
             if (PhotographySelection.value == 1) {
                 bronze.classList.add('d-block');
@@ -514,6 +698,7 @@
             }
 
         }
+
         function CartBtnPhotographyFunc(event) {
             event.preventDefault();
             if (PhotographySelection.value == 1) {
@@ -536,10 +721,9 @@
         }
 
         const dtp1Instance = new mds.MdsPersianDateTimePicker(document.getElementById('dtp1'), {
-        targetTextSelector: '[data-name="dtp1-text"]',
-        targetDateSelector: '[data-name="dtp1-date"]',
-        persianNumber: true,
-  });
-     
+            targetTextSelector: '[data-name="dtp1-text"]',
+            targetDateSelector: '[data-name="dtp1-date"]',
+            persianNumber: true,
+        });
     </script>
 @endsection

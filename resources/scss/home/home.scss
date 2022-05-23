@@ -1396,7 +1396,7 @@ footer p span {
     flex: 1;
 }
 
-.tabby-tab label {
+.tabby-tab label.gg {
     display: block;
     box-sizing: border-box;
     /* tab content must clear this */
@@ -1409,7 +1409,7 @@ footer p span {
     border-radius: 0.5rem;
 }
 
-.tabby-tab label:hover {
+.tabby-tab label.gg:hover {
     background: var(--clr-dark);
     color: var(--clr-primary);
 }
@@ -1529,6 +1529,66 @@ footer p span {
 .float-right {
     float: right;
 }
+
+
+
+
+// custom ckeck box
+
+.float-right-checkbox[type=checkbox]{
+float: right;
+}
+
+
+.custom-pricing-margin-btn{
+    margin-top: 500px !important;
+    
+}
+.form-check{
+    padding-left: 0!important;
+    text-align: right;
+
+}
+
+
+.ccustom-margin{
+    margin-right: -25px;
+    // margin-top: -18px;
+
+
+}
+.ccustom-height{
+    height: 28px !important;
+}
+.text-center{
+    text-align: center;
+}
+
+.border-custom{
+    border-top: 0.5px solid black;
+}
+
+.d-inline{
+    display: inline;
+}
+
+// ****************************************************plus
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // ***********************end pricing page ******************************
 /* BREAKPOINTS ----- */
 @media screen and (max-width: 767px) {
