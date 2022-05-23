@@ -216,12 +216,12 @@
 
 
 
-                                                                        <h6 class="mx-auto d-md-none mt-3">حالت دوریبن
+                                                                        <h6 class="mx-auto d-md-none mt-3">تعداد دوربین
                                                                         </h6>
                                                                         <hr class="aaa w-50 d-md-none mb-4">
                                                                         <div class="col-10 col-md-6  col-lg-4  text-justify mt-lg-0 mt-3">
                                                                             <div class=" d-md-flex flex-column d-none">
-                                                                                <h6 class="mx-auto ">حالت دوریبن</h6>
+                                                                                <h6 class="mx-auto ">تعداد دوربین </h6>
                                                                                 <hr class="aaa w-50 mx-auto mt-0">
                                                                             </div>
                                                                             <div
