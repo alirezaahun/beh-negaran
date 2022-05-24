@@ -63,7 +63,7 @@ Route::get('/profile', [HomeController::class , 'profile'])->name('home.profile'
 
 Route::put('{id}/profile/', [HomeController::class , 'editname'])->name('home.editprofile');
 
-Route::get('/pricing', [HomeController::class , 'pricing'])->name('home.pricing');
+Route::get('/order', [HomeController::class , 'order'])->name('home.order');
 
 Route::any('/login', [authController::class , 'login'])->name('home.login');
 Route::any('/editPhoneNumber', [authController::class , 'editPhoneNumber'])->name('home.editPhoneNumber');

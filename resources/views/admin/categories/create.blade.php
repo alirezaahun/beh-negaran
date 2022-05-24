@@ -4,6 +4,7 @@
     <script>
 
             $('#attributeSelect').selectpicker({'title' : 'انتخاب ویژگی'});
+            $('#tagSelect').selectpicker({'title' : 'انتخاب تگ'});
 
             $('#attributeSelect').on('changed.bs.select', function() {
             let attributesSelected = $(this).val();
@@ -131,6 +132,18 @@
 
                 <div class="form-group col-md-3">
 
+                    <label for="parent_id">تگ</label>
+                    <select id="tagSelect" data-live-search="true" name="tag_ids[]" multiple class="form-control">
+
+                        @foreach ($tags as $tag)
+                        <option value="{{$tag->id}}">{{$tag->name}}</option>
+                        @endforeach
+                      </select>
+
+                </div>
+
+                {{-- <div class="form-group col-md-3">
+
                     <label for="parent_id">ویژگی های قابل فیلتر</label>
                     <select id="attributeIsFilterSelect" data-live-search="true" name="attribute_is_filter_ids[]" multiple class="form-control">
 
@@ -145,7 +158,7 @@
 
                       </select>
 
-                </div>
+                </div> --}}
 
                 <div class="form-group col-md-3">
 

@@ -39,7 +39,7 @@
               </li>
               <span class="vertical-line"></span>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">سفارش آنلاین</a>
+                <a class="nav-link" aria-current="page" href="{{route('home.order')}}">سفارش آنلاین</a>
               </li>
               <span class="vertical-line"></span>
               <li class="nav-item">

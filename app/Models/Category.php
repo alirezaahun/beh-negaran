@@ -28,6 +28,10 @@ class Category extends Model
         return $this->belongsToMany(Attribute::class , 'attribute_category');
     }
 
+    public function tagCategories(){
+        return $this->belongsToMany(Tag::class , 'category_tag');
+    }
+
     public function products()
     {
         return $this->hasMany(Product::class);

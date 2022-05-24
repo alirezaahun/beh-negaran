@@ -4,6 +4,7 @@
     <script>
 
             $('#attributes').selectpicker({'title' : 'انتخاب ویژگی'});
+            $('#tagSelect').selectpicker({'title' : 'انتخاب تگ'});
 
             $('#attributes').on('changed.bs.select', function() {
             let attributesSelected = $(this).val();
@@ -139,27 +140,30 @@
 
                 <div class="form-group col-md-3">
 
-                    <label for="parent_id">ویژگی های قابل فیلتر</label>
-                    <select id="attributeIsFilterSelect" data-live-search="true" name="attribute_is_filter_ids[]" multiple class="form-control">
+                    <label for="parent_id">تگ</label>
+                    <select id="tagSelect" data-live-search="true" name="tag_ids[]" multiple class="form-control">
 
-                        @foreach ($category->attributes()->wherePivot('is_filter' , 1) as $attritbute)
+                        @foreach ($tags as $tag)
+                        <option value="{{$tag->id}}"
 
-                            <option value="{{$attribute->id}}" selected>{{$attribute->name}}</option>
+                            {{in_array($tag->id , $category->tagCategories()->pluck('id')->toArray()) ? 'selected' : ''}}
 
+                            >{{$tag->name}}</option>
                         @endforeach
-
                       </select>
 
                 </div>
 
-                <div class="form-group col-md-3">
+                </div>
+
+                {{-- <div class="form-group col-md-3">
 
                     <label for="parent_id">متغیر</label>
                     <select id="variationSelect" data-live-search="true" name="attribute_variation_id" class="form-control">
                             <option value="{{$category->attributes()->wherePivot('is_variation' , 1)->first()->id}}" selected>{{$category->attributes()->wherePivot('is_variation' , 1)->first()->name}}</option>
                       </select>
 
-                </div>
+                </div> --}}
 
                 <div class="form-group col-md-3">
 

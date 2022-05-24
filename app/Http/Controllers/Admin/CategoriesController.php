@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use App\Models\Attribute;
 use App\Models\Category;
+use App\Models\Tag;
 use Hamcrest\Arrays\IsArray;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -31,7 +32,8 @@ class CategoriesController extends Controller
     {
         $parentCategories = Category::where('parent_id' , 0)->get();
         $attributes = Attribute::all();
-        return view('admin.categories.create' , compact('parentCategories' , 'attributes'));
+        $tags = Tag::all();
+        return view('admin.categories.create' , compact('parentCategories' , 'attributes' , 'tags'));
     }
 
     /**
@@ -43,6 +45,8 @@ class CategoriesController extends Controller
     public function store(Request $request)
     {
 
+        // dd($request->all());
+
         $request->validate([
 
             'name' => 'required',
@@ -50,9 +54,8 @@ class CategoriesController extends Controller
             'parent_id' => 'required',
             'attribute_ids' => 'required',
             'attribute_ids.*' => 'exists:attributes,id',
-            'attribute_is_filter_ids' => 'required',
-            'attribute_is_filter_ids.*' => 'exists:attributes,id',
-            'attribute_variation_id' => 'required'
+            'tag_ids' => 'required',
+            'tag_ids.*' => 'exists:tags,id',
 
         ]);
 
@@ -72,13 +75,13 @@ class CategoriesController extends Controller
 
             foreach($request->attribute_ids as $attributeId){
                     $attribute = Attribute::findOrFail($attributeId);
-                    $attribute->categories()->attach($category->id , [
-
-                        'if_filter' => in_array($attributeId , $request->attribute_is_filter_ids) ? 1 : 0,
-                        'is_variation' => $request->attribute_variation_id == $attributeId ? 1 : 0
-
-                    ]);
+                    $attribute->categories()->attach($category->id);
             }
+
+            foreach($request->tag_ids as $tagId){
+                $tag = Tag::findOrFail($tagId);
+                $tag->tags()->attach($category->id);
+        }
 
             DB::commit();
 
@@ -116,7 +119,8 @@ class CategoriesController extends Controller
     {
         $parentCategories = Category::where('parent_id' , 0)->get();
         $attributes = Attribute::all();
-        return view('admin.categories.edit' , compact('category' , 'attributes' , 'parentCategories'));
+        $tags = Tag::all();
+        return view('admin.categories.edit' , compact('category' , 'attributes' , 'parentCategories' , 'tags'));
     }
 
     /**
@@ -134,8 +138,8 @@ class CategoriesController extends Controller
             'slug' => 'required|unique:categories,slug,'.$category->id,
             'parent_id' => 'required',
             'attribute_ids' => 'required',
-            'attribute_is_filter_ids' => 'required',
-            'attribute_variation_id' => 'required'
+            'tag_ids' => 'required',
+            'tag_ids.*' => 'exists:tags,id',
 
         ]);
 
@@ -155,16 +159,17 @@ class CategoriesController extends Controller
             ]);
 
             $category->attributes()->detach();
+            $category->tagCategories()->detach();
 
             foreach($request->attribute_ids as $attributeId){
                     $attribute = Attribute::findOrFail($attributeId);
-                    $attribute->categories()->attach($category->id , [
-
-                        'if_filter' => in_array($attributeId , $request->attribute_is_filter_ids) ? 1 : 0,
-                        'is_variation' => $request->attribute_variation_id == $attributeId ? 1 : 0
-
-                    ]);
+                    $attribute->categories()->attach($category->id);
             }
+
+            foreach($request->tag_ids as $tagId){
+                $tag = Tag::findOrFail($tagId);
+                $tag->tags()->attach($category->id);
+        }
 
             DB::commit();
 

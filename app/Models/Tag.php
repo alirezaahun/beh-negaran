@@ -12,6 +12,10 @@ class Tag extends Model
     protected $table  = 'tags';
     protected $guarded = [];
 
+    public function tags(){
+        return $this->belongsToMany(Category::class , 'category_tag');
+    }
+
     protected $hidden = [
         'created_at',
         'updated_at',
