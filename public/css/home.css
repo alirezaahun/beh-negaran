@@ -2459,16 +2459,6 @@ footer p span {
   display: none;
 }
 
-.c-type-trigger input[type=checkbox]:checked {
-  overflow: hidden;
-}
-
-.c-type-trigger input[type=checkbox]:checked + label.checkbox .checkbox__inner .green__ball {
-  transform: translate(-50%, -50%) scale(1);
-  opacity: 1;
-  transition-delay: 150ms;
-}
-
 .c-type-trigger input[type=checkbox]:checked ~ .checkbox__text {
   opacity: 1;
 }
@@ -2483,54 +2473,52 @@ footer p span {
   opacity: 1;
 }
 
-.checkbox {
-  --size: 2rem;
+.c-type-trigger input:checked + .checkbox-label {
+  --s: 1;
+}
+
+.c-type-trigger .checkbox-label {
+  --s: 0;
   display: block;
-  width: var(--size);
-  height: var(--size);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  background: var(--clr-dark);
-  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.12), 2px 2px 6px rgba(0, 0, 0, 0.05), 2px 2px 10px rgba(0, 0, 0, 0.025), inset -2px -2px 3px rgba(0, 0, 0, 0.05), inset -2px -2px 8px rgba(0, 0, 0, 0.02), inset 1px 3px 3px rgba(255, 255, 255, 0.45), inset 3px 8px 25px rgba(255, 255, 255, 0.35), inset 3px 2px 3px rgba(255, 255, 255, 0.35), inset 3px 2px 5px rgba(255, 255, 255, 0.2), inset 2px 3px 8px rgba(255, 255, 255, 0.085), inset 3px 2px 18px rgba(255, 255, 255, 0.05), inset 2px 3px 25px rgba(255, 255, 255, 0.025), inset 8px 8px 18px rgba(255, 255, 255, 0.1), inset 8px 8px 25px rgba(255, 255, 255, 0.05);
+  position: relative;
+  --c: #005d83;
+  text-indent: -100vw;
+  filter: blur(0.5px);
   cursor: pointer;
 }
 
-.checkbox .checkbox__inner {
-  position: relative;
-  width: calc(var(--size) / 1.75);
-  height: calc(var(--size) / 1.75);
-  border-radius: 50%;
-  background: var(--clr-dark);
-  box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.12), inset 2px 2px 5px rgba(0, 0, 0, 0.08), inset 3px 3px 12px rgba(0, 0, 0, 0.05), inset 4px 5px 16px rgba(0, 0, 0, 0.035), inset 0px -1px 2px rgba(255, 255, 255, 0.45), inset -1px -1px 3px rgba(255, 255, 255, 0.45), inset -1px -1px 2px rgba(255, 255, 255, 0.2), inset -1px -1px 2px rgba(255, 255, 255, 0.12), 2px 2px 2px rgba(255, 255, 255, 0.12), 2px 2px 3px rgba(255, 255, 255, 0.1), 2px 2px 5px rgba(255, 255, 255, 0.08), 6px 6px 15px rgba(0, 0, 0, 0.014), 8px 8px 18px rgba(0, 0, 0, 0.08), 12px 12px 28px rgba(0, 0, 0, 0.04);
+.c-type-trigger .checkbox-label, .checkbox-label:before {
+  border: solid 0.3125em transparent;
+  width: 6em;
+  height: 2.625em;
+  border-radius: 1.3125em;
+  box-shadow: inset 0 0.125em 0.75em rgba(0, 0, 0, 0.5);
+  background: repeating-linear-gradient(-45deg, rgba(119, 119, 119, 0.04) 0, rgba(119, 119, 119, 0.04) 2px, transparent 0, transparent 5px) padding-box, repeating-linear-gradient(45deg, rgba(119, 119, 119, 0.04) 0, rgba(119, 119, 119, 0.04) 2px, transparent 0, transparent 5px) padding-box, linear-gradient(transparent, rgba(0, 0, 0, 0.32)) padding-box, linear-gradient(var(--c), var(--c)) padding-box, linear-gradient(#bebebb, #fdfdfc) border-box;
 }
 
-.checkbox .checkbox__inner .green__ball {
+.c-type-trigger .checkbox-label:before, .checkbox-label:after {
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) scale(0.5);
-  opacity: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: var(--clr-primary);
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.12), inset -4px -5px 12px rgba(0, 0, 0, 0.12), inset -5px -6px 12px rgba(0, 0, 0, 0.08), inset 0px -6px 18px rgba(0, 0, 0, 0.06), 2px 1px 8px rgba(152, 255, 112, 0.32), 3px 2px 12px rgba(152, 255, 112, 0.15), 4px 4px 18px rgba(152, 255, 112, 0.08);
-  transition: transform 250ms var(--transition-easing), opacity 300ms var(--transition-easing);
-  transition-delay: 120ms;
-}
-
-.checkbox .checkbox__inner .green__ball::after {
+  top: 0;
+  left: 0;
   content: "";
-  position: absolute;
-  left: 50%;
-  top: 25%;
-  transform: translate(-50%, -50%);
-  background: #fff;
-  width: 35%;
-  height: 15%;
-  filter: blur(4px);
+}
+
+.c-type-trigger .checkbox-label:before {
+  margin: -0.3125em;
+  opacity: calc(1 - var(--s));
+  --c: #f6f6f6;
+  transition: 0.2s opacity;
+}
+
+.c-type-trigger .checkbox-label:after {
+  border: solid 3px transparent;
+  width: 2.6875em;
+  height: 2em;
+  border-radius: 1em;
+  transform: translate(calc(var(--s) * 100%));
+  box-shadow: 0 2px 9px rgba(0, 0, 0, 0.8);
+  background: linear-gradient(#d1d1d1, #edede9) padding-box, linear-gradient(#fcfcfc, #b2b2b2) border-box;
+  transition: 0.2s transform ease-in;
 }
 
 .checkbox__text {
