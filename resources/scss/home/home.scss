@@ -1530,7 +1530,9 @@ footer p span {
 .text-justify {
     text-align: justify;
 }
-
+.text-right{
+    text-align: right;
+}
 .title-style {
     font-family: Georgia, "Times New Roman", Times, serif;
     font-weight: 700;
@@ -1580,6 +1582,9 @@ float: right;
 .text-center{
     text-align: center;
 }
+.text-right{
+    text-align: right !important;
+}
 
 .border-custom{
     border-top: 0.5px solid black;
@@ -1588,6 +1593,15 @@ float: right;
 .d-inline{
     display: inline;
 }
+
+
+
+.ffffff{
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+}
+// .well .row{
+//     margin: 0 1px;
+// }
 
 // ****************************************************plus
 

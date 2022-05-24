@@ -119,13 +119,15 @@
                                                     <div class="col-12 col-md-10">
                                                         <div class="row  d-flex justify-content-center pricing-box-Shadow">
                                                             <div class="col-12    ">
-                                                                <select class="form-select my-5 mx-auto w-50 w-lg-25">
+                                                                <select class="form-select my-5 mx-auto w-50 w-lg-25" id=filmingSelection>
                                                                     <option selected>انتخاب پکیچ ها</option>
-                                                                    <option value="1">نقره ای</option>
-                                                                    <option value="2">طلایی</option>
-                                                                    <option value="3">برنزی</option>
+                                                                    <option value="1">فیلم برداری ۱</option>
+                                                                    <option value="2">فیلم برداری ۲</option>
+                                                                    <option value="3">فیلم برداری ۳</option>
+                                                                    <option value="4">فیلم برداری 4</option>
                                                                 </select>
-                                                                <div class="col-12">
+                                                                <div class="col-12" id="filming1">
+                                                                    <p>filming1</p>
                                                                     <div class="row">
                                                                         <h6 class="mx-auto d-md-none mt-3 ">حالت دوربین
                                                                         </h6>
@@ -138,27 +140,33 @@
                                                                             </div>
 
                                                                             <div class="form-check m-2 ">
-                                                                                <input class="form-check-input float-right-checkbox"
+                                                                                <input
+                                                                                    class="form-check-input float-right-checkbox"
                                                                                     type="checkbox" value=""
                                                                                     id="flexCheckDefault4" />
-                                                                                <label class="form-check-label float-right-checkbox"
+                                                                                <label
+                                                                                    class="form-check-label float-right-checkbox"
                                                                                     for="flexCheckDefault4">
                                                                                     دوریبن ثابت: (ساعتی: 1000M) </label>
                                                                             </div>
                                                                             <!-- Checked checkbox -->
                                                                             <div class="form-check m-2 ">
-                                                                                <input class="form-check-input float-right-checkbox"
+                                                                                <input
+                                                                                    class="form-check-input float-right-checkbox"
                                                                                     type="checkbox" value=""
                                                                                     id="flexCheckChecked5" checked />
-                                                                                <label class="form-check-label float-right-checkbox"
+                                                                                <label
+                                                                                    class="form-check-label float-right-checkbox"
                                                                                     for="flexCheckChecked5">
                                                                                     دوریبن حرکتی(ساعتی: 1000M)</label>
                                                                             </div>
                                                                             <div class="form-check m-2 ">
-                                                                                <input class="form-check-input float-right-checkbox"
+                                                                                <input
+                                                                                    class="form-check-input float-right-checkbox"
                                                                                     type="checkbox" value=""
                                                                                     id="flexCheckChecked6" checked />
-                                                                                <label class="form-check-label float-right-checkbox"
+                                                                                <label
+                                                                                    class="form-check-label float-right-checkbox"
                                                                                     for="flexCheckChecked6">
                                                                                     دوریبن کرین: (ساعتی: 1000M)</label>
                                                                             </div>
@@ -176,7 +184,8 @@
 
 
                                                                             <div class="d-md-flex flex-column d-none ">
-                                                                                <h6 class="mx-auto "> مدت زمان درخواستی</h6>
+                                                                                <h6 class="mx-auto "> مدت زمان
+                                                                                    درخواستی</h6>
                                                                                 <hr class="aaa w-50 mx-auto mt-0">
                                                                             </div>
 
@@ -219,9 +228,11 @@
                                                                         <h6 class="mx-auto d-md-none mt-3">تعداد دوربین
                                                                         </h6>
                                                                         <hr class="aaa w-50 d-md-none mb-4">
-                                                                        <div class="col-10 col-md-6  col-lg-4  text-justify mt-lg-0 mt-3">
+                                                                        <div
+                                                                            class="col-10 col-md-6  col-lg-4  text-justify mt-lg-0 mt-3">
                                                                             <div class=" d-md-flex flex-column d-none">
-                                                                                <h6 class="mx-auto ">تعداد دوربین </h6>
+                                                                                <h6 class="mx-auto ">تعداد دوربین
+                                                                                </h6>
                                                                                 <hr class="aaa w-50 mx-auto mt-0">
                                                                             </div>
                                                                             <div
@@ -258,38 +269,646 @@
 
                                                                         </div>
 
-                           
+
 
                                                                         <h6 class="mx-auto d-md-none mt-3">ویژگی ها
                                                                         </h6>
                                                                         <hr class="aaa w-50 d-md-none mb-4">
                                                                         <div class="d-block">
-                                                                            
+
                                                                             <div class=" d-md-flex flex-column d-none ">
                                                                                 <h6 class="mx-auto mt-3">ویژگی ها </h6>
                                                                                 <hr class="aaa w-25 mx-auto mt-0">
                                                                             </div>
                                                                         </div>
-                                                                        <div class="col-10 col-md-6  col-lg-4 mt-2 text-justify mt-3 d-flex ">
+                                                                        <div
+                                                                            class="col-10 col-md-6  col-lg-4 mt-2 text-justify mt-3 d-flex ">
 
                                                                             <div class="form-check m-2 d-child-flex">
-                                                                                <input class="form-check-input float-right-checkbox" type="checkbox" value=""
+                                                                                <input
+                                                                                    class="form-check-input float-right-checkbox"
+                                                                                    type="checkbox" value=""
                                                                                     id="flexCheckDefault1" />
-                                                                                <label class="form-check-label float-right-checkbox" for="flexCheckDefault1">
+                                                                                <label
+                                                                                    class="form-check-label float-right-checkbox"
+                                                                                    for="flexCheckDefault1">
                                                                                     صدابرداری</label>
                                                                             </div>
-                                    
+
                                                                             <!-- Checked checkbox -->
                                                                             <div class="form-check m-2 d-child-flex">
-                                                                                <input class="form-check-input float-right-checkbox" type="checkbox" value=""
+                                                                                <input
+                                                                                    class="form-check-input float-right-checkbox"
+                                                                                    type="checkbox" value=""
                                                                                     id="flexCheckChecked2" checked />
-                                                                                <label class="form-check-label float-right-checkbox" for="flexCheckChecked2">
+                                                                                <label
+                                                                                    class="form-check-label float-right-checkbox"
+                                                                                    for="flexCheckChecked2">
                                                                                     نورپردازی</label>
                                                                             </div>
                                                                             <div class="form-check m-2 d-child-flex">
-                                                                                <input class="form-check-input float-right-checkbox" type="checkbox" value=""
+                                                                                <input
+                                                                                    class="form-check-input float-right-checkbox"
+                                                                                    type="checkbox" value=""
                                                                                     id="flexCheckChecked3" checked />
-                                                                                <label class="form-check-label float-right-checkbox" for="flexCheckChecked3">
+                                                                                <label
+                                                                                    class="form-check-label float-right-checkbox"
+                                                                                    for="flexCheckChecked3">
+                                                                                    تدوین</label>
+                                                                            </div>
+
+
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-12 d-none" id="filming2">
+                                                                    <p>filming2</p>
+
+                                                                    <div class="row">
+                                                                        <h6 class="mx-auto d-md-none mt-3 ">حالت دوربین
+                                                                        </h6>
+                                                                        <hr class="aaa w-50 d-md-none mb-4">
+
+                                                                        <div class="col-10 col-md-6  col-lg-4 bg-secendory">
+                                                                            <div class=" d-md-flex flex-column d-none">
+                                                                                <h6 class="mx-auto ">حالت دوربین</h6>
+                                                                                <hr class="aaa w-50 mx-auto mt-0">
+                                                                            </div>
+
+                                                                            <div class="form-check m-2 ">
+                                                                                <input
+                                                                                    class="form-check-input float-right-checkbox"
+                                                                                    type="checkbox" value=""
+                                                                                    id="flexCheckDefault4" />
+                                                                                <label
+                                                                                    class="form-check-label float-right-checkbox"
+                                                                                    for="flexCheckDefault4">
+                                                                                    دوریبن ثابت: (ساعتی: 1000M) </label>
+                                                                            </div>
+                                                                            <!-- Checked checkbox -->
+                                                                            <div class="form-check m-2 ">
+                                                                                <input
+                                                                                    class="form-check-input float-right-checkbox"
+                                                                                    type="checkbox" value=""
+                                                                                    id="flexCheckChecked5" checked />
+                                                                                <label
+                                                                                    class="form-check-label float-right-checkbox"
+                                                                                    for="flexCheckChecked5">
+                                                                                    دوریبن حرکتی(ساعتی: 1000M)</label>
+                                                                            </div>
+                                                                            <div class="form-check m-2 ">
+                                                                                <input
+                                                                                    class="form-check-input float-right-checkbox"
+                                                                                    type="checkbox" value=""
+                                                                                    id="flexCheckChecked6" checked />
+                                                                                <label
+                                                                                    class="form-check-label float-right-checkbox"
+                                                                                    for="flexCheckChecked6">
+                                                                                    دوریبن کرین: (ساعتی: 1000M)</label>
+                                                                            </div>
+
+                                                                        </div>
+
+
+
+
+                                                                        <h6 class="mx-auto d-md-none mt-3">مدت زمان درخواستی
+                                                                        </h6>
+                                                                        <hr class="aaa w-50 d-md-none mb-4">
+
+                                                                        <div class="col-10 col-md-6  col-lg-4  ">
+
+
+                                                                            <div class="d-md-flex flex-column d-none ">
+                                                                                <h6 class="mx-auto "> مدت زمان
+                                                                                    درخواستی</h6>
+                                                                                <hr class="aaa w-50 mx-auto mt-0">
+                                                                            </div>
+
+
+
+                                                                            <div class="1 form-check m-1"> <label
+                                                                                    for="tentacles1" class="ccustom-margin">
+                                                                                    مدت زمان
+                                                                                    درخواستی
+                                                                                </label>
+                                                                                <input type="number" id="tentacles1"
+                                                                                    name="tentacles" min="1" max="10"
+                                                                                    value="2" class="text-center">
+                                                                                <span>ساعت</span>
+                                                                            </div>
+                                                                            <div class="2 form-check m-1"> <label
+                                                                                    for="tentacles2" class="ccustom-margin">
+                                                                                    مدت زمان
+                                                                                    درخواستی</label>
+                                                                                <input type="number" id="tentacles2"
+                                                                                    name="tentacles" min="1" max="10"
+                                                                                    value="2" class="text-center">
+                                                                                <span>ساعت</span>
+                                                                            </div>
+                                                                            <div class="3 form-check m-1"> <label
+                                                                                    for="tentacles3"
+                                                                                    class="ccustom-margin">مدت زمان
+                                                                                    درخواستی</label>
+                                                                                <input type="number" id="tentacles3"
+                                                                                    name="tentacles" min="1" max="10"
+                                                                                    value="3" class="text-center">
+                                                                                <span>ساعت</span>
+                                                                            </div>
+                                                                        </div>
+
+
+
+
+
+                                                                        <h6 class="mx-auto d-md-none mt-3">تعداد دوربین
+                                                                        </h6>
+                                                                        <hr class="aaa w-50 d-md-none mb-4">
+                                                                        <div
+                                                                            class="col-10 col-md-6  col-lg-4  text-justify mt-lg-0 mt-3">
+                                                                            <div class=" d-md-flex flex-column d-none">
+                                                                                <h6 class="mx-auto ">تعداد دوربین
+                                                                                </h6>
+                                                                                <hr class="aaa w-50 mx-auto mt-0">
+                                                                            </div>
+                                                                            <div
+                                                                                class=" m-2  form-check d-flex justify-content-md-around justify-content-md-start  custom-border mt-md-4 mt-lg-0">
+                                                                                <label for="tentacles3 "
+                                                                                    class="ccustom-margin"> تعداد دوربین
+                                                                                    : ثابت</label>
+                                                                                <input type="number" id="tentacles3"
+                                                                                    class=" text-center h-25 border-custom"
+                                                                                    name="tentacles t" min="1" max="10"
+                                                                                    value="2" class="text-center">
+                                                                            </div>
+                                                                            <div
+                                                                                class=" m-2  form-check d-flex justify-content-md-around justify-content-md-start ">
+                                                                                <label for="tentacles4 "
+                                                                                    class="ccustom-margin"> تعداد دوربین
+                                                                                    حرکتی</label>
+                                                                                <input type="number" id="tentacles4"
+                                                                                    class=" text-center h-25 border-custom"
+                                                                                    name="tentacles" min="1" max="10"
+                                                                                    value="2" class="text-center">
+                                                                            </div>
+                                                                            <div
+                                                                                class=" m-2  form-check d-flex justify-content-md-around justify-content-md-start ">
+                                                                                <label for="tentacles5 "
+                                                                                    class="ccustom-margin"> تعداد دوربین
+                                                                                    : کرین</label>
+                                                                                <input type="number" id="tentacles5"
+                                                                                    class=" text-center h-25 border-custom"
+                                                                                    name="tentacles" min="1" max="10"
+                                                                                    value="2" class="text-center">
+                                                                            </div>
+
+
+                                                                        </div>
+
+
+
+                                                                        <h6 class="mx-auto d-md-none mt-3">ویژگی ها
+                                                                        </h6>
+                                                                        <hr class="aaa w-50 d-md-none mb-4">
+                                                                        <div class="d-block">
+
+                                                                            <div class=" d-md-flex flex-column d-none ">
+                                                                                <h6 class="mx-auto mt-3">ویژگی ها </h6>
+                                                                                <hr class="aaa w-25 mx-auto mt-0">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div
+                                                                            class="col-10 col-md-6  col-lg-4 mt-2 text-justify mt-3 d-flex ">
+
+                                                                            <div class="form-check m-2 d-child-flex">
+                                                                                <input
+                                                                                    class="form-check-input float-right-checkbox"
+                                                                                    type="checkbox" value=""
+                                                                                    id="flexCheckDefault1" />
+                                                                                <label
+                                                                                    class="form-check-label float-right-checkbox"
+                                                                                    for="flexCheckDefault1">
+                                                                                    صدابرداری</label>
+                                                                            </div>
+
+                                                                            <!-- Checked checkbox -->
+                                                                            <div class="form-check m-2 d-child-flex">
+                                                                                <input
+                                                                                    class="form-check-input float-right-checkbox"
+                                                                                    type="checkbox" value=""
+                                                                                    id="flexCheckChecked2" checked />
+                                                                                <label
+                                                                                    class="form-check-label float-right-checkbox"
+                                                                                    for="flexCheckChecked2">
+                                                                                    نورپردازی</label>
+                                                                            </div>
+                                                                            <div class="form-check m-2 d-child-flex">
+                                                                                <input
+                                                                                    class="form-check-input float-right-checkbox"
+                                                                                    type="checkbox" value=""
+                                                                                    id="flexCheckChecked3" checked />
+                                                                                <label
+                                                                                    class="form-check-label float-right-checkbox"
+                                                                                    for="flexCheckChecked3">
+                                                                                    تدوین</label>
+                                                                            </div>
+
+
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+
+
+                                                                <div class="col-12 d-none" id="filming3">
+                                                                    <p>filming3</p>
+
+                                                                    <div class="row">
+                                                                        <h6 class="mx-auto d-md-none mt-3 ">حالت دوربین
+                                                                        </h6>
+                                                                        <hr class="aaa w-50 d-md-none mb-4">
+
+                                                                        <div class="col-10 col-md-6  col-lg-4 bg-secendory">
+                                                                            <div class=" d-md-flex flex-column d-none">
+                                                                                <h6 class="mx-auto ">حالت دوربین</h6>
+                                                                                <hr class="aaa w-50 mx-auto mt-0">
+                                                                            </div>
+
+                                                                            <div class="form-check m-2 ">
+                                                                                <input
+                                                                                    class="form-check-input float-right-checkbox"
+                                                                                    type="checkbox" value=""
+                                                                                    id="flexCheckDefault4" />
+                                                                                <label
+                                                                                    class="form-check-label float-right-checkbox"
+                                                                                    for="flexCheckDefault4">
+                                                                                    دوریبن ثابت: (ساعتی: 1000M) </label>
+                                                                            </div>
+                                                                            <!-- Checked checkbox -->
+                                                                            <div class="form-check m-2 ">
+                                                                                <input
+                                                                                    class="form-check-input float-right-checkbox"
+                                                                                    type="checkbox" value=""
+                                                                                    id="flexCheckChecked5" checked />
+                                                                                <label
+                                                                                    class="form-check-label float-right-checkbox"
+                                                                                    for="flexCheckChecked5">
+                                                                                    دوریبن حرکتی(ساعتی: 1000M)</label>
+                                                                            </div>
+                                                                            <div class="form-check m-2 ">
+                                                                                <input
+                                                                                    class="form-check-input float-right-checkbox"
+                                                                                    type="checkbox" value=""
+                                                                                    id="flexCheckChecked6" checked />
+                                                                                <label
+                                                                                    class="form-check-label float-right-checkbox"
+                                                                                    for="flexCheckChecked6">
+                                                                                    دوریبن کرین: (ساعتی: 1000M)</label>
+                                                                            </div>
+
+                                                                        </div>
+
+
+
+
+                                                                        <h6 class="mx-auto d-md-none mt-3">مدت زمان درخواستی
+                                                                        </h6>
+                                                                        <hr class="aaa w-50 d-md-none mb-4">
+
+                                                                        <div class="col-10 col-md-6  col-lg-4  ">
+
+
+                                                                            <div class="d-md-flex flex-column d-none ">
+                                                                                <h6 class="mx-auto "> مدت زمان
+                                                                                    درخواستی</h6>
+                                                                                <hr class="aaa w-50 mx-auto mt-0">
+                                                                            </div>
+
+
+
+                                                                            <div class="1 form-check m-1"> <label
+                                                                                    for="tentacles1" class="ccustom-margin">
+                                                                                    مدت زمان
+                                                                                    درخواستی
+                                                                                </label>
+                                                                                <input type="number" id="tentacles1"
+                                                                                    name="tentacles" min="1" max="10"
+                                                                                    value="3" class="text-center">
+                                                                                <span>ساعت</span>
+                                                                            </div>
+                                                                            <div class="2 form-check m-1"> <label
+                                                                                    for="tentacles2" class="ccustom-margin">
+                                                                                    مدت زمان
+                                                                                    درخواستی</label>
+                                                                                <input type="number" id="tentacles2"
+                                                                                    name="tentacles" min="1" max="10"
+                                                                                    value="3" class="text-center">
+                                                                                <span>ساعت</span>
+                                                                            </div>
+                                                                            <div class="3 form-check m-1"> <label
+                                                                                    for="tentacles3"
+                                                                                    class="ccustom-margin">مدت زمان
+                                                                                    درخواستی</label>
+                                                                                <input type="number" id="tentacles3"
+                                                                                    name="tentacles" min="1" max="10"
+                                                                                    value="3" class="text-center">
+                                                                                <span>ساعت</span>
+                                                                            </div>
+                                                                        </div>
+
+
+
+
+
+                                                                        <h6 class="mx-auto d-md-none mt-3">تعداد دوربین
+                                                                        </h6>
+                                                                        <hr class="aaa w-50 d-md-none mb-4">
+                                                                        <div
+                                                                            class="col-10 col-md-6  col-lg-4  text-justify mt-lg-0 mt-3">
+                                                                            <div class=" d-md-flex flex-column d-none">
+                                                                                <h6 class="mx-auto ">تعداد دوربین
+                                                                                </h6>
+                                                                                <hr class="aaa w-50 mx-auto mt-0">
+                                                                            </div>
+                                                                            <div
+                                                                                class=" m-2  form-check d-flex justify-content-md-around justify-content-md-start  custom-border mt-md-4 mt-lg-0">
+                                                                                <label for="tentacles3 "
+                                                                                    class="ccustom-margin"> تعداد دوربین
+                                                                                    : ثابت</label>
+                                                                                <input type="number" id="tentacles3"
+                                                                                    class=" text-center h-25 border-custom"
+                                                                                    name="tentacles t" min="1" max="10"
+                                                                                    value="3" class="text-center">
+                                                                            </div>
+                                                                            <div
+                                                                                class=" m-2  form-check d-flex justify-content-md-around justify-content-md-start ">
+                                                                                <label for="tentacles4 "
+                                                                                    class="ccustom-margin"> تعداد دوربین
+                                                                                    حرکتی</label>
+                                                                                <input type="number" id="tentacles4"
+                                                                                    class=" text-center h-25 border-custom"
+                                                                                    name="tentacles" min="1" max="10"
+                                                                                    value="3" class="text-center">
+                                                                            </div>
+                                                                            <div
+                                                                                class=" m-2  form-check d-flex justify-content-md-around justify-content-md-start ">
+                                                                                <label for="tentacles5 "
+                                                                                    class="ccustom-margin"> تعداد دوربین
+                                                                                    : کرین</label>
+                                                                                <input type="number" id="tentacles5"
+                                                                                    class=" text-center h-25 border-custom"
+                                                                                    name="tentacles" min="1" max="10"
+                                                                                    value="3" class="text-center">
+                                                                            </div>
+
+
+                                                                        </div>
+
+
+
+                                                                        <h6 class="mx-auto d-md-none mt-3">ویژگی ها
+                                                                        </h6>
+                                                                        <hr class="aaa w-50 d-md-none mb-4">
+                                                                        <div class="d-block">
+
+                                                                            <div class=" d-md-flex flex-column d-none ">
+                                                                                <h6 class="mx-auto mt-3">ویژگی ها </h6>
+                                                                                <hr class="aaa w-25 mx-auto mt-0">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div
+                                                                            class="col-10 col-md-6  col-lg-4 mt-2 text-justify mt-3 d-flex ">
+
+                                                                            <div class="form-check m-2 d-child-flex">
+                                                                                <input
+                                                                                    class="form-check-input float-right-checkbox"
+                                                                                    type="checkbox" value=""
+                                                                                    id="flexCheckDefault1" />
+                                                                                <label
+                                                                                    class="form-check-label float-right-checkbox"
+                                                                                    for="flexCheckDefault1">
+                                                                                    صدابرداری</label>
+                                                                            </div>
+
+                                                                            <!-- Checked checkbox -->
+                                                                            <div class="form-check m-2 d-child-flex">
+                                                                                <input
+                                                                                    class="form-check-input float-right-checkbox"
+                                                                                    type="checkbox" value=""
+                                                                                    id="flexCheckChecked2" checked />
+                                                                                <label
+                                                                                    class="form-check-label float-right-checkbox"
+                                                                                    for="flexCheckChecked2">
+                                                                                    نورپردازی</label>
+                                                                            </div>
+                                                                            <div class="form-check m-2 d-child-flex">
+                                                                                <input
+                                                                                    class="form-check-input float-right-checkbox"
+                                                                                    type="checkbox" value=""
+                                                                                    id="flexCheckChecked3" checked />
+                                                                                <label
+                                                                                    class="form-check-label float-right-checkbox"
+                                                                                    for="flexCheckChecked3">
+                                                                                    تدوین</label>
+                                                                            </div>
+
+
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-12 d-none" id="filming4">
+                                                                    <p>filming4</p>
+
+                                                                    <div class="row">
+                                                                        <h6 class="mx-auto d-md-none mt-3 ">حالت دوربین
+                                                                        </h6>
+                                                                        <hr class="aaa w-50 d-md-none mb-4">
+
+                                                                        <div class="col-10 col-md-6  col-lg-4 bg-secendory">
+                                                                            <div class=" d-md-flex flex-column d-none">
+                                                                                <h6 class="mx-auto ">حالت دوربین</h6>
+                                                                                <hr class="aaa w-50 mx-auto mt-0">
+                                                                            </div>
+
+                                                                            <div class="form-check m-2 ">
+                                                                                <input
+                                                                                    class="form-check-input float-right-checkbox"
+                                                                                    type="checkbox" value=""
+                                                                                    id="flexCheckDefault4" />
+                                                                                <label
+                                                                                    class="form-check-label float-right-checkbox"
+                                                                                    for="flexCheckDefault4">
+                                                                                    دوریبن ثابت: (ساعتی: 1000M) </label>
+                                                                            </div>
+                                                                            <!-- Checked checkbox -->
+                                                                            <div class="form-check m-2 ">
+                                                                                <input
+                                                                                    class="form-check-input float-right-checkbox"
+                                                                                    type="checkbox" value=""
+                                                                                    id="flexCheckChecked5" checked />
+                                                                                <label
+                                                                                    class="form-check-label float-right-checkbox"
+                                                                                    for="flexCheckChecked5">
+                                                                                    دوریبن حرکتی(ساعتی: 1000M)</label>
+                                                                            </div>
+                                                                            <div class="form-check m-2 ">
+                                                                                <input
+                                                                                    class="form-check-input float-right-checkbox"
+                                                                                    type="checkbox" value=""
+                                                                                    id="flexCheckChecked6" checked />
+                                                                                <label
+                                                                                    class="form-check-label float-right-checkbox"
+                                                                                    for="flexCheckChecked6">
+                                                                                    دوریبن کرین: (ساعتی: 1000M)</label>
+                                                                            </div>
+
+                                                                        </div>
+
+
+
+
+                                                                        <h6 class="mx-auto d-md-none mt-3">مدت زمان درخواستی
+                                                                        </h6>
+                                                                        <hr class="aaa w-50 d-md-none mb-4">
+
+                                                                        <div class="col-10 col-md-6  col-lg-4  ">
+
+
+                                                                            <div class="d-md-flex flex-column d-none ">
+                                                                                <h6 class="mx-auto "> مدت زمان
+                                                                                    درخواستی</h6>
+                                                                                <hr class="aaa w-50 mx-auto mt-0">
+                                                                            </div>
+
+
+
+                                                                            <div class="1 form-check m-1"> <label
+                                                                                    for="tentacles1" class="ccustom-margin">
+                                                                                    مدت زمان
+                                                                                    درخواستی
+                                                                                </label>
+                                                                                <input type="number" id="tentacles1"
+                                                                                    name="tentacles" min="1" max="10"
+                                                                                    value="4" class="text-center">
+                                                                                <span>ساعت</span>
+                                                                            </div>
+                                                                            <div class="2 form-check m-1"> <label
+                                                                                    for="tentacles2" class="ccustom-margin">
+                                                                                    مدت زمان
+                                                                                    درخواستی</label>
+                                                                                <input type="number" id="tentacles2"
+                                                                                    name="tentacles" min="1" max="10"
+                                                                                    value="4" class="text-center">
+                                                                                <span>ساعت</span>
+                                                                            </div>
+                                                                            <div class="3 form-check m-1"> <label
+                                                                                    for="tentacles3"
+                                                                                    class="ccustom-margin">مدت زمان
+                                                                                    درخواستی</label>
+                                                                                <input type="number" id="tentacles3"
+                                                                                    name="tentacles" min="1" max="10"
+                                                                                    value="4" class="text-center">
+                                                                                <span>ساعت</span>
+                                                                            </div>
+                                                                        </div>
+
+
+
+
+
+                                                                        <h6 class="mx-auto d-md-none mt-3">تعداد دوربین
+                                                                        </h6>
+                                                                        <hr class="aaa w-50 d-md-none mb-4">
+                                                                        <div
+                                                                            class="col-10 col-md-6  col-lg-4  text-justify mt-lg-0 mt-3">
+                                                                            <div class=" d-md-flex flex-column d-none">
+                                                                                <h6 class="mx-auto ">تعداد دوربین
+                                                                                </h6>
+                                                                                <hr class="aaa w-50 mx-auto mt-0">
+                                                                            </div>
+                                                                            <div
+                                                                                class=" m-2  form-check d-flex justify-content-md-around justify-content-md-start  custom-border mt-md-4 mt-lg-0">
+                                                                                <label for="tentacles3 "
+                                                                                    class="ccustom-margin"> تعداد دوربین
+                                                                                    : ثابت</label>
+                                                                                <input type="number" id="tentacles3"
+                                                                                    class=" text-center h-25 border-custom"
+                                                                                    name="tentacles t" min="1" max="10"
+                                                                                    value="4" class="text-center">
+                                                                            </div>
+                                                                            <div
+                                                                                class=" m-2  form-check d-flex justify-content-md-around justify-content-md-start ">
+                                                                                <label for="tentacles4 "
+                                                                                    class="ccustom-margin"> تعداد دوربین
+                                                                                    حرکتی</label>
+                                                                                <input type="number" id="tentacles4"
+                                                                                    class=" text-center h-25 border-custom"
+                                                                                    name="tentacles" min="1" max="10"
+                                                                                    value="4" class="text-center">
+                                                                            </div>
+                                                                            <div
+                                                                                class=" m-2  form-check d-flex justify-content-md-around justify-content-md-start ">
+                                                                                <label for="tentacles5 "
+                                                                                    class="ccustom-margin"> تعداد دوربین
+                                                                                    : کرین</label>
+                                                                                <input type="number" id="tentacles5"
+                                                                                    class=" text-center h-25 border-custom"
+                                                                                    name="tentacles" min="1" max="10"
+                                                                                    value="4" class="text-center">
+                                                                            </div>
+
+
+                                                                        </div>
+
+
+
+                                                                        <h6 class="mx-auto d-md-none mt-3">ویژگی ها
+                                                                        </h6>
+                                                                        <hr class="aaa w-50 d-md-none mb-4">
+                                                                        <div class="d-block">
+
+                                                                            <div class=" d-md-flex flex-column d-none ">
+                                                                                <h6 class="mx-auto mt-3">ویژگی ها </h6>
+                                                                                <hr class="aaa w-25 mx-auto mt-0">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div
+                                                                            class="col-10 col-md-6  col-lg-4 mt-2 text-justify mt-3 d-flex ">
+
+                                                                            <div class="form-check m-2 d-child-flex">
+                                                                                <input
+                                                                                    class="form-check-input float-right-checkbox"
+                                                                                    type="checkbox" value=""
+                                                                                    id="flexCheckDefault1" />
+                                                                                <label
+                                                                                    class="form-check-label float-right-checkbox"
+                                                                                    for="flexCheckDefault1">
+                                                                                    صدابرداری</label>
+                                                                            </div>
+
+                                                                            <!-- Checked checkbox -->
+                                                                            <div class="form-check m-2 d-child-flex">
+                                                                                <input
+                                                                                    class="form-check-input float-right-checkbox"
+                                                                                    type="checkbox" value=""
+                                                                                    id="flexCheckChecked2" checked />
+                                                                                <label
+                                                                                    class="form-check-label float-right-checkbox"
+                                                                                    for="flexCheckChecked2">
+                                                                                    نورپردازی</label>
+                                                                            </div>
+                                                                            <div class="form-check m-2 d-child-flex">
+                                                                                <input
+                                                                                    class="form-check-input float-right-checkbox"
+                                                                                    type="checkbox" value=""
+                                                                                    id="flexCheckChecked3" checked />
+                                                                                <label
+                                                                                    class="form-check-label float-right-checkbox"
+                                                                                    for="flexCheckChecked3">
                                                                                     تدوین</label>
                                                                             </div>
 
@@ -301,14 +920,14 @@
 
                                                                 <button
                                                                     class="button d-none d-md-block custom-margin-pricing w-50 text-center mx-auto"
-                                                                    role="button "> افزودن به سبد خرید</button>
+                                                                    role="button " id="CartBtnFilming"> افزودن به سبد خرید</button>
                                                             </div>
 
 
 
 
                                                         </div>
-                                                        <button class="button d-block d-md-none my-3" role="button">افزودن
+                                                        <button class="button d-block d-md-none my-3" role="button" id="CartBtnFilming">افزودن
                                                             به سبد خرید</button>
                                                     </div>
                                                 </div>
@@ -363,7 +982,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <input type="button" name="next" class="next action-button custom-pricing-margin-btn " value="بعدی" />
+                            <input type="button" name="next" class="next action-button custom-pricing-margin-btn "
+                                value="بعدی" />
                         </fieldset>
                         <fieldset>
                             <h2 id="heading"> آدرس و تاریخ</h2>
@@ -373,10 +993,10 @@
                                     <div class="col-md-6 col-12 ">
                                         <div class="well">
                                             <div class="row">
-                                                <div class="col-sm-6">
+                                                <div class="col-sm-6 ">
                                                     <div class="form-group" dir="ltr">
                                                         <label class='float-right mt-4 mb-2 gg' for="state">:استان</label>
-                                                        <div class="form-contorol">
+                                                        <div class="form-contorol mx-xl-3">
                                                             <select id="Ostan" runat="server" onchange="Func(this.value)"
                                                                 class="form-control" name="state">
                                                                 <option class="form-group" value=""></option>
@@ -479,12 +1099,10 @@
 
 
 
-                                                        <div class="input-group date-input">
-                                                            <span class="input-group-text" id="dtp1"><i
-                                                                    class="fas fa-calendar-alt"></i></span>
-                                                            <input type="text" class="form-control text-center"
-                                                                placeholder="انتخاب تاریخ" data-name="dtp1-text">
-                                                        </div>
+
+
+
+
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-6">
@@ -538,8 +1156,30 @@
                                                 </div>
                                             </div>
                                         </div>
+
+
+
+
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="form-group">
+                                                    <div class="col-12 text-right">
+
+                                                        <label class=' mt-4 mb-2 gg' for="data-picker">انتخاب تاریخ:</label>
+                                                    </div>
+                                                    <div class="input-group date-input col">
+                                                        <span class="input-group-text" id="dtp1"><i
+                                                                class="fas fa-calendar-alt"></i></span>
+                                                        <input type="text" class="form-control text-center"
+                                                            placeholder="انتخاب تاریخ" id="data-picker"
+                                                            data-name="dtp1-text">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                     </div>
-                                    <div class="col-md-6 col-12 ">
+                                    <div class="col-md-6 col-12 mt-5 mt-lg-0">
                                         <div class="map-responsive">
                                             <iframe
                                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12940.907541046576!2d50.982656499780035!3d35.81890868259695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8dbfb277ea5b55%3A0xd658d7cac8273c3e!2z2YjZhNuM2LnYtdix2Iwg2YXZhti32YLZhyDbudiMINqp2LHYrNiMINin2LPYqtin2YYg2KfZhNio2LHYstiMINin24zYsdin2YY!5e0!3m2!1sfa!2snl!4v1652547526293!5m2!1sfa!2snl"
@@ -548,14 +1188,58 @@
                                         </div>
                                     </div>
                                 </div>
+
+
+
+
+                                {{-- <div class="input-group date-input col-md-6 col-12">
+                                    <label class='float-right mt-4 mb-2 gg' for="data-picker">تاریخ انتخاب :</label>
+                                    <span class="input-group-text" id="dtp1"><i class="fas fa-calendar-alt"></i></span>
+                                    <input type="text" class="form-control text-center" placeholder="انتخاب تاریخ" id="data-picker"
+                                        data-name="dtp1-text">
+                                </div> --}}
+
+
                             </div>
                             <input type="button" name="next" class="next action-button" value="Next" /> <input
                                 type="button" name="previous" class="previous action-button-previous" value="Previous" />
                         </fieldset>
                         <fieldset>
-                            <div class="form-card">
+                            <div class="cardddd col-lg-6 ffffff  mx-auto">
+                                <div class="card-body">
+                                    <h5 class="card-title">سفارش شما</h5>
+                                    <p class="card-text"></p>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"></li>
+                                    <li class="list-group-item"></li>
+                                    <li class="list-group-item"></li>
+                                </ul>
+                                <div class="card-body">
+                                    <a href="#" class="card-link">Card link</a>
+                                    <a href="#" class="card-link">Another link</a>
+                                </div>
+                            </div>
 
-                            </div> <input type="button" name="next" class="next action-button" value="Submit" /> <input
+
+
+                            <div class="cardddd col-lg-6 ffffff  mx-auto">
+                                <div class="card-body">
+                                    <h5 class="card-title">سفارش شما</h5>
+                                    <p class="card-text"></p>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"></li>
+                                    <li class="list-group-item"></li>
+                                    <li class="list-group-item"></li>
+                                </ul>
+                                <div class="card-body">
+                                    <a href="#" class="card-link">Card link</a>
+                                    <a href="#" class="card-link">Another link</a>
+                                </div>
+                            </div>
+
+                            <input type="button" name="next" class="next action-button" value="Submit" /> <input
                                 type="button" name="previous" class="previous action-button-previous" value="Previous" />
                         </fieldset>
                     </form>
@@ -720,10 +1404,128 @@
 
         }
 
-        const dtp1Instance = new mds.MdsPersianDateTimePicker(document.getElementById('dtp1'), {
-            targetTextSelector: '[data-name="dtp1-text"]',
-            targetDateSelector: '[data-name="dtp1-date"]',
-            persianNumber: true,
-        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        let filmingSelection = document.getElementById('filmingSelection')
+        console.log('filmingSelection')
+        let CartBtnFilming = document.getElementById('CartBtnFilming')
+        let filming1 = document.getElementById('filming1')
+        let filming2 = document.getElementById('filming2')
+        let filming3 = document.getElementById('filming3')
+        let filming4 = document.getElementById('filming4')
+        CartBtnFilming.addEventListener('click', CartBtnFilming)
+        filmingSelection.addEventListener('click', filmingFunc)
+        function filmingFunc() {
+            if (filmingSelection.value == 1) {
+                console.log('filming111111')
+                // filming1.classList.add('d-block');
+                // filming1.classList.remove('d-none');
+                // filming2.classList.add('d-none');
+                // filming3.classList.add('d-none');
+                // filming4.classList.add('d-none');
+
+            } else if (filmingSelection.value == 2) {
+                console.log('filming2222')
+
+                // filming2.classList.add('d-block');
+                // filming2.classList.remove('d-none');
+                // filming1.classList.add('d-none');
+                // filming3.classList.add('d-none');
+                // filming4.classList.add('d-none');
+
+            } else if (filmingSelection.value == 3) {
+                console.log('filming3333333')
+
+                // filming3.classList.add('d-block');
+                // filming3.classList.remove('d-none');
+                // filming1.classList.add('d-none');
+                // filming2.classList.add('d-none');
+                // filming4.classList.add('d-none');
+
+            }else if (filmingSelection.value == 4) {
+                console.log('filming4444444')
+
+                // filming4.classList.add('d-block');
+                // filming4.classList.remove('d-none');
+                // filming1.classList.add('d-none');
+                // filming2.classList.add('d-none');
+                // filming3.classList.add('d-none');
+            }
+
+        }
+        function CartBtnFilming(event) {
+            event.preventDefault();
+            if (filmingSelection.value == 1) {
+                ShoppingCart = ShoppingCart + 10
+                console.log(ShoppingCart)
+                alert(`    پکیج filming1 با قیمت ۱۰ به سبد خرید شما اضافه شد و مجموع سبد خرید شما ${ShoppingCart} میباشد `)
+
+            } else if (filmingSelection.value == 2) {
+                ShoppingCart = ShoppingCart + 100
+                console.log(ShoppingCart)
+                alert(`    پکیج filming2 با قیمت ۱۰۰ به سبد خرید شما اضافه شد و مجموع سبد خرید شما ${ShoppingCart} میباشد `)
+
+            } else if (filmingSelection.value == 3) {
+                ShoppingCart = ShoppingCart + 1000
+                console.log(ShoppingCart)
+                alert(`    پکیج filming3 با قیمت ۱۰۰۰ به سبد خرید شما اضافه شد و مجموع سبد خرید شما ${ShoppingCart} میباشد `)
+
+            }else if (filmingSelection.value == 4) {
+                ShoppingCart = ShoppingCart + 10000
+                console.log(ShoppingCart)
+                alert(`    پکیج filming4 با قیمت ۱۰۰۰ به سبد خرید شما اضافه شد و مجموع سبد خرید شما ${ShoppingCart} میباشد `)
+
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // const dtp1Instance = new mds.MdsPersianDateTimePicker(document.getElementById('dtp1'), {
+        //     targetTextSelector: '[data-name="dtp1-text"]',
+        //     targetDateSelector: '[data-name="dtp1-date"]',
+        //     persianNumber: true,
+        //     enableTimePicker: true,
+        //     isGregorian: false
+
+        // });
     </script>
 @endsection
