@@ -505,11 +505,11 @@ h6 {
     background-color: var(--clr-secondary);
 }
 .banner {
-    background-image: url("../../../public/images/orginal-banner9-3.png");
+    background-image: url("../../../public/images/orginal-banner9-75.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 58vh;
+    height: 50vh;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
@@ -2514,9 +2514,10 @@ float: right;
         display: none;
     }
     .banner {
-        background-image: url("../../../public/images/orginal-banner9-6.png");
+        background-image: url("../../../public/images/orginal-banner9mobile-min57.png");
         background-size: cover;
-        background-position: top;
+        background-position: center;
+        height: 58vh;
     }
     .quick-service-icons li {
         border-right: none;

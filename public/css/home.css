@@ -597,11 +597,11 @@ h6 {
 }
 
 .banner {
-  background-image: url(/images/orginal-banner9-3.png?28262bb86b183f92956ed158eb0f1287);
+  background-image: url(/images/orginal-banner9-75.png?8de5615e0dd0a964be79263af5f66978);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 58vh;
+  height: 50vh;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
@@ -2752,9 +2752,10 @@ footer p span {
   }
 
   .banner {
-    background-image: url(/images/orginal-banner9-6.png?c1a898aa7bc0005eabf9eb75c98856ae);
+    background-image: url(/images/orginal-banner9mobile-min57.png?6074fd4463008ca6a839db608d4764bb);
     background-size: cover;
-    background-position: top;
+    background-position: center;
+    height: 58vh;
   }
 
   .quick-service-icons li {
