@@ -18,8 +18,13 @@
                         </ul>
                         <!-- fieldsets -->
                         <?php
-                        
-                        $getParents = App\Models\Category::where('parent_id', 0)->get();
+
+                        $getParents = App\Models\Category::where('parent_id', 0)
+                            ->with('children', 'attributes')
+                            ->get();
+                        $getChildren = App\Models\Category::where('parent_id', '!=', 0)
+                            ->with('attributes', 'tagCategories')
+                            ->get();
                         ?>
                         <fieldset>
                             <h2 id="heading">انتخاب خدمات</h2>
@@ -38,38 +43,33 @@
                                                             <div
                                                                 class="row  d-flex justify-content-center pricing-box-Shadow">
                                                                 <div class="col-12    ">
-                                                                    <select class="form-select my-5 mx-auto w-50 w-lg-25"
-                                                                        id="dynamicSelection">
+                                                                    <select id="select"
+                                                                        class="form-select my-5 mx-auto w-50 w-lg-25">
                                                                         <option selected>انتخاب پکیچ ها</option>
 
-                                                                        @foreach ($category->children as $child)
-                                                                            <option value="{{ $child->id }}">
-                                                                                {{ $child->name }}</option>
+                                                                        @foreach ($getChildren as $child)
+                                                                            @if ($child->parent_id == $category->id)
+                                                                                <option value="{{ $child->id }}">
+                                                                                    {{ $child->name }}</option>
+                                                                            @endif
                                                                         @endforeach
                                                                     </select>
-                                                                    {{-- this should be dynamic --}}
                                                                     <div class="col-12">
-                                                                        <div class="row" id="mainRow">
-                                                                            {{-- <h6 class="mx-auto d-md-none mt-3 ">حالت دوربین
-                                                                            </h6> --}}
-                                                                            {{-- <hr class="aaa w-50 d-md-none mb-4"> --}}
+                                                                        <div class="row">
+                                                                            <h6 class="mx-auto d-md-none mt-3 ">حالت دوربین
+                                                                            </h6>
+                                                                            <hr class="aaa w-50 d-md-none mb-4">
 
-                                                                            <div class="col-10 col-md-6  col-lg-4 bg-secendory">
+                                                                            <div
+                                                                                class="col-10 col-md-6  col-lg-4 bg-secendory">
                                                                                 <div class=" d-md-flex flex-column d-none">
                                                                                     <h6 class="mx-auto ">حالت دوربین
                                                                                     </h6>
                                                                                     <hr class="aaa w-50 mx-auto mt-0">
                                                                                 </div>
 
-                                                                                <div class="form-check m-2 ">
-                                                                                    <input
-                                                                                        class="form-check-input float-right-checkbox"
-                                                                                        type="checkbox" value=""
-                                                                                        id="flexCheckDefault4" />
-                                                                                    <label
-                                                                                        class="form-check-label float-right-checkbox"
-                                                                                        for="flexCheckDefault4">
-                                                                                        دوریبن ثابت: (ساعتی: 1000M) </label>
+                                                                                <div id="push" class="form-check m-2 ">
+
                                                                                 </div>
 
 
@@ -94,35 +94,7 @@
 
 
 
-                                                                                <div class="1 form-check m-1"> <label
-                                                                                        for="tentacles1"
-                                                                                        class="ccustom-margin">
-                                                                                        مدت زمان
-                                                                                        درخواستی
-                                                                                    </label>
-                                                                                    <input type="number" id="tentacles1"
-                                                                                        name="tentacles" min="1" max="10"
-                                                                                        value="1" class="text-center">
-                                                                                    <span>ساعت</span>
-                                                                                </div>
-                                                                                <div class="2 form-check m-1"> <label
-                                                                                        for="tentacles2"
-                                                                                        class="ccustom-margin">
-                                                                                        مدت زمان
-                                                                                        درخواستی</label>
-                                                                                    <input type="number" id="tentacles2"
-                                                                                        name="tentacles" min="1" max="10"
-                                                                                        value="1" class="text-center">
-                                                                                    <span>ساعت</span>
-                                                                                </div>
-                                                                                <div class="3 form-check m-1"> <label
-                                                                                        for="tentacles3"
-                                                                                        class="ccustom-margin">مدت زمان
-                                                                                        درخواستی</label>
-                                                                                    <input type="number" id="tentacles3"
-                                                                                        name="tentacles" min="1" max="10"
-                                                                                        value="1" class="text-center">
-                                                                                    <span>ساعت</span>
+                                                                                <div id="pushHour" class="1 form-check m-1">
                                                                                 </div>
                                                                             </div>
 
@@ -140,35 +112,9 @@
                                                                                     </h6>
                                                                                     <hr class="aaa w-50 mx-auto mt-0">
                                                                                 </div>
-                                                                                <div
-                                                                                    class=" m-2  form-check d-flex justify-content-md-around justify-content-md-start  custom-border mt-md-4 mt-lg-0">
-                                                                                    <label for="tentacles3 "
-                                                                                        class="ccustom-margin"> تعداد دوربین
-                                                                                        : ثابت</label>
-                                                                                    <input type="number" id="tentacles3"
-                                                                                        class=" text-center h-25 border-custom"
-                                                                                        name="tentacles t" min="1" max="10"
-                                                                                        value="1" class="text-center">
-                                                                                </div>
-                                                                                <div
-                                                                                    class=" m-2  form-check d-flex justify-content-md-around justify-content-md-start ">
-                                                                                    <label for="tentacles4 "
-                                                                                        class="ccustom-margin"> تعداد دوربین
-                                                                                        حرکتی</label>
-                                                                                    <input type="number" id="tentacles4"
-                                                                                        class=" text-center h-25 border-custom"
-                                                                                        name="tentacles" min="1" max="10"
-                                                                                        value="1" class="text-center">
-                                                                                </div>
-                                                                                <div
-                                                                                    class=" m-2  form-check d-flex justify-content-md-around justify-content-md-start ">
-                                                                                    <label for="tentacles5 "
-                                                                                        class="ccustom-margin"> تعداد دوربین
-                                                                                        : کرین</label>
-                                                                                    <input type="number" id="tentacles5"
-                                                                                        class=" text-center h-25 border-custom"
-                                                                                        name="tentacles" min="1" max="10"
-                                                                                        value="1" class="text-center">
+                                                                                <div id="pushOptionAttr"
+                                                                                    {{-- class=" m-2  form-check d-flex justify-content-md-around justify-content-md-start  custom-border mt-md-4 mt-lg-0" --}}>
+
                                                                                 </div>
 
 
@@ -190,19 +136,17 @@
                                                                             <div
                                                                                 class="col-10 col-md-6  col-lg-4 mt-2 text-justify mt-3 d-flex ">
 
-                                                                                @foreach ($category->tagCategories as $tags)
-                                                                                    <div
-                                                                                        class="form-check m-2 d-child-flex">
-                                                                                        <input
-                                                                                            class="form-check-input float-right-checkbox"
-                                                                                            type="checkbox" value=""
-                                                                                            id="flexCheckDefault1" />
-                                                                                        <label
-                                                                                            class="form-check-label float-right-checkbox"
-                                                                                            for="flexCheckDefault1">
-                                                                                            {{ $tags->name }}</label>
-                                                                                    </div>
-                                                                                @endforeach
+                                                                                <div id="pushTags"
+                                                                                    class="form-check m-2 d-child-flex">
+                                                                                    <input
+                                                                                        class="form-check-input float-right-checkbox"
+                                                                                        type="checkbox" value=""
+                                                                                        id="flexCheckDefault1" />
+                                                                                    <label
+                                                                                        class="form-check-label float-right-checkbox"
+                                                                                        for="flexCheckDefault1">
+                                                                                    </label>
+                                                                                </div>
 
                                                                                 <!-- Checked checkbox -->
 
@@ -477,6 +421,108 @@
                 setProgressBar(++current);
             });
 
+            let attributes = @json($getChildren);
+
+            $("select").change(function() {
+
+                $("#push").empty();
+                $("#pushHour").empty();
+                $("#pushOptionAttr").empty();
+                $("#pushTags").empty();
+                var getId = $(this).children("option:selected").val();
+                attributes.forEach(element => {
+                    let getAttributes = [];
+                    if (element.id == getId) {
+
+                        element.tag_categories.forEach(element => {
+                            getAttributes.push(element);
+
+                            let PushTagsInput = $("<input/>", {
+
+                                class: "form-check-input float-right-checkbox",
+                                type: "checkbox",
+
+                            });
+
+                            let PushTagsLabel = $("<label/>", {
+
+                                value: element.id,
+                                text: element.name,
+                                class: "form-check-label float-right-checkbox"
+
+
+                            });
+
+                            $("#pushTags").append(PushTagsInput, PushTagsLabel, "<br/>");
+
+                        });
+
+                        element.attributes.forEach(element => {
+                            // getAttributes.push(element);
+                            // console.log(element.);
+                            let createAttr = $("<label/>", {
+
+                                value: element.id,
+                                text: element.name + "(" + element.price + ")"
+
+                            });
+                            let createCheckBox = $("<input/>", {
+                                type: "checkbox"
+
+                            }).addClass('form-check-label float-right-checkbox');
+
+                            let hourlabel = $("<label/>", {
+
+                                text: "مدت زمان درخواستی"
+
+                            });
+
+                            let hourInput = $("<input/>", {
+
+                                type: "number",
+                                id: "tentacles1",
+                                name: "tentacles",
+                                min: "1",
+                                max: "10",
+                                value: "1",
+                                class: "text-center",
+                            });
+
+                            let hourSpan = $("<span/>", {
+
+                                text: "ساعت"
+
+                            });
+
+                            let optionAttrLabel = $("<label/>", {
+
+                                text: "تعداد دوربین" + "(" + element.name + ")"
+
+                            });
+
+                            let optionAttrInput = $("<input/>", {
+
+                                type: "number",
+                                class: "text-center h-25 border-custom",
+                                min: "1",
+                                max: "10",
+                                value: "1"
+
+                            });
+
+                            $("#push").append(createCheckBox, createAttr, "<br/>");
+                            $("#pushHour").append(hourlabel, hourInput, hourSpan, "<br/>");
+                            $("#pushOptionAttr").append(optionAttrLabel, optionAttrInput,
+                                "<br/>");
+                        });
+
+                        console.log(getAttributes);
+
+                    }
+                });
+            });
+
+
             $(".previous").click(function() {
 
                 current_fs = $(this).parent();
@@ -540,62 +586,63 @@
         }
 
         // ****************(Select beetween option  part 1   )***********************
-        // let ShoppingCart = 0
+        let ShoppingCart = 0
         // ****** site section  variable ********
-        // let PhotographySelection = document.getElementById('PhotographySelection')
-        // let CartBtnPhotography = document.getElementById('CartBtnPhotography')
-        // let gold = document.getElementById('gold')
-        // let bronze = document.getElementById('bronze')
-        // let silver = document.getElementById('silver')
-        // CartBtnPhotography.addEventListener('click', CartBtnPhotographyFunc)
-        // PhotographySelection.addEventListener('click', PhotographyFunc)
+        let PhotographySelection = document.getElementById('PhotographySelection')
+        let CartBtnPhotography = document.getElementById('CartBtnPhotography')
+        let gold = document.getElementById('gold')
+        let bronze = document.getElementById('bronze')
+        let silver = document.getElementById('silver')
+        CartBtnPhotography.addEventListener('click', CartBtnPhotographyFunc)
+        PhotographySelection.addEventListener('click', PhotographyFunc)
 
-        // function PhotographyFunc() {
-        //     if (PhotographySelection.value == 1) {
-        //         bronze.classList.add('d-block');
-        //         bronze.classList.remove('d-none');
-        //         silver.classList.add('d-none');
-        //         gold.classList.add('d-none');
-        //     } else if (PhotographySelection.value == 2) {
-        //         silver.classList.add('d-block');
-        //         silver.classList.remove('d-none');
-        //         bronze.classList.add('d-none');
-        //         gold.classList.add('d-none');
-        //     } else if (PhotographySelection.value == 3) {
-        //         gold.classList.add('d-block');
-        //         gold.classList.remove('d-none');
-        //         bronze.classList.add('d-none');
-        //         silver.classList.add('d-none');
-        //     }
+        function PhotographyFunc() {
+            if (PhotographySelection.value == 1) {
+                bronze.classList.add('d-block');
+                bronze.classList.remove('d-none');
+                silver.classList.add('d-none');
+                gold.classList.add('d-none');
+            } else if (PhotographySelection.value == 2) {
+                silver.classList.add('d-block');
+                silver.classList.remove('d-none');
+                bronze.classList.add('d-none');
+                gold.classList.add('d-none');
+            } else if (PhotographySelection.value == 3) {
+                gold.classList.add('d-block');
+                gold.classList.remove('d-none');
+                bronze.classList.add('d-none');
+                silver.classList.add('d-none');
+            }
 
-        // }
+        }
 
-        // function CartBtnPhotographyFunc(event) {
-        //     event.preventDefault();
-        //     if (PhotographySelection.value == 1) {
-        //         ShoppingCart = ShoppingCart + 10
-        //         console.log(ShoppingCart)
-        //         alert(`    پکیج برنزی با قیمت ۱۰ به سبد خرید شما اضافه شد و مجموع سبد خرید شما ${ShoppingCart} میباشد `)
+        function CartBtnPhotographyFunc(event) {
+            event.preventDefault();
+            if (PhotographySelection.value == 1) {
+                ShoppingCart = ShoppingCart + 10
+                console.log(ShoppingCart)
+                alert(`    پکیج برنزی با قیمت ۱۰ به سبد خرید شما اضافه شد و مجموع سبد خرید شما ${ShoppingCart} میباشد `)
 
-        //     } else if (PhotographySelection.value == 2) {
-        //         ShoppingCart = ShoppingCart + 100
-        //         console.log(ShoppingCart)
-        //         alert(`    پکیج برنزی با قیمت ۱۰۰ به سبد خرید شما اضافه شد و مجموع سبد خرید شما ${ShoppingCart} میباشد `)
+            } else if (PhotographySelection.value == 2) {
+                ShoppingCart = ShoppingCart + 100
+                console.log(ShoppingCart)
+                alert(`    پکیج برنزی با قیمت ۱۰۰ به سبد خرید شما اضافه شد و مجموع سبد خرید شما ${ShoppingCart} میباشد `)
 
-        //     } else if (PhotographySelection.value == 3) {
-        //         ShoppingCart = ShoppingCart + 1000
-        //         console.log(ShoppingCart)
-        //         alert(`    پکیج برنزی با قیمت ۱۰۰۰ به سبد خرید شما اضافه شد و مجموع سبد خرید شما ${ShoppingCart} میباشد `)
+            } else if (PhotographySelection.value == 3) {
+                ShoppingCart = ShoppingCart + 1000
+                console.log(ShoppingCart)
+                alert(`    پکیج برنزی با قیمت ۱۰۰۰ به سبد خرید شما اضافه شد و مجموع سبد خرید شما ${ShoppingCart} میباشد `)
 
-        //     }
+            }
 
-        // }
+        }
 
         const dtp1Instance = new mds.MdsPersianDateTimePicker(document.getElementById('dtp1'), {
             targetTextSelector: '[data-name="dtp1-text"]',
             targetDateSelector: '[data-name="dtp1-date"]',
             persianNumber: true,
         });
+<<<<<<< HEAD
 
 
 
@@ -630,5 +677,7 @@
          
 
         }
+=======
+>>>>>>> 5182f70cfe37a37b2499060c137051db5e41d6aa
     </script>
 @endsection
