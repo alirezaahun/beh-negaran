@@ -602,23 +602,32 @@
 //dynamic js
         let mainRow = document.getElementById('mainRow')
         let h6 = document.createElement("h6");
-        let hr=document.createElement("hr");
-        let div=document.createElement("div");
-
+        h6.classList.add('mx-auto','d-md-none' , 'mb-4');
         h6.innerText = 'حالت دوربین'
+        let hr=document.createElement("hr");
+        hr.classList.add('aaa', 'w-50', 'd-md-none', 'mb-4');
+        let div=document.createElement("div");
+        div.classList.add('col-10', 'col-md-6', 'col-lg-4','bg-secendory');
+
+      
 
         // dynamic js
         let dynamicSelection = document.getElementById('dynamicSelection')
         dynamicSelection.addEventListener('click', dynamicSelectionFunc)
 
         function dynamicSelectionFunc() {
-            if (dynamicSelection.value == 2)
+            if (dynamicSelection.value == 2){
             mainRow.appendChild(h6)
-            h6.classList.add('mx-auto',  'mb-4');
             mainRow.appendChild(hr)
-            hr.classList.add('aaa', 'w-50', 'mb-4');
             mainRow.appendChild(div)
-            div.classList.add('col-10', 'col-md-6', 'col-lg-4','bg-secendory');
+          
+            }else if(dynamicSelection.value == 'انتخاب پکیچ ها'){
+                let p=document.createElement("p");
+                p.innerText='test'
+                mainRow.appendChild(p)
+
+            }
+         
 
         }
     </script>
