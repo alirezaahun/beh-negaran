@@ -347,23 +347,26 @@
 
                         <div class="col-md-6 col-sm-12">
                             <ul>
-                                <li><span class="text-secondary">نام شرکت</span>
-                                    <h6>به نگاران تجارت آزما</h6>
-                                    <i id="modalBtn6" class="fas fa-edit"></i>
+                                <li><span class="text-secondary">استان و شهرستان</span>
+                                    <h6>البرز، کرج</h6>
+                                    <i id="modalBtn10" class="fas fa-edit"></i>
                                     <!-- The Modal -->
-                                    <div id="myModal6" class="modal">
+                                    <div id="myModal10" class="modal">
                                         <!-- Modal content -->
                                         <div class="modal-content">
                                             <span class="close">&times;</span>
                                             <div class="modal-body">
-                                                <p class="text-secondary">لطفا اطلاعات شرکت خود را وارد کنید. نام شرکت
+                                                <p class="text-secondary">لطفا اطلاعات شرکت خود را وارد کنید. محل کار شرکت
                                                     باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
                                                 <form action="">
                                                    
                                                     <div class="form-group">
-                                                        <label for="companyName">نام شرکت</label>
-                                                        <input type="text" name="company-name" class="form-control" id="companyName"
-                                                            placeholder="نام شرکت">
+                                                        <label for="companyState">استان</label>
+                                                        <input type="text" name="company-state" class="form-control" id="companyState"
+                                                            placeholder="استان شرکت">
+                                                            <label for="companyCity">شهرستان</label>
+                                                            <input type="text" name="company-city" class="form-control" id="companyCity"
+                                                            placeholder="شهرستان شرکت">
                                                     </div>
 
                                                     <button type="submit" class="secondary-btn">ذخیره</button>
@@ -374,22 +377,23 @@
                                     <hr>
                                 </li>
 
-                                <li><span class="text-secondary">شماره ثبت</span>
-                                    <h6>۱۲۳۴۵۶۷۸۹</h6>
-                                    <i id="modalBtn7" class="fas fa-edit"></i>
+                                <li><span class="text-secondary">آدرس</span>
+                                    <h6>کرج،میدان سپاه به سمت سه راه
+                                        گوهردشت،خ گلستان</h6>
+                                    <i id="modalBtn11" class="fas fa-edit"></i>
                                     <!-- The Modal -->
-                                    <div id="myModal7" class="modal">
+                                    <div id="myModal11" class="modal">
                                         <!-- Modal content -->
                                         <div class="modal-content">
                                             <span class="close">&times;</span>
                                             <div class="modal-body">
-                                                <p class="text-secondary">لطفا اطلاعات شرکت خود را وارد کنید. شماره ثبت
+                                                <p class="text-secondary">لطفا اطلاعات شرکت خود را وارد کنید. آدرس 
                                                     شرکت شما باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
                                                 <form action="">
                                                     <div class="form-group">
-                                                        <label for="submitNumber">شماره ثبت</label>
-                                                        <input type="text" class="form-control" id="submitNumber"
-                                                            placeholder="شماره ثبت شرکت">
+                                                        <label for="companyAddress">آدرس</label>
+                                                        <input type="text" class="form-control" id="companyAddress"
+                                                            placeholder="آدرس شرکت">
                                                     </div>
                                                     <button type="submit" class="secondary-btn">ذخیره</button>
                                                 </form>
@@ -399,22 +403,22 @@
                                     <hr>
                                 </li>
 
-                                <li><span class="text-secondary">شماره ملی</span>
+                                <li><span class="text-secondary">کد پستی</span>
                                     <h6>۱۲۳۴۵۶۷۸۹</h6>
-                                    <i id="modalBtn8" class="fas fa-edit"></i>
+                                    <i id="modalBtn12" class="fas fa-edit"></i>
                                     <!-- The Modal -->
-                                    <div id="myModal8" class="modal">
+                                    <div id="myModal12" class="modal">
                                         <!-- Modal content -->
                                         <div class="modal-content">
                                             <span class="close">&times;</span>
                                             <div class="modal-body">
-                                                <p class="text-secondary">لطفا اطلاعات شرکت خود را وارد کنید. شماره ملی 
+                                                <p class="text-secondary">لطفا اطلاعات شرکت خود را وارد کنید. کدپستی  
                                                     شرکت شما باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
                                                 <form action="">
                                                     <div class="form-group">
-                                                        <label for="companyNationalNumber">شماره ملی</label>
-                                                        <input type="text" class="form-control" id="companyNationalNumber"
-                                                            placeholder="شماره ملی شرکت">
+                                                        <label for="companyPostalCode">کد پستی</label>
+                                                        <input type="text" class="form-control" id="companyPostalCode"
+                                                            placeholder="کد پستی شرکت">
                                                     </div>
 
                                                     <button type="submit" class="secondary-btn">ذخیره</button>
@@ -426,22 +430,22 @@
                                     <hr>
                                 </li>
 
-                                <li><span class="text-secondary">کد اقتصادی</span>
-                                    <h6>۱۲۳۴۵۶۷۸۹</h6>
-                                    <i id="modalBtn9" class="fas fa-edit"></i>
+                                <li><span class="text-secondary">شماره تلفن</span>
+                                    <h6>۰۲۶۳۱۱۱۲۲۳۳</h6>
+                                    <i id="modalBtn13" class="fas fa-edit"></i>
                                     <!-- The Modal -->
-                                    <div id="myModal9" class="modal">
+                                    <div id="myModal13" class="modal">
                                         <!-- Modal content -->
                                         <div class="modal-content">
                                             <span class="close">&times;</span>
                                             <div class="modal-body">
-                                                <p class="text-secondary">لطفا اطلاعات شرکت خود را وارد کنید. کد اقتصادی 
+                                                <p class="text-secondary">لطفا اطلاعات شرکت خود را وارد کنید. شماره تلفن  
                                                     شرکت شما باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
                                                 <form action="">
                                                     <div class="form-group">
-                                                        <label for="marketCode">کد اقتصادی</label>
+                                                        <label for="marketCode">شماره تلفن</label>
                                                         <input type="text" class="form-control" id="marketCode"
-                                                            placeholder="کد اقتصادی شرکت">
+                                                            placeholder="شماره تلفن شرکت">
                                                     </div>
 
                                                     <button type="submit" class="secondary-btn">ذخیره</button>
@@ -587,6 +591,10 @@
             [document.getElementById("modalBtn7"), document.getElementById("myModal7")],
             [document.getElementById("modalBtn8"), document.getElementById("myModal8")],
             [document.getElementById("modalBtn9"), document.getElementById("myModal9")],
+            [document.getElementById("modalBtn10"), document.getElementById("myModal10")],
+            [document.getElementById("modalBtn11"), document.getElementById("myModal11")],
+            [document.getElementById("modalBtn12"), document.getElementById("myModal12")],
+            [document.getElementById("modalBtn13"), document.getElementById("myModal13")],
         ]);
 
         datamap.forEach((value, key) => {

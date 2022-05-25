@@ -2773,11 +2773,12 @@ footer p span {
     background-image: url(/images/orginal-banner9mobile-min57.png?cd28dee8745cf9eefbd9b9e6009ffb7f);
     background-size: cover;
     background-position: center;
-    height: 58vh;
+    height: 55vh;
   }
 
   .banner-inner {
     width: 80%;
+    padding: 0.4rem 0.5rem 0.1rem 0.5rem;
   }
 
   .banner-inner h1 {
