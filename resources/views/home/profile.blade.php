@@ -56,6 +56,7 @@
                             </div>
                         </div>
 
+                        <div id="realUser" class="row m-0 p-0">
                         <div class="col-md-6 col-sm-12">
                             <ul>
                                 <li><span class="text-secondary">نام</span>
@@ -227,8 +228,101 @@
                             </ul>
                         </div>
 
-                        
-                        
+
+                    </div>
+
+                    <div id="companyUser" class="row m-0 p-0">
+                        <div class="col-md-6 col-sm-12">
+                            <ul>
+                                <li><span class="text-secondary">نام</span>
+                                    <h6>{{ $user->name }}</h6>
+                                    <i id="modalBtn" class="fas fa-edit"></i>
+                                    <!-- The Modal -->
+                                    <div id="myModal" class="modal">
+                                        <!-- Modal content -->
+                                        <div class="modal-content">
+                                            <span class="close">&times;</span>
+                                            <div class="modal-body">
+                                                <p class="text-secondary">لطفا اطلاعات شناسایی خود را وارد کنید. نام شما
+                                                    باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
+                                                <form action="{{ route('home.editprofile', ['id' => $user->id]) }}" ,
+                                                    method="POST">
+                                                    @csrf
+                                                    @method('put')
+                                                    <div class="form-group">
+                                                        <label for="firstName">نام</label>
+                                                        <input type="text" name="name" class="form-control" id="firstName"
+                                                            placeholder="نام شما">
+                                                    </div>
+
+                                                    <button type="submit" class="secondary-btn">ذخیره</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                </li>
+
+                                <li><span class="text-secondary">نام خانوادگی</span>
+                                    <h6>ناصحی ارجمند</h6>
+                                    <i id="modalBtn1" class="fas fa-edit"></i>
+                                    <!-- The Modal -->
+                                    <div id="myModal1" class="modal">
+                                        <!-- Modal content -->
+                                        <div class="modal-content">
+                                            <span class="close">&times;</span>
+                                            <div class="modal-body">
+                                                <p class="text-secondary">لطفا اطلاعات شناسایی خود را وارد کنید. نام
+                                                    خانوادگی شما باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
+                                                <form action="">
+                                                    <div class="form-group">
+                                                        <label for="lastName">نام خانوادگی</label>
+                                                        <input type="text" class="form-control" id="lastName"
+                                                            placeholder="نام خانوادگی شما">
+                                                    </div>
+                                                    <button type="submit" class="secondary-btn">ذخیره</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                </li>
+
+                                <li><span class="text-secondary">شماره موبایل</span>
+                                    <h6>{{ $user->cellphone }}</h6>
+                                    <i id="modalBtn2" class="fas fa-edit"></i>
+                                    <!-- The Modal -->
+                                    <div id="myModal2" class="modal">
+                                        <!-- Modal content -->
+                                        <div class="modal-content">
+                                            <span class="close">&times;</span>
+                                            <div class="modal-body">
+                                                <p class="text-secondary">برای ثبت این شماره باید آن را تایید کنید.</p>
+                                                <form id="loginForm" action="">
+                                                    <div class="form-group">
+                                                        <label for="mobileNumber">شماره موبایل</label>
+                                                        <input type="text" class="form-control" id="phoneInput"
+                                                            placeholder="۰۹۱۲۱۱۱۲۲۳۳">
+                                                    </div>
+
+                                                    <button type="submit" class="secondary-btn">ذخیره</button>
+                                                </form>
+                                                <form id="OTPinput" action="">
+                                                    <div class="form-group">
+                                                        <label for="mobileNumber">شماره موبایل</label>
+                                                        <input type="text" class="form-control" id="codeInput"
+                                                            placeholder="کد">
+                                                    </div>
+
+                                                    <button type="submit" class="secondary-btn">ذخیره</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
 
                     </div>
 
@@ -316,7 +410,20 @@
 
         });
 
+        $(document).ready(function() {
+            $("#companyUser").hide(); 
+            $('#i').change(function() {
+               
+                if ($(this).is(':checked')) {
+                    $('#companyUser').fadeIn("slow").toggleClass("hidden");
+                    $('#realUser').fadeOut("slow").toggleClass("hidden");
+                } else {
+                    $('#realUser').fadeIn("slow").toggleClass("hidden");
+                    $('#companyUser').fadeOut("slow").toggleClass("hidden");
+                }
+            });
 
+        });
 
         var coll = document.getElementsByClassName("order-details");
         var i;
