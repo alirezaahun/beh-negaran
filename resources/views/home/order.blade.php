@@ -52,10 +52,9 @@
                                                                         <div class="row" id="mainRow">
                                                                             {{-- <h6 class="mx-auto d-md-none mt-3 ">حالت دوربین
                                                                             </h6> --}}
-                                                                            <hr class="aaa w-50 d-md-none mb-4">
+                                                                            {{-- <hr class="aaa w-50 d-md-none mb-4"> --}}
 
-                                                                            <div
-                                                                                class="col-10 col-md-6  col-lg-4 bg-secendory">
+                                                                            <div class="col-10 col-md-6  col-lg-4 bg-secendory">
                                                                                 <div class=" d-md-flex flex-column d-none">
                                                                                     <h6 class="mx-auto ">حالت دوربین
                                                                                     </h6>
@@ -603,6 +602,10 @@
 //dynamic js
         let mainRow = document.getElementById('mainRow')
         let h6 = document.createElement("h6");
+        let hr=document.createElement("hr");
+        let div=document.createElement("div");
+
+        h6.innerText = 'حالت دوربین'
 
         // dynamic js
         let dynamicSelection = document.getElementById('dynamicSelection')
@@ -610,8 +613,12 @@
 
         function dynamicSelectionFunc() {
             if (dynamicSelection.value == 2)
-                mainRow.append(h6.TextContent = 'حالت دوربین')
-            h6.classList.add('mx-auto', 'd-none', 'mb-4');
+            mainRow.appendChild(h6)
+            h6.classList.add('mx-auto',  'mb-4');
+            mainRow.appendChild(hr)
+            hr.classList.add('aaa', 'w-50', 'mb-4');
+            mainRow.appendChild(div)
+            div.classList.add('col-10', 'col-md-6', 'col-lg-4','bg-secendory');
 
         }
     </script>
