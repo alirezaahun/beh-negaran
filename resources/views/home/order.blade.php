@@ -20,7 +20,6 @@
                         <?php
 
                         $getParents = App\Models\Category::where('parent_id' , 0)->get();
-
                         ?>
                         <fieldset>
                             <h2 id="heading">انتخاب خدمات</h2>
@@ -44,7 +43,7 @@
 
                                                                     @foreach ($category->children as $child)
 
-                                                                    <option value="1">{{$child->name}}</option>
+                                                                    <option value="{{$child->id}}">{{$child->name}}</option>
 
                                                                     @endforeach
                                                                 </select>
@@ -60,18 +59,15 @@
                                                                                 <hr class="aaa w-50 mx-auto mt-0">
                                                                             </div>
 
-                                                                            @foreach ($category->attributes as $attribute)
-
                                                                             <div class="form-check m-2 ">
                                                                                 <input class="form-check-input float-right-checkbox"
                                                                                     type="checkbox" value=""
                                                                                     id="flexCheckDefault4" />
                                                                                 <label class="form-check-label float-right-checkbox"
                                                                                     for="flexCheckDefault4">
-                                                                                     {{$attribute->name}}: (ساعتی: {{$attribute->price}}) </label>
+                                                                                    دوریبن ثابت: (ساعتی: 1000M) </label>
                                                                             </div>
 
-                                                                            @endforeach
 
                                                                         </div>
 
