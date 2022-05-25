@@ -2989,6 +2989,10 @@ footer p span {
     text-overflow: ellipsis;
   }
 
+  .c-type-trigger {
+    margin-right: 0.6rem;
+  }
+
   .costume-container {
     padding-top: 1rem;
   }
