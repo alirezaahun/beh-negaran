@@ -35,8 +35,9 @@
 
                                         @foreach ($getParents as $category)
                                             <div class="tabby-tab">
-                                                <input type="radio" id="{{$category->id}}" name="tabby-tabs" checked>
-                                                <label class="gg" for="{{$category->id}}">{{ $category->name }}</label>
+                                                <input type="radio" id="{{ $category->id }}" name="tabby-tabs" checked>
+                                                <label class="gg"
+                                                    for="{{ $category->id }}">{{ $category->name }}</label>
                                                 <div class="tabby-content">
                                                     <div class="col-12 d-flex d-flex justify-content-center  mt-5">
                                                         <div class="col-12 col-md-10">
@@ -45,17 +46,20 @@
                                                                 <div class="col-12    ">
                                                                     <select id="select"
                                                                         class="form-select my-5 mx-auto w-50 w-lg-25">
-                                                                        <option selected>انتخاب پکیچ ها</option>
+                                                                        <option id="{{ $category->id }}" selected>انتخاب
+                                                                            پکیچ ها</option>
 
                                                                         @foreach ($getChildren as $child)
                                                                             @if ($child->parent_id == $category->id)
-                                                                                <option value="{{ $child->id }}">
+                                                                                <option id="{{ $child->parent_id }}"
+                                                                                    value="{{ $child->id }}">
                                                                                     {{ $child->name }}</option>
                                                                             @endif
                                                                         @endforeach
                                                                     </select>
                                                                     <div class="col-12">
-                                                                        <div class="row">
+                                                                        <div id="{{ $category->id }}"
+                                                                            class="row">
                                                                             <h6 class="mx-auto d-md-none mt-3 ">حالت دوربین
                                                                             </h6>
                                                                             <hr class="aaa w-50 d-md-none mb-4">
@@ -68,7 +72,8 @@
                                                                                     <hr class="aaa w-50 mx-auto mt-0">
                                                                                 </div>
 
-                                                                                <div id="push" class="form-check m-2 ">
+                                                                                <div id="push{{ $category->id }}"
+                                                                                    class="form-check m-2 ">
 
                                                                                 </div>
 
@@ -94,7 +99,8 @@
 
 
 
-                                                                                <div id="pushHour" class="1 form-check m-1">
+                                                                                <div id="pushHour{{ $category->id }}"
+                                                                                    class="1 form-check m-1">
                                                                                 </div>
                                                                             </div>
 
@@ -112,7 +118,7 @@
                                                                                     </h6>
                                                                                     <hr class="aaa w-50 mx-auto mt-0">
                                                                                 </div>
-                                                                                <div id="pushOptionAttr"
+                                                                                <div id="pushOptionAttr{{ $category->id }}"
                                                                                     {{-- class=" m-2  form-check d-flex justify-content-md-around justify-content-md-start  custom-border mt-md-4 mt-lg-0" --}}>
 
                                                                                 </div>
@@ -136,7 +142,7 @@
                                                                             <div
                                                                                 class="col-10 col-md-6  col-lg-4 mt-2 text-justify mt-3 d-flex ">
 
-                                                                                <div id="pushTags"
+                                                                                <div id="pushTags{{ $category->id }}"
                                                                                     class="form-check m-2 d-child-flex">
                                                                                     <input
                                                                                         class="form-check-input float-right-checkbox"
@@ -382,528 +388,87 @@
                                     </div>
                                 </div>
                             </div>
-                            <input type="button" name="next" id="giveInformation" class="next action-button" value="Next" /> <input
-                                type="button" name="previous" class="previous action-button-previous" value="Previous" />
+
+
+
+
+
+
+
+
+
+
+
+
+                            <input type="button" name="next" id="giveInformation" class="next action-button"
+                                value="Next" /> <input type="button" name="previous"
+                                class="previous action-button-previous" value="Previous" />
                         </fieldset>
                         <fieldset>
-                            <div class="card col-6 mx-auto " id="test">
-                                <div class="d-flex card-header justify-content-between p-3">
-                                    <div class="">جز</div>
-                                    <div class=""> کل</div>
-                                </div>
-                                <div class="card-body p-0 ">
-                                    <ul class="list-group list-group-flush">
-                                        <div class="list-group-item d-flex justify-content-between p-3">
-                                            <div class="">عکاسی</div>
-                                            <div class=""> 1500 </div>
-                                        </div>
-                                        <div class="list-group-item d-flex justify-content-between p-3">
-                                            <div class="">فیلم</div>
-                                            <div class=""> 2500</div>
-                                        </div>
-                                        <div class="list-group-item d-flex justify-content-between p-3">
-                                            <div class=""> طراحی سایت</div>
-                                            <div class="">3500</div>
-                                        </div>
-                                        <div class="list-group-item d-flex justify-content-between p-3">
-                                            <div class=""> طراحی سایت</div>
-                                            <div class="">3500</div>
-                                        </div>
-                                        <div class="list-group-item d-flex justify-content-between p-3">
-                                            <div class=""> طراحی سایت</div>
-                                            <div class="">3500</div>
-                                        </div>
-                                        <div class="d-flex card-header justify-content-between p-3">
-                                            <div class=""> جمع کل</div>
-                                            <div class=""> 10000</div>
-                                        </div>
-
-                                    </ul>
-                                </div>
-                                <div class="card-footer  w-100   p-3">
-                                    <a href="#" class="card-link d-block"> پرداخت</a>
-                                </div>
-                            </div>
 
 
 
-                            <div class="container-fluid costume-container">
-                                {{-- All The Dynamic Content --}} 
-                                <div id="dynamic-content" class="row">
-                
-                                    <div id="user-profile" class="row tab_content">
-                
-                                        {{-- User Type CheckBox --}} 
-                                        <div class="c-type-trigger mb-5 d-flex justify-content-start align-items-center">
-                                            <input class="checkbox" type="checkbox" id="i">
-                
-                                            <label class="checkbox-label" for="i">
-                                            </label>
-                                            <div class="checkbox__text">
-                                                <span>کاربر</span>
-                                                <div class="checkbox__text--options">
-                                                    <span class="on text-secondary">حقوقی</span>
-                                                    <span class="off text-secondary">حقیقی</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                
-                                        {{-- Real User Information --}}
-                                        <div id="realUser" class="row m-0 p-0">
-                                        <div class="col-md-6 col-sm-12">
-                                            <ul>
-                                                <li><span class="text-secondary">نام</span>
-                                                  
-                                                    <i id="modalBtn" class="fas fa-edit"></i>
-                                                    <!-- The Modal -->
-                                                    <div id="myModal" class="modal">
-                                                        <!-- Modal content -->
-                                                        <div class="modal-content">
-                                                            <span class="close">&times;</span>
-                                                            <div class="modal-body">
-                                                                <p class="text-secondary">لطفا اطلاعات شناسایی خود را وارد کنید. نام شما
-                                                                    باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
-                                                                <form  ,
-                                                                    method="POST">
-                                                                    @csrf
-                                                                    @method('put')
-                                                                    <div class="form-group">
-                                                                        <label for="firstName">نام</label>
-                                                                        <input type="text" name="name" class="form-control" id="firstName"
-                                                                            placeholder="نام شما">
-                                                                    </div>
-                
-                                                                    <button type="submit" class="secondary-btn">ذخیره</button>
-                                                                </form>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <hr>
+
+
+
+                         
+                                {{-- All The Dynamic Content --}}
+
+
+                                {{-- User Orders Content --}}
+                                <div id="order" class="row tab_content">
+
+                                    <div class="col-md-12">
+                                        <ul>
+                                            <li><span class="text-secondary">مکان</span>
+                                                <h6>کرج، جهانشهر</h6>
+                                            </li>
+                                            <li><span class="text-secondary">زمان</span>
+                                                <h6> پنج شنبه ۲۰ شهریور ساعت ۱۲:۰۰ </h6>
+                                            </li>
+                                            <li><span class="text-secondary">خدمات</span>
+                                                <h6>ویدیو - دوربین ثابت ، ۲ ساعت</h6>
+                                            </li>
+                                            <li><span class="text-secondary">مبلغ</span>
+                                                <h6>۳٫۰۰۰٫۰۰۰ تومان</h6>
+                                            </li>
+
+                                        </ul>
+                                        <span class="order-details">جزئیات</span>
+
+                                        <div class="order-collapse">
+                                            <ul class="responsive-table">
+                                                <li class="table-header">
+                                                    <div class="col col-1">هزینه پکیج</div>
+                                                    <div class="col col-2">ایاب و ذهاب</div>
+                                                    <div class="col col-3">خدمت اضافه</div>
+                                                    <div class="col col-4">مبلغ کل</div>
+                                                    <div class="col col-5">وضعیت سفارش</div>
                                                 </li>
-                
-                                                <li><span class="text-secondary">نام خانوادگی</span>
-                                                    <h6>ناصحی ارجمند</h6>
-                                                    <i id="modalBtn1" class="fas fa-edit"></i>
-                                                    <!-- The Modal -->
-                                                    <div id="myModal1" class="modal">
-                                                        <!-- Modal content -->
-                                                        <div class="modal-content">
-                                                            <span class="close">&times;</span>
-                                                            <div class="modal-body">
-                                                                <p class="text-secondary">لطفا اطلاعات شناسایی خود را وارد کنید. نام
-                                                                    خانوادگی شما باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
-                                                                <form action="">
-                                                                    <div class="form-group">
-                                                                        <label for="lastName">نام خانوادگی</label>
-                                                                        <input type="text" class="form-control" id="lastName"
-                                                                            placeholder="نام خانوادگی شما">
-                                                                    </div>
-                                                                    <button type="submit" class="secondary-btn">ذخیره</button>
-                                                                </form>
-                                                            </div>
-                                                        </div>
+                                                <li class="table-row">
+                                                    <div class="col col-1" data-label="هزینه پکیج">۲٬۵۰۰٬۰۰۰ تومان
                                                     </div>
-                                                    <hr>
-                                                </li>
-                
-                                                <li><span class="text-secondary">شماره موبایل</span>
-                                                   
-                                                    <i id="modalBtn2" class="fas fa-edit"></i>
-                                                    <!-- The Modal -->
-                                                    <div id="myModal2" class="modal">
-                                                        <!-- Modal content -->
-                                                        <div class="modal-content">
-                                                            <span class="close">&times;</span>
-                                                            <div class="modal-body">
-                                                                <p class="text-secondary">برای ثبت این شماره باید آن را تایید کنید.</p>
-                                                                <form id="loginForm" action="">
-                                                                    <div class="form-group">
-                                                                        <label for="mobileNumber">شماره موبایل</label>
-                                                                        <input type="text" class="form-control" id="phoneInput"
-                                                                            placeholder="۰۹۱۲۱۱۱۲۲۳۳">
-                                                                    </div>
-                
-                                                                    <button type="submit" class="secondary-btn">ذخیره</button>
-                                                                </form>
-                                                                <form id="OTPinput" action="">
-                                                                    <div class="form-group">
-                                                                        <label for="mobileNumber">شماره موبایل</label>
-                                                                        <input type="text" class="form-control" id="codeInput"
-                                                                            placeholder="کد">
-                                                                    </div>
-                
-                                                                    <button type="submit" class="secondary-btn">ذخیره</button>
-                                                                </form>
-                                                            </div>
-                                                        </div>
+                                                    <div class="col col-2" data-label="ایاب و ذهاب">۲۰۰٬۰۰۰ تومان
                                                     </div>
+                                                    <div class="col col-3" data-label="خدمت اضافه">۳۰۰٬۰۰۰ تومان</div>
+                                                    <div class="col col-4" data-label="مبلغ کل">۳٬۰۰۰٬۰۰۰ تومان</div>
+                                                    <div class="col col-5" data-label="وضعیت سفارش">در حال انجام</div>
                                                 </li>
+
                                             </ul>
+                                            <button id="recipt-print" class="secondary-btn">چاپ فاکتور</button>
                                         </div>
-                
-                                        <div class="col-md-6 col-sm-12">
-                                            <ul>
-                                                <li><span class="text-secondary">کد ملی</span>
-                                                    <h6>۰۰۱۷۵۴۰۲۹۱</h6>
-                                                    <i id="modalBtn3" class="fas fa-edit"></i>
-                                                    <!-- The Modal -->
-                                                    <div id="myModal3" class="modal">
-                                                        <!-- Modal content -->
-                                                        <div class="modal-content">
-                                                            <span class="close">&times;</span>
-                                                            <div class="modal-body">
-                                                                <p class="text-secondary">لطفا اطلاعات شناسایی خود را وارد کنید. کد ملی شما
-                                                                    باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
-                                                                <form action="">
-                                                                    <div class="form-group">
-                                                                        <label for="nationalNumber">کد ملی</label>
-                                                                        <input type="text" class="form-control" id="nationalNumber"
-                                                                            placeholder="۰۰۱۲۳۴۵۶۷۸">
-                                                                    </div>
-                                                                    <button type="submit" class="secondary-btn">ذخیره</button>
-                                                                </form>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <hr>
-                                                </li>
-                
-                                                <li><span class="text-secondary">ایمیل</span>
-                                               
-                                                    <i id="modalBtn4" class="fas fa-edit"></i>
-                                                    <!-- The Modal -->
-                                                    <div id="myModal4" class="modal">
-                                                        <!-- Modal content -->
-                                                        <div class="modal-content">
-                                                            <span class="close">&times;</span>
-                                                            <div class="modal-body">
-                                                                <form  ,
-                                                                    method="POST">
-                                                                    @csrf
-                                                                    @method('put')
-                                                                    <div class="form-group">
-                                                                        <label for="userEmail">ایمیل</label>
-                                                                        <input type="email" name="email" class="form-control"
-                                                                            id="userEmail" placeholder="example@info.com">
-                                                                    </div>
-                                                                    <button type="submit" class="secondary-btn">ذخیره</button>
-                                                                </form>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <hr>
-                                                </li>
-                
-                                                <li><span class="text-secondary">آدرس</span>
-                                                    <h6>کرج،میدان سپاه به سمت سه راه
-                                                        گوهردشت،خ گلستان</h6>
-                                                    <i id="modalBtn5" class="fas fa-edit"></i>
-                                                    <!-- The Modal -->
-                                                    <div id="myModal5" class="modal">
-                                                        <!-- Modal content -->
-                                                        <div class="modal-content">
-                                                            <span class="close">&times;</span>
-                                                            <div class="modal-body">
-                                                                <p class="text-secondary">لطفا اطلاعات شناسایی خود را وارد کنید. آدرس شما
-                                                                    باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
-                                                                <form action="">
-                                                                    <div class="form-group">
-                                                                        <label for="userAddress">آدرس</label>
-                                                                        <input type="text" class="form-control" id="userAddress"
-                                                                            placeholder="تهران، خیابان ۹ شرقی...">
-                                                                    </div>
-                                                                    <button type="submit" class="secondary-btn">ذخیره</button>
-                                                                </form>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                
-                
+                                        <hr>
                                     </div>
-                
-                                    {{-- Company User Information --}} 
-                                    <div id="companyUser" class="row m-0 p-0">
-                                        <div class="col-md-6 col-sm-12">
-                                            <ul>
-                                                <li><span class="text-secondary">نام شرکت</span>
-                                                    <h6>به نگاران تجارت آزما</h6>
-                                                    <i id="modalBtn6" class="fas fa-edit"></i>
-                                                    <!-- The Modal -->
-                                                    <div id="myModal6" class="modal">
-                                                        <!-- Modal content -->
-                                                        <div class="modal-content">
-                                                            <span class="close">&times;</span>
-                                                            <div class="modal-body">
-                                                                <p class="text-secondary">لطفا اطلاعات شرکت خود را وارد کنید. نام شرکت
-                                                                    باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
-                                                                <form action="">
-                                                                   
-                                                                    <div class="form-group">
-                                                                        <label for="companyName">نام شرکت</label>
-                                                                        <input type="text" name="company-name" class="form-control" id="companyName"
-                                                                            placeholder="نام شرکت">
-                                                                    </div>
-                
-                                                                    <button type="submit" class="secondary-btn">ذخیره</button>
-                                                                </form>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <hr>
-                                                </li>
-                
-                                                <li><span class="text-secondary">شماره ثبت</span>
-                                                    <h6>۱۲۳۴۵۶۷۸۹</h6>
-                                                    <i id="modalBtn7" class="fas fa-edit"></i>
-                                                    <!-- The Modal -->
-                                                    <div id="myModal7" class="modal">
-                                                        <!-- Modal content -->
-                                                        <div class="modal-content">
-                                                            <span class="close">&times;</span>
-                                                            <div class="modal-body">
-                                                                <p class="text-secondary">لطفا اطلاعات شرکت خود را وارد کنید. شماره ثبت
-                                                                    شرکت شما باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
-                                                                <form action="">
-                                                                    <div class="form-group">
-                                                                        <label for="submitNumber">شماره ثبت</label>
-                                                                        <input type="text" class="form-control" id="submitNumber"
-                                                                            placeholder="شماره ثبت شرکت">
-                                                                    </div>
-                                                                    <button type="submit" class="secondary-btn">ذخیره</button>
-                                                                </form>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <hr>
-                                                </li>
-                
-                                                <li><span class="text-secondary">شماره ملی</span>
-                                                    <h6>۱۲۳۴۵۶۷۸۹</h6>
-                                                    <i id="modalBtn8" class="fas fa-edit"></i>
-                                                    <!-- The Modal -->
-                                                    <div id="myModal8" class="modal">
-                                                        <!-- Modal content -->
-                                                        <div class="modal-content">
-                                                            <span class="close">&times;</span>
-                                                            <div class="modal-body">
-                                                                <p class="text-secondary">لطفا اطلاعات شرکت خود را وارد کنید. شماره ملی 
-                                                                    شرکت شما باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
-                                                                <form action="">
-                                                                    <div class="form-group">
-                                                                        <label for="companyNationalNumber">شماره ملی</label>
-                                                                        <input type="text" class="form-control" id="companyNationalNumber"
-                                                                            placeholder="شماره ملی شرکت">
-                                                                    </div>
-                
-                                                                    <button type="submit" class="secondary-btn">ذخیره</button>
-                                                                </form>
-                                                                
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <hr>
-                                                </li>
-                
-                                                <li><span class="text-secondary">کد اقتصادی</span>
-                                                    <h6>۱۲۳۴۵۶۷۸۹</h6>
-                                                    <i id="modalBtn9" class="fas fa-edit"></i>
-                                                    <!-- The Modal -->
-                                                    <div id="myModal9" class="modal">
-                                                        <!-- Modal content -->
-                                                        <div class="modal-content">
-                                                            <span class="close">&times;</span>
-                                                            <div class="modal-body">
-                                                                <p class="text-secondary">لطفا اطلاعات شرکت خود را وارد کنید. کد اقتصادی 
-                                                                    شرکت شما باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
-                                                                <form action="">
-                                                                    <div class="form-group">
-                                                                        <label for="marketCode">کد اقتصادی</label>
-                                                                        <input type="text" class="form-control" id="marketCode"
-                                                                            placeholder="کد اقتصادی شرکت">
-                                                                    </div>
-                
-                                                                    <button type="submit" class="secondary-btn">ذخیره</button>
-                                                                </form>
-                                                                
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                
-                                        <div class="col-md-6 col-sm-12">
-                                            <ul>
-                                                <li><span class="text-secondary">استان و شهرستان</span>
-                                                    <h6>البرز، کرج</h6>
-                                                    <i id="modalBtn10" class="fas fa-edit"></i>
-                                                    <!-- The Modal -->
-                                                    <div id="myModal10" class="modal">
-                                                        <!-- Modal content -->
-                                                        <div class="modal-content">
-                                                            <span class="close">&times;</span>
-                                                            <div class="modal-body">
-                                                                <p class="text-secondary">لطفا اطلاعات شرکت خود را وارد کنید. محل کار شرکت
-                                                                    باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
-                                                                <form action="">
-                                                                   
-                                                                    <div class="form-group">
-                                                                        <label for="companyState">استان</label>
-                                                                        <input type="text" name="company-state" class="form-control" id="companyState"
-                                                                            placeholder="استان شرکت">
-                                                                            <label for="companyCity">شهرستان</label>
-                                                                            <input type="text" name="company-city" class="form-control" id="companyCity"
-                                                                            placeholder="شهرستان شرکت">
-                                                                    </div>
-                
-                                                                    <button type="submit" class="secondary-btn">ذخیره</button>
-                                                                </form>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <hr>
-                                                </li>
-                
-                                                <li><span class="text-secondary">آدرس</span>
-                                                    <h6>کرج،میدان سپاه به سمت سه راه
-                                                        گوهردشت،خ گلستان</h6>
-                                                    <i id="modalBtn11" class="fas fa-edit"></i>
-                                                    <!-- The Modal -->
-                                                    <div id="myModal11" class="modal">
-                                                        <!-- Modal content -->
-                                                        <div class="modal-content">
-                                                            <span class="close">&times;</span>
-                                                            <div class="modal-body">
-                                                                <p class="text-secondary">لطفا اطلاعات شرکت خود را وارد کنید. آدرس 
-                                                                    شرکت شما باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
-                                                                <form action="">
-                                                                    <div class="form-group">
-                                                                        <label for="companyAddress">آدرس</label>
-                                                                        <input type="text" class="form-control" id="companyAddress"
-                                                                            placeholder="آدرس شرکت">
-                                                                    </div>
-                                                                    <button type="submit" class="secondary-btn">ذخیره</button>
-                                                                </form>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <hr>
-                                                </li>
-                
-                                                <li><span class="text-secondary">کد پستی</span>
-                                                    <h6>۱۲۳۴۵۶۷۸۹</h6>
-                                                    <i id="modalBtn12" class="fas fa-edit"></i>
-                                                    <!-- The Modal -->
-                                                    <div id="myModal12" class="modal">
-                                                        <!-- Modal content -->
-                                                        <div class="modal-content">
-                                                            <span class="close">&times;</span>
-                                                            <div class="modal-body">
-                                                                <p class="text-secondary">لطفا اطلاعات شرکت خود را وارد کنید. کدپستی  
-                                                                    شرکت شما باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
-                                                                <form action="">
-                                                                    <div class="form-group">
-                                                                        <label for="companyPostalCode">کد پستی</label>
-                                                                        <input type="text" class="form-control" id="companyPostalCode"
-                                                                            placeholder="کد پستی شرکت">
-                                                                    </div>
-                
-                                                                    <button type="submit" class="secondary-btn">ذخیره</button>
-                                                                </form>
-                                                                
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <hr>
-                                                </li>
-                
-                                                <li><span class="text-secondary">شماره تلفن</span>
-                                                    <h6>۰۲۶۳۱۱۱۲۲۳۳</h6>
-                                                    <i id="modalBtn13" class="fas fa-edit"></i>
-                                                    <!-- The Modal -->
-                                                    <div id="myModal13" class="modal">
-                                                        <!-- Modal content -->
-                                                        <div class="modal-content">
-                                                            <span class="close">&times;</span>
-                                                            <div class="modal-body">
-                                                                <p class="text-secondary">لطفا اطلاعات شرکت خود را وارد کنید. شماره تلفن  
-                                                                    شرکت شما باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
-                                                                <form action="">
-                                                                    <div class="form-group">
-                                                                        <label for="marketCode">شماره تلفن</label>
-                                                                        <input type="text" class="form-control" id="marketCode"
-                                                                            placeholder="شماره تلفن شرکت">
-                                                                    </div>
-                
-                                                                    <button type="submit" class="secondary-btn">ذخیره</button>
-                                                                </form>
-                                                                
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                
-                                    </div>
-                
-                
-                                    {{-- User Orders Content --}} 
-                                    <div id="order" class="row tab_content">
-                
-                                        <div class="col-md-12">
-                                            <ul>
-                                                <li><span class="text-secondary">مکان</span>
-                                                    <h6>کرج، جهانشهر</h6>
-                                                </li>
-                                                <li><span class="text-secondary">زمان</span>
-                                                    <h6> پنج شنبه ۲۰ شهریور ساعت ۱۲:۰۰ </h6>
-                                                </li>
-                                                <li><span class="text-secondary">خدمات</span>
-                                                    <h6>ویدیو - دوربین ثابت ، ۲ ساعت</h6>
-                                                </li>
-                                                <li><span class="text-secondary">مبلغ</span>
-                                                    <h6>۳٫۰۰۰٫۰۰۰ تومان</h6>
-                                                </li>
-                
-                                            </ul>
-                                            <span class="order-details">جزئیات</span>
-                
-                                            <div class="order-collapse">
-                                                <ul class="responsive-table">
-                                                    <li class="table-header">
-                                                        <div class="col col-1">هزینه پکیج</div>
-                                                        <div class="col col-2">ایاب و ذهاب</div>
-                                                        <div class="col col-3">خدمت اضافه</div>
-                                                        <div class="col col-4">مبلغ کل</div>
-                                                        <div class="col col-5">وضعیت سفارش</div>
-                                                    </li>
-                                                    <li class="table-row">
-                                                        <div class="col col-1" data-label="هزینه پکیج">۲٬۵۰۰٬۰۰۰ تومان</div>
-                                                        <div class="col col-2" data-label="ایاب و ذهاب">۲۰۰٬۰۰۰ تومان</div>
-                                                        <div class="col col-3" data-label="خدمت اضافه">۳۰۰٬۰۰۰ تومان</div>
-                                                        <div class="col col-4" data-label="مبلغ کل">۳٬۰۰۰٬۰۰۰ تومان</div>
-                                                        <div class="col col-5" data-label="وضعیت سفارش">در حال انجام</div>
-                                                    </li>
-                
-                                                </ul>
-                                                <button id="recipt-print" class="secondary-btn">چاپ فاکتور</button>
-                                            </div>
-                                            <hr>
-                                        </div>
-                
-                
-                
-                
-                                    </div>
-                
+
+
+
+
                                 </div>
-                
-                            </div>
+
+
+
+                          
 
 
                             <input type="button" name="previous" class="previous action-button-previous"
@@ -958,11 +523,13 @@
             });
 
             let attributes = @json($getChildren);
+            let parents = @json($getParents);
             $("select").change(function() {
-                $("#push").empty();
-                $("#pushHour").empty();
-                $("#pushOptionAttr").empty();
-                $("#pushTags").empty();
+                var getChildrenId = $(this).children(":selected").attr("id");
+                $("#push" + getChildrenId).empty();
+                $("#pushHour" + getChildrenId).empty();
+                $("#pushOptionAttr" + getChildrenId).empty();
+                $("#pushTags" + getChildrenId).empty();
                 var getId = $(this).children("option:selected").val();
                 attributes.forEach(element => {
                     let getAttributes = [];
@@ -978,7 +545,8 @@
                                 text: element.name,
                                 class: "form-check-label float-right-checkbox"
                             });
-                            $("#pushTags").append(PushTagsInput, PushTagsLabel, "<br/>");
+                            $("#pushTags" + getChildrenId).append(PushTagsInput,
+                                PushTagsLabel, "<br/>");
                         });
                         element.attributes.forEach(element => {
                             // getAttributes.push(element);
@@ -1018,9 +586,12 @@
                                 value: "1"
                             });
 
-                            $("#push").append(createCheckBox, createAttr, "<br/>");
-                            $("#pushHour").append(hourlabel, hourInput, hourSpan, "<br/>");
-                            $("#pushOptionAttr").append(optionAttrLabel, optionAttrInput,
+                            $("#push" + getChildrenId).append(createCheckBox, createAttr,
+                                "<br/>");
+                            $("#pushHour" + getChildrenId).append(hourlabel, hourInput,
+                                hourSpan, "<br/>");
+                            $("#pushOptionAttr" + getChildrenId).append(optionAttrLabel,
+                                optionAttrInput,
                                 "<br/>");
                         });
 
@@ -1140,10 +711,29 @@
 
 
 
-        let giveInformation=document.getElementById("giveInformation")
+        let giveInformation = document.getElementById("giveInformation")
         giveInformation.addEventListener('click', function() {
             console.log(Street.value, Blvd.value, PostalCode.value, unit.value,
                 Plaque.value, FullAddress.value);
         });
+
+
+
+
+        //
+        var coll = document.getElementsByClassName("order-details");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("order-collapse-active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
     </script>
 @endsection
