@@ -1225,7 +1225,7 @@ footer p span {
   padding-left: 0;
 }
 
-.card {
+.card:not(#test) {
   position: relative;
   width: 300px;
   height: 370px;
@@ -1237,8 +1237,8 @@ footer p span {
   overflow: hidden;
 }
 
-.card:before,
-.card:after {
+.card:before:not(#test),
+.card:after:not(#test) {
   content: "";
   position: absolute;
   top: 0;
@@ -1251,16 +1251,16 @@ footer p span {
   z-index: -1;
 }
 
-.card:hover:before {
+.card:hover:before:not(#test) {
   transform: rotate(20deg);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
 }
 
-.card:hover:after {
+.card:hover:after:not(#test) {
   transform: rotate(10deg);
 }
 
-.card .imgBx {
+.card:not(#test) .imgBx {
   position: absolute;
   top: 10px;
   left: 10px;
@@ -1272,11 +1272,11 @@ footer p span {
   border-radius: 1.3rem;
 }
 
-.card:hover .imgBx {
+.card:hover:not(#test) .imgBx {
   bottom: 100px;
 }
 
-.card:hover .imgBx img {
+.card:hover:not(#test) .imgBx img {
   position: absolute;
   top: 0px;
   right: 0;
@@ -1288,7 +1288,7 @@ footer p span {
   border-radius: 1.3rem;
 }
 
-.card .imgBx img {
+.card:not(#test) .imgBx img {
   position: absolute;
   top: 0px;
   width: 100%;
@@ -1299,7 +1299,7 @@ footer p span {
   border-radius: 1rem;
 }
 
-.card .details {
+.card:not(#test) .details {
   position: absolute;
   left: 10px;
   right: 55px;
@@ -1307,7 +1307,7 @@ footer p span {
   height: 80px;
 }
 
-.card i {
+.card:not(#test) i {
   font-size: 2.5rem;
   color: var(--clr-dark);
   border-bottom: 3px solid var(--clr-dark);
@@ -1315,12 +1315,12 @@ footer p span {
   margin-top: 1rem;
 }
 
-.card i:hover {
+.card:not(#test) i:hover {
   color: var(--clr-secondary);
   border-color: var(--clr-accent);
 }
 
-.card .details h5 {
+.card:not(#test) .details h5 {
   margin: 0;
   padding: 0;
   font-size: 1.5rem;
@@ -1335,12 +1335,12 @@ footer p span {
   border-radius: 1.3rem;
 }
 
-.card .imgBx span .fa-instagram,
-.card .imgBx span .fa-whatsapp {
+.card:not(#test) .imgBx span .fa-instagram,
+.card:not(#test) .imgBx span .fa-whatsapp {
   color: var(--clr-dark);
 }
 
-.card .imgBx span i:hover {
+.card:not(#test) .imgBx span i:hover {
   color: black;
 }
 
@@ -1457,7 +1457,7 @@ footer p span {
   box-shadow: rgba(255, 255, 255, 0.23) 0px 0px 3px inset, rgba(255, 255, 255, 0.16) 0px 0px 3px inset;
   transition: all 0.3s ease;
   color: var(--clr-primary);
-  background-color: var(--clr-accent);
+  background-color: var(--clr-dark);
 }
 
 #msform .action-button-previous {
@@ -1480,7 +1480,7 @@ footer p span {
   box-shadow: rgba(255, 255, 255, 0.23) 0px 0px 3px inset, rgba(255, 255, 255, 0.16) 0px 0px 3px inset;
   transition: all 0.3s ease;
   color: var(--clr-primary);
-  background-color: var(--clr-accent);
+  background-color: var(--clr-dark);
 }
 
 #progressbar {
@@ -1771,6 +1771,28 @@ footer p span {
 
 .d-inline {
   display: inline;
+}
+
+a {
+  text-decoration: none;
+}
+
+.card#test {
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+}
+
+.card-footer {
+  background-color: var();
+}
+
+.card-footer:hover {
+  background-color: var(--clr-secondary);
+  transition: 0.5s ease;
+}
+
+.card-footer:hover a {
+  color: var(--clr-primary);
 }
 
 /* BREAKPOINTS ----- */
@@ -2770,7 +2792,7 @@ footer p span {
   }
 
   .banner {
-    background-image: url(/images/orginal-banner9mobile-min57.png?cd28dee8745cf9eefbd9b9e6009ffb7f);
+    background-image: url(/images/orginal-banner9mobile-min57.png?92a95daef813d030653d6697eb43f2e0);
     background-size: cover;
     background-position: center;
     height: 55vh;
