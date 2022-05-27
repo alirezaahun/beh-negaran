@@ -1273,7 +1273,7 @@ footer p span {
         rgba(255, 255, 255, 0.16) 0px 0px 3px inset;
     transition: all 0.3s ease;
     color: var(--clr-primary);
-    background-color: var(--clr-accent);
+    background-color: var(--clr-dark);
 }
 
 #msform .action-button-previous {
@@ -1304,7 +1304,7 @@ footer p span {
         rgba(255, 255, 255, 0.16) 0px 0px 3px inset;
     transition: all 0.3s ease;
     color: var(--clr-primary);
-    background-color: var(--clr-accent);
+    background-color: var(--clr-dark);
 }
 // ******this******
 // ._card_ {
@@ -1617,6 +1617,7 @@ a{
 
 .card#test{
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
 }
 
 .card-footer{
@@ -1632,13 +1633,6 @@ a{
 
     color: var(--clr-primary);
 }
-// .ffffff{
-//     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
-// }
-
-// .well .row{
-//     margin: 0 1px;
-// }
 
 // ****************************************************plus
 

@@ -18,7 +18,7 @@
                         </ul>
                         <!-- fieldsets -->
                         <?php
-
+                        
                         $getParents = App\Models\Category::where('parent_id', 0)
                             ->with('children', 'attributes')
                             ->get();
@@ -294,12 +294,7 @@
 
 
 
-                                                        <div class="input-group date-input">
-                                                            <span class="input-group-text" id="dtp1"><i
-                                                                    class="fas fa-calendar-alt"></i></span>
-                                                            <input type="text" class="form-control text-center"
-                                                                placeholder="انتخاب تاریخ" data-name="dtp1-text">
-                                                        </div>
+
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-6">
@@ -315,13 +310,13 @@
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
                                                         <label class='float-right mt-4 mb-2 gg' for="line1">خیابان:</label>
-                                                        <input type="email" class="form-control">
+                                                        <input type="email" class="form-control" id="Street">
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
                                                         <label class='float-right mt-4 mb-2 gg' for="line1">بلوار:</label>
-                                                        <input type="email" class="form-control">
+                                                        <input type="email" class="form-control" id="Blvd">
                                                     </div>
                                                 </div>
                                             </div>
@@ -330,29 +325,52 @@
                                             <div class="col-sm-6">
                                                 <div class="form-group">
                                                     <label class='float-right mt-4 mb-2 gg' for="line1">کدپستی:</label>
-                                                    <input type="email" class="form-control">
+                                                    <input type="email" class="form-control" id="PostalCode">
                                                 </div>
                                             </div>
                                             <div class="col-sm-3">
                                                 <div class="form-group">
                                                     <label class='float-right mt-4 mb-2 gg' for="line1">واحد:</label>
-                                                    <input type="email" class="form-control">
+                                                    <input type="email" class="form-control" id="unit">
                                                 </div>
                                             </div>
                                             <div class="col-sm-3">
                                                 <div class="form-group">
                                                     <label class='float-right mt-4 mb-2 gg' for="line1">پلاک:</label>
-                                                    <input type="email" class="form-control">
+                                                    <input type="email" class="form-control" id="Plaque">
                                                 </div>
                                             </div>
                                             <div class="col-sm-12">
                                                 <div class="form-group">
-                                                    <label class='float-right mt-4 mb-2 gg'
-                                                        for="exampleFormControlTextarea4">آدرس کامل: </label>
-                                                    <textarea class="form-control" id="exampleFormControlTextarea4" rows="3"></textarea>
+                                                    <label class='float-right mt-4 mb-2 gg' for="FullAddress">آدرس کامل:
+                                                    </label>
+                                                    <textarea class="form-control" id="FullAddress" rows="3"></textarea>
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <div class="row">
+                                            <div class="col-10">
+                                                <div class="form-group">
+                                                    <div class="col-12 text-right">
+
+                                                        <label class=' mt-4 mb-2 gg' for="data-picker">انتخاب تاریخ:</label>
+                                                    </div>
+                                                    <div class="input-group date-input">
+                                                        <span class="input-group-text" id="dtp1"><i
+                                                                class="fas fa-calendar-alt"></i></span>
+                                                        <input id="date" type="text" class="form-control text-center"
+                                                            placeholder="انتخاب تاریخ" data-name="dtp1-text">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <button class="col-2 btn" type="button">تایید</button>
+                                        </div>
+
+
+
+
                                     </div>
                                     <div class="col-md-6 col-12 ">
                                         <div class="map-responsive">
@@ -364,7 +382,19 @@
                                     </div>
                                 </div>
                             </div>
-                            <input type="button" name="next" class="next action-button" value="Next" /> <input
+
+
+
+                         
+
+
+
+
+
+
+
+                            
+                            <input type="button" name="next" id="giveInformation" class="next action-button" value="Next" /> <input
                                 type="button" name="previous" class="previous action-button-previous" value="Previous" />
                         </fieldset>
                         <fieldset>
@@ -374,7 +404,7 @@
                             <div class="card col-6 mx-auto " id="test">
                                 <div class="d-flex card-header justify-content-between p-3">
                                     <div class="">جز</div>
-                                    <div class="">     کل</div>
+                                    <div class=""> کل</div>
                                 </div>
                                 <div class="card-body p-0 ">
                                     <ul class="list-group list-group-flush">
@@ -384,30 +414,39 @@
                                         </div>
                                         <div class="list-group-item d-flex justify-content-between p-3">
                                             <div class="">فیلم</div>
-                                            <div class="">   2500</div>
+                                            <div class=""> 2500</div>
                                         </div>
                                         <div class="list-group-item d-flex justify-content-between p-3">
-                                            <div class="">   طراحی سایت</div>
+                                            <div class=""> طراحی سایت</div>
                                             <div class="">3500</div>
-                                        </div>    
+                                        </div>
+                                        <div class="list-group-item d-flex justify-content-between p-3">
+                                            <div class=""> طراحی سایت</div>
+                                            <div class="">3500</div>
+                                        </div>
+                                        <div class="list-group-item d-flex justify-content-between p-3">
+                                            <div class=""> طراحی سایت</div>
+                                            <div class="">3500</div>
+                                        </div>
                                         <div class="d-flex card-header justify-content-between p-3">
-                                            <div class="">   جمع کل</div>
+                                            <div class=""> جمع کل</div>
                                             <div class=""> 10000</div>
-                                        </div>     
+                                        </div>
+
                                     </ul>
                                 </div>
                                 <div class="card-footer  w-100   p-3">
-                                    <a href="#" class="card-link "> پرداخت</a>
-                                  </div>
-                              </div>
+                                    <a href="#" class="card-link d-block"> پرداخت</a>
+                                </div>
+                            </div>
 
 
 
 
 
 
-                           <input type="button" name="next" class="next action-button" value="Submit" /> <input
-                                type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                            <input type="button" name="previous" class="previous action-button-previous"
+                                value="Previous" />
                         </fieldset>
                     </form>
                 </div>
@@ -458,9 +497,7 @@
             });
 
             let attributes = @json($getChildren);
-
             $("select").change(function() {
-
                 $("#push").empty();
                 $("#pushHour").empty();
                 $("#pushOptionAttr").empty();
@@ -469,52 +506,33 @@
                 attributes.forEach(element => {
                     let getAttributes = [];
                     if (element.id == getId) {
-
                         element.tag_categories.forEach(element => {
                             getAttributes.push(element);
-
                             let PushTagsInput = $("<input/>", {
-
                                 class: "form-check-input float-right-checkbox",
                                 type: "checkbox",
-
                             });
-
                             let PushTagsLabel = $("<label/>", {
-
                                 value: element.id,
                                 text: element.name,
                                 class: "form-check-label float-right-checkbox"
-
-
                             });
-
                             $("#pushTags").append(PushTagsInput, PushTagsLabel, "<br/>");
-
                         });
-
                         element.attributes.forEach(element => {
                             // getAttributes.push(element);
                             // console.log(element.);
                             let createAttr = $("<label/>", {
-
                                 value: element.id,
                                 text: element.name + "(" + element.price + ")"
-
                             });
                             let createCheckBox = $("<input/>", {
                                 type: "checkbox"
-
                             }).addClass('form-check-label float-right-checkbox');
-
                             let hourlabel = $("<label/>", {
-
                                 text: "مدت زمان درخواستی"
-
                             });
-
                             let hourInput = $("<input/>", {
-
                                 type: "number",
                                 id: "tentacles1",
                                 name: "tentacles",
@@ -523,27 +541,20 @@
                                 value: "1",
                                 class: "text-center",
                             });
-
                             let hourSpan = $("<span/>", {
-
                                 text: "ساعت"
-
                             });
 
                             let optionAttrLabel = $("<label/>", {
-
                                 text: "تعداد دوربین" + "(" + element.name + ")"
-
                             });
 
                             let optionAttrInput = $("<input/>", {
-
                                 type: "number",
                                 class: "text-center h-25 border-custom",
                                 min: "1",
                                 max: "10",
                                 value: "1"
-
                             });
 
                             $("#push").append(createCheckBox, createAttr, "<br/>");
@@ -622,61 +633,56 @@
         }
 
         // ****************(Select beetween option  part 1   )***********************
-        let ShoppingCart = 0
-        // ****** site section  variable ********
-        let PhotographySelection = document.getElementById('PhotographySelection')
-        let CartBtnPhotography = document.getElementById('CartBtnPhotography')
-        let gold = document.getElementById('gold')
-        let bronze = document.getElementById('bronze')
-        let silver = document.getElementById('silver')
-        CartBtnPhotography.addEventListener('click', CartBtnPhotographyFunc)
-        PhotographySelection.addEventListener('click', PhotographyFunc)
 
-        function PhotographyFunc() {
-            if (PhotographySelection.value == 1) {
-                bronze.classList.add('d-block');
-                bronze.classList.remove('d-none');
-                silver.classList.add('d-none');
-                gold.classList.add('d-none');
-            } else if (PhotographySelection.value == 2) {
-                silver.classList.add('d-block');
-                silver.classList.remove('d-none');
-                bronze.classList.add('d-none');
-                gold.classList.add('d-none');
-            } else if (PhotographySelection.value == 3) {
-                gold.classList.add('d-block');
-                gold.classList.remove('d-none');
-                bronze.classList.add('d-none');
-                silver.classList.add('d-none');
-            }
 
-        }
 
-        function CartBtnPhotographyFunc(event) {
-            event.preventDefault();
-            if (PhotographySelection.value == 1) {
-                ShoppingCart = ShoppingCart + 10
-                console.log(ShoppingCart)
-                alert(`    پکیج برنزی با قیمت ۱۰ به سبد خرید شما اضافه شد و مجموع سبد خرید شما ${ShoppingCart} میباشد `)
 
-            } else if (PhotographySelection.value == 2) {
-                ShoppingCart = ShoppingCart + 100
-                console.log(ShoppingCart)
-                alert(`    پکیج برنزی با قیمت ۱۰۰ به سبد خرید شما اضافه شد و مجموع سبد خرید شما ${ShoppingCart} میباشد `)
-
-            } else if (PhotographySelection.value == 3) {
-                ShoppingCart = ShoppingCart + 1000
-                console.log(ShoppingCart)
-                alert(`    پکیج برنزی با قیمت ۱۰۰۰ به سبد خرید شما اضافه شد و مجموع سبد خرید شما ${ShoppingCart} میباشد `)
-
-            }
-
-        }
 
         const dtp1Instance = new mds.MdsPersianDateTimePicker(document.getElementById('dtp1'), {
             targetTextSelector: '[data-name="dtp1-text"]',
             targetDateSelector: '[data-name="dtp1-date"]',
             persianNumber: true,
+            enableTimePicker: true,
+
+
+        });
+
+
+
+
+
+        //get values from form
+
+        // let taeed = document.getElementById('#taeed')
+        // taeed.addEventListener('click', taeedFunc)
+
+        // function taeedFunc() {
+        //     console.log('alireza')
+        //     document.getElementById('ostan').value
+        // }
+
+
+
+        // document.getElementById("demo").innerHTML = "Hello World";
+        // document.addEventListener("click", myFunction);
+
+        let Ostan = document.getElementById("Ostan");
+        let Shahrestan = document.getElementById("Shahrestan");
+        let Street = document.getElementById("Street");
+        let Blvd = document.getElementById("Blvd");
+        let PostalCode = document.getElementById("PostalCode");
+        let unit = document.getElementById("unit");
+        let Plaque = document.getElementById("Plaque");
+        let FullAddress = document.getElementById("FullAddress");
+        let date = document.getElementById("date");
+
+
+
+
+        let giveInformation=document.getElementById("giveInformation")
+        giveInformation.addEventListener('click', function() {
+            console.log(Street.value, Blvd.value, PostalCode.value, unit.value,
+                Plaque.value, FullAddress.value);
         });
     </script>
 @endsection
