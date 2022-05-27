@@ -35,8 +35,8 @@
 
                                         @foreach ($getParents as $category)
                                             <div class="tabby-tab">
-                                                <input type="radio" id="tab-3" name="tabby-tabs" checked>
-                                                <label class="gg" for="tab-3">{{ $category->name }}</label>
+                                                <input type="radio" id="{{$category->id}}" name="tabby-tabs" checked>
+                                                <label class="gg" for="{{$category->id}}">{{ $category->name }}</label>
                                                 <div class="tabby-content">
                                                     <div class="col-12 d-flex d-flex justify-content-center  mt-5">
                                                         <div class="col-12 col-md-10">
