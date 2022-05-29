@@ -2504,7 +2504,23 @@ a{
         text-align: right;
     }
 }
-
+// User Message Box -----------------------
+.user-message-box {
+    width: 100%;
+}
+.user-message-box ul {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    background-color: #fff;
+    color: var(--clr-dark);
+    border-radius: 1.3rem;
+    padding: 1rem;
+    width: 100%;
+}
+.user-message-box h6 {
+    margin-top: 0.7rem;
+}
 /* Scroll Bar ----------------------------------------------------------- */
 /* width */
 ::-webkit-scrollbar {

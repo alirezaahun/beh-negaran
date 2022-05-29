@@ -27,7 +27,7 @@
 
                     <li class="nav___items ">
                         <i class='bx bxs-comment-dots'></i>
-                        <a class="text-nowrap" href="">پیغام ها</a>
+                        <a class="text-nowrap" href="#messages">پیغام ها</a>
                     </li>
 
                     <li class="nav___items ">
@@ -44,7 +44,7 @@
                     <div id="user-profile" class="row tab_content">
 
                         {{-- User Type CheckBox --}} 
-                        <div class="c-type-trigger mb-5 d-flex justify-content-start align-items-center">
+                        <div class="c-type-trigger d-flex justify-content-start align-items-center">
                             <input class="checkbox" type="checkbox" id="i">
 
                             <label class="checkbox-label" for="i">
@@ -57,7 +57,7 @@
                                 </div>
                             </div>
                         </div>
-
+                        <div class="footer-line"><span></span></div>
                         {{-- Real User Information --}}
                         <div id="realUser" class="row m-0 p-0">
                         <div class="col-md-6 col-sm-12">
@@ -464,7 +464,8 @@
 
                     {{-- User Orders Content --}} 
                     <div id="order" class="row tab_content">
-
+                        <h4>سفارش های شما</h4>
+                        <div class="footer-line"><span></span></div>
                         <div class="col-md-12">
                             <ul>
                                 <li><span class="text-secondary">مکان</span>
@@ -486,9 +487,9 @@
                             <div class="order-collapse">
                                 <ul class="responsive-table">
                                     <li class="table-header">
-                                        <div class="col col-1">هزینه پکیج</div>
-                                        <div class="col col-2">ایاب و ذهاب</div>
-                                        <div class="col col-3">خدمت اضافه</div>
+                                        <div class="col col-1">هزینه خدمات</div>
+                                        <div class="col col-2">تخفیف</div>
+                                        <div class="col col-3">مالیات و عوارض</div>
                                         <div class="col col-4">مبلغ کل</div>
                                         <div class="col col-5">وضعیت سفارش</div>
                                     </li>
@@ -508,6 +509,30 @@
 
 
 
+
+                    </div>
+
+                    <div class="row tab_content" id="messages">
+                        <h4>پیغام های شما</h4>
+                        <div class="footer-line"><span></span></div>
+                        <div class="col-md-12">
+                            <div class="user-message-box">
+                            <ul>
+                                <li>
+                                    <span class="text-secondary">تاریخ</span>
+                                     <h6>۰۱​​​​​​​​​​​​​​\۰۱\۱۴۰۰</h6>
+                                </li>
+                                <li>
+                                    <span class="text-secondary">عنوان</span>
+                                     <h6>پروژه عکاسی</h6>
+                                </li>
+                                <li>
+                                    <span class="text-secondary">متن</span>
+                                     <h6>لینک دانلود پروژه <a href=""> www.google.com </a></h6>
+                                </li>
+                            </ul>
+                        </div>
+                        </div>
 
                     </div>
 
