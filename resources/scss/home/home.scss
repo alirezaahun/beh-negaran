@@ -2393,6 +2393,7 @@ a{
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    list-style: none;
 }
 .order-details {
     color: var(--clr-secondary);
@@ -2415,10 +2416,11 @@ a{
     transition: max-height 0.2s ease-out;
 }
 .order-collapse ul {
-    display: flex;
-    justify-content: space-between;
+    display: flex !important;
+    justify-content: space-between !important;
     flex-direction: column !important;
-    text-align: center;
+    text-align: center !important;
+    
 }
 .order-collapse hr {
     background-color: var(--clr-secondary);

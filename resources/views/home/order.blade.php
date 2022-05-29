@@ -403,18 +403,20 @@
                         </fieldset>
                         <fieldset>
 
+                            <div id="dynamic-content" class="row">
 
 
 
+                                {{-- Company User Information --}}
 
 
-                         
-                                {{-- All The Dynamic Content --}}
+
 
 
                                 {{-- User Orders Content --}}
                                 <div id="order" class="row tab_content">
-
+                                    <h4>سفارش های شما</h4>
+                                    <div class="footer-line"><span></span></div>
                                     <div class="col-md-12">
                                         <ul>
                                             <li><span class="text-secondary">مکان</span>
@@ -436,9 +438,9 @@
                                         <div class="order-collapse">
                                             <ul class="responsive-table">
                                                 <li class="table-header">
-                                                    <div class="col col-1">هزینه پکیج</div>
-                                                    <div class="col col-2">ایاب و ذهاب</div>
-                                                    <div class="col col-3">خدمت اضافه</div>
+                                                    <div class="col col-1">هزینه خدمات</div>
+                                                    <div class="col col-2">تخفیف</div>
+                                                    <div class="col col-3">مالیات و عوارض</div>
                                                     <div class="col col-4">مبلغ کل</div>
                                                     <div class="col col-5">وضعیت سفارش</div>
                                                 </li>
@@ -465,7 +467,12 @@
 
 
 
-                          
+                            </div>
+
+
+
+
+
 
 
                             <input type="button" name="previous" class="previous action-button-previous"
@@ -486,8 +493,7 @@
 
 @section('js')
     <script>
-
-    var map = L.map('map').setView([51.505, -0.09], 13);
+        var map = L.map('map').setView([51.505, -0.09], 13);
 
 
         $(document).ready(function() {
