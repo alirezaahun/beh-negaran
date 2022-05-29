@@ -373,11 +373,8 @@
 
                                     </div>
                                     <div class="col-md-6 col-12 ">
-                                        <div class="map-responsive">
-                                            <iframe
-                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12940.907541046576!2d50.982656499780035!3d35.81890868259695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8dbfb277ea5b55%3A0xd658d7cac8273c3e!2z2YjZhNuM2LnYtdix2Iwg2YXZhti32YLZhyDbudiMINqp2LHYrNiMINin2LPYqtin2YYg2KfZhNio2LHYstiMINin24zYsdin2YY!5e0!3m2!1sfa!2snl!4v1652547526293!5m2!1sfa!2snl"
-                                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                        <div id="map" class="map-responsive">
+
                                         </div>
                                     </div>
                                 </div>
@@ -939,6 +936,10 @@
 
 @section('js')
     <script>
+
+    var map = L.map('map').setView([51.505, -0.09], 13);
+
+
         $(document).ready(function() {
             var current_fs, next_fs, previous_fs; //fieldsets
             var opacity;
@@ -1040,8 +1041,6 @@
                             $("#pushOptionAttr" + getChildrenId).append(optionAttrLabel, optionAttrInput,
                                 "<br/>");
                         });
-
-                        console.log(getAttributes);
 
                     }
                 });

@@ -19,8 +19,8 @@
 
 
     {{-- cdn for pricing page --}}
-    
-        
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.2/css/intlTelInput.css">
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet"
@@ -38,7 +38,6 @@
 
         <script type="text/javascript" src="js/bootstrap-multiselect.js"></script>
 <link rel="stylesheet" href="css/bootstrap-multiselect.css" type="text/css"/>
-      
 
 
 
@@ -54,7 +53,8 @@
 
 
 
-    
+
+
     <!-- Fav Icon ------------------------------------------------------->
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">

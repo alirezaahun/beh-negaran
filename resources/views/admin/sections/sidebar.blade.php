@@ -43,13 +43,19 @@
       <li class="nav-item">
         <a class="nav-link" href="{{route('admin.categories.index')}}">
           <i class="fas fa-fw fa-store"></i>
-          <span>دسته بندی ها</span></a>
+          <span>دسته بندی و ارائه خدمت</span></a>
       </li>
 
       <li class="nav-item">
         <a class="nav-link" href="{{route('admin.tags.index')}}">
           <i class="fas fa-fw fa-store"></i>
           <span>تگ ها</span></a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="{{route('admin.messages.index')}}">
+          <i class="fas fa-fw fa-store"></i>
+          <span>پیام ها</span></a>
       </li>
 
     <!-- Divider -->

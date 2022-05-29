@@ -42,6 +42,7 @@
 @import "./files/owl.carousel.min.css";
 @import "~md.bootstrappersiandatetimepicker/dist/mds.bs.datetimepicker.style.css";
 @import url("https://v1.fontapi.ir/css/Samim");
+@import "~leaflet/dist/leaflet.css";
 
 * {
     margin: 0;
@@ -1577,7 +1578,7 @@ float: right;
 
 .custom-pricing-margin-btn{
     margin-top: 500px !important;
-    
+
 }
 .form-check{
     padding-left: 0!important;
@@ -1621,7 +1622,7 @@ a{
 }
 
 .card-footer{
-  
+
     background-color: var();
 }
 
@@ -2528,7 +2529,7 @@ a{
 }
 /* The track NOT covered by the handle.
 ::-webkit-scrollbar-track-piece {
-  background: #000; 
+  background: #000;
 }
 /* Corner */
 ::-webkit-scrollbar-corner {
