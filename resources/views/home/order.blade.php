@@ -702,7 +702,7 @@
 
         // document.getElementById("demo").innerHTML = "Hello World";
         // document.addEventListener("click", myFunction);
-
+        let information = []
         let Ostan = document.getElementById("Ostan");
         let Shahrestan = document.getElementById("Shahrestan");
         let Street = document.getElementById("Street");
@@ -718,9 +718,30 @@
 
         let giveInformation = document.getElementById("giveInformation")
         giveInformation.addEventListener('click', function() {
-            console.log(Street.value, Blvd.value, PostalCode.value, unit.value,
-                Plaque.value, FullAddress.value);
+            // console.log(Street.value, Blvd.value, PostalCode.value, unit.value,
+            //     Plaque.value, FullAddress.value);
+            information.push(Street.value, Blvd.value, PostalCode.value, unit.value, Plaque.value, FullAddress
+                .value, data.value)
+            console.log(information);
         });
+
+
+
+        axios({
+            method: 'post',
+            url: '/user/12345',
+            data: {
+                firstName: 'Fred',
+                lastName: 'Flintstone'
+            },
+            headers: {
+                'Authorization': 'Bearer ...'
+            }
+        });
+
+
+
+
 
 
 
