@@ -39,6 +39,9 @@
                     <label for="name">متن</label>
                     <textarea class="form-control" rows="4" cols="50" name="message" id="message"></textarea>
 
+                    <label for="name">ارسال لینک</label>
+                    <textarea class="form-control" rows="4" cols="30" name="link" id="link"></textarea>
+
                 </div>
                </div>
 

@@ -18,7 +18,7 @@
                         </ul>
                         <!-- fieldsets -->
                         <?php
-                        
+
                         $getParents = App\Models\Category::where('parent_id', 0)
                             ->with('children', 'attributes')
                             ->get();
@@ -493,7 +493,15 @@
 
 @section('js')
     <script>
-        var map = L.map('map').setView([51.505, -0.09], 13);
+        var map = L.map('map', {
+            center: [35.7219, 51.3347],
+            zoom: 13
+        });
+
+        L.tileLayer('https://demo.boundlessgeo.com/geoserver/ows?', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap'
+        }).addTo(map);
 
 
         $(document).ready(function() {

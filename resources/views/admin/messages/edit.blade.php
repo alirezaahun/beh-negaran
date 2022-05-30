@@ -31,6 +31,8 @@
                     <label for="name">متن</label>
                     <textarea class="form-control" rows="4" cols="50" name="message" id="message">{{$message->message}}</textarea>
 
+                    <label for="name">لینک</label>
+                    <textarea class="form-control" rows="4" cols="50" name="link" id="link">{{$message->link}}</textarea>
                 </div>
                </div>
 

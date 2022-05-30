@@ -53,7 +53,8 @@ class MessagesController extends Controller
 
             'user_id' => $request->user_id,
             'title' => $request->title,
-            'message' => $request->message
+            'message' => $request->message,
+            'link' => $request->link
 
         ]);
 
@@ -102,7 +103,8 @@ class MessagesController extends Controller
         $message->update([
 
             'title' => $request->title,
-            'message' => $request->message
+            'message' => $request->message,
+            'link' => $request->link
 
         ]);
 
