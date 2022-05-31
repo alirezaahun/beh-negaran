@@ -545,7 +545,6 @@
                                             <h6>{{ $message->message }}</h6>
                                         </li>
 
-<<<<<<< HEAD
                                         <li>
                                             <span class="text-secondary">لینک</span>
                                             <h6> <a href="{{ url('https://') . $message->link }}"> {{ $message->link }}
@@ -554,30 +553,6 @@
                                         </li>
                                     </ul>
                                 </div>
-=======
-                            <div class="user-message-box">
-                                <ul>
-                                    <li>
-                                        <span class="text-secondary">تاریخ</span>
-                                        <h6>{{verta($message->created_at)}}</h6>
-                                    </li>
-                                    <li>
-                                        <span class="text-secondary">عنوان</span>
-                                        <h6>{{$message->title}}</h6>
-                                    </li>
-
-                                    <li>
-                                        <span class="text-secondary">لینک</span>
-                                        <h6> <a href="{{url('https://').$message->link}}"> {{$message->link}} </a> </h6>
-                                    </li>
-                                    <li class="message-text">
-                                        <span class="text-secondary">متن</span>
-                                        <h6>{{$message->message}}</h6>
-                                    </li>
-                                </ul>
-                            </div>
-
->>>>>>> f817de99afc2529f2b82d1adaa1820c962d9e239
                             @endforeach
 
                         </div>
