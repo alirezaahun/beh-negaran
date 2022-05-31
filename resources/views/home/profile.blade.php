@@ -219,13 +219,16 @@
                                                     <p class="text-secondary">لطفا اطلاعات شناسایی خود را وارد کنید. آدرس
                                                         شما
                                                         باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
-                                                    <form action="">
-                                                        <div class="form-group">
+                                                    <form id="addressForm">
+                                                        <div id="addressForm" class="form-group">
                                                             <label for="userAddress">آدرس</label>
-                                                            <input type="text" class="form-control" id="userAddress"
+                                                            <input type="text" id="addresses" name="addresses"
+                                                                class="form-control" id="address"
                                                                 placeholder="تهران، خیابان ۹ شرقی...">
                                                         </div>
-                                                        <button type="submit" class="secondary-btn">ذخیره</button>
+
+                                                        <div name="map" id="map" style="height: 200px"></div>
+                                                        <button class="secondary-btn">ذخیره</button>
                                                     </form>
                                                 </div>
                                             </div>
@@ -400,6 +403,7 @@
                                                             <input type="text" class="form-control" id="companyAddress"
                                                                 placeholder="آدرس شرکت">
                                                         </div>
+
                                                         <button type="submit" class="secondary-btn">ذخیره</button>
                                                     </form>
                                                 </div>
@@ -526,29 +530,29 @@
                         <div class="col-md-12">
 
                             @foreach ($user->messages as $message)
+                                <div class="user-message-box">
+                                    <ul>
+                                        <li>
+                                            <span class="text-secondary">تاریخ</span>
+                                            <h6>{{ verta($message->created_at) }}</h6>
+                                        </li>
+                                        <li>
+                                            <span class="text-secondary">عنوان</span>
+                                            <h6>{{ $message->title }}</h6>
+                                        </li>
+                                        <li>
+                                            <span class="text-secondary">متن</span>
+                                            <h6>{{ $message->message }}</h6>
+                                        </li>
 
-                            <div class="user-message-box">
-                                <ul>
-                                    <li>
-                                        <span class="text-secondary">تاریخ</span>
-                                        <h6>{{verta($message->created_at)}}</h6>
-                                    </li>
-                                    <li>
-                                        <span class="text-secondary">عنوان</span>
-                                        <h6>{{$message->title}}</h6>
-                                    </li>
-                                    <li>
-                                        <span class="text-secondary">متن</span>
-                                        <h6>{{$message->message}}</h6>
-                                    </li>
-
-                                    <li>
-                                        <span class="text-secondary">لینک</span>
-                                        <h6> <a href=""> {{$message->link}} </a> </h6>
-                                    </li>
-                                </ul>
-                            </div>
-
+                                        <li>
+                                            <span class="text-secondary">لینک</span>
+                                            <h6> <a href="{{ url('https://') . $message->link }}"> {{ $message->link }}
+                                                </a>
+                                            </h6>
+                                        </li>
+                                    </ul>
+                                </div>
                             @endforeach
 
                         </div>
@@ -568,8 +572,65 @@
 
 @section('js')
     <script>
+        var lat = 35.699739;
+        var lng = 51.338097;
+
+        var map = new L.Map('map', {
+            key: 'web.5j4qJGGkEPdoi3S18YqklpipMjVUa7nDm8cuiiL9',
+            maptype: 'dreamy',
+            center: [lat, lng],
+            zoom: 14,
+            traffic: true,
+            onTrafficLayerSwitched: function(state) {
+                console.log(state);
+            }
+        });
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: false
+        }).addTo(map);
+
+
+
+        var marker = L.marker([32.4279, 53.6880]).addTo(map)
+            .openPopup();
+
+        map.on('click', function(e) {
+            map.removeLayer(marker);
+            marker = new L.marker(e.latlng).addTo(map);
+            lat = marker._latlng.lat;
+            lng = marker._latlng.lng;
+
+            console.log(lat, lng);
+        });
+
+
         // Hide And Show All Contents With Right Side Navbar ---------------------------
         $(document).ready(function() {
+
+            $('#addressForm').submit(function(event) {
+
+                console.log($('#addresses').val());
+                event.preventDefault();
+
+                $.post("{{route('addresses.store')}}", {
+
+                    '_token': "{{ csrf_token() }}",
+                    'address': $('#addresses').val(),
+                    'user_id': "{{$user->id}}",
+                    'lat': lat,
+                    'lng': lng
+
+                }, function(response, status) {
+                    console.log(response, status);
+
+                }).fail(function(response) {
+
+                    console.log(response);
+                })
+
+            });
 
             //When page loads...
             $(".tab_content").hide(); //Hide all content

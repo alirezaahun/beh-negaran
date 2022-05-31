@@ -71,6 +71,7 @@
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
     <!-- Persian Date --------------------------------------------------------->
     <link rel="stylesheet" href="{{asset('css/home.css')}}">
     <!-- Owl Carousel  -------------------------------------------->
@@ -94,6 +95,8 @@
       <script type="text/javascript" src="node_modules/persian-datepicker/dist/js/persian-datepicker.min.js"></script> --}}
       {{-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/3.0.0/jquery.waypoints.min.js" integrity="sha512-f/gxy4xAjuGEIf/ujexcNI906CTS+kfw40QCyG/rEMKELvCIFaTOY+dfdn7M/eNsiMreG3SStjgFr9q8Me9Baw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> --}}
       <script src="{{asset('js/main.js')}}"></script>
+
+      <script src="https://static.neshan.org/sdk/leaflet/1.4.0/leaflet.js" type="text/javascript"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.2/js/intlTelInput.js"></script>

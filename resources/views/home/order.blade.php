@@ -493,15 +493,6 @@
 
 @section('js')
     <script>
-        var map = L.map('map', {
-            center: [35.7219, 51.3347],
-            zoom: 13
-        });
-
-        L.tileLayer('https://demo.boundlessgeo.com/geoserver/ows?', {
-            maxZoom: 19,
-            attribution: '© OpenStreetMap'
-        }).addTo(map);
 
 
         $(document).ready(function() {
@@ -710,7 +701,7 @@
 
         // document.getElementById("demo").innerHTML = "Hello World";
         // document.addEventListener("click", myFunction);
-        let information = []
+
         let Ostan = document.getElementById("Ostan");
         let Shahrestan = document.getElementById("Shahrestan");
         let Street = document.getElementById("Street");
@@ -726,30 +717,9 @@
 
         let giveInformation = document.getElementById("giveInformation")
         giveInformation.addEventListener('click', function() {
-            // console.log(Street.value, Blvd.value, PostalCode.value, unit.value,
-            //     Plaque.value, FullAddress.value);
-            information.push(Street.value, Blvd.value, PostalCode.value, unit.value, Plaque.value, FullAddress
-                .value, data.value)
-            console.log(information);
+            console.log(Street.value, Blvd.value, PostalCode.value, unit.value,
+                Plaque.value, FullAddress.value);
         });
-
-
-
-        axios({
-            method: 'post',
-            url: '/user/12345',
-            data: {
-                firstName: 'Fred',
-                lastName: 'Flintstone'
-            },
-            headers: {
-                'Authorization': 'Bearer ...'
-            }
-        });
-
-
-
-
 
 
 
