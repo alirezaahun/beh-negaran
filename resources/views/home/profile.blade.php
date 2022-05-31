@@ -490,7 +490,6 @@
                                 <li><span class="text-secondary">مبلغ</span>
                                     <h6>۳٫۰۰۰٫۰۰۰ تومان</h6>
                                 </li>
-
                             </ul>
                             <span class="order-details">جزئیات</span>
 
