@@ -42,7 +42,8 @@
 @import "./files/owl.carousel.min.css";
 @import "~md.bootstrappersiandatetimepicker/dist/mds.bs.datetimepicker.style.css";
 @import url("https://v1.fontapi.ir/css/Samim");
-@import "~leaflet/dist/leaflet.css";
+@import url("https://static.neshan.org/sdk/leaflet/1.4.0/leaflet.css");
+// @import "~leaflet/dist/leaflet.css";
 
 * {
     margin: 0;
@@ -1547,7 +1548,7 @@ footer p span {
 .text-justify {
     text-align: justify;
 }
-.text-right{
+.text-right {
     text-align: right;
 }
 .title-style {
@@ -1566,91 +1567,64 @@ footer p span {
     float: right;
 }
 
-
-
-
 // custom ckeck box
 
-.float-right-checkbox[type=checkbox]{
-float: right;
+.float-right-checkbox[type="checkbox"] {
+    float: right;
 }
 
-
-.custom-pricing-margin-btn{
+.custom-pricing-margin-btn {
     margin-top: 500px !important;
-
 }
-.form-check{
-    padding-left: 0!important;
+.form-check {
+    padding-left: 0 !important;
     text-align: right;
-
 }
 
-
-.ccustom-margin{
+.ccustom-margin {
     margin-right: -25px;
     // margin-top: -18px;
-
-
 }
-.ccustom-height{
+.ccustom-height {
     height: 28px !important;
 }
-.text-center{
+.text-center {
     text-align: center;
 }
-.text-right{
+.text-right {
     text-align: right !important;
 }
 
-.border-custom{
+.border-custom {
     border-top: 0.5px solid black;
 }
 
-.d-inline{
+.d-inline {
     display: inline;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-
-.card#test{
+.card#test {
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
     border-radius: 0.5rem;
 }
 
-.card-footer{
-
+.card-footer {
     background-color: var();
 }
 
-.card-footer:hover{
+.card-footer:hover {
     background-color: var(--clr-secondary);
     transition: 0.5s ease;
 }
-.card-footer:hover a{
-
+.card-footer:hover a {
     color: var(--clr-primary);
 }
 
 // ****************************************************plus
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // ***********************end pricing page ******************************
 /* BREAKPOINTS ----- */
@@ -2170,7 +2144,7 @@ a{
 }
 /* Modal Content */
 .modal-content {
-    max-height: 80%;
+    max-height: 100%;
     overflow: auto;
     position: relative;
     background-color: var(--clr-primary);
@@ -2325,19 +2299,39 @@ a{
     filter: blur(0.5px);
     cursor: pointer;
 }
-.c-type-trigger .checkbox-label, .checkbox-label:before {
+.c-type-trigger .checkbox-label,
+.checkbox-label:before {
     border: solid 0.3125em transparent;
     width: 4.6em;
     height: 2em;
     border-radius: 1.3125em;
-    box-shadow: inset 0 0.125em 0.75em rgba(0, 0, 0, .5);
-    background: repeating-linear-gradient(-45deg, rgba(119, 119, 119, .04) 0, rgba(119, 119, 119, .04) 2px, transparent 0, transparent 5px) padding-box, repeating-linear-gradient(45deg, rgba(119, 119, 119, .04) 0, rgba(119, 119, 119, .04) 2px, transparent 0, transparent 5px) padding-box, linear-gradient(transparent, rgba(0, 0, 0, .32)) padding-box, linear-gradient(var(--c), var(--c)) padding-box, linear-gradient(#bebebb, #fdfdfc) border-box;
+    box-shadow: inset 0 0.125em 0.75em rgba(0, 0, 0, 0.5);
+    background: repeating-linear-gradient(
+                -45deg,
+                rgba(119, 119, 119, 0.04) 0,
+                rgba(119, 119, 119, 0.04) 2px,
+                transparent 0,
+                transparent 5px
+            )
+            padding-box,
+        repeating-linear-gradient(
+                45deg,
+                rgba(119, 119, 119, 0.04) 0,
+                rgba(119, 119, 119, 0.04) 2px,
+                transparent 0,
+                transparent 5px
+            )
+            padding-box,
+        linear-gradient(transparent, rgba(0, 0, 0, 0.32)) padding-box,
+        linear-gradient(var(--c), var(--c)) padding-box,
+        linear-gradient(#bebebb, #fdfdfc) border-box;
 }
-.c-type-trigger .checkbox-label:before, .checkbox-label:after {
+.c-type-trigger .checkbox-label:before,
+.checkbox-label:after {
     position: absolute;
     top: 0;
     left: 0;
-    content: '';
+    content: "";
 }
 .c-type-trigger .checkbox-label:before {
     margin: -0.3125em;
@@ -2350,9 +2344,10 @@ a{
     width: 2em;
     height: 1.4em;
     border-radius: 1em;
-    transform: translate(calc(var(--s)*100%));
-    box-shadow: 0 2px 9px rgba(0, 0, 0, .8);
-    background: linear-gradient(#d1d1d1, #edede9) padding-box, linear-gradient(#fcfcfc, #b2b2b2) border-box;
+    transform: translate(calc(var(--s) * 100%));
+    box-shadow: 0 2px 9px rgba(0, 0, 0, 0.8);
+    background: linear-gradient(#d1d1d1, #edede9) padding-box,
+        linear-gradient(#fcfcfc, #b2b2b2) border-box;
     transition: 0.2s transform ease-in;
 }
 .checkbox__text {
@@ -2420,7 +2415,6 @@ a{
     justify-content: space-between !important;
     flex-direction: column !important;
     text-align: center !important;
-    
 }
 .order-collapse hr {
     background-color: var(--clr-secondary);
@@ -2512,10 +2506,10 @@ a{
 }
 .user-message-box ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-direction: row;
-    background-color: #fff;
     color: var(--clr-dark);
+    background-color: #fff;
     border-radius: 1.3rem;
     padding: 1rem;
     width: 100%;
@@ -2524,6 +2518,38 @@ a{
 .user-message-box h6 {
     margin-top: 0.7rem;
 }
+.message-text h6 {
+    max-width: 17rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: justify;
+    line-height: 1.5rem;
+}
+.message-text:hover h6 {
+    display: flex;
+    flex-direction: column;
+    white-space: unset;
+    overflow: visible;
+    text-overflow: unset;
+}
+.message-text span:after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f078";
+    color: var(--clr-dark);
+    // display: inline-block;
+    // animation-duration: 1s;
+    // animation-name: animate-expanded-text;
+    // animation-iteration-count: infinite;
+    // animation-direction: alternate-reverse;
+    font-weight: bold;
+    margin-right: 5px;
+}
+// @keyframes animate-expanded-text {
+//     to {
+//         transform: translateY(5px);
+//     }
+// }
 /* Scroll Bar ----------------------------------------------------------- */
 /* width */
 ::-webkit-scrollbar {
@@ -2781,6 +2807,18 @@ a{
     }
     .modal-content {
         width: 80%;
+    }
+    .user-message-box ul li {
+        padding: 0.3rem 1rem;
+    }
+    .message-text h6 {
+        max-width: unset;
+        white-space: unset;
+        overflow: visible;
+        text-overflow: unset;
+    }
+    .message-text span:after {
+        display: none;
     }
 }
 /* Tablet Screen -----------------------------------------------*/

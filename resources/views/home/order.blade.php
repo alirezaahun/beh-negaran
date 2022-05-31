@@ -18,7 +18,7 @@
                         </ul>
                         <!-- fieldsets -->
                         <?php
-                        
+
                         $getParents = App\Models\Category::where('parent_id', 0)
                             ->with('children', 'attributes')
                             ->get();
@@ -493,7 +493,6 @@
 
 @section('js')
     <script>
-        var map = L.map('map').setView([51.505, -0.09], 13);
 
 
         $(document).ready(function() {
@@ -702,7 +701,7 @@
 
         // document.getElementById("demo").innerHTML = "Hello World";
         // document.addEventListener("click", myFunction);
-        let information = []
+
         let Ostan = document.getElementById("Ostan");
         let Shahrestan = document.getElementById("Shahrestan");
         let Street = document.getElementById("Street");
@@ -718,8 +717,11 @@
 
         let giveInformation = document.getElementById("giveInformation")
         giveInformation.addEventListener('click', function() {
-            // console.log(Street.value, Blvd.value, PostalCode.value, unit.value,
-            //     Plaque.value, FullAddress.value);
+            console.log(Street.value, Blvd.value, PostalCode.value, unit.value,
+                Plaque.value, FullAddress.value);
+        });
+         // console.log(Street.value, Blvd.value, PostalCode.value, unit.value,
+        //  gitPlaque.value, FullAddress.value);
             information.push(Street.value, Blvd.value, PostalCode.value, unit.value, Plaque.value, FullAddress
                 .value, data.value)
             console.log(information);
@@ -735,18 +737,7 @@
                     FullAddress: FullAddress.value,
                     data: data.value,
                 },
-
             });
-        });
-
-
-
-
-
-
-
-
-
 
 
 

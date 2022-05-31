@@ -58,6 +58,7 @@ class HomeController extends Controller
         $user = User::where('id' , auth()->id())->first();
         return view('home.profile' , compact('user'));
 
+
     }
 
     public function editname(Request $request , $id){
