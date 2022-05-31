@@ -720,7 +720,24 @@
             console.log(Street.value, Blvd.value, PostalCode.value, unit.value,
                 Plaque.value, FullAddress.value);
         });
-
+         // console.log(Street.value, Blvd.value, PostalCode.value, unit.value,
+        //  gitPlaque.value, FullAddress.value);
+            information.push(Street.value, Blvd.value, PostalCode.value, unit.value, Plaque.value, FullAddress
+                .value, data.value)
+            console.log(information);
+            axios({
+                method: 'post',
+                url: '/user/12345',
+                information: {
+                    Street: Street.value,
+                    Blvd: Blvd.value,
+                    PostalCode: PostalCode.value,
+                    unit: unit.value,
+                    Plaque: Plaque.value,
+                    FullAddress: FullAddress.value,
+                    data: data.value,
+                },
+            });
 
 
 
