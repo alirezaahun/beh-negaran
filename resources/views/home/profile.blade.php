@@ -17,12 +17,12 @@
 
                     <li class="nav___items ">
                         <i class='bx bxs-briefcase-alt'></i>
-                        <a class="text-nowrap" href="">پروژه ها</a>
+                        <a class="text-nowrap" href="">روند پروژه ها</a>
                     </li>
 
                     <li class="nav___items ">
-                        <i class='bx bx-recycle'></i>
-                        <a class="text-nowrap" href="">پیگیری سفارشات</a>
+                        <i class='bx bxs-location-plus'></i>
+                        <a class="text-nowrap" href="#user-addresses">آدرس ها</a>
                     </li>
 
                     <li class="nav___items ">
@@ -522,6 +522,30 @@
 
                     </div>
 
+                    {{-- User Addresses --}}
+                    <div class="row tab_content" id="user-addresses">
+                        <h4>آدرس های شما</h4>
+
+
+                        <div class="footer-line"><span></span></div>
+                        <div class="col-md-12">
+
+
+                            <div class="addresses-box">
+                                <ul>
+                                    <li>
+                                        aaa
+                                    </li>
+
+                                </ul>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                    {{-- User Messages --}}
                     <div class="row tab_content" id="messages">
                         <h4>پیغام های شما</h4>
 
@@ -530,34 +554,35 @@
                         <div class="col-md-12">
 
                             @foreach ($user->messages as $message)
+                                <div class="user-message-box">
+                                    <ul>
+                                        <li>
+                                            <span class="text-secondary">تاریخ</span>
+                                            <h6>{{ verta($message->created_at) }}</h6>
+                                        </li>
+                                        <li>
+                                            <span class="text-secondary">عنوان</span>
+                                            <h6>{{ $message->title }}</h6>
+                                        </li>
 
-                            <div class="user-message-box">
-                                <ul>
-                                    <li>
-                                        <span class="text-secondary">تاریخ</span>
-                                        <h6>{{verta($message->created_at)}}</h6>
-                                    </li>
-                                    <li>
-                                        <span class="text-secondary">عنوان</span>
-                                        <h6>{{$message->title}}</h6>
-                                    </li>
-                                    
-                                    <li>
-                                        <span class="text-secondary">لینک</span>
-                                        <h6> <a href="{{url('https://').$message->link}}"> {{$message->link}} </a> </h6>
-                                    </li>
-                                    <li class="message-text">
-                                        <span class="text-secondary">متن</span>
-                                        <h6>{{$message->message}}</h6>
-                                    </li>
-                                </ul>
-                            </div>
-
+                                        <li>
+                                            <span class="text-secondary">لینک</span>
+                                            <h6> <a href="{{ url('https://') . $message->link }}"> {{ $message->link }} </a>
+                                            </h6>
+                                        </li>
+                                        <li class="message-text">
+                                            <span class="text-secondary">متن</span>
+                                            <h6>{{ $message->message }}</h6>
+                                        </li>
+                                    </ul>
+                                </div>
                             @endforeach
 
                         </div>
 
                     </div>
+
+                    
 
                 </div>
 
@@ -614,11 +639,11 @@
                 console.log($('#addresses').val());
                 event.preventDefault();
 
-                $.post("{{route('addresses.store')}}", {
+                $.post("{{ route('addresses.store') }}", {
 
                     '_token': "{{ csrf_token() }}",
                     'address': $('#addresses').val(),
-                    'user_id': "{{$user->id}}",
+                    'user_id': "{{ $user->id }}",
                     'lat': lat,
                     'lng': lng
 
