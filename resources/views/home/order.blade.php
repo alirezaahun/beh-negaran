@@ -723,21 +723,25 @@
             information.push(Street.value, Blvd.value, PostalCode.value, unit.value, Plaque.value, FullAddress
                 .value, data.value)
             console.log(information);
+            axios({
+                method: 'post',
+                url: '/user/12345',
+                information: {
+                    Street: Street.value,
+                    Blvd: Blvd.value,
+                    PostalCode: PostalCode.value,
+                    unit: unit.value,
+                    Plaque: Plaque.value,
+                    FullAddress: FullAddress.value,
+                    data: data.value,
+                },
+
+            });
         });
 
 
 
-        axios({
-            method: 'post',
-            url: '/user/12345',
-            data: {
-                firstName: 'Fred',
-                lastName: 'Flintstone'
-            },
-            headers: {
-                'Authorization': 'Bearer ...'
-            }
-        });
+
 
 
 
