@@ -536,9 +536,17 @@
 
                             <div class="addresses-box">
                                 <ul>
+                                    @foreach ($user->addresses as $address)
+
                                     <li>
-                                        aaa
+
+                                        {{$address->address}}
+
+                                        <div id="map{{$address->id}}" style="height: 140px"></div>
+
                                     </li>
+
+                                    @endforeach
 
                                 </ul>
                             </div>
@@ -634,6 +642,31 @@
             console.log(lat, lng);
         });
 
+        var getId = @json($user);
+        var idSaver = [];
+        console.log(getId.addresses);
+
+        getId.addresses.forEach(element => {
+            var map = new L.Map(`map${element.id}`, {
+            key: 'web.5j4qJGGkEPdoi3S18YqklpipMjVUa7nDm8cuiiL9',
+            maptype: 'dreamy',
+            center: [element.latitude, element.longitude],
+            zoom: 14,
+            traffic: true,
+            onTrafficLayerSwitched: function(state) {
+                console.log(state);
+            }
+        });
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: false
+        }).addTo(map);
+
+        var marker = L.marker([element.latitude, element.longitude]).addTo(map)
+            .openPopup();
+
+        });
 
         // Hide And Show All Contents With Right Side Navbar ---------------------------
         $(document).ready(function() {
