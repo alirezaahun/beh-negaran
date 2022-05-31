@@ -530,29 +530,29 @@
                         <div class="col-md-12">
 
                             @foreach ($user->messages as $message)
-                                <div class="user-message-box">
-                                    <ul>
-                                        <li>
-                                            <span class="text-secondary">تاریخ</span>
-                                            <h6>{{ verta($message->created_at) }}</h6>
-                                        </li>
-                                        <li>
-                                            <span class="text-secondary">عنوان</span>
-                                            <h6>{{ $message->title }}</h6>
-                                        </li>
-                                        <li>
-                                            <span class="text-secondary">متن</span>
-                                            <h6>{{ $message->message }}</h6>
-                                        </li>
 
-                                        <li>
-                                            <span class="text-secondary">لینک</span>
-                                            <h6> <a href="{{ url('https://') . $message->link }}"> {{ $message->link }}
-                                                </a>
-                                            </h6>
-                                        </li>
-                                    </ul>
-                                </div>
+                            <div class="user-message-box">
+                                <ul>
+                                    <li>
+                                        <span class="text-secondary">تاریخ</span>
+                                        <h6>{{verta($message->created_at)}}</h6>
+                                    </li>
+                                    <li>
+                                        <span class="text-secondary">عنوان</span>
+                                        <h6>{{$message->title}}</h6>
+                                    </li>
+                                    
+                                    <li>
+                                        <span class="text-secondary">لینک</span>
+                                        <h6> <a href="{{url('https://').$message->link}}"> {{$message->link}} </a> </h6>
+                                    </li>
+                                    <li class="message-text">
+                                        <span class="text-secondary">متن</span>
+                                        <h6>{{$message->message}}</h6>
+                                    </li>
+                                </ul>
+                            </div>
+
                             @endforeach
 
                         </div>
