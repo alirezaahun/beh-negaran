@@ -512,7 +512,10 @@
                                     </li>
 
                                 </ul>
-                                <button id="recipt-print" class="secondary-btn">چاپ فاکتور</button>
+                                <div class="w-50 d-flex align-items-center me-auto">
+                                    <button id="recipt-print" class="secondary-btn">چاپ فاکتور</button>
+                                    <button id="exclusive-recipt-print" class="secondary-btn">درخواست فاکتور رسمی</button>
+                                </div>
                             </div>
                             <hr>
                         </div>
@@ -567,7 +570,8 @@
 
                                         <li>
                                             <span class="text-secondary">لینک</span>
-                                            <h6> <a href="{{ url('https://') . $message->link }}"> {{ $message->link }} </a>
+                                            <h6> <a href="{{ url('https://') . $message->link }}"> {{ $message->link }}
+                                                </a>
                                             </h6>
                                         </li>
                                         <li class="message-text">
@@ -582,7 +586,7 @@
 
                     </div>
 
-                    
+
 
                 </div>
 

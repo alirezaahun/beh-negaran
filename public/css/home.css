@@ -2368,7 +2368,7 @@ a {
 
 /* Modal Content */
 .modal-content {
-  max-height: 80%;
+  max-height: 100%;
   overflow: auto;
   position: relative;
   background-color: var(--clr-primary);
