@@ -161,25 +161,19 @@
 
                                                                         </div>
                                                                     </div>
-
-                                                                    <button
-                                                                        class="button d-none d-md-block custom-margin-pricing w-50 text-center mx-auto"
-                                                                        role="button "> افزودن به سبد خرید</button>
                                                                 </div>
 
-
+                                                                <button id="add{{ $category->id }}"
+                                                                    class="button d-none d-md-block custom-margin-pricing w-50 text-center mx-auto"
+                                                                    role="button "> افزودن به سبد خرید</button>
 
 
                                                             </div>
-                                                            <button class="button d-block d-md-none my-3"
-                                                                role="button">افزودن
-                                                                به سبد خرید</button>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         @endforeach
-
                                     </div>
                                 </div>
                             </div>
@@ -388,15 +382,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
                             <input type="button" name="next" id="giveInformation" class="next action-button"
                                 value="Next" /> <input type="button" name="previous"
                                 class="previous action-button-previous" value="Previous" />
@@ -493,11 +478,10 @@
 
 @section('js')
     <script>
-
-
         $(document).ready(function() {
             var current_fs, next_fs, previous_fs; //fieldsets
             var opacity;
+            var obj = {};
             var current = 1;
             var steps = $("fieldset").length;
             setProgressBar(current);
@@ -532,6 +516,8 @@
             let parents = @json($getParents);
             $("select").change(function() {
                 var getChildrenId = $(this).children(":selected").attr("id");
+                var getChildreName = $(this).children(":selected").text();
+                var trigger = [];
                 $("#push" + getChildrenId).empty();
                 $("#pushHour" + getChildrenId).empty();
                 $("#pushOptionAttr" + getChildrenId).empty();
@@ -541,39 +527,44 @@
                     let getAttributes = [];
                     if (element.id == getId) {
                         element.tag_categories.forEach(element => {
-                            getAttributes.push(element);
                             let PushTagsInput = $("<input/>", {
                                 class: "form-check-input float-right-checkbox",
                                 type: "checkbox",
+                                id: `Tagcheckbox${element.id}`
                             });
                             let PushTagsLabel = $("<label/>", {
                                 value: element.id,
                                 text: element.name,
-                                class: "form-check-label float-right-checkbox"
+                                class: "form-check-label float-right-checkbox",
+                                id: `Taglabel${element.id}`
                             });
                             $("#pushTags" + getChildrenId).append(PushTagsInput,
                                 PushTagsLabel, "<br/>");
                         });
                         element.attributes.forEach(element => {
+
+                            trigger.push(element);
                             // getAttributes.push(element);
                             // console.log(element.);
                             let createAttr = $("<label/>", {
                                 value: element.id,
+                                id: `attributeLabel${element.id}`,
                                 text: element.name + "(" + element.price + ")"
                             });
                             let createCheckBox = $("<input/>", {
-                                type: "checkbox"
+                                type: "checkbox",
+                                id: `AttributeCheckbox${element.id}`
                             }).addClass('form-check-label float-right-checkbox');
                             let hourlabel = $("<label/>", {
-                                text: "مدت زمان درخواستی"
+                                text: "مدت زمان درخواستی",
+                                id: `HourQtyLabel${element.id}`
                             });
                             let hourInput = $("<input/>", {
                                 type: "number",
-                                id: "tentacles1",
+                                id: `HourQty${element.id}`,
                                 name: "tentacles",
                                 min: "1",
                                 max: "10",
-                                value: "1",
                                 class: "text-center",
                             });
                             let hourSpan = $("<span/>", {
@@ -581,15 +572,16 @@
                             });
 
                             let optionAttrLabel = $("<label/>", {
-                                text: "تعداد دوربین" + "(" + element.name + ")"
+                                text: "تعداد دوربین" + "(" + element.name + ")",
+                                id: `ObjQuantityLabel${element.id}`
                             });
 
                             let optionAttrInput = $("<input/>", {
                                 type: "number",
                                 class: "text-center h-25 border-custom",
+                                id: `ObjQuantity${element.id}`,
                                 min: "1",
-                                max: "10",
-                                value: "1"
+                                max: "10"
                             });
 
                             $("#push" + getChildrenId).append(createCheckBox, createAttr,
@@ -601,8 +593,60 @@
                                 "<br/>");
                         });
 
+                        var data = [];
+                        var hour = [];
+                        var quantity = [];
+                        trigger.forEach(element => {
+
+                            $('#AttributeCheckbox' + element.id).change(function() {
+
+                                var ischecked = $(this).is(':checked');
+
+                                if (ischecked) {
+
+                                    data.push(element.name);
+                                    hour.push($("#HourQty" + element.id).val());
+                                    quantity.push($("#ObjQuantity" + element.id).val());
+
+                                } else if (!ischecked) {
+
+                                    for (let i = 0; i < data.length; i++) {
+
+                                        if (data[i] == element.name) {
+
+                                            data.splice(i, 1);
+                                            hour.splice(i, 1);
+                                            quantity.splice(i, 1);
+
+                                        }
+
+                                    }
+
+                                }
+
+                                obj = {
+                                    attributes: data,
+                                    hour: hour,
+                                    quantity: quantity
+                                }
+
+                            });
+
+                        });
+
                     }
                 });
+            });
+
+            parents.forEach(element => {
+
+                $("#add" + element.id).click(function(event){
+
+                    event.preventDefault();
+                    console.log(obj);
+
+                });
+
             });
 
 
@@ -648,8 +692,6 @@
                 return false;
             })
 
-
-
         });
 
 
@@ -684,7 +726,12 @@
         });
 
 
+        $('add').click(function(event) {
 
+            event.preventDefault();
+            console.log(obj);
+
+        });
 
 
         //get values from form
@@ -720,24 +767,24 @@
             console.log(Street.value, Blvd.value, PostalCode.value, unit.value,
                 Plaque.value, FullAddress.value);
         });
-         // console.log(Street.value, Blvd.value, PostalCode.value, unit.value,
+        // console.log(Street.value, Blvd.value, PostalCode.value, unit.value,
         //  gitPlaque.value, FullAddress.value);
-            information.push(Street.value, Blvd.value, PostalCode.value, unit.value, Plaque.value, FullAddress
-                .value, data.value)
-            console.log(information);
-            axios({
-                method: 'post',
-                url: '/user/12345',
-                information: {
-                    Street: Street.value,
-                    Blvd: Blvd.value,
-                    PostalCode: PostalCode.value,
-                    unit: unit.value,
-                    Plaque: Plaque.value,
-                    FullAddress: FullAddress.value,
-                    data: data.value,
-                },
-            });
+        information.push(Street.value, Blvd.value, PostalCode.value, unit.value, Plaque.value, FullAddress
+            .value, data.value)
+        console.log(information);
+        axios({
+            method: 'post',
+            url: '/user/12345',
+            information: {
+                Street: Street.value,
+                Blvd: Blvd.value,
+                PostalCode: PostalCode.value,
+                unit: unit.value,
+                Plaque: Plaque.value,
+                FullAddress: FullAddress.value,
+                data: data.value,
+            },
+        });
 
 
 

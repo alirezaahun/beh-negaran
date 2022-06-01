@@ -643,8 +643,7 @@
         });
 
         var getId = @json($user);
-        var idSaver = [];
-        console.log(getId.addresses);
+        console.log(getId);
 
         getId.addresses.forEach(element => {
             var map = new L.Map(`map${element.id}`, {
