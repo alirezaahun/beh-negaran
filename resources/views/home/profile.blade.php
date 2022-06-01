@@ -490,7 +490,6 @@
                                 <li><span class="text-secondary">مبلغ</span>
                                     <h6>۳٫۰۰۰٫۰۰۰ تومان</h6>
                                 </li>
-
                             </ul>
                             <span class="order-details">جزئیات</span>
 
@@ -527,27 +526,29 @@
 
                     {{-- User Addresses --}}
                     <div class="row tab_content" id="user-addresses">
-                        <h4>آدرس های شما</h4>
-
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h4>آدرس های شما</h4>
+                            <button id="add-address-btn" class="secondary-btn">افزودن آدرس</button>
+                        </div>
 
                         <div class="footer-line"><span></span></div>
                         <div class="col-md-12">
-
-
                             <div class="addresses-box">
                                 <ul>
                                     @foreach ($user->addresses as $address)
+                                        <li>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div class="d-flex flex-column">
+                                                    <span class="text-secondary">آدرس کامل</span>
+                                                </div>
+                                                <button class="secondary-btn remove-address-btn h-50">حذف آدرس</button>
+                                            </div>
+                                            <h6> {{ $address->address }} </h6>
 
-                                    <li>
+                                            <div id="map{{ $address->id }}" style="height: 160px"></div>
 
-                                        {{$address->address}}
-
-                                        <div id="map{{$address->id}}" style="height: 140px"></div>
-
-                                    </li>
-
+                                        </li>
                                     @endforeach
-
                                 </ul>
                             </div>
 
@@ -647,23 +648,23 @@
 
         getId.addresses.forEach(element => {
             var map = new L.Map(`map${element.id}`, {
-            key: 'web.5j4qJGGkEPdoi3S18YqklpipMjVUa7nDm8cuiiL9',
-            maptype: 'dreamy',
-            center: [element.latitude, element.longitude],
-            zoom: 14,
-            traffic: true,
-            onTrafficLayerSwitched: function(state) {
-                console.log(state);
-            }
-        });
+                key: 'web.5j4qJGGkEPdoi3S18YqklpipMjVUa7nDm8cuiiL9',
+                maptype: 'dreamy',
+                center: [element.latitude, element.longitude],
+                zoom: 14,
+                traffic: true,
+                onTrafficLayerSwitched: function(state) {
+                    console.log(state);
+                }
+            });
 
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-            attribution: false
-        }).addTo(map);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: false
+            }).addTo(map);
 
-        var marker = L.marker([element.latitude, element.longitude]).addTo(map)
-            .openPopup();
+            var marker = L.marker([element.latitude, element.longitude]).addTo(map)
+                .openPopup();
 
         });
 

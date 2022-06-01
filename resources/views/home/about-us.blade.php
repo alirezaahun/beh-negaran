@@ -4,16 +4,13 @@
     <!-- Banner Section ---------------------------------------------------------------->
     <main class="main-section">
         <div class="container-fluid px-0">
-
             <div class="page-content container mt-5">
-
                 <div class="row">
                     <div class="col col-md-7">
                         <h2 class="aboutUs-h2-color">
                             چرا هستیم؟
                         </h2>
                         <div class="footer-line"><span></span></div>
-
                         <p class="mb-4">به‌نگاران اولین سامانه یکپارچه تولید محتوای دیجیتال در کشوره که تقریبا تمام
                             خدمات تولید محتوا و تبلیغات رو پوشش میده.</p>
                         <p class="mb-4">اینکه کاربر وارد سایت شود و بتونه تمام خدمات مد نظرش رو به صورت آنلاین
@@ -21,7 +18,6 @@
                             تمامی خدمات رو پیگیری کنه تا به سرانجام برسه اصلی‌ترین دلیل به وجود اومدن ماست.</p>
                         <p>به‌نگاران با قدرت کنار شماست تا به تمامی نیاز شما برای تولید محتوا و تبلیغات پاسخ بده.</p>
                     </div>
-
                     <div class="col-md-5 col-sm-12 digital-marketing-pic">
                         <img class="img-fluid" src="{{ asset('images/aboutus-cover.png') }}">
                     </div>
@@ -35,141 +31,152 @@
                         <p class="mb-4 text-center">به‌نگاران از ابتدا بر دو پایه اساسی پیریزی شده و طبق همین اصول جلو میره
                         </p>
                         <p class="mb-4 text-center fw-bold">۱- کیفیت کار بالا | ۲- تحویل سریع خدمات</p>
-                        <p class="text-center">قطعا همه ما میدونیم این دو مورد از اصلی ترین چالش های حوزه محتوا و تبلیغات هستن اما شما میتونید
+                        <p class="text-center">قطعا همه ما میدونیم این دو مورد از اصلی ترین چالش های حوزه محتوا و تبلیغات
+                            هستن اما شما میتونید
                             با اطمینان خاطر و بدون داشتن نگرانی پروژه های خودتون رو توسط تیم تخصصی ما پیش ببرید.</p>
                     </div>
                 </div>
 
-                <div class="box d-flex row custom-boxshodow custom-border">
+                <div class="box d-flex row custom-boxshodow custom-border " >
+                    <div class="row col-12 col-md-7 mx-auto">
+                       
+                        <div class="card col-12 col-md-6 my-4 " id="about-us-card">
+                            <div class="imgBx">
+                                <img src="{{ asset('logobanner.jpg') }}" alt="personel-image">
+                                <div class="d-flex flex-column align-items-end">
+                                    <a href="https://instagram.com/daniaaaaaall?igshid=YmMyMTA2M2Y="  target="_blank"  class="mx-2"><i class="fab fa-instagram-square"></i></a>
+                                    <a href="https://api.whatsapp.com/send?phone=989195275731" target="_blank" class="mx-2"><i class="fab fa-whatsapp-square"></i></a>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="details d-flex flex-column justify-content-between ">
+                                    <h5>دانیال لاله</h5>
+                                    <p class="text-secondary">مدیر عامل و عضو هیئت مدیره</p>
+                                </div>
+                            </div>
+                        </div>
+                        {{-- ----------------------------------------------------------------------------- --}}
+                        <div class="card col-12 col-md-6 my-4">
+                            <div class="imgBx">
+                                <img src="{{ asset('logobanner.jpg') }}" alt="personel-image">
+                                <div class="d-flex flex-column align-items-end">
+                                    <a href="https://instagram.com/mohammadpalizgir_?igshid=YmMyMTA2M2Y="  target="_blank" class="mx-2"><i class="fab fa-instagram-square"></i></a>
+                                    <a href="https://api.whatsapp.com/send?phone=989128754089" target="_blank" class="mx-2"><i class="fab fa-whatsapp-square"></i></a>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="details d-flex flex-column justify-content-between ">
+                                    <h5> محمد پالیزگیر</h5>
+                                    <p class="text-secondary"> بخش فروش و بازاریابی</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{-- ----------------------------------------------------------------------------- --}}
+                    <div class="row col-12 col-md-10 mx-auto">
+                   
 
-                    <div class="card col-12 col-md-6 my-4">
-                        <div class="imgBx">
-                            <img src="{{ asset('logobanner.jpg') }}" alt="personel-image">
-                            <div class="d-flex flex-column align-items-end">
-                                <a href="" class="mx-2"><i class="fab fa-instagram-square"></i></a>
-                                <a href="" class="mx-2"><i class="fab fa-whatsapp-square"></i></a>
+                        <div class="card col-12 col-md-6 my-4">
+                            <div class="imgBx">
+                                <img src="{{ asset('logobanner.jpg') }}" alt="personel-image">
+                                <div class="d-flex flex-column align-items-end">
+                                    <a href="https://instagram.com/m.ghasemzadeh20?igshid=YmMyMTA2M2Y="  target="_blank" class="mx-2"><i class="fab fa-instagram-square"></i></a>
+                                    <a href="https://api.whatsapp.com/send?phone=989122398121" class="mx-2" target="_blank" ><i class="fab fa-whatsapp-square"></i></a>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="details d-flex flex-column justify-content-between ">
+                                    <h5> محمد قاسم زاده</h5>
+                                    <p class="text-secondary">بخش برندینگ و مارکتینگ </p>
+                                </div>
                             </div>
                         </div>
-                        <div>
-                            <div class="details d-flex flex-column justify-content-between ">
-                                <h5>سهراب ناصحی</h5>
-                                <p class="text-secondary">توسعه دهنده وب</p>
+                        {{-- ----------------------------------------------------------------------------- --}}
+                        <div class="card col-12 col-md-6 my-4">
+                            <div class="imgBx">
+                                <img src="{{ asset('logobanner.jpg') }}" alt="personel-image">
+                                <div class="d-flex flex-column align-items-end">
+                                    <a href="https://instagram.com/amiiir_m7?igshid=YmMyMTA2M2Y="  target="_blank" class="mx-2"><i class="fab fa-instagram-square"></i></a>
+                                    <a href="  https://api.whatsapp.com/send?phone=989109242942" class="mx-2" target="_blank" ><i class="fab fa-whatsapp-square"></i></a>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="details d-flex flex-column justify-content-between ">
+                                    <h5> امیرمهدی لاله </h5>
+                                    <p class="text-secondary">  بخش پادکست</p>
+                                </div>
+                            </div>
+                        </div>
+                        {{-- ----------------------------------------------------------------------------- --}}
+                        <div class="card col-12 col-md-6 my-4">
+                            <div class="imgBx">
+                                <img src="{{ asset('logobanner.jpg') }}" alt="personel-image">
+                                <div class="d-flex flex-column align-items-end">
+                                    <a href="https://instagram.com/erfan_barzegar?igshid=YmMyMTA2M2Y=" class="mx-2" target="_blank" ><i class="fab fa-instagram-square"></i></a>
+                                    <a href="https://api.whatsapp.com/send?phone=989357393454" class="mx-2" target="_blank" ><i class="fab fa-whatsapp-square"></i></a>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="details d-flex flex-column justify-content-between ">
+                                    <h5> عرفان برزگر </h5>
+                                    <p class="text-secondary">   بخش مالی</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row col-12 col-md-10 mx-auto">
+                   
+
+                        <div class="card col-12 col-md-6 my-4">
+                            <div class="imgBx">
+                                <img src="{{ asset('logobanner.jpg') }}" alt="personel-image">
+                                <div class="d-flex flex-column align-items-end">
+                                    <a href="https://instagram.com/alireza.ty99?igshid=YmMyMTA2M2Y=" class="mx-2" target="_blank" ><i class="fab fa-instagram-square"></i></a>
+                                    <a href="https://api.whatsapp.com/send?phone=989384241199" class="mx-2" target="_blank" ><i class="fab fa-whatsapp-square"></i></a>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="details d-flex flex-column justify-content-between ">
+                                    <h5> علیرضا آبادی</h5>
+                                    <p class="text-secondary">بخش سایت (UI)</p>
+                                </div>
+                            </div>
+                        </div>
+                        {{-- ----------------------------------------------------------------------------- --}}
+                        <div class="card col-12 col-md-6 my-4">
+                            <div class="imgBx">
+                                <img src="{{ asset('logobanner.jpg') }}" alt="personel-image">
+                                <div class="d-flex flex-column align-items-end">
+                                    <a href="https://instagram.com/sohrab_nasehi?igshid=YmMyMTA2M2Y="  target="_blank" class="mx-2"><i class="fab fa-instagram-square"></i></a>
+                                    <a href=" https://api.whatsapp.com/send?phone=989378219393     " class="mx-2" target="_blank" ><i class="fab fa-whatsapp-square"></i></a>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="details d-flex flex-column justify-content-between ">
+                                    <h5>سهراب ناصحی</h5>
+                                    <p class="text-secondary">بخش سایت (UI)</p>
+                                </div>
+                            </div>
+                        </div>
+                        {{-- ----------------------------------------------------------------------------- --}}
+                        <div class="card col-12 col-md-6 my-4">
+                            <div class="imgBx">
+                                <img src="{{ asset('logobanner.jpg') }}" alt="personel-image">
+                                <div class="d-flex flex-column align-items-end">
+                                    <a href="" class="mx-2" target="_blank" ><i class="fab fa-instagram-square"></i></a>
+                                    <a href="https://api.whatsapp.com/send?phone=989309259061" class="mx-2" target="_blank" ><i class="fab fa-whatsapp-square"></i></a>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="details d-flex flex-column justify-content-between ">
+                                    <h5>علیرضا آهون</h5>
+                                    <p class="text-secondary">توسعه دهنده وب</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                     {{-- ----------------------------------------------------------------------------- --}}
-                    <div class="card col-12 col-md-6 my-4">
-                        <div class="imgBx">
-                            <img src="{{ asset('logobanner.jpg') }}" alt="personel-image">
-                            <div class="d-flex flex-column align-items-end">
-                                <a href="" class="mx-2"><i class="fab fa-instagram-square"></i></a>
-                                <a href="" class="mx-2"><i class="fab fa-whatsapp-square"></i></a>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="details d-flex flex-column justify-content-between ">
-                                <h5>سهراب ناصحی</h5>
-                                <p class="text-secondary">توسعه دهنده وب</p>
-                            </div>
-                        </div>
-                    </div>
-                    {{-- ----------------------------------------------------------------------------- --}}
-                    <div class="card col-12 col-md-6 my-4">
-                        <div class="imgBx">
-                            <img src="{{ asset('logobanner.jpg') }}" alt="personel-image">
-                            <div class="d-flex flex-column align-items-end">
-                                <a href="" class="mx-2"><i class="fab fa-instagram-square"></i></a>
-                                <a href="" class="mx-2"><i class="fab fa-whatsapp-square"></i></a>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="details d-flex flex-column justify-content-between ">
-                                <h5>سهراب ناصحی</h5>
-                                <p class="text-secondary">توسعه دهنده وب</p>
-                            </div>
-                        </div>
-                    </div>
-                    {{-- ----------------------------------------------------------------------------- --}}
-                    <div class="card col-12 col-md-6 my-4">
-                        <div class="imgBx">
-                            <img src="{{ asset('logobanner.jpg') }}" alt="personel-image">
-                            <div class="d-flex flex-column align-items-end">
-                                <a href="" class="mx-2"><i class="fab fa-instagram-square"></i></a>
-                                <a href="" class="mx-2"><i class="fab fa-whatsapp-square"></i></a>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="details d-flex flex-column justify-content-between ">
-                                <h5>سهراب ناصحی</h5>
-                                <p class="text-secondary">توسعه دهنده وب</p>
-                            </div>
-                        </div>
-                    </div>
-                    {{-- ----------------------------------------------------------------------------- --}}
-                    <div class="card col-12 col-md-6 my-4">
-                        <div class="imgBx">
-                            <img src="{{ asset('logobanner.jpg') }}" alt="personel-image">
-                            <div class="d-flex flex-column align-items-end">
-                                <a href="" class="mx-2"><i class="fab fa-instagram-square"></i></a>
-                                <a href="" class="mx-2"><i class="fab fa-whatsapp-square"></i></a>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="details d-flex flex-column justify-content-between ">
-                                <h5>سهراب ناصحی</h5>
-                                <p class="text-secondary">توسعه دهنده وب</p>
-                            </div>
-                        </div>
-                    </div>
-                    {{-- ----------------------------------------------------------------------------- --}}
-                    <div class="card col-12 col-md-6 my-4">
-                        <div class="imgBx">
-                            <img src="{{ asset('logobanner.jpg') }}" alt="personel-image">
-                            <div class="d-flex flex-column align-items-end">
-                                <a href="" class="mx-2"><i class="fab fa-instagram-square"></i></a>
-                                <a href="" class="mx-2"><i class="fab fa-whatsapp-square"></i></a>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="details d-flex flex-column justify-content-between ">
-                                <h5>سهراب ناصحی</h5>
-                                <p class="text-secondary">توسعه دهنده وب</p>
-                            </div>
-                        </div>
-                    </div>
-                    {{-- ----------------------------------------------------------------------------- --}}
-                    <div class="card col-12 col-md-6 my-4">
-                        <div class="imgBx">
-                            <img src="{{ asset('logobanner.jpg') }}" alt="personel-image">
-                            <div class="d-flex flex-column align-items-end">
-                                <a href="" class="mx-2"><i class="fab fa-instagram-square"></i></a>
-                                <a href="" class="mx-2"><i class="fab fa-whatsapp-square"></i></a>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="details d-flex flex-column justify-content-between ">
-                                <h5>سهراب ناصحی</h5>
-                                <p class="text-secondary">توسعه دهنده وب</p>
-                            </div>
-                        </div>
-                    </div>
-                    {{-- ----------------------------------------------------------------------------- --}}
-                    <div class="card col-12 col-md-6 my-4">
-                        <div class="imgBx">
-                            <img src="{{ asset('logobanner.jpg') }}" alt="personel-image">
-                            <div class="d-flex flex-column align-items-end">
-                                <a href="" class="mx-2"><i class="fab fa-instagram-square"></i></a>
-                                <a href="" class="mx-2"><i class="fab fa-whatsapp-square"></i></a>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="details d-flex flex-column justify-content-between ">
-                                <h5>سهراب ناصحی</h5>
-                                <p class="text-secondary">توسعه دهنده وب</p>
-                            </div>
-                        </div>
-                    </div>
-                    {{-- ----------------------------------------------------------------------------- --}}
+
                 </div>
 
 

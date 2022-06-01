@@ -12,6 +12,9 @@ require('./owl-custom-main');
 
 
 
+
+
+
 // Footer Items Collapse On Mobile ------------------------------
 var coll = document.getElementsByClassName("collapsible-trigger");
 var i;
