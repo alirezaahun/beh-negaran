@@ -45,7 +45,7 @@
                                 <img src="{{ asset('logobanner.jpg') }}" alt="personel-image">
                                 <div class="d-flex flex-column align-items-end">
                                     <a href="https://instagram.com/daniaaaaaall?igshid=YmMyMTA2M2Y="  target="_blank"  class="mx-2"><i class="fab fa-instagram-square"></i></a>
-                                    <a href="https://api.whatsapp.com/send?phone=Phone_number&text=09195275731" target="_blank" class="mx-2"><i class="fab fa-whatsapp-square"></i></a>
+                                    <a href="https://api.whatsapp.com/send?phone=989195275731" target="_blank" class="mx-2"><i class="fab fa-whatsapp-square"></i></a>
                                 </div>
                             </div>
                             <div>
@@ -61,7 +61,7 @@
                                 <img src="{{ asset('logobanner.jpg') }}" alt="personel-image">
                                 <div class="d-flex flex-column align-items-end">
                                     <a href="https://instagram.com/mohammadpalizgir_?igshid=YmMyMTA2M2Y="  target="_blank" class="mx-2"><i class="fab fa-instagram-square"></i></a>
-                                    <a href="https://api.whatsapp.com/send?phone=Phone_number&text= +989128754089"  target="_blank" class="mx-2"><i class="fab fa-whatsapp-square"></i></a>
+                                    <a href="https://api.whatsapp.com/send?phone=989128754089" target="_blank" class="mx-2"><i class="fab fa-whatsapp-square"></i></a>
                                 </div>
                             </div>
                             <div>
@@ -81,7 +81,7 @@
                                 <img src="{{ asset('logobanner.jpg') }}" alt="personel-image">
                                 <div class="d-flex flex-column align-items-end">
                                     <a href="https://instagram.com/m.ghasemzadeh20?igshid=YmMyMTA2M2Y="  target="_blank" class="mx-2"><i class="fab fa-instagram-square"></i></a>
-                                    <a href="+989357393454" class="mx-2" target="_blank" ><i class="fab fa-whatsapp-square"></i></a>
+                                    <a href="https://api.whatsapp.com/send?phone=989122398121" class="mx-2" target="_blank" ><i class="fab fa-whatsapp-square"></i></a>
                                 </div>
                             </div>
                             <div>
@@ -97,7 +97,7 @@
                                 <img src="{{ asset('logobanner.jpg') }}" alt="personel-image">
                                 <div class="d-flex flex-column align-items-end">
                                     <a href="https://instagram.com/amiiir_m7?igshid=YmMyMTA2M2Y="  target="_blank" class="mx-2"><i class="fab fa-instagram-square"></i></a>
-                                    <a href="" class="mx-2" target="_blank" ><i class="fab fa-whatsapp-square"></i></a>
+                                    <a href="  https://api.whatsapp.com/send?phone=989109242942" class="mx-2" target="_blank" ><i class="fab fa-whatsapp-square"></i></a>
                                 </div>
                             </div>
                             <div>
@@ -113,7 +113,7 @@
                                 <img src="{{ asset('logobanner.jpg') }}" alt="personel-image">
                                 <div class="d-flex flex-column align-items-end">
                                     <a href="https://instagram.com/erfan_barzegar?igshid=YmMyMTA2M2Y=" class="mx-2" target="_blank" ><i class="fab fa-instagram-square"></i></a>
-                                    <a href="" class="mx-2" target="_blank" ><i class="fab fa-whatsapp-square"></i></a>
+                                    <a href="https://api.whatsapp.com/send?phone=989357393454" class="mx-2" target="_blank" ><i class="fab fa-whatsapp-square"></i></a>
                                 </div>
                             </div>
                             <div>
@@ -132,7 +132,7 @@
                                 <img src="{{ asset('logobanner.jpg') }}" alt="personel-image">
                                 <div class="d-flex flex-column align-items-end">
                                     <a href="https://instagram.com/alireza.ty99?igshid=YmMyMTA2M2Y=" class="mx-2" target="_blank" ><i class="fab fa-instagram-square"></i></a>
-                                    <a href="" class="mx-2" target="_blank" ><i class="fab fa-whatsapp-square"></i></a>
+                                    <a href="https://api.whatsapp.com/send?phone=989384241199" class="mx-2" target="_blank" ><i class="fab fa-whatsapp-square"></i></a>
                                 </div>
                             </div>
                             <div>
@@ -148,7 +148,7 @@
                                 <img src="{{ asset('logobanner.jpg') }}" alt="personel-image">
                                 <div class="d-flex flex-column align-items-end">
                                     <a href="https://instagram.com/sohrab_nasehi?igshid=YmMyMTA2M2Y="  target="_blank" class="mx-2"><i class="fab fa-instagram-square"></i></a>
-                                    <a href="" class="mx-2" target="_blank" ><i class="fab fa-whatsapp-square"></i></a>
+                                    <a href=" https://api.whatsapp.com/send?phone=989378219393     " class="mx-2" target="_blank" ><i class="fab fa-whatsapp-square"></i></a>
                                 </div>
                             </div>
                             <div>
@@ -164,7 +164,7 @@
                                 <img src="{{ asset('logobanner.jpg') }}" alt="personel-image">
                                 <div class="d-flex flex-column align-items-end">
                                     <a href="" class="mx-2" target="_blank" ><i class="fab fa-instagram-square"></i></a>
-                                    <a href="" class="mx-2" target="_blank" ><i class="fab fa-whatsapp-square"></i></a>
+                                    <a href="https://api.whatsapp.com/send?phone=989309259061" class="mx-2" target="_blank" ><i class="fab fa-whatsapp-square"></i></a>
                                 </div>
                             </div>
                             <div>
