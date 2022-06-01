@@ -371,7 +371,7 @@
                                                 </div>
                                             </div>
 
-                                            <button class="col-2 btn" type="button">تایید</button>
+                                       
                                         </div>
 
 
@@ -431,10 +431,9 @@
                                             <li><span class="text-secondary">مبلغ</span>
                                                 <h6>۳٫۰۰۰٫۰۰۰ تومان</h6>
                                             </li>
-
                                         </ul>
                                         <span class="order-details">جزئیات</span>
-
+            
                                         <div class="order-collapse">
                                             <ul class="responsive-table">
                                                 <li class="table-header">
@@ -445,25 +444,27 @@
                                                     <div class="col col-5">وضعیت سفارش</div>
                                                 </li>
                                                 <li class="table-row">
-                                                    <div class="col col-1" data-label="هزینه پکیج">۲٬۵۰۰٬۰۰۰ تومان
-                                                    </div>
-                                                    <div class="col col-2" data-label="ایاب و ذهاب">۲۰۰٬۰۰۰ تومان
-                                                    </div>
+                                                    <div class="col col-1" data-label="هزینه پکیج">۲٬۵۰۰٬۰۰۰ تومان</div>
+                                                    <div class="col col-2" data-label="ایاب و ذهاب">۲۰۰٬۰۰۰ تومان</div>
                                                     <div class="col col-3" data-label="خدمت اضافه">۳۰۰٬۰۰۰ تومان</div>
                                                     <div class="col col-4" data-label="مبلغ کل">۳٬۰۰۰٬۰۰۰ تومان</div>
                                                     <div class="col col-5" data-label="وضعیت سفارش">در حال انجام</div>
                                                 </li>
-
+            
                                             </ul>
-                                            <button id="recipt-print" class="secondary-btn">چاپ فاکتور</button>
+                                            <div class="w-50 d-flex align-items-center me-auto">
+                                                <button id="recipt-print" class="secondary-btn">چاپ فاکتور</button>
+                                                <button id="exclusive-recipt-print" class="secondary-btn">درخواست فاکتور رسمی</button>
+                                            </div>
                                         </div>
                                         <hr>
                                     </div>
-
-
-
-
+            
+            
+            
+            
                                 </div>
+            
 
 
 
@@ -720,52 +721,54 @@
         giveInformation.addEventListener('click', function() {
             // console.log(Street.value, Blvd.value, PostalCode.value, unit.value,
             //     Plaque.value, FullAddress.value);
-            information.push(Street.value, Blvd.value, PostalCode.value, unit.value, Plaque.value, FullAddress.value, date.value)
+            information.push(Street.value, Blvd.value, PostalCode.value, unit.value, Plaque.value, FullAddress
+                .value, date.value)
             console.log(information);
 
 
 
             axios({
-            method: 'post',
-            url: '/user/12345',
-            information: {
-                Street: Street.value,
-                Blvd: Blvd.value,
-                PostalCode: PostalCode.value,
-                unit: unit.value,
-                Plaque: Plaque.value,
-                FullAddress: FullAddress.value,
-                data: data.value,
-                Street: Street.value,
-            },
-        });
-
-        });
-
-
-
-   
-
-
-
-
-
-
-
-        //
-        var coll = document.getElementsByClassName("order-details");
-        var i;
-
-        for (i = 0; i < coll.length; i++) {
-            coll[i].addEventListener("click", function() {
-                this.classList.toggle("order-collapse-active");
-                var content = this.nextElementSibling;
-                if (content.style.maxHeight) {
-                    content.style.maxHeight = null;
-                } else {
-                    content.style.maxHeight = content.scrollHeight + "px";
-                }
+                method: 'post',
+                url: '/user/12345',
+                information: {
+                    Street: Street.value,
+                    Blvd: Blvd.value,
+                    PostalCode: PostalCode.value,
+                    unit: unit.value,
+                    Plaque: Plaque.value,
+                    FullAddress: FullAddress.value,
+                    data: data.value,
+                    Street: Street.value,
+                },
             });
-        }
+
+        });
+
+
+       
+
+
+
+
+
+
+
+
+
+                    //
+                    var coll = document.getElementsByClassName("order-details");
+                    var i;
+
+                    for (i = 0; i < coll.length; i++) {
+                        coll[i].addEventListener("click", function() {
+                            this.classList.toggle("order-collapse-active");
+                            var content = this.nextElementSibling;
+                            if (content.style.maxHeight) {
+                                content.style.maxHeight = null;
+                            } else {
+                                content.style.maxHeight = content.scrollHeight + "px";
+                            }
+                        });
+                    }
     </script>
 @endsection

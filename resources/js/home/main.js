@@ -9,8 +9,7 @@ require("sweetalert");
 require('md.bootstrappersiandatetimepicker/dist/mds.bs.datetimepicker');
 require('./owl-carousel-min');
 require('./owl-custom-main');
-require('../../../node_modules/axios/dist/axios.js');
-require('../');
+
 
 
 

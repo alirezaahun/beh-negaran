@@ -35,141 +35,152 @@
                         <p class="mb-4 text-center">به‌نگاران از ابتدا بر دو پایه اساسی پیریزی شده و طبق همین اصول جلو میره
                         </p>
                         <p class="mb-4 text-center fw-bold">۱- کیفیت کار بالا | ۲- تحویل سریع خدمات</p>
-                        <p class="text-center">قطعا همه ما میدونیم این دو مورد از اصلی ترین چالش های حوزه محتوا و تبلیغات هستن اما شما میتونید
+                        <p class="text-center">قطعا همه ما میدونیم این دو مورد از اصلی ترین چالش های حوزه محتوا و تبلیغات
+                            هستن اما شما میتونید
                             با اطمینان خاطر و بدون داشتن نگرانی پروژه های خودتون رو توسط تیم تخصصی ما پیش ببرید.</p>
                     </div>
                 </div>
 
-                <div class="box d-flex row custom-boxshodow custom-border">
+                <div class="box d-flex row custom-boxshodow custom-border " >
+                    <div class="row col-12 col-md-7 mx-auto">
+                       
+                        <div class="card col-12 col-md-6 my-4 " id="about-us-card">
+                            <div class="imgBx">
+                                <img src="{{ asset('logobanner.jpg') }}" alt="personel-image">
+                                <div class="d-flex flex-column align-items-end">
+                                    <a href="" class="mx-2"><i class="fab fa-instagram-square"></i></a>
+                                    <a href="" class="mx-2"><i class="fab fa-whatsapp-square"></i></a>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="details d-flex flex-column justify-content-between ">
+                                    <h5>دانیال لاله</h5>
+                                    <p class="text-secondary">توسعه دهنده وب</p>
+                                </div>
+                            </div>
+                        </div>
+                        {{-- ----------------------------------------------------------------------------- --}}
+                        <div class="card col-12 col-md-6 my-4">
+                            <div class="imgBx">
+                                <img src="{{ asset('logobanner.jpg') }}" alt="personel-image">
+                                <div class="d-flex flex-column align-items-end">
+                                    <a href="" class="mx-2"><i class="fab fa-instagram-square"></i></a>
+                                    <a href="" class="mx-2"><i class="fab fa-whatsapp-square"></i></a>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="details d-flex flex-column justify-content-between ">
+                                    <h5>سهراب ناصحی</h5>
+                                    <p class="text-secondary">توسعه دهنده وب</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{-- ----------------------------------------------------------------------------- --}}
+                    <div class="row col-12 col-md-10 mx-auto">
+                   
 
-                    <div class="card col-12 col-md-6 my-4">
-                        <div class="imgBx">
-                            <img src="{{ asset('logobanner.jpg') }}" alt="personel-image">
-                            <div class="d-flex flex-column align-items-end">
-                                <a href="" class="mx-2"><i class="fab fa-instagram-square"></i></a>
-                                <a href="" class="mx-2"><i class="fab fa-whatsapp-square"></i></a>
+                        <div class="card col-12 col-md-6 my-4">
+                            <div class="imgBx">
+                                <img src="{{ asset('logobanner.jpg') }}" alt="personel-image">
+                                <div class="d-flex flex-column align-items-end">
+                                    <a href="" class="mx-2"><i class="fab fa-instagram-square"></i></a>
+                                    <a href="" class="mx-2"><i class="fab fa-whatsapp-square"></i></a>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="details d-flex flex-column justify-content-between ">
+                                    <h5>سهراب ناصحی</h5>
+                                    <p class="text-secondary">توسعه دهنده وب</p>
+                                </div>
                             </div>
                         </div>
-                        <div>
-                            <div class="details d-flex flex-column justify-content-between ">
-                                <h5>سهراب ناصحی</h5>
-                                <p class="text-secondary">توسعه دهنده وب</p>
+                        {{-- ----------------------------------------------------------------------------- --}}
+                        <div class="card col-12 col-md-6 my-4">
+                            <div class="imgBx">
+                                <img src="{{ asset('logobanner.jpg') }}" alt="personel-image">
+                                <div class="d-flex flex-column align-items-end">
+                                    <a href="" class="mx-2"><i class="fab fa-instagram-square"></i></a>
+                                    <a href="" class="mx-2"><i class="fab fa-whatsapp-square"></i></a>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="details d-flex flex-column justify-content-between ">
+                                    <h5>سهراب ناصحی</h5>
+                                    <p class="text-secondary">توسعه دهنده وب</p>
+                                </div>
+                            </div>
+                        </div>
+                        {{-- ----------------------------------------------------------------------------- --}}
+                        <div class="card col-12 col-md-6 my-4">
+                            <div class="imgBx">
+                                <img src="{{ asset('logobanner.jpg') }}" alt="personel-image">
+                                <div class="d-flex flex-column align-items-end">
+                                    <a href="" class="mx-2"><i class="fab fa-instagram-square"></i></a>
+                                    <a href="" class="mx-2"><i class="fab fa-whatsapp-square"></i></a>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="details d-flex flex-column justify-content-between ">
+                                    <h5>سهراب ناصحی</h5>
+                                    <p class="text-secondary">توسعه دهنده وب</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row col-12 col-md-10 mx-auto">
+                   
+
+                        <div class="card col-12 col-md-6 my-4">
+                            <div class="imgBx">
+                                <img src="{{ asset('logobanner.jpg') }}" alt="personel-image">
+                                <div class="d-flex flex-column align-items-end">
+                                    <a href="" class="mx-2"><i class="fab fa-instagram-square"></i></a>
+                                    <a href="" class="mx-2"><i class="fab fa-whatsapp-square"></i></a>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="details d-flex flex-column justify-content-between ">
+                                    <h5>سهراب ناصحی</h5>
+                                    <p class="text-secondary">توسعه دهنده وب</p>
+                                </div>
+                            </div>
+                        </div>
+                        {{-- ----------------------------------------------------------------------------- --}}
+                        <div class="card col-12 col-md-6 my-4">
+                            <div class="imgBx">
+                                <img src="{{ asset('logobanner.jpg') }}" alt="personel-image">
+                                <div class="d-flex flex-column align-items-end">
+                                    <a href="" class="mx-2"><i class="fab fa-instagram-square"></i></a>
+                                    <a href="" class="mx-2"><i class="fab fa-whatsapp-square"></i></a>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="details d-flex flex-column justify-content-between ">
+                                    <h5>سهراب ناصحی</h5>
+                                    <p class="text-secondary">توسعه دهنده وب</p>
+                                </div>
+                            </div>
+                        </div>
+                        {{-- ----------------------------------------------------------------------------- --}}
+                        <div class="card col-12 col-md-6 my-4">
+                            <div class="imgBx">
+                                <img src="{{ asset('logobanner.jpg') }}" alt="personel-image">
+                                <div class="d-flex flex-column align-items-end">
+                                    <a href="" class="mx-2"><i class="fab fa-instagram-square"></i></a>
+                                    <a href="" class="mx-2"><i class="fab fa-whatsapp-square"></i></a>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="details d-flex flex-column justify-content-between ">
+                                    <h5>سهراب ناصحی</h5>
+                                    <p class="text-secondary">توسعه دهنده وب</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                     {{-- ----------------------------------------------------------------------------- --}}
-                    <div class="card col-12 col-md-6 my-4">
-                        <div class="imgBx">
-                            <img src="{{ asset('logobanner.jpg') }}" alt="personel-image">
-                            <div class="d-flex flex-column align-items-end">
-                                <a href="" class="mx-2"><i class="fab fa-instagram-square"></i></a>
-                                <a href="" class="mx-2"><i class="fab fa-whatsapp-square"></i></a>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="details d-flex flex-column justify-content-between ">
-                                <h5>سهراب ناصحی</h5>
-                                <p class="text-secondary">توسعه دهنده وب</p>
-                            </div>
-                        </div>
-                    </div>
-                    {{-- ----------------------------------------------------------------------------- --}}
-                    <div class="card col-12 col-md-6 my-4">
-                        <div class="imgBx">
-                            <img src="{{ asset('logobanner.jpg') }}" alt="personel-image">
-                            <div class="d-flex flex-column align-items-end">
-                                <a href="" class="mx-2"><i class="fab fa-instagram-square"></i></a>
-                                <a href="" class="mx-2"><i class="fab fa-whatsapp-square"></i></a>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="details d-flex flex-column justify-content-between ">
-                                <h5>سهراب ناصحی</h5>
-                                <p class="text-secondary">توسعه دهنده وب</p>
-                            </div>
-                        </div>
-                    </div>
-                    {{-- ----------------------------------------------------------------------------- --}}
-                    <div class="card col-12 col-md-6 my-4">
-                        <div class="imgBx">
-                            <img src="{{ asset('logobanner.jpg') }}" alt="personel-image">
-                            <div class="d-flex flex-column align-items-end">
-                                <a href="" class="mx-2"><i class="fab fa-instagram-square"></i></a>
-                                <a href="" class="mx-2"><i class="fab fa-whatsapp-square"></i></a>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="details d-flex flex-column justify-content-between ">
-                                <h5>سهراب ناصحی</h5>
-                                <p class="text-secondary">توسعه دهنده وب</p>
-                            </div>
-                        </div>
-                    </div>
-                    {{-- ----------------------------------------------------------------------------- --}}
-                    <div class="card col-12 col-md-6 my-4">
-                        <div class="imgBx">
-                            <img src="{{ asset('logobanner.jpg') }}" alt="personel-image">
-                            <div class="d-flex flex-column align-items-end">
-                                <a href="" class="mx-2"><i class="fab fa-instagram-square"></i></a>
-                                <a href="" class="mx-2"><i class="fab fa-whatsapp-square"></i></a>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="details d-flex flex-column justify-content-between ">
-                                <h5>سهراب ناصحی</h5>
-                                <p class="text-secondary">توسعه دهنده وب</p>
-                            </div>
-                        </div>
-                    </div>
-                    {{-- ----------------------------------------------------------------------------- --}}
-                    <div class="card col-12 col-md-6 my-4">
-                        <div class="imgBx">
-                            <img src="{{ asset('logobanner.jpg') }}" alt="personel-image">
-                            <div class="d-flex flex-column align-items-end">
-                                <a href="" class="mx-2"><i class="fab fa-instagram-square"></i></a>
-                                <a href="" class="mx-2"><i class="fab fa-whatsapp-square"></i></a>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="details d-flex flex-column justify-content-between ">
-                                <h5>سهراب ناصحی</h5>
-                                <p class="text-secondary">توسعه دهنده وب</p>
-                            </div>
-                        </div>
-                    </div>
-                    {{-- ----------------------------------------------------------------------------- --}}
-                    <div class="card col-12 col-md-6 my-4">
-                        <div class="imgBx">
-                            <img src="{{ asset('logobanner.jpg') }}" alt="personel-image">
-                            <div class="d-flex flex-column align-items-end">
-                                <a href="" class="mx-2"><i class="fab fa-instagram-square"></i></a>
-                                <a href="" class="mx-2"><i class="fab fa-whatsapp-square"></i></a>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="details d-flex flex-column justify-content-between ">
-                                <h5>سهراب ناصحی</h5>
-                                <p class="text-secondary">توسعه دهنده وب</p>
-                            </div>
-                        </div>
-                    </div>
-                    {{-- ----------------------------------------------------------------------------- --}}
-                    <div class="card col-12 col-md-6 my-4">
-                        <div class="imgBx">
-                            <img src="{{ asset('logobanner.jpg') }}" alt="personel-image">
-                            <div class="d-flex flex-column align-items-end">
-                                <a href="" class="mx-2"><i class="fab fa-instagram-square"></i></a>
-                                <a href="" class="mx-2"><i class="fab fa-whatsapp-square"></i></a>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="details d-flex flex-column justify-content-between ">
-                                <h5>سهراب ناصحی</h5>
-                                <p class="text-secondary">توسعه دهنده وب</p>
-                            </div>
-                        </div>
-                    </div>
-                    {{-- ----------------------------------------------------------------------------- --}}
+
                 </div>
 
 
