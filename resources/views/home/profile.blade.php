@@ -533,8 +533,6 @@
 
                         <div class="footer-line"><span></span></div>
                         <div class="col-md-12">
-
-
                             <div class="addresses-box">
                                 <ul>
                                     @foreach ($user->addresses as $address)
@@ -551,7 +549,6 @@
 
                                         </li>
                                     @endforeach
-
                                 </ul>
                             </div>
 

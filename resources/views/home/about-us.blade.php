@@ -4,16 +4,13 @@
     <!-- Banner Section ---------------------------------------------------------------->
     <main class="main-section">
         <div class="container-fluid px-0">
-
             <div class="page-content container mt-5">
-
                 <div class="row">
                     <div class="col col-md-7">
                         <h2 class="aboutUs-h2-color">
                             چرا هستیم؟
                         </h2>
                         <div class="footer-line"><span></span></div>
-
                         <p class="mb-4">به‌نگاران اولین سامانه یکپارچه تولید محتوای دیجیتال در کشوره که تقریبا تمام
                             خدمات تولید محتوا و تبلیغات رو پوشش میده.</p>
                         <p class="mb-4">اینکه کاربر وارد سایت شود و بتونه تمام خدمات مد نظرش رو به صورت آنلاین
@@ -21,7 +18,6 @@
                             تمامی خدمات رو پیگیری کنه تا به سرانجام برسه اصلی‌ترین دلیل به وجود اومدن ماست.</p>
                         <p>به‌نگاران با قدرت کنار شماست تا به تمامی نیاز شما برای تولید محتوا و تبلیغات پاسخ بده.</p>
                     </div>
-
                     <div class="col-md-5 col-sm-12 digital-marketing-pic">
                         <img class="img-fluid" src="{{ asset('images/aboutus-cover.png') }}">
                     </div>
@@ -48,14 +44,14 @@
                             <div class="imgBx">
                                 <img src="{{ asset('logobanner.jpg') }}" alt="personel-image">
                                 <div class="d-flex flex-column align-items-end">
-                                    <a href="" class="mx-2"><i class="fab fa-instagram-square"></i></a>
-                                    <a href="" class="mx-2"><i class="fab fa-whatsapp-square"></i></a>
+                                    <a href="https://instagram.com/daniaaaaaall?igshid=YmMyMTA2M2Y="  target="_blank"  class="mx-2"><i class="fab fa-instagram-square"></i></a>
+                                    <a href="https://api.whatsapp.com/send?phone=Phone_number&text=09195275731" target="_blank" class="mx-2"><i class="fab fa-whatsapp-square"></i></a>
                                 </div>
                             </div>
                             <div>
                                 <div class="details d-flex flex-column justify-content-between ">
                                     <h5>دانیال لاله</h5>
-                                    <p class="text-secondary">توسعه دهنده وب</p>
+                                    <p class="text-secondary">مدیر عامل و عضو هیئت مدیره</p>
                                 </div>
                             </div>
                         </div>
@@ -64,14 +60,14 @@
                             <div class="imgBx">
                                 <img src="{{ asset('logobanner.jpg') }}" alt="personel-image">
                                 <div class="d-flex flex-column align-items-end">
-                                    <a href="" class="mx-2"><i class="fab fa-instagram-square"></i></a>
-                                    <a href="" class="mx-2"><i class="fab fa-whatsapp-square"></i></a>
+                                    <a href="https://instagram.com/mohammadpalizgir_?igshid=YmMyMTA2M2Y="  target="_blank" class="mx-2"><i class="fab fa-instagram-square"></i></a>
+                                    <a href="https://api.whatsapp.com/send?phone=Phone_number&text= +989128754089"  target="_blank" class="mx-2"><i class="fab fa-whatsapp-square"></i></a>
                                 </div>
                             </div>
                             <div>
                                 <div class="details d-flex flex-column justify-content-between ">
-                                    <h5>سهراب ناصحی</h5>
-                                    <p class="text-secondary">توسعه دهنده وب</p>
+                                    <h5> محمد پالیزگیر</h5>
+                                    <p class="text-secondary"> بخش فروش و بازاریابی</p>
                                 </div>
                             </div>
                         </div>
@@ -84,14 +80,14 @@
                             <div class="imgBx">
                                 <img src="{{ asset('logobanner.jpg') }}" alt="personel-image">
                                 <div class="d-flex flex-column align-items-end">
-                                    <a href="" class="mx-2"><i class="fab fa-instagram-square"></i></a>
-                                    <a href="" class="mx-2"><i class="fab fa-whatsapp-square"></i></a>
+                                    <a href="https://instagram.com/m.ghasemzadeh20?igshid=YmMyMTA2M2Y="  target="_blank" class="mx-2"><i class="fab fa-instagram-square"></i></a>
+                                    <a href="+989357393454" class="mx-2" target="_blank" ><i class="fab fa-whatsapp-square"></i></a>
                                 </div>
                             </div>
                             <div>
                                 <div class="details d-flex flex-column justify-content-between ">
-                                    <h5>سهراب ناصحی</h5>
-                                    <p class="text-secondary">توسعه دهنده وب</p>
+                                    <h5> محمد قاسم زاده</h5>
+                                    <p class="text-secondary">بخش برندینگ و مارکتینگ </p>
                                 </div>
                             </div>
                         </div>
@@ -100,14 +96,14 @@
                             <div class="imgBx">
                                 <img src="{{ asset('logobanner.jpg') }}" alt="personel-image">
                                 <div class="d-flex flex-column align-items-end">
-                                    <a href="" class="mx-2"><i class="fab fa-instagram-square"></i></a>
-                                    <a href="" class="mx-2"><i class="fab fa-whatsapp-square"></i></a>
+                                    <a href="https://instagram.com/amiiir_m7?igshid=YmMyMTA2M2Y="  target="_blank" class="mx-2"><i class="fab fa-instagram-square"></i></a>
+                                    <a href="" class="mx-2" target="_blank" ><i class="fab fa-whatsapp-square"></i></a>
                                 </div>
                             </div>
                             <div>
                                 <div class="details d-flex flex-column justify-content-between ">
-                                    <h5>سهراب ناصحی</h5>
-                                    <p class="text-secondary">توسعه دهنده وب</p>
+                                    <h5> امیرمهدی لاله </h5>
+                                    <p class="text-secondary">  بخش پادکست</p>
                                 </div>
                             </div>
                         </div>
@@ -116,14 +112,14 @@
                             <div class="imgBx">
                                 <img src="{{ asset('logobanner.jpg') }}" alt="personel-image">
                                 <div class="d-flex flex-column align-items-end">
-                                    <a href="" class="mx-2"><i class="fab fa-instagram-square"></i></a>
-                                    <a href="" class="mx-2"><i class="fab fa-whatsapp-square"></i></a>
+                                    <a href="https://instagram.com/erfan_barzegar?igshid=YmMyMTA2M2Y=" class="mx-2" target="_blank" ><i class="fab fa-instagram-square"></i></a>
+                                    <a href="" class="mx-2" target="_blank" ><i class="fab fa-whatsapp-square"></i></a>
                                 </div>
                             </div>
                             <div>
                                 <div class="details d-flex flex-column justify-content-between ">
-                                    <h5>سهراب ناصحی</h5>
-                                    <p class="text-secondary">توسعه دهنده وب</p>
+                                    <h5> عرفان برزگر </h5>
+                                    <p class="text-secondary">   بخش مالی</p>
                                 </div>
                             </div>
                         </div>
@@ -135,14 +131,14 @@
                             <div class="imgBx">
                                 <img src="{{ asset('logobanner.jpg') }}" alt="personel-image">
                                 <div class="d-flex flex-column align-items-end">
-                                    <a href="" class="mx-2"><i class="fab fa-instagram-square"></i></a>
-                                    <a href="" class="mx-2"><i class="fab fa-whatsapp-square"></i></a>
+                                    <a href="https://instagram.com/alireza.ty99?igshid=YmMyMTA2M2Y=" class="mx-2" target="_blank" ><i class="fab fa-instagram-square"></i></a>
+                                    <a href="" class="mx-2" target="_blank" ><i class="fab fa-whatsapp-square"></i></a>
                                 </div>
                             </div>
                             <div>
                                 <div class="details d-flex flex-column justify-content-between ">
-                                    <h5>سهراب ناصحی</h5>
-                                    <p class="text-secondary">توسعه دهنده وب</p>
+                                    <h5> علیرضا آبادی</h5>
+                                    <p class="text-secondary">بخش سایت (UI)</p>
                                 </div>
                             </div>
                         </div>
@@ -151,14 +147,14 @@
                             <div class="imgBx">
                                 <img src="{{ asset('logobanner.jpg') }}" alt="personel-image">
                                 <div class="d-flex flex-column align-items-end">
-                                    <a href="" class="mx-2"><i class="fab fa-instagram-square"></i></a>
-                                    <a href="" class="mx-2"><i class="fab fa-whatsapp-square"></i></a>
+                                    <a href="https://instagram.com/sohrab_nasehi?igshid=YmMyMTA2M2Y="  target="_blank" class="mx-2"><i class="fab fa-instagram-square"></i></a>
+                                    <a href="" class="mx-2" target="_blank" ><i class="fab fa-whatsapp-square"></i></a>
                                 </div>
                             </div>
                             <div>
                                 <div class="details d-flex flex-column justify-content-between ">
                                     <h5>سهراب ناصحی</h5>
-                                    <p class="text-secondary">توسعه دهنده وب</p>
+                                    <p class="text-secondary">بخش سایت (UI)</p>
                                 </div>
                             </div>
                         </div>
@@ -167,13 +163,13 @@
                             <div class="imgBx">
                                 <img src="{{ asset('logobanner.jpg') }}" alt="personel-image">
                                 <div class="d-flex flex-column align-items-end">
-                                    <a href="" class="mx-2"><i class="fab fa-instagram-square"></i></a>
-                                    <a href="" class="mx-2"><i class="fab fa-whatsapp-square"></i></a>
+                                    <a href="" class="mx-2" target="_blank" ><i class="fab fa-instagram-square"></i></a>
+                                    <a href="" class="mx-2" target="_blank" ><i class="fab fa-whatsapp-square"></i></a>
                                 </div>
                             </div>
                             <div>
                                 <div class="details d-flex flex-column justify-content-between ">
-                                    <h5>سهراب ناصحی</h5>
+                                    <h5>علیرضا آهون</h5>
                                     <p class="text-secondary">توسعه دهنده وب</p>
                                 </div>
                             </div>
