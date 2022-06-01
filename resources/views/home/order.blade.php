@@ -518,6 +518,7 @@
                 var getChildrenId = $(this).children(":selected").attr("id");
                 var getChildreName = $(this).children(":selected").text();
                 var trigger = [];
+                var tagTrigger = [];
                 $("#push" + getChildrenId).empty();
                 $("#pushHour" + getChildrenId).empty();
                 $("#pushOptionAttr" + getChildrenId).empty();
@@ -527,6 +528,8 @@
                     let getAttributes = [];
                     if (element.id == getId) {
                         element.tag_categories.forEach(element => {
+                            tagTrigger.push(element);
+                            console.log(tagTrigger);
                             let PushTagsInput = $("<input/>", {
                                 class: "form-check-input float-right-checkbox",
                                 type: "checkbox",
@@ -596,6 +599,7 @@
                         var data = [];
                         var hour = [];
                         var quantity = [];
+                        var tags = [];
                         trigger.forEach(element => {
 
                             $('#AttributeCheckbox' + element.id).change(function() {
@@ -606,7 +610,8 @@
 
                                     data.push(element.name);
                                     hour.push($("#HourQty" + element.id).val());
-                                    quantity.push($("#ObjQuantity" + element.id).val());
+                                    quantity.push($("#ObjQuantity" + element.id)
+                                        .val());
 
                                 } else if (!ischecked) {
 
@@ -624,15 +629,43 @@
 
                                 }
 
-                                obj = {
-                                    attributes: data,
-                                    hour: hour,
-                                    quantity: quantity
+                            });
+                        });
+
+                        tagTrigger.forEach(element => {
+
+                            $('#Tagcheckbox' + element.id).change(function() {
+
+                                var checkTag = $(this).is(':checked');
+
+                                if (checkTag) {
+                                    tags.push(element.name);
+                                } else if (!checkTag) {
+
+                                    for (let i = 0; i < tags.length; i++) {
+
+                                        if (tags[i] == element.name) {
+
+                                            tags.splice(i, 1);
+
+                                        }
+
+                                    }
+
                                 }
+
+                                console.log(tags);
 
                             });
 
                         });
+
+                        obj = {
+                                    attributes: data,
+                                    hour: hour,
+                                    quantity: quantity,
+                                    tags: tags
+                                }
 
                     }
                 });
@@ -640,7 +673,7 @@
 
             parents.forEach(element => {
 
-                $("#add" + element.id).click(function(event){
+                $("#add" + element.id).click(function(event) {
 
                     event.preventDefault();
                     console.log(obj);
