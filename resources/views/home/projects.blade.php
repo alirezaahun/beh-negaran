@@ -423,6 +423,10 @@
 
                     </div>
 
+                
+
+                    
+
                     <div class="col-1@sm col-1@xs my-sizer-element"></div>
                 </div>
 
@@ -500,6 +504,7 @@
 
         }
 
+       
 
 
         // for (let x = 0; x < sliderHolder.length; x++) {
