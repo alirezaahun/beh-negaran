@@ -613,6 +613,39 @@
                                     quantity.push($("#ObjQuantity" + element.id)
                                         .val());
 
+
+                                    $("#HourQty" + element.id).change(function() {
+
+                                        for (let i = 0; i < data
+                                            .length; i++) {
+
+                                            if (data[i] == element.name) {
+
+                                                hour[i] = $("#HourQty" +
+                                                    element.id).val();
+
+                                            }
+
+                                        }
+
+                                    });
+
+                                    $("#ObjQuantity" + element.id).change(function() {
+
+                                        for (let i = 0; i < data
+                                            .length; i++) {
+
+                                            if (data[i] == element.name) {
+
+                                                quantity[i] = $("#ObjQuantity" +
+                                                    element.id).val();
+
+                                            }
+
+                                        }
+
+                                    });
+
                                 } else if (!ischecked) {
 
                                     for (let i = 0; i < data.length; i++) {
@@ -661,11 +694,11 @@
                         });
 
                         obj = {
-                                    attributes: data,
-                                    hour: hour,
-                                    quantity: quantity,
-                                    tags: tags
-                                }
+                            attributes: data,
+                            hour: hour,
+                            quantity: quantity,
+                            tags: tags
+                        }
 
                     }
                 });
