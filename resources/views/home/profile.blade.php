@@ -17,7 +17,7 @@
 
                     <li class="nav___items ">
                         <i class='bx bxs-briefcase-alt'></i>
-                        <a class="text-nowrap" href="">روند پروژه ها</a>
+                        <a class="text-nowrap" href="#order-status">روند پروژه ها</a>
                     </li>
 
                     <li class="nav___items ">
@@ -516,6 +516,37 @@
                                     <button id="exclusive-recipt-print" class="secondary-btn">درخواست فاکتور رسمی</button>
                                 </div>
                             </div>
+                            <hr>
+                        </div>
+
+
+
+
+                    </div>
+
+                    {{-- User Orders status --}}
+                    <div id="order-status" class="row tab_content">
+                        <h4>وضعیت پروژه شما</h4>
+                        <div class="footer-line"><span></span></div>
+                        <div class="col-md-12">
+                            
+                            
+                                <ul class="responsive-table">
+                                    <li class="table-header">
+                                        <div class="col col-1">عنوان</div>
+                                        <div class="col col-2">تاریخ</div>
+                                        <div class="col col-3">وضعیت فعلی</div>
+                                        <div class="col col-4">وضعیت بعدی</div>
+                                    </li>
+                                    <li class="table-row">
+                                        <div class="col col-1" data-label="عنوان">پروژه عکاسی</div>
+                                        <div class="col col-2" data-label="تاریخ">۰۱\۰۱\۱۴۰۰</div>
+                                        <div class="col col-3" data-label="وضعیت فعلی">اعظام تیم به محل</div>
+                                        <div class="col col-4" data-label="وضعیت بعدی">شروع عکاسی</div>
+                                    </li>
+
+                                </ul>
+                            
                             <hr>
                         </div>
 
