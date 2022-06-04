@@ -18,7 +18,7 @@
                         </ul>
                         <!-- fieldsets -->
                         <?php
-                        
+
                         $getParents = App\Models\Category::where('parent_id', 0)
                             ->with('children', 'attributes')
                             ->get();
@@ -404,17 +404,16 @@
                                     <div class="footer-line"><span></span></div>
                                     <div class="col-md-12">
                                         <ul>
-                                            <li><span class="text-secondary">مکان</span>
-                                                <h6 id="test2">کرج، جهانشهر</h6>
+                                            <li id="ProductLocation"><span class="text-secondary">مکان</span>
+                                                {{-- <h6 >کرج، جهانشهر</h6> --}}
                                             </li>
-                                            <li><span class="text-secondary">زمان</span>
-                                                <h6 id="test"> پنج شنبه ۲۰ شهریور ساعت ۱۲:۰۰ </h6>
+                                            <li id="ProductSpecAttr"><span class="text-secondary">خدمات ویژه</span>
+                                                {{-- <h6  پنج شنبه ۲۰ شهریور ساعت ۱۲:۰۰ </h6> --}}
                                             </li>
-                                            <li><span class="text-secondary">خدمات</span>
-                                                <h6 id="test3">ویدیو - دوربین ثابت ، ۲ ساعت</h6>
+                                            <li id="ProductDetails"><span class="text-secondary">خدمات</span>
+                                                {{-- <h6>ویدیو - دوربین ثابت ، ۲ ساعت</h6> --}}
                                             </li>
-                                            <li><span class="text-secondary">مبلغ</span>
-                                                <h6>۳٫۰۰۰٫۰۰۰ تومان</h6>
+                                            <li id="ProductName"><span class="text-secondary">نوع خدمت</span>
                                             </li>
 
                                         </ul>
@@ -627,14 +626,16 @@
 
                                     });
 
-                                    $("#ObjQuantity" + element.id).change(function() {
+                                    $("#ObjQuantity" + element.id).change(
+                                function() {
 
                                         for (let i = 0; i < data
                                             .length; i++) {
 
                                             if (data[i] == element.name) {
 
-                                                quantity[i] = $("#ObjQuantity" +
+                                                quantity[i] = $(
+                                                    "#ObjQuantity" +
                                                     element.id).val();
 
                                             }
@@ -671,6 +672,7 @@
                         });
 
                         obj = {
+                            product: getChildreName,
                             attributes: data,
                             hour: hour,
                             quantity: quantity,
@@ -683,29 +685,62 @@
             parents.forEach(element => {
 
                 $("#add" + element.id).click(function(event) {
-                  let test3=  document.getElementById('test3')
-                  test3.textContent=obj.attributes + obj.hour+ obj.quantity+ obj.tags
-                  test3.textContent=`حالت دوربین :${obj.attributes}- مدت زمان درخواستی :${obj.hour}-تعداد دوربین ${obj.quantity}`
+                    //   let test3=  document.getElementById('test3');
+                    //   let test = document.getElementById('test');
+                    //   test3.textContent=obj.attributes + obj.hour+ obj.quantity+ obj.tags
+                    //   test3.textContent=`حالت دوربین :${obj.attributes}- مدت زمان درخواستی :${obj.hour}-تعداد دوربین ${obj.quantity}`
+                    //   test.textContent=obj.product
 
-                    console.log(obj.attributes);
+                    //     console.log(obj.attributes);
+
+
+                    //     // console.log(obj);
+
+                    for (let i = 0; i < obj.attributes.length; i++) {
+                        console.log(obj.attributes[i] + "ساعت:" + obj.hour[i] + "تعداد" + obj.quantity[i]);
+
+                        let productDetails = $("<h6/>", {
+
+                            text: " ویژگی " + obj.attributes[i] + " ساعت: " + obj.hour[i] + " تعداد: " + obj.quantity[i]
+
+                        });
+
+                        $("#ProductDetails").append(productDetails);
+                    }
+
+                    for (let i = 0; i < obj.tags.length; i++) {
+
+                        let productSpecAttr = $("<h6/>" , {
+
+                            text: obj.tags[i]
+
+                        });
+
+                        $("#ProductSpecAttr").append(productSpecAttr);
+
+                    }
+
+                    let productName = $("<h6/>" , {
+
+                        text: obj.product
+
+                    });
+
+                    $("#ProductName").append(productName);
 
                     event.preventDefault();
-                    // console.log(obj);
-
                 });
 
             });
 
-            let test = document.getElementById('test')
-            
-        
-
-            giveInformation.addEventListener('click', function() {
-            test2.textContent=Shahrestan.value
-            test.textContent=date.value
-        });
+            // let test = document.getElementById('test')
 
 
+
+            // giveInformation.addEventListener('click', function() {
+            //     test2.textContent = Shahrestan.value
+            //     test.textContent = date.value
+            // });
 
 
 
@@ -718,7 +753,9 @@
 
 
 
-            $(".previous").click(function() {   
+
+
+            $(".previous").click(function() {
 
                 current_fs = $(this).parent();
                 previous_fs = $(this).parent().prev();
@@ -835,11 +872,11 @@
             // console.log(Street.value, Blvd.value, PostalCode.value, unit.value,
             //     Plaque.value, FullAddress.value,date.value);
 
-                console.log(Shahrestan.value);
+            console.log(Shahrestan.value);
         });
         // console.log(Street.value, Blvd.value, PostalCode.value, unit.value,
         //  gitPlaque.value, FullAddress.value);
-       
+
 
         // information.push(Street.value, Blvd.value, PostalCode.value, unit.value, Plaque.value, FullAddress
         //     .value, data.value)
@@ -847,7 +884,7 @@
 
 
 
-       
+
         axios({
             method: 'post',
             url: '/user/12345',
