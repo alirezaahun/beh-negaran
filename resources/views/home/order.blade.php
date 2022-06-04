@@ -402,22 +402,7 @@
                                 <div id="order" class="row tab_content">
                                     <h4>سفارش های شما</h4>
                                     <div class="footer-line"><span></span></div>
-                                    <div class="col-md-12">
-                                        <ul>
-                                            <li id="ProductLocation"><span class="text-secondary">مکان</span>
-                                                {{-- <h6 >کرج، جهانشهر</h6> --}}
-                                            </li>
-                                            <li id="ProductSpecAttr"><span class="text-secondary">خدمات ویژه</span>
-                                                {{-- <h6  پنج شنبه ۲۰ شهریور ساعت ۱۲:۰۰ </h6> --}}
-                                            </li>
-                                            <li id="ProductDetails"><span class="text-secondary">خدمات</span>
-                                                {{-- <h6>ویدیو - دوربین ثابت ، ۲ ساعت</h6> --}}
-                                            </li>
-                                            <li id="ProductName"><span class="text-secondary">نوع خدمت</span>
-                                            </li>
-
-                                        </ul>
-                                        <span class="order-details">جزئیات</span>
+                                    <div id="productBox" class="col-md-12">
 
                                         <div class="order-collapse">
                                             <ul class="responsive-table">
@@ -441,7 +426,6 @@
                                             </ul>
                                             <button id="recipt-print" class="secondary-btn">چاپ فاکتور</button>
                                         </div>
-                                        <hr>
                                     </div>
 
 
@@ -481,6 +465,7 @@
             var current_fs, next_fs, previous_fs; //fieldsets
             var opacity;
             var obj = {};
+            var objArray = [];
             var current = 1;
             var steps = $("fieldset").length;
             setProgressBar(current);
@@ -696,6 +681,15 @@
 
                     //     // console.log(obj);
 
+                    let rnd = Math.floor((Math.random() * 1000000) + 1);
+                    console.log(rnd);
+
+                    $("#productBox").append(`<ul id=${rnd}>` +
+                        `<li id=ProductLocation${rnd}> <span class='text-secondary'> آدرس <hr>`
+                             + `<li id=ProductSpecAttr${rnd}><span class='text-secondary'>خدمات ویژه  <hr> `+
+                                `<li id=ProductDetails${rnd}> <span class='text-secondary'>ویژگی ها <hr>` +
+                                        `<li id=ProductName${rnd}> <span class='text-secondary'> نوع خدمت <hr>`);
+
                     for (let i = 0; i < obj.attributes.length; i++) {
                         console.log(obj.attributes[i] + "ساعت:" + obj.hour[i] + "تعداد" + obj.quantity[i]);
 
@@ -705,7 +699,7 @@
 
                         });
 
-                        $("#ProductDetails").append(productDetails);
+                        $("#ProductDetails" + rnd).append(productDetails);
                     }
 
                     for (let i = 0; i < obj.tags.length; i++) {
@@ -716,7 +710,7 @@
 
                         });
 
-                        $("#ProductSpecAttr").append(productSpecAttr);
+                        $("#ProductSpecAttr" + rnd).append(productSpecAttr);
 
                     }
 
@@ -726,7 +720,7 @@
 
                     });
 
-                    $("#ProductName").append(productName);
+                    $("#ProductName" + rnd).append(productName);
 
                     event.preventDefault();
                 });
