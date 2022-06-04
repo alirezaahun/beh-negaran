@@ -609,6 +609,43 @@
                                     hour.push($("#HourQty" + element.id).val());
                                     quantity.push($("#ObjQuantity" + element.id)
                                         .val());
+<<<<<<< HEAD
+=======
+
+
+                                    $("#HourQty" + element.id).change(function() {
+
+                                        for (let i = 0; i < data
+                                            .length; i++) {
+
+                                            if (data[i] == element.name) {
+
+                                                hour[i] = $("#HourQty" +
+                                                    element.id).val();
+
+                                            }
+
+                                        }
+
+                                    });
+
+                                    $("#ObjQuantity" + element.id).change(function() {
+
+                                        for (let i = 0; i < data
+                                            .length; i++) {
+
+                                            if (data[i] == element.name) {
+
+                                                quantity[i] = $("#ObjQuantity" +
+                                                    element.id).val();
+
+                                            }
+
+                                        }
+
+                                    });
+
+>>>>>>> 308867090a5483d773967d088df5833df74facf3
                                 } else if (!ischecked) {
                                     for (let i = 0; i < data.length; i++) {
                                         if (data[i] == element.name) {
