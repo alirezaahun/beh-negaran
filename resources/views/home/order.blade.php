@@ -411,7 +411,7 @@
                                                 <h6 id="test"> پنج شنبه ۲۰ شهریور ساعت ۱۲:۰۰ </h6>
                                             </li>
                                             <li><span class="text-secondary">خدمات</span>
-                                                <h6>ویدیو - دوربین ثابت ، ۲ ساعت</h6>
+                                                <h6 id="test3">ویدیو - دوربین ثابت ، ۲ ساعت</h6>
                                             </li>
                                             <li><span class="text-secondary">مبلغ</span>
                                                 <h6>۳٫۰۰۰٫۰۰۰ تومان</h6>
@@ -609,8 +609,6 @@
                                     hour.push($("#HourQty" + element.id).val());
                                     quantity.push($("#ObjQuantity" + element.id)
                                         .val());
-<<<<<<< HEAD
-=======
 
 
                                     $("#HourQty" + element.id).change(function() {
@@ -645,7 +643,6 @@
 
                                     });
 
->>>>>>> 308867090a5483d773967d088df5833df74facf3
                                 } else if (!ischecked) {
                                     for (let i = 0; i < data.length; i++) {
                                         if (data[i] == element.name) {
@@ -679,7 +676,6 @@
                             quantity: quantity,
                             tags: tags
                         }
-
                     }
                 });
             });
@@ -687,9 +683,14 @@
             parents.forEach(element => {
 
                 $("#add" + element.id).click(function(event) {
+                  let test3=  document.getElementById('test3')
+                  test3.textContent=obj.attributes + obj.hour+ obj.quantity+ obj.tags
+                  test3.textContent=`حالت دوربین :${obj.attributes}- مدت زمان درخواستی :${obj.hour}-تعداد دوربین ${obj.quantity}`
+
+                    console.log(obj.attributes);
 
                     event.preventDefault();
-                    console.log(obj);
+                    // console.log(obj);
 
                 });
 
