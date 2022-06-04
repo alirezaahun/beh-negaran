@@ -18,7 +18,7 @@
                         </ul>
                         <!-- fieldsets -->
                         <?php
-
+                        
                         $getParents = App\Models\Category::where('parent_id', 0)
                             ->with('children', 'attributes')
                             ->get();
@@ -405,10 +405,10 @@
                                     <div class="col-md-12">
                                         <ul>
                                             <li><span class="text-secondary">مکان</span>
-                                                <h6>کرج، جهانشهر</h6>
+                                                <h6 id="test2">کرج، جهانشهر</h6>
                                             </li>
                                             <li><span class="text-secondary">زمان</span>
-                                                <h6> پنج شنبه ۲۰ شهریور ساعت ۱۲:۰۰ </h6>
+                                                <h6 id="test"> پنج شنبه ۲۰ شهریور ساعت ۱۲:۰۰ </h6>
                                             </li>
                                             <li><span class="text-secondary">خدمات</span>
                                                 <h6>ویدیو - دوربین ثابت ، ۲ ساعت</h6>
@@ -603,69 +603,45 @@
                         trigger.forEach(element => {
 
                             $('#AttributeCheckbox' + element.id).change(function() {
-
                                 var ischecked = $(this).is(':checked');
-
                                 if (ischecked) {
-
                                     data.push(element.name);
                                     hour.push($("#HourQty" + element.id).val());
                                     quantity.push($("#ObjQuantity" + element.id)
                                         .val());
-
                                 } else if (!ischecked) {
-
                                     for (let i = 0; i < data.length; i++) {
-
                                         if (data[i] == element.name) {
-
                                             data.splice(i, 1);
                                             hour.splice(i, 1);
                                             quantity.splice(i, 1);
-
                                         }
-
                                     }
-
                                 }
-
                             });
                         });
-
                         tagTrigger.forEach(element => {
-
                             $('#Tagcheckbox' + element.id).change(function() {
-
                                 var checkTag = $(this).is(':checked');
-
                                 if (checkTag) {
                                     tags.push(element.name);
                                 } else if (!checkTag) {
-
                                     for (let i = 0; i < tags.length; i++) {
-
                                         if (tags[i] == element.name) {
-
                                             tags.splice(i, 1);
-
                                         }
-
                                     }
-
                                 }
-
                                 console.log(tags);
-
                             });
-
                         });
 
                         obj = {
-                                    attributes: data,
-                                    hour: hour,
-                                    quantity: quantity,
-                                    tags: tags
-                                }
+                            attributes: data,
+                            hour: hour,
+                            quantity: quantity,
+                            tags: tags
+                        }
 
                     }
                 });
@@ -682,8 +658,29 @@
 
             });
 
+            let test = document.getElementById('test')
+            
+        
 
-            $(".previous").click(function() {
+            giveInformation.addEventListener('click', function() {
+            test2.textContent=Shahrestan.value
+            test.textContent=date.value
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            $(".previous").click(function() {   
 
                 current_fs = $(this).parent();
                 previous_fs = $(this).parent().prev();
@@ -790,21 +787,29 @@
         let unit = document.getElementById("unit");
         let Plaque = document.getElementById("Plaque");
         let FullAddress = document.getElementById("FullAddress");
-        let date = document.getElementById("date");
+        const date = document.getElementById("date");
 
 
 
 
         let giveInformation = document.getElementById("giveInformation")
         giveInformation.addEventListener('click', function() {
-            console.log(Street.value, Blvd.value, PostalCode.value, unit.value,
-                Plaque.value, FullAddress.value);
+            // console.log(Street.value, Blvd.value, PostalCode.value, unit.value,
+            //     Plaque.value, FullAddress.value,date.value);
+
+                console.log(Shahrestan.value);
         });
         // console.log(Street.value, Blvd.value, PostalCode.value, unit.value,
         //  gitPlaque.value, FullAddress.value);
-        information.push(Street.value, Blvd.value, PostalCode.value, unit.value, Plaque.value, FullAddress
-            .value, data.value)
-        console.log(information);
+       
+
+        // information.push(Street.value, Blvd.value, PostalCode.value, unit.value, Plaque.value, FullAddress
+        //     .value, data.value)
+
+
+
+
+       
         axios({
             method: 'post',
             url: '/user/12345',
