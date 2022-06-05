@@ -6,6 +6,7 @@ window.Shuffle = require('shufflejs').default;
 require("sweetalert");
 // require('persian-date');
 // require('persian-datepicker/dist/js/persian-datepicker');
+require('jquery-ui');
 require('md.bootstrappersiandatetimepicker/dist/mds.bs.datetimepicker');
 require('./owl-carousel-min');
 require('./owl-custom-main');
