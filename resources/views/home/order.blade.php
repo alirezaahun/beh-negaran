@@ -18,7 +18,7 @@
                         </ul>
                         <!-- fieldsets -->
                         <?php
-                        
+
                         $getParents = App\Models\Category::where('parent_id', 0)
                             ->with('children', 'attributes')
                             ->get();
@@ -142,16 +142,7 @@
                                                                             <div
                                                                                 class="col-10 col-md-6  col-lg-4 mt-2 text-justify mt-3 d-flex ">
 
-                                                                                <div id="pushTags{{ $category->id }}"
-                                                                                    class="form-check m-2 d-child-flex">
-                                                                                    <input
-                                                                                        class="form-check-input float-right-checkbox"
-                                                                                        type="checkbox" value=""
-                                                                                        id="flexCheckDefault1" />
-                                                                                    <label
-                                                                                        class="form-check-label float-right-checkbox"
-                                                                                        for="flexCheckDefault1">
-                                                                                    </label>
+                                                                                <div id="pushTags{{ $category->id }}">
                                                                                 </div>
 
                                                                                 <!-- Checked checkbox -->
@@ -299,9 +290,10 @@
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
-                                                        <label class='float-right mt-4 mb-2 gg' for="city">شهرستان :</label>
-                                                        <select id="Shahrestan" name='city'
-                                                            class="form-control col-3"></select>
+                                                        <label class='float-right mt-4 mb-2 gg' for="city">شهرستان
+                                                            :</label>
+                                                        <select id="Shahrestan" name='city' class="form-control col-3">
+                                                        </select>
                                                     </div>
                                                 </div>
                                             </div>
@@ -464,6 +456,10 @@
             var current_fs, next_fs, previous_fs; //fieldsets
             var opacity;
             var obj = {};
+            var calculate = [];
+            var tagCalculate = [];
+            var tagPriceResult = 0;
+            var attribuePriceResult = 0;
             var objArray = [];
             var current = 1;
             var steps = $("fieldset").length;
@@ -520,7 +516,7 @@
                             });
                             let PushTagsLabel = $("<label/>", {
                                 value: element.id,
-                                text: element.name,
+                                text: element.name + "(" + element.price + ")",
                                 class: "form-check-label float-right-checkbox",
                                 id: `Taglabel${element.id}`
                             });
@@ -580,6 +576,8 @@
                         });
 
                         var data = [];
+                        var price = [];
+                        var tagPrice = [];
                         var hour = [];
                         var quantity = [];
                         var tags = [];
@@ -588,8 +586,10 @@
                             $('#AttributeCheckbox' + element.id).change(function() {
                                 var ischecked = $(this).is(':checked');
                                 if (ischecked) {
+                                    console.log(element);
                                     data.push(element.name);
                                     hour.push($("#HourQty" + element.id).val());
+                                    price.push(element.price);
                                     quantity.push($("#ObjQuantity" + element.id)
                                         .val());
 
@@ -611,22 +611,22 @@
                                     });
 
                                     $("#ObjQuantity" + element.id).change(
-                                        function() {
+                                function() {
 
-                                            for (let i = 0; i < data
-                                                .length; i++) {
+                                        for (let i = 0; i < data
+                                            .length; i++) {
 
-                                                if (data[i] == element.name) {
+                                            if (data[i] == element.name) {
 
-                                                    quantity[i] = $(
-                                                        "#ObjQuantity" +
-                                                        element.id).val();
-
-                                                }
+                                                quantity[i] = $(
+                                                    "#ObjQuantity" +
+                                                    element.id).val();
 
                                             }
 
-                                        });
+                                        }
+
+                                    });
 
                                 } else if (!ischecked) {
                                     for (let i = 0; i < data.length; i++) {
@@ -642,25 +642,31 @@
                         tagTrigger.forEach(element => {
                             $('#Tagcheckbox' + element.id).change(function() {
                                 var checkTag = $(this).is(':checked');
+                                console.log(element.price);
                                 if (checkTag) {
                                     tags.push(element.name);
+                                    tagPrice.push(element.price);
                                 } else if (!checkTag) {
                                     for (let i = 0; i < tags.length; i++) {
                                         if (tags[i] == element.name) {
                                             tags.splice(i, 1);
+                                            tagPrice.splice(i ,1);
                                         }
                                     }
                                 }
-                                console.log(tags);
+                                console.log(tags , tagPrice);
                             });
                         });
+
 
                         obj = {
                             product: getChildreName,
                             attributes: data,
+                            AttributePrice: price,
                             hour: hour,
                             quantity: quantity,
-                            tags: tags
+                            tags: tags,
+                            tagPrice: tagPrice
                         }
                     }
                 });
@@ -670,34 +676,50 @@
 
                 $("#add" + element.id).click(function(event) {
 
-                    //   let test3=  document.getElementById('test3');
-                    //   let test = document.getElementById('test');
-                    //   test3.textContent=obj.attributes + obj.hour+ obj.quantity+ obj.tags
-                    //   test3.textContent=`حالت دوربین :${obj.attributes}- مدت زمان درخواستی :${obj.hour}-تعداد دوربین ${obj.quantity}`
-                    //   test.textContent=obj.product
-
-                    //     console.log(obj.attributes);
-
-
-                    //     // console.log(obj);
+                calculate = [];
+                attribuePriceResult = 0;
+                tagCalculate = [];
+                tagPriceResult = 0;
 
                     let rnd = Math.floor((Math.random() * 1000000) + 1);
                     console.log(rnd);
 
                     $("#productBox").append(`<ul id=${rnd}>` +
-                        `<li id=ProductLocation${rnd}> <span class='text-secondary'> آدرس <hr>` +
-                        `<li id=ProductSpecAttr${rnd}><span class='text-secondary'>خدمات ویژه  <hr> ` +
-                        `<li id=ProductDetails${rnd}> <span class='text-secondary'>ویژگی ها <hr>` +
-                        `<li id=ProductName${rnd}> <span class='text-secondary'> نوع خدمت <hr>`);
+                        `<li id=ProductLocation${rnd}> <span class='text-secondary'> آدرس <hr>`
+                             + `<li id=ProductSpecAttr${rnd}><span class='text-secondary'>خدمات ویژه  <hr> `+
+                                `<li id=ProductDetails${rnd}> <span class='text-secondary'>ویژگی ها <hr>` +
+                                    `<li id=ProductPrice${rnd}> <span class='text-secondary'> جمع کل <hr>` +
+                                        `<li id=ProductName${rnd}> <span class='text-secondary'> نوع خدمت <hr>`);
 
                     for (let i = 0; i < obj.attributes.length; i++) {
-                        console.log(obj.attributes[i] + "ساعت:" + obj.hour[i] + "تعداد" + obj
-                            .quantity[i]);
+                        event.preventDefault();
+                        console.log(obj.attributes[i] + obj.AttributePrice[i] +"ساعت:" + obj.hour[i] + "تعداد" + obj.quantity[i]);
+                        var counter = 0;
+
+                        for (let x = 0; x < obj.quantity[i]; x++) {
+
+                            if (counter == 0) {
+
+                                calculate.push(obj.AttributePrice[i]);
+
+                            }else{
+                                let discount = (obj.AttributePrice[i] * 15) / 100;
+                                calculate.push(obj.AttributePrice[i] - discount);
+                            }
+
+                            attribuePriceResult = calculate.reduce((total, number) => total + number, 0);
+                            counter++;
+                            console.log(calculate,attribuePriceResult);
+
+
+                        }
+
+                        obj.AttributespriceDetails = calculate;
+                        obj.attributesPriceResult = attribuePriceResult;
 
                         let productDetails = $("<h6/>", {
 
-                            text: " ویژگی " + obj.attributes[i] + " ساعت: " + obj.hour[i] +
-                                " تعداد: " + obj.quantity[i]
+                            text: " ویژگی " + obj.attributes[i] + " ساعت: " + obj.hour[i] + " تعداد: " + obj.quantity[i]
 
                         });
 
@@ -706,7 +728,14 @@
 
                     for (let i = 0; i < obj.tags.length; i++) {
 
-                        let productSpecAttr = $("<h6/>", {
+                        tagCalculate.push(obj.tagPrice[i]);
+                        console.log(tagCalculate);
+                        tagPriceResult = tagCalculate.reduce((total, number) => total + number, 0);
+                        obj.tagPriceDetails = tagCalculate;
+                        obj.tagPriceResult = tagPriceResult;
+
+                        console.log(tagPriceResult);
+                        let productSpecAttr = $("<h6/>" , {
 
                             text: obj.tags[i]
 
@@ -716,7 +745,19 @@
 
                     }
 
-                    let productName = $("<h6/>", {
+                    obj.finalPriceThisProductIs = tagPriceResult + attribuePriceResult;
+
+                    console.log(obj);
+
+                    let productPrice = $("<h6/>" , {
+
+                        text: obj.finalPriceThisProductIs
+
+                    });
+
+                    $("#ProductPrice" + rnd).append(productPrice);
+
+                     let productName = $("<h6/>" , {
 
                         text: obj.product
 
@@ -737,13 +778,6 @@
             //     test2.textContent = Shahrestan.value
             //     test.textContent = date.value
             // });
-
-
-
-
-
-
-
 
 
 
