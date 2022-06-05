@@ -18,7 +18,7 @@
                         </ul>
                         <!-- fieldsets -->
                         <?php
-
+                        
                         $getParents = App\Models\Category::where('parent_id', 0)
                             ->with('children', 'attributes')
                             ->get();
@@ -299,10 +299,9 @@
                                                 </div>
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
-                                                        <label class='float-right mt-4 mb-2 gg' for="city">شهرستان
-                                                            :</label>
-                                                        <select id="Shahrestan" name='city' class="form-control col-3">
-                                                        </select>
+                                                        <label class='float-right mt-4 mb-2 gg' for="city">شهرستان :</label>
+                                                        <select id="Shahrestan" name='city'
+                                                            class="form-control col-3"></select>
                                                     </div>
                                                 </div>
                                             </div>
@@ -612,22 +611,22 @@
                                     });
 
                                     $("#ObjQuantity" + element.id).change(
-                                function() {
+                                        function() {
 
-                                        for (let i = 0; i < data
-                                            .length; i++) {
+                                            for (let i = 0; i < data
+                                                .length; i++) {
 
-                                            if (data[i] == element.name) {
+                                                if (data[i] == element.name) {
 
-                                                quantity[i] = $(
-                                                    "#ObjQuantity" +
-                                                    element.id).val();
+                                                    quantity[i] = $(
+                                                        "#ObjQuantity" +
+                                                        element.id).val();
+
+                                                }
 
                                             }
 
-                                        }
-
-                                    });
+                                        });
 
                                 } else if (!ischecked) {
                                     for (let i = 0; i < data.length; i++) {
@@ -670,6 +669,7 @@
             parents.forEach(element => {
 
                 $("#add" + element.id).click(function(event) {
+
                     //   let test3=  document.getElementById('test3');
                     //   let test = document.getElementById('test');
                     //   test3.textContent=obj.attributes + obj.hour+ obj.quantity+ obj.tags
@@ -685,17 +685,19 @@
                     console.log(rnd);
 
                     $("#productBox").append(`<ul id=${rnd}>` +
-                        `<li id=ProductLocation${rnd}> <span class='text-secondary'> آدرس <hr>`
-                             + `<li id=ProductSpecAttr${rnd}><span class='text-secondary'>خدمات ویژه  <hr> `+
-                                `<li id=ProductDetails${rnd}> <span class='text-secondary'>ویژگی ها <hr>` +
-                                        `<li id=ProductName${rnd}> <span class='text-secondary'> نوع خدمت <hr>`);
+                        `<li id=ProductLocation${rnd}> <span class='text-secondary'> آدرس <hr>` +
+                        `<li id=ProductSpecAttr${rnd}><span class='text-secondary'>خدمات ویژه  <hr> ` +
+                        `<li id=ProductDetails${rnd}> <span class='text-secondary'>ویژگی ها <hr>` +
+                        `<li id=ProductName${rnd}> <span class='text-secondary'> نوع خدمت <hr>`);
 
                     for (let i = 0; i < obj.attributes.length; i++) {
-                        console.log(obj.attributes[i] + "ساعت:" + obj.hour[i] + "تعداد" + obj.quantity[i]);
+                        console.log(obj.attributes[i] + "ساعت:" + obj.hour[i] + "تعداد" + obj
+                            .quantity[i]);
 
                         let productDetails = $("<h6/>", {
 
-                            text: " ویژگی " + obj.attributes[i] + " ساعت: " + obj.hour[i] + " تعداد: " + obj.quantity[i]
+                            text: " ویژگی " + obj.attributes[i] + " ساعت: " + obj.hour[i] +
+                                " تعداد: " + obj.quantity[i]
 
                         });
 
@@ -704,7 +706,7 @@
 
                     for (let i = 0; i < obj.tags.length; i++) {
 
-                        let productSpecAttr = $("<h6/>" , {
+                        let productSpecAttr = $("<h6/>", {
 
                             text: obj.tags[i]
 
@@ -714,7 +716,7 @@
 
                     }
 
-                    let productName = $("<h6/>" , {
+                    let productName = $("<h6/>", {
 
                         text: obj.product
 

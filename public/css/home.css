@@ -1796,6 +1796,10 @@ a {
   color: var(--clr-primary);
 }
 
+.ProductDetails li div {
+  margin: 100PX;
+}
+
 /* BREAKPOINTS ----- */
 @media screen and (max-width: 767px) {
   .tabs {

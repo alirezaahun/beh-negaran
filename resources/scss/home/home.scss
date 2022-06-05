@@ -1625,7 +1625,13 @@ a {
 }
 
 // ****************************************************plus
-
+.ProductDetails li div{
+    margin: 100PX   ;
+}
+// .rder-collapse  .responsive-table .li{
+//     display: flex;
+//     margin: 100px;
+// }
 // ***********************end pricing page ******************************
 /* BREAKPOINTS ----- */
 @media screen and (max-width: 767px) {
