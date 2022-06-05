@@ -35,9 +35,10 @@
 
                                         @foreach ($getParents as $category)
                                             <div class="tabby-tab">
-                                                <input type="radio" id="{{ $category->id }}" name="tabby-tabs" checked>
+                                                <input type="radio" id="radio{{ $category->id }}" name="tabby-tabs"
+                                                    checked>
                                                 <label class="gg"
-                                                    for="{{ $category->id }}">{{ $category->name }}</label>
+                                                    for="radio{{ $category->id }}">{{ $category->name }}</label>
                                                 <div class="tabby-content">
                                                     <div class="col-12 d-flex d-flex justify-content-center  mt-5">
                                                         <div class="col-12 col-md-10">
@@ -46,7 +47,8 @@
                                                                 <div class="col-12    ">
                                                                     <select id="select"
                                                                         class="form-select my-5 mx-auto w-50 w-lg-25">
-                                                                        <option id="{{ $category->id }}" selected>انتخاب
+                                                                        <option class="select"
+                                                                            id="{{ $category->id }}">انتخاب
                                                                             پکیچ ها</option>
 
                                                                         @foreach ($getChildren as $child)
@@ -458,6 +460,8 @@
             var obj = {};
             var calculate = [];
             var tagCalculate = [];
+            var trigger = [];
+            var tagTrigger = [];
             var tagPriceResult = 0;
             var attribuePriceResult = 0;
             var objArray = [];
@@ -493,11 +497,25 @@
 
             let attributes = @json($getChildren);
             let parents = @json($getParents);
+
+            parents.forEach(element => {
+
+                $("#radio" + element.id).change(function() {
+                    $("#push" + element.id).empty();
+                    $("#pushHour" + element.id).empty();
+                    $("#pushOptionAttr" + element.id).empty();
+                    $("#pushTags" + element.id).empty();
+                });
+
+            });
+
             $("select").change(function() {
+
+                obj = {};
                 var getChildrenId = $(this).children(":selected").attr("id");
                 var getChildreName = $(this).children(":selected").text();
-                var trigger = [];
-                var tagTrigger = [];
+                trigger = [];
+                tagTrigger = [];
                 $("#push" + getChildrenId).empty();
                 $("#pushHour" + getChildrenId).empty();
                 $("#pushOptionAttr" + getChildrenId).empty();
@@ -566,7 +584,8 @@
                                 max: "10"
                             });
 
-                            $("#push" + getChildrenId).append(createCheckBox, createAttr,
+                            $("#push" + getChildrenId).append(createCheckBox,
+                                createAttr,
                                 "<br/>");
                             $("#pushHour" + getChildrenId).append(hourlabel, hourInput,
                                 hourSpan, "<br/>");
@@ -594,39 +613,44 @@
                                         .val());
 
 
-                                    $("#HourQty" + element.id).change(function() {
+                                    $("#HourQty" + element.id).change(
+                                        function() {
 
-                                        for (let i = 0; i < data
-                                            .length; i++) {
+                                            for (let i = 0; i < data
+                                                .length; i++) {
 
-                                            if (data[i] == element.name) {
+                                                if (data[i] == element
+                                                    .name) {
 
-                                                hour[i] = $("#HourQty" +
-                                                    element.id).val();
+                                                    hour[i] = $("#HourQty" +
+                                                            element.id)
+                                                        .val();
+
+                                                }
 
                                             }
 
-                                        }
-
-                                    });
+                                        });
 
                                     $("#ObjQuantity" + element.id).change(
-                                function() {
+                                        function() {
 
-                                        for (let i = 0; i < data
-                                            .length; i++) {
+                                            for (let i = 0; i < data
+                                                .length; i++) {
 
-                                            if (data[i] == element.name) {
+                                                if (data[i] == element
+                                                    .name) {
 
-                                                quantity[i] = $(
-                                                    "#ObjQuantity" +
-                                                    element.id).val();
+                                                    quantity[i] = $(
+                                                            "#ObjQuantity" +
+                                                            element.id)
+                                                        .val();
+
+                                                }
 
                                             }
 
-                                        }
-
-                                    });
+                                        });
 
                                 } else if (!ischecked) {
                                     for (let i = 0; i < data.length; i++) {
@@ -650,11 +674,11 @@
                                     for (let i = 0; i < tags.length; i++) {
                                         if (tags[i] == element.name) {
                                             tags.splice(i, 1);
-                                            tagPrice.splice(i ,1);
+                                            tagPrice.splice(i, 1);
                                         }
                                     }
                                 }
-                                console.log(tags , tagPrice);
+                                console.log(tags, tagPrice);
                             });
                         });
 
@@ -676,24 +700,27 @@
 
                 $("#add" + element.id).click(function(event) {
 
-                calculate = [];
-                attribuePriceResult = 0;
-                tagCalculate = [];
-                tagPriceResult = 0;
+                    calculate = [];
+                    attribuePriceResult = 0;
+                    tagCalculate = [];
+                    tagPriceResult = 0;
 
                     let rnd = Math.floor((Math.random() * 1000000) + 1);
                     console.log(rnd);
 
                     $("#productBox").append(`<ul id=${rnd}>` +
-                        `<li id=ProductLocation${rnd}> <span class='text-secondary'> آدرس <hr>`
-                             + `<li id=ProductSpecAttr${rnd}><span class='text-secondary'>خدمات ویژه  <hr> `+
-                                `<li id=ProductDetails${rnd}> <span class='text-secondary'>ویژگی ها <hr>` +
-                                    `<li id=ProductPrice${rnd}> <span class='text-secondary'> جمع کل <hr>` +
-                                        `<li id=ProductName${rnd}> <span class='text-secondary'> نوع خدمت <hr>`);
+                        `<li id=ProductLocation${rnd}> <span class='text-secondary'> آدرس <hr>` +
+                        `<li id=ProductSpecAttr${rnd}><span class='text-secondary'>خدمات ویژه  <hr> ` +
+                        `<li id=ProductDetails${rnd}> <span class='text-secondary'>ویژگی ها <hr>` +
+                        `<li id=ProductPrice${rnd}> <span class='text-secondary'> جمع کل <hr>` +
+                        `<li id=ProductName${rnd}> <span class='text-secondary'> نوع خدمت <hr>`
+                    );
 
                     for (let i = 0; i < obj.attributes.length; i++) {
                         event.preventDefault();
-                        console.log(obj.attributes[i] + obj.AttributePrice[i] +"ساعت:" + obj.hour[i] + "تعداد" + obj.quantity[i]);
+                        console.log(obj.attributes[i] + obj.AttributePrice[i] + "ساعت:" + obj
+                            .hour[
+                                i] + "تعداد" + obj.quantity[i]);
                         var counter = 0;
 
                         for (let x = 0; x < obj.quantity[i]; x++) {
@@ -702,14 +729,15 @@
 
                                 calculate.push(obj.AttributePrice[i]);
 
-                            }else{
+                            } else {
                                 let discount = (obj.AttributePrice[i] * 15) / 100;
                                 calculate.push(obj.AttributePrice[i] - discount);
                             }
 
-                            attribuePriceResult = calculate.reduce((total, number) => total + number, 0);
+                            attribuePriceResult = calculate.reduce((total, number) => total +
+                                number, 0);
                             counter++;
-                            console.log(calculate,attribuePriceResult);
+                            console.log(calculate, attribuePriceResult);
 
 
                         }
@@ -719,7 +747,9 @@
 
                         let productDetails = $("<h6/>", {
 
-                            text: " ویژگی " + obj.attributes[i] + " ساعت: " + obj.hour[i] + " تعداد: " + obj.quantity[i]
+                            text: " ویژگی " + obj.attributes[i] + " ساعت: " + obj.hour[
+                                    i] +
+                                " تعداد: " + obj.quantity[i]
 
                         });
 
@@ -730,12 +760,13 @@
 
                         tagCalculate.push(obj.tagPrice[i]);
                         console.log(tagCalculate);
-                        tagPriceResult = tagCalculate.reduce((total, number) => total + number, 0);
+                        tagPriceResult = tagCalculate.reduce((total, number) => total + number,
+                            0);
                         obj.tagPriceDetails = tagCalculate;
                         obj.tagPriceResult = tagPriceResult;
 
                         console.log(tagPriceResult);
-                        let productSpecAttr = $("<h6/>" , {
+                        let productSpecAttr = $("<h6/>", {
 
                             text: obj.tags[i]
 
@@ -749,7 +780,7 @@
 
                     console.log(obj);
 
-                    let productPrice = $("<h6/>" , {
+                    let productPrice = $("<h6/>", {
 
                         text: obj.finalPriceThisProductIs
 
@@ -757,7 +788,7 @@
 
                     $("#ProductPrice" + rnd).append(productPrice);
 
-                     let productName = $("<h6/>" , {
+                    let productName = $("<h6/>", {
 
                         text: obj.product
 
