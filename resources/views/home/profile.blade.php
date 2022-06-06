@@ -559,7 +559,30 @@
                     <div class="row tab_content" id="user-addresses">
                         <div class="d-flex justify-content-between align-items-center">
                             <h4>آدرس های شما</h4>
-                            <button id="add-address-btn" class="secondary-btn">افزودن آدرس</button>
+                            <button id="modalBtn14" class="secondary-btn">افزودن آدرس</button>
+
+                            <div id="myModal14" class="modal">
+                                <!-- Modal content -->
+                                <div class="modal-content">
+                                    <span class="close">&times;</span>
+                                    <div class="modal-body">
+                                        <p class="text-secondary">لطفا اطلاعات شناسایی خود را وارد کنید. آدرس
+                                            شما
+                                            باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
+                                        <form id="addressForm">
+                                            <div id="addressForm" class="form-group">
+                                                <label for="userAddress">آدرس</label>
+                                                <input type="text" id="addresses" name="addresses"
+                                                    class="form-control" id="address"
+                                                    placeholder="تهران، خیابان ۹ شرقی...">
+                                            </div>
+
+                                            <div name="map" id="map" style="height: 200px"></div>
+                                            <button class="secondary-btn">ذخیره</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="footer-line"><span></span></div>
@@ -793,6 +816,7 @@
             [document.getElementById("modalBtn11"), document.getElementById("myModal11")],
             [document.getElementById("modalBtn12"), document.getElementById("myModal12")],
             [document.getElementById("modalBtn13"), document.getElementById("myModal13")],
+            [document.getElementById("modalBtn14"), document.getElementById("myModal14")],
         ]);
 
         datamap.forEach((value, key) => {
