@@ -32,7 +32,7 @@
 
                     <li class="nav___items ">
                         <i class='bx bx-log-out'></i>
-                        <a class="text-nowrap" href="">خروج</a>
+                        <a class="text-nowrap" href="{{ route('logout') }}">خروج</a>
                     </li>
                 </ul>
             </nav>
