@@ -186,6 +186,48 @@ h6 {
   justify-content: center;
   width: 330px;
   margin: auto;
+  position: relative;
+}
+
+.navbar-btns button {
+  outline: none;
+  border: none;
+}
+
+#addresses-box {
+  position: absolute;
+  z-index: 99999991;
+  top: 3.7rem;
+  right: 0;
+  width: 100%;
+  border-radius: 0 0 0.6rem 0.6rem;
+  height: auto;
+  background-color: #fff;
+  color: var(--clr-dark);
+  display: flex;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  display: none;
+}
+
+#addresses-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+#addresses-box li {
+  margin-top: 0.5rem;
+  cursor: pointer;
+  width: 100%;
+  padding: 0.5rem 0.7rem;
+  text-align: justify;
+  transition: all 0.3s;
+}
+
+#addresses-box li:hover {
+  background-color: var(--clr-secondary);
+  color: var(--clr-primary);
+  transition: all 0.3s;
 }
 
 .costume-nav {
