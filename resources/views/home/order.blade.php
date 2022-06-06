@@ -1,5 +1,11 @@
 @extends('home.layouts.master')
 
+@section('loader')
+
+@include('home.sections.loader')
+
+@endsection
+
 @section('content')
     <!-- Main Section ---------------------------------------------------------------->
 
