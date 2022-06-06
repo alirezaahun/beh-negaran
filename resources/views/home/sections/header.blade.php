@@ -120,12 +120,14 @@
                 <div id="addresses-box">
                     <ul>
                         <li>
+                            <input type="radio" name="address" hidden>
                             <span>کرج، میدان سپاه، خیابان گلستان، کوچه لادن، پلاک ۷۴</span>
                         </li>
                         <hr>
                         <li>
-                            <span>کرج، میدان سپاه، خیابان گلستان، کوچه لادن، پلاک ۷۴</span>
-                        </li>
+                          <input type="radio" name="address" hidden>
+                          <span>کرج، میدان سپاه، خیابان گلستان، کوچه لادن، پلاک ۷۴</span>
+                      </li>
                     </ul>
                 </div>
                 |
