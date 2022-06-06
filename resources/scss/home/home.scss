@@ -1308,7 +1308,7 @@ footer p span {
     // border-radius: 0px;
     cursor: pointer;
     // padding: 10px 5px;
-    margin: 260px 0px 10px 5px;
+    // margin: 260px 0px 10px 5px;
     float: right;
     // Secondary style
     border: none;
@@ -1339,7 +1339,7 @@ footer p span {
     // border-radius: 0px;
     cursor: pointer;
     // padding: 10px 5px;
-    margin: 260px 0px 10px 5px;
+    // margin: 260px 0px 10px 5px;
     float: right;
     // Secondary style
     border: none;
@@ -1366,6 +1366,11 @@ footer p span {
 //     border: none;
 //     position: relative;
 // }
+
+
+.content-min-height{
+    min-height: 1500px;
+}
 
 #progressbar {
     margin-bottom: 30px;
@@ -1625,9 +1630,7 @@ footer p span {
 //     float: right;
 // }
 
-.custom-pricing-margin-btn {
-    margin-top: 500px !important;
-}
+
 .form-check {
     padding-left: 0 !important;
     text-align: right;
@@ -1713,6 +1716,22 @@ a {
     .tabs {
         min-height: 400px;
     }
+
+    #msform fieldset{
+        min-height: 900px;
+    }
+    .margin-order-2{
+        margin-right: 0;
+    }
+
+
+    .content-min-height{
+        min-height: 1800px;
+    }
+
+    // #msform .action-button{
+    //     transform: translate(0 400px);
+    // }
 }
 
 @media screen and (max-width: 480px) {
@@ -1732,7 +1751,36 @@ a {
         margin-right: 0;
         margin-bottom: 20px;
     }
+    #msform fieldset{
+        min-height: 1200px;
+    }
+    .margin-order-2{
+        margin-right: 0;
+    }
+
+    .content-min-height{
+        min-height: 2000px;
+    }
+
 }
+@media screen and (max-width: 768px) {
+  
+        #msform .action-button{
+     
+        transform: translate(10px, 900px);
+    }
+    .pushTags-customMargin{
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+  
+    .pushOptionAttr-customMargin{
+        margin-right: 25px;
+    }
+}
+
 
 // ************************************************************************************************************************//
 

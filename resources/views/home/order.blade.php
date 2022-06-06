@@ -12,7 +12,7 @@
 
 
     <div class="container-fluid">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center  content-min-height">
             <div class="col-11 col-sm-10 col-md-10 col-lg-12 col-xl-11 col-xl-5 text-center p-0 mt-3 mb-2">
                 <div class="_card_  px-0 pt-4 pb-0 mt-3 mb-3">
                     <form id="msform">
@@ -126,7 +126,7 @@
                                                                                     </h6>
                                                                                     <hr class="aaa w-50 mx-auto mt-0">
                                                                                 </div>
-                                                                                <div id="pushOptionAttr{{ $category->id }}"
+                                                                                <div id="pushOptionAttr{{ $category->id }}" class="pushOptionAttr-customMargin"
                                                                                     {{-- class=" m-2  form-check d-flex justify-content-md-around justify-content-md-start  custom-border mt-md-4 mt-lg-0" --}}>
 
                                                                                 </div>
@@ -149,7 +149,7 @@
                                                                             </div>
                                                                             <div class="col-12 col-md-6  col-lg-12  text-justify mt-3 d-flex margin-order-2 ">
 
-                                                                                <div id="pushTags{{ $category->id }}" class="d-flex ">
+                                                                                <div id="pushTags{{ $category->id }}" class=" d-xs-none d-lg-flex pushTags-customMargin">
                                                                                 </div>
 
                                                                                 <!-- Checked checkbox -->
