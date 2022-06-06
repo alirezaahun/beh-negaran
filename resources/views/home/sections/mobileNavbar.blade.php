@@ -4,9 +4,9 @@
       <i class='bx bx-home nav__icon'></i>
       <span class="nav__text">خانه</span>
     </a>
-    <a href="{{route('home.profile')}}/#user-profile" class="nav__link">
+    <a href="{{route('home.order')}}" class="nav__link">
       <i class='bx bx-shopping-bag nav__icon'></i>
-      <span class="nav__text">سفارش ها</span>
+      <span class="nav__text">سفارش</span>
     </a>
     <a href="{{route('home.profile')}}/#order" class="nav__link">
       <i class='bx bx-user nav__icon'></i>
