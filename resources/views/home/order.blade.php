@@ -141,10 +141,9 @@
                                                                                     <hr class="aaa w-25 mx-auto mt-0">
                                                                                 </div>
                                                                             </div>
-                                                                            <div
-                                                                                class="col-10 col-md-6  col-lg-4 mt-2 text-justify mt-3 d-flex margin-order-2  ">
+                                                                            <div class="col-12 col-md-6  col-lg-12  text-justify mt-3 d-flex margin-order-2 ">
 
-                                                                                <div id="pushTags{{ $category->id }}">
+                                                                                <div id="pushTags{{ $category->id }}" class="d-flex ">
                                                                                 </div>
 
                                                                                 <!-- Checked checkbox -->
@@ -156,9 +155,8 @@
                                                                     </div>
                                                                 </div>
 
-                                                                <button id="add{{ $category->id }}"
-                                                                    class="button d-none d-md-block custom-margin-pricing w-50 text-center mx-auto"
-                                                                    role="button "> افزودن به سبد خرید</button>
+                                                                <button id="add{{ $category->id }}" class="button d-none d-md-block custom-margin-pricing w-50 text-center mx-auto" role="button "> افزودن به سبد خرید</button>
+                                                                <button id="add{{ $category->id }}" class="button d-block d-md-none  mb-3 w-75 text-center mx-auto" role="button "> افزودن به سبد خرید</button>
 
 
                                                             </div>
@@ -537,7 +535,7 @@
                                 text: element.name + "(" + element.price + ")",
                                 class: "form-check-label float-right-checkbox",
                                 id: `Taglabel${element.id}`
-                            }).addClass('order-margin' );
+                            }).addClass('order-margin ml-5 order-margin2' );
                             $("#pushTags" + getChildrenId).append(PushTagsInput,
                                 PushTagsLabel, "<br/>");
                         });
