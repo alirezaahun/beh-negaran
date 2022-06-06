@@ -142,7 +142,7 @@
                                                                                 </div>
                                                                             </div>
                                                                             <div
-                                                                                class="col-10 col-md-6  col-lg-4 mt-2 text-justify mt-3 d-flex ">
+                                                                                class="col-10 col-md-6  col-lg-4 mt-2 text-justify mt-3 d-flex margin-order-2  ">
 
                                                                                 <div id="pushTags{{ $category->id }}">
                                                                                 </div>
@@ -343,9 +343,9 @@
                                         </div>
 
                                         <div class="row">
-                                            <div class="col-10">
+                                            <div class="col-12">
                                                 <div class="form-group">
-                                                    <div class="col-12 text-right">
+                                                    <div class="col-12 w-100 text-right">
 
                                                         <label class=' mt-4 mb-2 gg' for="data-picker">انتخاب تاریخ:</label>
                                                     </div>
@@ -358,7 +358,6 @@
                                                 </div>
                                             </div>
 
-                                            <button class="col-2 btn" type="button">تایید</button>
                                         </div>
 
 
@@ -427,12 +426,13 @@
                                 </div>
 
 
-
+                                <input type="button" name="previous" class="info-btn mx-auto w-50 "
+                                value="پرداخت" />
                             </div>
 
 
 
-
+                      
 
 
 
@@ -537,7 +537,7 @@
                                 text: element.name + "(" + element.price + ")",
                                 class: "form-check-label float-right-checkbox",
                                 id: `Taglabel${element.id}`
-                            });
+                            }).addClass('order-margin' );
                             $("#pushTags" + getChildrenId).append(PushTagsInput,
                                 PushTagsLabel, "<br/>");
                         });
@@ -550,15 +550,15 @@
                                 value: element.id,
                                 id: `attributeLabel${element.id}`,
                                 text: element.name + "(" + element.price + ")"
-                            });
+                            }).addClass('mt-2' );
                             let createCheckBox = $("<input/>", {
                                 type: "checkbox",
                                 id: `AttributeCheckbox${element.id}`
-                            }).addClass('form-check-label float-right-checkbox');
+                            }).addClass('form-check-label float-right-checkbox order-margin ' );
                             let hourlabel = $("<label/>", {
                                 text: "مدت زمان درخواستی",
                                 id: `HourQtyLabel${element.id}`
-                            });
+                            }).addClass('order-marginTop ' );
                             let hourInput = $("<input/>", {
                                 type: "number",
                                 id: `HourQty${element.id}`,
@@ -566,15 +566,15 @@
                                 min: "1",
                                 max: "10",
                                 class: "text-center",
-                            });
+                            }).addClass('margin-hourInput' );
                             let hourSpan = $("<span/>", {
                                 text: "ساعت"
-                            });
+                            }).addClass(' order-margin' );
 
                             let optionAttrLabel = $("<label/>", {
-                                text: "تعداد دوربین" + "(" + element.name + ")",
+                                text: "تعداد دوربین" ,
                                 id: `ObjQuantityLabel${element.id}`
-                            });
+                            }).addClass(' mt-2 order-margin ' );
 
                             let optionAttrInput = $("<input/>", {
                                 type: "number",
@@ -582,7 +582,7 @@
                                 id: `ObjQuantity${element.id}`,
                                 min: "1",
                                 max: "10"
-                            });
+                            }).addClass(' float-left ' );
 
                             $("#push" + getChildrenId).append(createCheckBox,
                                 createAttr,
@@ -699,7 +699,7 @@
             parents.forEach(element => {
 
                 $("#add" + element.id).click(function(event) {
-
+                  
                     calculate = [];
                     attribuePriceResult = 0;
                     tagCalculate = [];
@@ -745,17 +745,17 @@
                         obj.AttributespriceDetails = calculate;
                         obj.attributesPriceResult = attribuePriceResult;
 
-                        let productDetails = $("<h6/>", {
+                        let productDetails = $("<div/>", {
 
-                            text: " ویژگی " + obj.attributes[i] + " ساعت: " + obj.hour[
-                                    i] +
+                            text: " ویژگی " + obj.attributes[i] + " ساعت: " + obj.hour[i] +
                                 " تعداد: " + obj.quantity[i]
 
-                        });
-
+                              
+                        }).addClass('text-right ' );
+                      
                         $("#ProductDetails" + rnd).append(productDetails);
                     }
-
+                    alert("با موفقیت به سبد خرید اضافه شد")
                     for (let i = 0; i < obj.tags.length; i++) {
 
                         tagCalculate.push(obj.tagPrice[i]);
@@ -797,6 +797,8 @@
                     $("#ProductName" + rnd).append(productName);
 
                     event.preventDefault();
+
+                   
                 });
 
             });
