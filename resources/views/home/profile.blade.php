@@ -529,24 +529,24 @@
                         <h4>وضعیت پروژه شما</h4>
                         <div class="footer-line"><span></span></div>
                         <div class="col-md-12">
-                            
-                            
-                                <ul class="responsive-table">
-                                    <li class="table-header">
-                                        <div class="col col-1">عنوان</div>
-                                        <div class="col col-2">تاریخ</div>
-                                        <div class="col col-3">وضعیت فعلی</div>
-                                        <div class="col col-4">وضعیت بعدی</div>
-                                    </li>
-                                    <li class="table-row">
-                                        <div class="col col-1" data-label="عنوان">پروژه عکاسی</div>
-                                        <div class="col col-2" data-label="تاریخ">۰۱\۰۱\۱۴۰۰</div>
-                                        <div class="col col-3" data-label="وضعیت فعلی">اعظام تیم به محل</div>
-                                        <div class="col col-4" data-label="وضعیت بعدی">شروع عکاسی</div>
-                                    </li>
 
-                                </ul>
-                            
+
+                            <ul class="responsive-table">
+                                <li class="table-header">
+                                    <div class="col col-1">عنوان</div>
+                                    <div class="col col-2">تاریخ</div>
+                                    <div class="col col-3">وضعیت فعلی</div>
+                                    <div class="col col-4">وضعیت بعدی</div>
+                                </li>
+                                <li class="table-row">
+                                    <div class="col col-1" data-label="عنوان">پروژه عکاسی</div>
+                                    <div class="col col-2" data-label="تاریخ">۰۱\۰۱\۱۴۰۰</div>
+                                    <div class="col col-3" data-label="وضعیت فعلی">اعظام تیم به محل</div>
+                                    <div class="col col-4" data-label="وضعیت بعدی">شروع عکاسی</div>
+                                </li>
+
+                            </ul>
+
                             <hr>
                         </div>
 
@@ -569,15 +569,14 @@
                                         <p class="text-secondary">لطفا اطلاعات شناسایی خود را وارد کنید. آدرس
                                             شما
                                             باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
-                                        <form id="addressForm">
+                                        <form id="addressForm1">
                                             <div id="addressForm" class="form-group">
                                                 <label for="userAddress">آدرس</label>
-                                                <input type="text" id="addresses" name="addresses"
-                                                    class="form-control" id="address"
-                                                    placeholder="تهران، خیابان ۹ شرقی...">
+                                                <input type="text" id="addresses1" name="addresses" class="form-control"
+                                                    id="address" placeholder="تهران، خیابان ۹ شرقی...">
                                             </div>
 
-                                            <div name="map" id="map" style="height: 200px"></div>
+                                            <div name="map" id="Addmap" style="height: 200px"></div>
                                             <button class="secondary-btn">ذخیره</button>
                                         </form>
                                     </div>
@@ -633,7 +632,8 @@
 
                                         <li>
                                             <span class="text-secondary">لینک</span>
-                                            <h6> <a href="{{ url('https://') . $message->link }}"> {{ $message->link }}
+                                            <h6> <a href="{{ url('https://') . $message->link }}">
+                                                    {{ $message->link }}
                                                 </a>
                                             </h6>
                                         </li>
@@ -688,9 +688,42 @@
         var marker = L.marker([32.4279, 53.6880]).addTo(map)
             .openPopup();
 
+        var map1 = new L.Map('Addmap', {
+            key: 'web.5j4qJGGkEPdoi3S18YqklpipMjVUa7nDm8cuiiL9',
+            maptype: 'dreamy',
+            center: [lat, lng],
+            zoom: 14,
+            traffic: true,
+            onTrafficLayerSwitched: function(state) {
+                console.log(state);
+            }
+        });
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: false
+        }).addTo(map1);
+
+        var marker = L.marker([32.4279, 53.6880]).addTo(map1)
+            .openPopup();
+
+
+
+        var marker = L.marker([32.4279, 53.6880]).addTo(map1)
+            .openPopup();
+
         map.on('click', function(e) {
             map.removeLayer(marker);
             marker = new L.marker(e.latlng).addTo(map);
+            lat = marker._latlng.lat;
+            lng = marker._latlng.lng;
+
+            console.log(lat, lng);
+        });
+
+        map1.on('click', function(e) {
+            map1.removeLayer(marker);
+            marker = new L.marker(e.latlng).addTo(map1);
             lat = marker._latlng.lat;
             lng = marker._latlng.lng;
 
@@ -733,7 +766,30 @@
                 $.post("{{ route('addresses.store') }}", {
 
                     '_token': "{{ csrf_token() }}",
-                    'address': $('#addresses').val(),
+                    'address': $('#addresses' + getId.id).val(),
+                    'user_id': "{{ $user->id }}",
+                    'lat': lat,
+                    'lng': lng
+
+                }, function(response, status) {
+                    console.log(response, status);
+
+                }).fail(function(response) {
+
+                    console.log(response);
+                })
+
+            });
+
+            $('#addressForm1').submit(function(event) {
+
+                console.log($('#addresses').val());
+                event.preventDefault();
+
+                $.post("{{ route('addresses.store') }}", {
+
+                    '_token': "{{ csrf_token() }}",
+                    'address': $('#addresses1').val(),
                     'user_id': "{{ $user->id }}",
                     'lat': lat,
                     'lng': lng
