@@ -1367,8 +1367,7 @@ footer p span {
 //     position: relative;
 // }
 
-
-.content-min-height{
+.content-min-height {
     min-height: 1500px;
 }
 
@@ -1630,7 +1629,6 @@ footer p span {
 //     float: right;
 // }
 
-
 .form-check {
     padding-left: 0 !important;
     text-align: right;
@@ -1679,54 +1677,77 @@ a {
     color: var(--clr-primary);
 }
 
-
-
-.order-margin{
-    margin: 0 5px ;
+.order-margin {
+    margin: 0 5px;
 }
-.order-margin2{
-    margin: 0 2px 0 50px ;
-
+.order-margin2 {
+    margin: 0 2px 0 50px;
 }
 
-.margin-order-2{
+.margin-order-2 {
     margin-right: 30px;
 }
 
-.order-marginTop{
- margin-top: 7px;
- margin-right: 2px;
+.order-marginTop {
+    margin-top: 7px;
+    margin-right: 2px;
 }
 
-
-.margin-hourInput{
+.margin-hourInput {
     margin-right: 5px;
 }
+
+#msform .action-button.firstBtn {
+    transform: translate(10px, 430px);
+}
 // ****************************************************plus
-.ProductDetails li div{
-    margin: 100PX   ;
+.ProductDetails li div {
+    margin: 100px;
 }
 // .rder-collapse  .responsive-table .li{
 //     display: flex;
 //     margin: 100px;
 // }
+
+// .teeest{
+//     transform: translate(-65px, 19px);
+// }
+
+.w-95 {
+    width: 95%;
+}
 // ***********************end pricing page ******************************
 /* BREAKPOINTS ----- */
+
+@media only screen and (min-width: 568px) and (max-width: 766px) {
+    #msform .action-button.firstBtn {
+        transform: translate(10px, 750px);
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    #msform .action-button.firstBtn {
+        transform: translate(10px, 900px);
+    }
+}
 @media screen and (max-width: 767px) {
     .tabs {
         min-height: 400px;
     }
 
-    #msform fieldset{
+    #msform fieldset {
         min-height: 900px;
     }
-    .margin-order-2{
+    .margin-order-2 {
         margin-right: 0;
     }
 
-
-    .content-min-height{
+    .content-min-height {
         min-height: 1800px;
+    }
+
+    .pushTags-customMargin {
+        margin-right: 20px;
     }
 
     // #msform .action-button{
@@ -1751,35 +1772,24 @@ a {
         margin-right: 0;
         margin-bottom: 20px;
     }
-    #msform fieldset{
+    #msform fieldset {
         min-height: 1200px;
     }
-    .margin-order-2{
+    .margin-order-2 {
         margin-right: 0;
     }
 
-    .content-min-height{
+    .content-min-height {
         min-height: 2000px;
-    }
-
-}
-@media screen and (max-width: 768px) {
-  
-        #msform .action-button{
-     
-        transform: translate(10px, 900px);
-    }
-    .pushTags-customMargin{
-        margin-right: 20px;
     }
 }
 
 @media screen and (max-width: 991px) {
-  
-    .pushOptionAttr-customMargin{
+    .pushOptionAttr-customMargin {
         margin-right: 25px;
     }
 }
+
 
 
 // ************************************************************************************************************************//

@@ -1869,11 +1869,29 @@ a {
   margin-right: 5px;
 }
 
+#msform .action-button.firstBtn {
+  transform: translate(10px, 430px);
+}
+
 .ProductDetails li div {
-  margin: 100PX;
+  margin: 100px;
+}
+
+.w-95 {
+  width: 95%;
 }
 
 /* BREAKPOINTS ----- */
+@media only screen and (min-width: 568px) and (max-width: 766px) {
+  #msform .action-button.firstBtn {
+    transform: translate(10px, 750px);
+  }
+}
+@media only screen and (max-width: 576px) {
+  #msform .action-button.firstBtn {
+    transform: translate(10px, 900px);
+  }
+}
 @media screen and (max-width: 767px) {
   .tabs {
     min-height: 400px;
@@ -1889,6 +1907,10 @@ a {
 
   .content-min-height {
     min-height: 1800px;
+  }
+
+  .pushTags-customMargin {
+    margin-right: 20px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -1922,15 +1944,6 @@ a {
 
   .content-min-height {
     min-height: 2000px;
-  }
-}
-@media screen and (max-width: 768px) {
-  #msform .action-button {
-    transform: translate(10px, 900px);
-  }
-
-  .pushTags-customMargin {
-    margin-right: 20px;
   }
 }
 @media screen and (max-width: 991px) {

@@ -174,7 +174,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <input type="button" name="next" class="next action-button custom-pricing-margin-btn "
+                            <input type="button" name="next" class="next action-button custom-pricing-margin-btn  firstBtn"
                                 value="بعدی" />
                         </fieldset>
                         <fieldset>
@@ -184,6 +184,26 @@
                                 <div class="row">
                                     <div class="col-md-6 col-12 ">
                                         <div class="well">
+                                            <div class="row">
+                                                
+                                                <div class="col-12">
+                                                    <div class="form-group" dir="ltr">
+                                                        <label class='float-right mt-4 mb-2 gg' for="state">آدرس های ثبت شده</label>
+                                                        <div class="form-contorol">
+                                                            <select id="" runat="server" class="form-control" name="state">
+                                                                <option class="form-group" value=""></option>
+                                                            </select>
+                                                        </div>
+
+
+
+
+
+                                                    </div>
+                                                </div>
+                                               
+                                          
+                                            </div>
                                             <div class="row">
                                                 <div class="col-sm-6">
                                                     <div class="form-group" dir="ltr">
@@ -378,13 +398,12 @@
 
 
 
-                            <input type="button" name="next" id="giveInformation" class="next action-button"
-                                value="Next" /> <input type="button" name="previous"
-                                class="previous action-button-previous" value="Previous" />
+                            <input type="button" name="next" id="giveInformation" class="next action-button mt-5 " value="Next" /> 
+                            <input type="button" name="previous" class="previous action-button-previous mx-2  mt-5 " value="Previous" />
                         </fieldset>
                         <fieldset>
 
-                            <div id="dynamic-content" class="row">
+                            <div id="dynamic-content" class="row mx-auto">
 
 
 
@@ -440,7 +459,7 @@
 
 
 
-                            <input type="button" name="previous" class="previous action-button-previous"
+                            <input type="button" name="previous" class="previous action-button-previous mt-3  teeest"
                                 value="Previous" />
                         </fieldset>
                     </form>
