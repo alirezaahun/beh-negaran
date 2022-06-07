@@ -19,7 +19,7 @@
 
                     <input id="phoneInput" placeholder="۰۹۱۲۱۱۱۲۲۳۳" type="text" />
                 </div>
-                
+
 
                 <div id="errorPhone" class="input-error-validation">
 
@@ -95,7 +95,7 @@
 
             }).fail(function(response) {
 
-                console.log(response.responseJSON.errors.cellphone[0]);
+                console.log(response.responseJSON);
                 $('#errorPhone').fadeIn();
                 $('#errorText').html(response.responseJSON.errors.cellphone[0]);
 
