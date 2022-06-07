@@ -1,12 +1,18 @@
 @extends('home.layouts.master')
 
+@section('loader')
+
+@include('home.sections.loader')
+
+@endsection
+
 @section('content')
     <!-- Main Section ---------------------------------------------------------------->
 
 
 
     <div class="container-fluid">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center  content-min-height">
             <div class="col-11 col-sm-10 col-md-10 col-lg-12 col-xl-11 col-xl-5 text-center p-0 mt-3 mb-2">
                 <div class="_card_  px-0 pt-4 pb-0 mt-3 mb-3">
                     <form id="msform">
@@ -120,7 +126,7 @@
                                                                                     </h6>
                                                                                     <hr class="aaa w-50 mx-auto mt-0">
                                                                                 </div>
-                                                                                <div id="pushOptionAttr{{ $category->id }}"
+                                                                                <div id="pushOptionAttr{{ $category->id }}" class="pushOptionAttr-customMargin"
                                                                                     {{-- class=" m-2  form-check d-flex justify-content-md-around justify-content-md-start  custom-border mt-md-4 mt-lg-0" --}}>
 
                                                                                 </div>
@@ -141,10 +147,9 @@
                                                                                     <hr class="aaa w-25 mx-auto mt-0">
                                                                                 </div>
                                                                             </div>
-                                                                            <div
-                                                                                class="col-10 col-md-6  col-lg-4 mt-2 text-justify mt-3 d-flex margin-order-2  ">
+                                                                            <div class="col-12 col-md-6  col-lg-12  text-justify mt-3 d-flex margin-order-2 ">
 
-                                                                                <div id="pushTags{{ $category->id }}">
+                                                                                <div id="pushTags{{ $category->id }}" class=" d-xs-none d-lg-flex pushTags-customMargin">
                                                                                 </div>
 
                                                                                 <!-- Checked checkbox -->
@@ -156,9 +161,8 @@
                                                                     </div>
                                                                 </div>
 
-                                                                <button id="add{{ $category->id }}"
-                                                                    class="button d-none d-md-block custom-margin-pricing w-50 text-center mx-auto"
-                                                                    role="button "> افزودن به سبد خرید</button>
+                                                                <button id="add{{ $category->id }}" class="button d-none d-md-block custom-margin-pricing w-50 text-center mx-auto" role="button "> افزودن به سبد خرید</button>
+                                                                <button id="add{{ $category->id }}" class="button d-block d-md-none  mb-3 w-75 text-center mx-auto" role="button "> افزودن به سبد خرید</button>
 
 
                                                             </div>
@@ -170,7 +174,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <input type="button" name="next" class="next action-button custom-pricing-margin-btn "
+                            <input type="button" name="next" class="next action-button custom-pricing-margin-btn  firstBtn"
                                 value="بعدی" />
                         </fieldset>
                         <fieldset>
@@ -180,6 +184,26 @@
                                 <div class="row">
                                     <div class="col-md-6 col-12 ">
                                         <div class="well">
+                                            <div class="row">
+                                                
+                                                <div class="col-12">
+                                                    <div class="form-group" dir="ltr">
+                                                        <label class='float-right mt-4 mb-2 gg' for="state">آدرس های ثبت شده</label>
+                                                        <div class="form-contorol">
+                                                            <select id="" runat="server" class="form-control" name="state">
+                                                                <option class="form-group" value=""></option>
+                                                            </select>
+                                                        </div>
+
+
+
+
+
+                                                    </div>
+                                                </div>
+                                               
+                                          
+                                            </div>
                                             <div class="row">
                                                 <div class="col-sm-6">
                                                     <div class="form-group" dir="ltr">
@@ -374,13 +398,12 @@
 
 
 
-                            <input type="button" name="next" id="giveInformation" class="next action-button"
-                                value="Next" /> <input type="button" name="previous"
-                                class="previous action-button-previous" value="Previous" />
+                            <input type="button" name="next" id="giveInformation" class="next action-button mt-5 " value="Next" /> 
+                            <input type="button" name="previous" class="previous action-button-previous mx-2  mt-5 " value="Previous" />
                         </fieldset>
                         <fieldset>
 
-                            <div id="dynamic-content" class="row">
+                            <div id="dynamic-content" class="row mx-auto">
 
 
 
@@ -436,7 +459,7 @@
 
 
 
-                            <input type="button" name="previous" class="previous action-button-previous"
+                            <input type="button" name="previous" class="previous action-button-previous mt-3  teeest"
                                 value="Previous" />
                         </fieldset>
                     </form>
@@ -537,7 +560,7 @@
                                 text: element.name + "(" + element.price + ")",
                                 class: "form-check-label float-right-checkbox",
                                 id: `Taglabel${element.id}`
-                            }).addClass('order-margin' );
+                            }).addClass('order-margin ml-5 order-margin2' );
                             $("#pushTags" + getChildrenId).append(PushTagsInput,
                                 PushTagsLabel, "<br/>");
                         });

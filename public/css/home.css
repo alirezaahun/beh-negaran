@@ -1462,7 +1462,6 @@ footer p span {
   color: var(--clr-dark);
   background: var(--clr-primary);
   cursor: pointer;
-  margin: 130px 0px 10px 5px;
   float: right;
   border: none;
   font-weight: 600;
@@ -1485,7 +1484,6 @@ footer p span {
 #msform .action-button-previous {
   width: 100px;
   cursor: pointer;
-  margin: 130px 0px 10px 5px;
   float: right;
   border: none;
   font-weight: 600;
@@ -1503,6 +1501,10 @@ footer p span {
   transition: all 0.3s ease;
   color: var(--clr-primary);
   background-color: var(--clr-dark);
+}
+
+.content-min-height {
+  min-height: 1500px;
 }
 
 #progressbar {
@@ -1730,7 +1732,7 @@ footer p span {
 }
 
 .custom-margin-pricing {
-  margin: 140px 0 40px 0;
+  margin: 80px 0 40px 0;
 }
 
 .text-justify {
@@ -1756,10 +1758,6 @@ footer p span {
 
 .float-right {
   float: right;
-}
-
-.custom-pricing-margin-btn {
-  margin-top: 500px !important;
 }
 
 .form-check {
@@ -1817,6 +1815,10 @@ a {
   margin: 0 5px;
 }
 
+.order-margin2 {
+  margin: 0 2px 0 50px;
+}
+
 .margin-order-2 {
   margin-right: 30px;
 }
@@ -1830,14 +1832,48 @@ a {
   margin-right: 5px;
 }
 
+#msform .action-button.firstBtn {
+  transform: translate(10px, 430px);
+}
+
 .ProductDetails li div {
-  margin: 100PX;
+  margin: 100px;
+}
+
+.w-95 {
+  width: 95%;
 }
 
 /* BREAKPOINTS ----- */
+@media only screen and (min-width: 568px) and (max-width: 766px) {
+  #msform .action-button.firstBtn {
+    transform: translate(10px, 750px);
+  }
+}
+@media only screen and (max-width: 576px) {
+  #msform .action-button.firstBtn {
+    transform: translate(10px, 900px);
+  }
+}
 @media screen and (max-width: 767px) {
   .tabs {
     min-height: 400px;
+  }
+
+  #msform fieldset {
+    min-height: 900px;
+  }
+
+  .margin-order-2 {
+    margin-right: 0;
+  }
+
+  .content-min-height {
+    min-height: 1800px;
+  }
+
+  .pushTags-customMargin {
+    margin-right: 20px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -1859,6 +1895,23 @@ a {
     float: none;
     margin-right: 0;
     margin-bottom: 20px;
+  }
+
+  #msform fieldset {
+    min-height: 1200px;
+  }
+
+  .margin-order-2 {
+    margin-right: 0;
+  }
+
+  .content-min-height {
+    min-height: 2000px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .pushOptionAttr-customMargin {
+    margin-right: 25px;
   }
 }
 .project-page-title h3 {
