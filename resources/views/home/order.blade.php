@@ -19,7 +19,9 @@
                         <!-- progressbar -->
                         <ul id="progressbar">
                             <li class="active" id="account"><strong>خدمات</strong></li>
-                            <li id="personal"><strong>زمان و مکان</strong></li>
+
+                            {{-- comment --}}
+                            {{-- <li id="personal"><strong>زمان و مکان</strong></li> --}}
                             <li id="payment"><strong>پرداخت</strong></li>
                         </ul>
                         <!-- fieldsets -->
@@ -33,6 +35,23 @@
                             ->get();
                         ?>
                         <fieldset>
+
+                            <div class="col-12">
+                                <div class="form-group" dir="ltr">
+                                    <label class='float-right mt-4 mb-2 gg' for="state">آدرس های ثبت شده</label>
+                                    <div class="form-contorol">
+                                        <select id="" runat="server" class="form-control" name="state">
+                                            <option class="form-group" value=""></option>
+                                        </select>
+                                    </div>
+
+
+
+
+
+                                </div>
+                            </div>
+
                             <h2 id="heading">انتخاب خدمات</h2>
                             </select>
                             <div class="form-card">
@@ -177,7 +196,7 @@
                             <input type="button" name="next" class="next action-button custom-pricing-margin-btn  firstBtn"
                                 value="بعدی" />
                         </fieldset>
-                        <fieldset>
+                        {{-- <fieldset>
                             <h2 id="heading"> آدرس و تاریخ</h2>
                             <hr class="aaa">
                             <div class="form-card">
@@ -400,7 +419,7 @@
 
                             <input type="button" name="next" id="giveInformation" class="next action-button mt-5 " value="Next" /> 
                             <input type="button" name="previous" class="previous action-button-previous mx-2  mt-5 " value="Previous" />
-                        </fieldset>
+                        </fieldset> --}}
                         <fieldset>
 
                             <div id="dynamic-content" class="row mx-auto">

@@ -1556,7 +1556,7 @@ footer p span {
 #progressbar li {
   list-style-type: none;
   font-size: 15px;
-  width: 33.33%;
+  width: 50%;
   float: left;
   position: relative;
   font-weight: 400;
