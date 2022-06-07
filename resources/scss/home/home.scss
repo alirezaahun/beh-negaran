@@ -154,44 +154,12 @@ h6 {
     justify-content: center;
     width: 330px;
     margin: auto;
-    position: relative;
 }
 .navbar-btns button {
     outline: none;
     border: none;
 }
-#addresses-box {
-    position: absolute;
-    z-index: 99999991;
-    top: 3.7rem;
-    right: 0;
-    width: 100%;
-    border-radius: 0 0 0.6rem 0.6rem;
-    height: auto;
-    background-color: #fff;
-    color: var(--clr-dark);
-    display: flex;
-    justify-content: center;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-    display: none;
-}
-#addresses-box ul {
-    list-style: none;
-    padding: 0;
-}
-#addresses-box li {
-    margin-top: 0.5rem;
-    cursor: pointer;
-    width: 100%;
-    padding: 0.5rem 0.7rem;
-    text-align: justify;
-    transition: all 0.3s;
-}
-#addresses-box li:hover {
-    background-color: var(--clr-secondary);
-    color: var(--clr-primary);
-    transition: all 0.3s;
-}
+
 .costume-nav {
     background-color: #fff;
     position: relative;
@@ -1308,7 +1276,7 @@ footer p span {
     // border-radius: 0px;
     cursor: pointer;
     // padding: 10px 5px;
-    margin: 130px 0px 10px 5px;
+    // margin: 260px 0px 10px 5px;
     float: right;
     // Secondary style
     border: none;
@@ -1339,7 +1307,7 @@ footer p span {
     // border-radius: 0px;
     cursor: pointer;
     // padding: 10px 5px;
-    margin: 130px 0px 10px 5px;
+    // margin: 260px 0px 10px 5px;
     float: right;
     // Secondary style
     border: none;
@@ -1366,6 +1334,10 @@ footer p span {
 //     border: none;
 //     position: relative;
 // }
+
+.content-min-height {
+    min-height: 1500px;
+}
 
 #progressbar {
     margin-bottom: 30px;
@@ -1594,7 +1566,7 @@ footer p span {
 }
 
 .custom-margin-pricing {
-    margin: 140px 0 40px 0;
+    margin: 80px 0 40px 0;
 }
 
 .text-justify {
@@ -1625,9 +1597,6 @@ footer p span {
 //     float: right;
 // }
 
-.custom-pricing-margin-btn {
-    margin-top: 500px !important;
-}
 .form-check {
     padding-left: 0 !important;
     text-align: right;
@@ -1676,40 +1645,82 @@ a {
     color: var(--clr-primary);
 }
 
-
-
-.order-margin{
+.order-margin {
     margin: 0 5px;
 }
+.order-margin2 {
+    margin: 0 2px 0 50px;
+}
 
-
-.margin-order-2{
+.margin-order-2 {
     margin-right: 30px;
 }
 
-.order-marginTop{
- margin-top: 7px;
- margin-right: 2px;
+.order-marginTop {
+    margin-top: 7px;
+    margin-right: 2px;
 }
 
-
-.margin-hourInput{
+.margin-hourInput {
     margin-right: 5px;
 }
+
+#msform .action-button.firstBtn {
+    transform: translate(10px, 430px);
+}
 // ****************************************************plus
-.ProductDetails li div{
-    margin: 100PX   ;
+.ProductDetails li div {
+    margin: 100px;
 }
 // .rder-collapse  .responsive-table .li{
 //     display: flex;
 //     margin: 100px;
 // }
+
+// .teeest{
+//     transform: translate(-65px, 19px);
+// }
+
+.w-95 {
+    width: 95%;
+}
 // ***********************end pricing page ******************************
 /* BREAKPOINTS ----- */
+
+@media only screen and (min-width: 568px) and (max-width: 766px) {
+    #msform .action-button.firstBtn {
+        transform: translate(10px, 750px);
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    #msform .action-button.firstBtn {
+        transform: translate(10px, 900px);
+    }
+}
 @media screen and (max-width: 767px) {
     .tabs {
         min-height: 400px;
     }
+
+    #msform fieldset {
+        min-height: 900px;
+    }
+    .margin-order-2 {
+        margin-right: 0;
+    }
+
+    .content-min-height {
+        min-height: 1800px;
+    }
+
+    .pushTags-customMargin {
+        margin-right: 20px;
+    }
+
+    // #msform .action-button{
+    //     transform: translate(0 400px);
+    // }
 }
 
 @media screen and (max-width: 480px) {
@@ -1729,7 +1740,25 @@ a {
         margin-right: 0;
         margin-bottom: 20px;
     }
+    #msform fieldset {
+        min-height: 1200px;
+    }
+    .margin-order-2 {
+        margin-right: 0;
+    }
+
+    .content-min-height {
+        min-height: 2000px;
+    }
 }
+
+@media screen and (max-width: 991px) {
+    .pushOptionAttr-customMargin {
+        margin-right: 25px;
+    }
+}
+
+
 
 // ************************************************************************************************************************//
 

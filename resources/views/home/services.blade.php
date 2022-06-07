@@ -22,7 +22,7 @@
                             پروفایل شخصی به فایل‌های نهایی دسترسی داشته باشه.
                             در ادامه به صورت کلی خدمات به‌نگاران رو براتون توضیح میدیم.</p>
 
-                        <a class="secondary-btn" href="#">مشاوره رایگان</a>
+                        <a class="secondary-btn" href="https://wa.me/+989981713807">مشاوره رایگان</a>
 
                     </div>
 
@@ -42,8 +42,8 @@
                                 آمار و ارقام نشان میدهد محتوا یا تبلیغات ویدئویی ۵ برابر نسبت به تبلیغات ساکن تأثیرگذار تره،
                                 چون فضایی قابل فهم برای مخاطب میسازه که این موضوع برای بیننده جذاب تره . </p>
                             <div>
-                                <a class="secondary-btn" href="#">سفارش</a>
-                                <a class="secondary-btn" href="#">نمونه کار</a>
+                                <a class="secondary-btn" href="{{ route('home.order') }}">سفارش</a>
+                                <a class="secondary-btn" href="{{ route('home.projects') }}">نمونه کار</a>
                             </div>
                         </div>
 
@@ -142,8 +142,8 @@
                                 از کاربران برای به نمایش گذاشتن محصولات،خدمات، امکانات و ... نیاز به عکس‌های با کیفیتی دارن
                                 و عامل مهم اثرگذاری تصویر هم کیفیت مناسبشه .</p>
                             <div>
-                                <a class="secondary-btn" href="#">سفارش</a>
-                                <a class="secondary-btn" href="#">نمونه کار</a>
+                                <a class="secondary-btn" href="{{ route('home.order') }}">سفارش</a>
+                                <a class="secondary-btn" href="{{ route('home.projects') }}">نمونه کار</a>
                             </div>
                         </div>
 
@@ -235,8 +235,8 @@
                                 از طریق وب‌سایت امکان پذیره، هر کسب و کاری با تمرکز وب‌سایت و البته تولید محتوای با کیفیت
                                 برای اون میتونه در دنیای مجازی که بخش مهمی از زندگی ما شده به مخاطب مد نظر خودش برسه.</p>
                             <div>
-                                <a class="secondary-btn" href="#">سفارش</a>
-                                <a class="secondary-btn" href="#">نمونه کار</a>
+                                <a class="secondary-btn" href="{{ route('home.order') }}">سفارش</a>
+                                <a class="secondary-btn" href="{{ route('home.projects') }}">نمونه کار</a>
                             </div>
                         </div>
 
@@ -318,8 +318,8 @@
                                 بخش تبلیغات محیطی.
                             </p>
                             <div>
-                                <a class="secondary-btn" href="#">سفارش</a>
-                                <a class="secondary-btn" href="#">نمونه کار</a>
+                                <a class="secondary-btn" href="{{ route('home.order') }}">سفارش</a>
+                                <a class="secondary-btn" href="{{ route('home.projects') }}">نمونه کار</a>
                             </div>
                         </div>
 
@@ -441,8 +441,8 @@
                                 راهکارهای تبلیغاتی و یا حل چالش های کسب و کارها در فضای تبلیغاتی بپردازیم.
                                 در حال حاضر هم تمامی امکانات لازم برای تهیه پادکست برای ایده های مختلف رو داریم.</p>
                             <div>
-                                <a class="secondary-btn" href="#">سفارش</a>
-                                <a class="secondary-btn" href="#">مشاوره رایگان</a>
+                                <a class="secondary-btn" href="{{ route('home.order') }}">سفارش</a>
+                                <a class="secondary-btn" href="https://wa.me/+989981713807">مشاوره رایگان</a>
                             </div>
                         </div>
 
@@ -464,7 +464,7 @@
                             <p>به نظر میاد اصلی ترین دغدغه کاربران ما شناخت جایگاه درست کسب و کارشون در این فضاست.</p>
                             <p class="mb-4">ما وظیفه خودمون میدونیم تا با مشاوره درست شما رو در بهتیرین مسیر قرار بدیم . متاسفانه میبینیم که اغلب کسب و کارها در سردرگمی تبلیغاتی و فضای مجازی گیر افتادند و به شدت آسیب میبینن.</p>
                             
-                            <a class="secondary-btn" href="#">مشاوره رایگان</a>
+                            <a class="secondary-btn" href="https://wa.me/+989981713807">مشاوره رایگان</a>
 
                         </div>
 
@@ -486,8 +486,8 @@
                             <p>به جز داشتن وب‌سایت که از نظر ما بسیار برای کسب و کارها مفیده بسترهای بسیار مناسب دیگری هم وجود داره که با برنامه ریزی درست میشه به سرعت در اونها جایگاه خوبی پیدا کرد و به دنبال مخاطب مد نظرمون بگردیم.</p>
                             <p class="mb-4">این بسترها امکانات بسیار خوبی هم برای کسب و کارها فراهم میکنن فقط لازمهقبل از ورود به هر شبکه اجتماعی بررسی کنیم آیا این فضا برای شما مناسبه یا خیر.</p>
                             <div>
-                                <a class="secondary-btn" href="#">سفارش</a>
-                                <a class="secondary-btn" href="#">مشاوره رایگان</a>
+                                <a class="secondary-btn" href="{{ route('home.order') }}">سفارش</a>
+                                <a class="secondary-btn" href="https://wa.me/+989981713807">مشاوره رایگان</a>
                             </div>
                         </div>
 
@@ -567,8 +567,8 @@
                                 بسیاری از کمپین های تبلیغاتی دیدیم یا حتی شنیدیم که تا سال ها در ذهن ما باقی میمونن و فراموش نمیشن.
                                 </p>
                             <div>
-                                <a class="secondary-btn" href="#">مشاوره رایگان</a>
-                                <a class="secondary-btn" href="#">نمونه کار</a>
+                                <a class="secondary-btn" href="https://wa.me/+989981713807">مشاوره رایگان</a>
+                                <a class="secondary-btn" href="{{ route('home.projects') }}">نمونه کار</a>
                             </div>
                         </div>
 
@@ -674,7 +674,7 @@
                             <p class="mb-4">برندینگ فرآیند خلق برند یا کسب و کاره که دارای هویت منحصر به فرده و مارکتینگ دانش ارتباط با مشتری و بازاره و فرآیند مدیریتی محسوب میشه.</p>
                             <p class="mb-4">ما در به‌نگاران تلاش میکنیم با دانش فنی بسیار بالای تیم متخصص به شما در هر دو موضوع کمک کنیم.</p>
 
-                            <a class="secondary-btn" href="#">مشاوره رایگان</a>
+                            <a class="secondary-btn" href="https://wa.me/+989981713807">مشاوره رایگان</a>
 
                         </div>
 
