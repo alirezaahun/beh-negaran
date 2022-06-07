@@ -8,6 +8,7 @@ use Illuminate\Notifications\Notification;
 class SmsChannel{
 
     public function send($notifiable , Notification $notification){
+        return "done!";
         $receptor = $notifiable->cellphone;
         $type = 1;
         $template = "behnegaran";
