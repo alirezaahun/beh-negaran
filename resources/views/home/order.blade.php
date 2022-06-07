@@ -39,6 +39,8 @@
                                     <label class='float-right mt-4 mb-2 gg' for="state">آدرس های ثبت
                                         شده</label>
                                     <div class="form-contorol">
+
+
                                         <select id="userAddresses" runat="server" class="form-control"
                                             name="state">
                                             @foreach ($user->addresses as $address)
@@ -47,6 +49,13 @@
                                                     {{ $address->address }}</option>
                                             @endforeach
                                         </select>
+                                    </div>
+
+                                    <div class="form-contorol">
+                                        <label class='float-right mt-4 mb-2 gg' for="state">:آدرس انتخابی
+                                            شما</label>
+                                        <input type="text" id="currentAddress" class="form-control"
+                                            disabled>
                                     </div>
                                 </div>
                             </div>
