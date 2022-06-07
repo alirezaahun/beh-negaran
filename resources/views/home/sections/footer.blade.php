@@ -8,7 +8,8 @@
                         <ul><span class="collapsible-trigger">به نگاران</span>
                             <div class="content-collapse">
                                 <div class="footer-line"><span></span></div>
-                                <li><a href="#"><i class='bx bx-chevron-left'></i>درباره ما</a></li>
+                                <li><a href="{{ route('home.about') }}"><i class='bx bx-chevron-left'></i>درباره
+                                        ما</a></li>
                                 <li><a href="#"><i class='bx bx-chevron-left'></i>تماس با ما</a></li>
                                 <li><a href="#"><i class='bx bx-chevron-left'></i>وبلاگ</a></li>
                                 <li><a href="#"><i class='bx bx-chevron-left'></i>پادکست</a></li>
@@ -52,14 +53,21 @@
                         <span>دفتر شرکت : کرج، میدان توحید، ساختمان سنیک</span>
                     </li>
                     <li>
-                        <img class="e-namad" src="{{ asset('images/enamad-logo.png') }}" alt="e-namad">
-                        <img class="e-namad" src="{{ asset('images/samandehi-logo.png') }}" alt="samandehi">
+                        <a referrerpolicy="origin" target="_blank"
+                            href="https://trustseal.enamad.ir/?id=245447&amp;Code=eewDUE10jaZKLKtliHr3"><img
+                                referrerpolicy="origin"
+                                src="https://Trustseal.eNamad.ir/logo.aspx?id=245447&amp;Code=eewDUE10jaZKLKtliHr3"
+                                alt="" style="cursor:pointer" id="eewDUE10jaZKLKtliHr3"><img class="e-namad"
+                                src="{{ asset('images/enamad-logo.png') }}" alt="e-namad"></a>
+                        {{-- <img class="e-namad" src="{{ asset('images/samandehi-logo.png') }}" alt="samandehi"> --}}
+                        <img class="e-namad" referrerpolicy='origin' id = 'nbqejzpefukzoeukesgtapfu' style = 'cursor:pointer' onclick = 'window.open("https://logo.samandehi.ir/Verify.aspx?id=276805&p=uiwkjyoegvkamcsiobpddshw", "Popup","toolbar=no, scrollbars=no, location=no, statusbar=no, menubar=no, resizable=0, width=450, height=630, top=30")' alt = 'logo-samandehi' src = 'https://logo.samandehi.ir/logo.aspx?id=276805&p=odrfyndtwlbqaqgwlymaujyn' /> -->
+
                     </li>
                     <li>
                         <div class="footer-social-icons position-relative">
                             <a href="https://www.instagram.com/beh_negaran/?hl=en-gb"><i
                                     class='bx bxl-instagram'></i></a>
-                            <a href="https://wa.me/+989195275731"><i class='bx bxl-whatsapp'></i></a>
+                            <a href="https://wa.me/+989981713807"><i class='bx bxl-whatsapp'></i></a>
                             <a href="https://www.linkedin.com/company/beh-negaran/"><i class='bx bxl-linkedin'></i></a>
                             <a href="#"><i class='bx bxl-youtube'></i></a>
                             <a class="footer-aparat-icon"

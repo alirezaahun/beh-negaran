@@ -82,11 +82,11 @@ function allInView() {
 
         <div class="quick-service-icons">
           <ul>
-            <li> <a href="#"><i class="fas fa-video"></i>ویدئو</a> </li>
-            <li> <a href="#"><i class="fas fa-camera"></i>عکس</a> </li>
-            <li> <a href="#"><i class="fas fa-laptop-code"></i>سایت</a> </li>
-            <li> <a href="#"><i class="fas fa-palette"></i>طراحی</a> </li>
-            <li> <a href="#"><i class="fas fa-microphone"></i>پادکست</a> </li>
+            <li> <a href="{{route('home.services')}}/#video-service"><i class="fas fa-video"></i>ویدئو</a> </li>
+            <li> <a href="{{route('home.services')}}/#photo-service"><i class="fas fa-camera"></i>عکس</a> </li>
+            <li> <a href="{{route('home.services')}}/#website-service"><i class="fas fa-laptop-code"></i>سایت</a> </li>
+            <li> <a href="{{route('home.services')}}/#design-service"><i class="fas fa-palette"></i>طراحی</a> </li>
+            <li> <a href="{{route('home.services')}}/#podcast-service"><i class="fas fa-microphone"></i>پادکست</a> </li>
           </ul>
         </div>
         <form class="form-control quick-form">
