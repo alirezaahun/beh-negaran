@@ -1,9 +1,7 @@
 @extends('home.layouts.master')
 
 @section('loader')
-
-@include('home.sections.loader')
-
+    @include('home.sections.loader')
 @endsection
 
 @section('content')
@@ -126,7 +124,8 @@
                                                                                     </h6>
                                                                                     <hr class="aaa w-50 mx-auto mt-0">
                                                                                 </div>
-                                                                                <div id="pushOptionAttr{{ $category->id }}" class="pushOptionAttr-customMargin"
+                                                                                <div id="pushOptionAttr{{ $category->id }}"
+                                                                                    class="pushOptionAttr-customMargin"
                                                                                     {{-- class=" m-2  form-check d-flex justify-content-md-around justify-content-md-start  custom-border mt-md-4 mt-lg-0" --}}>
 
                                                                                 </div>
@@ -147,9 +146,11 @@
                                                                                     <hr class="aaa w-25 mx-auto mt-0">
                                                                                 </div>
                                                                             </div>
-                                                                            <div class="col-12 col-md-6  col-lg-12  text-justify mt-3 d-flex margin-order-2 ">
+                                                                            <div
+                                                                                class="col-12 col-md-6  col-lg-12  text-justify mt-3 d-flex margin-order-2 ">
 
-                                                                                <div id="pushTags{{ $category->id }}" class=" d-xs-none d-lg-flex pushTags-customMargin">
+                                                                                <div id="pushTags{{ $category->id }}"
+                                                                                    class=" d-xs-none d-lg-flex pushTags-customMargin">
                                                                                 </div>
 
                                                                                 <!-- Checked checkbox -->
@@ -161,8 +162,12 @@
                                                                     </div>
                                                                 </div>
 
-                                                                <button id="add{{ $category->id }}" class="button d-none d-md-block custom-margin-pricing w-50 text-center mx-auto" role="button "> افزودن به سبد خرید</button>
-                                                                <button id="add{{ $category->id }}" class="button d-block d-md-none  mb-3 w-75 text-center mx-auto" role="button "> افزودن به سبد خرید</button>
+                                                                <button id="add{{ $category->id }}"
+                                                                    class="button d-none d-md-block custom-margin-pricing w-50 text-center mx-auto"
+                                                                    role="button "> افزودن به سبد خرید</button>
+                                                                <button id="add{{ $category->id }}"
+                                                                    class="button d-block d-md-none  mb-3 w-75 text-center mx-auto"
+                                                                    role="button "> افزودن به سبد خرید</button>
 
 
                                                             </div>
@@ -185,13 +190,19 @@
                                     <div class="col-md-6 col-12 ">
                                         <div class="well">
                                             <div class="row">
-                                                
+
                                                 <div class="col-12">
                                                     <div class="form-group" dir="ltr">
-                                                        <label class='float-right mt-4 mb-2 gg' for="state">آدرس های ثبت شده</label>
+                                                        <label class='float-right mt-4 mb-2 gg' for="state">آدرس های ثبت
+                                                            شده</label>
                                                         <div class="form-contorol">
-                                                            <select id="" runat="server" class="form-control" name="state">
-                                                                <option class="form-group" value=""></option>
+                                                            <select id="userAddresses" runat="server" class="form-control"
+                                                                name="state">
+                                                                @foreach ($user->addresses as $address)
+                                                                    <option class="form-group"
+                                                                        value="{{ $address->address }}">
+                                                                        {{ $address->address }}</option>
+                                                                @endforeach
                                                             </select>
                                                         </div>
 
@@ -201,111 +212,17 @@
 
                                                     </div>
                                                 </div>
-                                               
-                                          
+
+
                                             </div>
                                             <div class="row">
                                                 <div class="col-sm-6">
                                                     <div class="form-group" dir="ltr">
-                                                        <label class='float-right mt-4 mb-2 gg' for="state">:استان</label>
+                                                        <label class='float-right mt-4 mb-2 gg' for="state">:آدرس انتخابی
+                                                            شما</label>
                                                         <div class="form-contorol">
-                                                            <select id="Ostan" runat="server" onchange="Func(this.value)"
-                                                                class="form-control" name="state">
-                                                                <option class="form-group" value=""></option>
-                                                                <option class="form-group"
-                                                                    value=",آذرشهر ,اسکو ,اهر ,بستان‌آباد ,بناب ,تبریز ,جلفا ,چاراویماق ,سراب ,شبستر ,عجب‌شیر ,کلیبر ,مراغه ,مرند ,ملکان ,میانه ,ورزقان ,هریس ,هشترود">
-                                                                    آذربایجان شرقی</option>
-                                                                <option class="form-group"
-                                                                    value="  ,ارومیه ,اشنویه ,بوکان ,پیرانشهر ,تکاب ,چالدران ,خوی ,سردشت ,سلماس ,شاهین‌دژ ,ماکو ,مهاباد ,میاندوآب ,نقده">
-                                                                    آذربایجان غربی</option>
-                                                                <option class="form-group"
-                                                                    value="  ,اردبیل ,بیله‌سوار ,پارس‌آباد ,خلخال ,کوثر ,گِرمی ,مِشگین‌شهر ,نَمین ,نیر">
-                                                                    اردبیل</option>
-                                                                <option class="form-group"
-                                                                    value="  ,آران و بیدگل ,اردستان ,اصفهان ,برخوار و میمه ,تیران و کرون ,چادگان ,خمینی‌شهر ,خوانسار ,سمیرم ,شهرضا ,سمیرم سفلی ,فریدن ,فریدون‌شهر ,فلاورجان ,کاشان ,گلپایگان ,لنجان ,مبارکه ,نائین ,نجف‌آباد ,نطنز">
-                                                                    اصفهان</option>
-                                                                <option class="form-group"
-                                                                    value="  ,طالقان ,اشتهارد ,چهارباغ ,نظرآباد ,ساوجبلاغ ,فردیس ,کرج">
-                                                                    البرز</option>
-                                                                <option class="form-group"
-                                                                    value="  ,آبدانان ,ایلام ,ایوان ,دره‌شهر ,دهلران ,شیروان و چرداول ,مهران">
-                                                                    ایلام</option>
-                                                                <option class="form-group"
-                                                                    value="  ,بوشهر ,تنگستان ,جم ,دشتستان ,دشتی,دیر ,دیلم ,کنگان ,گناوه">
-                                                                    بوشهر</option>
-                                                                <option class="form-group"
-                                                                    value="  ,اسلام‌شهر ,پاکدشت ,تهران ,دماوند ,رباط‌کریم ,ری ,ساوجبلاغ ,شمیرانات ,شهریار ,فیروزکوه ,کرج ,نظرآباد ,ورامین">
-                                                                    تهران</option>
-                                                                <option class="form-group"
-                                                                    value="  ,اردل ,بروجن ,شهرکرد ,فارسان ,کوهرنگ ,لردگان">
-                                                                    چهارمحال و بختیاری</option>
-                                                                <option class="form-group"
-                                                                    value="  ,بیرجند ,درمیان ,سرایان ,سربیشه ,فردوس ,قائنات,نهبندان">
-                                                                    خراسان جنوبی</option>
-                                                                <option class="form-group"
-                                                                    value="  ,بردسکن ,تایباد ,تربت جام ,تربت حیدریه ,چناران ,خلیل‌آباد ,خواف ,درگز ,رشتخوار ,سبزوار ,سرخس ,فریمان ,قوچان ,کاشمر ,کلات ,گناباد ,مشهد ,مه ولات ,نیشابور">
-                                                                    خراسان رضوی</option>
-                                                                <option class="form-group"
-                                                                    value="  ,اسفراین ,بجنورد ,جاجرم ,شیروان ,فاروج ,مانه و سملقان">
-                                                                    خراسان شمالی</option>
-                                                                <option class="form-group"
-                                                                    value="  ,آبادان ,امیدیه ,اندیمشک ,اهواز ,ایذه ,باغ‌ملک ,بندر ماهشهر ,بهبهان ,خرمشهر ,دزفول ,دشت آزادگان ,رامشیر ,رامهرمز ,شادگان ,شوش ,شوشتر ,گتوند ,لالی ,مسجد سلیمان,هندیجان ">
-                                                                    خوزستان</option>
-                                                                <option class="form-group"
-                                                                    value="  ,ابهر ,ایجرود ,خدابنده ,خرمدره ,زنجان ,طارم ,ماه‌نشان">
-                                                                    زنجان</option>
-                                                                <option class="form-group"
-                                                                    value="  ,دامغان ,سمنان ,شاهرود ,گرمسار ,مهدی‌شهر">
-                                                                    سمنان
-                                                                </option>
-                                                                <option class="form-group"
-                                                                    value="  ,ایرانشهر ,چابهار ,خاش ,دلگان ,زابل ,زاهدان ,زهک ,سراوان ,سرباز ,کنارک ,نیک‌شهر">
-                                                                    سیستان و بلوچستان</option>
-                                                                <option class="form-group"
-                                                                    value="  ,آباده ,ارسنجان ,استهبان ,اقلید ,بوانات ,پاسارگاد ,جهرم ,خرم‌بید ,خنج ,داراب ,زرین‌دشت ,سپیدان ,شیراز ,فراشبند ,فسا ,فیروزآباد ,قیر و کارزین ,کازرون ,لارستان ,لامِرد ,مرودشت ,ممسنی ,مهر ,نی‌ریز">
-                                                                    فارس</option>
-                                                                <option class="form-group"
-                                                                    value="  ,آبیک ,البرز ,بوئین‌زهرا ,تاکستان ,قزوین">
-                                                                    قزوین
-                                                                </option>
-                                                                <option class="form-group" value="  ,قم">قم</option>
-                                                                <option class="form-group"
-                                                                    value="  ,بانه ,بیجار ,دیواندره ,سروآباد ,سقز ,سنندج ,قروه ,کامیاران ,مریوان">
-                                                                    کردستان</option>
-                                                                <option class="form-group"
-                                                                    value="  ,بافت ,بردسیر ,بم ,جیرفت ,راور ,رفسنجان ,رودبار جنوب ,زرند ,سیرجان ,شهر بابک ,عنبرآباد ,قلعه گنج ,کرمان ,کوهبنان ,کهنوج ,منوجان">
-                                                                    کرمان</option>
-                                                                <option class="form-group"
-                                                                    value="  ,اسلام‌آباد غرب ,پاوه ,ثلاث باباجانی ,جوانرود ,دالاهو ,روانسر ,سرپل ذهاب ,سنقر ,صحنه ,قصر شیرین ,کرمانشاه ,کنگاور ,گیلان غرب ,هرسین">
-                                                                    کرمانشاه</option>
-                                                                <option class="form-group"
-                                                                    value="  ,بویراحمد ,بهمئی ,دنا ,کهگیلویه ,گچساران">
-                                                                    کهگیلویه و بویراحمد</option>
-                                                                <option class="form-group"
-                                                                    value="  ,آزادشهر ,آق‌قلا ,بندر گز ,ترکمن ,رامیان ,علی‌آباد ,کردکوی ,کلاله ,گرگان ,گنبد کاووس ,مراوه‌تپه ,مینودشت">
-                                                                    گلستان</option>
-                                                                <option class="form-group"
-                                                                    value="  ,آستارا ,آستانه اشرفیه ,اَملَش ,بندر انزلی ,رشت ,رضوانشهر ,رودبار ,رودسر ,سیاهکل ,شَفت ,صومعه‌سرا ,طوالش ,فومَن ,لاهیجان ,لنگرود ,ماسال">
-                                                                    گیلان</option>
-                                                                <option class="form-group"
-                                                                    value="  ,ازنا ,الیگودرز ,بروجرد ,پل‌دختر ,خرم‌آباد ,دورود ,دلفان ,سلسله ,کوهدشت">
-                                                                    لرستان</option>
-                                                                <option class="form-group"
-                                                                    value="  ,آمل ,بابل ,بابلسر ,بهشهر ,تنکابن ,جویبار ,چالوس ,رامسر ,ساری ,سوادکوه ,قائم‌شهر ,گلوگاه ,محمودآباد ,نکا ,نور ,نوشهر">
-                                                                    مازندران</option>
-                                                                <option class="form-group"
-                                                                    value="  ,آشتیان ,اراک ,تفرش ,خمین ,دلیجان ,زرندیه ,ساوه ,شازند ,کمیجان ,محلات">
-                                                                    مرکزی</option>
-                                                                <option class="form-group"
-                                                                    value="  ,ابوموسی ,بستک ,بندر عباس ,بندر لنگه ,جاسک ,حاجی‌آباد ,شهرستان خمیر ,رودان  ,قشم ,گاوبندی ,میناب">
-                                                                    هرمزگان</option>
-                                                                <option class="form-group"
-                                                                    value="  ,اسدآباد ,بهار ,تویسرکان ,رزن ,کبودرآهنگ ,ملایر ,نهاوند ,همدان">
-                                                                    همدان</option>
-                                                                <option class="form-group"
-                                                                    value="  ,ابرکوه ,اردکان ,بافق ,تفت ,خاتم ,صدوق ,طبس ,مهریز ,مِیبُد ,یزد">
-                                                                    یزد</option>
-                                                            </select>
+                                                            <input type="text" id="currentAddress" class="form-control"
+                                                                disabled>
                                                         </div>
 
 
@@ -314,92 +231,50 @@
 
                                                     </div>
                                                 </div>
-                                                <div class="col-sm-6">
-                                                    <div class="form-group">
-                                                        <label class='float-right mt-4 mb-2 gg' for="city">شهرستان
-                                                            :</label>
-                                                        <select id="Shahrestan" name='city' class="form-control col-3">
-                                                        </select>
+
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="form-group">
+                                                            <div class="col-12 w-100 text-right">
+
+                                                                <label class=' mt-4 mb-2 gg' for="data-picker">انتخاب
+                                                                    تاریخ:</label>
+                                                            </div>
+                                                            <div class="input-group date-input">
+                                                                <span class="input-group-text" id="dtp1"><i
+                                                                        class="fas fa-calendar-alt"></i></span>
+                                                                <input id="date" type="text"
+                                                                    class="form-control text-center"
+                                                                    placeholder="انتخاب تاریخ" data-name="dtp1-text">
+                                                            </div>
+                                                        </div>
                                                     </div>
+
+                                                </div>
+
+
+
+
+                                            </div>
+                                            <div class="col-md-6 col-12 ">
+                                                <div id="map" class="map-responsive">
+
                                                 </div>
                                             </div>
-                                            <div class="row">
-                                                <div class="col-sm-6">
-                                                    <div class="form-group">
-                                                        <label class='float-right mt-4 mb-2 gg' for="line1">خیابان:</label>
-                                                        <input type="email" class="form-control" id="Street">
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    <div class="form-group">
-                                                        <label class='float-right mt-4 mb-2 gg' for="line1">بلوار:</label>
-                                                        <input type="email" class="form-control" id="Blvd">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <div class="form-group">
-                                                    <label class='float-right mt-4 mb-2 gg' for="line1">کدپستی:</label>
-                                                    <input type="email" class="form-control" id="PostalCode">
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-3">
-                                                <div class="form-group">
-                                                    <label class='float-right mt-4 mb-2 gg' for="line1">واحد:</label>
-                                                    <input type="email" class="form-control" id="unit">
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-3">
-                                                <div class="form-group">
-                                                    <label class='float-right mt-4 mb-2 gg' for="line1">پلاک:</label>
-                                                    <input type="email" class="form-control" id="Plaque">
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-12">
-                                                <div class="form-group">
-                                                    <label class='float-right mt-4 mb-2 gg' for="FullAddress">آدرس کامل:
-                                                    </label>
-                                                    <textarea class="form-control" id="FullAddress" rows="3"></textarea>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <div class="form-group">
-                                                    <div class="col-12 w-100 text-right">
-
-                                                        <label class=' mt-4 mb-2 gg' for="data-picker">انتخاب تاریخ:</label>
-                                                    </div>
-                                                    <div class="input-group date-input">
-                                                        <span class="input-group-text" id="dtp1"><i
-                                                                class="fas fa-calendar-alt"></i></span>
-                                                        <input id="date" type="text" class="form-control text-center"
-                                                            placeholder="انتخاب تاریخ" data-name="dtp1-text">
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-
-
-
-
-                                    </div>
-                                    <div class="col-md-6 col-12 ">
-                                        <div id="map" class="map-responsive">
-
                                         </div>
                                     </div>
+
+
+
                                 </div>
+
                             </div>
 
 
-
-                            <input type="button" name="next" id="giveInformation" class="next action-button mt-5 " value="Next" /> 
-                            <input type="button" name="previous" class="previous action-button-previous mx-2  mt-5 " value="Previous" />
+                                    <input type="button" name="next" id="giveInformation" class="next action-button mt-5 "
+                                        value="Next" />
+                                    <input type="button" name="previous" class="previous action-button-previous mx-2  mt-5 "
+                                        value="Previous" />
                         </fieldset>
                         <fieldset>
 
@@ -449,13 +324,12 @@
                                 </div>
 
 
-                                <input type="button" name="previous" class="info-btn mx-auto w-50 "
-                                value="پرداخت" />
+                                <input type="button" name="previous" class="info-btn mx-auto w-50 " value="پرداخت" />
                             </div>
 
 
 
-                      
+
 
 
 
@@ -479,6 +353,7 @@
     <script>
         $(document).ready(function() {
             var current_fs, next_fs, previous_fs; //fieldsets
+            var address;
             var opacity;
             var obj = {};
             var calculate = [];
@@ -521,6 +396,20 @@
             let attributes = @json($getChildren);
             let parents = @json($getParents);
 
+
+            $("#currentAddress").val($("#userAddresses").children("option:selected").val());
+                    address = $("#currentAddress").val();
+                    console.log(obj);
+
+                    $("#userAddresses").change(function() {
+
+                        $("#currentAddress").val($("#userAddresses").children(
+                            "option:selected").val());
+                        address = $("#currentAddress").val();
+                        console.log(obj);
+
+                    });
+
             parents.forEach(element => {
 
                 $("#radio" + element.id).change(function() {
@@ -560,7 +449,7 @@
                                 text: element.name + "(" + element.price + ")",
                                 class: "form-check-label float-right-checkbox",
                                 id: `Taglabel${element.id}`
-                            }).addClass('order-margin ml-5 order-margin2' );
+                            }).addClass('order-margin ml-5 order-margin2');
                             $("#pushTags" + getChildrenId).append(PushTagsInput,
                                 PushTagsLabel, "<br/>");
                         });
@@ -573,15 +462,16 @@
                                 value: element.id,
                                 id: `attributeLabel${element.id}`,
                                 text: element.name + "(" + element.price + ")"
-                            }).addClass('mt-2' );
+                            }).addClass('mt-2');
                             let createCheckBox = $("<input/>", {
                                 type: "checkbox",
                                 id: `AttributeCheckbox${element.id}`
-                            }).addClass('form-check-label float-right-checkbox order-margin ' );
+                            }).addClass(
+                                'form-check-label float-right-checkbox order-margin ');
                             let hourlabel = $("<label/>", {
                                 text: "مدت زمان درخواستی",
                                 id: `HourQtyLabel${element.id}`
-                            }).addClass('order-marginTop ' );
+                            }).addClass('order-marginTop ');
                             let hourInput = $("<input/>", {
                                 type: "number",
                                 id: `HourQty${element.id}`,
@@ -589,15 +479,15 @@
                                 min: "1",
                                 max: "10",
                                 class: "text-center",
-                            }).addClass('margin-hourInput' );
+                            }).addClass('margin-hourInput');
                             let hourSpan = $("<span/>", {
                                 text: "ساعت"
-                            }).addClass(' order-margin' );
+                            }).addClass(' order-margin');
 
                             let optionAttrLabel = $("<label/>", {
-                                text: "تعداد دوربین" ,
+                                text: "تعداد دوربین",
                                 id: `ObjQuantityLabel${element.id}`
-                            }).addClass(' mt-2 order-margin ' );
+                            }).addClass(' mt-2 order-margin ');
 
                             let optionAttrInput = $("<input/>", {
                                 type: "number",
@@ -605,7 +495,7 @@
                                 id: `ObjQuantity${element.id}`,
                                 min: "1",
                                 max: "10"
-                            }).addClass(' float-left ' );
+                            }).addClass(' float-left ');
 
                             $("#push" + getChildrenId).append(createCheckBox,
                                 createAttr,
@@ -713,7 +603,8 @@
                             hour: hour,
                             quantity: quantity,
                             tags: tags,
-                            tagPrice: tagPrice
+                            tagPrice: tagPrice,
+                            userAddress: address
                         }
                     }
                 });
@@ -722,7 +613,7 @@
             parents.forEach(element => {
 
                 $("#add" + element.id).click(function(event) {
-                  
+
                     calculate = [];
                     attribuePriceResult = 0;
                     tagCalculate = [];
@@ -738,6 +629,7 @@
                         `<li id=ProductPrice${rnd}> <span class='text-secondary'> جمع کل <hr>` +
                         `<li id=ProductName${rnd}> <span class='text-secondary'> نوع خدمت <hr>`
                     );
+
 
                     for (let i = 0; i < obj.attributes.length; i++) {
                         event.preventDefault();
@@ -768,14 +660,15 @@
                         obj.AttributespriceDetails = calculate;
                         obj.attributesPriceResult = attribuePriceResult;
 
+
                         let productDetails = $("<div/>", {
 
                             text: " ویژگی " + obj.attributes[i] + " ساعت: " + obj.hour[i] +
                                 " تعداد: " + obj.quantity[i]
 
-                              
-                        }).addClass('text-right ' );
-                      
+
+                        }).addClass('text-right ');
+
                         $("#ProductDetails" + rnd).append(productDetails);
                     }
                     alert("با موفقیت به سبد خرید اضافه شد")
@@ -817,11 +710,18 @@
 
                     });
 
+
+                    let productAddress = $("<div/>", {
+                            text: obj.userAddress
+                        });
+
+                    $("#ProductLocation" + rnd).append(productAddress);
+
                     $("#ProductName" + rnd).append(productName);
 
                     event.preventDefault();
 
-                   
+
                 });
 
             });
@@ -834,7 +734,6 @@
             //     test2.textContent = Shahrestan.value
             //     test.textContent = date.value
             // });
-
 
 
 
@@ -888,18 +787,18 @@
 
 
         // ****************(state and city)***********************
-        function Func(Shahrestanha) {
-            var _Shahrestan = document.getElementById("Shahrestan");
-            _Shahrestan.options.length = 0;
-            if (Shahrestanha != "") {
-                var arr = Shahrestanha.split(",");
-                for (i = 0; i < arr.length; i++) {
-                    if (arr[i] != "") {
-                        _Shahrestan.options[_Shahrestan.options.length] = new Option(arr[i], arr[i]);
-                    }
-                }
-            }
-        }
+        // function Func(Shahrestanha) {
+        //     var _Shahrestan = document.getElementById("Shahrestan");
+        //     _Shahrestan.options.length = 0;
+        //     if (Shahrestanha != "") {
+        //         var arr = Shahrestanha.split(",");
+        //         for (i = 0; i < arr.length; i++) {
+        //             if (arr[i] != "") {
+        //                 _Shahrestan.options[_Shahrestan.options.length] = new Option(arr[i], arr[i]);
+        //             }
+        //         }
+        //     }
+        // }
 
         // ****************(Select beetween option  part 1   )***********************
 
@@ -958,7 +857,7 @@
             // console.log(Street.value, Blvd.value, PostalCode.value, unit.value,
             //     Plaque.value, FullAddress.value,date.value);
 
-            console.log(Shahrestan.value);
+            // console.log(Shahrestan.value);
         });
         // console.log(Street.value, Blvd.value, PostalCode.value, unit.value,
         //  gitPlaque.value, FullAddress.value);
@@ -971,19 +870,19 @@
 
 
 
-        axios({
-            method: 'post',
-            url: '/user/12345',
-            information: {
-                Street: Street.value,
-                Blvd: Blvd.value,
-                PostalCode: PostalCode.value,
-                unit: unit.value,
-                Plaque: Plaque.value,
-                FullAddress: FullAddress.value,
-                data: data.value,
-            },
-        });
+        // axios({
+        //     method: 'post',
+        //     url: '/user/12345',
+        //     information: {
+        //         Street: Street.value,
+        //         Blvd: Blvd.value,
+        //         PostalCode: PostalCode.value,
+        //         unit: unit.value,
+        //         Plaque: Plaque.value,
+        //         FullAddress: FullAddress.value,
+        //         data: data.value,
+        //     },
+        // });
 
 
 

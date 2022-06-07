@@ -49,7 +49,8 @@ class HomeController extends Controller
     }
     public function order(){
 
-        return view('home.order');
+        $user = User::where('id' , auth()->id())->first();
+        return view('home.order' , compact('user'));
 
     }
     public function profile(){
