@@ -85,14 +85,3 @@ for (var i = 0; i < links.length; i++) {
     }
   });
 })(jQuery);
-
-
-// Header Address Expand ---------------------
-(function ($) {
-  "use strict";
-  $(document).ready(function () {
-$("#addresses-expand").click(function(){
-  $("#addresses-box").fadeToggle();
-});
-});
-}(jQuery));

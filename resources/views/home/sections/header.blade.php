@@ -115,21 +115,8 @@
             <div class="navbar-btns">
                 {{-- <a href="{{ route('logout') }}" id="addresses-expand" class="primary-btn"><i --}}
 
-                <button id="addresses-expand" class="primary-btn"><i class='bx bx-current-location me-1'></i>انتخاب
-                    آدرس</button>
-                <div id="addresses-box">
-                    <ul>
-                        <li>
-                            <input type="radio" name="address" hidden>
-                            <span>کرج، میدان سپاه، خیابان گلستان، کوچه لادن، پلاک ۷۴</span>
-                        </li>
-                        <hr>
-                        <li>
-                          <input type="radio" name="address" hidden>
-                          <span>کرج، میدان سپاه، خیابان گلستان، کوچه لادن، پلاک ۷۴</span>
-                      </li>
-                    </ul>
-                </div>
+                <button id="addresses-expand" class="primary-btn"><i class='bx bx-cart-alt'></i>پیگیری سفارشات
+                </button>
                 |
 
 
