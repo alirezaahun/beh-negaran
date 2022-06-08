@@ -677,7 +677,7 @@
                             tags: tags,
                             tagPrice: tagPrice,
                             userAddress: address,
-                            date: null
+                            date: date
                         }
 
                         $("#userAddresses").change(function() {
