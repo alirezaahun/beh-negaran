@@ -393,6 +393,8 @@
 
         });
 
+        dtp1Instance.setDatePersian(1401, 03, 18);
+
         $(document).ready(function() {
             var current_fs, next_fs, previous_fs; //fieldsets
             var address;
@@ -408,6 +410,14 @@
             var attribuePriceResult = 0;
             var objArray = [];
             var current = 1;
+            var getChildreName;
+            var data = [];
+            var price = [];
+            var tagPrice = [];
+            var hour = [];
+            var quantity = [];
+            var tags = [];
+            var date = 0;
             var steps = $("fieldset").length;
             setProgressBar(current);
             $(".next").click(function() {
@@ -463,7 +473,7 @@
 
                 obj = {};
                 var getChildrenId = $(this).children(":selected").attr("id");
-                var getChildreName = $(this).children(":selected").text();
+                getChildreName = $(this).children(":selected").text();
                 trigger = [];
                 tagTrigger = [];
                 $("#push" + getChildrenId).empty();
@@ -547,12 +557,12 @@
                                 "<br/>");
                         });
 
-                        var data = [];
-                        var price = [];
-                        var tagPrice = [];
-                        var hour = [];
-                        var quantity = [];
-                        var tags = [];
+                        data = [];
+                        price = [];
+                        tagPrice = [];
+                        hour = [];
+                        quantity = [];
+                        tags = [];
                         trigger.forEach(element => {
 
                             $('#AttributeCheckbox' + element.id).change(function() {
@@ -666,24 +676,9 @@
                             quantity: quantity,
                             tags: tags,
                             tagPrice: tagPrice,
-                            userAddress: address
+                            userAddress: address,
+                            date: null
                         }
-
-                        $("#date").change(function() {
-                            let i = moment(dtp1Instance.getDate(), 'YYYY/MM/DD').locale(
-                                'fa').format('YYYY/MM/DD');
-                            Object.assign(obj, {
-                                product: getChildreName,
-                                attributes: data,
-                                AttributePrice: price,
-                                hour: hour,
-                                quantity: quantity,
-                                tags: tags,
-                                tagPrice: tagPrice,
-                                userAddress: address,
-                                date: i
-                            });
-                        });
 
                         $("#userAddresses").change(function() {
 
@@ -698,7 +693,8 @@
                                 quantity: quantity,
                                 tags: tags,
                                 tagPrice: tagPrice,
-                                userAddress: address
+                                userAddress: address,
+                                date: date
                             });
                             console.log(obj);
 
@@ -707,12 +703,28 @@
                 });
             });
 
+            $("#date").change(function() {
+                date = moment(dtp1Instance.getDate(), 'YYYY/MM/DD').locale(
+                    'fa').format('YYYY/MM/DD');
+                Object.assign(obj, {
+                    product: getChildreName,
+                    attributes: data,
+                    AttributePrice: price,
+                    hour: hour,
+                    quantity: quantity,
+                    tags: tags,
+                    tagPrice: tagPrice,
+                    userAddress: address,
+                    date: date
+                });
+            });
+
 
             parents.forEach(element => {
 
                 $("#add" + element.id).click(function(event) {
                     event.preventDefault();
-                    if (obj.date == null) {
+                    if (obj.date == null || obj.date == 0) {
 
                         alert("لطفا تاریخ را انتخاب کنید");
 
@@ -732,7 +744,8 @@
                             `<li id=ProductDetails${rnd}> <span class='text-secondary'>ویژگی ها <hr>` +
                             `<li id=ProductPrice${rnd}> <span class='text-secondary'> جمع کل <hr>` +
                             `<li id=ProductName${rnd}> <span class='text-secondary'> نوع خدمت <hr>` +
-                            `<li id=deleteProduct${rnd}> <span class='text-secondary'>  <hr> <button id=deleteProduct${rnd} class='text-danger'> حذف خدمت </button>`
+                            `<li id=ProductDate${rnd}> <span class='text-secondary'>تاریخ<hr>` +
+                            `<li id=deleteProduct${rnd}> <span class='text-secondary'> عملیات <hr> <button id=deleteProduct${rnd} class='text-danger'> حذف خدمت </button>`
                         );
 
 
@@ -817,6 +830,11 @@
 
                         });
 
+                        let productDate = $("<h6/>", {
+                            text: obj.date
+                        });
+
+                        $("#ProductDate" + rnd).append(productDate);
 
                         let productAddress = $("<div/>", {
                             text: obj.userAddress
@@ -840,6 +858,8 @@
                             });
 
                         });
+
+
 
                         totalPrice += obj.finalPriceThisProductIs;
                         console.log(totalPrice);
