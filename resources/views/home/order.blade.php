@@ -24,7 +24,7 @@
                         </ul>
                         <!-- fieldsets -->
                         <?php
-
+                        
                         $getParents = App\Models\Category::where('parent_id', 0)
                             ->with('children', 'attributes')
                             ->get();
@@ -35,6 +35,33 @@
                         <fieldset>
 
                             <div class="col-12">
+                                <button type="button" id="modalBtn" class="secondary-btn">افزودن آدرس</button>
+
+
+                                <!-- The Modal -->
+                                <div id="theModal" class="modal">
+
+                                    <!-- Modal content -->
+                                    <div class="modal-content">
+                                        <span class="close">&times;</span>
+                                        <div class="modal-body pb-3">
+                                            <p class="text-secondary">لطفا اطلاعات شناسایی خود را وارد کنید. آدرس
+                                                شما
+                                                باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
+                                            <form id="addressForm1">
+                                                <div class="form-group">
+                                                    <label for="userAddress">آدرس</label>
+                                                    <input type="text" name="addresses" class="form-control"
+                                                         placeholder="تهران، خیابان ۹ شرقی...">
+                                                </div>
+    
+                                                <div name="map" id="Addmap" style="height: 200px"></div>
+                                                <button class="secondary-btn w-100">ذخیره</button>
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                </div>
                                 <div class="form-group" dir="ltr">
                                     <label class='float-right mt-4 mb-2 gg' for="state">آدرس های ثبت
                                         شده</label>
@@ -342,7 +369,7 @@
                                                 </li>
 
                                             </ul>
-                                            <button id="recipt-print" class="secondary-btn">چاپ فاکتور</button>
+                                            <button class="secondary-btn">چاپ فاکتور</button>
                                         </div>
                                     </div>
 
@@ -932,6 +959,31 @@
         });
 
 
+        // Address Modal --------------------------
+        var modal = document.getElementById("theModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("modalBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on the button, open the modal
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
 
         // ****************(state and city)***********************
         // function Func(Shahrestanha) {
