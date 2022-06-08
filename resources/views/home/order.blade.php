@@ -54,6 +54,14 @@
                                             شما</label>
                                         <input type="text" id="currentAddress" class="form-control" disabled>
                                     </div>
+
+                                    <div class="input-group date-input">
+                                        <label class='float-right mt-4 mb-2 gg' for="state">:انتخاب تاریخ
+                                        </label>
+                                        <span class="input-group-text" id="dtp1"><i class="fas fa-calendar-alt"></i></span>
+                                        <input id="date" type="text" class="form-control text-center"
+                                            placeholder="انتخاب تاریخ" data-name="dtp1-text" disabled>
+                                    </div>
                                 </div>
                             </div>
                             <h2 id="heading">انتخاب خدمات</h2>
@@ -375,6 +383,16 @@
 
 @section('js')
     <script>
+        const dtp1Instance = new mds.MdsPersianDateTimePicker(document.getElementById('dtp1'), {
+            targetTextSelector: '[data-name="dtp1-text"]',
+            targetDateSelector: '[data-name="dtp1-date"]',
+            persianNumber: true,
+            isGregorian: false,
+            disableBeforeToday: true,
+
+
+        });
+
         $(document).ready(function() {
             var current_fs, next_fs, previous_fs; //fieldsets
             var address;
@@ -651,6 +669,22 @@
                             userAddress: address
                         }
 
+                        $("#date").change(function() {
+                            let i = moment(dtp1Instance.getDate(), 'YYYY/MM/DD').locale(
+                                'fa').format('YYYY/MM/DD');
+                            Object.assign(obj, {
+                                product: getChildreName,
+                                attributes: data,
+                                AttributePrice: price,
+                                hour: hour,
+                                quantity: quantity,
+                                tags: tags,
+                                tagPrice: tagPrice,
+                                userAddress: address,
+                                date: i
+                            });
+                        });
+
                         $("#userAddresses").change(function() {
 
                             $("#currentAddress").val($("#userAddresses").children(
@@ -673,139 +707,148 @@
                 });
             });
 
+
             parents.forEach(element => {
 
                 $("#add" + element.id).click(function(event) {
                     event.preventDefault();
-                    calculate = [];
-                    attribuePriceResult = 0;
-                    tagCalculate = [];
-                    tagPriceResult = 0;
+                    if (obj.date == null) {
 
-                    let rnd = Math.floor((Math.random() * 1000000) + 1);
-                    console.log(rnd);
+                        alert("لطفا تاریخ را انتخاب کنید");
 
-                    $("#productBox").append(`<ul id=${rnd}>` +
-                        `<li id=ProductLocation${rnd}> <span class='text-secondary'> آدرس <hr>` +
-                        `<li id=ProductSpecAttr${rnd}><span class='text-secondary'>خدمات ویژه  <hr> ` +
-                        `<li id=ProductDetails${rnd}> <span class='text-secondary'>ویژگی ها <hr>` +
-                        `<li id=ProductPrice${rnd}> <span class='text-secondary'> جمع کل <hr>` +
-                        `<li id=ProductName${rnd}> <span class='text-secondary'> نوع خدمت <hr>` +
-                        `<li id=deleteProduct${rnd}> <span class='text-secondary'>  <hr> <button id=deleteProduct${rnd} class='text-danger'> حذف خدمت </button>`
-                    );
+                    } else {
+
+                        calculate = [];
+                        attribuePriceResult = 0;
+                        tagCalculate = [];
+                        tagPriceResult = 0;
+
+                        let rnd = Math.floor((Math.random() * 1000000) + 1);
+                        console.log(rnd);
+
+                        $("#productBox").append(`<ul id=${rnd}>` +
+                            `<li id=ProductLocation${rnd}> <span class='text-secondary'> آدرس <hr>` +
+                            `<li id=ProductSpecAttr${rnd}><span class='text-secondary'>خدمات ویژه  <hr> ` +
+                            `<li id=ProductDetails${rnd}> <span class='text-secondary'>ویژگی ها <hr>` +
+                            `<li id=ProductPrice${rnd}> <span class='text-secondary'> جمع کل <hr>` +
+                            `<li id=ProductName${rnd}> <span class='text-secondary'> نوع خدمت <hr>` +
+                            `<li id=deleteProduct${rnd}> <span class='text-secondary'>  <hr> <button id=deleteProduct${rnd} class='text-danger'> حذف خدمت </button>`
+                        );
 
 
-                    for (let i = 0; i < obj.attributes.length; i++) {
-                        event.preventDefault();
-                        console.log(obj.attributes[i] + obj.AttributePrice[i] + "ساعت:" + obj
-                            .hour[
-                                i] + "تعداد" + obj.quantity[i]);
-                        var counter = 0;
+                        for (let i = 0; i < obj.attributes.length; i++) {
+                            event.preventDefault();
+                            console.log(obj.attributes[i] + obj.AttributePrice[i] + "ساعت:" + obj
+                                .hour[
+                                    i] + "تعداد" + obj.quantity[i]);
+                            var counter = 0;
 
-                        for (let x = 0; x < obj.quantity[i]; x++) {
+                            for (let x = 0; x < obj.quantity[i]; x++) {
 
-                            if (counter == 0) {
+                                if (counter == 0) {
 
-                                calculate.push(obj.AttributePrice[i]);
+                                    calculate.push(obj.AttributePrice[i]);
 
-                            } else {
-                                let discount = (obj.AttributePrice[i] * 15) / 100;
-                                calculate.push(obj.AttributePrice[i] - discount);
+                                } else {
+                                    let discount = (obj.AttributePrice[i] * 15) / 100;
+                                    calculate.push(obj.AttributePrice[i] - discount);
+                                }
+
+                                attribuePriceResult = calculate.reduce((total, number) => total +
+                                    number, 0);
+                                counter++;
+                                console.log(calculate, attribuePriceResult);
+
+
                             }
 
-                            attribuePriceResult = calculate.reduce((total, number) => total +
-                                number, 0);
-                            counter++;
-                            console.log(calculate, attribuePriceResult);
+                            obj.AttributespriceDetails = calculate;
+                            obj.attributesPriceResult = attribuePriceResult;
 
+
+                            let productDetails = $("<div/>", {
+
+                                text: " ویژگی " + obj.attributes[i] + " ساعت: " + obj.hour[
+                                        i] +
+                                    " تعداد: " + obj.quantity[i]
+
+
+                            }).addClass('text-right ');
+
+                            $("#ProductDetails" + rnd).append(productDetails);
+                        }
+                        alert("با موفقیت به سبد خرید اضافه شد")
+                        for (let i = 0; i < obj.tags.length; i++) {
+
+                            tagCalculate.push(obj.tagPrice[i]);
+                            console.log(tagCalculate);
+                            tagPriceResult = tagCalculate.reduce((total, number) => total + number,
+                                0);
+                            obj.tagPriceDetails = tagCalculate;
+                            obj.tagPriceResult = tagPriceResult;
+
+                            console.log(tagPriceResult);
+                            let productSpecAttr = $("<h6/>", {
+
+                                text: obj.tags[i]
+
+                            });
+
+                            $("#ProductSpecAttr" + rnd).append(productSpecAttr);
 
                         }
 
-                        obj.AttributespriceDetails = calculate;
-                        obj.attributesPriceResult = attribuePriceResult;
+                        obj.finalPriceThisProductIs = tagPriceResult + attribuePriceResult;
 
+                        console.log(obj);
 
-                        let productDetails = $("<div/>", {
+                        let productPrice = $("<h6/>", {
 
-                            text: " ویژگی " + obj.attributes[i] + " ساعت: " + obj.hour[i] +
-                                " تعداد: " + obj.quantity[i]
-
-
-                        }).addClass('text-right ');
-
-                        $("#ProductDetails" + rnd).append(productDetails);
-                    }
-                    alert("با موفقیت به سبد خرید اضافه شد")
-                    for (let i = 0; i < obj.tags.length; i++) {
-
-                        tagCalculate.push(obj.tagPrice[i]);
-                        console.log(tagCalculate);
-                        tagPriceResult = tagCalculate.reduce((total, number) => total + number,
-                            0);
-                        obj.tagPriceDetails = tagCalculate;
-                        obj.tagPriceResult = tagPriceResult;
-
-                        console.log(tagPriceResult);
-                        let productSpecAttr = $("<h6/>", {
-
-                            text: obj.tags[i]
+                            text: obj.finalPriceThisProductIs,
+                            id: "price" + rnd
 
                         });
 
-                        $("#ProductSpecAttr" + rnd).append(productSpecAttr);
+                        $("#ProductPrice" + rnd).append(productPrice);
 
-                    }
+                        let productName = $("<h6/>", {
 
-                    obj.finalPriceThisProductIs = tagPriceResult + attribuePriceResult;
+                            text: obj.product
 
-                    console.log(obj);
-
-                    let productPrice = $("<h6/>", {
-
-                        text: obj.finalPriceThisProductIs,
-                        id: "price" + rnd
-
-                    });
-
-                    $("#ProductPrice" + rnd).append(productPrice);
-
-                    let productName = $("<h6/>", {
-
-                        text: obj.product
-
-                    });
+                        });
 
 
-                    let productAddress = $("<div/>", {
-                        text: obj.userAddress
-                    });
+                        let productAddress = $("<div/>", {
+                            text: obj.userAddress
+                        });
 
-                    $("#ProductLocation" + rnd).append(productAddress);
+                        $("#ProductLocation" + rnd).append(productAddress);
 
-                    $("#ProductName" + rnd).append(productName);
+                        $("#ProductName" + rnd).append(productName);
 
-                    totalProducts.push(rnd);
-                    console.log(totalProducts);
+                        totalProducts.push(rnd);
+                        console.log(totalProducts);
 
-                    totalProducts.forEach(element => {
-                        event.preventDefault();
-                        $("#deleteProduct" + element).click(function(event) {
-                            totalPrice = totalPrice - $("#price" + element).text();
-                            $(this).parent().remove();
-                            $("#finalPricecontent").val(totalPrice);
+                        totalProducts.forEach(element => {
                             event.preventDefault();
+                            $("#deleteProduct" + element).click(function(event) {
+                                totalPrice = totalPrice - $("#price" + element)
+                                    .text();
+                                $(this).parent().remove();
+                                $("#finalPricecontent").val(totalPrice);
+                                event.preventDefault();
+                            });
+
                         });
 
-                    });
+                        totalPrice += obj.finalPriceThisProductIs;
+                        console.log(totalPrice);
 
-                    totalPrice += obj.finalPriceThisProductIs;
-                    console.log(totalPrice);
+                        $("#finalPricecontent").val(totalPrice);
 
-                    $("#finalPricecontent").val(totalPrice);
+                        event.preventDefault();
 
-                    event.preventDefault();
-
-
+                    }
                 });
 
             });
@@ -888,16 +931,6 @@
 
 
 
-
-
-        const dtp1Instance = new mds.MdsPersianDateTimePicker(document.getElementById('dtp1'), {
-            targetTextSelector: '[data-name="dtp1-text"]',
-            targetDateSelector: '[data-name="dtp1-date"]',
-            persianNumber: true,
-            enableTimePicker: true,
-
-
-        });
 
 
         $('add').click(function(event) {
