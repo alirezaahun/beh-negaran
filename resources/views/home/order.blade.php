@@ -41,11 +41,9 @@
                                     <div class="form-contorol">
 
 
-                                        <select id="userAddresses" runat="server" class="form-control"
-                                            name="state">
+                                        <select id="userAddresses" runat="server" class="form-control" name="state">
                                             @foreach ($user->addresses as $address)
-                                                <option class="form-group"
-                                                    value="{{ $address->address }}">
+                                                <option class="form-group" value="{{ $address->address }}">
                                                     {{ $address->address }}</option>
                                             @endforeach
                                         </select>
@@ -54,8 +52,7 @@
                                     <div class="form-contorol">
                                         <label class='float-right mt-4 mb-2 gg' for="state">:آدرس انتخابی
                                             شما</label>
-                                        <input type="text" id="currentAddress" class="form-control"
-                                            disabled>
+                                        <input type="text" id="currentAddress" class="form-control" disabled>
                                     </div>
                                 </div>
                             </div>
@@ -346,6 +343,10 @@
 
                                 </div>
 
+                                <div>
+                                    <span>جمع کل پرداختی شما</span> <input id="finalPricecontent" value="0"
+                                        class="text-danger" disabled>
+                                </div>
 
                                 <input type="button" name="previous" class="info-btn mx-auto w-50 " value="پرداخت" />
                             </div>
@@ -379,6 +380,8 @@
             var address;
             var opacity;
             var obj = {};
+            var totalProducts = [];
+            var totalPrice = 0;
             var calculate = [];
             var tagCalculate = [];
             var trigger = [];
@@ -419,20 +422,6 @@
             let attributes = @json($getChildren);
             let parents = @json($getParents);
 
-
-            $("#currentAddress").val($("#userAddresses").children("option:selected").val());
-                    address = $("#currentAddress").val();
-                    console.log(obj);
-
-                    $("#userAddresses").change(function() {
-
-                        $("#currentAddress").val($("#userAddresses").children(
-                            "option:selected").val());
-                        address = $("#currentAddress").val();
-                        console.log(obj);
-
-                    });
-
             parents.forEach(element => {
 
                 $("#radio" + element.id).change(function() {
@@ -445,6 +434,14 @@
             });
 
             $("select").change(function() {
+
+                $("#currentAddress").val($("#userAddresses").children("option:selected")
+                    .val());
+                address = $("#currentAddress").val();
+                Object.assign(obj, {
+                    userAddress: address
+                })
+                console.log(obj);
 
                 obj = {};
                 var getChildrenId = $(this).children(":selected").attr("id");
@@ -499,6 +496,7 @@
                                 type: "number",
                                 id: `HourQty${element.id}`,
                                 name: "tentacles",
+                                value: 1,
                                 min: "1",
                                 max: "10",
                                 class: "text-center",
@@ -516,6 +514,7 @@
                                 type: "number",
                                 class: "text-center h-25 border-custom",
                                 id: `ObjQuantity${element.id}`,
+                                value: 1,
                                 min: "1",
                                 max: "10"
                             }).addClass(' float-left ');
@@ -552,6 +551,18 @@
                                     $("#HourQty" + element.id).change(
                                         function() {
 
+                                            if ($("#HourQty" + element.id)
+                                                .val() <= 0) {
+                                                $("#HourQty" + element.id).val(
+                                                    1);
+                                            }
+
+                                            if ($("#HourQty" + element.id)
+                                                .val() > 5) {
+                                                $("#HourQty" + element.id).val(
+                                                    5);
+                                            }
+
                                             for (let i = 0; i < data
                                                 .length; i++) {
 
@@ -570,6 +581,18 @@
 
                                     $("#ObjQuantity" + element.id).change(
                                         function() {
+
+                                            if ($("#ObjQuantity" + element.id)
+                                                .val() <= 0) {
+                                                $("#ObjQuantity" + element.id)
+                                                    .val(1);
+                                            }
+
+                                            if ($("#ObjQuantity" + element.id)
+                                                .val() > 5) {
+                                                $("#ObjQuantity" + element.id)
+                                                    .val(5);
+                                            }
 
                                             for (let i = 0; i < data
                                                 .length; i++) {
@@ -617,8 +640,6 @@
                                 console.log(tags, tagPrice);
                             });
                         });
-
-
                         obj = {
                             product: getChildreName,
                             attributes: data,
@@ -629,6 +650,25 @@
                             tagPrice: tagPrice,
                             userAddress: address
                         }
+
+                        $("#userAddresses").change(function() {
+
+                            $("#currentAddress").val($("#userAddresses").children(
+                                "option:selected").val());
+                            address = $("#currentAddress").val();
+                            Object.assign(obj, {
+                                product: getChildreName,
+                                attributes: data,
+                                AttributePrice: price,
+                                hour: hour,
+                                quantity: quantity,
+                                tags: tags,
+                                tagPrice: tagPrice,
+                                userAddress: address
+                            });
+                            console.log(obj);
+
+                        });
                     }
                 });
             });
@@ -636,7 +676,7 @@
             parents.forEach(element => {
 
                 $("#add" + element.id).click(function(event) {
-
+                    event.preventDefault();
                     calculate = [];
                     attribuePriceResult = 0;
                     tagCalculate = [];
@@ -650,7 +690,8 @@
                         `<li id=ProductSpecAttr${rnd}><span class='text-secondary'>خدمات ویژه  <hr> ` +
                         `<li id=ProductDetails${rnd}> <span class='text-secondary'>ویژگی ها <hr>` +
                         `<li id=ProductPrice${rnd}> <span class='text-secondary'> جمع کل <hr>` +
-                        `<li id=ProductName${rnd}> <span class='text-secondary'> نوع خدمت <hr>`
+                        `<li id=ProductName${rnd}> <span class='text-secondary'> نوع خدمت <hr>` +
+                        `<li id=deleteProduct${rnd}> <span class='text-secondary'>  <hr> <button id=deleteProduct${rnd} class='text-danger'> حذف خدمت </button>`
                     );
 
 
@@ -721,7 +762,8 @@
 
                     let productPrice = $("<h6/>", {
 
-                        text: obj.finalPriceThisProductIs
+                        text: obj.finalPriceThisProductIs,
+                        id: "price" + rnd
 
                     });
 
@@ -735,12 +777,31 @@
 
 
                     let productAddress = $("<div/>", {
-                            text: obj.userAddress
-                        });
+                        text: obj.userAddress
+                    });
 
                     $("#ProductLocation" + rnd).append(productAddress);
 
                     $("#ProductName" + rnd).append(productName);
+
+                    totalProducts.push(rnd);
+                    console.log(totalProducts);
+
+                    totalProducts.forEach(element => {
+                        event.preventDefault();
+                        $("#deleteProduct" + element).click(function(event) {
+                            totalPrice = totalPrice - $("#price" + element).text();
+                            $(this).parent().remove();
+                            $("#finalPricecontent").val(totalPrice);
+                            event.preventDefault();
+                        });
+
+                    });
+
+                    totalPrice += obj.finalPriceThisProductIs;
+                    console.log(totalPrice);
+
+                    $("#finalPricecontent").val(totalPrice);
 
                     event.preventDefault();
 
