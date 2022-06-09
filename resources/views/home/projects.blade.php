@@ -46,8 +46,7 @@
                         <div class="ribbon"><span>ویدئو</span></div>
                         <div class="row p-4">
 
-                            <div class="h_iframe-aparat_embed_frame aparat-video col-md-8">
-                                <span style="display: block;padding-top: 57%"></span>
+                            <div id="video" class="h_iframe-aparat_embed_frame aparat-video col-md-8">
                                 <iframe src="https://www.aparat.com/video/video/embed/videohash/efu1W/vt/frame"
                                     allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
                                 </iframe>
@@ -81,8 +80,7 @@
                         <div class="ribbon"><span>ویدئو</span></div>
                         <div class="row p-4">
 
-                            <div class="h_iframe-aparat_embed_frame aparat-video col-md-8">
-                                <span style="display: block;padding-top: 57%"></span>
+                            <div id="video2" class="h_iframe-aparat_embed_frame aparat-video col-md-8">
                                 <iframe src="https://www.aparat.com/video/video/embed/videohash/UYwPA/vt/frame"
                                     allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
                                 </iframe>
@@ -93,7 +91,7 @@
                                     <div class="scrollbar">
                                         <div class="thumb"></div>
                                     </div>
-                                    <div class="slides">
+                                    <div id="slide2" class="slides">
                                         <div id="4" class="d-flex justify-content-around"><img class="img-fluid"
                                                 src="{{ asset('images/1-min.jpg') }}"></div>
                                         <div id="5" class="d-flex justify-content-around"><img class="img-fluid"
@@ -114,8 +112,7 @@
                         <div class="ribbon"><span>ویدئو</span></div>
                         <div class="row p-4">
 
-                            <div class="h_iframe-aparat_embed_frame aparat-video col-md-8">
-                                <span style="display: block;padding-top: 57%"></span>
+                            <div id="video11" class="h_iframe-aparat_embed_frame aparat-video col-md-8">
                                 <iframe src="https://www.aparat.com/video/video/embed/videohash/CQFLE/vt/frame"
                                     allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
                                 </iframe>
@@ -126,7 +123,7 @@
                                     <div class="scrollbar">
                                         <div class="thumb"></div>
                                     </div>
-                                    <div class="slides">
+                                    <div id="slide11" class="slides">
                                         <div id="7" class="d-flex justify-content-around"><img class="img-fluid"
                                                 src="{{ asset('images/_DSC0542-min.jpg') }}"></div>
                                         <div id="8" class="d-flex justify-content-around"><img class="img-fluid"
@@ -149,8 +146,7 @@
                         <div class="ribbon"><span>ویدئو</span></div>
                         <div class="row p-4">
 
-                            <div class="h_iframe-aparat_embed_frame aparat-video col-md-8">
-                                <span style="display: block;padding-top: 57%"></span>
+                            <div id="video3" class="h_iframe-aparat_embed_frame aparat-video col-md-8">
                                 <iframe src="https://www.aparat.com/video/video/embed/videohash/oQGfH/vt/frame"
                                     allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
                                 </iframe>
@@ -161,7 +157,7 @@
                                     <div class="scrollbar">
                                         <div class="thumb"></div>
                                     </div>
-                                    <div class="slides">
+                                    <div id="slide3" class="slides">
                                         <div id="11" class="d-flex justify-content-around"><img class="img-fluid"
                                                 src="{{ asset('images/_DSC3268-min.jpg') }}"></div>
                                         <div id="12" class="d-flex justify-content-around"><img class="img-fluid"
@@ -183,8 +179,7 @@
                         <div class="ribbon"><span>ویدئو</span></div>
                         <div class="row p-4">
 
-                            <div class="h_iframe-aparat_embed_frame aparat-video col-md-8">
-                                <span style="display: block;padding-top: 57%"></span>
+                            <div id="video4" class="h_iframe-aparat_embed_frame aparat-video col-md-8">
                                 <iframe src="https://www.aparat.com/video/video/embed/videohash/SBHAu/vt/frame"
                                     allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
                                 </iframe>
@@ -195,7 +190,7 @@
                                     <div class="scrollbar">
                                         <div class="thumb"></div>
                                     </div>
-                                    <div class="slides">
+                                    <div id="slide4" class="slides">
                                         <div id="14" class="d-flex justify-content-around"><img class="img-fluid"
                                                 src="{{ asset('images/_DSC2410-min.jpg') }}"></div>
                                         <div id="15" class="d-flex justify-content-around"><img class="img-fluid"
@@ -221,7 +216,7 @@
                         <div class="ribbon"><span>عکس</span></div>
                         <div class="row p-4">
 
-                            <div class="project-sample-img col-md-8">
+                            <div id="video5" class="project-sample-img col-md-8">
                                 <img class="img-fluid" src="{{ asset('images/23-min.jpg') }}"
                                     alt="project-picture">
                             </div>
@@ -231,7 +226,7 @@
                                     <div class="scrollbar">
                                         <div class="thumb"></div>
                                     </div>
-                                    <div class="slides">
+                                    <div id="slide5" class="slides">
                                         <div id="19" class="d-flex justify-content-around"><img class="img-fluid"
                                                 src="{{ asset('images/24-min.jpg') }}"></div>
                                         <div id="20" class="d-flex justify-content-around"><img class="img-fluid"
@@ -255,7 +250,7 @@
                         <div class="ribbon"><span>عکس</span></div>
                         <div class="row p-4">
 
-                            <div class="project-sample-img col-md-8">
+                            <div id="video6" class="project-sample-img col-md-8">
                                 <img class="img-fluid" src="{{ asset('images/_DSC3594-SD-min.jpg') }}"
                                     alt="project-picture2">
                             </div>
@@ -265,7 +260,7 @@
                                     <div class="scrollbar">
                                         <div class="thumb"></div>
                                     </div>
-                                    <div class="slides">
+                                    <div id="slide6" class="slides">
                                         <div id="23" class="d-flex justify-content-around"><img class="img-fluid"
                                                 src="{{ asset('images/13-min.jpg') }}"></div>
                                         <div id="24" class="d-flex justify-content-around"><img class="img-fluid"
@@ -290,7 +285,7 @@
                         <div class="ribbon"><span>عکس</span></div>
                         <div class="row p-4">
 
-                            <div class="project-sample-img col-md-8">
+                            <div id="video7" class="project-sample-img col-md-8">
                                 <img class="img-fluid" src="{{ asset('images/_DSC3342-min.jpg') }}"
                                     alt="project-picture2">
                             </div>
@@ -300,7 +295,7 @@
                                     <div class="scrollbar">
                                         <div class="thumb"></div>
                                     </div>
-                                    <div class="slides">
+                                    <div id="slide7" class="slides">
                                         <div id="28" class="d-flex justify-content-around"><img class="img-fluid"
                                                 src="{{ asset('images/_DSC3731-min.jpg') }}"></div>
                                         <div id="29" class="d-flex justify-content-around"><img class="img-fluid"
@@ -325,7 +320,7 @@
                         <div class="ribbon"><span>کمپین</span></div>
                         <div class="row p-4">
 
-                            <div class="h_iframe-aparat_embed_frame aparat-video col-md-8">
+                            <div id="video8" class="h_iframe-aparat_embed_frame aparat-video col-md-8">
                                 <span style="display: block;padding-top: 57%"></span>
                                 <iframe src="https://www.aparat.com/video/video/embed/videohash/eLa1K/vt/frame"
                                     allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
@@ -337,7 +332,7 @@
                                     <div class="scrollbar">
                                         <div class="thumb"></div>
                                     </div>
-                                    <div class="slides">
+                                    <div id="slide8" class="slides">
                                         <div id="33" class="d-flex justify-content-around"><img class="img-fluid"
                                                 src="{{ asset('images/_DSC4695-min.jpg') }}"></div>
                                         <div id="34" class="d-flex justify-content-around"><img class="img-fluid"
@@ -359,8 +354,7 @@
                         <div class="ribbon"><span>کمپین</span></div>
                         <div class="row p-4">
 
-                            <div class="h_iframe-aparat_embed_frame aparat-video col-md-8">
-                                <span style="display: block;padding-top: 57%"></span>
+                            <div id="video9" class="h_iframe-aparat_embed_frame aparat-video col-md-8">
                                 <iframe src="https://www.aparat.com/video/video/embed/videohash/p96a3/vt/frame"
                                     allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
                                 </iframe>
@@ -371,7 +365,7 @@
                                     <div class="scrollbar">
                                         <div class="thumb"></div>
                                     </div>
-                                    <div class="slides">
+                                    <div id="slide9" class="slides">
                                         <div id="36" class="d-flex justify-content-around"><img class="img-fluid"
                                                 src="{{ asset('images/PNH_8369-min.jpg') }}"></div>
                                         <div id="37" class="d-flex justify-content-around"><img class="img-fluid"
@@ -392,7 +386,7 @@
                         <div class="ribbon"><span>سایت</span></div>
                         <div class="row p-4">
 
-                            <div class="project-sample-img col-md-8">
+                            <div id="video10" class="project-sample-img col-md-8">
                                 <img class="img-fluid" src="{{ asset('images/Screenshot 2022-05-21 172901.png') }}"
                                     alt="project-picture2">
                             </div>
@@ -402,7 +396,7 @@
                                     <div class="scrollbar">
                                         <div class="thumb"></div>
                                     </div>
-                                    <div class="slides">
+                                    <div id="slide10" class="slides">
                                         <div id="38" class="d-flex justify-content-around"><img class="img-fluid"
                                                 src="{{ asset('images/Screenshot 2022-05-21 172310.png') }}"></div>
                                         <div id="39" class="d-flex justify-content-around"><img class="img-fluid"
@@ -504,6 +498,76 @@
             scrollThumb();
 
         }
+
+        $(document).ready(function() {
+
+        $('#first').on('click', 'div', function() {
+        $("#video").empty();
+        $(this).children().clone().appendTo("#video");
+
+        });
+
+        $('#slide2').on('click', 'div', function() {
+        $("#video2").empty();
+        $(this).children().clone().appendTo("#video2");
+
+        });
+
+        $('#slide3').on('click', 'div', function() {
+        $("#video3").empty();
+        $(this).children().clone().appendTo("#video3");
+
+        });
+
+        $('#slide4').on('click', 'div', function() {
+        $("#video4").empty();
+        $(this).children().clone().appendTo("#video4");
+
+        });
+
+        $('#slide5').on('click', 'div', function() {
+        $("#video5").empty();
+        $(this).children().clone().appendTo("#video5");
+
+        });
+
+        $('#slide6').on('click', 'div', function() {
+        $("#video6").empty();
+        $(this).children().clone().appendTo("#video6");
+
+        });
+
+        $('#slide7').on('click', 'div', function() {
+        $("#video7").empty();
+        $(this).children().clone().appendTo("#video7");
+
+        });
+
+        $('#slide8').on('click', 'div', function() {
+        $("#video8").empty();
+        $(this).children().clone().appendTo("#video8");
+
+        });
+
+        $('#slide9').on('click', 'div', function() {
+        $("#video9").empty();
+        $(this).children().clone().appendTo("#video9");
+
+        });
+
+        $('#slide10').on('click', 'div', function() {
+        $("#video10").empty();
+        $(this).children().clone().appendTo("#video10");
+
+        });
+
+        $('#slide11').on('click', 'div', function() {
+        $("#video11").empty();
+        $(this).children().clone().appendTo("#video11");
+
+        });
+
+        });
 
 
 
