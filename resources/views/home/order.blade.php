@@ -192,12 +192,8 @@
                                                                                     <hr class="aaa w-50 mx-auto mt-0">
                                                                                 </div>
                                                                                 <div id="pushOptionAttr{{ $category->id }}"
-                                                                                    class="pushOptionAttr-customMargin"
-                                                                                    {{-- class=" m-2  form-check d-flex justify-content-md-around justify-content-md-start  custom-border mt-md-4 mt-lg-0" --}}>
-
+                                                                                    class="pushOptionAttr-customMargin">
                                                                                 </div>
-
-
                                                                             </div>
 
 
@@ -214,10 +210,10 @@
                                                                                 </div>
                                                                             </div>
                                                                             <div
-                                                                                class="col-12 col-md-6  col-lg-12  text-justify mt-3 d-flex margin-order-2 ">
+                                                                                class="col-12 col-md-6  col-lg-12  text-justify mt-3 d-flex margin-order-2  mb-3 ">
 
                                                                                 <div id="pushTags{{ $category->id }}"
-                                                                                    class=" d-xs-none d-lg-flex pushTags-customMargin">
+                                                                                    class=" d-xs-none d-lg-flex pushTags-customMargin my-2">
                                                                                 </div>
 
                                                                                 <!-- Checked checkbox -->
@@ -548,7 +544,7 @@
                             let optionAttrLabel = $("<label/>", {
                                 text: "تعداد دوربین",
                                 id: `ObjQuantityLabel${element.id}`
-                            }).addClass(' mt-2 order-margin ');
+                            }).addClass(' mt-2 order-margin-ObjQuantityLabel ');
 
                             let optionAttrInput = $("<input/>", {
                                 type: "number",
@@ -787,15 +783,7 @@
 
             });
 
-            // let test = document.getElementById('test')
-
-
-
-            // giveInformation.addEventListener('click', function() {
-            //     test2.textContent = Shahrestan.value
-            //     test.textContent = date.value
-            // });
-
+      
 
 
 

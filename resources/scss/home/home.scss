@@ -1077,8 +1077,8 @@ footer p span {
 .no-p-left {
     padding-left: 0;
 }
-//****************** (about us page style)*****************
-.card:not(#test) {
+//******************(  about us page style  )*****************
+.card {
     position: relative;
     width: 300px;
     height: 370px;
@@ -1089,8 +1089,8 @@ footer p span {
     border-radius: 1.3rem;
     overflow: hidden;
 }
-.card:before:not(#test),
-.card:after:not(#test) {
+.card:before,
+.card:after {
     content: "";
     position: absolute;
     top: 0;
@@ -1102,14 +1102,14 @@ footer p span {
     transition: all linear 0.3s;
     z-index: -1;
 }
-.card:hover:before:not(#test) {
+.card:hover:before {
     transform: rotate(20deg);
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
 }
-.card:hover:after:not(#test) {
+.card:hover:after {
     transform: rotate(10deg);
 }
-.card:not(#test) .imgBx {
+.card .imgBx {
     position: absolute;
     top: 10px;
     left: 10px;
@@ -1120,10 +1120,10 @@ footer p span {
     z-index: 1;
     border-radius: 1.3rem;
 }
-.card:hover:not(#test) .imgBx {
+.card:hover .imgBx {
     bottom: 100px;
 }
-.card:hover:not(#test) .imgBx img {
+.card:hover .imgBx img {
     position: absolute;
     top: 0px;
     right: 0;
@@ -1134,7 +1134,7 @@ footer p span {
     transition: 1s;
     border-radius: 1.3rem;
 }
-.card:not(#test) .imgBx img {
+.card .imgBx img {
     position: absolute;
     top: 0px;
     width: 100%;
@@ -1144,25 +1144,25 @@ footer p span {
     transition: 1s;
     border-radius: 1rem;
 }
-.card:not(#test) .details {
+.card .details {
     position: absolute;
     left: 10px;
     right: 55px;
     bottom: 10px;
     height: 80px;
 }
-.card:not(#test) i {
+.card i {
     font-size: 2.5rem;
     color: var(--clr-dark);
     border-bottom: 3px solid var(--clr-dark);
     border-radius: 0.2rem;
     margin-top: 1rem;
 }
-.card:not(#test) i:hover {
+.card i:hover {
     color: var(--clr-secondary);
     border-color: var(--clr-accent);
 }
-.card:not(#test) .details h5 {
+.card .details h5 {
     margin: 0;
     padding: 0;
     font-size: 1.5rem;
@@ -1174,11 +1174,11 @@ footer p span {
 .custom-border {
     border-radius: 1.3rem;
 }
-.card:not(#test) .imgBx span .fa-instagram,
-.card:not(#test) .imgBx span .fa-whatsapp {
+.card .imgBx span .fa-instagram,
+.card .imgBx span .fa-whatsapp {
     color: var(--clr-dark);
 }
-.card:not(#test) .imgBx span i:hover {
+.card .imgBx span i:hover {
     color: black;
 }
 .aboutUs-h2-color {
@@ -1218,8 +1218,6 @@ footer p span {
 .aboutus-aparat-icon {
     position: relative;
     top: 0;
-    // padding-bottom: 0;
-    // border-bottom: 2px solid var(--clr-primary);
 }
 .aboutus-aparat-icon::after {
     content: "";
@@ -1237,7 +1235,7 @@ footer p span {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 2px, rgba(0, 0, 0, 0.23) 0px 0px 3px;
 }
 
-//**********************(pricing page) **********************
+//********************** ( order page ) **********************
 #heading {
     text-transform: uppercase;
     color: var(--clr-secondary);
@@ -1252,7 +1250,6 @@ footer p span {
 }
 
 #msform fieldset {
-    // background: white;
     border: 0 none;
     border-radius: 0.5rem;
     box-sizing: border-box;
@@ -1261,9 +1258,6 @@ footer p span {
     padding-bottom: 20px;
     position: relative;
 }
-// .form-card {
-//     text-align: left;
-// }
 #msform fieldset:not(:first-of-type) {
     display: none;
 }
@@ -1271,14 +1265,8 @@ footer p span {
     width: 100px;
     color: var(--clr-dark);
     background: var(--clr-primary);
-    // font-weight: bold;
-    // border: 0 none;
-    // border-radius: 0px;
     cursor: pointer;
-    // padding: 10px 5px;
-    // margin: 260px 0px 10px 5px;
     float: right;
-    // Secondary style
     border: none;
     font-weight: 600;
     text-decoration: none;
@@ -1300,16 +1288,8 @@ footer p span {
 
 #msform .action-button-previous {
     width: 100px;
-    // background: #616161;
-    // font-weight: bold;
-    // color: white;
-    // border: 0 none;
-    // border-radius: 0px;
     cursor: pointer;
-    // padding: 10px 5px;
-    // margin: 260px 0px 10px 5px;
     float: right;
-    // Secondary style
     border: none;
     font-weight: 600;
     text-decoration: none;
@@ -1328,12 +1308,7 @@ footer p span {
     color: var(--clr-primary);
     background-color: var(--clr-dark);
 }
-// ******this******
-// ._card_ {
-//     z-index: 0;
-//     border: none;
-//     position: relative;
-// }
+
 
 .content-min-height {
     min-height: 2000px;
@@ -1347,6 +1322,7 @@ footer p span {
     border-radius: 0.5rem;
     padding: 10px;
 }
+
 
 #progressbar li {
     list-style-type: none;
@@ -1418,8 +1394,8 @@ footer p span {
     object-fit: cover;
 }
 
-//**************
-// princing page (fildest 1 setction 1)
+
+//   ************** princing page ( fildest 1 setction 1 ) **************
 
 ._card {
     margin: 40px;
@@ -1526,7 +1502,7 @@ footer p span {
     overflow: visible;
 }
 
-// ************ pricing Btn************
+// ************ order Btn************
 
 /* CSS */
 .button {
@@ -1534,7 +1510,6 @@ footer p span {
     cursor: pointer;
     font-weight: 600;
     line-height: 41px;
-    // max-width: 130px;
     position: relative;
     text-decoration: none;
     text-transform: uppercase;
@@ -1560,9 +1535,6 @@ footer p span {
     border-radius: 0.5rem;
 }
 
-.custom-boder-pricing {
-    border: 1px solid var(--clr-accent);
-}
 
 .form-select {
     width: 50%;
@@ -1575,9 +1547,17 @@ footer p span {
 .text-justify {
     text-align: justify;
 }
+
 .text-right {
-    text-align: right;
+    text-align: right !important;
 }
+.float-right {
+    float: right;
+}
+.text-center {
+    text-align: center;
+}
+
 .title-style {
     font-family: Georgia, "Times New Roman", Times, serif;
     font-weight: 700;
@@ -1594,12 +1574,6 @@ footer p span {
     float: right;
 }
 
-// custom ckeck box
-
-// .float-right-checkbox[type="checkbox"] {
-//     float: right;
-// }
-
 .form-check {
     padding-left: 0 !important;
     text-align: right;
@@ -1607,7 +1581,6 @@ footer p span {
 
 .ccustom-margin {
     margin-right: -25px;
-    // margin-top: -18px;
 }
 .ccustom-height {
     height: 28px !important;
@@ -1615,44 +1588,30 @@ footer p span {
 .text-center {
     text-align: center;
 }
-.text-right {
-    text-align: right !important;
-}
 
+.w-95 {
+    width: 95%;
+}
 .border-custom {
     border-top: 0.5px solid black;
 }
 
-.d-inline {
-    display: inline;
-}
+
 
 a {
     text-decoration: none;
 }
 
-.card#test {
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
-    border-radius: 0.5rem;
-}
 
-.card-footer {
-    background-color: var();
-}
 
-.card-footer:hover {
-    background-color: var(--clr-secondary);
-    transition: 0.5s ease;
-}
-.card-footer:hover a {
-    color: var(--clr-primary);
-}
+
+
 
 .order-margin {
     margin: 0 5px;
 }
 .order-margin2 {
-    margin: 0 2px 0 50px;
+    margin: 2px 2px 0 50px;
 }
 
 .margin-order-2 {
@@ -1668,70 +1627,18 @@ a {
     margin-right: 5px;
 }
 
-#msform .action-button.firstBtn {
-    transform: translate(10px, 430px);
-}
-// ****************************************************plus
-.ProductDetails li div {
-    margin: 100px;
-}
-// .rder-collapse  .responsive-table .li{
-//     display: flex;
-//     margin: 100px;
-// }
-
-// .teeest{
-//     transform: translate(-65px, 19px);
-// }
-
-.w-95 {
-    width: 95%;
-}
-// ***********************end pricing page ******************************
-/* BREAKPOINTS ----- */
-
-@media only screen and (min-width: 568px) and (max-width: 766px) {
-    // #msform .action-button.firstBtn {
-    //     transform: translate(10px, 750px);
-    // }
-}
-
-@media only screen and (max-width: 576px) {
-    // #msform .action-button.firstBtn {
-    //     transform: translate(10px, 900px);
-    // }
-}
-@media screen and (max-width: 767px) {
-    .tabs {
-        min-height: 400px;
-    }
-
-    #msform fieldset {
-        min-height: 900px;
-    }
-    .margin-order-2 {
-        margin-right: 0;
-    }
-
-    .content-min-height {
-        min-height: 2300px;
-    }
-
-    .pushTags-customMargin {
-        margin-right: 20px;
-    }
-
-    // #msform .action-button{
-    //     transform: translate(0 400px);
-    // }
-}
-
 .firstBtn{
     position: relative;
     top: 500px;
 }
-
-
+// #msform .action-button.firstBtn {
+//     transform: translate(10px, 430px);
+// }
+// ****************************************************plus
+.ProductDetails li div {
+    margin: 100px;
+}
+  
 
 .modal-order  {
     background-color: #95a5a67c;
@@ -1749,6 +1656,14 @@ a {
     outline: none;
     box-shadow: none;
 }
+
+
+// ***********************end pricing page ******************************
+/* BREAKPOINTS ----- */
+// #msform .action-button.firstBtn {
+//     transform: translate(-77px,20px);
+// }
+
 
 @media screen and (max-width: 480px) {
     .tabs {
@@ -1777,15 +1692,72 @@ a {
     .content-min-height {
         min-height: 2500px;
     }
+    #msform .action-button.firstBtn {
+        transform: translate(2px, 660px);
+    }
 }
 
-@media screen and (max-width: 991px) {
-    // .pushOptionAttr-customMargin {
-    //     margin-right: 25px;
-    // }
+@media only screen and (min-width: 480px) and (max-width: 992px) {
+    #msform .action-button.firstBtn {
+        transform: translate(2px, 300px);
+    }
+}
+@media screen and (max-width: 767px) {
+    .tabs {
+        min-height: 400px;
+    }
+
+    #msform fieldset {
+        min-height: 900px;
+    }
+    .margin-order-2 {
+        margin-right: 0;
+    }
+
+    .content-min-height {
+        min-height: 2300px;
+    }
+
+    .pushTags-customMargin {
+        margin-right: 20px;
+    }
+
+}
+@media screen and (max-width: 817px) {
+    .order-margin-ObjQuantityLabel {
+        margin: 0 33px;
+    }
+
+
 }
 
+@media screen and  (min-width: 768px) and (max-width: 816px)  {
+    #msform .action-button.firstBtn {
+        transform: translate(-50px, 350px);
+    }
 
+
+}
+@media screen and  (min-width: 817px) and (max-width: 992px)  {
+    .order-margin-ObjQuantityLabel {
+        margin: 0 33px;
+    }
+    .pushOptionAttr-customMargin {
+        margin-right: 25px;
+    }
+  
+    #msform .action-button.firstBtn {
+        transform: translate(-60px, 250px);
+    }
+
+}
+@media screen and  (min-width: 992px) and (max-width: 1200px)  {
+    #msform .action-button.firstBtn {
+        transform: translate(-80px, 100px);
+    }
+
+
+}
 
 // ************************************************************************************************************************//
 
