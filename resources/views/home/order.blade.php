@@ -35,7 +35,7 @@
                         <fieldset>
 
                             <div class="col-12">
-                                <button type="button" id="modalBtn" class="secondary-btn">  افزودن آدرس</button>
+                                <button type="button" id="modalBtn" class="secondary-btn"> افزودن آدرس</button>
 
 
                                 <!-- The Modal -->
@@ -51,12 +51,12 @@
                                             <div id="addressForm form-control">
                                                 <div class="form-group">
                                                     <label for="userAddress">آدرس</label>
-                                                    <input type="text" id="addresses" name="addresses" class="form-control"
-                                                        placeholder="تهران، خیابان ۹ شرقی...">
+                                                    <input type="text" id="addresses1" name="addresses"
+                                                        class="form-control" placeholder="تهران، خیابان ۹ شرقی...">
                                                 </div>
 
                                                 <div name="map" id="map" style="height: 200px"></div>
-                                                <button class="secondary-btn w-100">ذخیره</button>
+                                                <button id="SubmitForm" class="secondary-btn w-100">ذخیره</button>
                                             </div>
                                         </div>
                                     </div>
@@ -91,7 +91,7 @@
                                                     <span class="input-group-text" id="dtp1"><i
                                                             class="fas fa-calendar-alt"></i></span>
                                                     <input id="date" type="text" class="form-control text-center"
-                                                        placeholder="انتخاب تاریخ" data-name="dtp1-text">
+                                                        placeholder="انتخاب تاریخ" data-name="dtp1-text" disabled>
                                                 </div>
                                             </div>
                                         </div>
@@ -430,38 +430,38 @@
         dtp1Instance.setDatePersian(1401, 03, 18);
 
         var lat = 35.699739;
-            var lng = 51.338097;
-            var getId = @json($user);
+        var lng = 51.338097;
+        var getId = @json($user);
 
-            var map = new L.Map('map', {
-                key: 'web.5j4qJGGkEPdoi3S18YqklpipMjVUa7nDm8cuiiL9',
-                maptype: 'dreamy',
-                center: [lat, lng],
-                zoom: 14,
-                traffic: true,
-                onTrafficLayerSwitched: function(state) {
-                    console.log(state);
-                }
-            });
+        var map = new L.Map('map', {
+            key: 'web.5j4qJGGkEPdoi3S18YqklpipMjVUa7nDm8cuiiL9',
+            maptype: 'dreamy',
+            center: [lat, lng],
+            zoom: 14,
+            traffic: true,
+            onTrafficLayerSwitched: function(state) {
+                console.log(state);
+            }
+        });
 
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                maxZoom: 19,
-                attribution: false
-            }).addTo(map);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: false
+        }).addTo(map);
 
 
 
-            var marker = L.marker([32.4279, 53.6880]).addTo(map)
-                .openPopup();
+        var marker = L.marker([32.4279, 53.6880]).addTo(map)
+            .openPopup();
 
-            map.on('click', function(e) {
-                map.removeLayer(marker);
-                marker = new L.marker(e.latlng).addTo(map);
-                lat = marker._latlng.lat;
-                lng = marker._latlng.lng;
+        map.on('click', function(e) {
+            map.removeLayer(marker);
+            marker = new L.marker(e.latlng).addTo(map);
+            lat = marker._latlng.lat;
+            lng = marker._latlng.lng;
 
-                console.log(lat, lng);
-            });
+            console.log(lat, lng);
+        });
 
         $(document).ready(function() {
             var current_fs, next_fs, previous_fs; //fieldsets
@@ -489,280 +489,322 @@
             var steps = $("fieldset").length;
             setProgressBar(current);
 
-            $('#addressForm').submit(function(event) {
+            $("#SubmitForm").click(function(event) {
 
-                console.log($('#addresses').val());
+                console.log($('#addresses1').val());
                 event.preventDefault();
 
-                // $.post("{{ route('addresses.store') }}", {
+                $.post("{{ route('addresses.store') }}", {
 
-                //     '_token': "{{ csrf_token() }}",
-                //     'address': $('#addresses').val(),
-                //     'user_id': "{{ $user->id }}",
-                //     'lat': lat,
-                //     'lng': lng
+                    '_token': "{{ csrf_token() }}",
+                    'address': $('#addresses1').val(),
+                    'user_id': "{{ $user->id }}",
+                    'lat': lat,
+                    'lng': lng
 
-                // }, function(response, status) {
-                //     console.log(response, status);
+                }, function(response, status) {
+                    console.log(status);
+                    if (status == "success") {
 
-                // }).fail(function(response) {
+                        let getAddress = $('#addresses1').val();
+                        console.log(getAddress);
 
-                //     console.log(response);
-                // })
+                        $('#userAddresses').append($('<option/>', {
+                            text: getAddress
+                        }));
+                    }
 
-                // event.preventDefault();
+                }).fail(function(response) {
 
-            });
-
-            $(".next").click(function() {
-                current_fs = $(this).parent();
-                next_fs = $(this).parent().next();
-                //Add Class Active
-                $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
-                //show the next fieldset
-                next_fs.show();
-                //hide the current fieldset with style
-                current_fs.animate({
-                    opacity: 0
-                }, {
-                    step: function(now) {
-                        // for making fielset appear animation
-                        opacity = 1 - now;
-                        current_fs.css({
-                            'display': 'none',
-                            'position': 'relative'
-                        });
-                        next_fs.css({
-                            'opacity': opacity
-                        });
-                    },
-                    duration: 500
-                });
-                setProgressBar(++current);
-            });
-
-            let attributes = @json($getChildren);
-            let parents = @json($getParents);
-
-            parents.forEach(element => {
-
-                $("#radio" + element.id).change(function() {
-                    $("#push" + element.id).empty();
-                    $("#pushHour" + element.id).empty();
-                    $("#pushOptionAttr" + element.id).empty();
-                    $("#pushTags" + element.id).empty();
-                });
-
-            });
-
-            $("select").change(function() {
-
-                $("#currentAddress").val($("#userAddresses").children("option:selected")
-                    .val());
-                address = $("#currentAddress").val();
-                Object.assign(obj, {
-                    userAddress: address
+                    console.log(response);
                 })
-                console.log(obj);
 
-                obj = {};
-                var getChildrenId = $(this).children(":selected").attr("id");
-                getChildreName = $(this).children(":selected").text();
-                trigger = [];
-                tagTrigger = [];
-                $("#push" + getChildrenId).empty();
-                $("#pushHour" + getChildrenId).empty();
-                $("#pushOptionAttr" + getChildrenId).empty();
-                $("#pushTags" + getChildrenId).empty();
-                var getId = $(this).children("option:selected").val();
-                attributes.forEach(element => {
-                    let getAttributes = [];
-                    if (element.id == getId) {
-                        element.tag_categories.forEach(element => {
-                            tagTrigger.push(element);
-                            console.log(tagTrigger);
-                            let PushTagsInput = $("<input/>", {
-                                class: "form-check-input float-right-checkbox",
-                                type: "checkbox",
-                                id: `Tagcheckbox${element.id}`
-                            });
-                            let PushTagsLabel = $("<label/>", {
-                                value: element.id,
-                                text: element.name + "(" + element.price + ")",
-                                class: "form-check-label float-right-checkbox",
-                                id: `Taglabel${element.id}`
-                            }).addClass('order-margin ml-5 order-margin2');
-                            $("#pushTags" + getChildrenId).append(PushTagsInput,
-                                PushTagsLabel, "<br/>");
+            });
+
+            // $.post("{{ route('addresses.store') }}", {
+
+            //     '_token': "{{ csrf_token() }}",
+            //     'address': $('#addresses').val(),
+            //     'user_id': "{{ $user->id }}",
+            //     'lat': lat,
+            //     'lng': lng
+
+            // }, function(response, status) {
+            //     console.log(response, status);
+
+            // }).fail(function(response) {
+
+            //     console.log(response);
+            // })
+
+            // event.preventDefault();
+
+        $(".next").click(function() {
+            current_fs = $(this).parent();
+            next_fs = $(this).parent().next();
+            //Add Class Active
+            $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+            //show the next fieldset
+            next_fs.show();
+            //hide the current fieldset with style
+            current_fs.animate({
+                opacity: 0
+            }, {
+                step: function(now) {
+                    // for making fielset appear animation
+                    opacity = 1 - now;
+                    current_fs.css({
+                        'display': 'none',
+                        'position': 'relative'
+                    });
+                    next_fs.css({
+                        'opacity': opacity
+                    });
+                },
+                duration: 500
+            });
+            setProgressBar(++current);
+        });
+
+        let attributes = @json($getChildren);
+        let parents = @json($getParents);
+
+        parents.forEach(element => {
+
+            $("#radio" + element.id).change(function() {
+                $("#push" + element.id).empty();
+                $("#pushHour" + element.id).empty();
+                $("#pushOptionAttr" + element.id).empty();
+                $("#pushTags" + element.id).empty();
+            });
+
+        });
+
+        $("select").change(function() {
+
+            $("#currentAddress").val($("#userAddresses").children("option:selected")
+                .val());
+            address = $("#currentAddress").val();
+            Object.assign(obj, {
+                userAddress: address
+            })
+            console.log(obj);
+
+            obj = {};
+            var getChildrenId = $(this).children(":selected").attr("id");
+            getChildreName = $(this).children(":selected").text();
+            trigger = [];
+            tagTrigger = [];
+            $("#push" + getChildrenId).empty();
+            $("#pushHour" + getChildrenId).empty();
+            $("#pushOptionAttr" + getChildrenId).empty();
+            $("#pushTags" + getChildrenId).empty();
+            var getId = $(this).children("option:selected").val();
+            attributes.forEach(element => {
+                let getAttributes = [];
+                if (element.id == getId) {
+                    element.tag_categories.forEach(element => {
+                        tagTrigger.push(element);
+                        console.log(tagTrigger);
+                        let PushTagsInput = $("<input/>", {
+                            class: "form-check-input float-right-checkbox",
+                            type: "checkbox",
+                            id: `Tagcheckbox${element.id}`
                         });
-                        element.attributes.forEach(element => {
+                        let PushTagsLabel = $("<label/>", {
+                            value: element.id,
+                            text: element.name + "(" + element.price + ")",
+                            class: "form-check-label float-right-checkbox",
+                            id: `Taglabel${element.id}`
+                        }).addClass('order-margin ml-5 order-margin2');
+                        $("#pushTags" + getChildrenId).append(PushTagsInput,
+                            PushTagsLabel, "<br/>");
+                    });
+                    element.attributes.forEach(element => {
 
-                            trigger.push(element);
-                            // getAttributes.push(element);
-                            // console.log(element.);
-                            let createAttr = $("<label/>", {
-                                value: element.id,
-                                id: `attributeLabel${element.id}`,
-                                text: element.name + "(" + element.price + ")"
-                            }).addClass('mt-2');
-                            let createCheckBox = $("<input/>", {
-                                type: "checkbox",
-                                id: `AttributeCheckbox${element.id}`
-                            }).addClass(
-                                'form-check-label float-right-checkbox order-margin ');
-                            let hourlabel = $("<label/>", {
-                                text: "مدت زمان درخواستی",
-                                id: `HourQtyLabel${element.id}`
-                            }).addClass('order-marginTop ');
-                            let hourInput = $("<input/>", {
-                                type: "number",
-                                id: `HourQty${element.id}`,
-                                name: "tentacles",
-                                value: 1,
-                                min: "1",
-                                max: "10",
-                                class: "text-center",
-                            }).addClass('margin-hourInput');
-                            let hourSpan = $("<span/>", {
-                                text: "ساعت"
-                            }).addClass(' order-margin');
+                        trigger.push(element);
+                        // getAttributes.push(element);
+                        // console.log(element.);
+                        let createAttr = $("<label/>", {
+                            value: element.id,
+                            id: `attributeLabel${element.id}`,
+                            text: element.name + "(" + element.price + ")"
+                        }).addClass('mt-2');
+                        let createCheckBox = $("<input/>", {
+                            type: "checkbox",
+                            id: `AttributeCheckbox${element.id}`
+                        }).addClass(
+                            'form-check-label float-right-checkbox order-margin ');
+                        let hourlabel = $("<label/>", {
+                            text: "مدت زمان درخواستی",
+                            id: `HourQtyLabel${element.id}`
+                        }).addClass('order-marginTop ');
+                        let hourInput = $("<input/>", {
+                            type: "number",
+                            id: `HourQty${element.id}`,
+                            name: "tentacles",
+                            value: 1,
+                            min: "1",
+                            max: "10",
+                            class: "text-center",
+                        }).addClass('margin-hourInput');
+                        let hourSpan = $("<span/>", {
+                            text: "ساعت"
+                        }).addClass(' order-margin');
 
-                            let optionAttrLabel = $("<label/>", {
-                                text: "تعداد دوربین",
-                                id: `ObjQuantityLabel${element.id}`
-                            }).addClass(' mt-2 order-margin-ObjQuantityLabel test ');
+                        let optionAttrLabel = $("<label/>", {
+                            text: "تعداد دوربین",
+                            id: `ObjQuantityLabel${element.id}`
+                        }).addClass(' mt-2 order-margin-ObjQuantityLabel test ');
 
-                            let optionAttrInput = $("<input/>", {
-                                type: "number",
-                                class: "text-center h-25 border-custom",
-                                id: `ObjQuantity${element.id}`,
-                                value: 1,
-                                min: "1",
-                                max: "10"
-                            }).addClass(' float-left ');
+                        let optionAttrInput = $("<input/>", {
+                            type: "number",
+                            class: "text-center h-25 border-custom",
+                            id: `ObjQuantity${element.id}`,
+                            value: 1,
+                            min: "1",
+                            max: "10"
+                        }).addClass(' float-left ');
 
-                            $("#push" + getChildrenId).append(createCheckBox,
-                                createAttr,
-                                "<br/>");
-                            $("#pushHour" + getChildrenId).append(hourlabel, hourInput,
-                                hourSpan, "<br/>");
-                            $("#pushOptionAttr" + getChildrenId).append(optionAttrLabel,
-                                optionAttrInput,
-                                "<br/>");
-                        });
+                        $("#push" + getChildrenId).append(createCheckBox,
+                            createAttr,
+                            "<br/>");
+                        $("#pushHour" + getChildrenId).append(hourlabel, hourInput,
+                            hourSpan, "<br/>");
+                        $("#pushOptionAttr" + getChildrenId).append(optionAttrLabel,
+                            optionAttrInput,
+                            "<br/>");
+                    });
 
-                        data = [];
-                        price = [];
-                        tagPrice = [];
-                        hour = [];
-                        quantity = [];
-                        tags = [];
-                        trigger.forEach(element => {
+                    data = [];
+                    price = [];
+                    tagPrice = [];
+                    hour = [];
+                    quantity = [];
+                    tags = [];
+                    trigger.forEach(element => {
 
-                            $('#AttributeCheckbox' + element.id).change(function() {
-                                var ischecked = $(this).is(':checked');
-                                if (ischecked) {
-                                    console.log(element);
-                                    data.push(element.name);
-                                    hour.push($("#HourQty" + element.id).val());
-                                    price.push(element.price);
-                                    quantity.push($("#ObjQuantity" + element.id)
-                                        .val());
+                        $('#AttributeCheckbox' + element.id).change(function() {
+                            var ischecked = $(this).is(':checked');
+                            if (ischecked) {
+                                console.log(element);
+                                data.push(element.name);
+                                hour.push($("#HourQty" + element.id).val());
+                                price.push(element.price);
+                                quantity.push($("#ObjQuantity" + element.id)
+                                    .val());
 
 
-                                    $("#HourQty" + element.id).change(
-                                        function() {
+                                $("#HourQty" + element.id).change(
+                                    function() {
 
-                                            if ($("#HourQty" + element.id)
-                                                .val() <= 0) {
-                                                $("#HourQty" + element.id).val(
-                                                    1);
-                                            }
-
-                                            if ($("#HourQty" + element.id)
-                                                .val() > 5) {
-                                                $("#HourQty" + element.id).val(
-                                                    5);
-                                            }
-
-                                            for (let i = 0; i < data
-                                                .length; i++) {
-
-                                                if (data[i] == element
-                                                    .name) {
-
-                                                    hour[i] = $("#HourQty" +
-                                                            element.id)
-                                                        .val();
-
-                                                }
-
-                                            }
-
-                                        });
-
-                                    $("#ObjQuantity" + element.id).change(
-                                        function() {
-
-                                            if ($("#ObjQuantity" + element.id)
-                                                .val() <= 0) {
-                                                $("#ObjQuantity" + element.id)
-                                                    .val(1);
-                                            }
-
-                                            if ($("#ObjQuantity" + element.id)
-                                                .val() > 5) {
-                                                $("#ObjQuantity" + element.id)
-                                                    .val(5);
-                                            }
-
-                                            for (let i = 0; i < data
-                                                .length; i++) {
-
-                                                if (data[i] == element
-                                                    .name) {
-
-                                                    quantity[i] = $(
-                                                            "#ObjQuantity" +
-                                                            element.id)
-                                                        .val();
-
-                                                }
-
-                                            }
-
-                                        });
-
-                                } else if (!ischecked) {
-                                    for (let i = 0; i < data.length; i++) {
-                                        if (data[i] == element.name) {
-                                            data.splice(i, 1);
-                                            hour.splice(i, 1);
-                                            quantity.splice(i, 1);
+                                        if ($("#HourQty" + element.id)
+                                            .val() <= 0) {
+                                            $("#HourQty" + element.id).val(
+                                                1);
                                         }
+
+                                        if ($("#HourQty" + element.id)
+                                            .val() > 5) {
+                                            $("#HourQty" + element.id).val(
+                                                5);
+                                        }
+
+                                        for (let i = 0; i < data
+                                            .length; i++) {
+
+                                            if (data[i] == element
+                                                .name) {
+
+                                                hour[i] = $("#HourQty" +
+                                                        element.id)
+                                                    .val();
+
+                                            }
+
+                                        }
+
+                                    });
+
+                                $("#ObjQuantity" + element.id).change(
+                                    function() {
+
+                                        if ($("#ObjQuantity" + element.id)
+                                            .val() <= 0) {
+                                            $("#ObjQuantity" + element.id)
+                                                .val(1);
+                                        }
+
+                                        if ($("#ObjQuantity" + element.id)
+                                            .val() > 5) {
+                                            $("#ObjQuantity" + element.id)
+                                                .val(5);
+                                        }
+
+                                        for (let i = 0; i < data
+                                            .length; i++) {
+
+                                            if (data[i] == element
+                                                .name) {
+
+                                                quantity[i] = $(
+                                                        "#ObjQuantity" +
+                                                        element.id)
+                                                    .val();
+
+                                            }
+
+                                        }
+
+                                    });
+
+                            } else if (!ischecked) {
+                                for (let i = 0; i < data.length; i++) {
+                                    if (data[i] == element.name) {
+                                        data.splice(i, 1);
+                                        hour.splice(i, 1);
+                                        quantity.splice(i, 1);
                                     }
                                 }
-                            });
+                            }
                         });
-                        tagTrigger.forEach(element => {
-                            $('#Tagcheckbox' + element.id).change(function() {
-                                var checkTag = $(this).is(':checked');
-                                console.log(element.price);
-                                if (checkTag) {
-                                    tags.push(element.name);
-                                    tagPrice.push(element.price);
-                                } else if (!checkTag) {
-                                    for (let i = 0; i < tags.length; i++) {
-                                        if (tags[i] == element.name) {
-                                            tags.splice(i, 1);
-                                            tagPrice.splice(i, 1);
-                                        }
+                    });
+                    tagTrigger.forEach(element => {
+                        $('#Tagcheckbox' + element.id).change(function() {
+                            var checkTag = $(this).is(':checked');
+                            console.log(element.price);
+                            if (checkTag) {
+                                tags.push(element.name);
+                                tagPrice.push(element.price);
+                            } else if (!checkTag) {
+                                for (let i = 0; i < tags.length; i++) {
+                                    if (tags[i] == element.name) {
+                                        tags.splice(i, 1);
+                                        tagPrice.splice(i, 1);
                                     }
                                 }
-                                console.log(tags, tagPrice);
-                            });
+                            }
+                            console.log(tags, tagPrice);
                         });
-                        obj = {
+                    });
+                    obj = {
+                        product: getChildreName,
+                        attributes: data,
+                        AttributePrice: price,
+                        hour: hour,
+                        quantity: quantity,
+                        tags: tags,
+                        tagPrice: tagPrice,
+                        userAddress: address,
+                        date: date
+                    }
+
+                    $("#userAddresses").change(function() {
+
+                        $("#currentAddress").val($("#userAddresses").children(
+                            "option:selected").val());
+                        address = $("#currentAddress").val();
+                        Object.assign(obj, {
                             product: getChildreName,
                             attributes: data,
                             AttributePrice: price,
@@ -772,256 +814,239 @@
                             tagPrice: tagPrice,
                             userAddress: address,
                             date: date
-                        }
-
-                        $("#userAddresses").change(function() {
-
-                            $("#currentAddress").val($("#userAddresses").children(
-                                "option:selected").val());
-                            address = $("#currentAddress").val();
-                            Object.assign(obj, {
-                                product: getChildreName,
-                                attributes: data,
-                                AttributePrice: price,
-                                hour: hour,
-                                quantity: quantity,
-                                tags: tags,
-                                tagPrice: tagPrice,
-                                userAddress: address,
-                                date: date
-                            });
-                            console.log(obj);
-
                         });
-                    }
-                });
-            });
-
-            $("#date").change(function() {
-                date = moment(dtp1Instance.getDate(), 'YYYY/MM/DD').locale(
-                    'fa').format('YYYY/MM/DD');
-                Object.assign(obj, {
-                    product: getChildreName,
-                    attributes: data,
-                    AttributePrice: price,
-                    hour: hour,
-                    quantity: quantity,
-                    tags: tags,
-                    tagPrice: tagPrice,
-                    userAddress: address,
-                    date: date
-                });
-            });
-
-
-            parents.forEach(element => {
-
-                $("#add" + element.id).click(function(event) {
-                    event.preventDefault();
-                    if (obj.date == null || obj.date == 0) {
-
-                        alert("لطفا تاریخ را انتخاب کنید");
-
-                    } else {
-
-                        calculate = [];
-                        attribuePriceResult = 0;
-                        tagCalculate = [];
-                        tagPriceResult = 0;
-
-                        let rnd = Math.floor((Math.random() * 1000000) + 1);
-                        console.log(rnd);
-
-                        $("#productBox").append(`<ul id=${rnd}>` +
-                            `<li id=ProductLocation${rnd}> <span class='text-secondary'> آدرس <hr>` +
-                            `<li id=ProductSpecAttr${rnd}><span class='text-secondary'>خدمات ویژه  <hr> ` +
-                            `<li id=ProductDetails${rnd}> <span class='text-secondary'>ویژگی ها <hr>` +
-                            `<li id=ProductPrice${rnd}> <span class='text-secondary'> جمع کل <hr>` +
-                            `<li id=ProductName${rnd}> <span class='text-secondary'> نوع خدمت <hr>` +
-                            `<li id=ProductDate${rnd}> <span class='text-secondary'>تاریخ<hr>` +
-                            `<li id=deleteProduct${rnd}> <span class='text-secondary'> عملیات <hr> <button id=deleteProduct${rnd} class='text-danger'> حذف خدمت </button>`
-                        );
-
-
-                        for (let i = 0; i < obj.attributes.length; i++) {
-                            event.preventDefault();
-                            console.log(obj.attributes[i] + obj.AttributePrice[i] + "ساعت:" + obj
-                                .hour[
-                                    i] + "تعداد" + obj.quantity[i]);
-                            var counter = 0;
-
-                            for (let x = 0; x < obj.quantity[i]; x++) {
-
-                                if (counter == 0) {
-
-                                    calculate.push(obj.AttributePrice[i]);
-
-                                } else {
-                                    let discount = (obj.AttributePrice[i] * 15) / 100;
-                                    calculate.push(obj.AttributePrice[i] - discount);
-                                }
-
-                                attribuePriceResult = calculate.reduce((total, number) => total +
-                                    number, 0);
-                                counter++;
-                                console.log(calculate, attribuePriceResult);
-
-
-                            }
-
-                            obj.AttributespriceDetails = calculate;
-                            obj.attributesPriceResult = attribuePriceResult;
-
-
-                            let productDetails = $("<div/>", {
-
-                                text: " ویژگی " + obj.attributes[i] + " ساعت: " + obj.hour[
-                                        i] +
-                                    " تعداد: " + obj.quantity[i]
-
-
-                            }).addClass('text-right ');
-
-                            $("#ProductDetails" + rnd).append(productDetails);
-                        }
-                        alert("با موفقیت به سبد خرید اضافه شد")
-                        for (let i = 0; i < obj.tags.length; i++) {
-
-                            tagCalculate.push(obj.tagPrice[i]);
-                            console.log(tagCalculate);
-                            tagPriceResult = tagCalculate.reduce((total, number) => total + number,
-                                0);
-                            obj.tagPriceDetails = tagCalculate;
-                            obj.tagPriceResult = tagPriceResult;
-
-                            console.log(tagPriceResult);
-                            let productSpecAttr = $("<h6/>", {
-
-                                text: obj.tags[i]
-
-                            });
-
-                            $("#ProductSpecAttr" + rnd).append(productSpecAttr);
-
-                        }
-
-                        obj.finalPriceThisProductIs = tagPriceResult + attribuePriceResult;
-
                         console.log(obj);
 
-                        let productPrice = $("<h6/>", {
+                    });
+                }
+            });
+        });
 
-                            text: obj.finalPriceThisProductIs,
-                            id: "price" + rnd
-
-                        });
-
-                        $("#ProductPrice" + rnd).append(productPrice);
-
-                        let productName = $("<h6/>", {
-
-                            text: obj.product
-
-                        });
-
-                        let productDate = $("<h6/>", {
-                            text: obj.date
-                        });
-
-                        $("#ProductDate" + rnd).append(productDate);
-
-                        let productAddress = $("<div/>", {
-                            text: obj.userAddress
-                        });
-
-                        $("#ProductLocation" + rnd).append(productAddress);
-
-                        $("#ProductName" + rnd).append(productName);
-
-                        totalProducts.push(rnd);
-                        console.log(totalProducts);
-
-                        totalProducts.forEach(element => {
-                            event.preventDefault();
-                            $("#deleteProduct" + element).click(function(event) {
-                                totalPrice = totalPrice - $("#price" + element)
-                                    .text();
-                                $(this).parent().remove();
-                                $("#finalPricecontent").val(totalPrice);
-                                event.preventDefault();
-                            });
-
-                        });
+        $("#date").change(function() {
+            date = moment(dtp1Instance.getDate(), 'YYYY/MM/DD').locale(
+                'fa').format('YYYY/MM/DD');
+            Object.assign(obj, {
+                product: getChildreName,
+                attributes: data,
+                AttributePrice: price,
+                hour: hour,
+                quantity: quantity,
+                tags: tags,
+                tagPrice: tagPrice,
+                userAddress: address,
+                date: date
+            });
+        });
 
 
+        parents.forEach(element => {
 
-                        totalPrice += obj.finalPriceThisProductIs;
-                        console.log(totalPrice);
+            $("#add" + element.id).click(function(event) {
+                event.preventDefault();
+                if (obj.date == null || obj.date == 0) {
 
-                        $("#finalPricecontent").val(totalPrice);
+                    alert("لطفا تاریخ را انتخاب کنید");
 
+                } else {
+
+                    calculate = [];
+                    attribuePriceResult = 0;
+                    tagCalculate = [];
+                    tagPriceResult = 0;
+
+                    let rnd = Math.floor((Math.random() * 1000000) + 1);
+                    console.log(rnd);
+
+                    $("#productBox").append(`<ul id=${rnd}>` +
+                        `<li id=ProductLocation${rnd}> <span class='text-secondary'> آدرس <hr>` +
+                        `<li id=ProductSpecAttr${rnd}><span class='text-secondary'>خدمات ویژه  <hr> ` +
+                        `<li id=ProductDetails${rnd}> <span class='text-secondary'>ویژگی ها <hr>` +
+                        `<li id=ProductPrice${rnd}> <span class='text-secondary'> جمع کل <hr>` +
+                        `<li id=ProductName${rnd}> <span class='text-secondary'> نوع خدمت <hr>` +
+                        `<li id=ProductDate${rnd}> <span class='text-secondary'>تاریخ<hr>` +
+                        `<li id=deleteProduct${rnd}> <span class='text-secondary'> عملیات <hr> <button id=deleteProduct${rnd} class='text-danger'> حذف خدمت </button>`
+                    );
+
+
+                    for (let i = 0; i < obj.attributes.length; i++) {
                         event.preventDefault();
+                        console.log(obj.attributes[i] + obj.AttributePrice[i] + "ساعت:" + obj
+                            .hour[
+                                i] + "تعداد" + obj.quantity[i]);
+                        var counter = 0;
+
+                        for (let x = 0; x < obj.quantity[i]; x++) {
+
+                            if (counter == 0) {
+
+                                calculate.push(obj.AttributePrice[i]);
+
+                            } else {
+                                let discount = (obj.AttributePrice[i] * 15) / 100;
+                                calculate.push(obj.AttributePrice[i] - discount);
+                            }
+
+                            attribuePriceResult = calculate.reduce((total, number) => total +
+                                number, 0);
+                            counter++;
+                            console.log(calculate, attribuePriceResult);
+
+
+                        }
+
+                        obj.AttributespriceDetails = calculate;
+                        obj.attributesPriceResult = attribuePriceResult;
+
+
+                        let productDetails = $("<div/>", {
+
+                            text: " ویژگی " + obj.attributes[i] + " ساعت: " + obj.hour[
+                                    i] +
+                                " تعداد: " + obj.quantity[i]
+
+
+                        }).addClass('text-right ');
+
+                        $("#ProductDetails" + rnd).append(productDetails);
+                    }
+                    alert("با موفقیت به سبد خرید اضافه شد")
+                    for (let i = 0; i < obj.tags.length; i++) {
+
+                        tagCalculate.push(obj.tagPrice[i]);
+                        console.log(tagCalculate);
+                        tagPriceResult = tagCalculate.reduce((total, number) => total + number,
+                            0);
+                        obj.tagPriceDetails = tagCalculate;
+                        obj.tagPriceResult = tagPriceResult;
+
+                        console.log(tagPriceResult);
+                        let productSpecAttr = $("<h6/>", {
+
+                            text: obj.tags[i]
+
+                        });
+
+                        $("#ProductSpecAttr" + rnd).append(productSpecAttr);
 
                     }
-                });
 
+                    obj.finalPriceThisProductIs = tagPriceResult + attribuePriceResult;
+
+                    console.log(obj);
+
+                    let productPrice = $("<h6/>", {
+
+                        text: obj.finalPriceThisProductIs,
+                        id: "price" + rnd
+
+                    });
+
+                    $("#ProductPrice" + rnd).append(productPrice);
+
+                    let productName = $("<h6/>", {
+
+                        text: obj.product
+
+                    });
+
+                    let productDate = $("<h6/>", {
+                        text: obj.date
+                    });
+
+                    $("#ProductDate" + rnd).append(productDate);
+
+                    let productAddress = $("<div/>", {
+                        text: obj.userAddress
+                    });
+
+                    $("#ProductLocation" + rnd).append(productAddress);
+
+                    $("#ProductName" + rnd).append(productName);
+
+                    totalProducts.push(rnd);
+                    console.log(totalProducts);
+
+                    totalProducts.forEach(element => {
+                        event.preventDefault();
+                        $("#deleteProduct" + element).click(function(event) {
+                            totalPrice = totalPrice - $("#price" + element)
+                                .text();
+                            $(this).parent().remove();
+                            $("#finalPricecontent").val(totalPrice);
+                            event.preventDefault();
+                        });
+
+                    });
+
+
+
+                    totalPrice += obj.finalPriceThisProductIs;
+                    console.log(totalPrice);
+
+                    $("#finalPricecontent").val(totalPrice);
+
+                    event.preventDefault();
+
+                }
             });
 
-            // let test = document.getElementById('test')
+        });
+
+        // let test = document.getElementById('test')
 
 
 
-            // giveInformation.addEventListener('click', function() {
-            //     test2.textContent = Shahrestan.value
-            //     test.textContent = date.value
-            // });
+        // giveInformation.addEventListener('click', function() {
+        //     test2.textContent = Shahrestan.value
+        //     test.textContent = date.value
+        // });
 
 
 
 
 
 
-            $(".previous").click(function() {
+        $(".previous").click(function() {
 
-                current_fs = $(this).parent();
-                previous_fs = $(this).parent().prev();
+            current_fs = $(this).parent();
+            previous_fs = $(this).parent().prev();
 
-                //Remove class active
-                $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+            //Remove class active
+            $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
 
-                //show the previous fieldset
-                previous_fs.show();
+            //show the previous fieldset
+            previous_fs.show();
 
-                //hide the current fieldset with style
-                current_fs.animate({
-                    opacity: 0
-                }, {
-                    step: function(now) {
-                        // for making fielset appear animation
-                        opacity = 1 - now;
-                        current_fs.css({
-                            'display': 'none',
-                            'position': 'relative'
-                        });
-                        previous_fs.css({
-                            'opacity': opacity
-                        });
-                    },
-                    duration: 500
-                });
-                setProgressBar(--current);
+            //hide the current fieldset with style
+            current_fs.animate({
+                opacity: 0
+            }, {
+                step: function(now) {
+                    // for making fielset appear animation
+                    opacity = 1 - now;
+                    current_fs.css({
+                        'display': 'none',
+                        'position': 'relative'
+                    });
+                    previous_fs.css({
+                        'opacity': opacity
+                    });
+                },
+                duration: 500
             });
+            setProgressBar(--current);
+        });
 
-            function setProgressBar(curStep) {
-                var percent = parseFloat(100 / steps) * curStep;
-                percent = percent.toFixed();
-                $(".progress-bar")
-                    .css("width", percent + "%")
-            }
+        function setProgressBar(curStep) {
+            var percent = parseFloat(100 / steps) * curStep;
+            percent = percent.toFixed();
+            $(".progress-bar")
+                .css("width", percent + "%")
+        }
 
-            $(".submit").click(function() {
-                return false;
-            })
+        $(".submit").click(function() {
+        return false;
+        })
 
         });
 
