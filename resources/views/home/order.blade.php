@@ -333,63 +333,6 @@
                         </fieldset> --}}
                         <fieldset>
 
-                            <div id="dynamic-content" class="row mx-auto">
-
-
-
-                                {{-- Company User Information --}}
-
-
-
-
-
-                                {{-- User Orders Content --}}
-                                <div id="order" class="row tab_content">
-                                    <h4>سفارش های شما</h4>
-                                    <div class="footer-line"><span></span></div>
-                                    <div id="productBox" class="col-md-12">
-
-                                        <div class="order-collapse">
-                                            <ul class="responsive-table">
-                                                <li class="table-header">
-                                                    <div class="col col-1">هزینه خدمات</div>
-                                                    <div class="col col-2">تخفیف</div>
-                                                    <div class="col col-3">مالیات و عوارض</div>
-                                                    <div class="col col-4">مبلغ کل</div>
-                                                    <div class="col col-5">وضعیت سفارش</div>
-                                                </li>
-                                                <li class="table-row">
-                                                    <div class="col col-1" data-label="هزینه پکیج">۲٬۵۰۰٬۰۰۰ تومان
-                                                    </div>
-                                                    <div class="col col-2" data-label="ایاب و ذهاب">۲۰۰٬۰۰۰ تومان
-                                                    </div>
-                                                    <div class="col col-3" data-label="خدمت اضافه">۳۰۰٬۰۰۰ تومان</div>
-                                                    <div class="col col-4" data-label="مبلغ کل">۳٬۰۰۰٬۰۰۰ تومان</div>
-                                                    <div class="col col-5" data-label="وضعیت سفارش">در حال انجام</div>
-                                                </li>
-
-                                            </ul>
-                                            <button class="secondary-btn">چاپ فاکتور</button>
-                                        </div>
-                                    </div>
-
-
-
-
-                                </div>
-
-                                <div>
-                                    <span>جمع کل پرداختی شما</span> <input id="finalPricecontent" value="0"
-                                        class="text-danger" disabled>
-                                </div>
-
-                                <input type="button" name="previous" class="info-btn mx-auto w-50 " value="پرداخت" />
-                            </div>
-
-
-
-
-
 
 
                             <input type="button" name="previous" class="previous action-button-previous mt-3  teeest"
