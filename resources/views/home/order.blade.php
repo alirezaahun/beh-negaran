@@ -35,7 +35,7 @@
                         <fieldset>
 
                             <div class="col-12">
-                                <button type="button" id="modalBtn" class="secondary-btn"> testافزودن آدرس</button>
+                                <button type="button" id="modalBtn" class="secondary-btn">  افزودن آدرس</button>
 
 
                                 <!-- The Modal -->
@@ -48,7 +48,7 @@
                                             <p class="text-secondary">لطفا اطلاعات شناسایی خود را وارد کنید. آدرس
                                                 شما
                                                 باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
-                                            <form id="addressForm">
+                                            <div id="addressForm form-control">
                                                 <div class="form-group">
                                                     <label for="userAddress">آدرس</label>
                                                     <input type="text" id="addresses" name="addresses" class="form-control"
@@ -57,12 +57,12 @@
 
                                                 <div name="map" id="map" style="height: 200px"></div>
                                                 <button class="secondary-btn w-100">ذخیره</button>
-                                            </form>
+                                            </div>
                                         </div>
                                     </div>
 
                                 </div>
-                                <div class="form-group" dir="ltr">
+                                <div class="form-group" dir="">
                                     <label class='float-right mt-4 mb-2 gg' for="state">آدرس های ثبت
                                         شده</label>
                                     <div class="form-contorol">
@@ -82,12 +82,19 @@
                                         <input type="text" id="currentAddress" class="form-control" disabled>
                                     </div>
 
-                                    <div class="input-group date-input">
-                                        <label class='float-right mt-4 mb-2 gg' for="state">:انتخاب تاریخ
-                                        </label>
-                                        <span class="input-group-text" id="dtp1"><i class="fas fa-calendar-alt"></i></span>
-                                        <input id="date" type="text" class="form-control text-center"
-                                            placeholder="انتخاب تاریخ" data-name="dtp1-text" disabled>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label class=' mt-4 mb-2 gg d-block text-right' for="data-picker"> انتخاب
+                                                    تاریخ :</label>
+                                                <div class="input-group date-input">
+                                                    <span class="input-group-text" id="dtp1"><i
+                                                            class="fas fa-calendar-alt"></i></span>
+                                                    <input id="date" type="text" class="form-control text-center"
+                                                        placeholder="انتخاب تاریخ" data-name="dtp1-text">
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -623,7 +630,7 @@
                             let optionAttrLabel = $("<label/>", {
                                 text: "تعداد دوربین",
                                 id: `ObjQuantityLabel${element.id}`
-                            }).addClass(' mt-2 order-margin ');
+                            }).addClass(' mt-2 order-margin-ObjQuantityLabel test ');
 
                             let optionAttrInput = $("<input/>", {
                                 type: "number",
