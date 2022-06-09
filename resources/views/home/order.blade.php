@@ -24,7 +24,7 @@
                         </ul>
                         <!-- fieldsets -->
                         <?php
-                        
+
                         $getParents = App\Models\Category::where('parent_id', 0)
                             ->with('children', 'attributes')
                             ->get();
@@ -34,10 +34,8 @@
                         ?>
                         <fieldset>
 
-
-
                             <div class="col-12">
-                                <button type="button" id="modalBtn" class="secondary-btn">افزودن آدرس</button>
+                                <button type="button" id="modalBtn" class="secondary-btn"> testافزودن آدرس</button>
 
 
                                 <!-- The Modal -->
@@ -50,26 +48,27 @@
                                             <p class="text-secondary">لطفا اطلاعات شناسایی خود را وارد کنید. آدرس
                                                 شما
                                                 باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
-                                            <div id="addressForm1" class="form-control">
+                                            <form id="addressForm">
                                                 <div class="form-group">
                                                     <label for="userAddress">آدرس</label>
-                                                    <input type="text" name="addresses" class="form-control"
+                                                    <input type="text" id="addresses" name="addresses" class="form-control"
                                                         placeholder="تهران، خیابان ۹ شرقی...">
                                                 </div>
 
-                                                <div name="map" id="Addmap" style="height: 200px"></div>
+                                                <div name="map" id="map" style="height: 200px"></div>
                                                 <button class="secondary-btn w-100">ذخیره</button>
-                                            </div>
+                                            </form>
                                         </div>
                                     </div>
 
                                 </div>
-                                <div class="form-group">
-                                    <label class='float-right mt-4 mb-2 gg ' for="state">آدرس های ثبت شده :</label>
+                                <div class="form-group" dir="ltr">
+                                    <label class='float-right mt-4 mb-2 gg' for="state">آدرس های ثبت
+                                        شده</label>
                                     <div class="form-contorol">
 
 
-                                        <select id="userAddresses" runat="server" class="form-control" name="state" >
+                                        <select id="userAddresses" runat="server" class="form-control" name="state">
                                             @foreach ($user->addresses as $address)
                                                 <option class="form-group" value="{{ $address->address }}">
                                                     {{ $address->address }}</option>
@@ -78,23 +77,17 @@
                                     </div>
 
                                     <div class="form-contorol">
-                                        <label class='float-right mt-4 mb-2 gg' for="state"> آدرس انتخابی شما :</label>
+                                        <label class='float-right mt-4 mb-2 gg' for="state">:آدرس انتخابی
+                                            شما</label>
                                         <input type="text" id="currentAddress" class="form-control" disabled>
                                     </div>
 
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div class="form-group">
-                                                <label class=' mt-4 mb-2 gg d-block text-right' for="data-picker"> انتخاب
-                                                    تاریخ :</label>
-                                                <div class="input-group date-input">
-                                                    <span class="input-group-text" id="dtp1"><i
-                                                            class="fas fa-calendar-alt"></i></span>
-                                                    <input id="date" type="text" class="form-control text-center"
-                                                        placeholder="انتخاب تاریخ" data-name="dtp1-text">
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="input-group date-input">
+                                        <label class='float-right mt-4 mb-2 gg' for="state">:انتخاب تاریخ
+                                        </label>
+                                        <span class="input-group-text" id="dtp1"><i class="fas fa-calendar-alt"></i></span>
+                                        <input id="date" type="text" class="form-control text-center"
+                                            placeholder="انتخاب تاریخ" data-name="dtp1-text" disabled>
                                     </div>
                                 </div>
                             </div>
@@ -192,8 +185,12 @@
                                                                                     <hr class="aaa w-50 mx-auto mt-0">
                                                                                 </div>
                                                                                 <div id="pushOptionAttr{{ $category->id }}"
-                                                                                    class="pushOptionAttr-customMargin">
+                                                                                    class="pushOptionAttr-customMargin"
+                                                                                    {{-- class=" m-2  form-check d-flex justify-content-md-around justify-content-md-start  custom-border mt-md-4 mt-lg-0" --}}>
+
                                                                                 </div>
+
+
                                                                             </div>
 
 
@@ -210,10 +207,10 @@
                                                                                 </div>
                                                                             </div>
                                                                             <div
-                                                                                class="col-12 col-md-6  col-lg-12  text-justify mt-3 d-flex margin-order-2  mb-3 ">
+                                                                                class="col-12 col-md-6  col-lg-12  text-justify mt-3 d-flex margin-order-2 ">
 
                                                                                 <div id="pushTags{{ $category->id }}"
-                                                                                    class=" d-xs-none d-lg-flex pushTags-customMargin my-2">
+                                                                                    class=" d-xs-none d-lg-flex pushTags-customMargin">
                                                                                 </div>
 
                                                                                 <!-- Checked checkbox -->
@@ -242,7 +239,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <input type="button" name="next" class="next action-button custom-pricing-margin-btn  firstBtn" value="بعدی" />
+                            <input type="button" name="next" class="next action-button custom-pricing-margin-btn  firstBtn"
+                                value="بعدی" />
                         </fieldset>
                         {{-- <fieldset>
                             <h2 id="heading"> آدرس و تاریخ</h2>
@@ -371,7 +369,7 @@
                                                 </li>
 
                                             </ul>
-                                            <button id="recipt-print" class="secondary-btn">چاپ فاکتور</button>
+                                            <button class="secondary-btn">چاپ فاکتور</button>
                                         </div>
                                     </div>
 
@@ -380,6 +378,10 @@
 
                                 </div>
 
+                                <div>
+                                    <span>جمع کل پرداختی شما</span> <input id="finalPricecontent" value="0"
+                                        class="text-danger" disabled>
+                                </div>
 
                                 <input type="button" name="previous" class="info-btn mx-auto w-50 " value="پرداخت" />
                             </div>
@@ -408,11 +410,59 @@
 
 @section('js')
     <script>
+        const dtp1Instance = new mds.MdsPersianDateTimePicker(document.getElementById('dtp1'), {
+            targetTextSelector: '[data-name="dtp1-text"]',
+            targetDateSelector: '[data-name="dtp1-date"]',
+            persianNumber: true,
+            isGregorian: false,
+            disableBeforeToday: true,
+
+
+        });
+
+        dtp1Instance.setDatePersian(1401, 03, 18);
+
+        var lat = 35.699739;
+            var lng = 51.338097;
+            var getId = @json($user);
+
+            var map = new L.Map('map', {
+                key: 'web.5j4qJGGkEPdoi3S18YqklpipMjVUa7nDm8cuiiL9',
+                maptype: 'dreamy',
+                center: [lat, lng],
+                zoom: 14,
+                traffic: true,
+                onTrafficLayerSwitched: function(state) {
+                    console.log(state);
+                }
+            });
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: false
+            }).addTo(map);
+
+
+
+            var marker = L.marker([32.4279, 53.6880]).addTo(map)
+                .openPopup();
+
+            map.on('click', function(e) {
+                map.removeLayer(marker);
+                marker = new L.marker(e.latlng).addTo(map);
+                lat = marker._latlng.lat;
+                lng = marker._latlng.lng;
+
+                console.log(lat, lng);
+            });
+
         $(document).ready(function() {
             var current_fs, next_fs, previous_fs; //fieldsets
             var address;
             var opacity;
             var obj = {};
+            var totalProducts = [];
+            var totalPrice = 0;
             var calculate = [];
             var tagCalculate = [];
             var trigger = [];
@@ -421,8 +471,42 @@
             var attribuePriceResult = 0;
             var objArray = [];
             var current = 1;
+            var getChildreName;
+            var data = [];
+            var price = [];
+            var tagPrice = [];
+            var hour = [];
+            var quantity = [];
+            var tags = [];
+            var date = 0;
             var steps = $("fieldset").length;
             setProgressBar(current);
+
+            $('#addressForm').submit(function(event) {
+
+                console.log($('#addresses').val());
+                event.preventDefault();
+
+                // $.post("{{ route('addresses.store') }}", {
+
+                //     '_token': "{{ csrf_token() }}",
+                //     'address': $('#addresses').val(),
+                //     'user_id': "{{ $user->id }}",
+                //     'lat': lat,
+                //     'lng': lng
+
+                // }, function(response, status) {
+                //     console.log(response, status);
+
+                // }).fail(function(response) {
+
+                //     console.log(response);
+                // })
+
+                // event.preventDefault();
+
+            });
+
             $(".next").click(function() {
                 current_fs = $(this).parent();
                 next_fs = $(this).parent().next();
@@ -453,20 +537,6 @@
             let attributes = @json($getChildren);
             let parents = @json($getParents);
 
-
-            $("#currentAddress").val($("#userAddresses").children("option:selected").val());
-            address = $("#currentAddress").val();
-            console.log(obj);
-
-            $("#userAddresses").change(function() {
-
-                $("#currentAddress").val($("#userAddresses").children(
-                    "option:selected").val());
-                address = $("#currentAddress").val();
-                console.log(obj);
-
-            });
-
             parents.forEach(element => {
 
                 $("#radio" + element.id).change(function() {
@@ -480,9 +550,17 @@
 
             $("select").change(function() {
 
+                $("#currentAddress").val($("#userAddresses").children("option:selected")
+                    .val());
+                address = $("#currentAddress").val();
+                Object.assign(obj, {
+                    userAddress: address
+                })
+                console.log(obj);
+
                 obj = {};
                 var getChildrenId = $(this).children(":selected").attr("id");
-                var getChildreName = $(this).children(":selected").text();
+                getChildreName = $(this).children(":selected").text();
                 trigger = [];
                 tagTrigger = [];
                 $("#push" + getChildrenId).empty();
@@ -533,6 +611,7 @@
                                 type: "number",
                                 id: `HourQty${element.id}`,
                                 name: "tentacles",
+                                value: 1,
                                 min: "1",
                                 max: "10",
                                 class: "text-center",
@@ -544,12 +623,13 @@
                             let optionAttrLabel = $("<label/>", {
                                 text: "تعداد دوربین",
                                 id: `ObjQuantityLabel${element.id}`
-                            }).addClass(' mt-2 order-margin-ObjQuantityLabel ');
+                            }).addClass(' mt-2 order-margin ');
 
                             let optionAttrInput = $("<input/>", {
                                 type: "number",
                                 class: "text-center h-25 border-custom",
                                 id: `ObjQuantity${element.id}`,
+                                value: 1,
                                 min: "1",
                                 max: "10"
                             }).addClass(' float-left ');
@@ -564,12 +644,12 @@
                                 "<br/>");
                         });
 
-                        var data = [];
-                        var price = [];
-                        var tagPrice = [];
-                        var hour = [];
-                        var quantity = [];
-                        var tags = [];
+                        data = [];
+                        price = [];
+                        tagPrice = [];
+                        hour = [];
+                        quantity = [];
+                        tags = [];
                         trigger.forEach(element => {
 
                             $('#AttributeCheckbox' + element.id).change(function() {
@@ -585,6 +665,18 @@
 
                                     $("#HourQty" + element.id).change(
                                         function() {
+
+                                            if ($("#HourQty" + element.id)
+                                                .val() <= 0) {
+                                                $("#HourQty" + element.id).val(
+                                                    1);
+                                            }
+
+                                            if ($("#HourQty" + element.id)
+                                                .val() > 5) {
+                                                $("#HourQty" + element.id).val(
+                                                    5);
+                                            }
 
                                             for (let i = 0; i < data
                                                 .length; i++) {
@@ -604,6 +696,18 @@
 
                                     $("#ObjQuantity" + element.id).change(
                                         function() {
+
+                                            if ($("#ObjQuantity" + element.id)
+                                                .val() <= 0) {
+                                                $("#ObjQuantity" + element.id)
+                                                    .val(1);
+                                            }
+
+                                            if ($("#ObjQuantity" + element.id)
+                                                .val() > 5) {
+                                                $("#ObjQuantity" + element.id)
+                                                    .val(5);
+                                            }
 
                                             for (let i = 0; i < data
                                                 .length; i++) {
@@ -651,8 +755,6 @@
                                 console.log(tags, tagPrice);
                             });
                         });
-
-
                         obj = {
                             product: getChildreName,
                             attributes: data,
@@ -661,129 +763,212 @@
                             quantity: quantity,
                             tags: tags,
                             tagPrice: tagPrice,
-                            userAddress: address
+                            userAddress: address,
+                            date: date
                         }
+
+                        $("#userAddresses").change(function() {
+
+                            $("#currentAddress").val($("#userAddresses").children(
+                                "option:selected").val());
+                            address = $("#currentAddress").val();
+                            Object.assign(obj, {
+                                product: getChildreName,
+                                attributes: data,
+                                AttributePrice: price,
+                                hour: hour,
+                                quantity: quantity,
+                                tags: tags,
+                                tagPrice: tagPrice,
+                                userAddress: address,
+                                date: date
+                            });
+                            console.log(obj);
+
+                        });
                     }
                 });
             });
+
+            $("#date").change(function() {
+                date = moment(dtp1Instance.getDate(), 'YYYY/MM/DD').locale(
+                    'fa').format('YYYY/MM/DD');
+                Object.assign(obj, {
+                    product: getChildreName,
+                    attributes: data,
+                    AttributePrice: price,
+                    hour: hour,
+                    quantity: quantity,
+                    tags: tags,
+                    tagPrice: tagPrice,
+                    userAddress: address,
+                    date: date
+                });
+            });
+
 
             parents.forEach(element => {
 
                 $("#add" + element.id).click(function(event) {
+                    event.preventDefault();
+                    if (obj.date == null || obj.date == 0) {
 
-                    calculate = [];
-                    attribuePriceResult = 0;
-                    tagCalculate = [];
-                    tagPriceResult = 0;
+                        alert("لطفا تاریخ را انتخاب کنید");
 
-                    let rnd = Math.floor((Math.random() * 1000000) + 1);
-                    console.log(rnd);
+                    } else {
 
-                    $("#productBox").append(`<ul id=${rnd}>` +
-                        `<li id=ProductLocation${rnd}> <span class='text-secondary'> آدرس <hr>` +
-                        `<li id=ProductSpecAttr${rnd}><span class='text-secondary'>خدمات ویژه  <hr> ` +
-                        `<li id=ProductDetails${rnd}> <span class='text-secondary'>ویژگی ها <hr>` +
-                        `<li id=ProductPrice${rnd}> <span class='text-secondary'> جمع کل <hr>` +
-                        `<li id=ProductName${rnd}> <span class='text-secondary'> نوع خدمت <hr>`
-                    );
+                        calculate = [];
+                        attribuePriceResult = 0;
+                        tagCalculate = [];
+                        tagPriceResult = 0;
+
+                        let rnd = Math.floor((Math.random() * 1000000) + 1);
+                        console.log(rnd);
+
+                        $("#productBox").append(`<ul id=${rnd}>` +
+                            `<li id=ProductLocation${rnd}> <span class='text-secondary'> آدرس <hr>` +
+                            `<li id=ProductSpecAttr${rnd}><span class='text-secondary'>خدمات ویژه  <hr> ` +
+                            `<li id=ProductDetails${rnd}> <span class='text-secondary'>ویژگی ها <hr>` +
+                            `<li id=ProductPrice${rnd}> <span class='text-secondary'> جمع کل <hr>` +
+                            `<li id=ProductName${rnd}> <span class='text-secondary'> نوع خدمت <hr>` +
+                            `<li id=ProductDate${rnd}> <span class='text-secondary'>تاریخ<hr>` +
+                            `<li id=deleteProduct${rnd}> <span class='text-secondary'> عملیات <hr> <button id=deleteProduct${rnd} class='text-danger'> حذف خدمت </button>`
+                        );
 
 
-                    for (let i = 0; i < obj.attributes.length; i++) {
-                        event.preventDefault();
-                        console.log(obj.attributes[i] + obj.AttributePrice[i] + "ساعت:" + obj
-                            .hour[
-                                i] + "تعداد" + obj.quantity[i]);
-                        var counter = 0;
+                        for (let i = 0; i < obj.attributes.length; i++) {
+                            event.preventDefault();
+                            console.log(obj.attributes[i] + obj.AttributePrice[i] + "ساعت:" + obj
+                                .hour[
+                                    i] + "تعداد" + obj.quantity[i]);
+                            var counter = 0;
 
-                        for (let x = 0; x < obj.quantity[i]; x++) {
+                            for (let x = 0; x < obj.quantity[i]; x++) {
 
-                            if (counter == 0) {
+                                if (counter == 0) {
 
-                                calculate.push(obj.AttributePrice[i]);
+                                    calculate.push(obj.AttributePrice[i]);
 
-                            } else {
-                                let discount = (obj.AttributePrice[i] * 15) / 100;
-                                calculate.push(obj.AttributePrice[i] - discount);
+                                } else {
+                                    let discount = (obj.AttributePrice[i] * 15) / 100;
+                                    calculate.push(obj.AttributePrice[i] - discount);
+                                }
+
+                                attribuePriceResult = calculate.reduce((total, number) => total +
+                                    number, 0);
+                                counter++;
+                                console.log(calculate, attribuePriceResult);
+
+
                             }
 
-                            attribuePriceResult = calculate.reduce((total, number) => total +
-                                number, 0);
-                            counter++;
-                            console.log(calculate, attribuePriceResult);
+                            obj.AttributespriceDetails = calculate;
+                            obj.attributesPriceResult = attribuePriceResult;
 
+
+                            let productDetails = $("<div/>", {
+
+                                text: " ویژگی " + obj.attributes[i] + " ساعت: " + obj.hour[
+                                        i] +
+                                    " تعداد: " + obj.quantity[i]
+
+
+                            }).addClass('text-right ');
+
+                            $("#ProductDetails" + rnd).append(productDetails);
+                        }
+                        alert("با موفقیت به سبد خرید اضافه شد")
+                        for (let i = 0; i < obj.tags.length; i++) {
+
+                            tagCalculate.push(obj.tagPrice[i]);
+                            console.log(tagCalculate);
+                            tagPriceResult = tagCalculate.reduce((total, number) => total + number,
+                                0);
+                            obj.tagPriceDetails = tagCalculate;
+                            obj.tagPriceResult = tagPriceResult;
+
+                            console.log(tagPriceResult);
+                            let productSpecAttr = $("<h6/>", {
+
+                                text: obj.tags[i]
+
+                            });
+
+                            $("#ProductSpecAttr" + rnd).append(productSpecAttr);
 
                         }
 
-                        obj.AttributespriceDetails = calculate;
-                        obj.attributesPriceResult = attribuePriceResult;
+                        obj.finalPriceThisProductIs = tagPriceResult + attribuePriceResult;
 
+                        console.log(obj);
 
-                        let productDetails = $("<div/>", {
+                        let productPrice = $("<h6/>", {
 
-                            text: " ویژگی " + obj.attributes[i] + " ساعت: " + obj.hour[i] +
-                                " تعداد: " + obj.quantity[i]
-
-
-                        }).addClass('text-right ');
-
-                        $("#ProductDetails" + rnd).append(productDetails);
-                    }
-                    alert("با موفقیت به سبد خرید اضافه شد")
-                    for (let i = 0; i < obj.tags.length; i++) {
-
-                        tagCalculate.push(obj.tagPrice[i]);
-                        console.log(tagCalculate);
-                        tagPriceResult = tagCalculate.reduce((total, number) => total + number,
-                            0);
-                        obj.tagPriceDetails = tagCalculate;
-                        obj.tagPriceResult = tagPriceResult;
-
-                        console.log(tagPriceResult);
-                        let productSpecAttr = $("<h6/>", {
-
-                            text: obj.tags[i]
+                            text: obj.finalPriceThisProductIs,
+                            id: "price" + rnd
 
                         });
 
-                        $("#ProductSpecAttr" + rnd).append(productSpecAttr);
+                        $("#ProductPrice" + rnd).append(productPrice);
+
+                        let productName = $("<h6/>", {
+
+                            text: obj.product
+
+                        });
+
+                        let productDate = $("<h6/>", {
+                            text: obj.date
+                        });
+
+                        $("#ProductDate" + rnd).append(productDate);
+
+                        let productAddress = $("<div/>", {
+                            text: obj.userAddress
+                        });
+
+                        $("#ProductLocation" + rnd).append(productAddress);
+
+                        $("#ProductName" + rnd).append(productName);
+
+                        totalProducts.push(rnd);
+                        console.log(totalProducts);
+
+                        totalProducts.forEach(element => {
+                            event.preventDefault();
+                            $("#deleteProduct" + element).click(function(event) {
+                                totalPrice = totalPrice - $("#price" + element)
+                                    .text();
+                                $(this).parent().remove();
+                                $("#finalPricecontent").val(totalPrice);
+                                event.preventDefault();
+                            });
+
+                        });
+
+
+
+                        totalPrice += obj.finalPriceThisProductIs;
+                        console.log(totalPrice);
+
+                        $("#finalPricecontent").val(totalPrice);
+
+                        event.preventDefault();
 
                     }
-
-                    obj.finalPriceThisProductIs = tagPriceResult + attribuePriceResult;
-
-                    console.log(obj);
-
-                    let productPrice = $("<h6/>", {
-
-                        text: obj.finalPriceThisProductIs
-
-                    });
-
-                    $("#ProductPrice" + rnd).append(productPrice);
-
-                    let productName = $("<h6/>", {
-
-                        text: obj.product
-
-                    });
-
-
-                    let productAddress = $("<div/>", {
-                        text: obj.userAddress
-                    });
-
-                    $("#ProductLocation" + rnd).append(productAddress);
-
-                    $("#ProductName" + rnd).append(productName);
-
-                    event.preventDefault();
-
-
                 });
 
             });
 
-      
+            // let test = document.getElementById('test')
+
+
+
+            // giveInformation.addEventListener('click', function() {
+            //     test2.textContent = Shahrestan.value
+            //     test.textContent = date.value
+            // });
+
 
 
 
@@ -860,8 +1045,6 @@
             }
         }
 
-
-
         // ****************(state and city)***********************
         // function Func(Shahrestanha) {
         //     var _Shahrestan = document.getElementById("Shahrestan");
@@ -880,16 +1063,6 @@
 
 
 
-
-
-        const dtp1Instance = new mds.MdsPersianDateTimePicker(document.getElementById('dtp1'), {
-            targetTextSelector: '[data-name="dtp1-text"]',
-            targetDateSelector: '[data-name="dtp1-date"]',
-            persianNumber: true,
-            enableTimePicker: true,
-
-
-        });
 
 
         $('add').click(function(event) {

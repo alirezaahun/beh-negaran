@@ -765,7 +765,7 @@
                 $.post("{{ route('addresses.store') }}", {
 
                     '_token': "{{ csrf_token() }}",
-                    'address': $('#addresses' + getId.id).val(),
+                    'address': $('#addresses').val(),
                     'user_id': "{{ $user->id }}",
                     'lat': lat,
                     'lng': lng
