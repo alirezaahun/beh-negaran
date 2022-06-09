@@ -58,7 +58,7 @@
                                     <div class="scrollbar">
                                         <div class="thumb"></div>
                                     </div>
-                                    <div class="slides">
+                                    <div id="first" class="slides">
                                         <div id="0" class="d-flex justify-content-around"><img class="img-fluid"
                                                 src="{{ asset('images/0-min.jpg') }}"></div>
                                         <div id="1" class="d-flex justify-content-around"><img class="img-fluid"
@@ -423,9 +423,9 @@
 
                     </div>
 
-                
 
-                    
+
+
 
                     <div class="col-1@sm col-1@xs my-sizer-element"></div>
                 </div>
@@ -445,6 +445,7 @@
         // ImageSlides------------------------------------
 
         var els = document.getElementsByClassName("gallery-container");
+        var getSlides;
         var slideGallery;
         var slides;
         var count = 0;
@@ -504,7 +505,7 @@
 
         }
 
-       
+
 
 
         // for (let x = 0; x < sliderHolder.length; x++) {

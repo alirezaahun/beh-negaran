@@ -24,7 +24,7 @@
                         </ul>
                         <!-- fieldsets -->
                         <?php
-                        
+
                         $getParents = App\Models\Category::where('parent_id', 0)
                             ->with('children', 'attributes')
                             ->get();
@@ -48,14 +48,14 @@
                                             <p class="text-secondary">لطفا اطلاعات شناسایی خود را وارد کنید. آدرس
                                                 شما
                                                 باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
-                                            <form id="addressForm1">
+                                            <form id="addressForm">
                                                 <div class="form-group">
                                                     <label for="userAddress">آدرس</label>
-                                                    <input type="text" name="addresses" class="form-control"
-                                                         placeholder="تهران، خیابان ۹ شرقی...">
+                                                    <input type="text" id="addresses" name="addresses" class="form-control"
+                                                        placeholder="تهران، خیابان ۹ شرقی...">
                                                 </div>
-    
-                                                <div name="map" id="Addmap" style="height: 200px"></div>
+
+                                                <div name="map" id="map" style="height: 200px"></div>
                                                 <button class="secondary-btn w-100">ذخیره</button>
                                             </form>
                                         </div>
@@ -422,6 +422,40 @@
 
         dtp1Instance.setDatePersian(1401, 03, 18);
 
+        var lat = 35.699739;
+            var lng = 51.338097;
+            var getId = @json($user);
+
+            var map = new L.Map('map', {
+                key: 'web.5j4qJGGkEPdoi3S18YqklpipMjVUa7nDm8cuiiL9',
+                maptype: 'dreamy',
+                center: [lat, lng],
+                zoom: 14,
+                traffic: true,
+                onTrafficLayerSwitched: function(state) {
+                    console.log(state);
+                }
+            });
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: false
+            }).addTo(map);
+
+
+
+            var marker = L.marker([32.4279, 53.6880]).addTo(map)
+                .openPopup();
+
+            map.on('click', function(e) {
+                map.removeLayer(marker);
+                marker = new L.marker(e.latlng).addTo(map);
+                lat = marker._latlng.lat;
+                lng = marker._latlng.lng;
+
+                console.log(lat, lng);
+            });
+
         $(document).ready(function() {
             var current_fs, next_fs, previous_fs; //fieldsets
             var address;
@@ -447,6 +481,32 @@
             var date = 0;
             var steps = $("fieldset").length;
             setProgressBar(current);
+
+            $('#addressForm').submit(function(event) {
+
+                console.log($('#addresses').val());
+                event.preventDefault();
+
+                // $.post("{{ route('addresses.store') }}", {
+
+                //     '_token': "{{ csrf_token() }}",
+                //     'address': $('#addresses').val(),
+                //     'user_id': "{{ $user->id }}",
+                //     'lat': lat,
+                //     'lng': lng
+
+                // }, function(response, status) {
+                //     console.log(response, status);
+
+                // }).fail(function(response) {
+
+                //     console.log(response);
+                // })
+
+                // event.preventDefault();
+
+            });
+
             $(".next").click(function() {
                 current_fs = $(this).parent();
                 next_fs = $(this).parent().next();
