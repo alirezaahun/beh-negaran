@@ -387,7 +387,7 @@
 
                                 <div>
                                     <span>جمع کل پرداختی شما</span> <input id="finalPricecontent" value="0"
-                                        class="text-danger" disabled>
+                                        class="text-danger form-control my-3 " disabled>
                                 </div>
 
                                 <input type="button" name="previous" class="info-btn mx-auto w-50 " value="پرداخت" />
@@ -864,7 +864,7 @@
                         `<li id=ProductPrice${rnd}> <span class='text-secondary'> جمع کل <hr>` +
                         `<li id=ProductName${rnd}> <span class='text-secondary'> نوع خدمت <hr>` +
                         `<li id=ProductDate${rnd}> <span class='text-secondary'>تاریخ<hr>` +
-                        `<li id=deleteProduct${rnd}> <span class='text-secondary'> عملیات <hr> <button id=deleteProduct${rnd} class='text-danger'> حذف خدمت </button>`
+                        `<li id=deleteProduct${rnd}> <span class='text-secondary'> عملیات <hr> <button id=deleteProduct${rnd} class='text-danger secondary-btn cutom-color'> حذف خدمت </button>`
                     );
 
 

@@ -1838,6 +1838,10 @@ a {
   box-shadow: none;
 }
 
+.cutom-color:hover {
+  color: white !important;
+}
+
 /* BREAKPOINTS ----- */
 @media screen and (max-width: 480px) {
   .tabs {
