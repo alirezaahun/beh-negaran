@@ -1504,7 +1504,7 @@ footer p span {
 }
 
 .content-min-height {
-  min-height: 1500px;
+  min-height: 2000px;
 }
 
 #progressbar {
@@ -1845,16 +1845,6 @@ a {
 }
 
 /* BREAKPOINTS ----- */
-@media only screen and (min-width: 568px) and (max-width: 766px) {
-  #msform .action-button.firstBtn {
-    transform: translate(10px, 750px);
-  }
-}
-@media only screen and (max-width: 576px) {
-  #msform .action-button.firstBtn {
-    transform: translate(10px, 900px);
-  }
-}
 @media screen and (max-width: 767px) {
   .tabs {
     min-height: 400px;
@@ -1869,13 +1859,33 @@ a {
   }
 
   .content-min-height {
-    min-height: 1800px;
+    min-height: 2300px;
   }
 
   .pushTags-customMargin {
     margin-right: 20px;
   }
 }
+.firstBtn {
+  position: relative;
+  top: 500px;
+}
+
+.modal-order {
+  background-color: #95a5a67c;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  color: var(--clr-dark);
+}
+
+.modal-order:focus-within {
+  border-color: var(--clr-accent);
+  background-color: #fff;
+  outline: none;
+  box-shadow: none;
+}
+
 @media screen and (max-width: 480px) {
   .tabs {
     min-height: 580px;
@@ -1906,12 +1916,7 @@ a {
   }
 
   .content-min-height {
-    min-height: 2000px;
-  }
-}
-@media screen and (max-width: 991px) {
-  .pushOptionAttr-customMargin {
-    margin-right: 25px;
+    min-height: 2500px;
   }
 }
 .project-page-title h3 {

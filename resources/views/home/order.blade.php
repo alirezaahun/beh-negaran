@@ -36,47 +36,65 @@
 
 
 
-
                             <div class="col-12">
-                                <div class="form-group" dir="ltr">
-                                    <label class='float-right mt-4 mb-2 gg' for="state">آدرس های ثبت
-                                        شده</label>
-
-                                        <button type="button" id="modalBtn" class="secondary-btn">افزودن آدرس</button>
+                                <button type="button" id="modalBtn" class="secondary-btn">افزودن آدرس</button>
 
 
-                                        <!-- The Modal -->
-                                        <div id="theModal" class="modal">
-                                        
-                                            <!-- Modal content -->
-                                            <div class="modal-content">
-                                                <span class="close">&times;</span>
-                                                <div class="modal-body pb-3">
-                                                    <p class="text-secondary">لطفا اطلاعات شناسایی خود را وارد کنید. آدرس
-                                                        شما
-                                                        باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
-                                                    <div id="addressForm1" class="form-control">
-                                                        <div class="form-group">
-                                                            <label for="userAddress">آدرس</label>
-                                                            <input type="text" name="addresses" class="form-control"
-                                                                 placeholder="تهران، خیابان ۹ شرقی...">
-                                                        </div>
-                                        
-                                                        <div name="map" id="Addmap" style="height: 200px"></div>
-                                                        <button class="secondary-btn w-100">ذخیره</button>
-                                                    </div>
+                                <!-- The Modal -->
+                                <div id="theModal" class="modal">
+
+                                    <!-- Modal content -->
+                                    <div class="modal-content">
+                                        <span class="close">&times;</span>
+                                        <div class="modal-body pb-3">
+                                            <p class="text-secondary">لطفا اطلاعات شناسایی خود را وارد کنید. آدرس
+                                                شما
+                                                باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
+                                            <div id="addressForm1" class="form-control">
+                                                <div class="form-group">
+                                                    <label for="userAddress">آدرس</label>
+                                                    <input type="text" name="addresses" class="form-control"
+                                                        placeholder="تهران، خیابان ۹ شرقی...">
                                                 </div>
-                                            </div>
-                                        
-                                        </div>
 
+                                                <div name="map" id="Addmap" style="height: 200px"></div>
+                                                <button class="secondary-btn w-100">ذخیره</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="form-group">
+                                    <label class='float-right mt-4 mb-2 gg ' for="state">آدرس های ثبت شده :</label>
                                     <div class="form-contorol">
-                                        <select id="userAddresses" runat="server" class="form-control" name="state">
+
+
+                                        <select id="userAddresses" runat="server" class="form-control" name="state" >
                                             @foreach ($user->addresses as $address)
                                                 <option class="form-group" value="{{ $address->address }}">
                                                     {{ $address->address }}</option>
                                             @endforeach
                                         </select>
+                                    </div>
+
+                                    <div class="form-contorol">
+                                        <label class='float-right mt-4 mb-2 gg' for="state"> آدرس انتخابی شما :</label>
+                                        <input type="text" id="currentAddress" class="form-control" disabled>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label class=' mt-4 mb-2 gg d-block text-right' for="data-picker"> انتخاب
+                                                    تاریخ :</label>
+                                                <div class="input-group date-input">
+                                                    <span class="input-group-text" id="dtp1"><i
+                                                            class="fas fa-calendar-alt"></i></span>
+                                                    <input id="date" type="text" class="form-control text-center"
+                                                        placeholder="انتخاب تاریخ" data-name="dtp1-text">
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -228,8 +246,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <input type="button" name="next" class="next action-button custom-pricing-margin-btn  firstBtn"
-                                value="بعدی" />
+                            <input type="button" name="next" class="next action-button custom-pricing-margin-btn  firstBtn" value="بعدی" />
                         </fieldset>
                         {{-- <fieldset>
                             <h2 id="heading"> آدرس و تاریخ</h2>
