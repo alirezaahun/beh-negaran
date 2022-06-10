@@ -420,8 +420,8 @@ h6 {
 }
 
 .info-btn {
-  color: var(--clr-primary);
-  background-color: var(--clr-dark);
+  color: var(--clr-dark);
+  background: var(--clr-primary);
   margin-left: 1rem;
   cursor: pointer;
   line-height: 15px;
@@ -433,6 +433,13 @@ h6 {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 2px, rgba(0, 0, 0, 0.23) 0px 0px 3px;
   font-weight: 600;
   border: none;
+}
+
+.info-btn:hover {
+  box-shadow: rgba(255, 255, 255, 0.23) 0px 0px 3px inset, rgba(255, 255, 255, 0.16) 0px 0px 3px inset;
+  transition: all 0.3s ease;
+  color: var(--clr-primary);
+  background-color: var(--clr-dark);
 }
 
 .secondary-btn:hover {
@@ -1621,7 +1628,7 @@ footer p span {
   flex: 1;
 }
 
-.tabby-tab label.gg {
+.tabby-tab label.custom-lable {
   display: block;
   box-sizing: border-box;
   /* tab content must clear this */
@@ -1634,7 +1641,7 @@ footer p span {
   border-radius: 0.5rem;
 }
 
-.tabby-tab label.gg:hover {
+.tabby-tab label.custom-lable:hover {
   background: var(--clr-dark);
   color: var(--clr-primary);
 }
@@ -1844,6 +1851,10 @@ a {
 
 /* BREAKPOINTS ----- */
 @media screen and (max-width: 480px) {
+  .w-Custom-50 {
+    width: 75% !important;
+  }
+
   .tabs {
     min-height: 580px;
   }
@@ -1877,12 +1888,16 @@ a {
   }
 
   #msform .action-button.firstBtn {
-    transform: translate(2px, 660px);
+    transform: translate(2px, 680px);
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 992px) {
   #msform .action-button.firstBtn {
-    transform: translate(2px, 300px);
+    transform: translate(2px, 340px);
+  }
+
+  .text-Cutom-right {
+    text-align: center !important;
   }
 }
 @media screen and (max-width: 767px) {

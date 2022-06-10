@@ -5,10 +5,6 @@
 @endsection
 
 @section('content')
-    <!-- Main Section ---------------------------------------------------------------->
-
-
-
     <div class="container-fluid">
         <div class="row justify-content-center  content-min-height">
             <div class="col-11 col-sm-10 col-md-10 col-lg-12 col-xl-11 col-xl-5 text-center p-0 mt-3 mb-2">
@@ -19,7 +15,6 @@
                             <li class="active" id="account"><strong>خدمات</strong></li>
                             {{-- comment --}}
                             {{-- <li id="personal"><strong>زمان و مکان</strong></li> --}}
-
                             <li id="payment"><strong>پرداخت</strong></li>
                         </ul>
                         <!-- fieldsets -->
@@ -54,7 +49,6 @@
                                                     <input type="text" id="addresses1" name="addresses"
                                                         class="form-control" placeholder="تهران، خیابان ۹ شرقی...">
                                                 </div>
-
                                                 <div name="map" id="map" style="height: 200px"></div>
                                                 <button id="SubmitForm" class="secondary-btn w-100">ذخیره</button>
                                             </div>
@@ -63,7 +57,7 @@
 
                                 </div>
                                 <div class="form-group" dir="">
-                                    <label class='float-right mt-4 mb-2 gg' for="state">آدرس های ثبت
+                                    <label class='float-right mt-4 mb-2 custom-lable' for="state">آدرس های ثبت
                                         شده</label>
                                     <div class="form-contorol">
 
@@ -77,7 +71,7 @@
                                     </div>
 
                                     <div class="form-contorol">
-                                        <label class='float-right mt-4 mb-2 gg' for="state">:آدرس انتخابی
+                                        <label class='float-right mt-4 mb-2 custom-lable' for="state">:آدرس انتخابی
                                             شما</label>
                                         <input type="text" id="currentAddress" class="form-control" disabled>
                                     </div>
@@ -85,7 +79,7 @@
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="form-group">
-                                                <label class=' mt-4 mb-2 gg d-block text-right' for="data-picker"> انتخاب
+                                                <label class=' mt-4 mb-2 custom-lable d-block text-right' for="data-picker"> انتخاب
                                                     تاریخ :</label>
                                                 <div class="input-group date-input">
                                                     <span class="input-group-text" id="dtp1"><i
@@ -108,7 +102,7 @@
                                             <div class="tabby-tab">
                                                 <input type="radio" id="radio{{ $category->id }}" name="tabby-tabs"
                                                     checked>
-                                                <label class="gg"
+                                                <label class="custom-lable"
                                                     for="radio{{ $category->id }}">{{ $category->name }}</label>
                                                 <div class="tabby-content">
                                                     <div class="col-12 d-flex d-flex justify-content-center  mt-5">
@@ -230,13 +224,8 @@
                                                                 </div>
 
                                                                 <button id="add{{ $category->id }}"
-                                                                    class="button d-none d-md-block custom-margin-pricing w-50 text-center mx-auto"
+                                                                    class="button  d-md-block custom-margin-pricing  text-center mx-auto   w-Custom-50 w-50"
                                                                     role="button "> افزودن به سبد خرید</button>
-                                                                <button id="add{{ $category->id }}"
-                                                                    class="button d-block d-md-none  mb-3 w-75 text-center mx-auto"
-                                                                    role="button "> افزودن به سبد خرید</button>
-
-
                                                             </div>
                                                         </div>
                                                     </div>
@@ -341,21 +330,12 @@
                         <fieldset>
 
                             <div id="dynamic-content" class="row mx-auto">
-
-
-
                                 {{-- Company User Information --}}
-
-
-
-
-
                                 {{-- User Orders Content --}}
                                 <div id="order" class="row tab_content">
                                     <h4>سفارش های شما</h4>
                                     <div class="footer-line"><span></span></div>
                                     <div id="productBox" class="col-md-12">
-
                                         <div class="order-collapse">
                                             <ul class="responsive-table">
                                                 <li class="table-header">
@@ -374,32 +354,18 @@
                                                     <div class="col col-4" data-label="مبلغ کل">۳٬۰۰۰٬۰۰۰ تومان</div>
                                                     <div class="col col-5" data-label="وضعیت سفارش">در حال انجام</div>
                                                 </li>
-
                                             </ul>
                                             <button class="secondary-btn">چاپ فاکتور</button>
                                         </div>
                                     </div>
-
-
-
-
                                 </div>
-
                                 <div>
                                     <span>جمع کل پرداختی شما</span> <input id="finalPricecontent" value="0"
                                         class="text-danger form-control my-3 " disabled>
                                 </div>
-
                                 <input type="button" name="previous" class="info-btn mx-auto w-50 " value="پرداخت" />
                             </div>
-
-
-
-
-
-
-
-                            <input type="button" name="previous" class="previous action-button-previous mt-3  teeest"
+                            <input type="button" name="previous" class="previous action-button-previous mt-3  "
                                 value="Previous" />
                         </fieldset>
                     </form>
@@ -428,7 +394,6 @@
         });
 
         dtp1Instance.setDatePersian(1401, 03, 18);
-
         var lat = 35.699739;
         var lng = 51.338097;
         var getId = @json($user);
@@ -444,24 +409,23 @@
             }
         });
 
+
+
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
             attribution: false
         }).addTo(map);
 
 
-
-        var marker = L.marker([32.4279, 53.6880]).addTo(map)
-            .openPopup();
-
+        var marker = L.marker([32.4279, 53.6880]).addTo(map).openPopup();
         map.on('click', function(e) {
             map.removeLayer(marker);
             marker = new L.marker(e.latlng).addTo(map);
             lat = marker._latlng.lat;
             lng = marker._latlng.lng;
-
             console.log(lat, lng);
         });
+
 
         $(document).ready(function() {
             var current_fs, next_fs, previous_fs; //fieldsets
@@ -489,10 +453,13 @@
             var steps = $("fieldset").length;
             setProgressBar(current);
 
-            $("#SubmitForm").click(function(event) {
 
+
+            $("#SubmitForm").click(function(event) {
                 console.log($('#addresses1').val());
                 event.preventDefault();
+
+
 
                 $.post("{{ route('addresses.store') }}", {
 
@@ -501,14 +468,12 @@
                     'user_id': "{{ $user->id }}",
                     'lat': lat,
                     'lng': lng
-
                 }, function(response, status) {
                     console.log(status);
                     if (status == "success") {
 
                         let getAddress = $('#addresses1').val();
                         console.log(getAddress);
-
                         $('#userAddresses').append($('<option/>', {
                             text: getAddress
                         }));
@@ -521,23 +486,6 @@
 
             });
 
-            // $.post("{{ route('addresses.store') }}", {
-
-            //     '_token': "{{ csrf_token() }}",
-            //     'address': $('#addresses').val(),
-            //     'user_id': "{{ $user->id }}",
-            //     'lat': lat,
-            //     'lng': lng
-
-            // }, function(response, status) {
-            //     console.log(response, status);
-
-            // }).fail(function(response) {
-
-            //     console.log(response);
-            // })
-
-            // event.preventDefault();
 
         $(".next").click(function() {
             current_fs = $(this).parent();
@@ -623,8 +571,7 @@
                     element.attributes.forEach(element => {
 
                         trigger.push(element);
-                        // getAttributes.push(element);
-                        // console.log(element.);
+                     
                         let createAttr = $("<label/>", {
                             value: element.id,
                             id: `attributeLabel${element.id}`,
@@ -905,7 +852,7 @@
                                 " تعداد: " + obj.quantity[i]
 
 
-                        }).addClass('text-right ');
+                        }).addClass('text-right  text-Cutom-right');
 
                         $("#ProductDetails" + rnd).append(productDetails);
                     }
@@ -992,18 +939,7 @@
 
         });
 
-        // let test = document.getElementById('test')
-
-
-
-        // giveInformation.addEventListener('click', function() {
-        //     test2.textContent = Shahrestan.value
-        //     test.textContent = date.value
-        // });
-
-
-
-
+  
 
 
         $(".previous").click(function() {
@@ -1077,22 +1013,6 @@
             }
         }
 
-        // ****************(state and city)***********************
-        // function Func(Shahrestanha) {
-        //     var _Shahrestan = document.getElementById("Shahrestan");
-        //     _Shahrestan.options.length = 0;
-        //     if (Shahrestanha != "") {
-        //         var arr = Shahrestanha.split(",");
-        //         for (i = 0; i < arr.length; i++) {
-        //             if (arr[i] != "") {
-        //                 _Shahrestan.options[_Shahrestan.options.length] = new Option(arr[i], arr[i]);
-        //             }
-        //         }
-        //     }
-        // }
-
-        // ****************(Select beetween option  part 1   )***********************
-
 
 
 
@@ -1105,20 +1025,6 @@
         });
 
 
-        //get values from form
-
-        // let taeed = document.getElementById('#taeed')
-        // taeed.addEventListener('click', taeedFunc)
-
-        // function taeedFunc() {
-        //     console.log('alireza')
-        //     document.getElementById('ostan').value
-        // }
-
-
-
-        // document.getElementById("demo").innerHTML = "Hello World";
-        // document.addEventListener("click", myFunction);
 
         let Ostan = document.getElementById("Ostan");
         let Shahrestan = document.getElementById("Shahrestan");
@@ -1132,42 +1038,6 @@
 
 
 
-
-        let giveInformation = document.getElementById("giveInformation")
-        giveInformation.addEventListener('click', function() {
-            // console.log(Street.value, Blvd.value, PostalCode.value, unit.value,
-            //     Plaque.value, FullAddress.value,date.value);
-
-            // console.log(Shahrestan.value);
-        });
-        // console.log(Street.value, Blvd.value, PostalCode.value, unit.value,
-        //  gitPlaque.value, FullAddress.value);
-
-
-        // information.push(Street.value, Blvd.value, PostalCode.value, unit.value, Plaque.value, FullAddress
-        //     .value, data.value)
-
-
-
-
-
-        // axios({
-        //     method: 'post',
-        //     url: '/user/12345',
-        //     information: {
-        //         Street: Street.value,
-        //         Blvd: Blvd.value,
-        //         PostalCode: PostalCode.value,
-        //         unit: unit.value,
-        //         Plaque: Plaque.value,
-        //         FullAddress: FullAddress.value,
-        //         data: data.value,
-        //     },
-        // });
-
-
-
-        //
         var coll = document.getElementsByClassName("order-details");
         var i;
 
