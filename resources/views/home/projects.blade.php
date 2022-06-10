@@ -46,12 +46,12 @@
                         <div class="ribbon"><span>ویدئو</span></div>
                         <div class="row p-4">
 
-                            <div id="video" class="h_iframe-aparat_embed_frame aparat-video col-md-8">
+                            <div  class="h_iframe-aparat_embed_frame aparat-video w-100">
                                 <iframe src="https://www.aparat.com/video/video/embed/videohash/efu1W/vt/frame"
                                     allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
                                 </iframe>
                             </div>
-                            <div class="col-md-4">
+                            {{-- <div class="col-md-4">
                                 <div class="gallery-container">
                                     <div class="thumbnails"></div>
                                     <div class="scrollbar">
@@ -69,7 +69,7 @@
 
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
 
                         </div>
 
@@ -501,11 +501,11 @@
 
         $(document).ready(function() {
 
-        $('#first').on('click', 'div', function() {
-        $("#video").empty();
-        $(this).children().clone().appendTo("#video");
+        // $('#first').on('click', 'div', function() {
+        // $("#video").empty();
+        // $(this).children().clone().appendTo("#video");
 
-        });
+        // });
 
         $('#slide2').on('click', 'div', function() {
         $("#video2").empty();
