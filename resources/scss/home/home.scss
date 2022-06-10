@@ -369,8 +369,8 @@ h6 {
     border: none;
 }
 .info-btn {
-    color: var(--clr-primary);
-    background-color: var(--clr-dark);
+    color: var(--clr-dark);
+    background: var(--clr-primary);
     margin-left: 1rem;
     cursor: pointer;
     line-height: 15px;
@@ -383,7 +383,13 @@ h6 {
     font-weight: 600;
     border: none;
 }
-
+.info-btn:hover {
+    box-shadow: rgba(255, 255, 255, 0.23) 0px 0px 3px inset,
+        rgba(255, 255, 255, 0.16) 0px 0px 3px inset;
+    transition: all 0.3s ease;
+    color: var(--clr-primary);
+    background-color: var(--clr-dark);
+}
 .secondary-btn:hover {
     box-shadow: rgba(255, 255, 255, 0.23) 0px 0px 3px inset,
         rgba(255, 255, 255, 0.16) 0px 0px 3px inset;
@@ -1309,7 +1315,6 @@ footer p span {
     background-color: var(--clr-dark);
 }
 
-
 .content-min-height {
     min-height: 2000px;
 }
@@ -1322,7 +1327,6 @@ footer p span {
     border-radius: 0.5rem;
     padding: 10px;
 }
-
 
 #progressbar li {
     list-style-type: none;
@@ -1394,7 +1398,6 @@ footer p span {
     object-fit: cover;
 }
 
-
 //   ************** princing page ( fildest 1 setction 1 ) **************
 
 ._card {
@@ -1434,7 +1437,7 @@ footer p span {
     flex: 1;
 }
 
-.tabby-tab label.gg {
+.tabby-tab label.custom-lable {
     display: block;
     box-sizing: border-box;
     /* tab content must clear this */
@@ -1447,7 +1450,7 @@ footer p span {
     border-radius: 0.5rem;
 }
 
-.tabby-tab label.gg:hover {
+.tabby-tab label.custom-lable:hover {
     background: var(--clr-dark);
     color: var(--clr-primary);
 }
@@ -1535,7 +1538,6 @@ footer p span {
     border-radius: 0.5rem;
 }
 
-
 .form-select {
     width: 50%;
 }
@@ -1596,16 +1598,9 @@ footer p span {
     border-top: 0.5px solid black;
 }
 
-
-
 a {
     text-decoration: none;
 }
-
-
-
-
-
 
 .order-margin {
     margin: 0 5px;
@@ -1627,7 +1622,7 @@ a {
     margin-right: 5px;
 }
 
-.firstBtn{
+.firstBtn {
     position: relative;
     top: 500px;
 }
@@ -1638,9 +1633,8 @@ a {
 .ProductDetails li div {
     margin: 100px;
 }
-  
 
-.modal-order  {
+.modal-order {
     background-color: #95a5a67c;
     border: 1px solid transparent;
     border-radius: 0.5rem;
@@ -1657,7 +1651,7 @@ a {
     box-shadow: none;
 }
 
-.cutom-color:hover{
+.cutom-color:hover {
     color: white !important;
 }
 // ***********************end pricing page ******************************
@@ -1667,6 +1661,10 @@ a {
 // }
 
 @media screen and (max-width: 480px) {
+
+    .w-Custom-50 {
+        width: 75% !important;
+    }
     .tabs {
         min-height: 580px;
     }
@@ -1694,16 +1692,21 @@ a {
         min-height: 2500px;
     }
     #msform .action-button.firstBtn {
-        transform: translate(2px, 660px);
+        transform: translate(2px, 680px);
     }
 }
 
 @media only screen and (min-width: 480px) and (max-width: 992px) {
     #msform .action-button.firstBtn {
-        transform: translate(2px, 300px);
+        transform: translate(2px, 340px);
+    }
+    .text-Cutom-right {
+        text-align: center !important;
     }
 }
 @media screen and (max-width: 767px) {
+
+
     .tabs {
         min-height: 400px;
     }
@@ -1722,42 +1725,34 @@ a {
     .pushTags-customMargin {
         margin-right: 20px;
     }
-
 }
 @media screen and (max-width: 817px) {
     .order-margin-ObjQuantityLabel {
         margin: 0 33px;
     }
-
-
 }
 
-@media screen and  (min-width: 768px) and (max-width: 816px)  {
+@media screen and (min-width: 768px) and (max-width: 816px) {
     #msform .action-button.firstBtn {
         transform: translate(-50px, 350px);
     }
-
-
 }
-@media screen and  (min-width: 817px) and (max-width: 992px)  {
+@media screen and (min-width: 817px) and (max-width: 992px) {
     .order-margin-ObjQuantityLabel {
         margin: 0 33px;
     }
     .pushOptionAttr-customMargin {
         margin-right: 25px;
     }
-  
+
     #msform .action-button.firstBtn {
         transform: translate(-60px, 250px);
     }
-
 }
-@media screen and  (min-width: 992px) and (max-width: 1200px)  {
+@media screen and (min-width: 992px) and (max-width: 1200px) {
     #msform .action-button.firstBtn {
         transform: translate(-80px, 100px);
     }
-
-
 }
 
 // ************************************************************************************************************************//
@@ -1857,7 +1852,7 @@ a {
 #video9 img,
 #video10 img,
 #video11 img {
-  object-fit: contain;
+    object-fit: contain;
 }
 .aparat-video {
     background-color: transparent;
