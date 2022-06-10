@@ -6,7 +6,7 @@ require("sweetalert");
 require('bootstrap-select')
 require("bootstrap-select/dist/js/i18n/defaults-fa_IR");
 require("./CustomPlugins/jquery.czMore-latest");
-require("md.bootstrappersiandatetimepicker/dist/jquery.md.bootstrap.datetimepicker.js");
+require("../admin/CustomPlugins/MD.BootstrapPersianDateTimePicker-master-bs4/dist/jquery.md.bootstrap.datetimepicker");
 
 (function($) {
     "use strict"; // Start of use strict

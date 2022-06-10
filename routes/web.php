@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\AttributesController;
 use App\Http\Controllers\admin\BannerController;
 use App\Http\Controllers\Admin\BrandsController;
 use App\Http\Controllers\Admin\CategoriesController;
+use App\Http\Controllers\admin\CouponsController;
 use App\Http\Controllers\Admin\MessagesController;
 use App\Http\Controllers\admin\ProductEditImage;
 use App\Http\Controllers\admin\ProductsController;
@@ -41,6 +42,7 @@ Route::prefix('admin-panel/managment')->name('admin.')->group(function(){
     Route::resource('products' , ProductsController::class);
     Route::resource('banners' , BannerController::class);
     Route::resource('messages' , MessagesController::class);
+    Route::resource('coupons' , CouponsController::class);
 
     //
 
