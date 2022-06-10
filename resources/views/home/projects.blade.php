@@ -46,7 +46,7 @@
                         <div class="ribbon"><span>ویدئو</span></div>
                         <div class="row p-4">
 
-                            <div  class="h_iframe-aparat_embed_frame aparat-video w-100">
+                            <div class="h_iframe-aparat_embed_frame aparat-video w-100">
                                 <iframe src="https://www.aparat.com/video/video/embed/videohash/efu1W/vt/frame"
                                     allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
                                 </iframe>
@@ -80,7 +80,7 @@
                         <div class="ribbon"><span>ویدئو</span></div>
                         <div class="row p-4">
 
-                            <div  class="h_iframe-aparat_embed_frame aparat-video ">
+                            <div class="h_iframe-aparat_embed_frame aparat-video ">
                                 <iframe src="https://www.aparat.com/video/video/embed/videohash/UYwPA/vt/frame"
                                     allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
                                 </iframe>
@@ -112,7 +112,7 @@
                         <div class="ribbon"><span>ویدئو</span></div>
                         <div class="row p-4">
 
-                            <div  class="h_iframe-aparat_embed_frame aparat-video ">
+                            <div class="h_iframe-aparat_embed_frame aparat-video ">
                                 <iframe src="https://www.aparat.com/video/video/embed/videohash/CQFLE/vt/frame"
                                     allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
                                 </iframe>
@@ -146,7 +146,7 @@
                         <div class="ribbon"><span>ویدئو</span></div>
                         <div class="row p-4">
 
-                            <div  class="h_iframe-aparat_embed_frame aparat-video ">
+                            <div class="h_iframe-aparat_embed_frame aparat-video ">
                                 <iframe src="https://www.aparat.com/video/video/embed/videohash/oQGfH/vt/frame"
                                     allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
                                 </iframe>
@@ -179,7 +179,7 @@
                         <div class="ribbon"><span>ویدئو</span></div>
                         <div class="row p-4">
 
-                            <div  class="h_iframe-aparat_embed_frame aparat-video ">
+                            <div class="h_iframe-aparat_embed_frame aparat-video ">
                                 <iframe src="https://www.aparat.com/video/video/embed/videohash/SBHAu/vt/frame"
                                     allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
                                 </iframe>
@@ -217,8 +217,7 @@
                         <div class="row p-4">
 
                             <div id="video5" class="project-sample-img col-md-8">
-                                <img class="img-fluid" src="{{ asset('images/23-min.jpg') }}"
-                                    alt="project-picture">
+                                <img class="img-fluid" src="{{ asset('images/23-min.jpg') }}" alt="project-picture">
                             </div>
                             <div class="col-md-4">
                                 <div class="gallery-container">
@@ -228,7 +227,7 @@
                                     </div>
                                     <div id="slide5" class="slides">
                                         <div id="67" class="d-flex justify-content-around"><img class="img-fluid"
-                                            src="{{ asset('images/23-min.jpg') }}"></div>
+                                                src="{{ asset('images/23-min.jpg') }}"></div>
                                         <div id="19" class="d-flex justify-content-around"><img class="img-fluid"
                                                 src="{{ asset('images/24-min.jpg') }}"></div>
                                         <div id="20" class="d-flex justify-content-around"><img class="img-fluid"
@@ -264,7 +263,7 @@
                                     </div>
                                     <div id="slide6" class="slides">
                                         <div id="68" class="d-flex justify-content-around"><img class="img-fluid"
-                                            src="{{ asset('images/_DSC3594-SD-min.jpg') }}"></div>
+                                                src="{{ asset('images/_DSC3594-SD-min.jpg') }}"></div>
                                         <div id="23" class="d-flex justify-content-around"><img class="img-fluid"
                                                 src="{{ asset('images/13-min.jpg') }}"></div>
                                         <div id="24" class="d-flex justify-content-around"><img class="img-fluid"
@@ -301,7 +300,7 @@
                                     </div>
                                     <div id="slide7" class="slides">
                                         <div id="69" class="d-flex justify-content-around"><img class="img-fluid"
-                                            src="{{ asset('images/_DSC3342-min.jpg') }}"></div>
+                                                src="{{ asset('images/_DSC3342-min.jpg') }}"></div>
                                         <div id="28" class="d-flex justify-content-around"><img class="img-fluid"
                                                 src="{{ asset('images/_DSC3731-min.jpg') }}"></div>
                                         <div id="29" class="d-flex justify-content-around"><img class="img-fluid"
@@ -338,13 +337,13 @@
                                     </div>
                                     <div id="slide2" class="slides">
                                         <div id="43" class="d-flex justify-content-around"><img class="img-fluid"
-                                            src="{{ asset('images/0-min.jpg') }}"></div>
-                                    <div id="44" class="d-flex justify-content-around"><img class="img-fluid"
-                                            src="{{ asset('images/00-min.jpg') }}"></div>
-                                    <div id="45" class="d-flex justify-content-around"><img class="img-fluid"
-                                            src="{{ asset('images/000-min.jpg') }}"></div>
-                                    <div id="46" class="d-flex justify-content-around"><img class="img-fluid"
-                                            src="{{ asset('images/0000-min.jpg') }}"></div>
+                                                src="{{ asset('images/0-min.jpg') }}"></div>
+                                        <div id="44" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/00-min.jpg') }}"></div>
+                                        <div id="45" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/000-min.jpg') }}"></div>
+                                        <div id="46" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/0000-min.jpg') }}"></div>
 
                                     </div>
                                 </div>
@@ -371,11 +370,11 @@
                                     </div>
                                     <div id="slide3" class="slides">
                                         <div id="47" class="d-flex justify-content-around"><img class="img-fluid"
-                                            src="{{ asset('images/1-min.jpg') }}"></div>
-                                    <div id="48" class="d-flex justify-content-around"><img class="img-fluid"
-                                            src="{{ asset('images/11-min.jpg') }}"></div>
-                                    <div id="49" class="d-flex justify-content-around"><img class="img-fluid"
-                                            src="{{ asset('images/111-min.jpg') }}"></div>
+                                                src="{{ asset('images/1-min.jpg') }}"></div>
+                                        <div id="48" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/11-min.jpg') }}"></div>
+                                        <div id="49" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/111-min.jpg') }}"></div>
 
                                     </div>
                                 </div>
@@ -402,13 +401,13 @@
                                     </div>
                                     <div id="slide4" class="slides">
                                         <div id="50" class="d-flex justify-content-around"><img class="img-fluid"
-                                            src="{{ asset('images/_DSC0542-min.jpg') }}"></div>
-                                    <div id="51" class="d-flex justify-content-around"><img class="img-fluid"
-                                            src="{{ asset('images/_DSC4751-min.jpg') }}"></div>
-                                    <div id="52" class="d-flex justify-content-around"><img class="img-fluid"
-                                            src="{{ asset('images/_DSC9896-min.jpg') }}"></div>
-                                    <div id="53" class="d-flex justify-content-around"><img class="img-fluid"
-                                            src="{{ asset('images/_DSC9906-min.jpg') }}"></div>
+                                                src="{{ asset('images/_DSC0542-min.jpg') }}"></div>
+                                        <div id="51" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/_DSC4751-min.jpg') }}"></div>
+                                        <div id="52" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/_DSC9896-min.jpg') }}"></div>
+                                        <div id="53" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/_DSC9906-min.jpg') }}"></div>
 
                                     </div>
                                 </div>
@@ -435,11 +434,11 @@
                                     </div>
                                     <div id="slide8" class="slides">
                                         <div id="54" class="d-flex justify-content-around"><img class="img-fluid"
-                                            src="{{ asset('images/_DSC3268-min.jpg') }}"></div>
-                                    <div id="55" class="d-flex justify-content-around"><img class="img-fluid"
-                                            src="{{ asset('images/_DSC3310-min.jpg') }}"></div>
-                                    <div id="56" class="d-flex justify-content-around"><img class="img-fluid"
-                                            src="{{ asset('images/1111-min.jpg') }}"></div>
+                                                src="{{ asset('images/_DSC3268-min.jpg') }}"></div>
+                                        <div id="55" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/_DSC3310-min.jpg') }}"></div>
+                                        <div id="56" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/1111-min.jpg') }}"></div>
 
                                     </div>
                                 </div>
@@ -466,15 +465,15 @@
                                     </div>
                                     <div id="slide9" class="slides">
                                         <div id="57" class="d-flex justify-content-around"><img class="img-fluid"
-                                            src="{{ asset('images/_DSC2410-min.jpg') }}"></div>
-                                    <div id="58" class="d-flex justify-content-around"><img class="img-fluid"
-                                            src="{{ asset('images/DSC_7127-min.jpg') }}"></div>
-                                    <div id="59" class="d-flex justify-content-around"><img class="img-fluid"
-                                            src="{{ asset('images/DSC_7247-min.jpg') }}"></div>
-                                    <div id="60" class="d-flex justify-content-around"><img class="img-fluid"
-                                            src="{{ asset('images/DSC_7251-min.jpg') }}"></div>
-                                    <div id="61" class="d-flex justify-content-around"><img class="img-fluid"
-                                            src="{{ asset('images/DSC_7257-min.jpg') }}"></div>
+                                                src="{{ asset('images/_DSC2410-min.jpg') }}"></div>
+                                        <div id="58" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/DSC_7127-min.jpg') }}"></div>
+                                        <div id="59" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/DSC_7247-min.jpg') }}"></div>
+                                        <div id="60" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/DSC_7251-min.jpg') }}"></div>
+                                        <div id="61" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/DSC_7257-min.jpg') }}"></div>
 
                                     </div>
                                 </div>
@@ -501,11 +500,11 @@
                                     </div>
                                     <div id="slide1" class="slides">
                                         <div id="62" class="d-flex justify-content-around"><img class="img-fluid"
-                                            src="{{ asset('images/_DSC4695-min.jpg') }}"></div>
-                                    <div id="63" class="d-flex justify-content-around"><img class="img-fluid"
-                                            src="{{ asset('images/_DSC4313-min.jpg') }}"></div>
-                                    <div id="64" class="d-flex justify-content-around"><img class="img-fluid"
-                                            src="{{ asset('images/_DSC4820-min.jpg') }}"></div>
+                                                src="{{ asset('images/_DSC4695-min.jpg') }}"></div>
+                                        <div id="63" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/_DSC4313-min.jpg') }}"></div>
+                                        <div id="64" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/_DSC4820-min.jpg') }}"></div>
 
                                     </div>
                                 </div>
@@ -532,9 +531,9 @@
                                     </div>
                                     <div id="slide12" class="slides">
                                         <div id="65" class="d-flex justify-content-around"><img class="img-fluid"
-                                            src="{{ asset('images/PNH_8369-min.jpg') }}"></div>
-                                    <div id="66" class="d-flex justify-content-around"><img class="img-fluid"
-                                            src="{{ asset('images/WhatsApp-Image-2020-02-05-at-1.jpg') }}"></div>
+                                                src="{{ asset('images/PNH_8369-min.jpg') }}"></div>
+                                        <div id="66" class="d-flex justify-content-around"><img class="img-fluid"
+                                                src="{{ asset('images/WhatsApp-Image-2020-02-05-at-1.jpg') }}"></div>
 
                                     </div>
                                 </div>
@@ -730,77 +729,87 @@
 
         $(document).ready(function() {
 
-        $('#slide1').on('click', 'div', function() {
-        $("#video1").empty();
-        $(this).children().clone().appendTo("#video1");
+            for (let i = 0; i <= 12; i++) {
 
-        });
+                $('#slide' + i).on('click', 'div', function() {
+                    $("#video" + i).empty();
+                    $(this).children().clone().appendTo("#video" + i);
 
-        $('#slide2').on('click', 'div', function() {
-        $("#video2").empty();
-        $(this).children().clone().appendTo("#video2");
+                });
 
-        });
+            }
 
-        $('#slide3').on('click', 'div', function() {
-        $("#video3").empty();
-        $(this).children().clone().appendTo("#video3");
+            // $('#slide1').on('click', 'div', function() {
+            //     $("#video1").empty();
+            //     $(this).children().clone().appendTo("#video1");
 
-        });
+            // });
 
-        $('#slide4').on('click', 'div', function() {
-        $("#video4").empty();
-        $(this).children().clone().appendTo("#video4");
+            // $('#slide2').on('click', 'div', function() {
+            //     $("#video2").empty();
+            //     $(this).children().clone().appendTo("#video2");
 
-        });
+            // });
 
-        $('#slide5').on('click', 'div', function() {
-        $("#video5").empty();
-        $(this).children().clone().appendTo("#video5");
+            // $('#slide3').on('click', 'div', function() {
+            //     $("#video3").empty();
+            //     $(this).children().clone().appendTo("#video3");
 
-        });
+            // });
 
-        $('#slide6').on('click', 'div', function() {
-        $("#video6").empty();
-        $(this).children().clone().appendTo("#video6");
+            // $('#slide4').on('click', 'div', function() {
+            //     $("#video4").empty();
+            //     $(this).children().clone().appendTo("#video4");
 
-        });
+            // });
 
-        $('#slide7').on('click', 'div', function() {
-        $("#video7").empty();
-        $(this).children().clone().appendTo("#video7");
+            // $('#slide5').on('click', 'div', function() {
+            //     $("#video5").empty();
+            //     $(this).children().clone().appendTo("#video5");
 
-        });
+            // });
 
-        $('#slide8').on('click', 'div', function() {
-        $("#video8").empty();
-        $(this).children().clone().appendTo("#video8");
+            // $('#slide6').on('click', 'div', function() {
+            //     $("#video6").empty();
+            //     $(this).children().clone().appendTo("#video6");
 
-        });
+            // });
 
-        $('#slide9').on('click', 'div', function() {
-        $("#video9").empty();
-        $(this).children().clone().appendTo("#video9");
+            // $('#slide7').on('click', 'div', function() {
+            //     $("#video7").empty();
+            //     $(this).children().clone().appendTo("#video7");
 
-        });
+            // });
 
-        $('#slide10').on('click', 'div', function() {
-        $("#video10").empty();
-        $(this).children().clone().appendTo("#video10");
+            // $('#slide8').on('click', 'div', function() {
+            //     $("#video8").empty();
+            //     $(this).children().clone().appendTo("#video8");
 
-        });
+            // });
 
-        $('#slide11').on('click', 'div', function() {
-        $("#video11").empty();
-        $(this).children().clone().appendTo("#video11");
+            // $('#slide9').on('click', 'div', function() {
+            //     $("#video9").empty();
+            //     $(this).children().clone().appendTo("#video9");
 
-        });
+            // });
 
-        $('#slide12').on('click', 'div', function() {
-        $("#video12").empty();
-        $(this).children().clone().appendTo("#video12");
+            // $('#slide10').on('click', 'div', function() {
+            //     $("#video10").empty();
+            //     $(this).children().clone().appendTo("#video10");
 
-        });
+            // });
+
+            // $('#slide11').on('click', 'div', function() {
+            //     $("#video11").empty();
+            //     $(this).children().clone().appendTo("#video11");
+
+            // });
+
+            // $('#slide12').on('click', 'div', function() {
+            //     $("#video12").empty();
+            //     $(this).children().clone().appendTo("#video12");
+
+            // });
 
         });
 
