@@ -80,12 +80,12 @@
                         <div class="ribbon"><span>ویدئو</span></div>
                         <div class="row p-4">
 
-                            <div id="video2" class="h_iframe-aparat_embed_frame aparat-video col-md-8">
+                            <div  class="h_iframe-aparat_embed_frame aparat-video ">
                                 <iframe src="https://www.aparat.com/video/video/embed/videohash/UYwPA/vt/frame"
                                     allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
                                 </iframe>
                             </div>
-                            <div class="col-md-4">
+                            {{-- <div class="col-md-4">
                                 <div class="gallery-container">
                                     <div class="thumbnails"></div>
                                     <div class="scrollbar">
@@ -101,7 +101,7 @@
 
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
 
                         </div>
 
@@ -112,12 +112,12 @@
                         <div class="ribbon"><span>ویدئو</span></div>
                         <div class="row p-4">
 
-                            <div id="video11" class="h_iframe-aparat_embed_frame aparat-video col-md-8">
+                            <div  class="h_iframe-aparat_embed_frame aparat-video ">
                                 <iframe src="https://www.aparat.com/video/video/embed/videohash/CQFLE/vt/frame"
                                     allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
                                 </iframe>
                             </div>
-                            <div class="col-md-4">
+                            {{-- <div class="col-md-4">
                                 <div class="gallery-container">
                                     <div class="thumbnails"></div>
                                     <div class="scrollbar">
@@ -135,7 +135,7 @@
 
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
 
                         </div>
 
@@ -146,12 +146,12 @@
                         <div class="ribbon"><span>ویدئو</span></div>
                         <div class="row p-4">
 
-                            <div id="video3" class="h_iframe-aparat_embed_frame aparat-video col-md-8">
+                            <div  class="h_iframe-aparat_embed_frame aparat-video ">
                                 <iframe src="https://www.aparat.com/video/video/embed/videohash/oQGfH/vt/frame"
                                     allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
                                 </iframe>
                             </div>
-                            <div class="col-md-4">
+                            {{-- <div class="col-md-4">
                                 <div class="gallery-container">
                                     <div class="thumbnails"></div>
                                     <div class="scrollbar">
@@ -168,7 +168,7 @@
 
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
 
                         </div>
 
@@ -179,12 +179,12 @@
                         <div class="ribbon"><span>ویدئو</span></div>
                         <div class="row p-4">
 
-                            <div id="video4" class="h_iframe-aparat_embed_frame aparat-video col-md-8">
+                            <div  class="h_iframe-aparat_embed_frame aparat-video ">
                                 <iframe src="https://www.aparat.com/video/video/embed/videohash/SBHAu/vt/frame"
                                     allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
                                 </iframe>
                             </div>
-                            <div class="col-md-4">
+                            {{-- <div class="col-md-4">
                                 <div class="gallery-container">
                                     <div class="thumbnails"></div>
                                     <div class="scrollbar">
@@ -205,7 +205,7 @@
 
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
 
                         </div>
 
@@ -227,6 +227,8 @@
                                         <div class="thumb"></div>
                                     </div>
                                     <div id="slide5" class="slides">
+                                        <div id="67" class="d-flex justify-content-around"><img class="img-fluid"
+                                            src="{{ asset('images/23-min.jpg') }}"></div>
                                         <div id="19" class="d-flex justify-content-around"><img class="img-fluid"
                                                 src="{{ asset('images/24-min.jpg') }}"></div>
                                         <div id="20" class="d-flex justify-content-around"><img class="img-fluid"
@@ -261,6 +263,8 @@
                                         <div class="thumb"></div>
                                     </div>
                                     <div id="slide6" class="slides">
+                                        <div id="68" class="d-flex justify-content-around"><img class="img-fluid"
+                                            src="{{ asset('images/_DSC3594-SD-min.jpg') }}"></div>
                                         <div id="23" class="d-flex justify-content-around"><img class="img-fluid"
                                                 src="{{ asset('images/13-min.jpg') }}"></div>
                                         <div id="24" class="d-flex justify-content-around"><img class="img-fluid"
@@ -296,6 +300,8 @@
                                         <div class="thumb"></div>
                                     </div>
                                     <div id="slide7" class="slides">
+                                        <div id="69" class="d-flex justify-content-around"><img class="img-fluid"
+                                            src="{{ asset('images/_DSC3342-min.jpg') }}"></div>
                                         <div id="28" class="d-flex justify-content-around"><img class="img-fluid"
                                                 src="{{ asset('images/_DSC3731-min.jpg') }}"></div>
                                         <div id="29" class="d-flex justify-content-around"><img class="img-fluid"
@@ -316,17 +322,240 @@
 
                     </div>
 
+                    <div class="col-md-12 picture-item" data-groups='["photo"]'>
+                        <div class="ribbon"><span>عکس</span></div>
+                        <div class="row p-4">
+
+                            <div id="video2" class="project-sample-img col-md-8">
+                                <img class="img-fluid" src="{{ asset('images/0-min.jpg') }}"
+                                    alt="project-picture2">
+                            </div>
+                            <div class="col-md-4">
+                                <div class="gallery-container">
+                                    <div class="thumbnails"></div>
+                                    <div class="scrollbar">
+                                        <div class="thumb"></div>
+                                    </div>
+                                    <div id="slide2" class="slides">
+                                        <div id="43" class="d-flex justify-content-around"><img class="img-fluid"
+                                            src="{{ asset('images/0-min.jpg') }}"></div>
+                                    <div id="44" class="d-flex justify-content-around"><img class="img-fluid"
+                                            src="{{ asset('images/00-min.jpg') }}"></div>
+                                    <div id="45" class="d-flex justify-content-around"><img class="img-fluid"
+                                            src="{{ asset('images/000-min.jpg') }}"></div>
+                                    <div id="46" class="d-flex justify-content-around"><img class="img-fluid"
+                                            src="{{ asset('images/0000-min.jpg') }}"></div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="col-md-12 picture-item" data-groups='["photo"]'>
+                        <div class="ribbon"><span>عکس</span></div>
+                        <div class="row p-4">
+
+                            <div id="video3" class="project-sample-img col-md-8">
+                                <img class="img-fluid" src="{{ asset('images/1-min.jpg') }}"
+                                    alt="project-picture2">
+                            </div>
+                            <div class="col-md-4">
+                                <div class="gallery-container">
+                                    <div class="thumbnails"></div>
+                                    <div class="scrollbar">
+                                        <div class="thumb"></div>
+                                    </div>
+                                    <div id="slide3" class="slides">
+                                        <div id="47" class="d-flex justify-content-around"><img class="img-fluid"
+                                            src="{{ asset('images/1-min.jpg') }}"></div>
+                                    <div id="48" class="d-flex justify-content-around"><img class="img-fluid"
+                                            src="{{ asset('images/11-min.jpg') }}"></div>
+                                    <div id="49" class="d-flex justify-content-around"><img class="img-fluid"
+                                            src="{{ asset('images/111-min.jpg') }}"></div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="col-md-12 picture-item" data-groups='["photo"]'>
+                        <div class="ribbon"><span>عکس</span></div>
+                        <div class="row p-4">
+
+                            <div id="video4" class="project-sample-img col-md-8">
+                                <img class="img-fluid" src="{{ asset('images/_DSC0542-min.jpg') }}"
+                                    alt="project-picture2">
+                            </div>
+                            <div class="col-md-4">
+                                <div class="gallery-container">
+                                    <div class="thumbnails"></div>
+                                    <div class="scrollbar">
+                                        <div class="thumb"></div>
+                                    </div>
+                                    <div id="slide4" class="slides">
+                                        <div id="50" class="d-flex justify-content-around"><img class="img-fluid"
+                                            src="{{ asset('images/_DSC0542-min.jpg') }}"></div>
+                                    <div id="51" class="d-flex justify-content-around"><img class="img-fluid"
+                                            src="{{ asset('images/_DSC4751-min.jpg') }}"></div>
+                                    <div id="52" class="d-flex justify-content-around"><img class="img-fluid"
+                                            src="{{ asset('images/_DSC9896-min.jpg') }}"></div>
+                                    <div id="53" class="d-flex justify-content-around"><img class="img-fluid"
+                                            src="{{ asset('images/_DSC9906-min.jpg') }}"></div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="col-md-12 picture-item" data-groups='["photo"]'>
+                        <div class="ribbon"><span>عکس</span></div>
+                        <div class="row p-4">
+
+                            <div id="video8" class="project-sample-img col-md-8">
+                                <img class="img-fluid" src="{{ asset('images/_DSC3268-min.jpg') }}"
+                                    alt="project-picture2">
+                            </div>
+                            <div class="col-md-4">
+                                <div class="gallery-container">
+                                    <div class="thumbnails"></div>
+                                    <div class="scrollbar">
+                                        <div class="thumb"></div>
+                                    </div>
+                                    <div id="slide8" class="slides">
+                                        <div id="54" class="d-flex justify-content-around"><img class="img-fluid"
+                                            src="{{ asset('images/_DSC3268-min.jpg') }}"></div>
+                                    <div id="55" class="d-flex justify-content-around"><img class="img-fluid"
+                                            src="{{ asset('images/_DSC3310-min.jpg') }}"></div>
+                                    <div id="56" class="d-flex justify-content-around"><img class="img-fluid"
+                                            src="{{ asset('images/1111-min.jpg') }}"></div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="col-md-12 picture-item" data-groups='["photo"]'>
+                        <div class="ribbon"><span>عکس</span></div>
+                        <div class="row p-4">
+
+                            <div id="video9" class="project-sample-img col-md-8">
+                                <img class="img-fluid" src="{{ asset('images/_DSC2410-min.jpg') }}"
+                                    alt="project-picture2">
+                            </div>
+                            <div class="col-md-4">
+                                <div class="gallery-container">
+                                    <div class="thumbnails"></div>
+                                    <div class="scrollbar">
+                                        <div class="thumb"></div>
+                                    </div>
+                                    <div id="slide9" class="slides">
+                                        <div id="57" class="d-flex justify-content-around"><img class="img-fluid"
+                                            src="{{ asset('images/_DSC2410-min.jpg') }}"></div>
+                                    <div id="58" class="d-flex justify-content-around"><img class="img-fluid"
+                                            src="{{ asset('images/DSC_7127-min.jpg') }}"></div>
+                                    <div id="59" class="d-flex justify-content-around"><img class="img-fluid"
+                                            src="{{ asset('images/DSC_7247-min.jpg') }}"></div>
+                                    <div id="60" class="d-flex justify-content-around"><img class="img-fluid"
+                                            src="{{ asset('images/DSC_7251-min.jpg') }}"></div>
+                                    <div id="61" class="d-flex justify-content-around"><img class="img-fluid"
+                                            src="{{ asset('images/DSC_7257-min.jpg') }}"></div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="col-md-12 picture-item" data-groups='["photo"]'>
+                        <div class="ribbon"><span>عکس</span></div>
+                        <div class="row p-4">
+
+                            <div id="video1" class="project-sample-img col-md-8">
+                                <img class="img-fluid" src="{{ asset('images/_DSC4695-min.jpg') }}"
+                                    alt="project-picture2">
+                            </div>
+                            <div class="col-md-4">
+                                <div class="gallery-container">
+                                    <div class="thumbnails"></div>
+                                    <div class="scrollbar">
+                                        <div class="thumb"></div>
+                                    </div>
+                                    <div id="slide1" class="slides">
+                                        <div id="62" class="d-flex justify-content-around"><img class="img-fluid"
+                                            src="{{ asset('images/_DSC4695-min.jpg') }}"></div>
+                                    <div id="63" class="d-flex justify-content-around"><img class="img-fluid"
+                                            src="{{ asset('images/_DSC4313-min.jpg') }}"></div>
+                                    <div id="64" class="d-flex justify-content-around"><img class="img-fluid"
+                                            src="{{ asset('images/_DSC4820-min.jpg') }}"></div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="col-md-12 picture-item" data-groups='["photo"]'>
+                        <div class="ribbon"><span>عکس</span></div>
+                        <div class="row p-4">
+
+                            <div id="video12" class="project-sample-img col-md-8">
+                                <img class="img-fluid" src="{{ asset('images/PNH_8369-min.jpg') }}"
+                                    alt="project-picture2">
+                            </div>
+                            <div class="col-md-4">
+                                <div class="gallery-container">
+                                    <div class="thumbnails"></div>
+                                    <div class="scrollbar">
+                                        <div class="thumb"></div>
+                                    </div>
+                                    <div id="slide12" class="slides">
+                                        <div id="65" class="d-flex justify-content-around"><img class="img-fluid"
+                                            src="{{ asset('images/PNH_8369-min.jpg') }}"></div>
+                                    <div id="66" class="d-flex justify-content-around"><img class="img-fluid"
+                                            src="{{ asset('images/WhatsApp-Image-2020-02-05-at-1.jpg') }}"></div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
                     <div class="col-md-12 picture-item" data-groups='["campaign"]'>
                         <div class="ribbon"><span>کمپین</span></div>
                         <div class="row p-4">
 
-                            <div id="video8" class="h_iframe-aparat_embed_frame aparat-video col-md-8">
+                            <div class="h_iframe-aparat_embed_frame aparat-video">
                                 <span style="display: block;padding-top: 57%"></span>
                                 <iframe src="https://www.aparat.com/video/video/embed/videohash/eLa1K/vt/frame"
                                     allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
                                 </iframe>
                             </div>
-                            <div class="col-md-4">
+                            {{-- <div class="col-md-4">
                                 <div class="gallery-container">
                                     <div class="thumbnails"></div>
                                     <div class="scrollbar">
@@ -343,23 +572,23 @@
 
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
 
                         </div>
 
 
                     </div>
 
-                    <div class="col-md-12 picture-item" data-groups='["campaign"]'>
-                        <div class="ribbon"><span>کمپین</span></div>
+                    <div class="col-md-12 picture-item" data-groups='["video"]'>
+                        <div class="ribbon"><span>ویدئو</span></div>
                         <div class="row p-4">
 
-                            <div id="video9" class="h_iframe-aparat_embed_frame aparat-video col-md-8">
+                            <div class="h_iframe-aparat_embed_frame aparat-video">
                                 <iframe src="https://www.aparat.com/video/video/embed/videohash/p96a3/vt/frame"
                                     allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
                                 </iframe>
                             </div>
-                            <div class="col-md-4">
+                            {{-- <div class="col-md-4">
                                 <div class="gallery-container">
                                     <div class="thumbnails"></div>
                                     <div class="scrollbar">
@@ -375,7 +604,7 @@
 
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
 
                         </div>
 
@@ -501,11 +730,11 @@
 
         $(document).ready(function() {
 
-        // $('#first').on('click', 'div', function() {
-        // $("#video").empty();
-        // $(this).children().clone().appendTo("#video");
+        $('#slide1').on('click', 'div', function() {
+        $("#video1").empty();
+        $(this).children().clone().appendTo("#video1");
 
-        // });
+        });
 
         $('#slide2').on('click', 'div', function() {
         $("#video2").empty();
@@ -564,6 +793,12 @@
         $('#slide11').on('click', 'div', function() {
         $("#video11").empty();
         $(this).children().clone().appendTo("#video11");
+
+        });
+
+        $('#slide12').on('click', 'div', function() {
+        $("#video12").empty();
+        $(this).children().clone().appendTo("#video12");
 
         });
 
