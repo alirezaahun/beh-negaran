@@ -71,7 +71,7 @@
                                     </div>
 
                                     <div class="form-contorol">
-                                        <label class='float-right mt-4 mb-2 custom-lable' for="state">:آدرس انتخابی
+                                        <label class='float-right mt-4 mb-2 custom-lable' for="state">آدرس انتخابی
                                             شما</label>
                                         <input type="text" id="currentAddress" class="form-control" disabled>
                                     </div>
@@ -80,7 +80,7 @@
                                         <div class="col-12">
                                             <div class="form-group">
                                                 <label class=' mt-4 mb-2 custom-lable d-block text-right' for="data-picker"> انتخاب
-                                                    تاریخ :</label>
+                                                    تاریخ </label>
                                                 <div class="input-group date-input">
                                                     <span class="input-group-text" id="dtp1"><i
                                                             class="fas fa-calendar-alt"></i></span>
