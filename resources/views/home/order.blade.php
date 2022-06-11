@@ -102,7 +102,8 @@
                                             <div class="tabby-tab">
                                                 <input type="radio" id="radio{{ $category->id }}" name="tabby-tabs"
                                                     checked>
-                                                <label class="projects-btn"
+                                                    {{-- custom-lable --}}
+                                                <label class="projects-btn mx-3 ms-md-2 text-truncate"
                                                     for="radio{{ $category->id }}">{{ $category->name }}</label>
                                                 <div class="tabby-content">
                                                     <div class="col-12 d-flex d-flex justify-content-center  mt-5">
@@ -236,7 +237,7 @@
                                 </div>
                             </div>
                             <input type="button" name="next" class="next action-button custom-pricing-margin-btn  firstBtn"
-                                value="بعدی" />
+                                value="ادامه" />
                         </fieldset>
                         {{-- <fieldset>
                             <h2 id="heading"> آدرس و تاریخ</h2>
@@ -366,7 +367,7 @@
                                 <input type="button" name="previous" class="info-btn mx-auto w-50 " value="پرداخت" />
                             </div>
                             <input type="button" name="previous" class="previous action-button-previous mt-3  "
-                                value="Previous" />
+                                value="بازگشت" />
                         </fieldset>
                     </form>
                 </div>

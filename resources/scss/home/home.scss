@@ -1431,11 +1431,20 @@ footer p span {
     display: flex;
     min-height: 300px;
     border-radius: 8px 8px 0 0;
+    justify-content: center;
 }
 
-// .tabby-tab {
-//     flex: 1;
-// }
+.tabby-tab {
+   
+  
+    max-height: 38px;
+    text-align: justify;
+    /* flex: 1; */
+     justify-content: space-between; 
+    /* justify-self: start; */
+
+
+}
 
 .tabby-tab label.custom-lable {
     display: block;
@@ -1450,10 +1459,10 @@ footer p span {
     border-radius: 0.5rem;
 }
 
-.tabby-tab label.custom-lable:hover {
-    background: var(--clr-dark);
-    color: var(--clr-primary);
-}
+// .tabby-tab label.custom-lable:hover {
+//     background: var(--clr-dark);
+//     color: var(--clr-primary);
+// }
 
 .tabby-content {
     position: absolute;
@@ -1494,7 +1503,7 @@ footer p span {
     background: var(--clr-secondary);
     color: var(--clr-primary);
     z-index: 2;
-    border: 0.5px solid var(--clr-accent);
+    
 }
 
 [type="radio"]:checked ~ label ~ .tabby-content {
@@ -1669,9 +1678,11 @@ a {
         min-height: 580px;
     }
     .tabby-tab label {
-        height: 45px;
+        max-width: 100px;
+    //    margin: 0 5px;
         font-size: 13px;
         padding: 8px;
+        text-align: justify;
     }
     .tabby-content {
         top: 60px;
