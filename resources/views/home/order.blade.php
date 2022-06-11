@@ -102,7 +102,7 @@
                                             <div class="tabby-tab">
                                                 <input type="radio" id="radio{{ $category->id }}" name="tabby-tabs"
                                                     checked>
-                                                <label class="custom-lable"
+                                                <label class="projects-btn"
                                                     for="radio{{ $category->id }}">{{ $category->name }}</label>
                                                 <div class="tabby-content">
                                                     <div class="col-12 d-flex d-flex justify-content-center  mt-5">
