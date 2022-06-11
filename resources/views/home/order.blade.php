@@ -30,7 +30,7 @@
                         <fieldset>
 
                             <div class="col-12">
-                                <button type="button" id="modalBtn" class="secondary-btn"> افزودن آدرس</button>
+                                <button type="button" id="modalBtn" class="secondary-btn w-100"> افزودن آدرس</button>
 
 
                                 <!-- The Modal -->
