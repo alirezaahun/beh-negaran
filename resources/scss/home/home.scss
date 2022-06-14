@@ -1435,15 +1435,11 @@ footer p span {
 }
 
 .tabby-tab {
-   
-  
     max-height: 38px;
     text-align: justify;
     /* flex: 1; */
-     justify-content: space-between; 
+    justify-content: space-between;
     /* justify-self: start; */
-
-
 }
 
 .tabby-tab label.custom-lable {
@@ -1503,7 +1499,6 @@ footer p span {
     background: var(--clr-secondary);
     color: var(--clr-primary);
     z-index: 2;
-    
 }
 
 [type="radio"]:checked ~ label ~ .tabby-content {
@@ -1670,7 +1665,6 @@ a {
 // }
 
 @media screen and (max-width: 480px) {
-
     .w-Custom-50 {
         width: 75% !important;
     }
@@ -1679,7 +1673,7 @@ a {
     }
     .tabby-tab label {
         max-width: 100px;
-    //    margin: 0 5px;
+        //    margin: 0 5px;
         font-size: 13px;
         padding: 8px;
         text-align: justify;
@@ -1716,8 +1710,6 @@ a {
     }
 }
 @media screen and (max-width: 767px) {
-
-
     .tabs {
         min-height: 400px;
     }
@@ -1862,7 +1854,8 @@ a {
 #video8 img,
 #video9 img,
 #video10 img,
-#video11 img {
+#video11 img,
+#video12 img {
     object-fit: contain;
 }
 .aparat-video {
