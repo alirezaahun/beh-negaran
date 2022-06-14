@@ -626,7 +626,7 @@ h6 {
 }
 
 .banner {
-  background-image: url(/images/orginal-banner9-75.png?8de5615e0dd0a964be79263af5f66978);
+  background-image: url(/images/orginal-banner10.png?eb30faa20cc5599b9ba435fd2e043909);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -3288,6 +3288,21 @@ a {
 
   .message-text span:after {
     display: none;
+  }
+
+  #video1 img,
+#video2 img,
+#video3 img,
+#video4 img,
+#video5 img,
+#video6 img,
+#video7 img,
+#video8 img,
+#video9 img,
+#video10 img,
+#video11 img,
+#video12 img {
+    height: 442.94px;
   }
 }
 /* Tablet Screen -----------------------------------------------*/
