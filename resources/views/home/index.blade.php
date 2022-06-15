@@ -100,8 +100,8 @@ function allInView() {
           <div class="input-group city-select">
             <label class="input-group-text" for="inputGroupSelect01"><i class="fas fa-map-marker-alt"></i></label>
             <select class="form-select text-center" id="inputGroupSelect01">
-              <option value="کرج">کرج</option>
               <option value="تهران">تهران</option>
+              <option value="کرج">کرج</option>
               <option value="قزوین">قزوین</option>
             </select>
           </div>

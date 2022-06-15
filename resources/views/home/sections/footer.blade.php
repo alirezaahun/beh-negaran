@@ -45,12 +45,12 @@
                     <li>
                         <i class='bx bx-phone-call'></i>
                         <span>تلفن پشتیبانی :</span>
-                        <a href="tel:02634239029">۰۲۶۳۴۲۳۹۰۲۹</a>
+                        <a href="tel:02634487575">۰۲۶۳۴۴۸۷۵۷۵</a>
                     </li>
 
                     <li>
                         <i class='bx bxs-location-plus'></i>
-                        <span>دفتر شرکت : کرج، میدان توحید، ساختمان سنیک</span>
+                        <span>دفتر شركت : كرج، بلوار دانش آموز، خيابان ابن سينا، نبش كوچه پروين</span>
                     </li>
                     <li>
                         <a referrerpolicy="origin" target="_blank"
