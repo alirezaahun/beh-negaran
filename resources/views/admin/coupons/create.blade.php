@@ -1,12 +1,13 @@
 @extends('admin.layouts.master')
 
-@section('js')
+@section('scripts')
     <script>
-        $("#pickDate").MdPersianDateTimePicker({
-                    targetTextSelector: "#forceDate",
-                    englishNumber: true,
-                    enableTimePicker: true,
-                    textFormat: 'yyyy-MM-dd HH:mm:ss',
+        $('#pickDate').MdPersianDateTimePicker({
+            targetTextSelector: '#forceDate',
+            englishNumber: true,
+            enableTimePicker: true,
+            textFormat: 'yyyy-MM-dd HH:mm:ss',
+
         });
     </script>
 @endsection
@@ -18,7 +19,7 @@
 
             <div class="mb-4">
 
-                <h5 class="font-weight-bold">ایجاد ویژگی</h5>
+                <h5 class="font-weight-bold">ایجاد کد تخفیف</h5>
 
                 <hr>
 
@@ -52,22 +53,36 @@
 
                         </div>
 
-                         <div class="form-group col-md-3">
+                        <div class="form-group col-md-3">
+
+                            <label for="name">مبلغ</label>
+                            <input class="form-control" type="text" name="price" id="price">
+
+                        </div>
+
+                        <div class="form-group col-md-3">
+
+                            <label for="name">درصد</label>
+                            <input class="form-control" type="text" name="precent" id="precent">
+
+                        </div>
+
+                        <div class="form-group col-md-3">
 
                             <label for="name">حداکثر مبلغ برای درصدی</label>
                             <input class="form-control" type="text" name="max_amount" id="max_amount">
 
                         </div>
 
-                         <div class="form-group col-md-3">
+                        <div class="form-group col-md-3">
 
                             <label for="name">تاریخ انقضای کد تخفیف</label>
 
                             <div class="input-group">
 
-                                <div  id="pickDate" class="input-group-prepend order-2">
+                                <div class="input-group-prepend order-2">
 
-                                    <span class="input-group-text">
+                                    <span id="pickDate" class="input-group-text">
 
                                         <i class="fas fa-clock"></i>
 
@@ -75,7 +90,7 @@
 
                                 </div>
 
-                                <input id="forceDate" class="form-control" >
+                                <input id="forceDate" name="expire_date" class="form-control">
 
                             </div>
 
@@ -83,9 +98,16 @@
 
                         </div>
 
+                        <div class="form-group col-md-12">
+
+                            <label for="name">توضیحات</label>
+                            <textarea class="form-control" type="text" name="description" id="description"></textarea>
+
+                        </div>
+
                     </div>
 
-                    <button type="submit" class="btn btn-outline-primary mt-5">ثبت ویژگی</button>
+                    <button type="submit" class="btn btn-outline-primary mt-5">ثبت کد</button>
                     <a href="{{ route('admin.coupons.index') }}" class="btn mt-5 mr-3 btn-dark"> بازگشت </a>
 
                 </form>

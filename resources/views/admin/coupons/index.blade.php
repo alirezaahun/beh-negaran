@@ -8,13 +8,13 @@
 
         <div class="d-flex justify-content-between mb-4">
 
-            <h5 class="font-weight-bold">لیست ویژگی ها ({{$attribute->total()}})</h5>
+            <h5 class="font-weight-bold">لیست کد تخفیف ({{$coupons->total()}})</h5>
 
-            <a class="btn btn-sm btn-outline-primary" href="{{route('admin.attributes.create')}}">
+            <a class="btn btn-sm btn-outline-primary" href="{{route('admin.coupons.create')}}">
 
                 <li class="fa fa-plus"></li>
 
-                ایجاد ویژگی
+                ایجاد کد تخفیف
 
             </a>
 
@@ -35,11 +35,15 @@
                     </th>
 
                     <th>
-                        قیمت
+                        کد
                     </th>
 
                     <th>
-                        اولویت
+                        نوع
+                    </th>
+
+                    <th>
+                        تاریخ انقضا
                     </th>
 
                     <th>
@@ -52,26 +56,35 @@
 
             <tbody>
 
-                @foreach ($attribute as $key => $attributes)
+                @foreach ($coupons as $key => $coupon)
 
                 <tr>
                     <th>
-                    {{$attribute->firstItem() + $key}}
+                    {{$coupons->firstItem() + $key}}
                     </th>
 
                     <th>
-                        {{$attributes->name}}
+                        {{$coupon->name}}
                     </th>
                     <th>
-                        {{$attributes->price}}
+                        {{$coupon->code}}
                     </th>
                     <th>
-                        {{$attributes->priority}}
+                        {{$coupon->type}}
+                    </th>
+                    <th>
+                        {{$coupon->expired_at}}
                     </th>
 
 
                     <th>
-                        <a href="{{route('admin.attributes.edit' , ['attribute' => $attributes->id])}}" class="btn btn-outline-info">ویرایش</a>
+                        <form action="{{route('admin.coupons.destroy' , ['coupon' => $coupon->id])}}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button class="btn btn-outline-danger">حذف</button>
+
+                        </form>
+
                     </th>
                 </tr>
 

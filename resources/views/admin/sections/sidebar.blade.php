@@ -58,6 +58,12 @@
           <span>پیام ها</span></a>
       </li>
 
+      <li class="nav-item">
+        <a class="nav-link" href="{{route('admin.transactions.index')}}">
+          <i class="fas fa-fw fa-store"></i>
+          <span>تراکنش ها</span></a>
+      </li>
+
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
 
