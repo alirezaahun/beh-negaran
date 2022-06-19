@@ -79,14 +79,9 @@
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="form-group">
-<<<<<<< HEAD
                                                 <label class=' mt-4 mb-2 custom-lable d-block text-right' for="data-picker">
                                                     انتخاب
                                                     تاریخ :</label>
-=======
-                                                <label class=' mt-4 mb-2 custom-lable d-block text-right' for="data-picker"> انتخاب
-                                                    تاریخ </label>
->>>>>>> c84464e49030e2e9111924edde2da0425163e8a2
                                                 <div class="input-group date-input">
                                                     <span class="input-group-text" id="dtp1"><i
                                                             class="fas fa-calendar-alt"></i></span>
@@ -966,7 +961,7 @@
                                 totalPrice = totalPrice - $("#price" + element)
                                     .text();
                                 $(this).parent().remove();
-                                $("#finalPricecontent").val(totalPrice);
+                                $("#finalPricecontent").val(totalPrice + priceSession);
                                 event.preventDefault();
                             });
 
@@ -977,7 +972,7 @@
                         totalPrice += obj.finalPriceThisProductIs;
                         console.log(totalPrice);
 
-                        $("#finalPricecontent").val(priceSession + totalPrice);
+                        $("#finalPricecontent").val(totalPrice+priceSession);
 
                         event.preventDefault();
 
@@ -987,6 +982,7 @@
             });
 
             $(window).on('beforeunload', function() {
+                localStorage.clear();
                 localStorage.setItem("productt", $("#productBox").html());
                 localStorage.setItem("element", totalProducts);
                 localStorage.setItem("finalPrice", totalPrice);
