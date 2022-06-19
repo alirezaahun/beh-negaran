@@ -10,7 +10,7 @@
 
                 <h5>ورود | ثبت‌نام</h5>
 
-                <p class="text-secondary">سلام!
+                <p>سلام!
                     <br>
                     لطفا شماره موبایل خود را وارد کنید
                 </p>
@@ -37,7 +37,7 @@
 
                 <h5>ورود | ثبت‌نام</h5>
 
-                <p class="text-secondary">سلام!
+                <p>سلام!
                     <br>
                     لطفا کد ارسال شده را وارد کنید
                 </p>
@@ -54,7 +54,7 @@
                 </div>
 
 
-                <button class="secondary-btn">ورود</button>
+                <button class="secondary-btn otp-btn">ورود</button>
 
                 <div>
 

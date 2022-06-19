@@ -120,9 +120,9 @@ h6 {
 /* Variables ----------------------------------------------------------------- */
 :root {
   --clr-primary: #f6f6f6;
-  --clr-secondary: rgb(0, 93, 131);
-  --clr-accent: rgb(233, 195, 30);
-  --clr-dark: rgb(58, 62, 61);
+  --clr-secondary: rgb(0, 113, 162);
+  --clr-accent: rgb(255, 212, 0);
+  --clr-dark: rgb(65, 64, 66);
   --transition-easing: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -626,7 +626,7 @@ h6 {
 }
 
 .banner {
-  background-image: url(/images/orginal-banner9-75.png?8de5615e0dd0a964be79263af5f66978);
+  background-image: url(/images/orginal-banner10.png?eb30faa20cc5599b9ba435fd2e043909);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -636,20 +636,20 @@ h6 {
 
 .banner-inner {
   background-color: #fff;
-  padding: 0.6rem 1rem;
+  padding: 0.4rem 1rem;
   border-radius: 0 0 1.3rem 1.3rem;
   margin: auto;
-  width: 45%;
+  width: 37%;
   text-align: center;
   box-shadow: rgba(0, 0, 0, 0.16) 1px 1px 4px inset, rgba(0, 0, 0, 0.23) -1px 0px 4px inset;
 }
 
 .banner-inner h1 {
-  font-size: 2rem;
+  font-size: 1.6rem;
   color: var(--clr-secondary);
   border: 1px solid rgba(0, 0, 0, 0.267);
   border-radius: 0 0 0.8rem 0.8rem;
-  padding: 1rem 0.5rem;
+  padding: 0.7rem 0.5rem;
 }
 
 /* Service Section -------------------------------------------------------- */
@@ -1622,10 +1622,15 @@ footer p span {
   display: flex;
   min-height: 300px;
   border-radius: 8px 8px 0 0;
+  justify-content: center;
 }
 
 .tabby-tab {
-  flex: 1;
+  max-height: 38px;
+  text-align: justify;
+  /* flex: 1; */
+  justify-content: space-between;
+  /* justify-self: start; */
 }
 
 .tabby-tab label.custom-lable {
@@ -1639,11 +1644,6 @@ footer p span {
   cursor: pointer;
   transition: background 0.5s ease;
   border-radius: 0.5rem;
-}
-
-.tabby-tab label.custom-lable:hover {
-  background: var(--clr-dark);
-  color: var(--clr-primary);
 }
 
 .tabby-content {
@@ -1686,7 +1686,6 @@ footer p span {
   background: var(--clr-secondary);
   color: var(--clr-primary);
   z-index: 2;
-  border: 0.5px solid var(--clr-accent);
 }
 
 [type=radio]:checked ~ label ~ .tabby-content {
@@ -1860,9 +1859,10 @@ a {
   }
 
   .tabby-tab label {
-    height: 45px;
+    max-width: 100px;
     font-size: 13px;
     padding: 8px;
+    text-align: justify;
   }
 
   .tabby-content {
@@ -1996,7 +1996,7 @@ a {
 }
 
 .ribbon span {
-  font-size: 17px;
+  font-size: 16px;
   /* font-weight: bold; */
   color: var(--clr-dark);
   text-transform: uppercase;
@@ -2048,7 +2048,8 @@ a {
 #video8 img,
 #video9 img,
 #video10 img,
-#video11 img {
+#video11 img,
+#video12 img {
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -2290,8 +2291,9 @@ a {
 #loginForm,
 #OTPinput {
   padding: 3rem;
+  color: var(--clr-primary);
   border-radius: 0.7rem;
-  background-color: var(--clr-primary);
+  background-color: var(--clr-dark);
   box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 2px, rgba(0, 0, 0, 0.23) 0px 0px 3px;
 }
 
@@ -2313,7 +2315,7 @@ a {
 
 #loginForm input,
 #OTPinput input {
-  background-color: #95a5a67c;
+  background-color: var(--clr-primary);
   border: 1px solid transparent;
   border-radius: 0.5rem;
   padding: 0.7rem;
@@ -2331,6 +2333,10 @@ a {
   box-shadow: none;
 }
 
+.loading-btn {
+  background-color: var(--clr-accent);
+}
+
 .secondary-btn.spinning:after {
   content: "";
   position: absolute;
@@ -2338,7 +2344,7 @@ a {
   top: 50%;
   width: 0;
   height: 0;
-  box-shadow: 0px 0px 0 1px var(--clr-accent);
+  box-shadow: 0px 0px 0 1px var(--clr-primary);
   border-radius: 50%;
   -webkit-animation: rotate360 0.5s infinite linear, exist 0.1s forwards ease;
           animation: rotate360 0.5s infinite linear, exist 0.1s forwards ease;
@@ -2352,10 +2358,14 @@ a {
   right: 30%;
   top: 50%;
   position: absolute;
-  border: 2px solid var(--clr-accent);
+  border: 2px solid var(--clr-primary);
   border-right: 3px solid var(--clr-secondary);
   -webkit-animation: rotate360 0.5s infinite linear, exist 0.1s forwards ease;
           animation: rotate360 0.5s infinite linear, exist 0.1s forwards ease;
+}
+
+.otp-btn {
+  background-color: var(--clr-accent);
 }
 
 @-webkit-keyframes rotate360 {
@@ -3011,7 +3021,7 @@ a {
   }
 
   .banner {
-    background-image: url(/images/orginal-banner9mobile-min57.png?cd28dee8745cf9eefbd9b9e6009ffb7f);
+    background-image: url(/images/orginal-banner11mobile.png?b973bb42f2b04d983910f0b1f95cbd78);
     background-size: cover;
     background-position: center;
     height: 55vh;
@@ -3287,6 +3297,21 @@ a {
 
   .message-text span:after {
     display: none;
+  }
+
+  #video1 img,
+#video2 img,
+#video3 img,
+#video4 img,
+#video5 img,
+#video6 img,
+#video7 img,
+#video8 img,
+#video9 img,
+#video10 img,
+#video11 img,
+#video12 img {
+    height: 442.94px;
   }
 }
 /* Tablet Screen -----------------------------------------------*/

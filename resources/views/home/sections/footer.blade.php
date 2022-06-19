@@ -45,22 +45,21 @@
                     <li>
                         <i class='bx bx-phone-call'></i>
                         <span>تلفن پشتیبانی :</span>
-                        <a href="tel:02634239029">۰۲۶۳۴۲۳۹۰۲۹</a>
+                        <a href="tel:02634487575">۰۲۶۳۴۴۸۷۵۷۵</a>
                     </li>
 
                     <li>
                         <i class='bx bxs-location-plus'></i>
-                        <span>دفتر شرکت : کرج، میدان توحید، ساختمان سنیک</span>
+                        <span>دفتر شركت : كرج، بلوار دانش آموز، خيابان ابن سينا، نبش كوچه پروين</span>
                     </li>
                     <li>
                         <a referrerpolicy="origin" target="_blank"
                             href="https://trustseal.enamad.ir/?id=245447&amp;Code=eewDUE10jaZKLKtliHr3"><img
                                 referrerpolicy="origin"
                                 src="https://Trustseal.eNamad.ir/logo.aspx?id=245447&amp;Code=eewDUE10jaZKLKtliHr3"
-                                alt="" style="cursor:pointer" id="eewDUE10jaZKLKtliHr3"><img class="e-namad"
-                                src="{{ asset('images/enamad-logo.png') }}" alt="e-namad"></a>
+                                alt="" style="cursor:pointer" id="eewDUE10jaZKLKtliHr3"></a>
                         {{-- <img class="e-namad" src="{{ asset('images/samandehi-logo.png') }}" alt="samandehi"> --}}
-                        <img class="e-namad" referrerpolicy='origin' id = 'nbqejzpefukzoeukesgtapfu' style = 'cursor:pointer' onclick = 'window.open("https://logo.samandehi.ir/Verify.aspx?id=276805&p=uiwkjyoegvkamcsiobpddshw", "Popup","toolbar=no, scrollbars=no, location=no, statusbar=no, menubar=no, resizable=0, width=450, height=630, top=30")' alt = 'logo-samandehi' src = 'https://logo.samandehi.ir/logo.aspx?id=276805&p=odrfyndtwlbqaqgwlymaujyn' /> -->
+                        <img referrerpolicy='origin' id = 'nbqejzpefukzoeukesgtapfu' style = 'cursor:pointer' onclick = 'window.open("https://logo.samandehi.ir/Verify.aspx?id=276805&p=uiwkjyoegvkamcsiobpddshw", "Popup","toolbar=no, scrollbars=no, location=no, statusbar=no, menubar=no, resizable=0, width=450, height=630, top=30")' alt = 'logo-samandehi' src = 'https://logo.samandehi.ir/logo.aspx?id=276805&p=odrfyndtwlbqaqgwlymaujyn' /> 
 
                     </li>
                     <li>
