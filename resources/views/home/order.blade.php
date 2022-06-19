@@ -103,7 +103,7 @@
                                             <div class="tabby-tab">
                                                 <input type="radio" id="radio{{ $category->id }}" name="tabby-tabs"
                                                     checked>
-                                                    {{-- custom-lable --}}
+                                                {{-- custom-lable --}}
                                                 <label class="projects-btn mx-3 ms-md-2 text-truncate"
                                                     for="radio{{ $category->id }}">{{ $category->name }}</label>
                                                 <div class="tabby-content">
@@ -476,8 +476,10 @@
                     priceSession = priceSession - $("#price" + element)
                         .text();
                     $("#" + element).remove();
-                    $("#finalPricecontent").val(totalPrice+priceSession);
+                    getSession.splice(getSession.indexOf(element), 1);
+                    $("#finalPricecontent").val(totalPrice + priceSession);
                     event.preventDefault();
+                    console.log(getSession);
                 });
 
             });
@@ -963,7 +965,8 @@
                                 totalPrice = totalPrice - $("#price" + element)
                                     .text();
                                 $(this).parent().remove();
-                                $("#finalPricecontent").val(totalPrice + priceSession);
+                                $("#finalPricecontent").val(totalPrice +
+                                    priceSession);
                                 event.preventDefault();
                             });
 
@@ -982,20 +985,16 @@
 
             });
 
-            $(window).on('beforeunload', function() {
-                localStorage.clear();
-                localStorage.setItem("productt", $("#productBox").html());
-                localStorage.setItem("element", totalProducts);
-                localStorage.setItem("finalPrice", totalPrice);
-            });
-
             $("#pay").click(function() {
-
+                getOrder = [];
                 if (getSession != null) {
+
                     getSession.forEach(element => {
-                        getRandomNumbers.push(element);
+                        getRandomNumbers.push(parseInt(element));
                     });
+
                 }
+                console.log(getRandomNumbers);
                 getRandomNumbers.forEach(element => {
 
                     getOrder.push({
@@ -1010,6 +1009,7 @@
 
                 });
 
+                console.log(getOrder);
 
                 $.post("{{ route('payment') }}", {
 
@@ -1026,6 +1026,12 @@
                 })
             });
 
+            $(window).on('beforeunload', function() {
+                localStorage.clear();
+                localStorage.setItem("productt", $("#productBox").html());
+                localStorage.setItem("element", totalProducts);
+                localStorage.setItem("finalPrice", totalPrice);
+            });
 
 
             $(".previous").click(function() {
