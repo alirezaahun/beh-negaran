@@ -470,26 +470,31 @@
 
                     </div>
 
-
                     {{-- User Orders Content --}}
                     <div id="order" class="row tab_content">
                         <h4>سفارش های شما</h4>
                         <div class="footer-line"><span></span></div>
+                        @foreach ($getOrders as $totalOrder)
+
                         <div class="col-md-12">
+                            @foreach ($totalOrder->OrderItems as $order)
+
                             <ul>
                                 <li><span class="text-secondary">مکان</span>
-                                    <h6>کرج، جهانشهر</h6>
+                                    <h6>{{$order->address}}</h6>
                                 </li>
                                 <li><span class="text-secondary">زمان</span>
-                                    <h6> پنج شنبه ۲۰ شهریور ساعت ۱۲:۰۰ </h6>
+                                    <h6> {{$order->date}} </h6>
                                 </li>
                                 <li><span class="text-secondary">خدمات</span>
-                                    <h6>ویدیو - دوربین ثابت ، ۲ ساعت</h6>
+                                    <h6>{{$order->attributes}}</h6>
                                 </li>
                                 <li><span class="text-secondary">مبلغ</span>
-                                    <h6>۳٫۰۰۰٫۰۰۰ تومان</h6>
+                                    <h6>{{$order->price}}</h6>
                                 </li>
                             </ul>
+
+                            @endforeach
                             <span class="order-details">جزئیات</span>
 
                             <div class="order-collapse">
@@ -497,16 +502,18 @@
                                     <li class="table-header">
                                         <div class="col col-1">هزینه خدمات</div>
                                         <div class="col col-2">تخفیف</div>
-                                        <div class="col col-3">مالیات و عوارض</div>
-                                        <div class="col col-4">مبلغ کل</div>
-                                        <div class="col col-5">وضعیت سفارش</div>
+                                        <div class="col col-3">مبلغ کل</div>
+                                        <div class="col col-4">وضعیت پرداخت</div>
+                                        <div class="col col-5">کد پیگیری</div>
                                     </li>
                                     <li class="table-row">
-                                        <div class="col col-1" data-label="هزینه پکیج">۲٬۵۰۰٬۰۰۰ تومان</div>
-                                        <div class="col col-2" data-label="ایاب و ذهاب">۲۰۰٬۰۰۰ تومان</div>
-                                        <div class="col col-3" data-label="خدمت اضافه">۳۰۰٬۰۰۰ تومان</div>
-                                        <div class="col col-4" data-label="مبلغ کل">۳٬۰۰۰٬۰۰۰ تومان</div>
-                                        <div class="col col-5" data-label="وضعیت سفارش">در حال انجام</div>
+                                        <div class="col col-1" data-label="هزینه پکیج">{{$totalOrder->total_amount}}</div>
+                                        <div class="col col-2" data-label="ایاب و ذهاب">0</div>
+                                        <div class="col col-3" data-label="مبلغ کل">{{$totalOrder->paying_amount}}</div>
+                                        @foreach ($totalOrder->TransActions as $item)
+                                        <div class="col col-4 {{($item->success) == 1 ? 'text-success' : 'text-danger'}}" data-label="وضعیت سفارش">{{($item->success) == 1 ? 'موفق' : 'ناموفق'}}</div>
+                                        <div class="col col-5" data-label="مالیات و عوارض">{{$item->ref_id}}</div>
+                                        @endforeach
                                     </li>
 
                                 </ul>
@@ -518,7 +525,7 @@
                             <hr>
                         </div>
 
-
+                        @endforeach
 
 
                     </div>

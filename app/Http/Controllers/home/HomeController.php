@@ -57,7 +57,8 @@ class HomeController extends Controller
 
 
         $user = User::where('id' , auth()->id())->first();
-        return view('home.profile' , compact('user'));
+        $getOrders = $user->Orders()->with('OrderItems')->with('TransActions')->get();
+        return view('home.profile' , compact('user' , 'getOrders'));
 
 
     }

@@ -79,8 +79,9 @@
                                     <div class="row">
                                         <div class="col-12">
                                             <div class="form-group">
-                                                <label class=' mt-4 mb-2 custom-lable d-block text-right' for="data-picker"> انتخاب
-                                                    تاریخ </label>
+                                                <label class=' mt-4 mb-2 custom-lable d-block text-right' for="data-picker">
+                                                    انتخاب
+                                                    تاریخ :</label>
                                                 <div class="input-group date-input">
                                                     <span class="input-group-text" id="dtp1"><i
                                                             class="fas fa-calendar-alt"></i></span>
@@ -364,7 +365,8 @@
                                     <span>جمع کل پرداختی شما</span> <input id="finalPricecontent" value="0"
                                         class="text-danger form-control my-3 " disabled>
                                 </div>
-                                <input type="button" name="previous" class="info-btn mx-auto w-50 " value="پرداخت" />
+                                <input type="button" id="pay" name="previous" class="info-btn mx-auto w-50 "
+                                    value="پرداخت" />
                             </div>
                             <input type="button" name="previous" class="previous action-button-previous mt-3  "
                                 value="بازگشت" />
@@ -452,10 +454,45 @@
             var tags = [];
             var date = 0;
             var steps = $("fieldset").length;
+            var getRandomNumbers = [];
+            var getOrder = [];
+            var getSession = [];
+            var priceSession;
+            var getTotal;
             setProgressBar(current);
+            // localStorage.clear();
+            $("#productBox").html(localStorage.getItem("productt"));
+            console.log(localStorage.getItem("productt"));
+            $("#finalPricecontent").val(localStorage.getItem("finalPrice"));
+            console.log(localStorage.getItem("finalPrice"));
+            console.log(parseInt($("#finalPricecontent").val()) + 20000);
+            if (localStorage.getItem("element") != null) {
+                getSession = localStorage.getItem("element").split(",");
+            }
+            console.log(getSession);
+            priceSession = $("#finalPricecontent").val();
+            getSession.forEach(element => {
+                $("#deleteProduct" + element).click(function(event) {
+                    priceSession = priceSession - $("#price" + element)
+                        .text();
+                    $("#" + element).remove();
+                    $("#finalPricecontent").val(totalPrice+priceSession);
+                    event.preventDefault();
+                });
 
+            });
 
+            // localStorage.getItem("element").forEach(element => {
 
+            //     $("#deleteProduct" + element).click(function(event) {
+            //         totalPrice = totalPrice - $("#price" + element)
+            //             .text();
+            //         $(this).parent().remove();
+            //         $("#finalPricecontent").val(totalPrice);
+            //         event.preventDefault();
+            //     });
+
+            // });
             $("#SubmitForm").click(function(event) {
                 console.log($('#addresses1').val());
                 event.preventDefault();
@@ -488,271 +525,254 @@
             });
 
 
-        $(".next").click(function() {
-            current_fs = $(this).parent();
-            next_fs = $(this).parent().next();
-            //Add Class Active
-            $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
-            //show the next fieldset
-            next_fs.show();
-            //hide the current fieldset with style
-            current_fs.animate({
-                opacity: 0
-            }, {
-                step: function(now) {
-                    // for making fielset appear animation
-                    opacity = 1 - now;
-                    current_fs.css({
-                        'display': 'none',
-                        'position': 'relative'
-                    });
-                    next_fs.css({
-                        'opacity': opacity
-                    });
-                },
-                duration: 500
-            });
-            setProgressBar(++current);
-        });
-
-        let attributes = @json($getChildren);
-        let parents = @json($getParents);
-
-        parents.forEach(element => {
-
-            $("#radio" + element.id).change(function() {
-                $("#push" + element.id).empty();
-                $("#pushHour" + element.id).empty();
-                $("#pushOptionAttr" + element.id).empty();
-                $("#pushTags" + element.id).empty();
-            });
-
-        });
-
-        $("select").change(function() {
-
-            $("#currentAddress").val($("#userAddresses").children("option:selected")
-                .val());
-            address = $("#currentAddress").val();
-            Object.assign(obj, {
-                userAddress: address
-            })
-            console.log(obj);
-
-            obj = {};
-            var getChildrenId = $(this).children(":selected").attr("id");
-            getChildreName = $(this).children(":selected").text();
-            trigger = [];
-            tagTrigger = [];
-            $("#push" + getChildrenId).empty();
-            $("#pushHour" + getChildrenId).empty();
-            $("#pushOptionAttr" + getChildrenId).empty();
-            $("#pushTags" + getChildrenId).empty();
-            var getId = $(this).children("option:selected").val();
-            attributes.forEach(element => {
-                let getAttributes = [];
-                if (element.id == getId) {
-                    element.tag_categories.forEach(element => {
-                        tagTrigger.push(element);
-                        console.log(tagTrigger);
-                        let PushTagsInput = $("<input/>", {
-                            class: "form-check-input float-right-checkbox",
-                            type: "checkbox",
-                            id: `Tagcheckbox${element.id}`
+            $(".next").click(function() {
+                current_fs = $(this).parent();
+                next_fs = $(this).parent().next();
+                //Add Class Active
+                $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+                //show the next fieldset
+                next_fs.show();
+                //hide the current fieldset with style
+                current_fs.animate({
+                    opacity: 0
+                }, {
+                    step: function(now) {
+                        // for making fielset appear animation
+                        opacity = 1 - now;
+                        current_fs.css({
+                            'display': 'none',
+                            'position': 'relative'
                         });
-                        let PushTagsLabel = $("<label/>", {
-                            value: element.id,
-                            text: element.name + "(" + element.price + ")",
-                            class: "form-check-label float-right-checkbox",
-                            id: `Taglabel${element.id}`
-                        }).addClass('order-margin ml-5 order-margin2');
-                        $("#pushTags" + getChildrenId).append(PushTagsInput,
-                            PushTagsLabel, "<br/>");
-                    });
-                    element.attributes.forEach(element => {
+                        next_fs.css({
+                            'opacity': opacity
+                        });
+                    },
+                    duration: 500
+                });
+                setProgressBar(++current);
+            });
 
-                        trigger.push(element);
-                     
-                        let createAttr = $("<label/>", {
-                            value: element.id,
-                            id: `attributeLabel${element.id}`,
-                            text: element.name + "(" + element.price + ")"
-                        }).addClass('mt-2');
-                        let createCheckBox = $("<input/>", {
-                            type: "checkbox",
-                            id: `AttributeCheckbox${element.id}`
-                        }).addClass(
-                            'form-check-label float-right-checkbox order-margin ');
-                        let hourlabel = $("<label/>", {
-                            text: "مدت زمان درخواستی",
-                            id: `HourQtyLabel${element.id}`
-                        }).addClass('order-marginTop ');
-                        let hourInput = $("<input/>", {
-                            type: "number",
-                            id: `HourQty${element.id}`,
-                            name: "tentacles",
-                            value: 1,
-                            min: "1",
-                            max: "10",
-                            class: "text-center",
-                        }).addClass('margin-hourInput');
-                        let hourSpan = $("<span/>", {
-                            text: "ساعت"
-                        }).addClass(' order-margin');
+            let attributes = @json($getChildren);
+            let parents = @json($getParents);
 
-                        let optionAttrLabel = $("<label/>", {
-                            text: "تعداد دوربین",
-                            id: `ObjQuantityLabel${element.id}`
-                        }).addClass(' mt-2 order-margin-ObjQuantityLabel test ');
+            parents.forEach(element => {
 
-                        let optionAttrInput = $("<input/>", {
-                            type: "number",
-                            class: "text-center h-25 border-custom",
-                            id: `ObjQuantity${element.id}`,
-                            value: 1,
-                            min: "1",
-                            max: "10"
-                        }).addClass(' float-left ');
+                $("#radio" + element.id).change(function() {
+                    $("#push" + element.id).empty();
+                    $("#pushHour" + element.id).empty();
+                    $("#pushOptionAttr" + element.id).empty();
+                    $("#pushTags" + element.id).empty();
+                });
 
-                        $("#push" + getChildrenId).append(createCheckBox,
-                            createAttr,
-                            "<br/>");
-                        $("#pushHour" + getChildrenId).append(hourlabel, hourInput,
-                            hourSpan, "<br/>");
-                        $("#pushOptionAttr" + getChildrenId).append(optionAttrLabel,
-                            optionAttrInput,
-                            "<br/>");
-                    });
+            });
 
-                    data = [];
-                    price = [];
-                    tagPrice = [];
-                    hour = [];
-                    quantity = [];
-                    tags = [];
-                    trigger.forEach(element => {
+            $("select").change(function() {
 
-                        $('#AttributeCheckbox' + element.id).change(function() {
-                            var ischecked = $(this).is(':checked');
-                            if (ischecked) {
-                                console.log(element);
-                                data.push(element.name);
-                                hour.push($("#HourQty" + element.id).val());
-                                price.push(element.price);
-                                quantity.push($("#ObjQuantity" + element.id)
-                                    .val());
+                $("#currentAddress").val($("#userAddresses").children("option:selected")
+                    .val());
+                address = $("#currentAddress").val();
+                Object.assign(obj, {
+                    userAddress: address
+                })
+                console.log(obj);
+
+                obj = {};
+                var getChildrenId = $(this).children(":selected").attr("id");
+                getChildreName = $(this).children(":selected").text();
+                trigger = [];
+                tagTrigger = [];
+                $("#push" + getChildrenId).empty();
+                $("#pushHour" + getChildrenId).empty();
+                $("#pushOptionAttr" + getChildrenId).empty();
+                $("#pushTags" + getChildrenId).empty();
+                var getId = $(this).children("option:selected").val();
+                attributes.forEach(element => {
+                    let getAttributes = [];
+                    if (element.id == getId) {
+                        element.tag_categories.forEach(element => {
+                            tagTrigger.push(element);
+                            console.log(tagTrigger);
+                            let PushTagsInput = $("<input/>", {
+                                class: "form-check-input float-right-checkbox",
+                                type: "checkbox",
+                                id: `Tagcheckbox${element.id}`
+                            });
+                            let PushTagsLabel = $("<label/>", {
+                                value: element.id,
+                                text: element.name + "(" + element.price + ")",
+                                class: "form-check-label float-right-checkbox",
+                                id: `Taglabel${element.id}`
+                            }).addClass('order-margin ml-5 order-margin2');
+                            $("#pushTags" + getChildrenId).append(PushTagsInput,
+                                PushTagsLabel, "<br/>");
+                        });
+                        element.attributes.forEach(element => {
+
+                            trigger.push(element);
+
+                            let createAttr = $("<label/>", {
+                                value: element.id,
+                                id: `attributeLabel${element.id}`,
+                                text: element.name + "(" + element.price + ")"
+                            }).addClass('mt-2');
+                            let createCheckBox = $("<input/>", {
+                                type: "checkbox",
+                                id: `AttributeCheckbox${element.id}`
+                            }).addClass(
+                                'form-check-label float-right-checkbox order-margin ');
+                            let hourlabel = $("<label/>", {
+                                text: "مدت زمان درخواستی",
+                                id: `HourQtyLabel${element.id}`
+                            }).addClass('order-marginTop ');
+                            let hourInput = $("<input/>", {
+                                type: "number",
+                                id: `HourQty${element.id}`,
+                                name: "tentacles",
+                                value: 1,
+                                min: "1",
+                                max: "10",
+                                class: "text-center",
+                            }).addClass('margin-hourInput');
+                            let hourSpan = $("<span/>", {
+                                text: "ساعت"
+                            }).addClass(' order-margin');
+
+                            let optionAttrLabel = $("<label/>", {
+                                text: "تعداد دوربین",
+                                id: `ObjQuantityLabel${element.id}`
+                            }).addClass(' mt-2 order-margin-ObjQuantityLabel test ');
+
+                            let optionAttrInput = $("<input/>", {
+                                type: "number",
+                                class: "text-center h-25 border-custom",
+                                id: `ObjQuantity${element.id}`,
+                                value: 1,
+                                min: "1",
+                                max: "10"
+                            }).addClass(' float-left ');
+
+                            $("#push" + getChildrenId).append(createCheckBox,
+                                createAttr,
+                                "<br/>");
+                            $("#pushHour" + getChildrenId).append(hourlabel, hourInput,
+                                hourSpan, "<br/>");
+                            $("#pushOptionAttr" + getChildrenId).append(optionAttrLabel,
+                                optionAttrInput,
+                                "<br/>");
+                        });
+
+                        data = [];
+                        price = [];
+                        tagPrice = [];
+                        hour = [];
+                        quantity = [];
+                        tags = [];
+                        trigger.forEach(element => {
+
+                            $('#AttributeCheckbox' + element.id).change(function() {
+                                var ischecked = $(this).is(':checked');
+                                if (ischecked) {
+                                    console.log(element);
+                                    data.push(element.name);
+                                    hour.push($("#HourQty" + element.id).val());
+                                    price.push(element.price);
+                                    quantity.push($("#ObjQuantity" + element.id)
+                                        .val());
 
 
-                                $("#HourQty" + element.id).change(
-                                    function() {
+                                    $("#HourQty" + element.id).change(
+                                        function() {
 
-                                        if ($("#HourQty" + element.id)
-                                            .val() <= 0) {
-                                            $("#HourQty" + element.id).val(
-                                                1);
-                                        }
+                                            if ($("#HourQty" + element.id)
+                                                .val() <= 0) {
+                                                $("#HourQty" + element.id).val(
+                                                    1);
+                                            }
 
-                                        if ($("#HourQty" + element.id)
-                                            .val() > 5) {
-                                            $("#HourQty" + element.id).val(
-                                                5);
-                                        }
+                                            if ($("#HourQty" + element.id)
+                                                .val() > 5) {
+                                                $("#HourQty" + element.id).val(
+                                                    5);
+                                            }
 
-                                        for (let i = 0; i < data
-                                            .length; i++) {
+                                            for (let i = 0; i < data
+                                                .length; i++) {
 
-                                            if (data[i] == element
-                                                .name) {
+                                                if (data[i] == element
+                                                    .name) {
 
-                                                hour[i] = $("#HourQty" +
-                                                        element.id)
-                                                    .val();
+                                                    hour[i] = $("#HourQty" +
+                                                            element.id)
+                                                        .val();
+
+                                                }
 
                                             }
 
-                                        }
+                                        });
 
-                                    });
+                                    $("#ObjQuantity" + element.id).change(
+                                        function() {
 
-                                $("#ObjQuantity" + element.id).change(
-                                    function() {
+                                            if ($("#ObjQuantity" + element.id)
+                                                .val() <= 0) {
+                                                $("#ObjQuantity" + element.id)
+                                                    .val(1);
+                                            }
 
-                                        if ($("#ObjQuantity" + element.id)
-                                            .val() <= 0) {
-                                            $("#ObjQuantity" + element.id)
-                                                .val(1);
-                                        }
+                                            if ($("#ObjQuantity" + element.id)
+                                                .val() > 5) {
+                                                $("#ObjQuantity" + element.id)
+                                                    .val(5);
+                                            }
 
-                                        if ($("#ObjQuantity" + element.id)
-                                            .val() > 5) {
-                                            $("#ObjQuantity" + element.id)
-                                                .val(5);
-                                        }
+                                            for (let i = 0; i < data
+                                                .length; i++) {
 
-                                        for (let i = 0; i < data
-                                            .length; i++) {
+                                                if (data[i] == element
+                                                    .name) {
 
-                                            if (data[i] == element
-                                                .name) {
+                                                    quantity[i] = $(
+                                                            "#ObjQuantity" +
+                                                            element.id)
+                                                        .val();
 
-                                                quantity[i] = $(
-                                                        "#ObjQuantity" +
-                                                        element.id)
-                                                    .val();
+                                                }
 
                                             }
 
+                                        });
+
+                                } else if (!ischecked) {
+                                    for (let i = 0; i < data.length; i++) {
+                                        if (data[i] == element.name) {
+                                            data.splice(i, 1);
+                                            hour.splice(i, 1);
+                                            quantity.splice(i, 1);
                                         }
-
-                                    });
-
-                            } else if (!ischecked) {
-                                for (let i = 0; i < data.length; i++) {
-                                    if (data[i] == element.name) {
-                                        data.splice(i, 1);
-                                        hour.splice(i, 1);
-                                        quantity.splice(i, 1);
                                     }
                                 }
-                            }
+                            });
                         });
-                    });
-                    tagTrigger.forEach(element => {
-                        $('#Tagcheckbox' + element.id).change(function() {
-                            var checkTag = $(this).is(':checked');
-                            console.log(element.price);
-                            if (checkTag) {
-                                tags.push(element.name);
-                                tagPrice.push(element.price);
-                            } else if (!checkTag) {
-                                for (let i = 0; i < tags.length; i++) {
-                                    if (tags[i] == element.name) {
-                                        tags.splice(i, 1);
-                                        tagPrice.splice(i, 1);
+                        tagTrigger.forEach(element => {
+                            $('#Tagcheckbox' + element.id).change(function() {
+                                var checkTag = $(this).is(':checked');
+                                console.log(element.price);
+                                if (checkTag) {
+                                    tags.push(element.name);
+                                    tagPrice.push(element.price);
+                                } else if (!checkTag) {
+                                    for (let i = 0; i < tags.length; i++) {
+                                        if (tags[i] == element.name) {
+                                            tags.splice(i, 1);
+                                            tagPrice.splice(i, 1);
+                                        }
                                     }
                                 }
-                            }
-                            console.log(tags, tagPrice);
+                                console.log(tags, tagPrice);
+                            });
                         });
-                    });
-                    obj = {
-                        product: getChildreName,
-                        attributes: data,
-                        AttributePrice: price,
-                        hour: hour,
-                        quantity: quantity,
-                        tags: tags,
-                        tagPrice: tagPrice,
-                        userAddress: address,
-                        date: date
-                    }
-
-                    $("#userAddresses").change(function() {
-
-                        $("#currentAddress").val($("#userAddresses").children(
-                            "option:selected").val());
-                        address = $("#currentAddress").val();
-                        Object.assign(obj, {
+                        obj = {
                             product: getChildreName,
                             attributes: data,
                             AttributePrice: price,
@@ -762,228 +782,293 @@
                             tagPrice: tagPrice,
                             userAddress: address,
                             date: date
+                        }
+
+                        $("#userAddresses").change(function() {
+
+                            $("#currentAddress").val($("#userAddresses").children(
+                                "option:selected").val());
+                            address = $("#currentAddress").val();
+                            Object.assign(obj, {
+                                product: getChildreName,
+                                attributes: data,
+                                AttributePrice: price,
+                                hour: hour,
+                                quantity: quantity,
+                                tags: tags,
+                                tagPrice: tagPrice,
+                                userAddress: address,
+                                date: date
+                            });
+                            console.log(obj);
+
                         });
-                        console.log(obj);
-
-                    });
-                }
+                    }
+                });
             });
-        });
 
-        $("#date").change(function() {
-            date = moment(dtp1Instance.getDate(), 'YYYY/MM/DD').locale(
-                'fa').format('YYYY/MM/DD');
-            Object.assign(obj, {
-                product: getChildreName,
-                attributes: data,
-                AttributePrice: price,
-                hour: hour,
-                quantity: quantity,
-                tags: tags,
-                tagPrice: tagPrice,
-                userAddress: address,
-                date: date
+            $("#date").change(function() {
+                date = moment(dtp1Instance.getDate(), 'YYYY/MM/DD').locale(
+                    'fa').format('YYYY/MM/DD');
+                Object.assign(obj, {
+                    product: getChildreName,
+                    attributes: data,
+                    AttributePrice: price,
+                    hour: hour,
+                    quantity: quantity,
+                    tags: tags,
+                    tagPrice: tagPrice,
+                    userAddress: address,
+                    date: date
+                });
             });
-        });
 
 
-        parents.forEach(element => {
+            parents.forEach(element => {
 
-            $("#add" + element.id).click(function(event) {
-                event.preventDefault();
-                if (obj.date == null || obj.date == 0) {
+                $("#add" + element.id).click(function(event) {
+                    event.preventDefault();
+                    if (obj.date == null || obj.date == 0) {
 
-                    alert("لطفا تاریخ را انتخاب کنید");
+                        alert("لطفا تاریخ را انتخاب کنید");
 
-                } else {
+                    } else {
 
-                    calculate = [];
-                    attribuePriceResult = 0;
-                    tagCalculate = [];
-                    tagPriceResult = 0;
+                        calculate = [];
+                        attribuePriceResult = 0;
+                        tagCalculate = [];
+                        tagPriceResult = 0;
 
-                    let rnd = Math.floor((Math.random() * 1000000) + 1);
-                    console.log(rnd);
+                        let rnd = Math.floor((Math.random() * 1000000) + 1);
+                        console.log(rnd);
 
-                    $("#productBox").append(`<ul id=${rnd}>` +
-                        `<li id=ProductLocation${rnd}> <span class='text-secondary'> آدرس <hr>` +
-                        `<li id=ProductSpecAttr${rnd}><span class='text-secondary'>خدمات ویژه  <hr> ` +
-                        `<li id=ProductDetails${rnd}> <span class='text-secondary'>ویژگی ها <hr>` +
-                        `<li id=ProductPrice${rnd}> <span class='text-secondary'> جمع کل <hr>` +
-                        `<li id=ProductName${rnd}> <span class='text-secondary'> نوع خدمت <hr>` +
-                        `<li id=ProductDate${rnd}> <span class='text-secondary'>تاریخ<hr>` +
-                        `<li id=deleteProduct${rnd}> <span class='text-secondary'> عملیات <hr> <button id=deleteProduct${rnd} class='text-danger secondary-btn cutom-color'> حذف خدمت </button>`
-                    );
+                        $("#productBox").append(`<ul id=${rnd}>` +
+                            `<li id=ProductLocation${rnd}> <span class='text-secondary'> آدرس <hr>` +
+                            `<li id=ProductSpecAttr${rnd}><span class='text-secondary'>خدمات ویژه  <hr> ` +
+                            `<li id=ProductDetails${rnd}> <span class='text-secondary'>ویژگی ها <hr>` +
+                            `<li id=ProductPrice${rnd}> <span class='text-secondary'> جمع کل <hr>` +
+                            `<li id=ProductName${rnd}> <span class='text-secondary'> نوع خدمت <hr>` +
+                            `<li id=ProductDate${rnd}> <span class='text-secondary'>تاریخ<hr>` +
+                            `<li id=deleteProduct${rnd}> <span class='text-secondary'> عملیات <hr> <button id=deleteProduct${rnd} class='text-danger secondary-btn cutom-color'> حذف خدمت </button>`
+                        );
+
+                        getRandomNumbers.push(rnd);
+
+                        for (let i = 0; i < obj.attributes.length; i++) {
+                            event.preventDefault();
+                            console.log(obj.attributes[i] + obj.AttributePrice[i] + "ساعت:" + obj
+                                .hour[
+                                    i] + "تعداد" + obj.quantity[i]);
+                            var counter = 0;
+
+                            for (let x = 0; x < obj.quantity[i]; x++) {
+
+                                if (counter == 0) {
+
+                                    calculate.push(obj.AttributePrice[i]);
+
+                                } else {
+                                    let discount = (obj.AttributePrice[i] * 15) / 100;
+                                    calculate.push(obj.AttributePrice[i] - discount);
+                                }
+
+                                attribuePriceResult = calculate.reduce((total, number) => total +
+                                    number, 0);
+                                counter++;
+                                console.log(calculate, attribuePriceResult);
 
 
-                    for (let i = 0; i < obj.attributes.length; i++) {
-                        event.preventDefault();
-                        console.log(obj.attributes[i] + obj.AttributePrice[i] + "ساعت:" + obj
-                            .hour[
-                                i] + "تعداد" + obj.quantity[i]);
-                        var counter = 0;
-
-                        for (let x = 0; x < obj.quantity[i]; x++) {
-
-                            if (counter == 0) {
-
-                                calculate.push(obj.AttributePrice[i]);
-
-                            } else {
-                                let discount = (obj.AttributePrice[i] * 15) / 100;
-                                calculate.push(obj.AttributePrice[i] - discount);
                             }
 
-                            attribuePriceResult = calculate.reduce((total, number) => total +
-                                number, 0);
-                            counter++;
-                            console.log(calculate, attribuePriceResult);
+                            obj.AttributespriceDetails = calculate;
+                            obj.attributesPriceResult = attribuePriceResult;
 
+
+                            let productDetails = $("<div/>", {
+
+                                text: " ویژگی " + obj.attributes[i] + " ساعت: " + obj.hour[
+                                        i] +
+                                    " تعداد: " + obj.quantity[i],
+                                id: `ProductDetails${rnd}`
+
+
+                            }).addClass('text-right  text-Cutom-right');
+
+                            $("#ProductDetails" + rnd).append(productDetails);
+                        }
+                        alert("با موفقیت به سبد خرید اضافه شد")
+                        for (let i = 0; i < obj.tags.length; i++) {
+
+                            tagCalculate.push(obj.tagPrice[i]);
+                            console.log(tagCalculate);
+                            tagPriceResult = tagCalculate.reduce((total, number) => total + number,
+                                0);
+                            obj.tagPriceDetails = tagCalculate;
+                            obj.tagPriceResult = tagPriceResult;
+
+                            console.log(tagPriceResult);
+                            let productSpecAttr = $("<h6/>", {
+
+                                text: obj.tags[i],
+                                id: `ProductSpecialAttributes${rnd}`
+
+                            });
+
+                            $("#ProductSpecAttr" + rnd).append(productSpecAttr);
 
                         }
 
-                        obj.AttributespriceDetails = calculate;
-                        obj.attributesPriceResult = attribuePriceResult;
+                        obj.finalPriceThisProductIs = tagPriceResult + attribuePriceResult;
 
+                        console.log(obj);
 
-                        let productDetails = $("<div/>", {
+                        let productPrice = $("<h6/>", {
 
-                            text: " ویژگی " + obj.attributes[i] + " ساعت: " + obj.hour[
-                                    i] +
-                                " تعداد: " + obj.quantity[i]
-
-
-                        }).addClass('text-right  text-Cutom-right');
-
-                        $("#ProductDetails" + rnd).append(productDetails);
-                    }
-                    alert("با موفقیت به سبد خرید اضافه شد")
-                    for (let i = 0; i < obj.tags.length; i++) {
-
-                        tagCalculate.push(obj.tagPrice[i]);
-                        console.log(tagCalculate);
-                        tagPriceResult = tagCalculate.reduce((total, number) => total + number,
-                            0);
-                        obj.tagPriceDetails = tagCalculate;
-                        obj.tagPriceResult = tagPriceResult;
-
-                        console.log(tagPriceResult);
-                        let productSpecAttr = $("<h6/>", {
-
-                            text: obj.tags[i]
+                            text: obj.finalPriceThisProductIs,
+                            id: "price" + rnd
 
                         });
 
-                        $("#ProductSpecAttr" + rnd).append(productSpecAttr);
+                        $("#ProductPrice" + rnd).append(productPrice);
 
-                    }
+                        let productName = $("<h6/>", {
 
-                    obj.finalPriceThisProductIs = tagPriceResult + attribuePriceResult;
+                            text: obj.product,
+                            id: `Productname${rnd}`
 
-                    console.log(obj);
+                        });
 
-                    let productPrice = $("<h6/>", {
+                        let productDate = $("<h6/>", {
+                            text: obj.date,
+                            id: `ProductDatee${rnd}`
+                        });
 
-                        text: obj.finalPriceThisProductIs,
-                        id: "price" + rnd
+                        $("#ProductDate" + rnd).append(productDate);
 
-                    });
+                        let productAddress = $("<div/>", {
+                            text: obj.userAddress,
+                            id: `ProductAddress${rnd}`
+                        });
 
-                    $("#ProductPrice" + rnd).append(productPrice);
+                        $("#ProductLocation" + rnd).append(productAddress);
 
-                    let productName = $("<h6/>", {
+                        $("#ProductName" + rnd).append(productName);
 
-                        text: obj.product
+                        totalProducts.push(rnd);
+                        console.log(totalProducts);
 
-                    });
-
-                    let productDate = $("<h6/>", {
-                        text: obj.date
-                    });
-
-                    $("#ProductDate" + rnd).append(productDate);
-
-                    let productAddress = $("<div/>", {
-                        text: obj.userAddress
-                    });
-
-                    $("#ProductLocation" + rnd).append(productAddress);
-
-                    $("#ProductName" + rnd).append(productName);
-
-                    totalProducts.push(rnd);
-                    console.log(totalProducts);
-
-                    totalProducts.forEach(element => {
-                        event.preventDefault();
-                        $("#deleteProduct" + element).click(function(event) {
-                            totalPrice = totalPrice - $("#price" + element)
-                                .text();
-                            $(this).parent().remove();
-                            $("#finalPricecontent").val(totalPrice);
+                        totalProducts.forEach(element => {
                             event.preventDefault();
+                            $("#deleteProduct" + element).click(function(event) {
+                                totalPrice = totalPrice - $("#price" + element)
+                                    .text();
+                                $(this).parent().remove();
+                                $("#finalPricecontent").val(totalPrice + priceSession);
+                                event.preventDefault();
+                            });
+
                         });
 
+
+
+                        totalPrice += obj.finalPriceThisProductIs;
+                        console.log(totalPrice);
+                        $("#finalPricecontent").val(totalPrice + priceSession);
+
+                        event.preventDefault();
+
+                    }
+                });
+
+            });
+
+            $(window).on('beforeunload', function() {
+                localStorage.clear();
+                localStorage.setItem("productt", $("#productBox").html());
+                localStorage.setItem("element", totalProducts);
+                localStorage.setItem("finalPrice", totalPrice);
+            });
+
+            $("#pay").click(function() {
+
+                if (getSession != null) {
+                    getSession.forEach(element => {
+                        getRandomNumbers.push(element);
                     });
-
-
-
-                    totalPrice += obj.finalPriceThisProductIs;
-                    console.log(totalPrice);
-
-                    $("#finalPricecontent").val(totalPrice);
-
-                    event.preventDefault();
-
                 }
+                getRandomNumbers.forEach(element => {
+
+                    getOrder.push({
+                        "product": $(`#Productname${element}`).text(),
+                        "address": $(`#ProductAddress${element}`).text(),
+                        "date": $(`#ProductDatee${element}`).text(),
+                        "attributes": $(`#ProductDetails${element}`).text(),
+                        "SpecialAttributes": $(`#ProductSpecialAttributes${element}`)
+                            .text(),
+                        "price": $(`#price${element}`).text()
+                    });
+
+                });
+
+
+                $.post("{{ route('payment') }}", {
+
+                    '_token': '{{ csrf_token() }}',
+                    'amount': $("#finalPricecontent").val(),
+                    'orders': getOrder
+                }, function(response, status) {
+                    console.log(response, status);
+                    $(document.body).html(response);
+
+                }).fail(function(response) {
+
+                    console.log(response);
+                })
             });
 
-        });
-
-  
 
 
-        $(".previous").click(function() {
+            $(".previous").click(function() {
 
-            current_fs = $(this).parent();
-            previous_fs = $(this).parent().prev();
+                current_fs = $(this).parent();
+                previous_fs = $(this).parent().prev();
 
-            //Remove class active
-            $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+                //Remove class active
+                $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
 
-            //show the previous fieldset
-            previous_fs.show();
+                //show the previous fieldset
+                previous_fs.show();
 
-            //hide the current fieldset with style
-            current_fs.animate({
-                opacity: 0
-            }, {
-                step: function(now) {
-                    // for making fielset appear animation
-                    opacity = 1 - now;
-                    current_fs.css({
-                        'display': 'none',
-                        'position': 'relative'
-                    });
-                    previous_fs.css({
-                        'opacity': opacity
-                    });
-                },
-                duration: 500
+                //hide the current fieldset with style
+                current_fs.animate({
+                    opacity: 0
+                }, {
+                    step: function(now) {
+                        // for making fielset appear animation
+                        opacity = 1 - now;
+                        current_fs.css({
+                            'display': 'none',
+                            'position': 'relative'
+                        });
+                        previous_fs.css({
+                            'opacity': opacity
+                        });
+                    },
+                    duration: 500
+                });
+                setProgressBar(--current);
             });
-            setProgressBar(--current);
-        });
 
-        function setProgressBar(curStep) {
-            var percent = parseFloat(100 / steps) * curStep;
-            percent = percent.toFixed();
-            $(".progress-bar")
-                .css("width", percent + "%")
-        }
+            function setProgressBar(curStep) {
+                var percent = parseFloat(100 / steps) * curStep;
+                percent = percent.toFixed();
+                $(".progress-bar")
+                    .css("width", percent + "%")
+            }
 
-        $(".submit").click(function() {
-        return false;
-        })
+            $(".submit").click(function() {
+                return false;
+            })
 
         });
 
@@ -1013,7 +1098,6 @@
                 modal.style.display = "none";
             }
         }
-
 
 
 
