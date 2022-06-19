@@ -458,12 +458,14 @@
             var getOrder = [];
             var getSession = [];
             var priceSession;
+            var getTotal;
             setProgressBar(current);
             // localStorage.clear();
             $("#productBox").html(localStorage.getItem("productt"));
             console.log(localStorage.getItem("productt"));
             $("#finalPricecontent").val(localStorage.getItem("finalPrice"));
             console.log(localStorage.getItem("finalPrice"));
+            console.log(parseInt($("#finalPricecontent").val()) + 20000);
             if (localStorage.getItem("element") != null) {
                 getSession = localStorage.getItem("element").split(",");
             }
@@ -971,8 +973,7 @@
 
                         totalPrice += obj.finalPriceThisProductIs;
                         console.log(totalPrice);
-
-                        $("#finalPricecontent").val(totalPrice+priceSession);
+                        $("#finalPricecontent").val(totalPrice + priceSession);
 
                         event.preventDefault();
 
@@ -990,6 +991,11 @@
 
             $("#pay").click(function() {
 
+                if (getSession != null) {
+                    getSession.forEach(element => {
+                        getRandomNumbers.push(element);
+                    });
+                }
                 getRandomNumbers.forEach(element => {
 
                     getOrder.push({
