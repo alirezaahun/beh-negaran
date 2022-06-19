@@ -75,9 +75,9 @@ class PaymentController extends Controller
     {
         $this->updatePayment($request->all());
         if ($request->success == 1) {
-            return redirect()->route('home.index')->with('alert', 'پرداخت با موفقیت انجام شد');
+            return redirect()->route('home.index')->with('alert', 'پرداخت با موفقیت انجام شد')->with('status' , 1);
         } else {
-            return redirect()->route('home.index')->with('alert', 'پرداخت با خطا مواجه شد');
+            return redirect()->route('home.index')->with('alert', 'پرداخت با خطا مواجه شد')->with('status' , 1);;
         }
     }
 
