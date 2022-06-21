@@ -114,7 +114,7 @@
                                                                 class="row  d-flex justify-content-center pricing-box-Shadow">
                                                                 <div class="col-12    ">
                                                                     <select id="select"
-                                                                        class="form-select my-5 mx-auto w-50 w-lg-25">
+                                                                        class="form-select my-5 mx-auto  w-50 w-lg-25">
                                                                         <option class="select"
                                                                             id="{{ $category->id }}">انتخاب
                                                                             پکیچ ها</option>
@@ -130,7 +130,7 @@
                                                                     <div class="col-12">
                                                                         <div id="{{ $category->id }}"
                                                                             class="row">
-                                                                            <h6 class="mx-auto d-md-none mt-3 ">حالت دوربین
+                                                                            <h6 class="mx-auto  d-md-none mt-3 text-center ">حالت دوربین
                                                                             </h6>
                                                                             <hr class="aaa w-50 d-md-none mb-4">
 
@@ -153,7 +153,7 @@
 
 
 
-                                                                            <h6 class="mx-auto d-md-none mt-3">مدت زمان
+                                                                            <h6 class="mx-auto  d-md-none mt-3 text-center">مدت زمان
                                                                                 درخواستی
                                                                             </h6>
                                                                             <hr class="aaa w-50 d-md-none mb-4">
@@ -178,7 +178,7 @@
 
 
 
-                                                                            <h6 class="mx-auto d-md-none mt-3">تعداد دوربین
+                                                                            <h6 class="mx-auto d-md-none mt-3 text-center">تعداد دوربین
                                                                             </h6>
                                                                             <hr class="aaa w-50 d-md-none mb-4">
                                                                             <div
@@ -199,7 +199,7 @@
 
 
 
-                                                                            <h6 class="mx-auto d-md-none mt-3">ویژگی ها
+                                                                            <h6 class="mx-auto d-md-none mt-3 text-center">ویژگی ها
                                                                             </h6>
                                                                             <hr class="aaa w-50 d-md-none mb-4">
                                                                             <div class="d-block">
