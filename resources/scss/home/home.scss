@@ -1427,12 +1427,14 @@ footer p span {
 
 // ************************************************************************************************************************//
 /* MAKE IT CUTE ----- */
+
 .tabs {
     position: relative;
     display: flex;
     min-height: 300px;
     border-radius: 8px 8px 0 0;
     justify-content: center;
+
 }
 
 .tabby-tab {
@@ -1503,7 +1505,8 @@ footer p span {
 }
 
 [type="radio"]:checked ~ label ~ .tabby-content {
-    z-index: 1;
+    // change z-index
+    z-index: -1;
     /* show/hide */
     opacity: 1;
     transform: scale(1);
@@ -1658,6 +1661,15 @@ a {
 
 .cutom-color:hover {
     color: white !important;
+}
+
+
+.custom-parent-tabby-tab{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100px;
+    justify-content: center;
+    z-index: 100 !important ;
 }
 // ***********************end pricing page ******************************
 /* BREAKPOINTS ----- */

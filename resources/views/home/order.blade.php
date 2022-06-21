@@ -96,11 +96,12 @@
                             <h2 id="heading">انتخاب خدمات</h2>
                             </select>
                             <div class="form-card">
-                                <div class="row">
+                                <div class="row">   
                                     <div class="tabs">
 
+                                        <div class="custom-parent-tabby-tab">
                                         @foreach ($getParents as $category)
-                                            <div class="tabby-tab">
+                                            <div class="tabby-tab ">
                                                 <input type="radio" id="radio{{ $category->id }}" name="tabby-tabs"
                                                     checked>
                                                 {{-- custom-lable --}}
@@ -232,8 +233,9 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div>   
                                         @endforeach
+                                    </div> 
                                     </div>
                                 </div>
                             </div>
