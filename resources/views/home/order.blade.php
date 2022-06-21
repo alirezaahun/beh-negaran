@@ -461,28 +461,33 @@
             var getTotal;
             setProgressBar(current);
             // localStorage.clear();
-            $("#productBox").html(localStorage.getItem("productt"));
-            console.log(localStorage.getItem("productt"));
-            $("#finalPricecontent").val(localStorage.getItem("finalPrice"));
-            console.log(localStorage.getItem("finalPrice"));
-            console.log(parseInt($("#finalPricecontent").val()) + 20000);
-            if (localStorage.getItem("element") != null) {
-                getSession = localStorage.getItem("element").split(",");
-            }
-            console.log(getSession);
-            priceSession = $("#finalPricecontent").val();
-            getSession.forEach(element => {
-                $("#deleteProduct" + element).click(function(event) {
-                    priceSession = priceSession - $("#price" + element)
-                        .text();
-                    $("#" + element).remove();
-                    getSession.splice(getSession.indexOf(element), 1);
-                    $("#finalPricecontent").val(totalPrice + priceSession);
-                    event.preventDefault();
-                    console.log(getSession);
-                });
 
-            });
+            try {
+                $("#productBox").html(localStorage.getItem("productt"));
+                console.log(localStorage.getItem("productt"));
+                $("#finalPricecontent").val(localStorage.getItem("finalPrice"));
+                console.log(localStorage.getItem("finalPrice"));
+                console.log(parseInt($("#finalPricecontent").val()) + 20000);
+                if (localStorage.getItem("element") != null) {
+                    getSession = localStorage.getItem("element").split(",");
+                }
+                console.log(getSession);
+                priceSession = $("#finalPricecontent").val();
+                getSession.forEach(element => {
+                    $("#deleteProduct" + element).click(function(event) {
+                        priceSession = priceSession - $("#price" + element)
+                            .text();
+                        $("#" + element).remove();
+                        getSession.splice(getSession.indexOf(element), 1);
+                        $("#finalPricecontent").val(totalPrice + priceSession);
+                        event.preventDefault();
+                        console.log(getSession);
+                    });
+
+                });
+            } catch (err) {
+                localStorage.clear();
+            }
 
             // localStorage.getItem("element").forEach(element => {
 
@@ -976,7 +981,10 @@
 
                         totalPrice += obj.finalPriceThisProductIs;
                         console.log(totalPrice);
-                        $("#finalPricecontent").val(totalPrice + priceSession);
+                        getTotal = Number(priceSession);
+                        console.log(typeof getTotal);
+                        $("#finalPricecontent").val(totalPrice + getTotal);
+                        console.log(totalPrice + priceSession);
 
                         event.preventDefault();
 

@@ -32,7 +32,7 @@
 
                     <li class="nav___items ">
                         <i class='bx bx-log-out'></i>
-                        <a class="                        <a class="text-nowrap" href="{{ route('logout') }}">خروج</a>
+                        <a class="text-nowrap" id="logout" href="{{ route('logout') }}">خروج</a>
        </ul>
             </nav>
 
@@ -763,6 +763,10 @@
 
         // Hide And Show All Contents With Right Side Navbar ---------------------------
         $(document).ready(function() {
+
+            $("#logout").click(function(){
+                localStorage.clear();
+            });
 
             $('#addressForm').submit(function(event) {
 
