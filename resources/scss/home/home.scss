@@ -1085,7 +1085,7 @@ footer p span {
     padding-left: 0;
 }
 //******************(  about us page style  )*****************
-.card {
+.card:not(.card-registration) {
     position: relative;
     width: 300px;
     height: 370px;
@@ -1096,8 +1096,8 @@ footer p span {
     border-radius: 1.3rem;
     overflow: hidden;
 }
-.card:before,
-.card:after {
+.card:not(.card-registration):before,
+.card:not(.card-registration):after {
     content: "";
     position: absolute;
     top: 0;
@@ -1109,14 +1109,14 @@ footer p span {
     transition: all linear 0.3s;
     z-index: -1;
 }
-.card:hover:before {
+.card:not(.card-registration):hover:before {
     transform: rotate(20deg);
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
 }
-.card:hover:after {
+.card:not(.card-registration):hover:after {
     transform: rotate(10deg);
 }
-.card .imgBx {
+.card:not(.card-registration) .imgBx {
     position: absolute;
     top: 10px;
     left: 10px;
@@ -1127,10 +1127,10 @@ footer p span {
     z-index: 1;
     border-radius: 1.3rem;
 }
-.card:hover .imgBx {
+.card:not(.card-registration):hover .imgBx {
     bottom: 100px;
 }
-.card:hover .imgBx img {
+.card:not(.card-registration):hover .imgBx img {
     position: absolute;
     top: 0px;
     right: 0;
@@ -1141,7 +1141,7 @@ footer p span {
     transition: 1s;
     border-radius: 1.3rem;
 }
-.card .imgBx img {
+.card:not(.card-registration) .imgBx img {
     position: absolute;
     top: 0px;
     width: 100%;
@@ -1151,21 +1151,21 @@ footer p span {
     transition: 1s;
     border-radius: 1rem;
 }
-.card .details {
+.card:not(.card-registration) .details {
     position: absolute;
     left: 10px;
     right: 55px;
     bottom: 10px;
     height: 80px;
 }
-.card i {
+.card:not(.card-registration) i {
     font-size: 2.5rem;
     color: var(--clr-dark);
     border-bottom: 3px solid var(--clr-dark);
     border-radius: 0.2rem;
     margin-top: 1rem;
 }
-.card i:hover {
+.card:not(.card-registration) i:hover {
     color: var(--clr-secondary);
     border-color: var(--clr-accent);
 }
