@@ -115,8 +115,8 @@
             <div class="navbar-btns">
                 {{-- <a href="{{ route('logout') }}" id="addresses-expand" class="primary-btn"><i --}}
 
-                <button id="addresses-expand" class="primary-btn"><i class='bx bx-cart-alt'></i>پیگیری سفارشات
-                </button>
+                <a href="{{ route('home.profile') }}" id="addresses-expand" class="primary-btn"><i class='bx bx-cart-alt'></i>پیگیری سفارشات
+                </a>
                 |
 
 
