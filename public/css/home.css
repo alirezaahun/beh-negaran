@@ -1254,7 +1254,7 @@ footer p span {
   padding-left: 0;
 }
 
-.card {
+.card:not(.card-registration) {
   position: relative;
   width: 300px;
   height: 370px;
@@ -1266,8 +1266,8 @@ footer p span {
   overflow: hidden;
 }
 
-.card:before,
-.card:after {
+.card:not(.card-registration):before,
+.card:not(.card-registration):after {
   content: "";
   position: absolute;
   top: 0;
@@ -1280,16 +1280,16 @@ footer p span {
   z-index: -1;
 }
 
-.card:hover:before {
+.card:not(.card-registration):hover:before {
   transform: rotate(20deg);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
 }
 
-.card:hover:after {
+.card:not(.card-registration):hover:after {
   transform: rotate(10deg);
 }
 
-.card .imgBx {
+.card:not(.card-registration) .imgBx {
   position: absolute;
   top: 10px;
   left: 10px;
@@ -1301,11 +1301,11 @@ footer p span {
   border-radius: 1.3rem;
 }
 
-.card:hover .imgBx {
+.card:not(.card-registration):hover .imgBx {
   bottom: 100px;
 }
 
-.card:hover .imgBx img {
+.card:not(.card-registration):hover .imgBx img {
   position: absolute;
   top: 0px;
   right: 0;
@@ -1317,7 +1317,7 @@ footer p span {
   border-radius: 1.3rem;
 }
 
-.card .imgBx img {
+.card:not(.card-registration) .imgBx img {
   position: absolute;
   top: 0px;
   width: 100%;
@@ -1328,7 +1328,7 @@ footer p span {
   border-radius: 1rem;
 }
 
-.card .details {
+.card:not(.card-registration) .details {
   position: absolute;
   left: 10px;
   right: 55px;
@@ -1336,7 +1336,7 @@ footer p span {
   height: 80px;
 }
 
-.card i {
+.card:not(.card-registration) i {
   font-size: 2.5rem;
   color: var(--clr-dark);
   border-bottom: 3px solid var(--clr-dark);
@@ -1344,7 +1344,7 @@ footer p span {
   margin-top: 1rem;
 }
 
-.card i:hover {
+.card:not(.card-registration) i:hover {
   color: var(--clr-secondary);
   border-color: var(--clr-accent);
 }
@@ -1689,7 +1689,7 @@ footer p span {
 }
 
 [type=radio]:checked ~ label ~ .tabby-content {
-  z-index: 1;
+  z-index: -1;
   /* show/hide */
   opacity: 1;
   transform: scale(1);
@@ -1848,6 +1848,14 @@ a {
   color: white !important;
 }
 
+.custom-parent-tabby-tab {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100px;
+  justify-content: center;
+  z-index: 100 !important;
+}
+
 /* BREAKPOINTS ----- */
 @media screen and (max-width: 480px) {
   .w-Custom-50 {
@@ -1859,7 +1867,7 @@ a {
   }
 
   .tabby-tab label {
-    max-width: 100px;
+    max-width: 150px;
     font-size: 13px;
     padding: 8px;
     text-align: justify;
