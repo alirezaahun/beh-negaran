@@ -47,6 +47,11 @@ class HomeController extends Controller
         return view('home.projects');
 
     }
+    public function jobOpportunities(){
+
+        return view('home.jobOpportunities');
+
+    }
     public function order(){
 
         $user = User::where('id' , auth()->id())->first();

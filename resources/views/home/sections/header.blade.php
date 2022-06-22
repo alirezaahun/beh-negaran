@@ -103,7 +103,7 @@
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" href="#">فرصت های شغلی</a></li>
+                        <li><a class="dropdown-item" href="{{ route('home.jobOpportunities') }}">فرصت های شغلی</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
