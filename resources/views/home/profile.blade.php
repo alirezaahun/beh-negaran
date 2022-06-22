@@ -512,12 +512,12 @@
                                         <div class="col col-3" data-label="مبلغ کل">{{$totalOrder->paying_amount}}</div>
                                         @foreach ($totalOrder->TransActions as $item)
                                         <div class="col col-4 {{($item->success) == 1 ? 'text-success' : 'text-danger'}}" data-label="وضعیت سفارش">{{($item->success) == 1 ? 'موفق' : 'ناموفق'}}</div>
-                                        <div class="col col-5" data-label="مالیات و عوارض">{{$item->ref_id}}</div>
+                                        <div class="col col-5" data-label="کد پیگیری">{{$item->ref_id}}</div>
                                         @endforeach
                                     </li>
 
                                 </ul>
-                                <div class="w-50 d-flex align-items-center me-auto">
+                                <div class="recipt-btn-container">
                                     <button id="recipt-print" class="secondary-btn">چاپ فاکتور</button>
                                     <button id="exclusive-recipt-print" class="secondary-btn">درخواست فاکتور رسمی</button>
                                 </div>

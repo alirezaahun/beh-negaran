@@ -2875,10 +2875,17 @@ a {
   flex-basis: 20%;
 }
 
+#exclusive-recipt-print,
 #recipt-print {
+  margin-left: 0;
+}
+
+.recipt-btn-container {
   display: flex;
-  justify-self: end;
-  margin: 1rem auto;
+  flex-direction: row;
+  gap: 0.7rem;
+  justify-content: center;
+  padding: 0.3rem 0;
 }
 
 @media all and (max-width: 767px) {
@@ -3282,6 +3289,12 @@ a {
 
   .c-type-trigger {
     margin-right: 0.6rem;
+  }
+
+  .recipt-btn-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
   }
 
   .costume-container {
