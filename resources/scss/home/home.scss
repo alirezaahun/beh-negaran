@@ -1434,7 +1434,6 @@ footer p span {
     min-height: 300px;
     border-radius: 8px 8px 0 0;
     justify-content: center;
-
 }
 
 .tabby-tab {
@@ -1663,8 +1662,7 @@ a {
     color: white !important;
 }
 
-
-.custom-parent-tabby-tab{
+.custom-parent-tabby-tab {
     display: flex;
     flex-wrap: wrap;
     height: 100px;
@@ -1772,6 +1770,14 @@ a {
 }
 
 // ************************************************************************************************************************//
+// ***********************************(jobOpportunities)********************************************
+//           use JO instead this name in html
+
+.custom-jO-style {
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    
+}
 
 // Projects Page Style ----------------------------------------------------
 

@@ -1957,6 +1957,11 @@ a {
     transform: translate(-80px, 100px);
   }
 }
+.custom-jO-style {
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+}
+
 .project-page-title h3 {
   color: var(--clr-secondary);
   font-size: 2rem;
