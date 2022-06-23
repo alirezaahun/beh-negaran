@@ -383,7 +383,7 @@
                         <div class="row p-4">
 
                             <div id="video5" class="project-sample-img col-md-8">
-                                <img class="img-fluid" src="{{ asset('images/projects-pics/_DSC3731-min.jpg') }}"
+                                <img class="img-fluid" src="{{ asset('images/projects-pics/pic-67.jpg') }}"
                                     alt="project-picture">
                             </div>
                             <div class="col-md-4">
@@ -394,17 +394,17 @@
                                     </div>
                                     <div id="slide5" class="slides">
                                         <div id="67" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/projects-pics/_DSC3731-min.jpg') }}"></div>
+                                                src="{{ asset('images/projects-pics/pic-67.jpg') }}"></div>
                                         <div id="19" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/projects-pics/12-min.jpg') }}"></div>
+                                                src="{{ asset('images/projects-pics/pic-19.jpg') }}"></div>
                                         <div id="20" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/projects-pics/30-min.jpg') }}"></div>
+                                                src="{{ asset('images/projects-pics/pic-20.jpg') }}"></div>
                                         <div id="21" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/projects-pics/PNH_8369-min.jpg') }}"></div>
+                                                src="{{ asset('images/projects-pics/pic-21.jpg') }}"></div>
                                         <div id="22" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/projects-pics/Untitled-2-min.jpg') }}"></div>
+                                                src="{{ asset('images/projects-pics/pic-22.jpg') }}"></div>
                                         <div id="2" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/projects-pics/WhatsApp-Image-2020-02-05-at-1.jpg') }}">
+                                                src="{{ asset('images/projects-pics/pic-2.jpg') }}">
                                         </div>
 
 
@@ -422,7 +422,7 @@
                         <div class="row p-4">
 
                             <div id="video6" class="project-sample-img col-md-8">
-                                <img class="img-fluid" src="{{ asset('images/projects-pics/_DSC4695-min.jpg') }}"
+                                <img class="img-fluid" src="{{ asset('images/projects-pics/pic-68.jpg') }}"
                                     alt="project-picture2">
                             </div>
                             <div class="col-md-4">
@@ -433,17 +433,17 @@
                                     </div>
                                     <div id="slide6" class="slides">
                                         <div id="68" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/projects-pics/_DSC4695-min.jpg') }}"></div>
+                                                src="{{ asset('images/projects-pics/pic-68.jpg') }}"></div>
                                         <div id="23" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/projects-pics/_DSC3310-min.jpg') }}"></div>
+                                                src="{{ asset('images/projects-pics/pic-23.jpg') }}"></div>
                                         <div id="24" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/projects-pics/_DSC3268-min.jpg') }}"></div>
+                                                src="{{ asset('images/projects-pics/pic-24.jpg') }}"></div>
                                         <div id="25" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/projects-pics/_DSC4820-min.jpg') }}"></div>
+                                                src="{{ asset('images/projects-pics/pic-25.jpg') }}"></div>
                                         <div id="26" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/projects-pics/111-min.jpg') }}"></div>
+                                                src="{{ asset('images/projects-pics/pic-26.jpg') }}"></div>
                                         <div id="27" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/projects-pics/1111-min.jpg') }}"></div>
+                                                src="{{ asset('images/projects-pics/pic-27.jpg') }}"></div>
 
                                     </div>
                                 </div>
@@ -459,7 +459,7 @@
                         <div class="row p-4">
 
                             <div id="video7" class="project-sample-img col-md-8">
-                                <img class="img-fluid" src="{{ asset('images/projects-pics/14-min.jpg') }}"
+                                <img class="img-fluid" src="{{ asset('images/projects-pics/pic-69.jpg') }}"
                                     alt="project-picture2">
                             </div>
                             <div class="col-md-4">
@@ -470,17 +470,17 @@
                                     </div>
                                     <div id="slide7" class="slides">
                                         <div id="69" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/projects-pics/14-min.jpg') }}"></div>
+                                                src="{{ asset('images/projects-pics/pic-69.jpg') }}"></div>
                                         <div id="28" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/projects-pics/13-min.jpg') }}"></div>
+                                                src="{{ asset('images/projects-pics/pic-28.jpg') }}"></div>
                                         <div id="29" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/projects-pics/15-min.jpg') }}"></div>
+                                                src="{{ asset('images/projects-pics/pic-29.jpg') }}"></div>
                                         <div id="30" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/projects-pics/18-min.jpg') }}"></div>
+                                                src="{{ asset('images/projects-pics/pic-30.jpg') }}"></div>
                                         <div id="31" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/projects-pics/DSC_7247-min.jpg') }}"></div>
+                                                src="{{ asset('images/projects-pics/pic-31.jpg') }}"></div>
                                         <div id="32" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/projects-pics/DSC_7257-min.jpg') }}"></div>
+                                                src="{{ asset('images/projects-pics/pic-32.jpg') }}"></div>
 
                                     </div>
                                 </div>
@@ -496,7 +496,7 @@
                         <div class="row p-4">
 
                             <div id="video2" class="project-sample-img col-md-8">
-                                <img class="img-fluid" src="{{ asset('images/projects-pics/_DSC4074.jpg') }}"
+                                <img class="img-fluid" src="{{ asset('images/projects-pics/pic-43.jpg') }}"
                                     alt="project-picture2">
                             </div>
                             <div class="col-md-4">
@@ -507,17 +507,17 @@
                                     </div>
                                     <div id="slide2" class="slides">
                                         <div id="43" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/projects-pics/_DSC4074.jpg') }}"></div>
+                                                src="{{ asset('images/projects-pics/pic-43.jpg') }}"></div>
                                         <div id="44" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/projects-pics/_DSC4057.jpg') }}"></div>
+                                                src="{{ asset('images/projects-pics/pic-44.jpg') }}"></div>
                                         <div id="45" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/projects-pics/_DSC3342-min.jpg') }}"></div>
+                                                src="{{ asset('images/projects-pics/pic-45.jpg') }}"></div>
                                         <div id="46" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/projects-pics/10-min.jpg') }}"></div>
+                                                src="{{ asset('images/projects-pics/pic-46.jpg') }}"></div>
                                         <div id="70" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/projects-pics/100.jpg') }}"></div>
+                                                src="{{ asset('images/projects-pics/pic-70.jpg') }}"></div>
                                         <div id="71" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/projects-pics/1000.jpg') }}"></div>
+                                                src="{{ asset('images/projects-pics/pic-71.jpg') }}"></div>
 
                                     </div>
                                 </div>
@@ -533,7 +533,7 @@
                         <div class="row p-4">
 
                             <div id="video3" class="project-sample-img col-md-8">
-                                <img class="img-fluid" src="{{ asset('images/projects-pics/0-min.jpg') }}"
+                                <img class="img-fluid" src="{{ asset('images/projects-pics/pic-47.jpg') }}"
                                     alt="project-picture2">
                             </div>
                             <div class="col-md-4">
@@ -544,17 +544,17 @@
                                     </div>
                                     <div id="slide3" class="slides">
                                         <div id="47" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/projects-pics/0-min.jpg') }}"></div>
+                                                src="{{ asset('images/projects-pics/pic-47.jpg') }}"></div>
                                         <div id="48" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/projects-pics/20-min.jpg') }}"></div>
+                                                src="{{ asset('images/projects-pics/pic-48.jpg') }}"></div>
                                         <div id="49" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/projects-pics/21-min.jpg') }}"></div>
+                                                src="{{ asset('images/projects-pics/pic-49.jpg') }}"></div>
                                         <div id="72" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/projects-pics/22-min.jpg') }}"></div>
+                                                src="{{ asset('images/projects-pics/pic-72.jpg') }}"></div>
                                         <div id="73" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/projects-pics/23-min.jpg') }}"></div>
+                                                src="{{ asset('images/projects-pics/pic-73.jpg') }}"></div>
                                         <div id="74" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/projects-pics/24-min.jpg') }}"></div>
+                                                src="{{ asset('images/projects-pics/pic-74.jpg') }}"></div>
 
                                     </div>
                                 </div>
@@ -572,7 +572,7 @@
                         <div class="row p-4">
 
                             <div id="video9" class="project-sample-img col-md-8">
-                                <img class="img-fluid" src="{{ asset('images/projects-pics/logo1.jpg') }}"
+                                <img class="img-fluid" src="{{ asset('images/projects-pics/pic-57.jpg') }}"
                                     alt="project-picture2">
                             </div>
                             <div class="col-md-4">
@@ -583,13 +583,13 @@
                                     </div>
                                     <div id="slide9" class="slides">
                                         <div id="57" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/projects-pics/logo1.jpg') }}"></div>
+                                                src="{{ asset('images/projects-pics/pic-57.jpg') }}"></div>
                                         <div id="58" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/projects-pics/logo2.jpg') }}"></div>
+                                                src="{{ asset('images/projects-pics/pic-58.jpg') }}"></div>
                                         <div id="59" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/projects-pics/logo3.jpg') }}"></div>
+                                                src="{{ asset('images/projects-pics/pic-59.jpg') }}"></div>
                                         <div id="60" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/projects-pics/logo4.jpg') }}"></div>
+                                                src="{{ asset('images/projects-pics/pic-60.jpg') }}"></div>
 
 
                                     </div>
@@ -606,7 +606,7 @@
                         <div class="row p-4">
 
                             <div id="video1" class="project-sample-img col-md-8">
-                                <img class="img-fluid" src="{{ asset('images/projects-pics/بنر1.jpg') }}"
+                                <img class="img-fluid" src="{{ asset('images/projects-pics/pic-62.jpg') }}"
                                     alt="project-picture2">
                             </div>
                             <div class="col-md-4">
@@ -617,13 +617,13 @@
                                     </div>
                                     <div id="slide1" class="slides">
                                         <div id="62" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/projects-pics/بنر1.jpg') }}"></div>
+                                                src="{{ asset('images/projects-pics/pic-62.jpg') }}"></div>
                                         <div id="63" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/projects-pics/بنر2.jpg') }}"></div>
+                                                src="{{ asset('images/projects-pics/pic-63.jpg') }}"></div>
                                         <div id="64" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/projects-pics/بنر3.jpg') }}"></div>
+                                                src="{{ asset('images/projects-pics/pic-64.jpg') }}"></div>
                                         <div id="75" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/projects-pics/بنر4.jpg') }}"></div>
+                                                src="{{ asset('images/projects-pics/pic-75.jpg') }}"></div>
 
                                     </div>
                                 </div>
@@ -639,7 +639,7 @@
                         <div class="row p-4">
 
                             <div id="video12" class="project-sample-img col-md-8">
-                                <img class="img-fluid" src="{{ asset('images/projects-pics/چاپ 3.jpg') }}"
+                                <img class="img-fluid" src="{{ asset('images/projects-pics/pic-65.jpg') }}"
                                     alt="project-picture2">
                             </div>
                             <div class="col-md-4">
@@ -650,13 +650,13 @@
                                     </div>
                                     <div id="slide12" class="slides">
                                         <div id="65" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/projects-pics/چاپ 3.jpg') }}"></div>
+                                                src="{{ asset('images/projects-pics/pic-65.jpg') }}"></div>
                                         <div id="66" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/projects-pics/چاپ 1.jpg') }}"></div>
+                                                src="{{ asset('images/projects-pics/pic-66.jpg') }}"></div>
                                         <div id="76" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/projects-pics/چاپ 2.jpg') }}"></div>
+                                                src="{{ asset('images/projects-pics/pic-76.jpg') }}"></div>
                                         <div id="77" class="d-flex justify-content-around"><img class="img-fluid"
-                                                src="{{ asset('images/projects-pics/چاپ-4.jpg') }}"></div>
+                                                src="{{ asset('images/projects-pics/pic-77.jpg') }}"></div>
 
                                     </div>
                                 </div>
@@ -726,7 +726,7 @@
                         <div class="row p-4">
 
                             <div id="video10" class="project-sample-img col-md-8">
-                                <img class="img-fluid" src="{{ asset('images/Screenshot 2022-05-21 172901.png') }}"
+                                <img class="img-fluid" src="{{ asset('images/pic-90.png') }}"
                                     alt="project-picture2">
                             </div>
                             <div class="col-md-4">
@@ -736,6 +736,8 @@
                                         <div class="thumb"></div>
                                     </div>
                                     <div id="slide10" class="slides">
+                                        <div id="90" class="d-flex justify-content-around"><img class="img-fluid"
+                                            src="{{ asset('images/pic-90.png') }}"></div>
                                         <div id="38" class="d-flex justify-content-around"><img class="img-fluid"
                                                 src="{{ asset('images/Screenshot 2022-05-21 172310.png') }}"></div>
                                         <div id="39" class="d-flex justify-content-around"><img class="img-fluid"

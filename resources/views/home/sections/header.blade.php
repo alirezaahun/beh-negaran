@@ -103,7 +103,7 @@
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" href="#">فرصت های شغلی</a></li>
+                        <li><a class="dropdown-item" href="{{ route('home.jobOpportunities') }}">فرصت های شغلی</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
@@ -115,8 +115,8 @@
             <div class="navbar-btns">
                 {{-- <a href="{{ route('logout') }}" id="addresses-expand" class="primary-btn"><i --}}
 
-                <button id="addresses-expand" class="primary-btn"><i class='bx bx-cart-alt'></i>پیگیری سفارشات
-                </button>
+                <a href="{{ route('home.profile') }}" id="addresses-expand" class="primary-btn"><i class='bx bx-cart-alt'></i>پیگیری سفارشات
+                </a>
                 |
 
 

@@ -122,7 +122,7 @@
                             </select>
                         </div>
 
-                        <button class="secondary-btn" type="submit">سفارش</button>
+                        <a class="secondary-btn" href="{{ route('home.order') }}">سفارش</a>
 
                     </form>
                 </div>
