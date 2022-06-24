@@ -52,6 +52,11 @@ class HomeController extends Controller
         return view('home.jobOpportunities');
 
     }
+    public function notFound(){
+
+        return view('home.page-not-found');
+
+    }
     public function order(){
 
         $user = User::where('id' , auth()->id())->first();
