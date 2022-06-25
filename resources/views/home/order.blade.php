@@ -27,7 +27,7 @@
                             ->with('attributes', 'tagCategories')
                             ->get();
                         ?>
-                        <fieldset>
+                        <fieldset id="fil1" class="fil1">
 
                             <div class="col-12">
                                 <button type="button" id="modalBtn" class="secondary-btn w-100"> افزودن آدرس</button>
@@ -49,7 +49,7 @@
                                                     <input type="text" id="addresses1" name="addresses"
                                                         class="form-control" placeholder="تهران، خیابان ۹ شرقی...">
                                                 </div>
-                                                <div name="map" id="map" style="height: 200px"></div>
+                                                <div name="map" id="map" style="width: 100%;height: 200px;position: relative;outline: none"></div>
                                                 <button id="SubmitForm" class="secondary-btn w-100">ذخیره</button>
                                             </div>
                                         </div>
@@ -96,151 +96,166 @@
                             <h2 id="heading">انتخاب خدمات</h2>
                             </select>
                             <div class="form-card">
-                                <div class="row">   
+                                <div class="row">
                                     <div class="tabs">
 
                                         <div class="custom-parent-tabby-tab">
-                                        @foreach ($getParents as $category)
-                                            <div class="tabby-tab ">
-                                                <input type="radio" id="radio{{ $category->id }}" name="tabby-tabs"
-                                                    checked>
-                                                {{-- custom-lable --}}
-                                                <label class="projects-btn mx-3 ms-md-2 text-truncate"
-                                                    for="radio{{ $category->id }}">{{ $category->name }}</label>
-                                                <div class="tabby-content">
-                                                    <div class="col-12 d-flex d-flex justify-content-center  mt-5">
-                                                        <div class="col-12 col-md-10">
-                                                            <div
-                                                                class="row  d-flex justify-content-center pricing-box-Shadow">
-                                                                <div class="col-12    ">
-                                                                    <select id="select"
-                                                                        class="form-select my-5 mx-auto  w-50 w-lg-25">
-                                                                        <option class="select"
-                                                                            id="{{ $category->id }}">انتخاب
-                                                                            پکیچ ها</option>
+                                            @foreach ($getParents as $category)
+                                                <div class="tabby-tab ">
+                                                    <input type="radio" id="radio{{ $category->id }}" name="tabby-tabs"
+                                                        checked>
+                                                    {{-- custom-lable --}}
+                                                    <label class="projects-btn mx-3 ms-md-2 text-truncate"
+                                                        for="radio{{ $category->id }}">{{ $category->name }}</label>
+                                                    <div class="tabby-content">
+                                                        <div class="col-12 d-flex d-flex justify-content-center  mt-5">
+                                                            <div class="col-12 col-md-10">
+                                                                <div
+                                                                    class="row  d-flex justify-content-center pricing-box-Shadow">
+                                                                    <div class="col-12    ">
+                                                                        <select id="select"
+                                                                            class="form-select my-5 mx-auto  w-50 w-lg-25">
+                                                                            <option class="select"
+                                                                                id="{{ $category->id }}">انتخاب
+                                                                                پکیچ ها</option>
 
-                                                                        @foreach ($getChildren as $child)
-                                                                            @if ($child->parent_id == $category->id)
-                                                                                <option id="{{ $child->parent_id }}"
-                                                                                    value="{{ $child->id }}">
-                                                                                    {{ $child->name }}</option>
-                                                                            @endif
-                                                                        @endforeach
-                                                                    </select>
-                                                                    <div class="col-12">
-                                                                        <div id="{{ $category->id }}"
-                                                                            class="row">
-                                                                            <h6 class="mx-auto  d-md-none mt-3 text-center ">حالت دوربین
-                                                                            </h6>
-                                                                            <hr class="aaa w-50 d-md-none mb-4">
+                                                                            @foreach ($getChildren as $child)
+                                                                                @if ($child->parent_id == $category->id)
+                                                                                    <option id="{{ $child->parent_id }}"
+                                                                                        value="{{ $child->id }}">
+                                                                                        {{ $child->name }}</option>
+                                                                                @endif
+                                                                            @endforeach
+                                                                        </select>
+                                                                        <div class="col-12">
+                                                                            <div id="{{ $category->id }}"
+                                                                                class="row">
+                                                                                <h6
+                                                                                    class="mx-auto  d-md-none mt-3 text-center ">
+                                                                                    حالت دوربین
+                                                                                </h6>
+                                                                                <hr class="aaa w-50 d-md-none mb-4">
 
-                                                                            <div
-                                                                                class="col-10 col-md-6  col-lg-4 bg-secendory">
-                                                                                <div class=" d-md-flex flex-column d-none">
-                                                                                    <h6 class="mx-auto ">حالت دوربین
-                                                                                    </h6>
-                                                                                    <hr class="aaa w-50 mx-auto mt-0">
+                                                                                <div
+                                                                                    class="col-10 col-md-6  col-lg-4 bg-secendory">
+                                                                                    <div
+                                                                                        class=" d-md-flex flex-column d-none">
+                                                                                        <h6 class="mx-auto ">حالت
+                                                                                            دوربین
+                                                                                        </h6>
+                                                                                        <hr class="aaa w-50 mx-auto mt-0">
+                                                                                    </div>
+
+                                                                                    <div id="push{{ $category->id }}"
+                                                                                        class="form-check m-2 ">
+
+                                                                                    </div>
+
+
                                                                                 </div>
 
-                                                                                <div id="push{{ $category->id }}"
-                                                                                    class="form-check m-2 ">
+
+
+
+                                                                                <h6
+                                                                                    class="mx-auto  d-md-none mt-3 text-center">
+                                                                                    مدت زمان
+                                                                                    درخواستی
+                                                                                </h6>
+                                                                                <hr class="aaa w-50 d-md-none mb-4">
+
+                                                                                <div class="col-10 col-md-6  col-lg-4  ">
+
+
+                                                                                    <div
+                                                                                        class="d-md-flex flex-column d-none ">
+                                                                                        <h6 class="mx-auto "> مدت زمان
+                                                                                            درخواستی</h6>
+                                                                                        <hr class="aaa w-50 mx-auto mt-0">
+                                                                                    </div>
+
+
+
+                                                                                    <div id="pushHour{{ $category->id }}"
+                                                                                        class="1 form-check m-1">
+                                                                                    </div>
+                                                                                </div>
+
+
+
+
+
+                                                                                <h6
+                                                                                    class="mx-auto d-md-none mt-3 text-center">
+                                                                                    تعداد دوربین
+                                                                                </h6>
+                                                                                <hr class="aaa w-50 d-md-none mb-4">
+                                                                                <div
+                                                                                    class="col-10 col-md-6  col-lg-4  text-justify mt-lg-0 mt-3">
+                                                                                    <div
+                                                                                        class=" d-md-flex flex-column d-none">
+                                                                                        <h6 class="mx-auto ">تعداد
+                                                                                            دوربین
+                                                                                        </h6>
+                                                                                        <hr class="aaa w-50 mx-auto mt-0">
+                                                                                    </div>
+                                                                                    <div id="pushOptionAttr{{ $category->id }}"
+                                                                                        class="pushOptionAttr-customMargin"
+                                                                                        {{-- class=" m-2  form-check d-flex justify-content-md-around justify-content-md-start  custom-border mt-md-4 mt-lg-0" --}}>
+
+                                                                                    </div>
+
 
                                                                                 </div>
 
+
+
+                                                                                <h6
+                                                                                    class="mx-auto d-md-none mt-3 text-center">
+                                                                                    ویژگی ها
+                                                                                </h6>
+                                                                                <hr class="aaa w-50 d-md-none mb-4">
+                                                                                <div class="d-block">
+
+                                                                                    <div
+                                                                                        class=" d-md-flex flex-column d-none ">
+                                                                                        <h6 class="mx-auto mt-3">ویژگی ها
+                                                                                        </h6>
+                                                                                        <hr class="aaa w-25 mx-auto mt-0">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div
+                                                                                    class="col-12 col-md-6  col-lg-12  text-justify mt-3 d-flex margin-order-2 ">
+
+                                                                                    <div id="pushTags{{ $category->id }}"
+                                                                                        class=" d-xs-none d-lg-flex pushTags-customMargin">
+                                                                                    </div>
+
+                                                                                    <!-- Checked checkbox -->
+
+
+                                                                                </div>
 
                                                                             </div>
-
-
-
-
-                                                                            <h6 class="mx-auto  d-md-none mt-3 text-center">مدت زمان
-                                                                                درخواستی
-                                                                            </h6>
-                                                                            <hr class="aaa w-50 d-md-none mb-4">
-
-                                                                            <div class="col-10 col-md-6  col-lg-4  ">
-
-
-                                                                                <div class="d-md-flex flex-column d-none ">
-                                                                                    <h6 class="mx-auto "> مدت زمان
-                                                                                        درخواستی</h6>
-                                                                                    <hr class="aaa w-50 mx-auto mt-0">
-                                                                                </div>
-
-
-
-                                                                                <div id="pushHour{{ $category->id }}"
-                                                                                    class="1 form-check m-1">
-                                                                                </div>
-                                                                            </div>
-
-
-
-
-
-                                                                            <h6 class="mx-auto d-md-none mt-3 text-center">تعداد دوربین
-                                                                            </h6>
-                                                                            <hr class="aaa w-50 d-md-none mb-4">
-                                                                            <div
-                                                                                class="col-10 col-md-6  col-lg-4  text-justify mt-lg-0 mt-3">
-                                                                                <div class=" d-md-flex flex-column d-none">
-                                                                                    <h6 class="mx-auto ">تعداد دوربین
-                                                                                    </h6>
-                                                                                    <hr class="aaa w-50 mx-auto mt-0">
-                                                                                </div>
-                                                                                <div id="pushOptionAttr{{ $category->id }}"
-                                                                                    class="pushOptionAttr-customMargin"
-                                                                                    {{-- class=" m-2  form-check d-flex justify-content-md-around justify-content-md-start  custom-border mt-md-4 mt-lg-0" --}}>
-
-                                                                                </div>
-
-
-                                                                            </div>
-
-
-
-                                                                            <h6 class="mx-auto d-md-none mt-3 text-center">ویژگی ها
-                                                                            </h6>
-                                                                            <hr class="aaa w-50 d-md-none mb-4">
-                                                                            <div class="d-block">
-
-                                                                                <div class=" d-md-flex flex-column d-none ">
-                                                                                    <h6 class="mx-auto mt-3">ویژگی ها
-                                                                                    </h6>
-                                                                                    <hr class="aaa w-25 mx-auto mt-0">
-                                                                                </div>
-                                                                            </div>
-                                                                            <div
-                                                                                class="col-12 col-md-6  col-lg-12  text-justify mt-3 d-flex margin-order-2 ">
-
-                                                                                <div id="pushTags{{ $category->id }}"
-                                                                                    class=" d-xs-none d-lg-flex pushTags-customMargin">
-                                                                                </div>
-
-                                                                                <!-- Checked checkbox -->
-
-
-                                                                            </div>
-
                                                                         </div>
                                                                     </div>
-                                                                </div>
 
-                                                                <button id="add{{ $category->id }}"
-                                                                    class="button  d-md-block custom-margin-pricing  text-center mx-auto   w-Custom-50 w-50"
-                                                                    role="button "> افزودن به سبد خرید</button>
+                                                                    <button id="add{{ $category->id }}"
+                                                                        class="button  d-md-block custom-margin-pricing  text-center mx-auto   w-Custom-50 w-50"
+                                                                        role="button "> افزودن به سبد خرید</button>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>   
-                                        @endforeach
-                                    </div> 
+                                            @endforeach
+                                        </div>
                                     </div>
+                                    <input type="button" name="next" class="next action-button custom-pricing-margin-btn  firstBtn"
+                                    value="ادامه" />
                                 </div>
+
                             </div>
-                            <input type="button" name="next" class="next action-button custom-pricing-margin-btn  firstBtn"
-                                value="ادامه" />
                         </fieldset>
                         {{-- <fieldset>
                             <h2 id="heading"> آدرس و تاریخ</h2>
@@ -331,7 +346,7 @@
                                     <input type="button" name="previous" class="previous action-button-previous mx-2  mt-5 "
                                         value="Previous" />
                         </fieldset> --}}
-                        <fieldset>
+                        <fieldset id="fil2" class="fil2">
 
                             <div id="dynamic-content" class="row mx-auto">
                                 {{-- Company User Information --}}
@@ -407,16 +422,16 @@
             key: 'web.5j4qJGGkEPdoi3S18YqklpipMjVUa7nDm8cuiiL9',
             maptype: 'dreamy',
             center: [lat, lng],
-            zoom: 14,
-            traffic: true,
+            zoom: 13,
+            traffic: false,
             onTrafficLayerSwitched: function(state) {
-                console.log(state);
+                // console.log(state);
             }
         });
 
 
 
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        L.tileLayer('file://{s}.{{asset('map/map.osm')}}/{z}/{x}/{y}.png', {
             maxZoom: 19,
             attribution: false
         }).addTo(map);
@@ -461,6 +476,7 @@
             var getSession = [];
             var priceSession;
             var getTotal;
+            var j;
             setProgressBar(current);
             // localStorage.clear();
 
@@ -489,6 +505,7 @@
                 });
             } catch (err) {
                 localStorage.clear();
+                location.reload();
             }
 
             // localStorage.getItem("element").forEach(element => {
@@ -535,10 +552,10 @@
 
 
             $(".next").click(function() {
-                current_fs = $(this).parent();
-                next_fs = $(this).parent().next();
+                current_fs = $("#fil1");
+                next_fs = $("#fil2");
                 //Add Class Active
-                $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+                $("#payment").addClass("active");
                 //show the next fieldset
                 next_fs.show();
                 //hide the current fieldset with style
@@ -841,6 +858,12 @@
 
                         alert("لطفا تاریخ را انتخاب کنید");
 
+                    } else if (obj.attributes.length == 0) {
+
+                        alert("لطفا خدمات مد نظر خود را انتخاب کنید");
+
+                    } else if (obj.userAddress.length == 0) {
+                        alert("لطفا آدرس خود را انتخاب کنید");
                     } else {
 
                         calculate = [];
@@ -972,8 +995,10 @@
                                 totalPrice = totalPrice - $("#price" + element)
                                     .text();
                                 $(this).parent().remove();
+                                console.log(getRandomNumbers.indexOf(element));
+                                j = Number(priceSession);
                                 $("#finalPricecontent").val(totalPrice +
-                                    priceSession);
+                                    j);
                                 event.preventDefault();
                             });
 
@@ -983,6 +1008,7 @@
 
                         totalPrice += obj.finalPriceThisProductIs;
                         console.log(totalPrice);
+
                         getTotal = Number(priceSession);
                         console.log(typeof getTotal);
                         $("#finalPricecontent").val(totalPrice + getTotal);
@@ -1016,9 +1042,17 @@
                             .text(),
                         "price": $(`#price${element}`).text()
                     });
-
                 });
 
+                getOrder.forEach(element => {
+                    if (element.attributes == "") {
+                        getOrder.splice(getOrder.indexOf(element), 1);
+                    }
+
+                    if (element.SpecialAttributes == "") {
+                        element.SpecialAttributes = "بدون خدمات ویژه";
+                    }
+                });
                 console.log(getOrder);
 
                 $.post("{{ route('payment') }}", {
@@ -1033,14 +1067,20 @@
                 }).fail(function(response) {
 
                     console.log(response);
+                    alert('خطا در اتصال به درگاه پرداخت لطفا مجدد امتحان کنید');
                 })
             });
 
             $(window).on('beforeunload', function() {
                 localStorage.clear();
-                localStorage.setItem("productt", $("#productBox").html());
-                localStorage.setItem("element", totalProducts);
-                localStorage.setItem("finalPrice", totalPrice);
+                if ($("#productBox").is(':empty')) {
+                    localStorage.clear();
+                } else {
+                    localStorage.setItem("productt", $("#productBox").html());
+                    localStorage.setItem("element", totalProducts);
+                    localStorage.setItem("finalPrice", totalPrice);
+                }
+
             });
 
 
