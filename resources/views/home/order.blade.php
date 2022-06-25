@@ -62,7 +62,7 @@
                                     <div class="form-contorol">
 
 
-                                        <select id="userAddresses" runat="server" class="form-control" name="state">
+                                        <select id="userAddresses" runat="server" class="form-control " name="state">
                                             @foreach ($user->addresses as $address)
                                                 <option class="form-group" value="{{ $address->address }}">
                                                     {{ $address->address }}</option>
@@ -513,10 +513,17 @@
             //     });
 
             // });
+
+let SubmitForm = document.getElementById('SubmitForm')
+SubmitForm.addEventListener('click',function CloseModal(){
+    document.getElementById('theModal').classList.add("d-none");
+ 
+})
+
             $("#SubmitForm").click(function(event) {
                 console.log($('#addresses1').val());
                 event.preventDefault();
-
+           
 
 
                 $.post("{{ route('addresses.store') }}", {
@@ -852,8 +859,6 @@
 
                         alert("لطفا تاریخ را انتخاب کنید");
 
-                    } else if ($('#AttributeCheckbox' + element.id) == null) {
-                        alert('please select one item')
                     } else {
 
                         calculate = [];
@@ -914,7 +919,7 @@
                                 id: `ProductDetails${rnd}`
 
 
-                            }).addClass('text-right  text-Cutom-right');
+                            }).addClass('');
 
                             $("#ProductDetails" + rnd).append(productDetails);
                         }
@@ -1112,7 +1117,12 @@
         // When the user clicks on the button, open the modal
         btn.onclick = function() {
             modal.style.display = "block";
+            modal.classList.remove("d-none");
+            let addresses1=document.getElementById("addresses1");
+            addresses1.value=''
         }
+        
+
 
         // When the user clicks on <span> (x), close the modal
         span.onclick = function() {
