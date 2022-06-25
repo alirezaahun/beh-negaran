@@ -243,7 +243,11 @@
                                                                     <button id="add{{ $category->id }}"
                                                                         class="button  d-md-block custom-margin-pricing  text-center mx-auto   w-Custom-50 w-50"
                                                                         role="button "> افزودن به سبد خرید</button>
+
+                                                                       
                                                                 </div>
+                                                                <input type="button" name="next" class="next action-button mt-5"
+                                                                value="ادامه" />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -251,8 +255,7 @@
                                             @endforeach
                                         </div>
                                     </div>
-                                    <input type="button" name="next" class="next action-button custom-pricing-margin-btn  firstBtn"
-                                    value="ادامه" />
+                                 
                                 </div>
 
                             </div>
@@ -924,7 +927,7 @@
                                 id: `ProductDetails${rnd}`
 
 
-                            }).addClass('text-right  text-Cutom-right');
+                            }).addClass('');
 
                             $("#ProductDetails" + rnd).append(productDetails);
                         }

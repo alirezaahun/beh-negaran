@@ -1741,10 +1741,6 @@ footer p span {
   text-align: justify;
 }
 
-.text-right {
-  text-align: right !important;
-}
-
 .float-right {
   float: right;
 }
@@ -1820,11 +1816,6 @@ a {
   margin-right: 5px;
 }
 
-.firstBtn {
-  position: relative;
-  top: 500px;
-}
-
 .ProductDetails li div {
   margin: 100px;
 }
@@ -1862,10 +1853,6 @@ a {
     width: 75% !important;
   }
 
-  .tabs {
-    min-height: 580px;
-  }
-
   .tabby-tab label {
     max-width: 150px;
     font-size: 13px;
@@ -1883,10 +1870,6 @@ a {
     margin-bottom: 20px;
   }
 
-  #msform fieldset {
-    min-height: 1200px;
-  }
-
   .margin-order-2 {
     margin-right: 0;
   }
@@ -1894,35 +1877,10 @@ a {
   .content-min-height {
     min-height: 2500px;
   }
-
-  #msform .action-button.firstBtn {
-    transform: translate(2px, 680px);
-  }
-}
-@media only screen and (min-width: 480px) and (max-width: 992px) {
-  #msform .action-button.firstBtn {
-    transform: translate(2px, 340px);
-  }
-
-  .text-Cutom-right {
-    text-align: center !important;
-  }
 }
 @media screen and (max-width: 767px) {
-  .tabs {
-    min-height: 400px;
-  }
-
-  #msform fieldset {
-    min-height: 900px;
-  }
-
   .margin-order-2 {
     margin-right: 0;
-  }
-
-  .content-min-height {
-    min-height: 2300px;
   }
 
   .pushTags-customMargin {
@@ -1934,11 +1892,6 @@ a {
     margin: 0 33px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 816px) {
-  #msform .action-button.firstBtn {
-    transform: translate(-50px, 350px);
-  }
-}
 @media screen and (min-width: 817px) and (max-width: 992px) {
   .order-margin-ObjQuantityLabel {
     margin: 0 33px;
@@ -1946,15 +1899,6 @@ a {
 
   .pushOptionAttr-customMargin {
     margin-right: 25px;
-  }
-
-  #msform .action-button.firstBtn {
-    transform: translate(-60px, 250px);
-  }
-}
-@media screen and (min-width: 992px) and (max-width: 1200px) {
-  #msform .action-button.firstBtn {
-    transform: translate(-80px, 100px);
   }
 }
 .custom-jO-style {
