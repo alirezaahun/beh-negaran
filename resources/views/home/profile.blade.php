@@ -479,7 +479,7 @@
                         <div class="col-md-12">
                             @foreach ($totalOrder->OrderItems as $order)
 
-                            <ul>
+                            <ul class="orders-table-title">
                                 <li><span class="text-secondary">مکان</span>
                                     <h6>{{$order->address}}</h6>
                                 </li>
@@ -570,7 +570,7 @@
                             <div id="myModal14" class="modal">
                                 <!-- Modal content -->
                                 <div class="modal-content">
-                                    <span class="close">&times;</span>
+                                    <span class="close ms-2">&times;</span>
                                     <div class="modal-body">
                                         <p class="text-secondary">لطفا اطلاعات شناسایی خود را وارد کنید. آدرس
                                             شما

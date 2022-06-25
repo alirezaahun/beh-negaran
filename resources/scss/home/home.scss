@@ -2536,6 +2536,13 @@ a {
     flex-direction: row;
     list-style: none;
 }
+.orders-table-title li:nth-child(1) {
+    width: 30%;
+    text-align: justify;
+}
+.orders-table-title li h6 {
+    line-height: 1.4rem;
+}
 .order-details {
     color: var(--clr-secondary);
     font-weight: 600;
@@ -3068,10 +3075,14 @@ a {
     .c-type-trigger {
         margin-right: 0.6rem;
     }
+    .orders-table-title li:nth-child(1) {
+        width: 100%;
+    }
     .recipt-btn-container {
         display: flex;
         flex-direction: column;
         gap: 0.7rem;
+        margin: 0 0.2rem;
     }
     .costume-container {
         padding-top: 1rem;
