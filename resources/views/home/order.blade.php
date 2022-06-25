@@ -1,8 +1,8 @@
 @extends('home.layouts.master')
 
-@section('loader')
+{{-- @section('loader')
     @include('home.sections.loader')
-@endsection
+@endsection --}}
 
 @section('content')
     <div class="container-fluid">
@@ -19,7 +19,7 @@
                         </ul>
                         <!-- fieldsets -->
                         <?php
-
+                        
                         $getParents = App\Models\Category::where('parent_id', 0)
                             ->with('children', 'attributes')
                             ->get();
@@ -62,7 +62,7 @@
                                     <div class="form-contorol">
 
 
-                                        <select id="userAddresses" runat="server" class="form-control" name="state">
+                                        <select id="userAddresses" runat="server" class="form-control " name="state">
                                             @foreach ($user->addresses as $address)
                                                 <option class="form-group" value="{{ $address->address }}">
                                                     {{ $address->address }}</option>
@@ -128,8 +128,12 @@
                                                                             @endforeach
                                                                         </select>
                                                                         <div class="col-12">
+<<<<<<< HEAD
                                                                             <div id="{{ $category->id }}"
                                                                                 class="row">
+=======
+                                                                            <div id="{{ $category->id }}" class="row">
+>>>>>>> cb071ee8a908626a32c6ec274546ff513d01a1d2
                                                                                 <h6
                                                                                     class="mx-auto  d-md-none mt-3 text-center ">
                                                                                     حالت دوربین
@@ -140,8 +144,12 @@
                                                                                     class="col-10 col-md-6  col-lg-4 bg-secendory">
                                                                                     <div
                                                                                         class=" d-md-flex flex-column d-none">
+<<<<<<< HEAD
                                                                                         <h6 class="mx-auto ">حالت
                                                                                             دوربین
+=======
+                                                                                        <h6 class="mx-auto ">حالت دوربین
+>>>>>>> cb071ee8a908626a32c6ec274546ff513d01a1d2
                                                                                         </h6>
                                                                                         <hr class="aaa w-50 mx-auto mt-0">
                                                                                     </div>
@@ -194,8 +202,12 @@
                                                                                     class="col-10 col-md-6  col-lg-4  text-justify mt-lg-0 mt-3">
                                                                                     <div
                                                                                         class=" d-md-flex flex-column d-none">
+<<<<<<< HEAD
                                                                                         <h6 class="mx-auto ">تعداد
                                                                                             دوربین
+=======
+                                                                                        <h6 class="mx-auto ">تعداد دوربین
+>>>>>>> cb071ee8a908626a32c6ec274546ff513d01a1d2
                                                                                         </h6>
                                                                                         <hr class="aaa w-50 mx-auto mt-0">
                                                                                     </div>
@@ -256,6 +268,11 @@
                                 </div>
 
                             </div>
+<<<<<<< HEAD
+=======
+                            <input type="button" name="next"
+                                class="next action-button custom-pricing-margin-btn  firstBtn" value="ادامه" />
+>>>>>>> cb071ee8a908626a32c6ec274546ff513d01a1d2
                         </fieldset>
                         {{-- <fieldset>
                             <h2 id="heading"> آدرس و تاریخ</h2>
@@ -519,10 +536,17 @@
             //     });
 
             // });
+
+let SubmitForm = document.getElementById('SubmitForm')
+SubmitForm.addEventListener('click',function CloseModal(){
+    document.getElementById('theModal').classList.add("d-none");
+ 
+})
+
             $("#SubmitForm").click(function(event) {
                 console.log($('#addresses1').val());
                 event.preventDefault();
-
+           
 
 
                 $.post("{{ route('addresses.store') }}", {
@@ -924,7 +948,7 @@
                                 id: `ProductDetails${rnd}`
 
 
-                            }).addClass('text-right  text-Cutom-right');
+                            }).addClass('');
 
                             $("#ProductDetails" + rnd).append(productDetails);
                         }
@@ -1020,11 +1044,9 @@
                 });
 
             });
-
             $("#pay").click(function() {
                 getOrder = [];
                 if (getSession != null) {
-
                     getSession.forEach(element => {
                         getRandomNumbers.push(parseInt(element));
                     });
@@ -1141,7 +1163,12 @@
         // When the user clicks on the button, open the modal
         btn.onclick = function() {
             modal.style.display = "block";
+            modal.classList.remove("d-none");
+            let addresses1=document.getElementById("addresses1");
+            addresses1.value=''
         }
+        
+
 
         // When the user clicks on <span> (x), close the modal
         span.onclick = function() {
@@ -1180,9 +1207,9 @@
 
 
         var coll = document.getElementsByClassName("order-details");
-        var i;
 
-        for (i = 0; i < coll.length; i++) {
+
+        for (let i = 0; i < coll.length; i++) {
             coll[i].addEventListener("click", function() {
                 this.classList.toggle("order-collapse-active");
                 var content = this.nextElementSibling;
@@ -1192,6 +1219,13 @@
                     content.style.maxHeight = content.scrollHeight + "px";
                 }
             });
+        }
+
+
+
+        for (let i = 0; i < 100; i++) {
+            let test = document.getElementById(AttributeCheckbox[i])
+            console.log(test);
         }
     </script>
 @endsection
