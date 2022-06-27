@@ -688,6 +688,7 @@
             if (checksession) {
                 if (getUser == 1) {
                     $("#companyUser").hide();
+                    $("#i").attr('checked', false);
                 } else {
 
                     $("#realUser").hide();
