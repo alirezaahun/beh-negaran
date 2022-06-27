@@ -784,6 +784,7 @@
         // Hide And Show All Contents With Right Side Navbar ---------------------------
         $(document).ready(function() {
 
+
             // var getUser = '{{ Session::get('user') }}';
             // var checksession = '{{ Session::has('user') }}';
 
@@ -969,38 +970,8 @@
                 '_token': "{{ csrf_token() }}",
                 'login_token': "{{ $user->login_token }}",
                 'id': "{{$user->id}}"
-
-            }, function(response, status) {
-                console.log(response, status);
-                logintoken = response.login_token;
-                $('#loginForm').fadeOut();
-                $('#OTPinput').fadeIn();
-
-            }).fail(function(response) {
-
-                console.log(response.responseJSON);
-                $('#errorPhone').fadeIn();
-                $('#errorText').html(response.responseJSON);
-
-            })
-
-        });
-
-        $('#OTPinput').submit(function(event) {
-
-            console.log($('#codeInput').val());
-            event.preventDefault();
-
-            $.post("{{ url('/checkeditNumber') }}", {
-
-                '_token': "{{ csrf_token() }}",
-                'otp': $('#codeInput').val(),
-                'login_token': logintoken,
-                'cellphone': $('#phoneInput').val()
-
-            }, function(response, status) {
-                console.log(response, status);
-                logintoken = response.login_token;
+token': "{{ $user->login_token }}"
+oken;
 
                 $(location).attr('href', "{{ route('home.profile') }}");
                 // $('#loginForm').fadeOut();

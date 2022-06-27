@@ -5,8 +5,6 @@
 @endsection
 
 @section('content')
-    <div name="map" id="map" style="width: 100%;height: 200px;display: block">
-    </div>
     <div class="container-fluid">
         <div class="row justify-content-center  content-min-height">
             <div class="col-11 col-sm-10 col-md-10 col-lg-12 col-xl-11 col-xl-5 text-center p-0 mt-3 mb-2">
@@ -39,7 +37,7 @@
                                 <div id="theModal" class="modal">
 
                                     <!-- Modal content -->
-                                    <div id="myModal" class="modal-content">
+                                    <div class="modal-content">
                                         <span class="close">&times;</span>
                                         <div class="modal-body pb-3">
                                             <p class="text-secondary">لطفا اطلاعات شناسایی خود را وارد کنید. آدرس
@@ -51,7 +49,7 @@
                                                     <input type="text" id="addresses1" name="addresses"
                                                         class="form-control" placeholder="تهران، خیابان ۹ شرقی...">
                                                 </div>
-
+                                                <div name="map" id="map" style="width: 100%;height: 200px;position: relative;outline: none"></div>
                                                 <button id="SubmitForm" class="secondary-btn w-100">ذخیره</button>
                                             </div>
                                         </div>
@@ -245,7 +243,11 @@
                                                                     <button id="add{{ $category->id }}"
                                                                         class="button  d-md-block custom-margin-pricing  text-center mx-auto   w-Custom-50 w-50"
                                                                         role="button "> افزودن به سبد خرید</button>
+
+                                                                       
                                                                 </div>
+                                                                <input type="button" name="next" class="next action-button mt-5"
+                                                                value="ادامه" />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -253,8 +255,7 @@
                                             @endforeach
                                         </div>
                                     </div>
-                                    <input type="button" name="next"
-                                        class="next action-button custom-pricing-margin-btn  firstBtn" value="ادامه" />
+                                 
                                 </div>
 
                             </div>
@@ -420,29 +421,24 @@
         var lng = 51.338097;
         var getId = @json($user);
 
-        var map = L.map('map', {
+        var map = new L.Map('map', {
+            key: 'web.5j4qJGGkEPdoi3S18YqklpipMjVUa7nDm8cuiiL9',
+            maptype: 'dreamy',
             center: [lat, lng],
-            zoom: 13
+            zoom: 13,
+            traffic: false,
+            onTrafficLayerSwitched: function(state) {
+                // console.log(state);
+            }
         });
 
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+
+
+        L.tileLayer('file://{s}.{{asset('map/map.osm')}}/{z}/{x}/{y}.png', {
             maxZoom: 19,
             attribution: false
         }).addTo(map);
 
-        // L.tileLayer('file://{s}.{{ asset('map/map.osm') }}/{z}/{x}/{y}.png', {
-        //     maxZoom: 19,
-        //     attribution: false
-        // }).addTo(map);
-        const provider = new window.GeoSearch.OpenStreetMapProvider();
-        const search = new GeoSearch.GeoSearchControl({
-            provider: provider,
-            style: 'bar',
-            updateMap: true,
-            autoClose: true,
-        });
-
-        map.addControl(search);
 
         var marker = L.marker([32.4279, 53.6880]).addTo(map).openPopup();
         map.on('click', function(e) {
@@ -931,7 +927,7 @@
                                 id: `ProductDetails${rnd}`
 
 
-                            }).addClass('text-right  text-Cutom-right');
+                            }).addClass('');
 
                             $("#ProductDetails" + rnd).append(productDetails);
                         }
