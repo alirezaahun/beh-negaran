@@ -680,6 +680,20 @@
     <script>
         var lat = 35.699739;
         var lng = 51.338097;
+        var getUserType;
+
+            var getUser = '{{ Session::get('user') }}';
+            var checksession = '{{ Session::has('user') }}';
+
+            if (checksession) {
+                if (getUser == 1) {
+                    $("#companyUser").hide();
+                } else {
+
+                    $("#realUser").hide();
+                    $("#i").attr('checked', true);
+                }
+            }
 
         var map = L.map('map', {
             center: [lat, lng],
@@ -784,7 +798,13 @@
         // Hide And Show All Contents With Right Side Navbar ---------------------------
         $(document).ready(function() {
 
-
+            $("#i").change(function(){
+                if ($('#realUser').css('display') == 'none') {
+                    getUserType = 1;
+                }else{
+                    getUserType = 0;
+                }
+            });
             // var getUser = '{{ Session::get('user') }}';
             // var checksession = '{{ Session::has('user') }}';
 
@@ -797,19 +817,13 @@
             //     }
             // }
 
-            // $(window).on('beforeunload', function() {
-            //     if ($('#realUser').css('display') == 'none') {
-            //         $.get("{{ route('usertype') }}", {
-            //             'user': "real"
-            //         } , function(response , status){
-            //             console.log(response);
-            //         });
-            //     } else {
-            //         $.get("{{ route('usertype') }}", {
-            //             'user': "company"
-            //         });
-            //     }
-            // });
+            $(window).on('beforeunload', function() {
+                    $.get("{{ route('usertype') }}", {
+                        'user': getUserType
+                    } , function(response , status){
+                        console.log(response);
+                    });
+            });
 
             $("#logout").click(function() {
                 localStorage.clear();
@@ -883,7 +897,7 @@
 
         // Hide And Show User Type Form With Checkbox -------------------------
         $(document).ready(function() {
-            $("#companyUser").hide();
+
             $('#i').change(function() {
 
                 if ($(this).is(':checked')) {
@@ -970,8 +984,38 @@
                 '_token': "{{ csrf_token() }}",
                 'login_token': "{{ $user->login_token }}",
                 'id': "{{$user->id}}"
-token': "{{ $user->login_token }}"
-oken;
+
+            }, function(response, status) {
+                console.log(response, status);
+                logintoken = response.login_token;
+                $('#loginForm').fadeOut();
+                $('#OTPinput').fadeIn();
+
+            }).fail(function(response) {
+
+                console.log(response.responseJSON);
+                $('#errorPhone').fadeIn();
+                $('#errorText').html(response.responseJSON);
+
+            })
+
+        });
+
+        $('#OTPinput').submit(function(event) {
+
+            console.log($('#codeInput').val());
+            event.preventDefault();
+
+            $.post("{{ url('/checkeditNumber') }}", {
+
+                '_token': "{{ csrf_token() }}",
+                'otp': $('#codeInput').val(),
+                'login_token': logintoken,
+                'cellphone': $('#phoneInput').val()
+
+            }, function(response, status) {
+                console.log(response, status);
+                logintoken = response.login_token;
 
                 $(location).attr('href', "{{ route('home.profile') }}");
                 // $('#loginForm').fadeOut();
