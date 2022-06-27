@@ -134,7 +134,7 @@ class authController extends Controller
 
 
 
-        $user = User::where('login_token', $request->login_token)->first();
+        $user = User::find($request->id);
 
         try {
 

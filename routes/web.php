@@ -91,4 +91,5 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('addresses', AddressController::class);
     Route::post('/payment', [PaymentController::class, 'payment'])->name('payment');
     Route::get('/callback_payment', [PaymentController::class, 'callback_payment'])->name('payment.callback');
+    Route::get('/usertype' , [HomeController::class , 'usertype'])->name('usertype');
 });

@@ -33,7 +33,7 @@
                     <li class="nav___items ">
                         <i class='bx bx-log-out'></i>
                         <a class="text-nowrap" id="logout" href="{{ route('logout') }}">خروج</a>
-       </ul>
+                </ul>
             </nav>
 
             <div class="container-fluid costume-container">
@@ -475,56 +475,58 @@
                         <h4>سفارش های شما</h4>
                         <div class="footer-line"><span></span></div>
                         @foreach ($getOrders as $totalOrder)
+                            <div class="col-md-12">
+                                @foreach ($totalOrder->OrderItems as $order)
+                                    <ul>
+                                        <li><span class="text-secondary">مکان</span>
+                                            <h6>{{ $order->address }}</h6>
+                                        </li>
+                                        <li><span class="text-secondary">زمان</span>
+                                            <h6> {{ $order->date }} </h6>
+                                        </li>
+                                        <li><span class="text-secondary">خدمات</span>
+                                            <h6>{{ $order->attributes }}</h6>
+                                        </li>
+                                        <li><span class="text-secondary">مبلغ</span>
+                                            <h6>{{ $order->price }}</h6>
+                                        </li>
+                                    </ul>
+                                @endforeach
+                                <span class="order-details">جزئیات</span>
 
-                        <div class="col-md-12">
-                            @foreach ($totalOrder->OrderItems as $order)
+                                <div class="order-collapse">
+                                    <ul class="responsive-table">
+                                        <li class="table-header">
+                                            <div class="col col-1">هزینه خدمات</div>
+                                            <div class="col col-2">تخفیف</div>
+                                            <div class="col col-3">مبلغ کل</div>
+                                            <div class="col col-4">وضعیت پرداخت</div>
+                                            <div class="col col-5">کد پیگیری</div>
+                                        </li>
+                                        <li class="table-row">
+                                            <div class="col col-1" data-label="هزینه پکیج">
+                                                {{ $totalOrder->total_amount }}</div>
+                                            <div class="col col-2" data-label="ایاب و ذهاب">0</div>
+                                            <div class="col col-3" data-label="مبلغ کل">
+                                                {{ $totalOrder->paying_amount }}</div>
+                                            @foreach ($totalOrder->TransActions as $item)
+                                                <div class="col col-4 {{ $item->success == 1 ? 'text-success' : 'text-danger' }}"
+                                                    data-label="وضعیت سفارش">
+                                                    {{ $item->success == 1 ? 'موفق' : 'ناموفق' }}</div>
+                                                <div class="col col-5" data-label="کد پیگیری">{{ $item->ref_id }}
+                                                </div>
+                                            @endforeach
+                                        </li>
 
-                            <ul>
-                                <li><span class="text-secondary">مکان</span>
-                                    <h6>{{$order->address}}</h6>
-                                </li>
-                                <li><span class="text-secondary">زمان</span>
-                                    <h6> {{$order->date}} </h6>
-                                </li>
-                                <li><span class="text-secondary">خدمات</span>
-                                    <h6>{{$order->attributes}}</h6>
-                                </li>
-                                <li><span class="text-secondary">مبلغ</span>
-                                    <h6>{{$order->price}}</h6>
-                                </li>
-                            </ul>
-
-                            @endforeach
-                            <span class="order-details">جزئیات</span>
-
-                            <div class="order-collapse">
-                                <ul class="responsive-table">
-                                    <li class="table-header">
-                                        <div class="col col-1">هزینه خدمات</div>
-                                        <div class="col col-2">تخفیف</div>
-                                        <div class="col col-3">مبلغ کل</div>
-                                        <div class="col col-4">وضعیت پرداخت</div>
-                                        <div class="col col-5">کد پیگیری</div>
-                                    </li>
-                                    <li class="table-row">
-                                        <div class="col col-1" data-label="هزینه پکیج">{{$totalOrder->total_amount}}</div>
-                                        <div class="col col-2" data-label="ایاب و ذهاب">0</div>
-                                        <div class="col col-3" data-label="مبلغ کل">{{$totalOrder->paying_amount}}</div>
-                                        @foreach ($totalOrder->TransActions as $item)
-                                        <div class="col col-4 {{($item->success) == 1 ? 'text-success' : 'text-danger'}}" data-label="وضعیت سفارش">{{($item->success) == 1 ? 'موفق' : 'ناموفق'}}</div>
-                                        <div class="col col-5" data-label="کد پیگیری">{{$item->ref_id}}</div>
-                                        @endforeach
-                                    </li>
-
-                                </ul>
-                                <div class="recipt-btn-container">
-                                    <button id="recipt-print" class="secondary-btn">چاپ فاکتور</button>
-                                    <button id="exclusive-recipt-print" class="secondary-btn">درخواست فاکتور رسمی</button>
+                                    </ul>
+                                    <div class="recipt-btn-container">
+                                        <button id="recipt-print" class="secondary-btn">چاپ فاکتور</button>
+                                        <button id="exclusive-recipt-print" class="secondary-btn">درخواست فاکتور
+                                            رسمی</button>
+                                    </div>
                                 </div>
+                                <hr>
                             </div>
-                            <hr>
-                        </div>
-
                         @endforeach
 
 
@@ -600,7 +602,13 @@
                                                 <div class="d-flex flex-column">
                                                     <span class="text-secondary">آدرس کامل</span>
                                                 </div>
-                                                <button class="secondary-btn remove-address-btn h-50">حذف آدرس</button>
+                                                <form
+                                                    action="{{ route('addresses.destroy', ['address' => $address->id]) }}"
+                                                    method="POST">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button class="secondary-btn remove-address-btn h-50">حذف آدرس</button>
+                                                </form>
                                             </div>
                                             <h6> {{ $address->address }} </h6>
 
@@ -673,36 +681,33 @@
         var lat = 35.699739;
         var lng = 51.338097;
 
-        var map = new L.Map('map', {
-            key: 'web.5j4qJGGkEPdoi3S18YqklpipMjVUa7nDm8cuiiL9',
-            maptype: 'dreamy',
+        var map = L.map('map', {
             center: [lat, lng],
-            zoom: 14,
-            traffic: true,
-            onTrafficLayerSwitched: function(state) {
-                console.log(state);
-            }
+            zoom: 13
         });
-
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
             attribution: false
         }).addTo(map);
+
+        const provider = new window.GeoSearch.OpenStreetMapProvider();
+        const search = new GeoSearch.GeoSearchControl({
+            provider: provider,
+            style: 'bar',
+            updateMap: true,
+            autoClose: true,
+        });
+
+        map.addControl(search);
 
 
 
         var marker = L.marker([32.4279, 53.6880]).addTo(map)
             .openPopup();
 
-        var map1 = new L.Map('Addmap', {
-            key: 'web.5j4qJGGkEPdoi3S18YqklpipMjVUa7nDm8cuiiL9',
-            maptype: 'dreamy',
+        var map1 = L.map('Addmap', {
             center: [lat, lng],
-            zoom: 14,
-            traffic: true,
-            onTrafficLayerSwitched: function(state) {
-                console.log(state);
-            }
+            zoom: 13
         });
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -710,8 +715,17 @@
             attribution: false
         }).addTo(map1);
 
+        const provider1 = new window.GeoSearch.OpenStreetMapProvider();
+        const search1 = new GeoSearch.GeoSearchControl({
+            provider: provider,
+            style: 'bar',
+            updateMap: true,
+            autoClose: true,
+        });
+
         var marker = L.marker([32.4279, 53.6880]).addTo(map1)
             .openPopup();
+        map1.addControl(search1);
 
 
 
@@ -740,15 +754,20 @@
         console.log(getId);
 
         getId.addresses.forEach(element => {
-            var map = new L.Map(`map${element.id}`, {
-                key: 'web.5j4qJGGkEPdoi3S18YqklpipMjVUa7nDm8cuiiL9',
-                maptype: 'dreamy',
+            // var map = new L.Map(`map${element.id}`, {
+            //     key: 'web.5j4qJGGkEPdoi3S18YqklpipMjVUa7nDm8cuiiL9',
+            //     maptype: 'dreamy',
+            //     center: [element.latitude, element.longitude],
+            //     zoom: 14,
+            //     traffic: true,
+            //     onTrafficLayerSwitched: function(state) {
+            //         console.log(state);
+            //     }
+            // });
+
+            var map = L.map(`map${element.id}`, {
                 center: [element.latitude, element.longitude],
-                zoom: 14,
-                traffic: true,
-                onTrafficLayerSwitched: function(state) {
-                    console.log(state);
-                }
+                zoom: 13
             });
 
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -761,10 +780,37 @@
 
         });
 
+
         // Hide And Show All Contents With Right Side Navbar ---------------------------
         $(document).ready(function() {
 
-            $("#logout").click(function(){
+            // var getUser = '{{ Session::get('user') }}';
+            // var checksession = '{{ Session::has('user') }}';
+
+            // if (checksession) {
+            //     if (getUser == "real") {
+            //         $("#companyUser").css("display", "none");
+            //     } else {
+
+            //         $("#realUser").css("display", "none");
+            //     }
+            // }
+
+            // $(window).on('beforeunload', function() {
+            //     if ($('#realUser').css('display') == 'none') {
+            //         $.get("{{ route('usertype') }}", {
+            //             'user': "real"
+            //         } , function(response , status){
+            //             console.log(response);
+            //         });
+            //     } else {
+            //         $.get("{{ route('usertype') }}", {
+            //             'user': "company"
+            //         });
+            //     }
+            // });
+
+            $("#logout").click(function() {
                 localStorage.clear();
             });
 
@@ -921,7 +967,8 @@
             $.post("{{ route('home.editPhoneNumber') }}", {
 
                 '_token': "{{ csrf_token() }}",
-                'login_token': "{{ $user->login_token }}"
+                'login_token': "{{ $user->login_token }}",
+                'id': "{{$user->id}}"
 
             }, function(response, status) {
                 console.log(response, status);

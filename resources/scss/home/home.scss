@@ -43,6 +43,7 @@
 @import "~md.bootstrappersiandatetimepicker/dist/mds.bs.datetimepicker.style.css";
 @import url("https://v1.fontapi.ir/css/Samim");
 @import url("https://static.neshan.org/sdk/leaflet/1.4.0/leaflet.css");
+@import "~leaflet-geosearch/dist/geosearch.css";
 // @import "~leaflet/dist/leaflet.css";
 
 * {
@@ -1776,7 +1777,7 @@ a {
 .custom-jO-style {
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
     border-radius: 0.5rem;
-    
+
 }
 
 // Projects Page Style ----------------------------------------------------
@@ -2731,7 +2732,7 @@ a {
     position: relative;
     height: 100vh;
   }
-  
+
   #notfound .notfound {
     position: absolute;
     left: 50%;
@@ -2740,21 +2741,21 @@ a {
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
   }
-  
+
   .notfound {
     max-width: 460px;
     width: 100%;
     text-align: center;
     line-height: 1.4;
   }
-  
+
   .notfound .notfound-404 {
     position: relative;
     width: 180px;
     height: 180px;
     margin: 0px auto 50px;
   }
-  
+
   .notfound .notfound-404>div:first-child {
     position: absolute;
     left: 0;
@@ -2768,7 +2769,7 @@ a {
     border: 5px dashed var(--clr-dark);
     border-radius: 5px;
   }
-  
+
   .notfound .notfound-404>div:first-child:before {
     content: '';
     position: absolute;
@@ -2780,7 +2781,7 @@ a {
             box-shadow: 0px 0px 0px 5px rgba(0, 0, 0, 0.1) inset;
     border-radius: 5px;
   }
-  
+
   .notfound .notfound-404 h1 {
     color: var(--clr-dark);
     font-weight: 700;
@@ -2796,19 +2797,19 @@ a {
     height: 40px;
     line-height: 40px;
   }
-  
+
   .notfound h2 {
     font-size: 33px;
     font-weight: 700;
   }
-  
+
   .notfound p {
     font-size: 16px;
     color: var(--clr-dark);
     font-weight: 400;
     margin-bottom: 2rem;
   }
-  
+
   .notfound .secondary-btn {
     background-color: var(--clr-secondary);
     color: var(--clr-primary);
@@ -2818,7 +2819,7 @@ a {
     color: var(--clr-accent);
   }
 
-  
+
 /* Scroll Bar ----------------------------------------------------------- */
 /* width */
 ::-webkit-scrollbar {

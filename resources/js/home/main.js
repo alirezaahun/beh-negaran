@@ -10,6 +10,7 @@ require('jquery-ui');
 require('md.bootstrappersiandatetimepicker/dist/mds.bs.datetimepicker');
 require('./owl-carousel-min');
 require('./owl-custom-main');
+require('leaflet-geosearch');
 
 
 

@@ -9,6 +9,7 @@ use App\Http\Resources\V1\topBannerResource;
 use App\Models\Banner;
 use App\Models\Product;
 use App\Models\User;
+use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -117,6 +118,11 @@ class HomeController extends Controller
 
         }
 
+    }
+
+    public function usertype(Request $request){
+        session()->put('user' , $request->user);
+        return session()->get('user');
     }
 
     public function logout(){
