@@ -689,10 +689,12 @@
                 if (getUser == 1) {
                     $("#companyUser").hide();
                     $("#i").attr('checked', false);
-                } else {
+                } else if(getUser == 0) {
 
                     $("#realUser").hide();
                     $("#i").attr('checked', true);
+                }else{
+                    $("#companyUser").hide();
                 }
             }
 
@@ -802,8 +804,18 @@
             $("#i").change(function(){
                 if ($('#realUser').css('display') == 'none') {
                     getUserType = 1;
+                    $.get("{{ route('usertype') }}", {
+                        'user': getUserType
+                    } , function(response , status){
+                        console.log(response);
+                    });
                 }else{
                     getUserType = 0;
+                    $.get("{{ route('usertype') }}", {
+                        'user': getUserType
+                    } , function(response , status){
+                        console.log(response);
+                    });
                 }
             });
             // var getUser = '{{ Session::get('user') }}';
@@ -817,14 +829,6 @@
             //         $("#realUser").css("display", "none");
             //     }
             // }
-
-            $(window).on('beforeunload', function() {
-                    $.get("{{ route('usertype') }}", {
-                        'user': getUserType
-                    } , function(response , status){
-                        console.log(response);
-                    });
-            });
 
             $("#logout").click(function() {
                 localStorage.clear();
