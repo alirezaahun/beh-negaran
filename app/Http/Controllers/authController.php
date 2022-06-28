@@ -133,8 +133,17 @@ class authController extends Controller
         ]);
 
 
+        $checkphone = User::where('cellphone', $request->cellphone)->first();
+
+        if ($checkphone) {
+            return 'true';
+        }else{
+            return 'false';
+        }
+
 
         $user = User::find($request->id);
+
 
         try {
 
