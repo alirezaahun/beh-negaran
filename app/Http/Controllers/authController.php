@@ -128,22 +128,18 @@ class authController extends Controller
 
         $request->validate([
 
-            'login_token' => 'required'
+            'login_token' => 'required',
+            'cellphone' => 'required'
 
         ]);
 
+        $i = $this->checkNumber($request->cellphone);
 
-        $checkphone = User::where('cellphone', $request->cellphone)->first();
+        return $i;
 
-        if ($checkphone) {
-            return 'true';
-        }else{
-            return 'false';
-        }
 
 
         $user = User::find($request->id);
-
 
         try {
 
@@ -198,6 +194,16 @@ class authController extends Controller
         } catch (Exception $e) {
 
             return response(['error' => $e->getMessage()], 422);
+        }
+    }
+
+    public function checkNumber($phone){
+        $check = User::where('cellphone', '=' , $phone)->exists();
+
+        if ($check) {
+            return response(['error' => 'شماره مد نظر موجود میباشد'], 422);
+        }else{
+            return "true";
         }
     }
 }
