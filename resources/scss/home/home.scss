@@ -2701,6 +2701,11 @@ a {
 .remove-address-btn {
     margin-left: 0;
 }
+.add-address-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
 // Page Not Found -----------------------------------------------------
 #notfound {
     position: relative;

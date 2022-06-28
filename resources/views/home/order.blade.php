@@ -19,7 +19,7 @@
                         </ul>
                         <!-- fieldsets -->
                         <?php
-
+                        
                         $getParents = App\Models\Category::where('parent_id', 0)
                             ->with('children', 'attributes')
                             ->get();
@@ -49,7 +49,9 @@
                                                     <input type="text" id="addresses1" name="addresses"
                                                         class="form-control" placeholder="تهران، خیابان ۹ شرقی...">
                                                 </div>
-                                                <div name="map" id="map" style="width: 100%;height: 200px;position: relative;outline: none"></div>
+                                                <div class="my-3" name="map" id="map"
+                                                    style="width: 100%;height: 200px;position: relative;outline: none">
+                                                </div>
                                                 <button id="SubmitForm" class="secondary-btn w-100">ذخیره</button>
                                             </div>
                                         </div>
@@ -128,8 +130,7 @@
                                                                             @endforeach
                                                                         </select>
                                                                         <div class="col-12">
-                                                                            <div id="{{ $category->id }}"
-                                                                                class="row">
+                                                                            <div id="{{ $category->id }}" class="row">
                                                                                 <h6
                                                                                     class="mx-auto  d-md-none mt-3 text-center ">
                                                                                     حالت دوربین
@@ -244,10 +245,10 @@
                                                                         class="button  d-md-block custom-margin-pricing  text-center mx-auto   w-Custom-50 w-50"
                                                                         role="button "> افزودن به سبد خرید</button>
 
-                                                                       
+
                                                                 </div>
-                                                                <input type="button" name="next" class="next action-button mt-5"
-                                                                value="ادامه" />
+                                                                <input type="button" name="next"
+                                                                    class="next action-button mt-5" value="ادامه" />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -255,7 +256,7 @@
                                             @endforeach
                                         </div>
                                     </div>
-                                 
+
                                 </div>
 
                             </div>
@@ -434,7 +435,7 @@
 
 
 
-        L.tileLayer('file://{s}.{{asset('map/map.osm')}}/{z}/{x}/{y}.png', {
+        L.tileLayer('file://{s}.{{ asset('map/map.osm') }}/{z}/{x}/{y}.png', {
             maxZoom: 19,
             attribution: false
         }).addTo(map);
@@ -1144,6 +1145,9 @@
         // When the user clicks on the button, open the modal
         btn.onclick = function() {
             modal.style.display = "block";
+            setTimeout(function() {
+                map.invalidateSize();
+            }, 10);
         }
 
         // When the user clicks on <span> (x), close the modal
