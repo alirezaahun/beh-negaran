@@ -972,7 +972,7 @@ if ($(this).is(':checked')) {
             [document.getElementById("modalBtn11"), document.getElementById("myModal11")],
             [document.getElementById("modalBtn12"), document.getElementById("myModal12")],
             [document.getElementById("modalBtn13"), document.getElementById("myModal13")],
-            [document.getElementById("modalBtn14"), document.getElementById("myModal14")],
+            
         ]);
 
         datamap.forEach((value, key) => {
