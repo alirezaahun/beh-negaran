@@ -168,8 +168,8 @@
                                                     <form action="">
                                                         <div class="form-group">
                                                             <label for="nationalNumber">کد ملی</label>
-                                                            <input type="text" class="form-control"
-                                                                id="nationalNumber" placeholder="۰۰۱۲۳۴۵۶۷۸">
+                                                            <input type="text" class="form-control" id="nationalNumber"
+                                                                placeholder="۰۰۱۲۳۴۵۶۷۸">
                                                         </div>
                                                         <button type="submit" class="secondary-btn">ذخیره</button>
                                                     </form>
@@ -258,9 +258,8 @@
 
                                                         <div class="form-group">
                                                             <label for="companyName">نام شرکت</label>
-                                                            <input type="text" name="company-name"
-                                                                class="form-control" id="companyName"
-                                                                placeholder="نام شرکت">
+                                                            <input type="text" name="company-name" class="form-control"
+                                                                id="companyName" placeholder="نام شرکت">
                                                         </div>
 
                                                         <button type="submit" class="secondary-btn">ذخیره</button>
@@ -370,13 +369,11 @@
 
                                                         <div class="form-group">
                                                             <label for="companyState">استان</label>
-                                                            <input type="text" name="company-state"
-                                                                class="form-control" id="companyState"
-                                                                placeholder="استان شرکت">
+                                                            <input type="text" name="company-state" class="form-control"
+                                                                id="companyState" placeholder="استان شرکت">
                                                             <label for="companyCity">شهرستان</label>
-                                                            <input type="text" name="company-city"
-                                                                class="form-control" id="companyCity"
-                                                                placeholder="شهرستان شرکت">
+                                                            <input type="text" name="company-city" class="form-control"
+                                                                id="companyCity" placeholder="شهرستان شرکت">
                                                         </div>
 
                                                         <button type="submit" class="secondary-btn">ذخیره</button>
@@ -402,8 +399,8 @@
                                                     <form action="">
                                                         <div class="form-group">
                                                             <label for="companyAddress">آدرس</label>
-                                                            <input type="text" class="form-control"
-                                                                id="companyAddress" placeholder="آدرس شرکت">
+                                                            <input type="text" class="form-control" id="companyAddress"
+                                                                placeholder="آدرس شرکت">
                                                         </div>
 
                                                         <button type="submit" class="secondary-btn">ذخیره</button>
@@ -568,28 +565,27 @@
 
                     {{-- User Addresses --}}
                     <div class="row tab_content" id="user-addresses">
-                        <div class="d-flex flex-column justify-content-start ">
+                        <div class="d-flex justify-content-between align-items-center">
                             <h4>آدرس های شما</h4>
-                            <button id="extendedMapBtn" class="secondary-btn w-100 extend-map">افزودن آدرس</button>
+                            <button id="modalBtn14" class="secondary-btn">افزودن آدرس</button>
 
-                            <div id="extendedMapContent" class="add-address-content">
+                            <div id="myModal14" class="modal">
                                 <!-- Modal content -->
-                                <div class="address-content">
-
-                                    <div class="address-body">
-
-                                        <form class="px-4" id="addressForm1">
+                                <div class="modal-content">
+                                    <span class="close">&times;</span>
+                                    <div class="modal-body">
+                                        <p class="text-secondary">لطفا اطلاعات شناسایی خود را وارد کنید. آدرس
+                                            شما
+                                            باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
+                                        <form id="addressForm1">
                                             <div id="addressForm" class="form-group">
-                                                <label class="my-2" for="userAddress">آدرس</label>
-                                                <input type="text" id="addresses1" name="addresses"
-                                                    class="form-control my-2" id="address"
-                                                    placeholder="تهران، خیابان ۹ شرقی...">
+                                                <label for="userAddress">آدرس</label>
+                                                <input type="text" id="addresses1" name="addresses" class="form-control"
+                                                    id="address" placeholder="تهران، خیابان ۹ شرقی...">
                                             </div>
 
-                                            <div name="map" id="Addmap"
-                                                style="width: 100%;height: 200px;position: relative;outline: none"></div>
-                                            <button onClick="refreshPage()"
-                                                class="secondary-btn my-3 w-100">ذخیره</button>
+                                            <div name="map" id="Addmap" style="height: 200px"></div>
+                                            <button class="secondary-btn">ذخیره</button>
                                         </form>
                                     </div>
                                 </div>
@@ -686,27 +682,26 @@
         var lng = 51.338097;
         var getUserType;
 
-        var getUser = '{{ Session::get('user') }}';
-        var checksession = '{{ Session::has('user') }}';
+            var getUser = '{{ Session::get('user') }}';
+            var checksession = '{{ Session::has('user') }}';
 
-        if (checksession) {
+            if (checksession) {
+                if (getUser == 1) {
+                    $("#companyUser").hide();
+                    $("#i").attr('checked', false);
+                } else if(getUser == 0) {
 
-
-            if (getUser == 1) {
-                $("#companyUser").hide();
-                $("#i").attr('checked', false);
-            } else {
-
-                $("#realUser").hide();
-                $("#i").attr('checked', true);
+                    $("#realUser").hide();
+                    $("#i").attr('checked', true);
+                }else{
+                    $("#companyUser").hide();
+                }
             }
-        }
 
         var map = L.map('map', {
             center: [lat, lng],
             zoom: 13
         });
-
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
             attribution: false
@@ -806,11 +801,21 @@
         // Hide And Show All Contents With Right Side Navbar ---------------------------
         $(document).ready(function() {
 
-            $("#i").change(function() {
+            $("#i").change(function(){
                 if ($('#realUser').css('display') == 'none') {
                     getUserType = 1;
-                } else {
+                    $.get("{{ route('usertype') }}", {
+                        'user': getUserType
+                    } , function(response , status){
+                        console.log(response);
+                    });
+                }else{
                     getUserType = 0;
+                    $.get("{{ route('usertype') }}", {
+                        'user': getUserType
+                    } , function(response , status){
+                        console.log(response);
+                    });
                 }
             });
             // var getUser = '{{ Session::get('user') }}';
@@ -824,14 +829,6 @@
             //         $("#realUser").css("display", "none");
             //     }
             // }
-
-            // $(window).on('beforeunload', function() {
-            //     $.get("{{ route('usertype') }}", {
-            //         'user': getUserType
-            //     }, function(response, status) {
-            //         console.log(response);
-            //     });
-            // });
 
             $("#logout").click(function() {
                 localStorage.clear();
@@ -908,14 +905,14 @@
 
             $('#i').change(function() {
 
-if ($(this).is(':checked')) {
-    $('#companyUser').fadeIn("slow").toggleClass("hidden");
-    $('#realUser').fadeOut("slow").toggleClass("hidden");
-} else {
-    $('#realUser').fadeIn("slow").toggleClass("hidden");
-    $('#companyUser').fadeOut("slow").toggleClass("hidden");
-}
-});
+                if ($(this).is(':checked')) {
+                    $('#companyUser').fadeIn("slow").toggleClass("hidden");
+                    $('#realUser').fadeOut("slow").toggleClass("hidden");
+                } else {
+                    $('#realUser').fadeIn("slow").toggleClass("hidden");
+                    $('#companyUser').fadeOut("slow").toggleClass("hidden");
+                }
+            });
 
         });
 
@@ -935,27 +932,6 @@ if ($(this).is(':checked')) {
             });
         }
 
-        // Expand The Content For Add Address ---------------------
-        var addColl = document.getElementsByClassName("extend-map");
-        var h;
-
-        for (h = 0; h < addColl.length; h++) {
-            addColl[h].addEventListener("click", function() {
-                this.classList.toggle("add-address-content-active");
-                var content = this.nextElementSibling;
-                if (content.style.maxHeight) {
-                    content.style.maxHeight = null;
-                } else {
-                    content.style.maxHeight = content.scrollHeight + "px";
-                }
-            });
-        }
-
-        // Reload Page On Address Add --------------------
-        function refreshPage() {
-            window.location.reload();
-        }
-
         // Modals For User Information Inputs --------------------------
         var datamap = new Map([
             [document.getElementById("modalBtn"), document.getElementById("myModal")],
@@ -972,7 +948,7 @@ if ($(this).is(':checked')) {
             [document.getElementById("modalBtn11"), document.getElementById("myModal11")],
             [document.getElementById("modalBtn12"), document.getElementById("myModal12")],
             [document.getElementById("modalBtn13"), document.getElementById("myModal13")],
-            [document.getElementById("modalBtn14"), document.getElementById("myModal14")],
+            
         ]);
 
         datamap.forEach((value, key) => {
@@ -984,12 +960,8 @@ if ($(this).is(':checked')) {
             // Get the <span> element that closes the modal
             var span = popupbox.getElementsByClassName("close")[0];
 
-
             anchor.addEventListener("click", function(event) {
                 popupbox.style.display = "block";
-                setTimeout(function() {
-                    map.invalidateSize();
-                }, 10);
             });
 
             span.addEventListener("click", function(event) {
@@ -1002,8 +974,6 @@ if ($(this).is(':checked')) {
                 }
             });
         }
-
-
 
         let logintoken;
 
@@ -1018,7 +988,7 @@ if ($(this).is(':checked')) {
 
                 '_token': "{{ csrf_token() }}",
                 'login_token': "{{ $user->login_token }}",
-                'id': "{{ $user->id }}"
+                'id': "{{$user->id}}"
 
             }, function(response, status) {
                 console.log(response, status);
