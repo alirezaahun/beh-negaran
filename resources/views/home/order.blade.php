@@ -75,7 +75,7 @@
                                     <div class="form-contorol">
                                         <label class='float-right mt-4 mb-2 custom-lable' for="state">آدرس انتخابی
                                             شما</label>
-                                        <input type="text" id="currentAddress" class="form-control" disabled>
+                                        <input type="text" id="currentAddress" class="form-control bg-white" disabled>
                                     </div>
 
                                     <div class="row">
@@ -87,8 +87,9 @@
                                                 <div class="input-group date-input">
                                                     <span class="input-group-text" id="dtp1"><i
                                                             class="fas fa-calendar-alt"></i></span>
-                                                    <input id="date" type="text" class="form-control text-center"
-                                                        placeholder="انتخاب تاریخ" data-name="dtp1-text" disabled>
+                                                    <input id="date" type="text"
+                                                        class="form-control text-center bg-white" placeholder="انتخاب تاریخ"
+                                                        data-name="dtp1-text" disabled>
                                                 </div>
                                             </div>
                                         </div>
@@ -357,7 +358,7 @@
                                 {{-- User Orders Content --}}
                                 <div id="order" class="row tab_content">
                                     <h4>سفارش های شما</h4>
-                                    <div class="footer-line"><span></span></div>
+                                    <div class="footer-line"></div>
                                     <div id="productBox" class="col-md-12">
                                         <div class="order-collapse">
                                             <ul class="responsive-table">
@@ -382,11 +383,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div>
+                                <div class="mt-5">
                                     <span>جمع کل پرداختی شما</span> <input id="finalPricecontent" value="0"
-                                        class="text-danger form-control my-3 " disabled>
+                                        class="text-danger form-control my-3  w-50 mx-auto" disabled>
                                 </div>
-                                <input type="button" id="pay" name="previous" class="info-btn mx-auto w-50 "
+                                <input type="button" id="pay" name="previous" class="info-btn mx-auto w-50 bg-accent"
                                     value="پرداخت" />
                             </div>
                             <input type="button" name="previous" class="previous action-button-previous mt-3  "
@@ -482,7 +483,7 @@
             var getTotal;
             var j;
             setProgressBar(current);
-            // localStorage.clear();
+            localStorage.clear();
 
             try {
                 $("#productBox").html(localStorage.getItem("productt"));
@@ -878,15 +879,78 @@
                         let rnd = Math.floor((Math.random() * 1000000) + 1);
                         console.log(rnd);
 
-                        $("#productBox").append(`<ul id=${rnd}>` +
-                            `<li id=ProductLocation${rnd}> <span class='text-secondary'> آدرس <hr>` +
-                            `<li id=ProductSpecAttr${rnd}><span class='text-secondary'>خدمات ویژه  <hr> ` +
-                            `<li id=ProductDetails${rnd}> <span class='text-secondary'>ویژگی ها <hr>` +
-                            `<li id=ProductPrice${rnd}> <span class='text-secondary'> جمع کل <hr>` +
-                            `<li id=ProductName${rnd}> <span class='text-secondary'> نوع خدمت <hr>` +
-                            `<li id=ProductDate${rnd}> <span class='text-secondary'>تاریخ<hr>` +
-                            `<li id=deleteProduct${rnd}> <span class='text-secondary'> عملیات <hr> <button id=deleteProduct${rnd} class='text-danger secondary-btn cutom-color'> حذف خدمت </button>`
-                        );
+                        // $("#productBox").append(`<ul id=${rnd}>` +
+                        //     `<li id=ProductLocation${rnd}> <span class='text-secondary'> آدرس <hr>` +
+                        //     `<li id=ProductSpecAttr${rnd}><span class='text-secondary'>خدمات ویژه  <hr> ` +
+                        //     `<li id=ProductDetails${rnd}> <span class='text-secondary'>ویژگی ها <hr>` +
+                        //     `<li id=ProductPrice${rnd}> <span class='text-secondary'> جمع کل <hr>` +
+                        //     `<li id=ProductName${rnd}> <span class='text-secondary'> نوع خدمت <hr>` +
+                        //     `<li id=ProductDate${rnd}> <span class='text-secondary'>تاریخ<hr>` +
+                        //     `<li id=deleteProduct${rnd}> <span class='text-secondary'> عملیات <hr> 
+                    //  `
+                        // );
+
+
+
+                        $("#productBox").append(`<div id="order-status" class="row tab_content">
+                                      
+                    <div class="col-md-12">
+
+
+                        <ul class="responsive-table d-block" id=${rnd}>
+                            <li class="table-header">
+                                <div class="col col-3  orderpage-table">آدرس</div>
+                                <div class="col col-1  orderpage-table">خدمات ویژه</div>
+                                <div class="col col-3  orderpage-table"> ویژگی ها</div>
+                                <div class="col col-1  orderpage-table">جمع کل</div>
+                                <div class="col col-1  orderpage-table">نوع خدمت</div>
+                                <div class="col col-1  orderpage-table">تاریخ</div>
+                                <div class="col col-1  orderpage-table">عملیات</div>
+                            </li>
+                            <li class="table-row">
+                                <div id=ProductLocation${rnd}  class="col col-3 orderpage-table" data-label="آدرس"> </div>
+                                <div id=ProductSpecAttr${rnd}  class="col col-1 orderpage-table" data-label="خدمات ویژه"></div>
+                                <div id=ProductDetails${rnd}  class="col col-3 orderpage-table" data-label=" ویژگی ها"> </div>
+                                <div id=ProductPrice${rnd}  class="col col-1 orderpage-table" data-label="جمع کل"> </div>
+                                <div id=ProductName${rnd}  class="col col-1 orderpage-table" data-label="نوع خدمت"> </div>
+                                <div id=ProductDate${rnd}  class="col col-1 orderpage-table" data-label="تاریخ<"> </div>
+                                <div id=deleteProduct${rnd}  class="col col-1 orderpage-table" data-label="عملیات"><span class='text-secondary'>  حذف از سبد خرید</span> </div>
+
+                            </li>
+
+                        </ul>
+
+                        <hr>
+                    </div>
+
+
+
+
+                </div>
+`);
+
+
+
+
+
+
+
+
+                        // <ul class="responsive-table">
+                        //         <li class="table-header">
+                        //             <div class="col col-1">عنوان</div>
+                        //             <div class="col col-2">تاریخ</div>
+                        //             <div class="col col-3">وضعیت فعلی</div>
+                        //             <div class="col col-4">وضعیت بعدی</div>
+                        //         </li>
+                        //         <li class="table-row">
+                        //             <div class="col col-1" data-label="عنوان">پروژه عکاسی</div>
+                        //             <div class="col col-2" data-label="تاریخ">۰۱\۰۱\۱۴۰۰</div>
+                        //             <div class="col col-3" data-label="وضعیت فعلی">اعظام تیم به محل</div>
+                        //             <div class="col col-4" data-label="وضعیت بعدی">شروع عکاسی</div>
+                        //         </li>
+
+                        //     </ul>
 
                         getRandomNumbers.push(rnd);
 

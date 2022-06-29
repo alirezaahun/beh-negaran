@@ -1682,6 +1682,10 @@ footer p span {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 2px, rgba(0, 0, 0, 0.23) 0px 0px 3px;
 }
 
+.bg-accent {
+  background-color: var(--clr-accent);
+}
+
 #heading {
   text-transform: uppercase;
   color: var(--clr-secondary);
@@ -1726,6 +1730,11 @@ footer p span {
   padding: 0.7em 1rem;
 }
 
+@media only screen and (min-width: 850px) {
+  #msform .action-button {
+    transform: translate(-20px, -127px);
+  }
+}
 #msform .action-button:hover,
 #msform .action-button:focus {
   box-shadow: rgba(255, 255, 255, 0.23) 0px 0px 3px inset, rgba(255, 255, 255, 0.16) 0px 0px 3px inset;
@@ -1761,6 +1770,7 @@ footer p span {
 }
 
 #progressbar {
+  background-color: var(--clr-secondary);
   margin-bottom: 30px;
   overflow: hidden;
   color: lightgrey;
@@ -1776,6 +1786,7 @@ footer p span {
   float: left;
   position: relative;
   font-weight: 400;
+  z-index: 100;
 }
 
 #progressbar #account:before {
@@ -1815,7 +1826,7 @@ footer p span {
   content: "";
   width: 100%;
   height: 2px;
-  background: lightgray;
+  background: var(--clr-primary);
   position: absolute;
   left: 0;
   top: 25px;
@@ -1824,7 +1835,8 @@ footer p span {
 
 #progressbar li.active:before,
 #progressbar li.active:after {
-  background: var(--clr-secondary);
+  color: var(--clr-dark);
+  background-color: var(--clr-primary);
 }
 
 .progress {
@@ -3059,23 +3071,23 @@ a {
   box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
 }
 
-.responsive-table .col-1 {
+.responsive-table .col-1:not(.orderpage-table) {
   flex-basis: 20%;
 }
 
-.responsive-table .col-2 {
+.responsive-table .col-2:not(.orderpage-table) {
   flex-basis: 20%;
 }
 
-.responsive-table .col-3 {
+.responsive-table .col-3:not(.orderpage-table) {
   flex-basis: 20%;
 }
 
-.responsive-table .col-4 {
+.responsive-table .col-4:not(.orderpage-table) {
   flex-basis: 20%;
 }
 
-.responsive-table .col-5 {
+.responsive-table .col-5:not(.orderpage-table) {
   flex-basis: 20%;
 }
 
@@ -3093,10 +3105,6 @@ a {
 }
 
 @media all and (max-width: 767px) {
-  .responsive-table .table-header {
-    display: none;
-  }
-
   .responsive-table li {
     display: block;
   }
