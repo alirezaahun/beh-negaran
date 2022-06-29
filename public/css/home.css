@@ -3105,6 +3105,10 @@ a {
 }
 
 @media all and (max-width: 767px) {
+  .responsive-table .table-header {
+    display: none;
+  }
+
   .responsive-table li {
     display: block;
   }

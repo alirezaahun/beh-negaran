@@ -897,24 +897,24 @@
                     <div class="col-md-12">
 
 
-                        <ul class="responsive-table " id=${rnd}>
+                        <ul class="responsive-table d-block" id=${rnd}>
                             <li class="table-header">
-                                <div class="col col-3  ">آدرس</div>
-                                <div class="col col-1  ">خدمات ویژه</div>
-                                <div class="col col-3  "> ویژگی ها</div>
-                                <div class="col col-1  ">جمع کل</div>
-                                <div class="col col-1  ">نوع خدمت</div>
-                                <div class="col col-1  ">تاریخ</div>
-                                <div class="col col-1  ">عملیات</div>
+                                <div class="col col-3 orderpage-table ">آدرس</div>
+                                <div class="col col-1  orderpage-table">خدمات ویژه</div>
+                                <div class="col col-3  orderpage-table"> ویژگی ها</div>
+                                <div class="col col-1  orderpage-table">جمع کل</div>
+                                <div class="col col-1  orderpage-table">نوع خدمت</div>
+                                <div class="col col-1  orderpage-table">تاریخ</div>
+                                <div class="col col-1  orderpage-table">عملیات</div>
                             </li>
                             <li class="table-row">
-                                <div id=ProductLocation${rnd}  class="col col-3 " data-label="آدرس"> </div>
-                                <div id=ProductSpecAttr${rnd}  class="col col-1 " data-label="خدمات ویژه"></div>
-                                <div id=ProductDetails${rnd}  class="col col-3 " data-label=" ویژگی ها"> </div>
-                                <div id=ProductPrice${rnd}  class="col col-1 " data-label="جمع کل"> </div>
-                                <div id=ProductName${rnd}  class="col col-1 " data-label="نوع خدمت"> </div>
-                                <div id=ProductDate${rnd}  class="col col-1 " data-label="تاریخ<"> </div>
-                                <div id=deleteProduct${rnd}  class="col col-1 " data-label="عملیات"><span class='text-secondary'>  حذف از سبد خرید</span> </div>
+                                <div id=ProductLocation${rnd}  class="col col-3 orderpage-table" data-label="آدرس"> </div>
+                                <div id=ProductSpecAttr${rnd}  class="col col-1 orderpage-table" data-label="خدمات ویژه"></div>
+                                <div id=ProductDetails${rnd}  class="col col-3 orderpage-table" data-label=" ویژگی ها"> </div>
+                                <div id=ProductPrice${rnd}  class="col col-1 orderpage-table" data-label="جمع کل"> </div>
+                                <div id=ProductName${rnd}  class="col col-1 orderpage-table" data-label="نوع خدمت"> </div>
+                                <div id=ProductDate${rnd}  class="col col-1 orderpage-table" data-label="تاریخ<"> </div>
+                                <div id=deleteProduct${rnd}  class="col col-1 orderpage-table" data-label="عملیات"><span class='text-secondary'>  حذف از سبد خرید</span> </div>
                             </li>
                         </ul>
                         <hr>
