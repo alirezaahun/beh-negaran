@@ -29,8 +29,8 @@
                         ?>
                         <fieldset id="fil1" class="fil1">
 
-                            <div class="col-12">
-                                <button type="button" id="modalBtn" class="secondary-btn w-100"> افزودن آدرس</button>
+                            <div class="col-12  testttt p-md-5 p-2 ">
+                                <button type="button" id="modalBtn" class="secondary-btn w-50"> افزودن آدرس</button>
 
 
                                 <!-- The Modal -->
@@ -47,7 +47,7 @@
                                                 <div class="form-group">
                                                     <label for="userAddress">آدرس</label>
                                                     <input type="text" id="addresses1" name="addresses"
-                                                        class="form-control" placeholder="تهران، خیابان ۹ شرقی...">
+                                                        class="form-control bg-white" placeholder="تهران، خیابان ۹ شرقی...">
                                                 </div>
                                                 <div class="my-3" name="map" id="map"
                                                     style="width: 100%;height: 200px;position: relative;outline: none">
@@ -59,9 +59,9 @@
 
                                 </div>
                                 <div class="form-group" dir="">
-                                    <label class='float-right mt-4 mb-2 custom-lable' for="state">آدرس های ثبت
+                                    <label class='mx-auto mt-4 mb-2 custom-lable w-50' for="state">آدرس های ثبت
                                         شده</label>
-                                    <div class="form-contorol">
+                                    <div class="form-contorol w-50 mx-auto">
 
 
                                         <select id="userAddresses" runat="server" class="form-control" name="state">
@@ -73,15 +73,15 @@
                                     </div>
 
                                     <div class="form-contorol">
-                                        <label class='float-right mt-4 mb-2 custom-lable' for="state">آدرس انتخابی
+                                        <label class=' mt-4 mb-2 custom-lable  w-50 mx-auto' for="state">آدرس انتخابی
                                             شما</label>
-                                        <input type="text" id="currentAddress" class="form-control bg-white" disabled>
+                                        <input type="text" id="currentAddress" class="form-control bg-white  w-50 mx-auto" disabled>
                                     </div>
 
                                     <div class="row">
                                         <div class="col-12">
-                                            <div class="form-group">
-                                                <label class=' mt-4 mb-2 custom-lable d-block text-right' for="data-picker">
+                                            <div class="form-group  w-50 mx-auto">
+                                                <label class=' mt-4 mb-2 custom-lable d-block text-center' for="data-picker">
                                                     انتخاب
                                                     تاریخ :</label>
                                                 <div class="input-group date-input">
@@ -213,7 +213,7 @@
 
 
                                                                                 <h6
-                                                                                    class="mx-auto d-md-none mt-3 text-center">
+                                                                                    class="mx-auto d-md-none mt-3 text-center ">
                                                                                     ویژگی ها
                                                                                 </h6>
                                                                                 <hr class="aaa w-50 d-md-none mb-4">
@@ -250,6 +250,10 @@
                                                                 </div>
                                                                 <input type="button" name="next"
                                                                     class="next action-button mt-5" value="ادامه" />
+
+                                                                 
+                                                       
+                                                            
                                                             </div>
                                                         </div>
                                                     </div>
@@ -524,7 +528,15 @@
             //     });
 
             // });
+
+         
             $("#SubmitForm").click(function(event) {
+                function closeModal(){
+                let modal = document.getElementById("theModal");
+                modal.classList.add('d-none')
+            }
+                closeModal()
+
                 console.log($('#addresses1').val());
                 event.preventDefault();
 
@@ -657,6 +669,7 @@
                             }).addClass('order-marginTop ');
                             let hourInput = $("<input/>", {
                                 type: "number",
+                                
                                 id: `HourQty${element.id}`,
                                 name: "tentacles",
                                 value: 1,
@@ -899,9 +912,9 @@
 
                         <ul class="responsive-table d-block" id=${rnd}>
                             <li class="table-header">
-                                <div class="col col-3 orderpage-table ">آدرس</div>
+                                <div class="col col-3  orderpage-table ">آدرس</div>
                                 <div class="col col-1  orderpage-table">خدمات ویژه</div>
-                                <div class="col col-3  orderpage-table"> ویژگی ها</div>
+                                <div class="col col-3  orderpage-table text-truncate"> ویژگی ها</div>
                                 <div class="col col-1  orderpage-table">جمع کل</div>
                                 <div class="col col-1  orderpage-table">نوع خدمت</div>
                                 <div class="col col-1  orderpage-table">تاریخ</div>
@@ -914,7 +927,7 @@
                                 <div id=ProductPrice${rnd}  class="col col-1 orderpage-table" data-label="جمع کل"> </div>
                                 <div id=ProductName${rnd}  class="col col-1 orderpage-table" data-label="نوع خدمت"> </div>
                                 <div id=ProductDate${rnd}  class="col col-1 orderpage-table" data-label="تاریخ<"> </div>
-                                <div id=deleteProduct${rnd}  class="col col-1 orderpage-table" data-label="عملیات"><span class='text-secondary'>  حذف از سبد خرید</span> </div>
+                                <div id=deleteProduct${rnd}  class="col col-1 orderpage-table" data-label="عملیات"><span class='text-secondary trash-icon'>  <i class="fa-solid fa-trash"></i></span> </div>
                             </li>
                         </ul>
                         <hr>
@@ -1194,7 +1207,14 @@
 
         // Get the button that opens the modal
         var btn = document.getElementById("modalBtn");
+        btn.addEventListener('click',()=>{
+        
+            let modal = document.getElementById("theModal");
+              return  modal.classList.remove('d-none')
+         
+            
 
+        })
         // Get the <span> element that closes the modal
         var span = document.getElementsByClassName("close")[0];
 
