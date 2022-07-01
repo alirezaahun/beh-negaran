@@ -30,7 +30,7 @@
                         <fieldset id="fil1" class="fil1">
 
                             <div class="col-12  testttt p-md-5 p-2 ">
-                                <button type="button" id="modalBtn" class="secondary-btn w-75 w-md-50  mt-3"> افزودن آدرس</button>
+                                <button type="button" id="modalBtn" class="secondary-btn w-50"> افزودن آدرس</button>
 
 
                                 <!-- The Modal -->
@@ -73,15 +73,19 @@
                                     </div>
 
                                     <div class="form-contorol">
-                                        <label class=' mt-4 mb-2 custom-lable  w-50  w-md-50 mx-auto' for="state">آدرس انتخابی
+                                        <label class=' mt-4 mb-2 custom-lable  w-50  w-md-50 mx-auto' for="state">آدرس
+                                            انتخابی
                                             شما</label>
-                                        <input type="text" id="currentAddress" class="form-control bg-white  w-75 w-md-50 mx-auto" disabled>
+                                        <input type="text" id="currentAddress"
+                                            class="form-control bg-white  w-75 w-md-50 mx-auto" disabled>
                                     </div>
 
                                     <div class="row">
                                         <div class="col-12 mb-3">
-                                            <div class="form-group  w-75 w-md-50  w-md-100 mx-auto d-flex flex-column align-items-center w-md-75">
-                                                <label class=' mt-4 mb-2 custom-lable d-block text-center' for="data-picker">
+                                            <div
+                                                class="form-group  w-75 w-md-50  w-md-100 mx-auto d-flex flex-column align-items-center w-md-75">
+                                                <label class=' mt-4 mb-2 custom-lable d-block text-center'
+                                                    for="data-picker">
                                                     انتخاب
                                                     تاریخ :</label>
                                                 <div class="input-group date-input">
@@ -248,12 +252,12 @@
 
 
                                                                 </div>
-                                                                <input type="button" name="next"
+                                                                <input type="button" name="next" id='next'
                                                                     class="next action-button mt-5" value="ادامه" />
 
-                                                                 
-                                                       
-                                                            
+
+
+
                                                             </div>
                                                         </div>
                                                     </div>
@@ -412,6 +416,9 @@
 
 @section('js')
     <script>
+
+
+
         const dtp1Instance = new mds.MdsPersianDateTimePicker(document.getElementById('dtp1'), {
             targetTextSelector: '[data-name="dtp1-text"]',
             targetDateSelector: '[data-name="dtp1-date"]',
@@ -421,6 +428,14 @@
 
 
         });
+
+
+
+   
+
+
+
+
 
         dtp1Instance.setDatePersian(1401, 03, 18);
         var lat = 35.699739;
@@ -491,14 +506,14 @@
 
             try {
                 $("#productBox").html(localStorage.getItem("productt"));
-                console.log(localStorage.getItem("productt"));
+                // console.log(localStorage.getItem("productt"));
                 $("#finalPricecontent").val(localStorage.getItem("finalPrice"));
-                console.log(localStorage.getItem("finalPrice"));
-                console.log(parseInt($("#finalPricecontent").val()) + 20000);
+                // console.log(localStorage.getItem("finalPrice"));
+                // console.log(parseInt($("#finalPricecontent").val()) + 20000);
                 if (localStorage.getItem("element") != null) {
                     getSession = localStorage.getItem("element").split(",");
                 }
-                console.log(getSession);
+                // console.log(getSession);
                 priceSession = $("#finalPricecontent").val();
                 getSession.forEach(element => {
                     $("#deleteProduct" + element).click(function(event) {
@@ -508,7 +523,7 @@
                         getSession.splice(getSession.indexOf(element), 1);
                         $("#finalPricecontent").val(totalPrice + priceSession);
                         event.preventDefault();
-                        console.log(getSession);
+                        // console.log(getSession);
                     });
 
                 });
@@ -529,15 +544,15 @@
 
             // });
 
-         
+
             $("#SubmitForm").click(function(event) {
-                function closeModal(){
-                let modal = document.getElementById("theModal");
-                modal.classList.add('d-none')
-            }
+                function closeModal() {
+                    let modal = document.getElementById("theModal");
+                    modal.classList.add('d-none')
+                }
                 closeModal()
 
-                console.log($('#addresses1').val());
+                // console.log($('#addresses1').val());
                 event.preventDefault();
 
 
@@ -550,11 +565,11 @@
                     'lat': lat,
                     'lng': lng
                 }, function(response, status) {
-                    console.log(status);
+                    // console.log(status);
                     if (status == "success") {
 
                         let getAddress = $('#addresses1').val();
-                        console.log(getAddress);
+                        // console.log(getAddress);
                         $('#userAddresses').append($('<option/>', {
                             text: getAddress
                         }));
@@ -567,8 +582,13 @@
 
             });
 
+            $("#currentAddress").val($("#userAddresses").children("option:selected")
+                .val());
+            address = $("#currentAddress").val();
 
             $(".next").click(function() {
+                
+                window.scroll(0, 0)
                 current_fs = $("#fil1");
                 next_fs = $("#fil2");
                 //Add Class Active
@@ -617,7 +637,7 @@
                 Object.assign(obj, {
                     userAddress: address
                 })
-                console.log(obj);
+                // console.log(obj);
 
                 obj = {};
                 var getChildrenId = $(this).children(":selected").attr("id");
@@ -634,7 +654,7 @@
                     if (element.id == getId) {
                         element.tag_categories.forEach(element => {
                             tagTrigger.push(element);
-                            console.log(tagTrigger);
+                            // console.log(tagTrigger);
                             let PushTagsInput = $("<input/>", {
                                 class: "form-check-input float-right-checkbox",
                                 type: "checkbox",
@@ -669,7 +689,7 @@
                             }).addClass('order-marginTop ');
                             let hourInput = $("<input/>", {
                                 type: "number",
-                                
+
                                 id: `HourQty${element.id}`,
                                 name: "tentacles",
                                 value: 1,
@@ -716,7 +736,7 @@
                             $('#AttributeCheckbox' + element.id).change(function() {
                                 var ischecked = $(this).is(':checked');
                                 if (ischecked) {
-                                    console.log(element);
+                                    // console.log(element);
                                     data.push(element.name);
                                     hour.push($("#HourQty" + element.id).val());
                                     price.push(element.price);
@@ -801,7 +821,7 @@
                         tagTrigger.forEach(element => {
                             $('#Tagcheckbox' + element.id).change(function() {
                                 var checkTag = $(this).is(':checked');
-                                console.log(element.price);
+                                // console.log(element.price);
                                 if (checkTag) {
                                     tags.push(element.name);
                                     tagPrice.push(element.price);
@@ -813,7 +833,7 @@
                                         }
                                     }
                                 }
-                                console.log(tags, tagPrice);
+                                // console.log(tags, tagPrice);
                             });
                         });
                         obj = {
@@ -844,7 +864,7 @@
                                 userAddress: address,
                                 date: date
                             });
-                            console.log(obj);
+                            // console.log(obj);
 
                         });
                     }
@@ -890,7 +910,7 @@
                         tagPriceResult = 0;
 
                         let rnd = Math.floor((Math.random() * 1000000) + 1);
-                        console.log(rnd);
+                        // console.log(rnd);
 
                         // $("#productBox").append(`<ul id=${rnd}>` +
                         //     `<li id=ProductLocation${rnd}> <span class='text-secondary'> آدرس <hr>` +
@@ -899,14 +919,14 @@
                         //     `<li id=ProductPrice${rnd}> <span class='text-secondary'> جمع کل <hr>` +
                         //     `<li id=ProductName${rnd}> <span class='text-secondary'> نوع خدمت <hr>` +
                         //     `<li id=ProductDate${rnd}> <span class='text-secondary'>تاریخ<hr>` +
-                        //     `<li id=deleteProduct${rnd}> <span class='text-secondary'> عملیات <hr> 
+                        //     `<li id=deleteProduct${rnd}> <span class='text-secondary'> عملیات <hr>
                     //  `
                         // );
 
 
 
                         $("#productBox").append(`<div id="order-status" class="row tab_content">
-                                      
+
                     <div class="col-md-12">
 
 
@@ -930,7 +950,7 @@
                                 <div id=deleteProduct${rnd}  class="col col-1 orderpage-table" data-label="عملیات"><span class='text-secondary trash-icon'>  <i class="fa-solid fa-trash"></i></span> </div>
                             </li>
                         </ul>
-                        <hr>
+                        <hr id=hr${rnd}>
                     </div>
                 </div>`);
 
@@ -980,7 +1000,7 @@
                                 attribuePriceResult = calculate.reduce((total, number) => total +
                                     number, 0);
                                 counter++;
-                                console.log(calculate, attribuePriceResult);
+                                // console.log(calculate, attribuePriceResult);
 
 
                             }
@@ -1005,13 +1025,13 @@
                         for (let i = 0; i < obj.tags.length; i++) {
 
                             tagCalculate.push(obj.tagPrice[i]);
-                            console.log(tagCalculate);
+                            // console.log(tagCalculate);
                             tagPriceResult = tagCalculate.reduce((total, number) => total + number,
                                 0);
                             obj.tagPriceDetails = tagCalculate;
                             obj.tagPriceResult = tagPriceResult;
 
-                            console.log(tagPriceResult);
+                            // console.log(tagPriceResult);
                             let productSpecAttr = $("<h6/>", {
 
                                 text: obj.tags[i],
@@ -1025,7 +1045,7 @@
 
                         obj.finalPriceThisProductIs = tagPriceResult + attribuePriceResult;
 
-                        console.log(obj);
+                        // console.log(obj);
 
                         let productPrice = $("<h6/>", {
 
@@ -1060,7 +1080,7 @@
                         $("#ProductName" + rnd).append(productName);
 
                         totalProducts.push(rnd);
-                        console.log(totalProducts);
+                        // console.log(totalProducts);
 
                         totalProducts.forEach(element => {
                             event.preventDefault();
@@ -1068,9 +1088,9 @@
                                 totalPrice = totalPrice - $("#price" + element)
                                     .text();
                                 $(this).parent().remove();
-                                let test = $(this).parent().remove();
-
-                                console.log(getRandomNumbers.indexOf(element));
+                                $(`#${element}`).remove();
+                                $(`#hr${element}`).remove();
+                                // console.log(getRandomNumbers.indexOf(element));
                                 j = Number(priceSession);
                                 $("#finalPricecontent").val(totalPrice +
                                     j);
@@ -1082,12 +1102,12 @@
 
 
                         totalPrice += obj.finalPriceThisProductIs;
-                        console.log(totalPrice);
+                        // console.log(totalPrice);
 
                         getTotal = Number(priceSession);
-                        console.log(typeof getTotal);
+                        // console.log(typeof getTotal);
                         $("#finalPricecontent").val(totalPrice + getTotal);
-                        console.log(totalPrice + priceSession);
+                        // console.log(totalPrice + priceSession);
 
                         event.preventDefault();
 
@@ -1105,7 +1125,7 @@
                     });
 
                 }
-                console.log(getRandomNumbers);
+                // console.log(getRandomNumbers);
                 getRandomNumbers.forEach(element => {
 
                     getOrder.push({
@@ -1128,7 +1148,7 @@
                         element.SpecialAttributes = "بدون خدمات ویژه";
                     }
                 });
-                console.log(getOrder);
+                // console.log(getOrder);
 
                 $.post("{{ route('payment') }}", {
 
@@ -1136,12 +1156,12 @@
                     'amount': $("#finalPricecontent").val(),
                     'orders': getOrder
                 }, function(response, status) {
-                    console.log(response, status);
+                    // console.log(response, status);
                     $(document.body).html(response);
 
                 }).fail(function(response) {
 
-                    console.log(response);
+                    // console.log(response);
                     alert('خطا در اتصال به درگاه پرداخت لطفا مجدد امتحان کنید');
                 })
             });
@@ -1209,12 +1229,12 @@
 
         // Get the button that opens the modal
         var btn = document.getElementById("modalBtn");
-        btn.addEventListener('click',()=>{
-        
+        btn.addEventListener('click', () => {
+
             let modal = document.getElementById("theModal");
-              return  modal.classList.remove('d-none')
-         
-            
+            return modal.classList.remove('d-none')
+
+
 
         })
         // Get the <span> element that closes the modal
@@ -1246,7 +1266,7 @@
         $('add').click(function(event) {
 
             event.preventDefault();
-            console.log(obj);
+            // console.log(obj);
 
         });
 
@@ -1262,7 +1282,7 @@
         let FullAddress = document.getElementById("FullAddress");
         const date = document.getElementById("date");
 
-
+    
 
         var coll = document.getElementsByClassName("order-details");
         var i;
@@ -1278,5 +1298,8 @@
                 }
             });
         }
+
+
+  
     </script>
 @endsection
