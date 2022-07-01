@@ -30,7 +30,7 @@
                         <fieldset id="fil1" class="fil1">
 
                             <div class="col-12  testttt p-md-5 p-2 ">
-                                <button type="button" id="modalBtn" class="secondary-btn w-50"> افزودن آدرس</button>
+                                <button type="button" id="modalBtn" class="secondary-btn w-75 w-md-50  mt-3"> افزودن آدرس</button>
 
 
                                 <!-- The Modal -->
@@ -59,9 +59,9 @@
 
                                 </div>
                                 <div class="form-group" dir="">
-                                    <label class='mx-auto mt-4 mb-2 custom-lable w-50' for="state">آدرس های ثبت
+                                    <label class='mx-auto mt-4 mb-2 custom-lable w-50 ' for="state">آدرس های ثبت
                                         شده</label>
-                                    <div class="form-contorol w-50 mx-auto">
+                                    <div class="form-contorol w-75  w-md-50 mx-auto">
 
 
                                         <select id="userAddresses" runat="server" class="form-control" name="state">
@@ -73,14 +73,14 @@
                                     </div>
 
                                     <div class="form-contorol">
-                                        <label class=' mt-4 mb-2 custom-lable  w-50 mx-auto' for="state">آدرس انتخابی
+                                        <label class=' mt-4 mb-2 custom-lable  w-50  w-md-50 mx-auto' for="state">آدرس انتخابی
                                             شما</label>
-                                        <input type="text" id="currentAddress" class="form-control bg-white  w-50 mx-auto" disabled>
+                                        <input type="text" id="currentAddress" class="form-control bg-white  w-75 w-md-50 mx-auto" disabled>
                                     </div>
 
                                     <div class="row">
-                                        <div class="col-12">
-                                            <div class="form-group  w-50 mx-auto">
+                                        <div class="col-12 mb-3">
+                                            <div class="form-group  w-75 w-md-50  w-md-100 mx-auto d-flex flex-column align-items-center w-md-75">
                                                 <label class=' mt-4 mb-2 custom-lable d-block text-center' for="data-picker">
                                                     انتخاب
                                                     تاریخ :</label>
@@ -487,7 +487,7 @@
             var getTotal;
             var j;
             setProgressBar(current);
-            localStorage.clear();
+            // localStorage.clear();
 
             try {
                 $("#productBox").html(localStorage.getItem("productt"));
@@ -1068,6 +1068,8 @@
                                 totalPrice = totalPrice - $("#price" + element)
                                     .text();
                                 $(this).parent().remove();
+                                let test = $(this).parent().remove();
+
                                 console.log(getRandomNumbers.indexOf(element));
                                 j = Number(priceSession);
                                 $("#finalPricecontent").val(totalPrice +
