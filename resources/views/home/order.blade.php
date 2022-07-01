@@ -19,7 +19,7 @@
                         </ul>
                         <!-- fieldsets -->
                         <?php
-                        
+
                         $getParents = App\Models\Category::where('parent_id', 0)
                             ->with('children', 'attributes')
                             ->get();
@@ -251,9 +251,9 @@
                                                                 <input type="button" name="next"
                                                                     class="next action-button mt-5" value="ادامه" />
 
-                                                                 
-                                                       
-                                                            
+
+
+
                                                             </div>
                                                         </div>
                                                     </div>
@@ -487,7 +487,7 @@
             var getTotal;
             var j;
             setProgressBar(current);
-            localStorage.clear();
+            // localStorage.clear();
 
             try {
                 $("#productBox").html(localStorage.getItem("productt"));
@@ -529,7 +529,7 @@
 
             // });
 
-         
+
             $("#SubmitForm").click(function(event) {
                 function closeModal(){
                 let modal = document.getElementById("theModal");
@@ -567,6 +567,9 @@
 
             });
 
+            $("#currentAddress").val($("#userAddresses").children("option:selected")
+                    .val());
+                address = $("#currentAddress").val();
 
             $(".next").click(function() {
                 current_fs = $("#fil1");
@@ -669,7 +672,7 @@
                             }).addClass('order-marginTop ');
                             let hourInput = $("<input/>", {
                                 type: "number",
-                                
+
                                 id: `HourQty${element.id}`,
                                 name: "tentacles",
                                 value: 1,
@@ -899,14 +902,14 @@
                         //     `<li id=ProductPrice${rnd}> <span class='text-secondary'> جمع کل <hr>` +
                         //     `<li id=ProductName${rnd}> <span class='text-secondary'> نوع خدمت <hr>` +
                         //     `<li id=ProductDate${rnd}> <span class='text-secondary'>تاریخ<hr>` +
-                        //     `<li id=deleteProduct${rnd}> <span class='text-secondary'> عملیات <hr> 
+                        //     `<li id=deleteProduct${rnd}> <span class='text-secondary'> عملیات <hr>
                     //  `
                         // );
 
 
 
                         $("#productBox").append(`<div id="order-status" class="row tab_content">
-                                      
+
                     <div class="col-md-12">
 
 
@@ -930,7 +933,7 @@
                                 <div id=deleteProduct${rnd}  class="col col-1 orderpage-table" data-label="عملیات"><span class='text-secondary trash-icon'>  <i class="fa-solid fa-trash"></i></span> </div>
                             </li>
                         </ul>
-                        <hr>
+                        <hr id=hr${rnd}>
                     </div>
                 </div>`);
 
@@ -1068,6 +1071,8 @@
                                 totalPrice = totalPrice - $("#price" + element)
                                     .text();
                                 $(this).parent().remove();
+                                $(`#${element}`).remove();
+                                $(`#hr${element}`).remove();
                                 console.log(getRandomNumbers.indexOf(element));
                                 j = Number(priceSession);
                                 $("#finalPricecontent").val(totalPrice +
@@ -1208,11 +1213,11 @@
         // Get the button that opens the modal
         var btn = document.getElementById("modalBtn");
         btn.addEventListener('click',()=>{
-        
+
             let modal = document.getElementById("theModal");
               return  modal.classList.remove('d-none')
-         
-            
+
+
 
         })
         // Get the <span> element that closes the modal
