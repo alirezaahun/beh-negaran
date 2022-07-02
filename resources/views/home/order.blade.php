@@ -954,7 +954,7 @@
                                 <div id=ProductDetails${rnd}  class="col col-3 orderpage-table" data-label=" ویژگی ها"> </div>
                                 <div id=ProductPrice${rnd}  class="col col-1 orderpage-table" data-label="جمع کل"> </div>
                                 <div id=ProductName${rnd}  class="col col-1 orderpage-table" data-label="نوع خدمت"> </div>
-                                <div id=ProductDate${rnd}  class="col col-1 orderpage-table" data-label="> تاریخ </div>
+                                <div id=ProductDate${rnd}  class="col col-1 orderpage-table" data-label=" تاریخ "></div>
                                 <div id=deleteProduct${rnd}  class="col col-1 orderpage-table" data-label="عملیات"><span class='text-secondary trash-icon'>  <i class="fa-solid fa-trash"></i></span> </div>
                             </li>
                         </ul>

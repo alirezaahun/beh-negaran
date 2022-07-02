@@ -1682,6 +1682,10 @@ footer p span {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 2px, rgba(0, 0, 0, 0.23) 0px 0px 3px;
 }
 
+.fa-solid .fa-trash {
+  box-sizing: border-box;
+}
+
 .testttt {
   box-shadow: rgba(0, 0, 0, 0.09) 0px 0px 5px;
   border-radius: 1.3rem;
