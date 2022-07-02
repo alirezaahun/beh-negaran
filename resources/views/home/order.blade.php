@@ -547,8 +547,16 @@
 
             $("#SubmitForm").click(function(event) {
                 function closeModal() {
+                    let addresses1=document.getElementById('addresses1')
+                    if(addresses1.value==""){
+                        alert('آدرس را وارد کنید!!')
+                    }else {
+                        
                     let modal = document.getElementById("theModal");
                     modal.classList.add('d-none')
+                    addresses1.value=''
+                    }
+               
                 }
                 closeModal()
 
@@ -932,21 +940,21 @@
 
                         <ul class="responsive-table d-block" id=${rnd}>
                             <li class="table-header">
-                                <div class="col col-3  orderpage-table ">آدرس</div>
+                                <div class="col col-2  orderpage-table  ">آدرس</div>
                                 <div class="col col-1  orderpage-table">خدمات ویژه</div>
                                 <div class="col col-3  orderpage-table text-truncate"> ویژگی ها</div>
                                 <div class="col col-1  orderpage-table">جمع کل</div>
                                 <div class="col col-1  orderpage-table">نوع خدمت</div>
-                                <div class="col col-1  orderpage-table">تاریخ</div>
+                                <div class="col col-1  orderpage-table"> تاریخ  </div>
                                 <div class="col col-1  orderpage-table">عملیات</div>
                             </li>
                             <li class="table-row">
-                                <div id=ProductLocation${rnd}  class="col col-3 orderpage-table" data-label="آدرس"> </div>
+                                <div id=ProductLocation${rnd}  class="col col-2 orderpage-table" data-label="آدرس"> </div>
                                 <div id=ProductSpecAttr${rnd}  class="col col-1 orderpage-table" data-label="خدمات ویژه"></div>
                                 <div id=ProductDetails${rnd}  class="col col-3 orderpage-table" data-label=" ویژگی ها"> </div>
                                 <div id=ProductPrice${rnd}  class="col col-1 orderpage-table" data-label="جمع کل"> </div>
                                 <div id=ProductName${rnd}  class="col col-1 orderpage-table" data-label="نوع خدمت"> </div>
-                                <div id=ProductDate${rnd}  class="col col-1 orderpage-table" data-label="تاریخ<"> </div>
+                                <div id=ProductDate${rnd}  class="col col-1 orderpage-table" data-label="> تاریخ </div>
                                 <div id=deleteProduct${rnd}  class="col col-1 orderpage-table" data-label="عملیات"><span class='text-secondary trash-icon'>  <i class="fa-solid fa-trash"></i></span> </div>
                             </li>
                         </ul>
@@ -1065,14 +1073,16 @@
 
                         let productDate = $("<h6/>", {
                             text: obj.date,
-                            id: `ProductDatee${rnd}`
+                            id: `ProductDatee${rnd}`,
+                            class:'overflow-hidden',
                         });
 
                         $("#ProductDate" + rnd).append(productDate);
 
                         let productAddress = $("<div/>", {
                             text: obj.userAddress,
-                            id: `ProductAddress${rnd}`
+                            id: `ProductAddress${rnd}`,
+                            class:'overflow-hidden',
                         });
 
                         $("#ProductLocation" + rnd).append(productAddress);

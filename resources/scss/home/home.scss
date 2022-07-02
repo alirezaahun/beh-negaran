@@ -1738,16 +1738,17 @@ a {
     }
 
     .content-min-height {
-        min-height: 2000px;
+        min-height: 2200px;
     }
  
 }
 
-@media only screen and (min-width: 480px) and (max-width: 992px) {
+@media only screen and (min-width: 479px) and (max-width: 992px) {
 
-    // .text-Cutom-right {
-    //     text-align: center !important;
-    // }
+    .content-min-height {
+        min-height: 2000px;
+    }
+ 
 }
 @media screen and (max-width: 767px) {
 
