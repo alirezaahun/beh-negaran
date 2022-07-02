@@ -106,7 +106,7 @@ return [
     'prohibited_unless'    => 'The :attribute field is prohibited unless :other is in :values.',
     'prohibits'            => 'The :attribute field prohibits :other from being present.',
     'regex'                => 'فرمت :attribute معتبر نیست.',
-    'required'             => 'فیلد :attribute الزامی است.',
+    'required'             => ':attribute الزامی است.',
     'required_if'          => 'هنگامی که :other برابر با :value است، فیلد :attribute الزامی است.',
     'required_unless'      => 'فیلد :attribute الزامی است، مگر آنکه :other در :values موجود باشد.',
     'required_with'        => 'در صورت وجود فیلد :values، فیلد :attribute نیز الزامی است.',
@@ -132,4 +132,19 @@ return [
             'rule-name' => 'custom-message',
         ],
     ],
+
+    'attributes' => [
+        'companyName' => 'نام شرکت جهت ثبت',
+        'companyRegistryNumber' => 'شماره ثبت شرکت جهت ثبت',
+        'companyMelliCode' => 'شماره ملی شرکت جهت ثبت',
+        'economicNumber' => 'کد اقتصادی شرکت جهت ثبت',
+        'postalCode' => 'کدپستی شرکت جهت ثبت',
+        'telNumber' => 'شماره تلفن جهت ثبت',
+        'name' => 'نام',
+        'familyName' => 'نام خانوادگی',
+        'melliCode' => 'کد ملی',
+        'email' => 'ایمیل',
+        ''
+    ],
+
 ];

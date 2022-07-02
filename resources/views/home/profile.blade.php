@@ -1,5 +1,7 @@
 @extends('home.layouts.master')
 
+@include('home.sections.errors')
+
 @section('content')
     <main class="user-profile-panel">
         <div class="container-fluid px-0">
@@ -91,7 +93,7 @@
                                     </li>
 
                                     <li><span class="text-secondary">نام خانوادگی</span>
-                                        <h6>ناصحی ارجمند</h6>
+                                        <h6>{{ $user->familyName }}</h6>
                                         <i id="modalBtn1" class="fas fa-edit"></i>
                                         <!-- The Modal -->
                                         <div id="myModal1" class="modal">
@@ -102,11 +104,14 @@
                                                     <p class="text-secondary">لطفا اطلاعات شناسایی خود را وارد کنید. نام
                                                         خانوادگی شما باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.
                                                     </p>
-                                                    <form action="">
+                                                    <form action="{{ route('home.editprofile', ['id' => $user->id]) }}" ,
+                                                        method="POST">
+                                                        @csrf
+                                                        @method('put')
                                                         <div class="form-group">
                                                             <label for="lastName">نام خانوادگی</label>
-                                                            <input type="text" class="form-control" id="lastName"
-                                                                placeholder="نام خانوادگی شما">
+                                                            <input type="text" name="familyName" class="form-control"
+                                                                id="familyName" placeholder="نام خانوادگی شما">
                                                         </div>
                                                         <button type="submit" class="secondary-btn">ذخیره</button>
                                                     </form>
@@ -154,7 +159,7 @@
                             <div class="col-md-6 col-sm-12">
                                 <ul>
                                     <li><span class="text-secondary">کد ملی</span>
-                                        <h6>۰۰۱۷۵۴۰۲۹۱</h6>
+                                        <h6>{{ $user->melliCode }}</h6>
                                         <i id="modalBtn3" class="fas fa-edit"></i>
                                         <!-- The Modal -->
                                         <div id="myModal3" class="modal">
@@ -165,11 +170,14 @@
                                                     <p class="text-secondary">لطفا اطلاعات شناسایی خود را وارد کنید. کد ملی
                                                         شما
                                                         باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
-                                                    <form action="">
+                                                    <form action="{{ route('home.editprofile', ['id' => $user->id]) }}" ,
+                                                        method="POST">
+                                                        @csrf
+                                                        @method('put')
                                                         <div class="form-group">
                                                             <label for="nationalNumber">کد ملی</label>
-                                                            <input type="text" class="form-control" id="nationalNumber"
-                                                                placeholder="۰۰۱۲۳۴۵۶۷۸">
+                                                            <input type="text" name="melliCode" class="form-control"
+                                                                id="nationalNumber" placeholder="۰۰۱۲۳۴۵۶۷۸">
                                                         </div>
                                                         <button type="submit" class="secondary-btn">ذخیره</button>
                                                     </form>
@@ -244,7 +252,7 @@
                             <div class="col-md-6 col-sm-12">
                                 <ul>
                                     <li><span class="text-secondary">نام شرکت</span>
-                                        <h6>به نگاران تجارت آزما</h6>
+                                        <h6>{{ $user->companyName }}</h6>
                                         <i id="modalBtn6" class="fas fa-edit"></i>
                                         <!-- The Modal -->
                                         <div id="myModal6" class="modal">
@@ -254,11 +262,14 @@
                                                 <div class="modal-body">
                                                     <p class="text-secondary">لطفا اطلاعات شرکت خود را وارد کنید. نام شرکت
                                                         باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
-                                                    <form action="">
+                                                    <form action="{{ route('home.editprofile', ['id' => $user->id]) }}" ,
+                                                        method="POST">
+                                                        @csrf
+                                                        @method('put')
 
                                                         <div class="form-group">
                                                             <label for="companyName">نام شرکت</label>
-                                                            <input type="text" name="company-name" class="form-control"
+                                                            <input type="text" name="companyName" class="form-control"
                                                                 id="companyName" placeholder="نام شرکت">
                                                         </div>
 
@@ -271,7 +282,7 @@
                                     </li>
 
                                     <li><span class="text-secondary">شماره ثبت</span>
-                                        <h6>۱۲۳۴۵۶۷۸۹</h6>
+                                        <h6>{{ $user->companyRegistryNumber }}</h6>
                                         <i id="modalBtn7" class="fas fa-edit"></i>
                                         <!-- The Modal -->
                                         <div id="myModal7" class="modal">
@@ -281,10 +292,14 @@
                                                 <div class="modal-body">
                                                     <p class="text-secondary">لطفا اطلاعات شرکت خود را وارد کنید. شماره ثبت
                                                         شرکت شما باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
-                                                    <form action="">
+                                                    <form action="{{ route('home.editprofile', ['id' => $user->id]) }}" ,
+                                                        method="POST">
+                                                        @csrf
+                                                        @method('put')
                                                         <div class="form-group">
                                                             <label for="submitNumber">شماره ثبت</label>
-                                                            <input type="text" class="form-control" id="submitNumber"
+                                                            <input type="text" name="companyRegistryNumber"
+                                                                class="form-control" id="submitNumber"
                                                                 placeholder="شماره ثبت شرکت">
                                                         </div>
                                                         <button type="submit" class="secondary-btn">ذخیره</button>
@@ -296,7 +311,7 @@
                                     </li>
 
                                     <li><span class="text-secondary">شماره ملی</span>
-                                        <h6>۱۲۳۴۵۶۷۸۹</h6>
+                                        <h6>{{ $user->companyMelliCode }}</h6>
                                         <i id="modalBtn8" class="fas fa-edit"></i>
                                         <!-- The Modal -->
                                         <div id="myModal8" class="modal">
@@ -306,10 +321,13 @@
                                                 <div class="modal-body">
                                                     <p class="text-secondary">لطفا اطلاعات شرکت خود را وارد کنید. شماره ملی
                                                         شرکت شما باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
-                                                    <form action="">
+                                                    <form action="{{ route('home.editprofile', ['id' => $user->id]) }}" ,
+                                                        method="POST">
+                                                        @csrf
+                                                        @method('put')
                                                         <div class="form-group">
                                                             <label for="companyNationalNumber">شماره ملی</label>
-                                                            <input type="text" class="form-control"
+                                                            <input type="text" name="companyMelliCode" class="form-control"
                                                                 id="companyNationalNumber" placeholder="شماره ملی شرکت">
                                                         </div>
 
@@ -323,7 +341,7 @@
                                     </li>
 
                                     <li><span class="text-secondary">کد اقتصادی</span>
-                                        <h6>۱۲۳۴۵۶۷۸۹</h6>
+                                        <h6>{{ $user->economicNumber }}</h6>
                                         <i id="modalBtn9" class="fas fa-edit"></i>
                                         <!-- The Modal -->
                                         <div id="myModal9" class="modal">
@@ -334,11 +352,14 @@
                                                     <p class="text-secondary">لطفا اطلاعات شرکت خود را وارد کنید. کد
                                                         اقتصادی
                                                         شرکت شما باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
-                                                    <form action="">
+                                                    <form action="{{ route('home.editprofile', ['id' => $user->id]) }}" ,
+                                                        method="POST">
+                                                        @csrf
+                                                        @method('put')
                                                         <div class="form-group">
                                                             <label for="marketCode">کد اقتصادی</label>
-                                                            <input type="text" class="form-control" id="marketCode"
-                                                                placeholder="کد اقتصادی شرکت">
+                                                            <input type="text" name="economicNumber" class="form-control"
+                                                                id="marketCode" placeholder="کد اقتصادی شرکت">
                                                         </div>
 
                                                         <button type="submit" class="secondary-btn">ذخیره</button>
@@ -412,7 +433,7 @@
                                     </li>
 
                                     <li><span class="text-secondary">کد پستی</span>
-                                        <h6>۱۲۳۴۵۶۷۸۹</h6>
+                                        <h6>{{ $user->postalCode }}</h6>
                                         <i id="modalBtn12" class="fas fa-edit"></i>
                                         <!-- The Modal -->
                                         <div id="myModal12" class="modal">
@@ -422,10 +443,13 @@
                                                 <div class="modal-body">
                                                     <p class="text-secondary">لطفا اطلاعات شرکت خود را وارد کنید. کدپستی
                                                         شرکت شما باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
-                                                    <form action="">
+                                                    <form action="{{ route('home.editprofile', ['id' => $user->id]) }}" ,
+                                                        method="POST">
+                                                        @csrf
+                                                        @method('put')
                                                         <div class="form-group">
                                                             <label for="companyPostalCode">کد پستی</label>
-                                                            <input type="text" class="form-control"
+                                                            <input type="text" name="postalCode" class="form-control"
                                                                 id="companyPostalCode" placeholder="کد پستی شرکت">
                                                         </div>
 
@@ -439,7 +463,7 @@
                                     </li>
 
                                     <li><span class="text-secondary">شماره تلفن</span>
-                                        <h6>۰۲۶۳۱۱۱۲۲۳۳</h6>
+                                        <h6>{{$user->telNumber}}</h6>
                                         <i id="modalBtn13" class="fas fa-edit"></i>
                                         <!-- The Modal -->
                                         <div id="myModal13" class="modal">
@@ -450,10 +474,13 @@
                                                     <p class="text-secondary">لطفا اطلاعات شرکت خود را وارد کنید. شماره
                                                         تلفن
                                                         شرکت شما باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
-                                                    <form action="">
+                                                        <form action="{{ route('home.editprofile', ['id' => $user->id]) }}" ,
+                                                            method="POST">
+                                                            @csrf
+                                                            @method('put')
                                                         <div class="form-group">
                                                             <label for="marketCode">شماره تلفن</label>
-                                                            <input type="text" class="form-control" id="marketCode"
+                                                            <input type="text" class="form-control" name="telNumber" id="marketCode"
                                                                 placeholder="شماره تلفن شرکت">
                                                         </div>
 
@@ -682,21 +709,21 @@
         var lng = 51.338097;
         var getUserType;
 
-            var getUser = '{{ Session::get('user') }}';
-            var checksession = '{{ Session::has('user') }}';
+        var getUser = '{{ Session::get('user') }}';
+        var checksession = '{{ Session::has('user') }}';
 
-            if (checksession) {
-                if (getUser == 1) {
-                    $("#companyUser").hide();
-                    $("#i").attr('checked', false);
-                } else if(getUser == 0) {
+        if (checksession) {
+            if (getUser == 1) {
+                $("#companyUser").hide();
+                $("#i").attr('checked', false);
+            } else if (getUser == 0) {
 
-                    $("#realUser").hide();
-                    $("#i").attr('checked', true);
-                }else{
-                    $("#companyUser").hide();
-                }
+                $("#realUser").hide();
+                $("#i").attr('checked', true);
+            } else {
+                $("#companyUser").hide();
             }
+        }
 
         var map = L.map('map', {
             center: [lat, lng],
@@ -801,19 +828,19 @@
         // Hide And Show All Contents With Right Side Navbar ---------------------------
         $(document).ready(function() {
 
-            $("#i").change(function(){
+            $("#i").change(function() {
                 if ($('#realUser').css('display') == 'none') {
                     getUserType = 1;
                     $.get("{{ route('usertype') }}", {
                         'user': getUserType
-                    } , function(response , status){
+                    }, function(response, status) {
                         console.log(response);
                     });
-                }else{
+                } else {
                     getUserType = 0;
                     $.get("{{ route('usertype') }}", {
                         'user': getUserType
-                    } , function(response , status){
+                    }, function(response, status) {
                         console.log(response);
                     });
                 }
@@ -948,7 +975,7 @@
             [document.getElementById("modalBtn11"), document.getElementById("myModal11")],
             [document.getElementById("modalBtn12"), document.getElementById("myModal12")],
             [document.getElementById("modalBtn13"), document.getElementById("myModal13")],
-            
+
         ]);
 
         datamap.forEach((value, key) => {
@@ -988,7 +1015,7 @@
 
                 '_token': "{{ csrf_token() }}",
                 'login_token': "{{ $user->login_token }}",
-                'id': "{{$user->id}}"
+                'id': "{{ $user->id }}"
 
             }, function(response, status) {
                 console.log(response, status);

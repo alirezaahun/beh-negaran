@@ -11,7 +11,7 @@ use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
 {
-    use HasApiTokens, HasFactory, Notifiable , HasRoles;
+    use HasApiTokens, HasFactory, Notifiable, HasRoles;
 
     /**
      * The attributes that are mass assignable.
@@ -24,7 +24,15 @@ class User extends Authenticatable
         'password',
         'otp',
         'cellphone',
-        'login_token'
+        'login_token',
+        'familyName',
+        'melliCode',
+        'companyName',
+        'companyRegistryNumber',
+        'economicNumber',
+        'postalCode',
+        'telNumber',
+        'companyMelliCode'
     ];
 
     /**
@@ -46,21 +54,24 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function messages(){
-        return $this->hasMany(Message::class , 'user_id');
+    public function messages()
+    {
+        return $this->hasMany(Message::class, 'user_id');
     }
 
-    public function addresses(){
+    public function addresses()
+    {
 
-        return $this->hasMany(Address::class , 'user_id');
-
+        return $this->hasMany(Address::class, 'user_id');
     }
 
-    public function Orders(){
-        return $this->hasMany(Order::class , 'user_id');
+    public function Orders()
+    {
+        return $this->hasMany(Order::class, 'user_id');
     }
 
-    public function transactions(){
-        return $this->hasMany(Transaction::class , 'user_id');
+    public function transactions()
+    {
+        return $this->hasMany(Transaction::class, 'user_id');
     }
 }

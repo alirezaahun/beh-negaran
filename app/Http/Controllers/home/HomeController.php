@@ -14,123 +14,249 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function index(){
+    public function index()
+    {
 
-        $main = Banner::where('type' , 'main')->where('is_active' , 1)->first();
-        $sliders = Banner::where('type' , 'slider')->where('is_active' , 1)->orderBy('priority')->get();
-        $logos = Banner::where('type' , 'logo-sazmani')->where('is_active' , 1)->orderBy('priority')->get();
-        $second_logos = Banner::where('type' , 'logo-sherkati')->where('is_active' , 1)->orderBy('priority')->get();
+        $main = Banner::where('type', 'main')->where('is_active', 1)->first();
+        $sliders = Banner::where('type', 'slider')->where('is_active', 1)->orderBy('priority')->get();
+        $logos = Banner::where('type', 'logo-sazmani')->where('is_active', 1)->orderBy('priority')->get();
+        $second_logos = Banner::where('type', 'logo-sherkati')->where('is_active', 1)->orderBy('priority')->get();
         // $products = Product::where('is_active' , 1)->get();
         // return (sliderResource::collection($sliders))->additional(['topBanners' => [topBannerResource::collection($TopBanners)] , 'bottomBanners' => [bottomBannerResource::collection($BottomBanners)]]);
 
 
-        return view('home.index' , compact('main' , 'sliders' , 'logos','second_logos'));
-
+        return view('home.index', compact('main', 'sliders', 'logos', 'second_logos'));
     }
 
 
-    public function about(){
+    public function about()
+    {
 
         return view('home.about-us');
-
     }
 
 
 
-    public function services(){
+    public function services()
+    {
 
         return view('home.services');
-
     }
 
-    public function projects(){
+    public function projects()
+    {
 
         return view('home.projects');
-
     }
-    public function jobOpportunities(){
+    public function jobOpportunities()
+    {
 
         return view('home.jobOpportunities');
-
     }
-    public function notFound(){
+    public function notFound()
+    {
 
         return view('home.page-not-found');
-
     }
-    public function order(){
+    public function order()
+    {
 
-        $user = User::where('id' , auth()->id())->first();
-        return view('home.order' , compact('user'));
-
+        $user = User::where('id', auth()->id())->first();
+        return view('home.order', compact('user'));
     }
-    public function profile(){
+    public function profile()
+    {
 
 
-        $user = User::where('id' , auth()->id())->first();
+        $user = User::where('id', auth()->id())->first();
         $getOrders = $user->Orders()->with('OrderItems')->with('TransActions')->get();
-        return view('home.profile' , compact('user' , 'getOrders'));
-
-
+        return view('home.profile', compact('user', 'getOrders'));
     }
 
-    public function editname(Request $request , $id){
+    public function editname(Request $request, $id)
+    {
 
         $user = User::find($id);
 
-        if($request->has('name')){
+        switch (true) {
+            case $request->has('name'):
 
-            $request->validate([
+                $request->validate([
 
-                'name' => 'required'
+                    'name' => 'required'
 
-            ]);
+                ]);
 
-            $user->update([
+                $user->update([
 
-                'name' => $request->name
+                    'name' => $request->name
 
-            ]);
+                ]);
+                break;
 
-            return redirect()->route('home.profile');
+            case $request->has('familyName'):
+                $request->validate([
+
+                    'familyName' => 'required'
+
+                ]);
+
+                $user->update([
+
+                    'familyName' => $request->familyName
+
+                ]);
+                break;
+
+            case $request->has('email'):
+
+                $request->validate([
+
+                    'email' => 'required'
+
+                ]);
+
+                $user->update([
+
+                    'email' => $request->email
+
+                ]);
+
+                break;
+
+            case $request->has('melliCode'):
+                $request->validate([
+
+                    'melliCode' => 'required'
+
+                ]);
+
+                $user->update([
+
+                    'melliCode' => $request->melliCode
+
+                ]);
+
+                break;
+
+            case $request->has('companyName'):
+                $request->validate([
+
+                    'companyName' => 'required'
+
+                ]);
+
+                $user->update([
+
+                    'companyName' => $request->companyName
+
+                ]);
+
+                break;
+
+            case $request->has('companyRegistryNumber'):
+                $request->validate([
+
+                    'companyRegistryNumber' => 'required'
+
+                ]);
+
+                $user->update([
+
+                    'companyRegistryNumber' => $request->companyRegistryNumber
+
+                ]);
+
+                break;
+
+            case $request->has('economicNumber'):
+                $request->validate([
+
+                    'economicNumber' => 'required'
+
+                ]);
+
+                $user->update([
+
+                    'economicNumber' => $request->economicNumber
+
+                ]);
+
+                break;
+
+            case $request->has('postalCode'):
+                $request->validate([
+
+                    'postalCode' => 'required'
+
+                ]);
+
+                $user->update([
+
+                    'postalCode' => $request->postalCode
+
+                ]);
+
+                break;
+
+            case $request->has('companyMelliCode'):
+                $request->validate([
+
+                    'companyMelliCode' => 'required'
+
+                ]);
+
+                $user->update([
+
+                    'companyMelliCode' => $request->companyMelliCode
+
+                ]);
+
+                break;
+
+                case $request->has('telNumber'):
+                    $request->validate([
+
+                        'telNumber' => 'required'
+
+                    ]);
+
+                    $user->update([
+
+                        'telNumber' => $request->telNumber
+
+                    ]);
+
+                    break;
 
 
 
+
+
+
+
+
+
+
+            default:
+                dd("nothing");
+                break;
         }
 
-        if($request->has('email')){
-
-            $request->validate([
-
-                'email' => 'required'
-
-            ]);
-
-            $user->update([
-
-                'email' => $request->email
-
-            ]);
-
-            return redirect()->route('home.profile');
-
-
-
-        }
-
+        return redirect()->route('home.profile');
     }
 
-    public function usertype(Request $request){
-        session()->put('user' , $request->user);
+    public function usertype(Request $request)
+    {
+        session()->put('user', $request->user);
         return session()->get('user');
     }
 
-    public function logout(){
+    public function logout()
+    {
 
         auth()->logout();
 
         return redirect('/');
-
     }
-
 }

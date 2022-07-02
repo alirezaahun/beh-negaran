@@ -7,4 +7,16 @@ behnegar_behnegaran
 
 _HKs1QF3n4+F
 
+'familyName',
+'melliCode',
+'companyName',
+'companyRegistryNumber',
+'economicNumber',
+'postalCode',
+'telNumber'
+
+companyRegistryNumber
+economicNumber
+postalCode
+
 
