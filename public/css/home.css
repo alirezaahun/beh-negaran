@@ -1697,6 +1697,7 @@ footer p span {
 }
 
 .trash-icon:hover i {
+  cursor: pointer;
   color: red;
   font-size: 26px;
   box-sizing: border-box;

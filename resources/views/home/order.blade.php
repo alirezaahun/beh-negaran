@@ -28,6 +28,7 @@
                             ->get();
                         ?>
                         <fieldset id="fil1" class="fil1">
+                            
 
                             <div class="col-12  testttt p-md-5 p-2 ">
                                 <button type="button" id="modalBtn" class="secondary-btn w-50"> افزودن آدرس</button>
@@ -549,7 +550,7 @@
                 function closeModal() {
                     let addresses1=document.getElementById('addresses1')
                     if(addresses1.value==""){
-                        alert('آدرس را وارد کنید!!')
+                        swal('آدرس را وارد کنید!!')
                     }else {
                         
                     let modal = document.getElementById("theModal");
@@ -902,14 +903,14 @@
                     event.preventDefault();
                     if (obj.date == null || obj.date == 0) {
 
-                        alert("لطفا تاریخ را انتخاب کنید");
+                        swal("لطفا تاریخ را انتخاب کنید");
 
                     } else if (obj.attributes.length == 0) {
 
-                        alert("لطفا خدمات مد نظر خود را انتخاب کنید");
+                        swal("لطفا خدمات مد نظر خود را انتخاب کنید");
 
                     } else if (obj.userAddress.length == 0) {
-                        alert("لطفا آدرس خود را انتخاب کنید");
+                        swal("لطفا آدرس خود را انتخاب کنید");
                     } else {
 
                         calculate = [];
@@ -1029,7 +1030,7 @@
 
                             $("#ProductDetails" + rnd).append(productDetails);
                         }
-                        alert("با موفقیت به سبد خرید اضافه شد")
+                        swal("با موفقیت به سبد خرید اضافه شد")
                         for (let i = 0; i < obj.tags.length; i++) {
 
                             tagCalculate.push(obj.tagPrice[i]);
@@ -1172,7 +1173,7 @@
                 }).fail(function(response) {
 
                     // console.log(response);
-                    alert('خطا در اتصال به درگاه پرداخت لطفا مجدد امتحان کنید');
+                    swal('خطا در اتصال به درگاه پرداخت لطفا مجدد امتحان کنید');
                 })
             });
 
