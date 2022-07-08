@@ -32,7 +32,10 @@ class User extends Authenticatable
         'economicNumber',
         'postalCode',
         'telNumber',
-        'companyMelliCode'
+        'companyMelliCode',
+        'companyState',
+        'companyTown',
+        'companyAddress'
     ];
 
     /**

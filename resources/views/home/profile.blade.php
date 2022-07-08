@@ -375,7 +375,7 @@
                             <div class="col-md-6 col-sm-12">
                                 <ul>
                                     <li><span class="text-secondary">استان و شهرستان</span>
-                                        <h6>البرز، کرج</h6>
+                                        <h6>{{$user->companyState}} , {{$user->companyTown}}</h6>
                                         <i id="modalBtn10" class="fas fa-edit"></i>
                                         <!-- The Modal -->
                                         <div id="myModal10" class="modal">
@@ -386,14 +386,16 @@
                                                     <p class="text-secondary">لطفا اطلاعات شرکت خود را وارد کنید. محل کار
                                                         شرکت
                                                         باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
-                                                    <form action="">
-
+                                                        <form action="{{ route('home.editprofile', ['id' => $user->id]) }}" ,
+                                                            method="POST">
+                                                            @csrf
+                                                            @method('put')
                                                         <div class="form-group">
                                                             <label for="companyState">استان</label>
-                                                            <input type="text" name="company-state" class="form-control"
-                                                                id="companyState" placeholder="استان شرکت">
+                                                            <input type="text" class="form-control"
+                                                                id="companyState" name="state" placeholder="استان شرکت">
                                                             <label for="companyCity">شهرستان</label>
-                                                            <input type="text" name="company-city" class="form-control"
+                                                            <input type="text" name="town" class="form-control"
                                                                 id="companyCity" placeholder="شهرستان شرکت">
                                                         </div>
 
@@ -406,8 +408,7 @@
                                     </li>
 
                                     <li><span class="text-secondary">آدرس</span>
-                                        <h6>کرج،میدان سپاه به سمت سه راه
-                                            گوهردشت،خ گلستان</h6>
+                                        <h6>{{$user->companyAddress}}</h6>
                                         <i id="modalBtn11" class="fas fa-edit"></i>
                                         <!-- The Modal -->
                                         <div id="myModal11" class="modal">
@@ -417,10 +418,13 @@
                                                 <div class="modal-body">
                                                     <p class="text-secondary">لطفا اطلاعات شرکت خود را وارد کنید. آدرس
                                                         شرکت شما باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
-                                                    <form action="">
+                                                        <form action="{{ route('home.editprofile', ['id' => $user->id]) }}" ,
+                                                            method="POST">
+                                                            @csrf
+                                                            @method('put')
                                                         <div class="form-group">
                                                             <label for="companyAddress">آدرس</label>
-                                                            <input type="text" class="form-control" id="companyAddress"
+                                                            <input type="text" name="companyAddress" class="form-control" id="companyAddress"
                                                                 placeholder="آدرس شرکت">
                                                         </div>
 

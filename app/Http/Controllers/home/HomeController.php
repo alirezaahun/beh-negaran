@@ -214,22 +214,53 @@ class HomeController extends Controller
 
                 break;
 
-                case $request->has('telNumber'):
-                    $request->validate([
+            case $request->has('telNumber'):
+                $request->validate([
 
-                        'telNumber' => 'required'
+                    'telNumber' => 'required'
 
-                    ]);
+                ]);
 
-                    $user->update([
+                $user->update([
 
-                        'telNumber' => $request->telNumber
+                    'telNumber' => $request->telNumber
 
-                    ]);
+                ]);
 
-                    break;
+                break;
 
+            case $request->has(['state', 'town']):
 
+                $request->validate([
+
+                    'state' => 'required',
+                    'town' => 'required'
+
+                ]);
+
+                $user->update([
+
+                    'companyState' => $request->state,
+                    'companyTown' => $request->town
+
+                ]);
+
+                break;
+
+            case $request->has('companyAddress'):
+                $request->validate([
+
+                    'companyAddress' => 'required'
+
+                ]);
+
+                $user->update([
+
+                    'companyAddress' => $request->companyAddress
+
+                ]);
+
+                break;
 
 
 

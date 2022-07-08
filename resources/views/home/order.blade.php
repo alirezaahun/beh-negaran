@@ -19,7 +19,7 @@
                         </ul>
                         <!-- fieldsets -->
                         <?php
-                        
+
                         $getParents = App\Models\Category::where('parent_id', 0)
                             ->with('children', 'attributes')
                             ->get();
@@ -28,7 +28,7 @@
                             ->get();
                         ?>
                         <fieldset id="fil1" class="fil1">
-                            
+
 
                             <div class="col-12  testttt p-md-5 p-2 ">
                                 <button type="button" id="modalBtn" class="secondary-btn w-50"> افزودن آدرس</button>
@@ -432,7 +432,7 @@
 
 
 
-   
+
 
 
 
@@ -443,20 +443,11 @@
         var lng = 51.338097;
         var getId = @json($user);
 
-        var map = new L.Map('map', {
-            key: 'web.5j4qJGGkEPdoi3S18YqklpipMjVUa7nDm8cuiiL9',
-            maptype: 'dreamy',
+        var map = L.map('map', {
             center: [lat, lng],
-            zoom: 13,
-            traffic: false,
-            onTrafficLayerSwitched: function(state) {
-                // console.log(state);
-            }
+            zoom: 13
         });
-
-
-
-        L.tileLayer('file://{s}.{{ asset('map/map.osm') }}/{z}/{x}/{y}.png', {
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
             attribution: false
         }).addTo(map);
@@ -552,12 +543,12 @@
                     if(addresses1.value==""){
                         swal('آدرس را وارد کنید!!')
                     }else {
-                        
+
                     let modal = document.getElementById("theModal");
                     modal.classList.add('d-none')
                     addresses1.value=''
                     }
-               
+
                 }
                 closeModal()
 
@@ -596,7 +587,7 @@
             address = $("#currentAddress").val();
 
             $(".next").click(function() {
-                
+
                 window.scroll(0, 0)
                 current_fs = $("#fil1");
                 next_fs = $("#fil2");
@@ -1293,7 +1284,7 @@
         let FullAddress = document.getElementById("FullAddress");
         const date = document.getElementById("date");
 
-    
+
 
         var coll = document.getElementsByClassName("order-details");
         var i;
@@ -1311,6 +1302,6 @@
         }
 
 
-  
+
     </script>
 @endsection
