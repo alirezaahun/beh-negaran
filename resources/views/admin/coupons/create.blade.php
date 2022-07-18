@@ -48,7 +48,7 @@
                             <label for="priority">نوع</label>
                             <select class="form-control" name="type" id="type">
                                 <option value="amount">مبلغی</option>
-                                <option value="precentage">درصدی</option>
+                                <option value="percentage">درصدی</option>
                             </select>
 
                         </div>

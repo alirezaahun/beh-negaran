@@ -42,8 +42,8 @@ class CouponsController extends Controller
             'name' => 'required',
             'code' => 'required',
             'type' => 'required',
-            'price' => 'required_if:type,amount',
-            'present' => 'required_if:type,=,precentage',
+            'price' => 'required_if:type,=,amount',
+            'precent' => 'required_if:type,=,precentage',
             'max_amount' => 'required_if:type,=,precentage',
             'expire_date' => 'required'
         ]);

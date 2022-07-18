@@ -14,6 +14,7 @@ use App\Http\Controllers\Admin\TagsController;
 use App\Http\Controllers\admin\TransactionController;
 use App\Http\Controllers\admin\UserController;
 use App\Http\Controllers\authController;
+use App\Http\Controllers\CouponController;
 use App\Http\Controllers\home\AddressController;
 use App\Http\Controllers\home\addressesController as HomeAddressesController;
 use App\Http\Controllers\home\HomeController;
@@ -88,6 +89,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/profile', [HomeController::class, 'profile'])->name('home.profile');
     Route::put('{id}/profile/', [HomeController::class, 'editname'])->name('home.editprofile');
     Route::get('/order', [HomeController::class, 'order'])->name('home.order');
+    Route::post('/checkCoupon' , [CouponController::class , 'check'])->name('coupon.check');
     Route::resource('addresses', AddressController::class);
     Route::post('/payment', [PaymentController::class, 'payment'])->name('payment');
     Route::get('/callback_payment', [PaymentController::class, 'callback_payment'])->name('payment.callback');

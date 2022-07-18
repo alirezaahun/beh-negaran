@@ -96,6 +96,12 @@ class PaymentController extends Controller
                 'token' => $payment_token
             ]);
 
+            if (Session::has('coupon')) {
+                $order->update([
+                    'coupon_id' => Session()->get('coupon.id')
+                ]);
+            }
+
             foreach ($ordersItem as $key => $orderItem) {
                 OrderItem::create([
 
@@ -135,6 +141,7 @@ class PaymentController extends Controller
     {
 
         $transaction = Transaction::where('token', Session::get('token'))->first();
+        $order = Order::where('token', Session::get('token'))->first();
 
         // session()->regenerate();
         // Session::put('token', $payment_token);
@@ -144,6 +151,10 @@ class PaymentController extends Controller
             'status' => $data['status'],
             'success' => $data['success']
 
+        ]);
+
+        $order->update([
+            'payment_status' => $data['success']
         ]);
     }
 }

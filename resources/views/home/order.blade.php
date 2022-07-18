@@ -398,6 +398,13 @@
                                 </div>
                                 <input type="button" id="pay" name="previous"
                                     class="info-btn mx-auto w-50 bg-accent" value="پرداخت" />
+
+                                <div class="mt-5">
+                                    <span>کد تخفیف</span> <input id="couponInput"
+                                        class="text-danger form-control my-3  w-50 mx-auto">
+                                </div>
+                                <input type="button" id="couponButton" name="previous"
+                                    class="info-btn mx-auto w-50 bg-accent" value="اعمال تخفیف" />
                             </div>
                             <input type="button" name="previous" class="previous action-button-previous mt-3  "
                                 value="بازگشت" />
@@ -417,9 +424,6 @@
 
 @section('js')
     <script>
-
-
-
         const dtp1Instance = new mds.MdsPersianDateTimePicker(document.getElementById('dtp1'), {
             targetTextSelector: '[data-name="dtp1-text"]',
             targetDateSelector: '[data-name="dtp1-date"]',
@@ -539,14 +543,14 @@
 
             $("#SubmitForm").click(function(event) {
                 function closeModal() {
-                    let addresses1=document.getElementById('addresses1')
-                    if(addresses1.value==""){
+                    let addresses1 = document.getElementById('addresses1')
+                    if (addresses1.value == "") {
                         swal('آدرس را وارد کنید!!')
-                    }else {
+                    } else {
 
-                    let modal = document.getElementById("theModal");
-                    modal.classList.add('d-none')
-                    addresses1.value=''
+                        let modal = document.getElementById("theModal");
+                        modal.classList.add('d-none')
+                        addresses1.value = ''
                     }
 
                 }
@@ -845,7 +849,10 @@
                             tags: tags,
                             tagPrice: tagPrice,
                             userAddress: address,
-                            date: date
+                            date: date,
+                            coupon_id: 0,
+                            coupon_code: 0,
+                            coupon_type: "und"
                         }
 
                         $("#userAddresses").change(function() {
@@ -862,7 +869,10 @@
                                 tags: tags,
                                 tagPrice: tagPrice,
                                 userAddress: address,
-                                date: date
+                                date: date,
+                                coupon_id: 0,
+                                coupon_code: 0,
+                                coupon_type: "und"
                             });
                             // console.log(obj);
 
@@ -883,7 +893,10 @@
                     tags: tags,
                     tagPrice: tagPrice,
                     userAddress: address,
-                    date: date
+                    date: date,
+                    coupon_id: 0,
+                    coupon_code: 0,
+                    coupon_type: "und"
                 });
             });
 
@@ -1066,7 +1079,7 @@
                         let productDate = $("<h6/>", {
                             text: obj.date,
                             id: `ProductDatee${rnd}`,
-                            class:'overflow-hidden',
+                            class: 'overflow-hidden',
                         });
 
                         $("#ProductDate" + rnd).append(productDate);
@@ -1074,7 +1087,7 @@
                         let productAddress = $("<div/>", {
                             text: obj.userAddress,
                             id: `ProductAddress${rnd}`,
-                            class:'overflow-hidden',
+                            class: 'overflow-hidden',
                         });
 
                         $("#ProductLocation" + rnd).append(productAddress);
@@ -1115,6 +1128,63 @@
 
                     }
                 });
+
+            });
+
+            $("#couponButton").click(function() {
+                if (localStorage.getItem("couponUsed") == 1) {
+                    swal('کد تخفیف برای سفارش شما اعمال شده است');
+                } else {
+
+                    $.post("{{ route('coupon.check') }}", {
+                        '_token': "{{ csrf_token() }}",
+                        'code': $("#couponInput").val(),
+                        'price': $("#finalPricecontent").val()
+                    }, function(response, status) {
+                        if (response.type == "amount") {
+                            $("#finalPricecontent").val(response.amount);
+                            obj = {
+                                product: getChildreName,
+                                attributes: data,
+                                AttributePrice: price,
+                                hour: hour,
+                                quantity: quantity,
+                                tags: tags,
+                                tagPrice: tagPrice,
+                                userAddress: address,
+                                date: date,
+                                coupon_id: response.id,
+                                coupon_code: response.code,
+                                coupon_type: response.type
+                            }
+                            localStorage.setItem("couponUsed" , 1);
+                        } else if (response.type == "percentage") {
+                            let keeper = Number($("#finalPricecontent").val());
+                            $("#finalPricecontent").val(keeper - response.amount);
+                            obj = {
+                                product: getChildreName,
+                                attributes: data,
+                                AttributePrice: price,
+                                hour: hour,
+                                quantity: quantity,
+                                tags: tags,
+                                tagPrice: tagPrice,
+                                userAddress: address,
+                                date: date,
+                                coupon_id: response.id,
+                                coupon_code: response.code,
+                                coupon_type: response.type
+                            }
+                            localStorage.setItem("couponUsed" , 1);
+                        } else {
+                            swal(response);
+                        }
+                        console.log(response.type);
+                    }).fail(function(response) {
+                        swal(response);
+                    })
+
+                }
 
             });
 
@@ -1163,14 +1233,14 @@
 
                 }).fail(function(response) {
 
-                    // console.log(response);
+                    localStorage.clear();
                     swal('خطا در اتصال به درگاه پرداخت لطفا مجدد امتحان کنید');
                 })
             });
 
             $(window).on('beforeunload', function() {
                 localStorage.clear();
-                if ($("#productBox").is(':empty')) {
+                if ($("#productBox").is(':empty') || $("#finalPricecontent").val() == "0") {
                     localStorage.clear();
                 } else {
                     localStorage.setItem("productt", $("#productBox").html());
@@ -1300,8 +1370,5 @@
                 }
             });
         }
-
-
-
     </script>
 @endsection
