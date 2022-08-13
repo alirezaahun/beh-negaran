@@ -58,6 +58,11 @@ class HomeController extends Controller
 
         return view('home.page-not-found');
     }
+    public function faq()
+    {
+
+        return view('home.questions-and-answers');
+    }
     public function order()
     {
 

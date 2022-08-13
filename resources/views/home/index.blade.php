@@ -16,11 +16,11 @@
                 localStorage.clear();
             }
         }
-        const dtp1Instance = new mds.MdsPersianDateTimePicker(document.getElementById('dtp1'), {
-            targetTextSelector: '[data-name="dtp1-text"]',
-            targetDateSelector: '[data-name="dtp1-date"]',
-            persianNumber: true,
-        });
+        // const dtp1Instance = new mds.MdsPersianDateTimePicker(document.getElementById('dtp1'), {
+        //     targetTextSelector: '[data-name="dtp1-text"]',
+        //     targetDateSelector: '[data-name="dtp1-date"]',
+        //     persianNumber: true,
+        // });
 
         //trigger numbers
         $(allInView);

@@ -75,6 +75,7 @@ Route::get('/services', [HomeController::class, 'services'])->name('home.service
 Route::get('/projects', [HomeController::class, 'projects'])->name('home.projects');
 Route::get('/jobOpportunities', [HomeController::class, 'jobOpportunities'])->name('home.jobOpportunities');
 Route::get('/page-not-found', [HomeController::class, 'notFound'])->name('home.notFound');
+Route::get('/questions-and-answers', [HomeController::class, 'faq'])->name('home.faq');
 
 
 Route::any('/login', [authController::class, 'login'])->name('home.login');
