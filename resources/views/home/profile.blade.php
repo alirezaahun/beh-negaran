@@ -596,27 +596,28 @@
 
                     {{-- User Addresses --}}
                     <div class="row tab_content" id="user-addresses">
-                        <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex flex-column justify-content-start ">
                             <h4>آدرس های شما</h4>
-                            <button id="modalBtn14" class="secondary-btn">افزودن آدرس</button>
+                            <button id="extendedMapBtn" class="secondary-btn w-100 extend-map">افزودن آدرس</button>
 
-                            <div id="myModal14" class="modal">
+                            <div id="extendedMapContent" class="add-address-content">
                                 <!-- Modal content -->
-                                <div class="modal-content">
-                                    <span class="close">&times;</span>
-                                    <div class="modal-body">
-                                        <p class="text-secondary">لطفا اطلاعات شناسایی خود را وارد کنید. آدرس
-                                            شما
-                                            باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
-                                        <form id="addressForm1">
+                                <div class="address-content">
+
+                                    <div class="address-body">
+
+                                        <form class="px-4" id="addressForm1">
                                             <div id="addressForm" class="form-group">
-                                                <label for="userAddress">آدرس</label>
-                                                <input type="text" id="addresses1" name="addresses" class="form-control"
-                                                    id="address" placeholder="تهران، خیابان ۹ شرقی...">
+                                                <label class="my-2" for="userAddress">آدرس</label>
+                                                <input type="text" id="addresses1" name="addresses"
+                                                    class="form-control my-2" id="address"
+                                                    placeholder="تهران، خیابان ۹ شرقی...">
                                             </div>
 
-                                            <div name="map" id="Addmap" style="height: 200px"></div>
-                                            <button class="secondary-btn">ذخیره</button>
+                                            <div name="map" id="Addmap"
+                                                style="width: 100%;height: 200px;position: relative;outline: none"></div>
+                                            <button onClick="refreshPage()"
+                                                class="secondary-btn my-3 w-100">ذخیره</button>
                                         </form>
                                     </div>
                                 </div>
@@ -954,6 +955,21 @@
         for (i = 0; i < coll.length; i++) {
             coll[i].addEventListener("click", function() {
                 this.classList.toggle("order-collapse-active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+
+        // Expand The Content For Add Address ---------------------
+        var addColl = document.getElementsByClassName("extend-map");
+        var h;
+        for (h = 0; h < addColl.length; h++) {
+            addColl[h].addEventListener("click", function() {
+                this.classList.toggle("add-address-content-active");
                 var content = this.nextElementSibling;
                 if (content.style.maxHeight) {
                     content.style.maxHeight = null;
