@@ -2644,6 +2644,25 @@ a {
     margin: -8px 5px 0 0;
   }
 }
+.terms-checkbox input,
+.terms-checkbox label {
+  display: flex;
+  flex-direction: row;
+}
+
+.terms-checkbox input {
+  margin: 0 0 0 0.5rem !important;
+  width: 15px !important;
+  border-radius: 0.5rem;
+}
+
+.terms-checkbox ul,
+.terms-checkbox li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
 .user-profile-panel {
   min-height: 100vh;
   position: relative;
