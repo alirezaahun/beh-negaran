@@ -2868,6 +2868,9 @@ a {
 .questions-text h3 {
     color: var(--clr-secondary);
 }
+.accordion {
+    width: 50vw;
+}
 /* Scroll Bar ----------------------------------------------------------- */
 /* width */
 ::-webkit-scrollbar {
@@ -2905,6 +2908,9 @@ a {
 
 /* Mobile Screen --------------------------------------------------- */
 @media only screen and (min-width: 200px) and (max-width: 991px) {
+    .accordion {
+        width: unset;
+    }
     .vertical-line {
         display: none;
     }
