@@ -208,11 +208,14 @@
         var cb1 = document.getElementById("cb1"),
             button = document.getElementById("conBtn");
         button.disabled = true;
+        button.style.backgroundColor = 'rgba(235,235,228,0.3)';
         cb1.onclick = function() {
             if (cb1.checked) {
                 button.disabled = false;
+                button.style.backgroundColor = 'var(--clr-accent)';
             } else {
                 button.disabled = true;
+                button.style.backgroundColor = 'rgba(235,235,228,0.3)';
             }
         };
         button.onclick = function() {
