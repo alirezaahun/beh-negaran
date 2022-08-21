@@ -16,11 +16,11 @@
                 localStorage.clear();
             }
         }
-        const dtp1Instance = new mds.MdsPersianDateTimePicker(document.getElementById('dtp1'), {
-            targetTextSelector: '[data-name="dtp1-text"]',
-            targetDateSelector: '[data-name="dtp1-date"]',
-            persianNumber: true,
-        });
+        // const dtp1Instance = new mds.MdsPersianDateTimePicker(document.getElementById('dtp1'), {
+        //     targetTextSelector: '[data-name="dtp1-text"]',
+        //     targetDateSelector: '[data-name="dtp1-date"]',
+        //     persianNumber: true,
+        // });
 
         //trigger numbers
         $(allInView);
@@ -103,7 +103,7 @@
                                         class="fas fa-microphone"></i>پادکست</a> </li>
                         </ul>
                     </div>
-                    <form class="form-control quick-form">
+                    {{-- <form class="form-control quick-form">
 
                         <!-- <label for="persianDatapicker"> تاریخ: <input data-name="dtp1-text" name="persianDatapicker" id="dtp1" type="text"></label> -->
                         <div class="input-group date-input">
@@ -124,7 +124,7 @@
 
                         <a class="secondary-btn" href="{{ route('home.order') }}">سفارش</a>
 
-                    </form>
+                    </form> --}}
                 </div>
             </div>
 

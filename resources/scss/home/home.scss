@@ -534,7 +534,7 @@ h6 {
     background-color: var(--clr-secondary);
 }
 .banner {
-    background-image: url("../../../public/images/orginal-banner10.png");
+    background-image: url("../../../public/images/orginal-banner13.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1244,7 +1244,7 @@ footer p span {
 }
 
 //********************** ( order page ) **********************
-.fa-solid .fa-trash{
+.fa-solid .fa-trash {
     box-sizing: border-box;
 }
 // display: flex;
@@ -1252,29 +1252,24 @@ footer p span {
 // justify-content: end;
 // align-items: center;
 
-
-.testttt{
+.testttt {
     box-shadow: rgba(0, 0, 0, 0.09) 0px 0px 5px;
     border-radius: 1.3rem;
-   margin: auto;
-
+    margin: auto;
 }
-.trash-icon{
+.trash-icon {
     font-size: 20px;
 }
-.trash-icon:hover i{
+.trash-icon:hover i {
     cursor: pointer;
     color: red;
     font-size: 26px;
     box-sizing: border-box;
 }
 
-.bg-accent{
+.bg-accent {
     background-color: var(--clr-accent);
 }
-
-
-
 
 #heading {
     text-transform: uppercase;
@@ -1315,16 +1310,13 @@ footer p span {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 2px, rgba(0, 0, 0, 0.23) 0px 0px 3px;
     line-height: 15px;
     padding: 0.7em 1rem;
-  
-
 }
 
-@media only screen and (min-width: 850px){
-    #msform .action-button{
-  transform: translate(-20px, -127px);
+@media only screen and (min-width: 850px) {
+    #msform .action-button {
+        transform: translate(-20px, -127px);
     }
 }
-
 
 #msform .action-button:hover,
 #msform .action-button:focus {
@@ -1373,7 +1365,6 @@ footer p span {
 }
 
 #progressbar li {
-   
     list-style-type: none;
     font-size: 15px;
     // comment
@@ -1433,9 +1424,9 @@ footer p span {
 
 #progressbar li.active:before,
 #progressbar li.active:after {
-color: var(--clr-dark);
-background-color: var(--clr-primary);
-// z-index: -10;
+    color: var(--clr-dark);
+    background-color: var(--clr-primary);
+    // z-index: -10;
 }
 
 .progress {
@@ -1605,7 +1596,6 @@ background-color: var(--clr-primary);
     text-align: justify;
 }
 
-    
 .float-right {
     float: right;
 }
@@ -1675,8 +1665,6 @@ a {
     margin-right: 5px;
 }
 
-
-
 // ****************************************************plus
 .ProductDetails li div {
     margin: 100px;
@@ -1713,7 +1701,6 @@ a {
 // ***********************end pricing page ******************************
 /* BREAKPOINTS ----- */
 
-
 @media screen and (max-width: 480px) {
     .w-Custom-50 {
         width: 75% !important;
@@ -1721,7 +1708,7 @@ a {
 
     .tabby-tab label {
         max-width: 150px;
-      
+
         font-size: 13px;
         padding: 8px;
         text-align: justify;
@@ -1734,7 +1721,7 @@ a {
         margin-right: 0;
         margin-bottom: 20px;
     }
-  
+
     .margin-order-2 {
         margin-right: 0;
     }
@@ -1742,25 +1729,17 @@ a {
     .content-min-height {
         min-height: 2200px;
     }
- 
 }
 
 @media only screen and (min-width: 479px) and (max-width: 992px) {
-
     .content-min-height {
         min-height: 2000px;
     }
- 
 }
 @media screen and (max-width: 767px) {
-
-
-  
     .margin-order-2 {
         margin-right: 0;
     }
-
- 
 
     .pushTags-customMargin {
         margin-right: 20px;
@@ -1772,7 +1751,6 @@ a {
     }
 }
 
-
 @media screen and (min-width: 817px) and (max-width: 992px) {
     .order-margin-ObjQuantityLabel {
         margin: 0 33px;
@@ -1780,26 +1758,17 @@ a {
     .pushOptionAttr-customMargin {
         margin-right: 25px;
     }
-
-
 }
 @media screen and (min-width: 768px) {
-    .w-md-50{
+    .w-md-50 {
         width: 50% !important;
     }
-
- 
 }
 @media screen and (min-width: 992px) {
-  
-
-    .w-md-100{
+    .w-md-100 {
         width: 100% !important;
-
     }
 }
-
-
 
 // ************************************************************************************************************************//
 // ***********************************(jobOpportunities)********************************************
@@ -1808,7 +1777,6 @@ a {
 .custom-jO-style {
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
     border-radius: 0.5rem;
-
 }
 
 // Projects Page Style ----------------------------------------------------
@@ -2119,6 +2087,7 @@ a {
     justify-content: center;
     align-items: center;
 }
+
 #loginForm,
 #OTPinput {
     padding: 3rem;
@@ -2199,6 +2168,23 @@ a {
         height: 15px;
         margin: -8px 5px 0 0;
     }
+}
+.terms-checkbox input,
+.terms-checkbox label {
+    display: flex;
+    flex-direction: row;
+    // justify-content: start !important;
+}
+.terms-checkbox input {
+    margin: 0 0 0 0.5rem !important;
+    width: 15px !important;
+    border-radius: 0.5rem;
+}
+.terms-checkbox ul,
+.terms-checkbox li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 // User Profile Page ----------------------------------------------------
 .user-profile-panel {
@@ -2669,7 +2655,7 @@ a {
 }
 @media all and (max-width: 767px) {
     .responsive-table .table-header {
-         display: none;
+        display: none;
     }
     .responsive-table li {
         display: block;
@@ -2774,32 +2760,32 @@ a {
 #notfound {
     position: relative;
     height: 100vh;
-  }
+}
 
-  #notfound .notfound {
+#notfound .notfound {
     position: absolute;
     left: 50%;
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-  }
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
 
-  .notfound {
+.notfound {
     max-width: 460px;
     width: 100%;
     text-align: center;
     line-height: 1.4;
-  }
+}
 
-  .notfound .notfound-404 {
+.notfound .notfound-404 {
     position: relative;
     width: 180px;
     height: 180px;
     margin: 0px auto 50px;
-  }
+}
 
-  .notfound .notfound-404>div:first-child {
+.notfound .notfound-404 > div:first-child {
     position: absolute;
     left: 0;
     right: 0;
@@ -2807,25 +2793,25 @@ a {
     bottom: 0;
     background: var(--clr-accent);
     -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-            transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
     border: 5px dashed var(--clr-dark);
     border-radius: 5px;
-  }
+}
 
-  .notfound .notfound-404>div:first-child:before {
-    content: '';
+.notfound .notfound-404 > div:first-child:before {
+    content: "";
     position: absolute;
     left: -5px;
     right: -5px;
     bottom: -5px;
     top: -5px;
     -webkit-box-shadow: 0px 0px 0px 5px rgba(0, 0, 0, 0.1) inset;
-            box-shadow: 0px 0px 0px 5px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0px 0px 0px 5px rgba(0, 0, 0, 0.1) inset;
     border-radius: 5px;
-  }
+}
 
-  .notfound .notfound-404 h1 {
+.notfound .notfound-404 h1 {
     color: var(--clr-dark);
     font-weight: 700;
     margin: 0;
@@ -2833,36 +2819,58 @@ a {
     position: absolute;
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     left: 50%;
     text-align: center;
     height: 40px;
     line-height: 40px;
-  }
+}
 
-  .notfound h2 {
+.notfound h2 {
     font-size: 33px;
     font-weight: 700;
-  }
+}
 
-  .notfound p {
+.notfound p {
     font-size: 16px;
     color: var(--clr-dark);
     font-weight: 400;
     margin-bottom: 2rem;
-  }
+}
 
-  .notfound .secondary-btn {
+.notfound .secondary-btn {
     background-color: var(--clr-secondary);
     color: var(--clr-primary);
-  }
-  .notfound .secondary-btn:hover {
+}
+.notfound .secondary-btn:hover {
     background-color: var(--clr-dark);
     color: var(--clr-accent);
-  }
+}
 
-
+// Questions And Answers Page ----------------------------------------------
+.accordion-button:after {
+    order: -1; //swap order
+    margin-left: 0.5rem;
+    margin-right: 0; // just extra space between text and icon
+}
+.accordion-button:not(.collapsed) {
+    color: var(--clr-accent);
+    background-color: var(--clr-dark);
+}
+.accordion-item p {
+    text-align: justify;
+    line-height: 1.8rem;
+}
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23F6F6F6'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+.questions-text h3 {
+    color: var(--clr-secondary);
+}
+.accordion {
+    width: 50vw;
+}
 /* Scroll Bar ----------------------------------------------------------- */
 /* width */
 ::-webkit-scrollbar {
@@ -2900,11 +2908,14 @@ a {
 
 /* Mobile Screen --------------------------------------------------- */
 @media only screen and (min-width: 200px) and (max-width: 991px) {
+    .accordion {
+        width: unset;
+    }
     .vertical-line {
         display: none;
     }
     .banner {
-        background-image: url("../../../public/images/orginal-banner11mobile.png");
+        background-image: url("../../../public/images/orginal-banner13mobile.png");
         background-size: cover;
         background-position: center;
         height: 55vh;
