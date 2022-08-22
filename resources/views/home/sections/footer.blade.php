@@ -10,7 +10,7 @@
                                 <div class="footer-line"><span></span></div>
                                 <li><a href="{{ route('home.about') }}"><i class='bx bx-chevron-left'></i>درباره
                                         ما</a></li>
-                                <li><a href="#"><i class='bx bx-chevron-left'></i>تماس با ما</a></li>
+                                <li><a href="{{ route('home.contact') }}"><i class='bx bx-chevron-left'></i>تماس با ما</a></li>
                                 <li><a href="#"><i class='bx bx-chevron-left'></i>وبلاگ</a></li>
                                 <li><a href="#"><i class='bx bx-chevron-left'></i>پادکست</a></li>
                             </div>
@@ -21,7 +21,7 @@
                             <div class="content-collapse">
                                 <div class="footer-line"><span></span></div>
                                 <li><a href="#"><i class='bx bx-chevron-left'></i>راهنمای سفارش</a></li>
-                                <li><a href="#"><i class='bx bx-chevron-left'></i>قوانین و مقررات</a></li>
+                                <li><a href="{{ route('home.policy') }}"><i class='bx bx-chevron-left'></i>قوانین و مقررات</a></li>
                                 <li><a href="{{ route('home.faq') }}"><i class='bx bx-chevron-left'></i>پرسش و پاسخ</a></li>
                             </div>
                         </ul>
@@ -31,8 +31,8 @@
                             <div class="content-collapse">
                                 <div class="footer-line"><span></span></div>
                                 <li><a href="#"><i class='bx bx-chevron-left'></i>باشگاه مشتریان</a></li>
-                                <li><a href="#"><i class='bx bx-chevron-left'></i>همکاری با ما</a></li>
-                                <li><a href="#"><i class='bx bx-chevron-left'></i>فرصت های شغلی</a></li>
+                                <li><a href="{{ route('home.contact') }}"><i class='bx bx-chevron-left'></i>همکاری با ما</a></li>
+                                <li><a href="{{ route('home.jobOpportunities') }}"><i class='bx bx-chevron-left'></i>فرصت های شغلی</a></li>
                             </div>
                         </ul>
                     </div>
