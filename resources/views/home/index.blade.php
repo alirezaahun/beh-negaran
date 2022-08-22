@@ -80,9 +80,9 @@
     <main class="main-section">
         <div class="container-fluid px-0">
             <div class="banner">
-                <div class="banner-inner">
+                {{-- <div class="banner-inner">
                     <h1>سامانه یکپارچه تولید محتوا و تبلیغات</h1>
-                </div>
+                </div> --}}
             </div>
 
             <div class="row quick-service-box">

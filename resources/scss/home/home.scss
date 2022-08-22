@@ -534,9 +534,9 @@ h6 {
     background-color: var(--clr-secondary);
 }
 .banner {
-    background-image: url("../../../public/images/orginal-banner13.png");
+    background-image: url("../../../public/images/orginal-banner23.png");
     background-size: cover;
-    background-position: center;
+    // background-position: center;
     background-repeat: no-repeat;
     height: 50vh;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
@@ -572,7 +572,7 @@ h6 {
     border-radius: 1.3rem;
     width: 70%;
     margin: auto;
-    margin-top: -7rem;
+    margin-top: -1.5rem;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .quick-service-box form {
@@ -2915,7 +2915,7 @@ a {
         display: none;
     }
     .banner {
-        background-image: url("../../../public/images/orginal-banner13mobile.png");
+        background-image: url("../../../public/images/orginal-banner23mobile.png");
         background-size: cover;
         background-position: center;
         height: 55vh;
@@ -2949,7 +2949,7 @@ a {
     .quick-service-box {
         width: 100%;
         border-radius: 0;
-        margin-top: -13rem;
+        margin-top: -2rem;
     }
     .service-icons-mobile {
         position: fixed;

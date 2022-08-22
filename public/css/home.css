@@ -872,9 +872,8 @@ h6 {
 }
 
 .banner {
-  background-image: url(/images/orginal-banner13.png?8baa0c0b70ad40f23182b7b43f234626);
+  background-image: url(/images/orginal-banner23.png?4a81caf0920d841994fa28dbb05e1a3b);
   background-size: cover;
-  background-position: center;
   background-repeat: no-repeat;
   height: 50vh;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
@@ -912,7 +911,7 @@ h6 {
   border-radius: 1.3rem;
   width: 70%;
   margin: auto;
-  margin-top: -7rem;
+  margin-top: -1.5rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
@@ -3430,7 +3429,7 @@ a {
   }
 
   .banner {
-    background-image: url(/images/orginal-banner13mobile.png?2b9db5f77bc34e07e5d5b687781131a8);
+    background-image: url(/images/orginal-banner23mobile.png?17854435923dba3c1bce85a3ca0beca8);
     background-size: cover;
     background-position: center;
     height: 55vh;
@@ -3473,7 +3472,7 @@ a {
   .quick-service-box {
     width: 100%;
     border-radius: 0;
-    margin-top: -13rem;
+    margin-top: -2rem;
   }
 
   .service-icons-mobile {
