@@ -2587,6 +2587,10 @@ a {
   background-color: var(--clr-accent);
 }
 
+.loading-btn:hover {
+  color: var(--clr-dark);
+}
+
 .secondary-btn.spinning:after {
   content: "";
   position: absolute;
@@ -2643,6 +2647,14 @@ a {
     margin: -8px 5px 0 0;
   }
 }
+.terms-checkbox a {
+  color: var(--clr-accent);
+}
+
+.terms-checkbox a:hover {
+  color: var(--clr-secondary);
+}
+
 .terms-checkbox input,
 .terms-checkbox label {
   display: flex;
@@ -3429,10 +3441,10 @@ a {
   }
 
   .banner {
-    background-image: url(/images/orginal-banner23mobile.png?17854435923dba3c1bce85a3ca0beca8);
+    background-image: url(/images/orginal-banner23-2mobile.png?569ff6d8035059dd41cdd68ab078c03e);
     background-size: cover;
     background-position: center;
-    height: 55vh;
+    height: 27vh;
   }
 
   .banner-inner {
@@ -3472,7 +3484,7 @@ a {
   .quick-service-box {
     width: 100%;
     border-radius: 0;
-    margin-top: -2rem;
+    margin-top: -1.6rem;
   }
 
   .service-icons-mobile {

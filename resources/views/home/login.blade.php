@@ -29,7 +29,10 @@
 
                 <div class="terms-checkbox">
                     <ul>
-                        <li><label><input id="cb1" type="checkbox" /> قوانین و مقررات را می پذیرم.</label></li>
+                        <li><label><input id="cb1" type="checkbox" /><a class="me-2" href="{{ route('home.policy') }}">قوانین و
+                                    مقررات</a>را می
+                                پذیرم.</label></li>
+
                     </ul>
                 </div>
 
@@ -218,11 +221,13 @@
                 button.style.backgroundColor = 'rgba(235,235,228,0.3)';
             }
         };
+        button.disabled = false;
         button.onclick = function() {
             if (cb1.checked) {
                 button.disabled = false;
             } else {
-                swal('آدرس را وارد کنید!!')
+                swal('قوانین و مقررات را مطالعه کنید!')
+                button.disabled = true;
             }
         };
     </script>

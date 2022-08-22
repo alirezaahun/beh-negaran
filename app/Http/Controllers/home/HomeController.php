@@ -63,6 +63,11 @@ class HomeController extends Controller
 
         return view('home.questions-and-answers');
     }
+    public function policy()
+    {
+
+        return view('home.terms-of-service');
+    }
     public function order()
     {
 

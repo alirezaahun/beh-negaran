@@ -2131,6 +2131,9 @@ a {
 .loading-btn {
     background-color: var(--clr-accent);
 }
+.loading-btn:hover {
+    color: var(--clr-dark);
+}
 .secondary-btn.spinning:after {
     content: "";
     position: absolute;
@@ -2168,6 +2171,12 @@ a {
         height: 15px;
         margin: -8px 5px 0 0;
     }
+}
+.terms-checkbox a {
+    color: var(--clr-accent);
+}
+.terms-checkbox a:hover {
+    color: var(--clr-secondary);
 }
 .terms-checkbox input,
 .terms-checkbox label {
@@ -2915,10 +2924,10 @@ a {
         display: none;
     }
     .banner {
-        background-image: url("../../../public/images/orginal-banner23mobile.png");
+        background-image: url("../../../public/images/orginal-banner23-2mobile.png");
         background-size: cover;
         background-position: center;
-        height: 55vh;
+        height: 27vh;
     }
     .banner-inner {
         width: 80%;
@@ -2949,7 +2958,7 @@ a {
     .quick-service-box {
         width: 100%;
         border-radius: 0;
-        margin-top: -2rem;
+        margin-top: -1.6rem;
     }
     .service-icons-mobile {
         position: fixed;
