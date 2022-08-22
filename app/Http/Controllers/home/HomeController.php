@@ -68,6 +68,11 @@ class HomeController extends Controller
 
         return view('home.terms-of-service');
     }
+    public function contact()
+    {
+
+        return view('home.contact-us');
+    }
     public function order()
     {
 

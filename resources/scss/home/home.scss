@@ -2880,6 +2880,28 @@ a {
 .accordion {
     width: 50vw;
 }
+// Contact Us Page -------------------------------------------
+.contact-wrap h3 {
+    color: var(--clr-secondary);
+}
+.dbox .fa,
+.dbox .fab {
+    font-size: 1.6rem;
+    padding: 1rem;
+    background-color: var(--clr-dark);
+    color: var(--clr-accent);
+    border-radius: 0.3rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 3px var(--clr-dark);
+}
+.dbox a {
+    color: var(--clr-secondary);
+    border-bottom: 1px solid var(--clr-secondary);
+    border-radius: 0 0 0.1rem 0.1rem;
+}
+#contactForm label {
+    margin-bottom: 0.5rem;
+}
 /* Scroll Bar ----------------------------------------------------------- */
 /* width */
 ::-webkit-scrollbar {

@@ -77,6 +77,7 @@ Route::get('/jobOpportunities', [HomeController::class, 'jobOpportunities'])->na
 Route::get('/page-not-found', [HomeController::class, 'notFound'])->name('home.notFound');
 Route::get('/questions-and-answers', [HomeController::class, 'faq'])->name('home.faq');
 Route::get('/terms-of-service', [HomeController::class, 'policy'])->name('home.policy');
+Route::get('/contact-us', [HomeController::class, 'contact'])->name('home.contact');
 
 
 Route::any('/login', [authController::class, 'login'])->name('home.login');
