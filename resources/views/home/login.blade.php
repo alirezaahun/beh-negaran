@@ -222,7 +222,7 @@
             if (cb1.checked) {
                 button.disabled = false;
             } else {
-                swal('آدرس را وارد کنید!!')
+                swal('جهت ورود ابتدا قوانین و مقررات را تایید کنید!')
             }
         };
     </script>
