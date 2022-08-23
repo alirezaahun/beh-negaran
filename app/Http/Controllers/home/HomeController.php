@@ -277,17 +277,6 @@ class HomeController extends Controller
                 ]);
 
                 break;
-
-
-
-
-
-
-
-
-            default:
-                dd("nothing");
-                break;
         }
 
         return redirect()->route('home.profile');
@@ -321,7 +310,7 @@ class HomeController extends Controller
             'phoneNumber' => $request->phoneNumber,
             'address' => $request->address,
             'phone' => $request->phone,
-            'description' => "edd"
+            'description' => $request->description
         ]);
 
         alert()->success('درخواست شما با موفقیت ثبت شد');

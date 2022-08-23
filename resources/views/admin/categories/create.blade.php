@@ -136,7 +136,7 @@
                     <select id="tagSelect" data-live-search="true" name="tag_ids[]" multiple class="form-control">
 
                         @foreach ($tags as $tag)
-                        <option value="{{$tag->id}}">{{$tag->name}}</option>
+                        <option title="{{$tag->name}}" value="{{$tag->id}}">({{$tag->price}}) {{$tag->name}}</option>
                         @endforeach
                       </select>
 
