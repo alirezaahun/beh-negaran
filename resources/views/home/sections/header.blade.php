@@ -91,7 +91,7 @@
                     </a>
                     <ul class="dropdown-menu text-end" aria-labelledby="navbarDropdown">
 
-                        <li><a class="dropdown-item" href="#">راه های ارتباطی</a></li>
+                        <li><a class="dropdown-item" href="{{ route('home.contact') }}">راه های ارتباطی</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
@@ -107,7 +107,7 @@
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" href="#">همکاری با ما</a></li>
+                        <li><a class="dropdown-item" href="{{ route('home.contact') }}">همکاری با ما</a></li>
                     </ul>
                 </li>
 

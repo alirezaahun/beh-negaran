@@ -80,9 +80,9 @@
     <main class="main-section">
         <div class="container-fluid px-0">
             <div class="banner">
-                <div class="banner-inner">
+                {{-- <div class="banner-inner">
                     <h1>سامانه یکپارچه تولید محتوا و تبلیغات</h1>
-                </div>
+                </div> --}}
             </div>
 
             <div class="row quick-service-box">
@@ -163,7 +163,7 @@
                     <div class="col-lg-5 col-md-12 col-sm-12">
                         <div class="h_iframe-aparat_embed_frame mt_7">
                             <span style="display: block;padding-top: 57%"></span>
-                            <iframe src="https://www.aparat.com/video/video/embed/videohash/oQGfH/vt/frame"
+                            <iframe src="https://www.aparat.com/video/video/embed/videohash/K80G6/vt/frame"
                                 allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
                             </iframe>
                         </div>

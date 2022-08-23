@@ -25,6 +25,13 @@
                     <input class="form-control" type="text" name="name" id="name">
 
                 </div>
+
+                <div class="form-group col-md-3">
+
+                    <label for="name">قیمت</label>
+                    <input class="form-control" type="text" name="price" id="price">
+
+                </div>
                </div>
 
                 <button type="submit" class="btn btn-outline-primary mt-5">ثبت تگ</button>

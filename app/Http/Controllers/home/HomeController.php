@@ -7,6 +7,7 @@ use App\Http\Resources\V1\bottomBannerResource;
 use App\Http\Resources\V1\sliderResource;
 use App\Http\Resources\V1\topBannerResource;
 use App\Models\Banner;
+use App\Models\JobRequest;
 use App\Models\Product;
 use App\Models\User;
 use Illuminate\Contracts\Session\Session;
@@ -62,6 +63,16 @@ class HomeController extends Controller
     {
 
         return view('home.questions-and-answers');
+    }
+    public function policy()
+    {
+
+        return view('home.terms-of-service');
+    }
+    public function contact()
+    {
+
+        return view('home.contact-us');
     }
     public function order()
     {
@@ -288,6 +299,35 @@ class HomeController extends Controller
         return session()->get('user');
     }
 
+    public function jobrequest(Request $request){
+
+        $request->validate([
+            'name' => 'required',
+            'family' => 'required',
+            'tags' => 'required',
+            'resume' => 'required|mimes:pdf',
+            'phoneNumber' => 'required',
+            'address' => 'required'
+        ]);
+
+        $getname = generateFileName($request->resume->getClientOriginalName());
+        $request->resume->move(public_path(env('JOB_OPPORTUNITIES_UPLOAD_PATH')) , $getname);
+
+        JobRequest::create([
+            'name' => $request->name,
+            'family' => $request->family,
+            'tags' => implode(",", $request->tags),
+            'resume' => $getname,
+            'phoneNumber' => $request->phoneNumber,
+            'address' => $request->address,
+            'phone' => $request->phone,
+            'description' => "edd"
+        ]);
+
+        alert()->success('درخواست شما با موفقیت ثبت شد');
+        return redirect()->route('home.index');
+    }
+
     public function logout()
     {
 
@@ -295,4 +335,6 @@ class HomeController extends Controller
 
         return redirect('/');
     }
+
+
 }

@@ -76,6 +76,8 @@ Route::get('/projects', [HomeController::class, 'projects'])->name('home.project
 Route::get('/jobOpportunities', [HomeController::class, 'jobOpportunities'])->name('home.jobOpportunities');
 Route::get('/page-not-found', [HomeController::class, 'notFound'])->name('home.notFound');
 Route::get('/questions-and-answers', [HomeController::class, 'faq'])->name('home.faq');
+Route::get('/terms-of-service', [HomeController::class, 'policy'])->name('home.policy');
+Route::get('/contact-us', [HomeController::class, 'contact'])->name('home.contact');
 
 
 Route::any('/login', [authController::class, 'login'])->name('home.login');
@@ -84,6 +86,7 @@ Route::post('/checkOtp', [authController::class, 'check']);
 Route::post('/checkeditNumber', [authController::class, 'checkeditNumber']);
 Route::post('/resend', [authController::class, 'resend']);
 Route::get('/logout', [HomeController::class, 'logout'])->name('logout');
+Route::post('/jobRequest' , [HomeController::class , 'jobrequest'])->name('jobRequest');
 
 
 Route::group(['middleware' => 'auth'], function () {
