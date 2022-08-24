@@ -87,6 +87,9 @@ h6 {
 .mt_7 {
     margin-top: 4rem;
 }
+.blue-header {
+    color: var(--clr-secondary);
+}
 /* Variables ----------------------------------------------------------------- */
 :root {
     --clr-primary: #f6f6f6;
@@ -1774,11 +1777,18 @@ a {
 // ***********************************(jobOpportunities)********************************************
 //           use JO instead this name in html
 
-.custom-jO-style {
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
-    border-radius: 0.5rem;
+// .custom-jO-style {
+//     border-radius: 1rem;
+// }
+.custom-jO-style input:focus-within {
+    background-color: #E8F0FE;
+    border-color: var(--clr-accent);
+    box-shadow: none;
 }
-
+// .card-body {
+//     outline: none !important;
+//     border: none !important;
+// }
 // Projects Page Style ----------------------------------------------------
 
 .project-page-title h3 {
