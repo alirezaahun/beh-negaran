@@ -1,7 +1,6 @@
 <nav class="navbar navbar-expand-lg costume-nav">
     <div class="container-fluid">
-        <a href="{{ route('home.index') }}"><img src="{{ asset('images/logo4.svg') }}"
-                class="navbar-brand"></img></a>
+        <a href="{{ route('home.index') }}"><img src="{{ asset('images/logo4.svg') }}" class="navbar-brand"></img></a>
         <button class="navbar-toggler p-0 me-3" id="navbarTogglerBtn" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
             aria-label="Toggle navigation">
@@ -115,7 +114,8 @@
             <div class="navbar-btns">
                 {{-- <a href="{{ route('logout') }}" id="addresses-expand" class="primary-btn"><i --}}
 
-                <a href="{{ route('home.profile') }}" id="addresses-expand" class="primary-btn"><i class='bx bx-cart-alt'></i>پیگیری سفارشات
+                <a href="{{ route('home.profile') }}" id="addresses-expand" class="primary-btn"><i
+                        class='bx bx-cart-alt'></i>پیگیری سفارشات
                 </a>
                 |
 
@@ -136,3 +136,5 @@
         </div>
     </div>
 </nav>
+
+

@@ -86,6 +86,7 @@ Route::post('/checkOtp', [authController::class, 'check']);
 Route::post('/checkeditNumber', [authController::class, 'checkeditNumber']);
 Route::post('/resend', [authController::class, 'resend']);
 Route::get('/logout', [HomeController::class, 'logout'])->name('logout');
+Route::post('/jobRequest' , [HomeController::class , 'jobrequest'])->name('jobRequest');
 
 
 Route::group(['middleware' => 'auth'], function () {

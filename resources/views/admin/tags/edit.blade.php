@@ -8,7 +8,7 @@
 
         <div class="mb-4">
 
-            <h5 class="font-weight-bold">ایجاد برند</h5>
+            <h5 class="font-weight-bold">ویرایش تگ</h5>
 
             <hr>
 
@@ -24,6 +24,13 @@
 
                     <label for="name">نام</label>
                     <input class="form-control" value="{{$tag->name}}" type="text" name="name" id="name">
+
+                </div>
+
+                <div class="form-group col-md-3">
+
+                    <label for="name">قیمت</label>
+                    <input class="form-control" value="{{$tag->price}}" type="text" name="price" id="price">
 
                 </div>
                </div>

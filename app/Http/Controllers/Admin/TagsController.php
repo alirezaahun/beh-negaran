@@ -37,10 +37,11 @@ class TagsController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate(['name' => 'required']);
+        $request->validate(['name' => 'required' , 'price' => 'required']);
 
         Tag::create([
-            'name' => $request->name
+            'name' => $request->name,
+            'price' => $request->price
 
         ]);
 
@@ -79,9 +80,9 @@ class TagsController extends Controller
      */
     public function update(Request $request, Tag $tag)
     {
-        $request->validate(['name' => 'required']);
+        $request->validate(['name' => 'required' , 'price' => 'required']);
 
-        $tag->update(['name' => $request->name]);
+        $tag->update(['name' => $request->name , 'price' => $request->price]);
 
 
         alert()->success(' تگ با موفقیت ویرایش شد', '');

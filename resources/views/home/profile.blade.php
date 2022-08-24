@@ -327,8 +327,9 @@
                                                         @method('put')
                                                         <div class="form-group">
                                                             <label for="companyNationalNumber">شماره ملی</label>
-                                                            <input type="text" name="companyMelliCode" class="form-control"
-                                                                id="companyNationalNumber" placeholder="شماره ملی شرکت">
+                                                            <input type="text" name="companyMelliCode"
+                                                                class="form-control" id="companyNationalNumber"
+                                                                placeholder="شماره ملی شرکت">
                                                         </div>
 
                                                         <button type="submit" class="secondary-btn">ذخیره</button>
@@ -358,8 +359,9 @@
                                                         @method('put')
                                                         <div class="form-group">
                                                             <label for="marketCode">کد اقتصادی</label>
-                                                            <input type="text" name="economicNumber" class="form-control"
-                                                                id="marketCode" placeholder="کد اقتصادی شرکت">
+                                                            <input type="text" name="economicNumber"
+                                                                class="form-control" id="marketCode"
+                                                                placeholder="کد اقتصادی شرکت">
                                                         </div>
 
                                                         <button type="submit" class="secondary-btn">ذخیره</button>
@@ -375,7 +377,7 @@
                             <div class="col-md-6 col-sm-12">
                                 <ul>
                                     <li><span class="text-secondary">استان و شهرستان</span>
-                                        <h6>{{$user->companyState}} , {{$user->companyTown}}</h6>
+                                        <h6>{{ $user->companyState }} , {{ $user->companyTown }}</h6>
                                         <i id="modalBtn10" class="fas fa-edit"></i>
                                         <!-- The Modal -->
                                         <div id="myModal10" class="modal">
@@ -386,14 +388,14 @@
                                                     <p class="text-secondary">لطفا اطلاعات شرکت خود را وارد کنید. محل کار
                                                         شرکت
                                                         باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
-                                                        <form action="{{ route('home.editprofile', ['id' => $user->id]) }}" ,
-                                                            method="POST">
-                                                            @csrf
-                                                            @method('put')
+                                                    <form action="{{ route('home.editprofile', ['id' => $user->id]) }}" ,
+                                                        method="POST">
+                                                        @csrf
+                                                        @method('put')
                                                         <div class="form-group">
                                                             <label for="companyState">استان</label>
-                                                            <input type="text" class="form-control"
-                                                                id="companyState" name="state" placeholder="استان شرکت">
+                                                            <input type="text" class="form-control" id="companyState"
+                                                                name="state" placeholder="استان شرکت">
                                                             <label for="companyCity">شهرستان</label>
                                                             <input type="text" name="town" class="form-control"
                                                                 id="companyCity" placeholder="شهرستان شرکت">
@@ -408,7 +410,7 @@
                                     </li>
 
                                     <li><span class="text-secondary">آدرس</span>
-                                        <h6>{{$user->companyAddress}}</h6>
+                                        <h6>{{ $user->companyAddress }}</h6>
                                         <i id="modalBtn11" class="fas fa-edit"></i>
                                         <!-- The Modal -->
                                         <div id="myModal11" class="modal">
@@ -418,13 +420,14 @@
                                                 <div class="modal-body">
                                                     <p class="text-secondary">لطفا اطلاعات شرکت خود را وارد کنید. آدرس
                                                         شرکت شما باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
-                                                        <form action="{{ route('home.editprofile', ['id' => $user->id]) }}" ,
-                                                            method="POST">
-                                                            @csrf
-                                                            @method('put')
+                                                    <form action="{{ route('home.editprofile', ['id' => $user->id]) }}" ,
+                                                        method="POST">
+                                                        @csrf
+                                                        @method('put')
                                                         <div class="form-group">
                                                             <label for="companyAddress">آدرس</label>
-                                                            <input type="text" name="companyAddress" class="form-control" id="companyAddress"
+                                                            <input type="text" name="companyAddress"
+                                                                class="form-control" id="companyAddress"
                                                                 placeholder="آدرس شرکت">
                                                         </div>
 
@@ -467,7 +470,7 @@
                                     </li>
 
                                     <li><span class="text-secondary">شماره تلفن</span>
-                                        <h6>{{$user->telNumber}}</h6>
+                                        <h6>{{ $user->telNumber }}</h6>
                                         <i id="modalBtn13" class="fas fa-edit"></i>
                                         <!-- The Modal -->
                                         <div id="myModal13" class="modal">
@@ -478,14 +481,14 @@
                                                     <p class="text-secondary">لطفا اطلاعات شرکت خود را وارد کنید. شماره
                                                         تلفن
                                                         شرکت شما باید با اطلاعاتی که وارد می‌کنید همخوانی داشته باشند.</p>
-                                                        <form action="{{ route('home.editprofile', ['id' => $user->id]) }}" ,
-                                                            method="POST">
-                                                            @csrf
-                                                            @method('put')
+                                                    <form action="{{ route('home.editprofile', ['id' => $user->id]) }}" ,
+                                                        method="POST">
+                                                        @csrf
+                                                        @method('put')
                                                         <div class="form-group">
                                                             <label for="marketCode">شماره تلفن</label>
-                                                            <input type="text" class="form-control" name="telNumber" id="marketCode"
-                                                                placeholder="شماره تلفن شرکت">
+                                                            <input type="text" class="form-control" name="telNumber"
+                                                                id="marketCode" placeholder="شماره تلفن شرکت">
                                                         </div>
 
                                                         <button type="submit" class="secondary-btn">ذخیره</button>
@@ -912,10 +915,19 @@
 
             });
 
-            //When page loads...
-            $(".tab_content").hide(); //Hide all content
-            $("ul.nav__ li:first").addClass("active").show(); //Activate first tab
-            $(".tab_content:first").show(); //Show first tab content
+            if (localStorage.getItem('TrackOrders') == 1) {
+                $(".tab_content").hide(); //Hide all content
+                $("ul.nav__ li").eq(1).addClass("active").show(); //Activate first tab
+                $(".tab_content").eq(1).show()
+                localStorage.removeItem("TrackOrders");
+            } else {
+
+                //When page loads...
+                $(".tab_content").hide(); //Hide all content
+                $("ul.nav__ li:first").addClass("active").show(); //Activate first tab
+                $(".tab_content:first").show(); //Show first tab content
+
+            }
 
             //On Click Event
             $("ul.nav__ li").click(function() {
