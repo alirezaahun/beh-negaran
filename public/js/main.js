@@ -3277,7 +3277,9 @@ $(document).ready(function () {
       }
     }
   });
-  console.log('hello alireza');
+  $("#addresses-expand").click(function () {
+    localStorage.setItem('TrackOrders', 1);
+  });
 }); // Active Mobile Bottom Menu Link ------------------------------------
 // Get the container element
 
