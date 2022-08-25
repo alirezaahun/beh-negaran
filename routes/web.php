@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AttributesController;
 use App\Http\Controllers\admin\BannerController;
+use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\BrandsController;
 use App\Http\Controllers\Admin\CategoriesController;
 use App\Http\Controllers\admin\CouponsController;
@@ -51,6 +52,7 @@ Route::prefix('admin-panel/managment')->name('admin.')->middleware('permission:f
     Route::resource('transactions', TransactionController::class);
     Route::resource('permission', permissionController::class);
     Route::resource('users', UserController::class);
+    Route::resource('blogs' , BlogController::class);
 
     //
 
