@@ -74,6 +74,11 @@ class HomeController extends Controller
 
         return view('home.contact-us');
     }
+    public function blog()
+    {
+
+        return view('home.blog');
+    }
     public function order()
     {
 

@@ -80,6 +80,7 @@ Route::get('/page-not-found', [HomeController::class, 'notFound'])->name('home.n
 Route::get('/questions-and-answers', [HomeController::class, 'faq'])->name('home.faq');
 Route::get('/terms-of-service', [HomeController::class, 'policy'])->name('home.policy');
 Route::get('/contact-us', [HomeController::class, 'contact'])->name('home.contact');
+Route::get('/blog', [HomeController::class, 'blog'])->name('home.blog');
 
 
 Route::any('/login', [authController::class, 'login'])->name('home.login');
