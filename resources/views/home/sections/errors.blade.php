@@ -1,11 +1,11 @@
 @if ( count($errors) > 0 )
 
-    <div class="alert alert-danger">
+    <div class="error-container">
 
-        <ul class="mb-0">
+        <ul class="mb-4">
         @foreach ($errors->all() as $error)
 
-        <li class="alert alert-text"> {{$error}} </li>
+        <li class="error-message text-danger"> {{$error}} </li>
 
         @endforeach
         </ul>

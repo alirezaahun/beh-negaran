@@ -4,11 +4,14 @@
     @include('home.sections.loader')
 @endsection
 
-@include('home.sections.errors')
+
 
 @section('content')
     <section class="h-100">
+        
         <div class="container py-5 h-100">
+            <h3 class="blue-header">فرصت های شغلی</h3>
+            <div class="footer-line"><span></span></div>
             <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col">
                     <div class="card card-registration my-4">
@@ -16,14 +19,14 @@
                             <div class="col-12">
 
                                 <div class="card-body p-md-5 text-black custom-jO-style">
-                                    <h3 class="mb-5 text-uppercase text-center"> فرصت هلی شغلی </h3>
+                                    @include('home.sections.errors')
                                     <form action="{{ route('jobRequest') }}" method="POST" enctype="multipart/form-data"
                                         class="border p-5">
                                         @csrf
                                         <div class="row">
                                             <div class="col-md-5 mb-4">
                                                 <div class="form-outline">
-                                                    <label class="form-label" for="form3Example1m">اسم(الزامی) </label>
+                                                    <label class="form-label" for="form3Example1m">نام<span class="text-danger">*</span> </label>
 
                                                     <input type="text" name="name" id="form3Example1m"
                                                         class="form-control form-control-lg" required />
@@ -31,7 +34,7 @@
                                             </div>
                                             <div class="col-md-5 mb-4">
                                                 <div class="form-outline">
-                                                    <label class="form-label" for="form3Example1n">فامیلی(الزامی)</label>
+                                                    <label class="form-label" for="form3Example1n">نام خانوادگی<span class="text-danger">*</span></label>
 
                                                     <input type="text" name="family" id="form3Example1n"
                                                         class="form-control form-control-lg" />
@@ -39,9 +42,9 @@
                                             </div>
                                             <div class="col-md-2 mb-4">
                                                 <div class="form-outline">
-                                                    <label class="form-label" for="form3Example1n">سن</label>
+                                                    <label class="form-label" for="form3Example1n">سن<span class="text-danger">*</span></label>
 
-                                                    <input type="date" name="age" id="form3Example1n x"
+                                                    <input type="number" name="age" id="form3Example1n x"
                                                         class="form-control form-control-lg " />
 
 
@@ -52,7 +55,7 @@
                                         <div class="row">
                                             <div class="col-md-6 mb-4">
                                                 <div class="form-outline">
-                                                    <label class="form-label" for="form3Example1m1">شماره تلفن همراه</label>
+                                                    <label class="form-label" for="form3Example1m1">تلفن همراه<span class="text-danger">*</span></label>
 
                                                     <input type="text" name="phoneNumber" id="form3Example1m1"
                                                         class="form-control form-control-lg" />
@@ -60,7 +63,7 @@
                                             </div>
                                             <div class="col-md-6 mb-4">
                                                 <div class="form-outline">
-                                                    <label class="form-label" for="form3Example1n1">شماره تلفن ثابت </label>
+                                                    <label class="form-label" for="form3Example1n1">تلفن ثابت<span class="text-danger">*</span></label>
 
                                                     <input type="text" name="phone" id="form3Example1n1"
                                                         class="form-control form-control-lg" />
@@ -70,7 +73,7 @@
                                         </div>
 
                                         <div class="form-outline mb-4">
-                                            <label class="form-label" for="form3Example8">آدرس محل سکونت</label>
+                                            <label class="form-label" for="form3Example8">آدرس محل سکونت<span class="text-danger">*</span></label>
 
                                             <input type="text" name="address" id="form3Example8"
                                                 class="form-control form-control-lg" />
@@ -78,7 +81,7 @@
 
                                         <div class="row">
                                             <div class="col-12 mb-2">
-                                                <h6>حوزه های تخصصی</h6>
+                                                <h6>حوزه های تخصصی<span class="text-danger">*</span></h6>
                                                 <div
                                                     class="form-outline d-flex justify-content-between mt-3 flex-md-wrap flex-column flex-md-row m-md-2  ">
                                                     <div class="">
@@ -124,7 +127,7 @@
 
 
                                         <div class="form-outline mb-4">
-                                            <label class="form-label" for="form3Example9">روزمه خود را اپلود کنید</label>
+                                            <label class="form-label" for="form3Example9">رزومه خود را آپلود کنید<span class="text-danger">*</span></label>
                                             <input name="resume" type="file" id="form3Example9"
                                                 class="form-control form-control-lg" />
                                         </div>
@@ -132,7 +135,7 @@
                                         <div class="form-outline mb-4">
                                             <div class="form-outline mb-4">
                                                 <div class="form-group">
-                                                    <label for="exampleFormControlTextarea3"> توضیحات :</label>
+                                                    <label for="exampleFormControlTextarea3">توضیحات<span class="text-danger">*</span></label>
                                                     <textarea name="description" class="form-control" id="exampleFormControlTextarea3" rows="7"></textarea>
                                                 </div>
                                             </div>
@@ -143,7 +146,7 @@
 
                                         <div class="d-flex justify-content-end pt-3">
 
-                                            <button type="submit" class="secondary-btn mx-auto p-3"> ثبت درخواست
+                                            <button type="submit" class="secondary-btn w-100 mx-auto p-3"> ثبت درخواست
                                                 همکاری</button>
                                         </div>
                                     </form>
@@ -156,6 +159,7 @@
             </div>
         </div>
     </section>
+    
 @endsection
 
 
