@@ -3495,8 +3495,7 @@ a {
   right: 0;
   height: 4rem;
   border-radius: 0.3rem 0.3rem 0 0;
-  background: white;
-  background: linear-gradient(90deg, white 0%, #0071a2 50%);
+  background-color: var(--clr-secondary);
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
@@ -3508,9 +3507,8 @@ a {
   right: 0;
   height: 2.8rem;
   border-radius: 0 0 0.3rem 0.3rem;
-  background: #ffd400;
-  background: linear-gradient(90deg, #ffd400 0%, #0071a2 50%);
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  background-color: var(--clr-primary);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px -3px 6px, rgba(0, 0, 0, 0.23) 0px -3px 6px;
 }
 
 .blog_post .secondary-btn {
