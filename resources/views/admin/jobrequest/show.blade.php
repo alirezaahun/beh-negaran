@@ -8,7 +8,7 @@
 
         <div class="mb-4">
 
-            <h5 class="font-weight-bold">نام : {{$jobRequest->name}}</h5>
+            <h5 class="font-weight-bold">نام فرستنده : {{$jobRequest->name}}</h5>
 
             <hr>
 
@@ -17,7 +17,7 @@
 
                 <div class="form-group col-md-3">
 
-                    <label for="name">نام</label>
+                    <label for="name">نام خانوادگی</label>
                     <input class="form-control" type="text" value="{{$jobRequest->family}}" disabled>
 
                 </div>
@@ -26,6 +26,20 @@
 
                     <label for="name">شماره تلفن</label>
                     <input class="form-control" type="text" value="{{$jobRequest->phoneNumber}}" disabled>
+
+                </div>
+
+                <div class="form-group col-md-3">
+
+                    <label for="name">تلفن ثابت</label>
+                    <input class="form-control" type="text" value="{{$jobRequest->phone}}" disabled>
+
+                </div>
+
+                <div class="form-group col-md-3">
+
+                    <label for="name">آدرس</label>
+                    <input class="form-control" type="text" value="{{$jobRequest->address}}" disabled>
 
                 </div>
 

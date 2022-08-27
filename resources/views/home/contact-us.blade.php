@@ -22,7 +22,8 @@
                                     <div class="text-success" id="form-message-success" class="mb-4">
                                         پیام شما ارسال شد، متشکریم!
                                     </div>
-                                    <form method="POST" action="{{route('home.getmessage')}}" id="contactForm" name="contactForm" class="contactForm">
+                                    <form method="POST" action="{{ route('home.getmessage') }}" id="contactForm"
+                                        name="contactForm" class="contactForm">
                                         @csrf
                                         <div class="row">
                                             <div class="col-md-6 mt-2">
@@ -54,7 +55,8 @@
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <input type="submit" value="ارسال پیام" class="secondary-btn w-100 mt-4">
+                                                    <input type="submit" value="ارسال پیام"
+                                                        class="secondary-btn w-100 mt-4">
                                                     <div class="submitting"></div>
                                                 </div>
                                             </div>
@@ -62,9 +64,7 @@
                                     </form>
                                 </div>
                             </div>
-                            <div class="col-md-5 d-flex align-items-stretch">
-                                <div id="map">
-                                </div>
+                            <div id="map" class="col-md-5 d-flex align-items-stretch" style="position: relative;top: 5px;border:solid 2px">
                             </div>
                         </div>
                         <div class="row">
@@ -74,7 +74,8 @@
                                         <span class="fa fa-map-marker"></span>
                                     </div>
                                     <div class="text">
-                                        <p><span>دفتر شرکت :</span> كرج، بلوار دانش آموز، خيابان ابن سينا، نبش كوچه پروين</p>
+                                        <p><span>دفتر شرکت :</span> كرج، بلوار دانش آموز، خيابان ابن سينا، نبش كوچه پروين
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -104,7 +105,8 @@
                                         <span class="fab fa-instagram"></span>
                                     </div>
                                     <div class="text">
-                                        <p><span>اینستاگرام</span> <a href="https://www.instagram.com/beh_negaran/?hl=en-gb">Beh_Negaran</a></p>
+                                        <p><span>اینستاگرام</span> <a
+                                                href="https://www.instagram.com/beh_negaran/?hl=en-gb">Beh_Negaran</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -118,5 +120,16 @@
 
 
 @section('js')
-    <script></script>
+    <script>
+        var lat = 35.699739;
+        var lng = 51.338097;
+        var map = L.map('map', {
+            center: [lat, lng],
+            zoom: 13
+        });
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: false
+        }).addTo(map);
+    </script>
 @endsection
