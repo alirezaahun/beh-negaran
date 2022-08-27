@@ -9,8 +9,8 @@
         <div class="container">
             <h3 class="blue-header">وبلاگ به نگاران</h3>
             <div class="footer-line"><span></span></div>
-            <div class="row my-5">
-                <div class="col-md-4 col-sm-12">
+            <div class="row my-3">
+                <div class="col-md-4 col-sm-12 blog-post-margin">
                     <div class="blog_post">
                         <div class="img_pod">
                             <img src="https://dt2sdf0db8zob.cloudfront.net/wp-content/uploads/2019/12/9-Best-Online-Avatars-and-How-to-Make-Your-Own-for-Free-image1-5.png"
@@ -30,7 +30,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-4 col-sm-12">
+                <div class="col-md-4 col-sm-12 blog-post-margin">
                     <div class="blog_post">
                         <div class="img_pod">
                             <img src="https://dt2sdf0db8zob.cloudfront.net/wp-content/uploads/2019/12/9-Best-Online-Avatars-and-How-to-Make-Your-Own-for-Free-image1-5.png"
@@ -50,7 +50,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-4 col-sm-12">
+                <div class="col-md-4 col-sm-12 blog-post-margin">
                     <div class="blog_post">
                         <div class="img_pod">
                             <img src="https://dt2sdf0db8zob.cloudfront.net/wp-content/uploads/2019/12/9-Best-Online-Avatars-and-How-to-Make-Your-Own-for-Free-image1-5.png"

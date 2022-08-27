@@ -19,21 +19,21 @@
                 @method('put')
                <div class="form-row">
 
-                <div class="form-group col-md-3">
+                <div class="form-group col-md-12">
 
                     <label for="name">عنوان</label>
                     <input class="form-control" type="text" name="title" id="title" value="{{$blog->title}}">
 
                 </div>
 
-                <div class="form-group col-md-3">
+                <div class="form-group col-md-12">
 
                     <label for="name">متن</label>
                     <input class="form-control" type="textarea" name="text" id="text" value="{{$blog->text}}">
 
                 </div>
 
-                <div class="form-group col-md-3">
+                <div class="form-group col-md-12">
 
                     <label for="name">عکس</label>
                     <input type="file" name="image" id="form3Example9"

@@ -11,7 +11,7 @@
                                 <li><a href="{{ route('home.about') }}"><i class='bx bx-chevron-left'></i>درباره
                                         ما</a></li>
                                 <li><a href="{{ route('home.contact') }}"><i class='bx bx-chevron-left'></i>تماس با ما</a></li>
-                                <li><a href="#"><i class='bx bx-chevron-left'></i>وبلاگ</a></li>
+                                <li><a href="{{ route('home.blog') }}"><i class='bx bx-chevron-left'></i>وبلاگ</a></li>
                                 <li><a href="#"><i class='bx bx-chevron-left'></i>پادکست</a></li>
                             </div>
                         </ul>

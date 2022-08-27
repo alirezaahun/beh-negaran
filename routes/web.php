@@ -39,7 +39,7 @@ Route::get('/admin-panel/dashboard', function () {
     return view('admin.dashboard');
 })->name('main');
 
-Route::prefix('admin-panel/managment')->name('admin.')->middleware('permission:fullControll')->group(function () {
+Route::prefix('admin-panel/managment')->name('admin.')->group(function () {
 
     Route::resource('brands', BrandsController::class);
     Route::resource('attributes', AttributesController::class);
@@ -81,6 +81,8 @@ Route::get('/questions-and-answers', [HomeController::class, 'faq'])->name('home
 Route::get('/terms-of-service', [HomeController::class, 'policy'])->name('home.policy');
 Route::get('/contact-us', [HomeController::class, 'contact'])->name('home.contact');
 Route::get('/blog', [HomeController::class, 'blog'])->name('home.blog');
+Route::get('/blog-post', [HomeController::class, 'blogPost'])->name('home.blogPost');
+Route::get('/collab', [HomeController::class, 'collab'])->name('home.collab');
 
 
 Route::any('/login', [authController::class, 'login'])->name('home.login');

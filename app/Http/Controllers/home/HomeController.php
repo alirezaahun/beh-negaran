@@ -79,6 +79,16 @@ class HomeController extends Controller
 
         return view('home.blog');
     }
+    public function blogPost()
+    {
+
+        return view('home.blog-post');
+    }
+    public function collab()
+    {
+
+        return view('home.collab');
+    }
     public function order()
     {
 

@@ -2997,7 +2997,8 @@ a {
     height: 2.8rem;
     border-radius: 0 0 0.3rem 0.3rem;
     background-color: var(--clr-primary);
-    box-shadow: rgba(0, 0, 0, 0.16) 0px -3px 6px, rgba(0, 0, 0, 0.23) 0px -3px 6px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px -3px 6px,
+        rgba(0, 0, 0, 0.23) 0px -3px 6px;
 }
 .blog_post .secondary-btn {
     z-index: 1;
@@ -3017,7 +3018,45 @@ a {
     color: var(--clr-dark);
     text-align: justify;
 }
+.weblog-post {
+    background-color: #fff;
+    padding: 5rem;
+    border-radius: 0.3rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    position: relative;
+}
 
+.weblog-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.weblog-header h2 {
+    color: var(--clr-dark);
+}
+.weblog-date h5::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f133";
+    // color: var(--clr-primary);
+    font-weight: bold;
+    float: right;
+    margin-left: 10px;
+}
+.weblog-header img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.weblog-picture img {
+    border-radius: 0.3rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.weblog-text p {
+    text-align: justify;
+}
 /* Scroll Bar ----------------------------------------------------------- */
 /* width */
 ::-webkit-scrollbar {
@@ -3310,6 +3349,15 @@ a {
     #video11 img,
     #video12 img {
         height: 442.94px;
+    }
+    .blog-post-margin {
+        margin-top: 3rem;
+    }
+    .blog-post-margin:nth-child(1) {
+        margin-top: 1rem;
+    }
+    .weblog-post {
+        padding: 1.5rem;
     }
 }
 /* Tablet Screen -----------------------------------------------*/
