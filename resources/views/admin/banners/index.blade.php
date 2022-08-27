@@ -126,6 +126,7 @@
         </table>
 
     </div>
+    <div>{{$banner->links()}}</div>
 </div>
 
 @endsection

@@ -96,6 +96,7 @@
         </table>
 
     </div>
+    <div>{{$transactions->links()}}</div>
 </div>
 
 @endsection

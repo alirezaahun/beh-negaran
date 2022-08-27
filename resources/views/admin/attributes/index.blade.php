@@ -82,6 +82,7 @@
         </table>
 
     </div>
+    <div>{{$attribute->links()}}</div>
 </div>
 
 @endsection

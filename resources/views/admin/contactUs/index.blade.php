@@ -66,6 +66,7 @@
         </table>
 
     </div>
+    <div>{{$getMessages->links()}}</div>
 </div>
 
 @endsection

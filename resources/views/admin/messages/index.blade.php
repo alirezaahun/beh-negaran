@@ -92,6 +92,7 @@
         </table>
 
     </div>
+    <div>{{$messages->links()}}</div>
 </div>
 
 @endsection

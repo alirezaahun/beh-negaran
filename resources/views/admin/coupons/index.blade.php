@@ -95,6 +95,7 @@
         </table>
 
     </div>
+    <div>{{$coupons->links()}}</div>
 </div>
 
 @endsection

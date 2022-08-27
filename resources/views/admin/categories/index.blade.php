@@ -97,6 +97,7 @@
         </table>
 
     </div>
+    <div>{{$categories->links()}}</div>
 </div>
 
 @endsection

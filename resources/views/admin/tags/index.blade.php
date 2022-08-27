@@ -67,6 +67,7 @@
         </table>
 
     </div>
+    <div>{{$tags->links()}}</div>
 </div>
 
 @endsection

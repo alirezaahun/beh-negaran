@@ -66,6 +66,7 @@
         </table>
 
     </div>
+    <div>{{$requests->links()}}</div>
 </div>
 
 @endsection
