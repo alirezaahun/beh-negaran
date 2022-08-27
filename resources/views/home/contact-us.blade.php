@@ -22,7 +22,8 @@
                                     <div class="text-success" id="form-message-success" class="mb-4">
                                         پیام شما ارسال شد، متشکریم!
                                     </div>
-                                    <form method="POST" id="contactForm" name="contactForm" class="contactForm">
+                                    <form method="POST" action="{{route('home.getmessage')}}" id="contactForm" name="contactForm" class="contactForm">
+                                        @csrf
                                         <div class="row">
                                             <div class="col-md-6 mt-2">
                                                 <div class="form-group">
@@ -41,7 +42,7 @@
                                             <div class="col-md-12 mt-2">
                                                 <div class="form-group">
                                                     <label class="label" for="subject">موضوع</label>
-                                                    <input type="text" class="form-control" name="subject" id="subject"
+                                                    <input type="text" class="form-control" name="title" id="subject"
                                                         placeholder="هدف پیام">
                                                 </div>
                                             </div>

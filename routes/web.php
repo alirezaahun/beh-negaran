@@ -6,6 +6,8 @@ use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\BrandsController;
 use App\Http\Controllers\Admin\CategoriesController;
 use App\Http\Controllers\admin\CouponsController;
+use App\Http\Controllers\Admin\GetMessages;
+use App\Http\Controllers\Admin\JobRequests;
 use App\Http\Controllers\Admin\MessagesController;
 use App\Http\Controllers\admin\permissionController;
 use App\Http\Controllers\admin\ProductEditImage;
@@ -53,6 +55,8 @@ Route::prefix('admin-panel/managment')->name('admin.')->group(function () {
     Route::resource('permission', permissionController::class);
     Route::resource('users', UserController::class);
     Route::resource('blogs' , BlogController::class);
+    Route::resource('jobRequests' , JobRequests::class);
+    Route::resource('getMessages' , GetMessages::class);
 
     //
 
@@ -80,8 +84,9 @@ Route::get('/page-not-found', [HomeController::class, 'notFound'])->name('home.n
 Route::get('/questions-and-answers', [HomeController::class, 'faq'])->name('home.faq');
 Route::get('/terms-of-service', [HomeController::class, 'policy'])->name('home.policy');
 Route::get('/contact-us', [HomeController::class, 'contact'])->name('home.contact');
+Route::post('/get_message', [HomeController::class, 'getMessage'])->name('home.getmessage');
 Route::get('/blog', [HomeController::class, 'blog'])->name('home.blog');
-Route::get('/blog-post', [HomeController::class, 'blogPost'])->name('home.blogPost');
+Route::get('{blog}/blog-post/', [HomeController::class, 'blogPost'])->name('home.blogPost');
 Route::get('/collab', [HomeController::class, 'collab'])->name('home.collab');
 
 

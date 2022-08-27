@@ -7,6 +7,8 @@ use App\Http\Resources\V1\bottomBannerResource;
 use App\Http\Resources\V1\sliderResource;
 use App\Http\Resources\V1\topBannerResource;
 use App\Models\Banner;
+use App\Models\Blog;
+use App\Models\Contact;
 use App\Models\JobRequest;
 use App\Models\Product;
 use App\Models\User;
@@ -71,18 +73,36 @@ class HomeController extends Controller
     }
     public function contact()
     {
-
         return view('home.contact-us');
     }
+
+    public function getMessage(Request $request){
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'title' => 'required',
+            'message' => 'required'
+        ]);
+
+        Contact::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'title' => $request->title,
+            'message' => $request->message
+        ]);
+
+        alert()->success('پیام شما با موفقیت ثبت شد');
+        return redirect()->route('home.index');
+    }
+
     public function blog()
     {
-
-        return view('home.blog');
+        $blogs = Blog::all();
+        return view('home.blog' , compact('blogs'));
     }
-    public function blogPost()
+    public function blogPost(Request $request,Blog $blog)
     {
-
-        return view('home.blog-post');
+        return view('home.blog-post' , compact('blog'));
     }
     public function collab()
     {
