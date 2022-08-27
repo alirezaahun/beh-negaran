@@ -331,7 +331,8 @@ class HomeController extends Controller
             'tags' => 'required',
             'resume' => 'required|mimes:pdf',
             'phoneNumber' => 'required',
-            'address' => 'required'
+            'address' => 'required',
+            'phone' => 'required'
         ]);
 
         $getname = generateFileName($request->resume->getClientOriginalName());

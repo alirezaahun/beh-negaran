@@ -95,6 +95,8 @@
     <script src="https://unpkg.com/leaflet-geosearch@3.1.0/dist/bundle.min.js"></script>
 
     @yield('js')
+
+    @include('sweet::alert')
 </body>
 
 @yield('loader')
