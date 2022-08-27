@@ -64,6 +64,24 @@
           <span>تراکنش ها</span></a>
       </li>
 
+      <li class="nav-item">
+        <a class="nav-link" href="{{route('admin.blogs.index')}}">
+          <i class="fas fa-fw fa-store"></i>
+          <span>وبلاگ</span></a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="{{route('admin.jobRequests.index')}}">
+          <i class="fas fa-fw fa-store"></i>
+          <span>درخواستهای همکاری</span></a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="{{route('admin.getMessages.index')}}">
+          <i class="fas fa-fw fa-store"></i>
+          <span>پیغام های کاربران</span></a>
+      </li>
+
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
 
