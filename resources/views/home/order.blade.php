@@ -553,7 +553,7 @@
 
             $("#SubmitForm").click(function(event) {
                 function closeModal() {
-                    let addresses1 = document.getElementById('addresses1')
+                    let addresses1 = document.getElementById('addresses1');
                     if (addresses1.value == "") {
                         swal('آدرس را وارد کنید!!')
                     } else {
@@ -564,12 +564,10 @@
                     }
 
                 }
-                closeModal()
 
-                // console.log($('#addresses1').val());
+
+                console.log($('#addresses1').val());
                 event.preventDefault();
-
-
 
                 $.post("{{ route('addresses.store') }}", {
 
@@ -587,11 +585,13 @@
                         $('#userAddresses').append($('<option/>', {
                             text: getAddress
                         }));
+                        closeModal()
+                        swal("آدرس جدید به آدرس های شما اضافه شد");
                     }
 
                 }).fail(function(response) {
-
-                    console.log(response);
+                    closeModal()
+                    swal("خطا در ثبت آدرس جدید");
                 })
 
             });
