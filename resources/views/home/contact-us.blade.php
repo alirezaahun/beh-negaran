@@ -64,7 +64,7 @@
                                     </form>
                                 </div>
                             </div>
-                            <div id="map" class="col-md-5 d-flex align-items-stretch" style="position: relative;top: 5px;border:solid 2px">
+                            <div id="map" class="col-md-5 d-flex align-items-stretch" style="position: relative;top: 60px; height: 30rem; margin-bottom: 3rem;">
                             </div>
                         </div>
                         <div class="row">
