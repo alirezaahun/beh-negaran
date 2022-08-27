@@ -15,25 +15,25 @@
 
                <div class="row">
 
-                <div class="form-group col-md-3">
+                <div class="form-group col-md-12">
 
                     <label for="name">ایمیل</label>
                     <input class="form-control" type="text" value="{{$getMessage->email}}" disabled>
 
                 </div>
 
-                <div class="form-group col-md-3">
+                <div class="form-group col-md-12">
 
                     <label for="name">موضوع</label>
                     <input class="form-control" type="text" value="{{$getMessage->title}}" disabled>
 
                 </div>
 
-                <div class="form-group col-md-3">
+                <div class="form-group col-md-12">
 
                     <label for="name">پیام</label>
-                    <input class="form-control" type="text" value="{{$getMessage->message}}" disabled>
-
+                    <input class="form-control " type="text" value="{{$getMessage->message}}" disabled>
+                     {{-- <textarea class="form-control" value="{{$getMessage->message}}" name="" id="" cols="30" rows="10" disabled></textarea> --}}
                 </div>
 
 

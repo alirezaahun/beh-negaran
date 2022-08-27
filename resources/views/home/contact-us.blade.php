@@ -16,12 +16,7 @@
                                 <div class="contact-wrap w-100 p-md-5 p-4">
                                     <h3>تماس با ما</h3>
                                     <div class="footer-line"><span></span></div>
-                                    <div class="text-danger" id="form-message-warning" class="mb-4">
-                                        ارسال پیام با مشکل مواجه شد!
-                                    </div>
-                                    <div class="text-success" id="form-message-success" class="mb-4">
-                                        پیام شما ارسال شد، متشکریم!
-                                    </div>
+                                   
                                     <form method="POST" action="{{ route('home.getmessage') }}" id="contactForm"
                                         name="contactForm" class="contactForm">
                                         @csrf
@@ -64,7 +59,7 @@
                                     </form>
                                 </div>
                             </div>
-                            <div id="map" class="col-md-5 d-flex align-items-stretch" style="position: relative;top: 60px; height: 30rem; margin-bottom: 3rem;">
+                            <div id="map" class="col-md-5 d-flex align-items-stretch" style="position: relative;top: 60px; height: 28rem; margin-bottom: 3rem;">
                             </div>
                         </div>
                         <div class="row">
