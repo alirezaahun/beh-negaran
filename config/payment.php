@@ -265,7 +265,7 @@ return [
 
             'mode' => 'normal', // can be normal, direct
 
-            'merchantId' => 'zibal',
+            'merchantId' => '62a2e6aa18f9340546678ec6',
             'callbackUrl' => 'http://localhost:8000/callback_payment',
             'description' => 'payment using zibal',
         ],
