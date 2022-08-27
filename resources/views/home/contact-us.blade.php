@@ -121,8 +121,8 @@
 
 @section('js')
     <script>
-        var lat = 35.699739;
-        var lng = 51.338097;
+        var lat = 35.815826;
+        var lng = 50.964871;
         var map = L.map('map', {
             center: [lat, lng],
             zoom: 13
@@ -131,5 +131,8 @@
             maxZoom: 19,
             attribution: false
         }).addTo(map);
+
+        var marker = L.marker([lat, lng]).addTo(map)
+            .openPopup();
     </script>
 @endsection
