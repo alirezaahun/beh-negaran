@@ -123,8 +123,8 @@
                                                                     <div class="col-12    ">
                                                                         <select id="select"
                                                                             class="form-select my-5 mx-auto  w-50 w-lg-25">
-                                                                            <option class="select"
-                                                                                id="{{ $category->id }}">انتخاب
+                                                                            <option class="select" id="{{ $category->id }}">
+                                                                                انتخاب
                                                                                 پکیچ ها</option>
 
                                                                             @foreach ($getChildren as $child)
@@ -465,6 +465,16 @@
             lng = marker._latlng.lng;
             console.log(lat, lng);
         });
+
+        const provider = new window.GeoSearch.OpenStreetMapProvider();
+        const search = new GeoSearch.GeoSearchControl({
+            provider: provider,
+            style: 'bar',
+            updateMap: true,
+            autoClose: true,
+        });
+
+        map.addControl(search);
 
 
         $(document).ready(function() {
@@ -1157,7 +1167,7 @@
                                 coupon_code: response.code,
                                 coupon_type: response.type
                             }
-                            localStorage.setItem("couponUsed" , 1);
+                            localStorage.setItem("couponUsed", 1);
                         } else if (response.type == "percentage") {
                             let keeper = Number($("#finalPricecontent").val());
                             $("#finalPricecontent").val(keeper - response.amount);
@@ -1175,7 +1185,7 @@
                                 coupon_code: response.code,
                                 coupon_type: response.type
                             }
-                            localStorage.setItem("couponUsed" , 1);
+                            localStorage.setItem("couponUsed", 1);
                         } else {
                             swal(response);
                         }
